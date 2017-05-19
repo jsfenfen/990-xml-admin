@@ -1,0 +1,6 @@
+
+django>=1.11
+# for postgres...
+psycopg2
+xmltodict
+requests
