@@ -10,9 +10,6 @@ from django.conf import settings
 
 from filing.file_utils import stream_download
 
-# Create your models here.
-
-
 class xml_submission(models.Model):
     ## Fields taken from index_YYYY.csv files
     year = models.IntegerField(blank=True, null=True, help_text="Index file year")
@@ -46,7 +43,9 @@ class xml_submission(models.Model):
 
     def set_json(self, save=False):
         try:
-            raw_file=open(self.get_local_file()).read()
+            fh = open(self.get_local_file())
+            raw_file=fh.read()
+            fh.close()
         except IOError:
             return False
 

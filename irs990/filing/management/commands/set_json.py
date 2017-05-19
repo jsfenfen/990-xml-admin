@@ -5,7 +5,7 @@ from django.conf import settings
 from filing.models import xml_submission
 
 DOWNLOAD_IF_MISSING = True
-LOG_EVERY = 1000
+BATCH_SIZE = 1000
 
 class Command(BaseCommand):
     help = """Refresh the yearly csv file. 
@@ -22,21 +22,24 @@ class Command(BaseCommand):
         for year in options['year']:
             print("Setting json for year=%s" % year)
             count = 0
-            empty_submissions = xml_submission.objects.filter(year=year, as_json__isnull=True)
-            for xs in empty_submissions:
+            while True:
+                empty_submissions = xml_submission.objects.filter(year=year, as_json__isnull=True, json_set=False)[:BATCH_SIZE]
+                if not empty_submissions:
+                    break
+                for xs in empty_submissions:
 
-                if not xs.file_available():
-                    print("File missing")
-                    if DOWNLOAD_IF_MISSING:
-                        print ("Retrieving missing file %s" % xs.get_s3_URL() )
-                        xs.retrieve_file()
-                    else:
-                        continue
+                    if not xs.file_available():
+                        print("File missing")
+                        if DOWNLOAD_IF_MISSING:
+                            print ("Retrieving missing file %s" % xs.get_s3_URL() )
+                            xs.retrieve_file()
+                        else:
+                            continue
 
-                print("Setting json for %s from %s" % (xs.return_id, xs.get_local_file() ) )
+                    print("Setting json for %s from %s" % (xs.return_id, xs.get_local_file() ) )
 
-                xs.set_json(save=True)
-                count += 1
+                    xs.set_json(save=True)
+                    count += 1
 
-                if count%LOG_EVERY==0:
-                    print("Set %s rows" % count)
+                    if count%BATCH_SIZE==0:
+                        print("Set %s rows" % count)
