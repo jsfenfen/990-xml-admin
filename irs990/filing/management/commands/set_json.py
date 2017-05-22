@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.conf import settings 
-
+from django.db import reset_queries
 
 from filing.models import xml_submission
 
@@ -23,7 +23,8 @@ class Command(BaseCommand):
             print("Setting json for year=%s" % year)
             count = 0
             while True:
-                empty_submissions = xml_submission.objects.filter(year=year, as_json__isnull=True, json_set=False)[:BATCH_SIZE]
+                reset_queries() # not sure this is needed -- manually reset the query log
+                empty_submissions = xml_submission.objects.filter(year=year, json_set=False)[:BATCH_SIZE]
                 if not empty_submissions:
                     break
                 for xs in empty_submissions:

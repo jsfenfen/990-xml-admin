@@ -59,3 +59,16 @@ class xml_submission(models.Model):
     class Meta:
         verbose_name="XML Submission"
         managed=True
+
+
+class observed_xpath(models.Model):
+    index_file_year = models.IntegerField(blank=True, null=True, help_text="Index file year") 
+    version_string = models.CharField(max_length=15, blank=True, null=True)
+    raw_xpath = models.CharField(max_length=511, blank=True, null=True)
+    num_observed = models.IntegerField(blank=True, null=True, help_text="Index file year") 
+    last_update = models.DateTimeField(auto_now=True, null=True)
+    observed_type = models.CharField(max_length=511, blank=True, null=True, help_text="character representation of data type, as observed")
+
+    def __unicode__(self):
+        return("%s %s" % (self.version_string, self.raw_xpath) )
+
