@@ -8,9 +8,11 @@ DOWNLOAD_IF_MISSING = True
 BATCH_SIZE = 1000
 
 class Command(BaseCommand):
-    help = """Refresh the yearly csv file. 
-            Takes the four-digit year as a positional argument
-            $ manage.py retrieve_annual_file 2016
+    help = """Save the complete xml as json in the as_json jsonfield. 
+            Runs on all submissions with json_set = False, and sets
+            it to true as it goes. Saves one-at-a time. 
+            Takes the four-digit year as a required positional argument
+            $ manage.py set_json 2016
             """
 
     def add_arguments(self, parser):
