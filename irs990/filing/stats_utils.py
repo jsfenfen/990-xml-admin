@@ -16,11 +16,11 @@ class json_stats_tracker:
         this_node_type = type(json_node)
 
         if this_node_type == unicodeType:
-            this_key = parent_path
-            this_value = json_node
-            self.keys_found.update([this_key,])
+            self.keys_found.update([parent_path,])
 
         elif this_node_type == listType:
+
+            self.list_roots_found.update([parent_path,])
             for child_node in json_node:
                 self.parse_json(child_node, parent_path=parent_path)
 
@@ -38,5 +38,6 @@ class json_stats_tracker:
 
     def parse(self):
         self.keys_found = Counter()
+        self.list_roots_found = Counter()
         self.parse_json(self.raw_json)
-        return self.keys_found
+        return (self.keys_found, self.list_roots_found)

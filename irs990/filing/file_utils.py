@@ -10,9 +10,11 @@ def stream_download(url, target_path, verbose=False):
         print("Beginning streaming download of %s" % url)
         start = datetime.now()
         try:
-            print("Total file size: %s B" % response.headers['Content-Length'] )
+            content_length = int(response.headers['Content-Length'])
+            content_MB = content_length/1048576.0
+            print("Total file size: %.2f MB" %  content_MB)
         except KeyError:
-            pass # sometimes content-length is missing
+            pass # allow Content-Length to be missing
     for chunk in response.iter_content(chunk_size=512):
         if chunk:  # filter out keep-alive new chunks
             handle.write(chunk)

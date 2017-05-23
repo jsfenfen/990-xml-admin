@@ -9,6 +9,7 @@ from django.contrib.postgres.fields import JSONField
 from django.conf import settings 
 
 from filing.file_utils import stream_download
+from filing.schema_name_utils import get_year_version_from_schema
 
 class xml_submission(models.Model):
     ## Fields taken from index_YYYY.csv files
@@ -41,6 +42,21 @@ class xml_submission(models.Model):
     def file_available(self):
         return os.path.isfile(self.get_local_file())
 
+    def get_as_json(self):
+        # Patch problem with how json is getting returned. Better fix?
+        return( json.loads(self.as_json) ) 
+
+    def set_year_version_from_json(self, save=True):
+        """ Only works if json has already been set! """
+        assert self.json_set
+        version_string = self.get_as_json()['Return']['@returnVersion']
+        result = get_year_version_from_schema ( version_string )
+        self.schema_year = result['year']
+        self.schema_version = result['version']
+        if save:
+            self.save()
+
+
     def set_json(self, save=False):
         try:
             fh = open(self.get_local_file())
@@ -62,6 +78,7 @@ class xml_submission(models.Model):
 
 
 class observed_xpath(models.Model):
+    """ These are elements with values assigned to them, including attributes, which have @ prepended """
     index_file_year = models.IntegerField(blank=True, null=True, help_text="Index file year") 
     version_string = models.CharField(max_length=15, blank=True, null=True)
     raw_xpath = models.CharField(max_length=511, blank=True, null=True)
@@ -72,3 +89,15 @@ class observed_xpath(models.Model):
     def __unicode__(self):
         return("%s %s" % (self.version_string, self.raw_xpath) )
 
+# to do - define relationship between observed_xpath and observed_group. Can an observed_xpath have multiple parent groups?
+
+class observed_group(models.Model):
+    """ These are groups -- often they end in "Grp" -- that may repeat. They have child values. """
+    index_file_year = models.IntegerField(blank=True, null=True, help_text="Index file year") 
+    version_string = models.CharField(max_length=15, blank=True, null=True)
+    raw_xpath = models.CharField(max_length=511, blank=True, null=True)
+    num_observed = models.IntegerField(blank=True, null=True, help_text="Index file year") 
+    last_update = models.DateTimeField(auto_now=True, null=True)
+
+    def __unicode__(self):
+        return("%s %s" % (self.version_string, self.raw_xpath) )
