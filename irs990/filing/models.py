@@ -77,6 +77,11 @@ class xml_submission(models.Model):
         managed=True
 
 
+
+
+class master_observed_xpath(models.Model):
+    raw_xpath = models.CharField(max_length=511, blank=True, null=True)
+
 class observed_xpath(models.Model):
     """ These are elements with values assigned to them, including attributes, which have @ prepended """
     index_file_year = models.IntegerField(blank=True, null=True, help_text="Index file year") 
@@ -91,6 +96,9 @@ class observed_xpath(models.Model):
 
 # to do - define relationship between observed_xpath and observed_group. Can an observed_xpath have multiple parent groups?
 
+class master_observed_group(models.Model):
+    raw_xpath = models.CharField(max_length=511, blank=True, null=True)
+
 class observed_group(models.Model):
     """ These are groups -- often they end in "Grp" -- that may repeat. They have child values. """
     index_file_year = models.IntegerField(blank=True, null=True, help_text="Index file year") 
@@ -98,6 +106,7 @@ class observed_group(models.Model):
     raw_xpath = models.CharField(max_length=511, blank=True, null=True)
     num_observed = models.IntegerField(blank=True, null=True, help_text="Index file year") 
     last_update = models.DateTimeField(auto_now=True, null=True)
+
 
     def __unicode__(self):
         return("%s %s" % (self.version_string, self.raw_xpath) )
