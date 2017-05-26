@@ -50,29 +50,29 @@ class Command(BaseCommand):
         If it's the member of more than one group, 
         chose the group that's longer
         """
+
+        print("Erasing group - element linkages and rerunning")
+        observed_xpath.objects.all().update(containing_group=None)
+
         for vs in version_string_list:
             print("Linking groups for %s" % vs['version_string'])
             versioned_groups = observed_group.objects.filter(
                 version_string=vs['version_string']
                 ).extra(select={'length':'Length(raw_xpath)'}).order_by('-length')
+            # Analyse these in reverse order of length, because groups can contain groups.
             for group in versioned_groups:
                 #print "Handling %s" % (group.raw_xpath)
 
-                contained_groups = observed_group.objects.filter(
-                    raw_xpath__icontains=group.raw_xpath + "/", 
-                    version_string=group.version_string,
-                    index_file_year = group.index_file_year
-                    ).extra(select={'length':'Length(raw_xpath)'}).order_by('-length')
-                if contained_groups:
-                    print("Group %s contained in group %s" % (group, contained_groups[0]))
-                    ## Can this happen? Do we need to worry about this? 
-                    assert False
+                # Note that groups can contain other groups
+                # EG /Return/ReturnData/IRS990ScheduleK vs /Return/ReturnData/IRS990ScheduleK/Form990ScheduleKPartIII
 
                 # find matching xpaths
-                #matching_xpaths = observed_xpath.objects.filter(
-                #    raw_xpath__icontains=group.raw_xpath, 
-                #    version_string=group.version_string,
-                #    index_file_year = group.index_file_year)
+                matching_xpaths = observed_xpath.objects.filter(
+                    raw_xpath__icontains=group.raw_xpath, 
+                    version_string=group.version_string,
+                    index_file_year = group.index_file_year,
+                    containing_group__isnull = True
+                    ).update(containing_group=group)
 
 
 

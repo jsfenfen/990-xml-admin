@@ -77,24 +77,6 @@ class xml_submission(models.Model):
         managed=True
 
 
-
-
-class master_observed_xpath(models.Model):
-    raw_xpath = models.CharField(max_length=511, blank=True, null=True)
-
-class observed_xpath(models.Model):
-    """ These are elements with values assigned to them, including attributes, which have @ prepended """
-    index_file_year = models.IntegerField(blank=True, null=True, help_text="Index file year") 
-    version_string = models.CharField(max_length=15, blank=True, null=True)
-    raw_xpath = models.CharField(max_length=511, blank=True, null=True)
-    num_observed = models.IntegerField(blank=True, null=True, help_text="Index file year") 
-    last_update = models.DateTimeField(auto_now=True, null=True)
-    observed_type = models.CharField(max_length=511, blank=True, null=True, help_text="character representation of data type, as observed")
-    master_xpath = models.ForeignKey(master_observed_xpath, null=True)
-
-    def __unicode__(self):
-        return("%s %s" % (self.version_string, self.raw_xpath) )
-
 # to do - define relationship between observed_xpath and observed_group. Can an observed_xpath have multiple parent groups?
 
 class master_observed_group(models.Model):
@@ -109,6 +91,24 @@ class observed_group(models.Model):
     last_update = models.DateTimeField(auto_now=True, null=True)
     master_xpath = models.ForeignKey(master_observed_group, null=True)
 
+
+    def __unicode__(self):
+        return("%s %s" % (self.version_string, self.raw_xpath) )
+
+
+class master_observed_xpath(models.Model):
+    raw_xpath = models.CharField(max_length=511, blank=True, null=True)
+
+class observed_xpath(models.Model):
+    """ These are elements with values assigned to them, including attributes, which have @ prepended """
+    index_file_year = models.IntegerField(blank=True, null=True, help_text="Index file year") 
+    version_string = models.CharField(max_length=15, blank=True, null=True)
+    raw_xpath = models.CharField(max_length=511, blank=True, null=True)
+    num_observed = models.IntegerField(blank=True, null=True, help_text="Index file year") 
+    last_update = models.DateTimeField(auto_now=True, null=True)
+    observed_type = models.CharField(max_length=511, blank=True, null=True, help_text="character representation of data type, as observed")
+    master_xpath = models.ForeignKey(master_observed_xpath, null=True)
+    containing_group = models.ForeignKey(observed_group, null=True)
 
     def __unicode__(self):
         return("%s %s" % (self.version_string, self.raw_xpath) )
