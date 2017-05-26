@@ -25,7 +25,6 @@ class Command(BaseCommand):
             this_master_path, created = master_observed_group.objects.get_or_create(raw_xpath=this_group_xpath.upper() )
 
             versioned_groups = observed_group.objects.filter(raw_xpath__iexact=this_group_xpath).order_by('version_string')
-            print("Handling group %s" % (this_group_xpath))
             for versioned_group in versioned_groups:
                 versioned_group.master_xpath = this_master_path
                 versioned_group.save()
@@ -39,7 +38,6 @@ class Command(BaseCommand):
             this_master_path, created = master_observed_xpath.objects.get_or_create(raw_xpath=this_xpath.upper() )
 
             versioned_xpaths = observed_xpath.objects.filter(raw_xpath__iexact=this_xpath).order_by('version_string')
-            print("Handling xpath %s" % (this_xpath))
             for versioned_xpath in versioned_xpaths:
                 versioned_xpath.master_xpath = this_master_path
                 versioned_xpath.save()
@@ -88,8 +86,8 @@ class Command(BaseCommand):
         version_strings = observed_xpath.objects.order_by('version_string').values('version_string').annotate(Count("num_observed"))
         version_strings_list = [i for i in version_strings] # Keys are now 'num_observed__count', 'version_string'
 
-        #self.handle_groups()
-        #self.handle_xpaths()
+        self.handle_groups()
+        self.handle_xpaths()
 
         self.link_xpaths_to_groups(version_strings_list)
 
