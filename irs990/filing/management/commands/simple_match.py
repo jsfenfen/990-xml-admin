@@ -17,10 +17,9 @@ class Command(BaseCommand):
             """
 
     def print_slow_query(self):
-        last_queries = connection.queries[-2:]
-        for last_query in last_queries:
-            if float(last_query['time'])>0.01:
-                print(last_query)
+        last_query = connection.queries[-1:][0]
+        if float(last_query['time'])>0.1:
+            print(last_query)
         
     def handle_groups(self):
         all_group_xpaths = observed_group.objects.all().order_by('raw_xpath').values('raw_xpath').distinct()        
