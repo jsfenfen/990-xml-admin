@@ -7,3 +7,4 @@ def get_year_version_from_schema(schema_string):
 
 def get_version_string(year, version):
     return ("%sv%s" % (year, version))
+
