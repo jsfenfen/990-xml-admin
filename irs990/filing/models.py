@@ -112,3 +112,17 @@ class observed_xpath(models.Model):
 
     def __unicode__(self):
         return("%s %s" % (self.version_string, self.raw_xpath) )
+
+
+class known_version_string(models.Model):
+    """ Stats on xml submission """
+    version_string = models.CharField(max_length=15, blank=True, null=True)
+    num_observed = models.IntegerField(blank=True, null=True, help_text="Index file year") 
+    max_year = models.IntegerField(blank=True, null=True, help_text="max index file year") 
+    min_year = models.IntegerField(blank=True, null=True, help_text="min index file year")
+
+    def __unicode__(self):
+        return self.version_string
+
+
+
