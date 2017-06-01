@@ -1,11 +1,15 @@
 from django.core.management.base import BaseCommand
 
-from django.db.models import Count, Min, Max
-
+from django.db.models import Count, Min, Max, Q
 
 from filing.models import xml_submission, known_version_string
-
 from filing.schema_name_utils import get_version_string
+from django.db import reset_queries
+
+
+
+BATCH_SIZE = 1000
+SET_UNSET = True
 
 class Command(BaseCommand):
     help = """Enters version strings, frequency
@@ -15,6 +19,20 @@ class Command(BaseCommand):
 
 
     def handle(self, *args, **options):
+
+        years_set = 0
+        while True:
+            empty_submissions = xml_submission.objects.filter(json_set=True).filter( Q(schema_year__isnull=True)|Q(schema_version__isnull=True) ).defer('as_json')[:BATCH_SIZE]
+            if not empty_submissions:
+                break
+            for xs in empty_submissions:
+                xs.set_year_version_from_json(save=True)
+                years_set += 1
+                if years_set % BATCH_SIZE == 0:
+                    print("Set %s version_strings" % years_set)
+            reset_queries() 
+
+           
 
         print("Erasing version string data and recalculating")
         known_version_string.objects.all().delete()

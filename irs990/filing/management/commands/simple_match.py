@@ -4,22 +4,35 @@ from django.core.management.base import BaseCommand
 from django.conf import settings 
 from django.db import reset_queries
 from django.db.models import Count
+from django.db import transaction
+
 
 from filing.models import *
 
 from django.db import connection
 
 YEARS = range(2011,date.today().year+1)
+SLOW_QUERY_TIME = 0.001
+NUM_LAST_QUERIES = 1 # NUMBER OF most recent queries to print
 
 class Command(BaseCommand):
     help = """ Generate a master list of case-independent xpaths
             for elements and groups, and populate db appropriately.
             """
 
+    @transaction.atomic
+    def erase_group_element_linkages(self):
+        print("Erasing group - element linkages and rerunning")
+        observed_xpath.objects.all().update(containing_group=None)
+        self.print_slow_query()
+
     def print_slow_query(self):
-        last_query = connection.queries[-1:][0]
-        if float(last_query['time'])>0.1:
-            print(last_query)
+        
+        last_queries = connection.queries[-NUM_LAST_QUERIES:]
+
+        for last_query in last_queries:
+            if float(last_query['time'])>SLOW_QUERY_TIME:
+                print("%s: %s" % (len(connection.queries), last_query) )
         
     def handle_groups(self):
         all_group_xpaths = observed_group.objects.all().order_by('raw_xpath').values('raw_xpath').distinct()        
@@ -59,10 +72,6 @@ class Command(BaseCommand):
         chose the group that's longer
         """
 
-        print("Erasing group - element linkages and rerunning")
-        observed_xpath.objects.all().update(containing_group=None)
-        self.print_slow_query()
-
         for vs in version_string_list:
             print("Linking groups for %s" % vs['version_string'])
             versioned_groups = observed_group.objects.filter(
@@ -87,9 +96,12 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
 
         ## get version strings.
-        version_strings = observed_xpath.objects.order_by('version_string').values('version_string').annotate(Count("num_observed"))
+        print "Getting version strings"
+        version_strings = observed_xpath.objects.order_by('version_string').values('version_string').distinct()
+        print(version_strings)
         self.print_slow_query()
         version_strings_list = [i for i in version_strings] # Keys are now 'num_observed__count', 'version_string'
+        print version_strings_list
         self.print_slow_query()
         self.handle_groups()
         self.handle_xpaths()
