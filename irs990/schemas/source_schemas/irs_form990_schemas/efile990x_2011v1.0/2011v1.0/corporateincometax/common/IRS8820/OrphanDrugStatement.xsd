@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.irs.gov/efile" xmlns="http://www.irs.gov/efile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<Description>IRS e-file Schema - Orphan Drug Statement</Description>
+			<TaxYear>2011</TaxYear>
+			<MaturityLevel>Draft Release</MaturityLevel>
+			<ReleaseDate>July 26, 2011</ReleaseDate>
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:include schemaLocation="../../../Common/efileTypes.xsd"/>
+
+	<!-- ==================================== -->
+	<!-- ====== Orphan Drug Statement ======= -->
+	<!-- ==================================== -->
+
+	<xsd:element name="OrphanDrugStatement">
+		<xsd:annotation>
+			<xsd:documentation>Orphan Drug Statement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="OrphanDrugStatementType">
+					<xsd:attributeGroup ref="DocumentAttributes">
+						<xsd:annotation>
+							<xsd:documentation>Common return document attributes</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attributeGroup>
+					<xsd:attribute name="documentName" type="StringType" fixed="OrphanDrugStatement">
+						<xsd:annotation>
+							<xsd:documentation>IRS internal use only. To avoid error in the return, do not include the attribute name or value.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- Orphan Drug Statement -->
+	<xsd:complexType name="OrphanDrugStatementType">
+		<xsd:annotation>
+			<xsd:documentation>Orphan Drug Statement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+
+			<xsd:element name="OrphanDrugQlfyTestExpnsDtlGrp" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+
+						<!-- Generic Drug Name -->
+						<xsd:element name="GenericDrugName" type="TextType" maxOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>Generic Drug Name</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+						<!-- Generic Drug Design Under Section 526 Date -->
+						<xsd:element name="GenericDrugDesgnUndSect526Dt" type="DateType" maxOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>Name</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

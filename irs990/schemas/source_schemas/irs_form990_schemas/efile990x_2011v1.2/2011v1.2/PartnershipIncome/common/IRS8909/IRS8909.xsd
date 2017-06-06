@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.irs.gov/efile" xmlns="http://www.irs.gov/efile" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+
+	<xsd:annotation>
+		<xsd:documentation>
+			<Description>IRS e-file Partnership Income Tax Schema - IRS Form 8909</Description>
+			<TaxYear>2011</TaxYear>
+			<MaturityLevel>Final Release</MaturityLevel>
+			<ReleaseDate>October 25, 2011</ReleaseDate>
+		</xsd:documentation>		
+	</xsd:annotation>
+
+	<xsd:include schemaLocation="../../../Common/efileTypes.xsd" />
+
+	<!-- ===================================================================== -->
+	<!-- ========================  IRS Form 8909  ================================ -->
+	<!-- ===================================================================== -->
+
+	<xsd:element name="IRS8909">
+		<xsd:annotation>
+			<xsd:documentation>IRS Form 8909</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="IRS8909Type">
+					<xsd:attributeGroup ref="DocumentAttributes">
+						<xsd:annotation>
+							<xsd:documentation>Common return document attributes</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attributeGroup>
+					
+					<xsd:attribute name="documentName" type="xsd:string" fixed="IRS8909">
+						<xsd:annotation>
+							<xsd:documentation>IRS internal use only. To avoid error in the return, do not include the attribute name or value.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>					
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="IRS8909Type">
+		<xsd:annotation>
+			<xsd:documentation>Content model for Form 8909</xsd:documentation>
+		</xsd:annotation>
+
+		<xsd:sequence>
+		
+		        <!-- Part I - Dishwashers -->
+			<!-- Eligible Dishwashers Type A Quantity -->
+			<xsd:element name="EligibleDishwashersTypeAQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Eligible Dishwashers Type A Quantity</Description>
+						<LineNumber>Line 1(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+<!-- Eligible Dishwashers Type B Quantity -->
+			<xsd:element name="EligibleDishwashersTypeBQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Eligible Dishwashers Type B Quantity</Description>
+						<LineNumber>Line 1(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+<!-- Eligible Dishwashers Type C Quantity -->
+			<xsd:element name="EligibleDishwashersTypeCQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Eligible Dishwashers Type C Quantity</Description>
+						<LineNumber>Line 1(c)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+						<!-- Dishwashers Produced Prior 2 Years Type A Average Quantity -->
+			<xsd:element name="DshwshrPrdcdPr2YrsTypeAAvgQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Dishwashers Produced Prior 2 Years Type A Average Quantity</Description>
+						<LineNumber>Line 2(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+<!-- Dishwashers Produced Prior 2 Years Type B Average Quantity -->
+			<xsd:element name="DshwshrPrdcdPr2YrsTypeBAvgQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Dishwashers Produced Prior 2 Years Type B Average Quantity</Description>
+						<LineNumber>Line 2(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+<!-- Dishwashers Produced Prior 2 Years Type C Average Quantity -->
+			<xsd:element name="DshwshrPrdcdPr2YrsTypeCAvgQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Dishwashers Produced Prior 2 Years Type C Average Quantity</Description>
+						<LineNumber>Line 2(c)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!--  Net Eligible Dishwashers Type A Quantity -->
+			<xsd:element name="EligibleDishwashersTypeANetQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Net Eligible Dishwashers Type A Quantity</Description>
+						<LineNumber>Line 3(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!--  Net Eligible Dishwashers Type B Quantity -->
+			<xsd:element name="EligibleDishwashersTypeBNetQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Net Eligible Dishwashers Type B Quantity</Description>
+						<LineNumber>Line 3(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!--  Net Eligible Dishwashers Type C Quantity -->
+			<xsd:element name="EligibleDishwashersTypeCNetQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Net Eligible Dishwashers Type C Quantity</Description>
+						<LineNumber>Line 3(c)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!--  Line 4a No Entry: Applicable Amount Type A (Use Value Preprinted on Form) -->
+						<!--  Line 4b No Entry: Applicable Amount Type B (Use Value Preprinted on Form) -->
+			<!--  Line 4c No Entry: Applicable Amount Type C (Use Value Preprinted on Form) -->
+
+			<!--Dishwashers Type A Tentative Credit Amount -->
+			<xsd:element name="DishwashersTypeATentativeCrAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Dishwashers Type A Tentative Credit Amount</Description>
+						<LineNumber>Line 5(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!--Dishwashers Type B Tentative Credit Amount -->
+			<xsd:element name="DishwashersTypeBTentativeCrAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Dishwashers Type B Tentative Credit Amount</Description>
+						<LineNumber>Line 5(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!--Dishwashers Type C Tentative Credit Amount -->
+			<xsd:element name="DishwashersTypeCTentativeCrAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+								<xsd:documentation>
+						<Description>Dishwashers Type C Tentative Credit Amount</Description>
+						<LineNumber>Line 5(c)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!--Tentative Credit For Dishwashers -->
+			<xsd:element name="TentativeCrdtForDishwashers" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+								<xsd:documentation>
+						<Description>Tentative Credit For Dishwashers</Description>
+						<LineNumber>Line 6</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			
+			<!-- Part II - Clothes Washers -->
+			<!-- Type A Clothes Washers Produced -->
+			<xsd:element name="TypeAClothesWashersProdcd" type="IntegerType" minOccurs="0">
+			        <xsd:annotation>
+					<xsd:documentation>
+						<Description>Type A eligible clothes washers produced</Description>
+						<LineNumber>Line 7(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Type B Clothes Washers Produced -->
+			<xsd:element name="TypeBClothesWashersProdcd" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Type B eligible clothes washers produced</Description>
+						<LineNumber>Line 7(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Average Number Eligible Clothes Washer Type A -->
+			<xsd:element name="AvgeNumElgblClothesWasherTypA" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Average number Type A eligible clothes washers</Description>
+						<LineNumber>Line 8(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Average Number Eligible Clothes Washer Type B -->
+			<xsd:element name="AvgeNumElgblClothesWasherTypB" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Average number Type B eligible clothes washers</Description>
+						<LineNumber>Line 8(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Eligible Clothes Washers Type A Quantity -->
+			<xsd:element name="EligibleClothesWasherTypeAQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Eligible Clothes Washers Type A Quantity</Description>
+						<LineNumber>Line 9(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Eligible Clothes Washers Type B Quantity -->
+			<xsd:element name="EligibleClothesWasherTypeBQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Eligible Clothes Washers Type B Quantity</Description>
+						<LineNumber>Line 9(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+						<!-- Line 10(a) No Entry: Applicable Amount Type A (Use Value Preprinted on Form) -->
+			<!-- Line 10(b) No Entry: Applicable Amount Type B (Use Value Preprinted on Form) -->
+
+			<!-- Clothes Washer Type A Tentative Credit Amount -->
+			<xsd:element name="ClothesWasherTypeATentCrAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Clothes Washer Type A Tentative Credit Amount</Description>
+						<LineNumber>Line 11(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Clothes Washer Type B Tentative Credit Amount -->
+			<xsd:element name="ClothesWasherTypeBTentCrAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Clothes Washer Type B Tentative Credit Amount</Description>
+						<LineNumber>Line 11(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Tentative Credit For Clothes Washers -->
+			<xsd:element name="TentativeCrdtForClothesWashers" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Total of line 11(a) and line 11(b)</Description>
+						<LineNumber>Line 12</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+
+                        <!-- Part III Refrigerators -->
+			<!-- Type A Refrigerators Produced -->
+			<xsd:element name="TypeARefrigeratorsProdcd" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Type A eligible refrigerators produced</Description>
+						<LineNumber>Line 13(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Type B Refrigerators Produced  -->
+			<xsd:element name="TypeBRefrigeratorsProdcd" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Type B eligible refrigerators produced</Description>
+						<LineNumber>Line 13(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Average Number Eligible Refrigerator Type A  -->
+			<xsd:element name="AvgeNumElgblRefrigTypA" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Average number Type A eligible refrigerators</Description>
+						<LineNumber>Line 14(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Average Number Eligible Refrigerator Type B  -->
+			<xsd:element name="AvgeNumElgblRefrigTypB" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Average number Type B eligible refrigerators</Description>
+						<LineNumber>Line 14(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Eligible Refrigerator Type A Quantity -->
+			<xsd:element name="EligibleRefrigeratorTypeAQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Eligible Refrigerator Type A Quantity</Description>
+						<LineNumber>Line 15(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Eligible Refrigerator Type B Quantity -->
+			<xsd:element name="EligibleRefrigeratorTypeBQty" type="IntegerType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Eligible Refrigerator Type B Quantity</Description>
+						<LineNumber>Line 15(b)</LineNumber>
+					</xsd:documentation>
+			 	</xsd:annotation>
+			</xsd:element>
+
+			<!-- Line 16a No Entry: Applicable Amount Type A (Use Value Preprinted on Form) -->
+			<!-- Line 16b No Entry: Applicable Amount Type B (Use Value Preprinted on Form) -->
+
+			<!-- Refrigerator Type A Tentative Credit Amount -->
+			<xsd:element name="RefrigeratorTypeATentCrAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Refrigerator Type A Tentative Credit Amount</Description>
+						<LineNumber>Line 17(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Refrigerator Type B Tentative Credit Amount -->
+			<xsd:element name="RefrigeratorTypeBTentCrAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Refrigerator Type B Tentative Credit Amount</Description>
+						<LineNumber>Line 17(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Tentative Credit For Refrigerators  -->
+			<xsd:element name="TentativeCrdtForRefrigerators" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Total of line 17(a) and line 17(b)</Description>
+						<LineNumber>Line 18</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			
+			<!-- Part IV - CY Energy Appliance Credit -->
+			<!-- Total Tentative Credit -->
+			<xsd:element name="TotalTentativeCredit" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Total of all tentative credits</Description>
+						<LineNumber>Line 19</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Average Annual Gross Receipts Standard Percent Amount -->
+			<xsd:element name="AvgAnnualGrossRcptsStdPctAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Average Annual Gross Receipts Standard Percent Amount</Description>
+						<LineNumber>Line 20</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Line 21a No Entry: Maximum Credit Base Amount (Use Value Preprinted on Form) -->
+
+			<xsd:element name="ClothesWasherRefrigTentCrGroup" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+
+			<!-- Clothes Washer Type B Tentative Credit Amount -->
+						<xsd:element name="ClothesWasherTypeBTentCrAmt" type="USAmountType" minOccurs="0" maxOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Clothes Washer Type B Tentative Credit Amount</Description>
+									<LineNumber>Line 21(b)</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+			<!-- Refrigerator Type B Tentative Credit Amount -->
+						<xsd:element name="RefrigeratorTypeBTentCrAmt" type="USAmountType" minOccurs="0" maxOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Refrigerator Type B Tentative Credit Amount</Description>
+									<LineNumber>Line 21(c)</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<!-- Maximum Credit Allowed Amount -->
+			<xsd:element name="MaximumCreditAllowedAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Maximum credit amount</Description>
+						<LineNumber>Line 22</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+					
+			<!-- Tentative Appliance Credit Amount -->
+			<xsd:element name="TentativeApplianceCreditAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Tentative Appliance Credit Amount</Description>
+						<LineNumber>Line 23</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Single Producer -->
+			<xsd:element name="SingleProducer" type="LineExplanationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Single Producer</Description>
+						<LineNumber>Line 23</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>	
+						
+			<!-- Energy Efficient Appliance Credits Amount -->	
+			<xsd:element name="EnergyEffcntApplianceCrdtAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Energy efficient appliance credits Amount</Description>
+						<LineNumber>Line 24</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Total Appliance Credit Amount -->
+			<xsd:element name="TotalApplianceCreditAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Total Appliance Credit Amount</Description>
+						<LineNumber>Line 25</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Amount Allocated to Beneficiaries of Estates or Trusts or Patrons of the Cooperatives Amount -->
+			<xsd:element name="AllctedToBeneEstTrstPatrnAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Amount allocated to beneficiaries of estates or trusts or patrons of the cooperatives Amount</Description>
+						<LineNumber>Line 26</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Subtract line 26 from line 25 -->
+			<xsd:element name="EstTrCYBondCrAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Subtract line 26 from line 25</Description>
+						<LineNumber>Line 27</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+</xsd:schema>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.irs.gov/efile" xmlns="http://www.irs.gov/efile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	
+	<xsd:annotation>
+		<xsd:documentation>
+			<Description>IRS e-file Partnership Income Tax Schema - IRS Form 1065 Schedule D</Description>
+			<TaxYear>2012</TaxYear>
+			<MaturityLevel>Final Release</MaturityLevel>
+			<ReleaseDate>October 25, 2012</ReleaseDate>
+		</xsd:documentation>
+	</xsd:annotation>
+	
+	<xsd:include schemaLocation="../../../Common/efileTypes.xsd"/>
+	
+	
+	<!-- =============================================================== -->
+	<!-- ==================  IRS Form 1065 Schedule D ================== -->
+	<!-- =============================================================== -->
+	
+	
+	<xsd:element name="IRS1065ScheduleD">
+		<xsd:annotation>
+			<xsd:documentation>IRS Form 1065 Schedule D - Capital Gains and Losses</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="IRS1065ScheduleDType">
+					<xsd:attributeGroup ref="DocumentAttributes">
+						<xsd:annotation>
+							<xsd:documentation>Common return document attributes</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attributeGroup>
+					<xsd:attribute name="documentName" type="xsd:string" fixed="IRS1065ScheduleD">
+						<xsd:annotation>
+							<xsd:documentation>IRS internal use only. To avoid error in the return, do not include the attribute name or value.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="IRS1065ScheduleDType">
+		<xsd:annotation>
+			<xsd:documentation>Content model for Form 1065 Schedule D</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+
+			<!-- Related Party Like Kind Exchanges -->
+			<xsd:element name="RelatedPartyLikeKindExchange" type="CheckboxType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Check the box if you have Like-Kind Exchange, or Related Party Exchange or Related Party Like-Kind Exchange</Description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- ===== Part I - Short-Term Capital Gains and Losses - Assets Held One Year or Less ===== -->
+
+			<!-- Short-Term Totals from Form 8949 Box A -->
+			<xsd:element name="ShortTermFromF8949BoxA" type="AssetSaleType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Short-Term totals from all Forms 8949 With Box A Checked</Description>
+						<LineNumber>Schedule D Part I Line 1</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Short-Term Totals from Form 8949 Box B -->
+			<xsd:element name="ShortTermFromF8949BoxB" type="AssetSaleType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Short-Term totals from all Forms 8949 With Box B Checked</Description>
+						<LineNumber>Schedule D Part I Line 2</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Short-Term Totals from Form 8949 Box C -->
+			<xsd:element name="ShortTermFromF8949BoxC" type="AssetSaleType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Short-Term totals from all Forms 8949 With Box C Checked</Description>
+						<LineNumber>Schedule D Part I Line 3</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Short Term Capital Gain from Installment Sales -->
+			<xsd:element name="STCapitalGainInstallmentSales" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Short Term Capital Gain From Installment Sales from Form 6252, lines 26 or 37</Description>
+						<LineNumber>Schedule D Part I Line 4</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Short Term Capital Gain or Loss from Like-Kind Exchanges -->
+			<xsd:element name="STCapitalGainLossFromLikeKind" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Short-term Capital gain (loss) from like-kind exchanges from Form 8824</Description>
+						<LineNumber>Schedule D Part I Line 5</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Partner's share of short-term gain/loss -->
+			<xsd:element name="PartnersShareShortTermGainLoss" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Partnership's share of net short-term capital gain (loss), including specially allocated short-term capital gains (losses), from other partnerships, estates, and trusts</Description>
+						<LineNumber>Schedule D Part I Line 6</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Net Short Term Capital Gain or Loss -->
+			<xsd:element name="NetShortTermCapitalGainLoss" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Net short-term capital gain or (loss)</Description>
+						<LineNumber>Schedule D Part I Line 7</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- ===== Part II - Long-Term Capital Gains and Losses - Assets Held More Than One Year ===== -->
+
+			<!-- Long-Term Totals from Form 8949 Box A -->
+			<xsd:element name="LongTermFromF8949BoxA" type="AssetSaleType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Long-Term totals from all Forms 8949 With Box A Checked</Description>
+						<LineNumber>Schedule D Part II Line 8</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Long-Term Totals from Form 8949 Box B -->
+			<xsd:element name="LongTermFromF8949BoxB" type="AssetSaleType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Long-Term totals from all Forms 8949 With Box B Checked</Description>
+						<LineNumber>Schedule D Part II Line 9</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Long-Term Totals from Form 8949 Box C -->
+			<xsd:element name="LongTermFromF8949BoxC" type="AssetSaleType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Long-Term totals from all Forms 8949 With Box C Checked</Description>
+						<LineNumber>Schedule D Part II Line 10</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Long-Term Capital Gain from Installment Sales -->
+			<xsd:element name="LTCapitalGainInstallmentSales" type="USAmountNNType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Long-term Capital gain from installment sales from Form 6252, line 26 or 37</Description>
+						<LineNumber>Schedule D Part II Line 11</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Long-Term Capital Gain or Loss from Like-Kind Exchanges -->
+			<xsd:element name="LTCapitalGainLossFromLikeKind" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Long-term Capital gain or (loss) from like-kind exchanges from Form 8824</Description>
+						<LineNumber>Schedule D Part II Line 12</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Partner's share of long-term gain/loss -->
+			<xsd:element name="PartnersShareLongTermGainLoss" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Partnership's share of net long-term capital gain (loss), including specially allocated long-term capital gains (losses), from other partnerships, estates, and trusts</Description>
+						<LineNumber>Schedule D Part II Line 13</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Capital Gain Distributions -->
+			<xsd:element name="CapitalGainDistributions" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Capital gain distributions</Description>
+						<LineNumber>Schedule D Part II Line 14</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- Net Long-Term Capital Gain or Loss -->
+			<xsd:element name="NetLongTermCapitalGainLoss" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Net long-term capital gain or (loss)</Description>
+						<LineNumber>Schedule D Part II Line 15</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- ================================================================================ -->
+	<!-- ============= Type for Repeating Tables Rows in Part I and Part II ============= -->
+	<!-- ================================================================================ -->
+	<xsd:complexType name="AssetSaleType">
+		<xsd:sequence>
+		
+			<!-- Sale Price from Form(s) 8949 -->
+			<xsd:element name="SalePrice" type="USAmountNNType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Sale Price from Form(s) 8949, Line 2, Column (d)</Description>
+						<LineNumber>Schedule D Part I Line 1(d), Line 2(d), Line 3(d) and Part II Line 8(d), Line 9(d) Line 10(d)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Cost Or Other Basis From Form(s) -->
+			<xsd:element name="CostOrOtherBasis" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Cost Or Other Basis From Form(s) 8949, Line 2, Column (e)</Description>
+						<LineNumber>Schedule D Part I Line 1(e), Line 2(e), Line 3(e) and Part II Line 8(e), Line 9(e) Line 10(e)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="USAmountNNType">
+							<xsd:attribute name="referenceDocumentId" type="IdListType"/>
+							<xsd:attribute name="referenceDocumentName" type="StringType" fixed="CostBasisStatement"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<!-- Adjustments to Gain or Loss from Form(s) 8949 -->
+			<xsd:element name="AdjustmentsToGainOrLoss" type="USAmountNNType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Adjustments to Gain or Loss from Form(s) 8949, Line 2, Column (g)</Description>
+						<LineNumber>Schedule D Part I Line 1(g), Line 2(g), Line 3(g) and Part II Line 8(g), Line 9(g) Line 10(g)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<!-- Gain Or Loss -->
+			<xsd:element name="GainOrLoss" type="USAmountNNType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Gain or (Loss). Combine Columns (d), (e), and (g)</Description>
+						<LineNumber>Schedule D Part I Line 1(h), Line 2(h), Line 3(h) and Part II Line 8(h), Line 9(h) Line 10(h)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+		</xsd:sequence>
+	</xsd:complexType>
+	
+</xsd:schema>

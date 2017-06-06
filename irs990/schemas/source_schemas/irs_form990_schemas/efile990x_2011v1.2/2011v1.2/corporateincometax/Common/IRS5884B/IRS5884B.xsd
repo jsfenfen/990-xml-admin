@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.irs.gov/efile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.irs.gov/efile" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<Description>IRS e-file Schema - Form 5884B</Description>
+			<TaxYear>2011</TaxYear>
+			<MaturityLevel>Final Release</MaturityLevel>
+			<ReleaseDate>October 25, 2011</ReleaseDate>
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:include schemaLocation="../../../Common/efileTypes.xsd"/>
+
+	<!-- ====================================================================== -->
+	<!-- =======================  IRS Form 5884-B  ============================ -->
+	<!-- ====================================================================== -->
+
+	<xsd:element name="IRS5884B">
+		<xsd:annotation>
+			<xsd:documentation>IRS Form5884B</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="IRS5884BType">
+					<xsd:attributeGroup ref="DocumentAttributes">
+						<xsd:annotation>
+							<xsd:documentation>Common return document attributes</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attributeGroup>
+					<xsd:attribute name="documentName" type="xsd:string" fixed="IRS5884B">
+						<xsd:annotation>
+							<xsd:documentation>IRS internal use only. To avoid error in the return, do not include the attribute name or value.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="IRS5884BType">
+		<xsd:annotation>
+			<xsd:documentation>Content model for IRS Form5884B</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+
+			<!-- New Hire Retention Credit For Retained Worker Group -->
+			<xsd:element name="NewHireRtntnCrForRtnWorkerGrp" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>			
+			
+						<!-- SSN -->
+						<xsd:element name="SSN" type="SSNType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>SSN</Description>
+									<LineNumber>Line 1</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+						<!-- Retained Worker First Employment Date -->
+						<xsd:element name="RtnWorkerFirstEmplmnDt" type="DateType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Retained worker first employment date</Description>
+									<LineNumber>Line 2</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>		
+						</xsd:element>
+
+						<!-- Retained Worker Wages First 26 Week Employment Amount -->
+						<xsd:element name="RtnWorkerWgsFirst26WkEmplmnAmt" type="USAmountNNType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Retained worker wages first 26 week employment amount</Description>
+									<LineNumber>Line 3</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+						<!-- Retained Worker Wages Times Percent Amount -->
+						<xsd:element name="RtnWorkerWgsTimesPctAmt" type="USAmountNNType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Retained worker wages times percent amount</Description>
+									<LineNumber>Line 4</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+						<!-- Retained Worker Wages Second 26 Week Employment Amount -->
+						<xsd:element name="RtnWorkerWgsSnd26WkEmplmnAmt" type="USAmountNNType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Retained worker wages second 26 week employment amount</Description>
+									<LineNumber>Line 5</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+						<!-- Retained Worker Total Wages Amount -->
+						<xsd:element name="RtnWorkerTotalWagesAmt" type="USAmountNNType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Retained worker wages second 26 week employment amount</Description>
+									<LineNumber>Line 6</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+						<!-- Retained Worker Total Wages Times Percent Amount -->
+						<xsd:element name="RtnWorkerTotalWgsTimesPctAmt" type="USAmountNNType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Retained worker total wages times percent amount</Description>
+									<LineNumber>Line 7</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						
+						<!-- Retained Worker Smaller Total Or Max Credit Amount -->
+						<xsd:element name="RtnWorkerSmllrTotalOrMaxCrAmt" type="USAmountNNType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Retained worker smaller total or max credit amount</Description>
+									<LineNumber>Line 9</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<!-- Retained Worker All Total Credit Amount -->
+			<xsd:element name="RtnWorkerAllTotalCreditAmt" type="USAmountNNType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Retained worker all total credit amount</Description>
+						<LineNumber>Line 10</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>			
+			
+			<!-- Retained Worker Total Credit Count -->
+			<xsd:element name="RtnWorkerTotalCreditCnt" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Retained worker total credit Count</Description>
+						<LineNumber>Line 11</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="IntegerType">
+						<xsd:totalDigits value="7"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>			
+			
+			<!-- New Hire Retention Credit Partnership and S Corporations Amount -->
+			<xsd:element name="NewHireRtntnCrPrtshpSCorpAmt" type="USAmountNNType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>New hire retention credit partnership and s corporations amount</Description>
+						<LineNumber>Line 12</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<!-- New Hire Retention Credit Amount -->
+			<xsd:element name="NewHireRetentionCreditAmt" type="USAmountNNType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>New hire retention credit amount</Description>
+						<LineNumber>Line 13</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
