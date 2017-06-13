@@ -1,0 +1,31 @@
+import os
+from .utils import mkdir_p
+
+# local variables read into settings.py. 
+# variables set here will override whatever's in settings.py
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DEBUG=True
+ALLOWED_HOSTS = ['localhost',]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'irsxml',
+        'USER': 'irs_user',
+        'PASSWORD': 'sectionfiveohonec',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+SECRET_KEY = '6g2y3ml50l0r$)0sv)8y216%8&20j2n#$cso%9u$rilu(uv_ey'
+
+LOCAL_DATA_DIR = os.path.join(BASE_DIR, "irs_data")
+LOCAL_CSV_DIR = os.path.join(BASE_DIR, "irs_csvs")
+LOCAL_INDEX_FILE = os.path.join(LOCAL_CSV_DIR + "/index_") + "%s.csv" 
+SCHEMA_DIR = os.path.join(BASE_DIR, "schemas", "source_schemas") 
+mkdir_p([LOCAL_DATA_DIR, LOCAL_CSV_DIR, SCHEMA_DIR])

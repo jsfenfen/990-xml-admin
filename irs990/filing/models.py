@@ -48,7 +48,7 @@ class xml_submission(models.Model):
 
     def set_year_version_from_json(self, save=True):
         """ Only works if json has already been set! """
-        assert self.json_set
+        assert self.json_set # Todo: be more verbose to user about why this bails
         version_string = self.get_as_json()['Return']['@returnVersion']
         result = get_year_version_from_schema ( version_string )
         self.schema_year = result['year']
@@ -75,6 +75,8 @@ class xml_submission(models.Model):
     class Meta:
         verbose_name="XML Submission"
         managed=True
+
+    ## Do we need a default manager that defers json? Might be a good idea. 
 
 
 # to do - define relationship between observed_xpath and observed_group. Can an observed_xpath have multiple parent groups?

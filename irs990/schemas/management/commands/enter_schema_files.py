@@ -4,7 +4,7 @@ from django.core.management.base import BaseCommand
 
 from django.conf import settings
 from schemas.models import XSDFile, ProductionVersion
-from filing.schema_name_utils import get_year_version_from_schema
+from filing.schema_name_utils import version
 
 class Command(BaseCommand):
     help = """Enter schema files by walking the SCHEMA_DIR.
@@ -14,13 +14,9 @@ class Command(BaseCommand):
                 Hard undo: delete from schemas_xsdfile [ where version_string='2013v4.0'];
             """
 
-    def valid_version(self, string):
-        get_year_version_from_schema(string)
-        return string
-
     def add_arguments(self, parser):
             # Positional arguments
-            parser.add_argument('schema', nargs='?', type=self.valid_version)
+            parser.add_argument('schema', nargs='?', type=version)
 
     def walk_dir(self, DIR, version_string):
         print "Walk dir %s" % DIR

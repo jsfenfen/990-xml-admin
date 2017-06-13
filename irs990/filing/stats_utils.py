@@ -1,10 +1,5 @@
 from collections import Counter
-
-## Type names for simpler comparison later
-dictType=type(dict())
-listType=type(list())
-unicodeType=type(u'')
-noneType=type(None)
+from filing.type_utils import dictType, listType, unicodeType, noneType
 
 class json_stats_tracker:
 
