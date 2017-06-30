@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.irs.gov/efile" returnVersion="2015v2.1">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2016-08-11T11:06:06-05:00</ReturnTs>
+    <TaxPeriodEndDt>2015-12-31</TaxPeriodEndDt>
+    <PreparerFirmGrp>
+      <PreparerFirmEIN>271728945</PreparerFirmEIN>
+      <PreparerFirmName>
+        <BusinessNameLine1Txt>PKF O'CONNOR DAVIES LLP</BusinessNameLine1Txt>
+      </PreparerFirmName>
+      <PreparerUSAddress>
+        <AddressLine1Txt>665 FIFTH AVENUE</AddressLine1Txt>
+        <CityNm>NEW YORK</CityNm>
+        <StateAbbreviationCd>NY</StateAbbreviationCd>
+        <ZIPCd>10022</ZIPCd>
+      </PreparerUSAddress>
+    </PreparerFirmGrp>
+    <ReturnTypeCd>990</ReturnTypeCd>
+    <TaxPeriodBeginDt>2015-01-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>142007220</EIN>
+      <BusinessName>
+        <BusinessNameLine1Txt>PRO PUBLICA INC</BusinessNameLine1Txt>
+      </BusinessName>
+      <BusinessNameControlTxt>PROP</BusinessNameControlTxt>
+      <PhoneNum>2125145250</PhoneNum>
+      <USAddress>
+        <AddressLine1Txt>155 AVE OF THE AMERICAS NO 13 FL</AddressLine1Txt>
+        <CityNm>NEW YORK</CityNm>
+        <StateAbbreviationCd>NY</StateAbbreviationCd>
+        <ZIPCd>10013</ZIPCd>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>RICHARD J TOFEL</PersonNm>
+      <PersonTitleTxt>PRESIDENT</PersonTitleTxt>
+      <PhoneNum>2125145250</PhoneNum>
+      <SignatureDt>2016-08-11</SignatureDt>
+      <DiscussWithPaidPreparerInd>1</DiscussWithPaidPreparerInd>
+    </BusinessOfficerGrp>
+    <PreparerPersonGrp>
+      <PreparerPersonNm>GARRETT M HIGGINS</PreparerPersonNm>
+      <PTIN>P00543209</PTIN>
+      <PhoneNum>2122862600</PhoneNum>
+      <PreparationDt>2016-08-11</PreparationDt>
+    </PreparerPersonGrp>
+    <TaxYr>2015</TaxYr>
+    <BuildTS>2016-12-15 16:53:06Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCnt="7">
+    <IRS990 documentId="RetDoc1038000001" referenceDocumentId="RetDoc1044400001">
+      <PrincipalOfficerNm>RICHARD J TOFEL</PrincipalOfficerNm>
+      <USAddress>
+        <AddressLine1Txt>155 AVE OF THE AMERICAS NO 13 FL</AddressLine1Txt>
+        <CityNm>NEW YORK</CityNm>
+        <StateAbbreviationCd>NY</StateAbbreviationCd>
+        <ZIPCd>10013</ZIPCd>
+      </USAddress>
+      <GrossReceiptsAmt>17112241</GrossReceiptsAmt>
+      <GroupReturnForAffiliatesInd>0</GroupReturnForAffiliatesInd>
+      <Organization501c3Ind>X</Organization501c3Ind>
+      <WebsiteAddressTxt>WWW.PROPUBLICA.ORG</WebsiteAddressTxt>
+      <TypeOfOrganizationCorpInd>X</TypeOfOrganizationCorpInd>
+      <FormationYr>2007</FormationYr>
+      <LegalDomicileStateCd>DE</LegalDomicileStateCd>
+      <ActivityOrMissionDesc>TO EXPOSE ABUSES OF POWER AND BETRAYALS OF THE PUBLIC TRUST - SEE "SCHEDULE O" FOR CONTINUATIONBY GOVERNMENT, BUSINESS, AND OTHER INSTITUTIONS, USING THE MORAL FORCE OF INVESTIGATIVE JOURNALISM TO SPUR REFORM THROUGH THE SUSTAINED SPOTLIGHTING OF WRONGDOING.</ActivityOrMissionDesc>
+      <VotingMembersGoverningBodyCnt>10</VotingMembersGoverningBodyCnt>
+      <VotingMembersIndependentCnt>9</VotingMembersIndependentCnt>
+      <TotalEmployeeCnt>76</TotalEmployeeCnt>
+      <TotalVolunteersCnt>9</TotalVolunteersCnt>
+      <TotalGrossUBIAmt>19799</TotalGrossUBIAmt>
+      <NetUnrelatedBusTxblIncmAmt>9360</NetUnrelatedBusTxblIncmAmt>
+      <PYContributionsGrantsAmt>10169976</PYContributionsGrantsAmt>
+      <CYContributionsGrantsAmt>16882164</CYContributionsGrantsAmt>
+      <PYProgramServiceRevenueAmt>0</PYProgramServiceRevenueAmt>
+      <CYProgramServiceRevenueAmt>60000</CYProgramServiceRevenueAmt>
+      <PYInvestmentIncomeAmt>4176</PYInvestmentIncomeAmt>
+      <CYInvestmentIncomeAmt>3919</CYInvestmentIncomeAmt>
+      <PYOtherRevenueAmt>150123</PYOtherRevenueAmt>
+      <CYOtherRevenueAmt>100847</CYOtherRevenueAmt>
+      <PYTotalRevenueAmt>10324275</PYTotalRevenueAmt>
+      <CYTotalRevenueAmt>17046930</CYTotalRevenueAmt>
+      <PYGrantsAndSimilarPaidAmt>0</PYGrantsAndSimilarPaidAmt>
+      <CYGrantsAndSimilarPaidAmt>0</CYGrantsAndSimilarPaidAmt>
+      <PYBenefitsPaidToMembersAmt>0</PYBenefitsPaidToMembersAmt>
+      <CYBenefitsPaidToMembersAmt>0</CYBenefitsPaidToMembersAmt>
+      <PYSalariesCompEmpBnftPaidAmt>8589013</PYSalariesCompEmpBnftPaidAmt>
+      <CYSalariesCompEmpBnftPaidAmt>9360011</CYSalariesCompEmpBnftPaidAmt>
+      <PYTotalProfFndrsngExpnsAmt>0</PYTotalProfFndrsngExpnsAmt>
+      <CYTotalProfFndrsngExpnsAmt>0</CYTotalProfFndrsngExpnsAmt>
+      <CYTotalFundraisingExpenseAmt>465121</CYTotalFundraisingExpenseAmt>
+      <PYOtherExpensesAmt>2897439</PYOtherExpensesAmt>
+      <CYOtherExpensesAmt>3101138</CYOtherExpensesAmt>
+      <PYTotalExpensesAmt>11486452</PYTotalExpensesAmt>
+      <CYTotalExpensesAmt>12461149</CYTotalExpensesAmt>
+      <PYRevenuesLessExpensesAmt>-1162177</PYRevenuesLessExpensesAmt>
+      <CYRevenuesLessExpensesAmt>4585781</CYRevenuesLessExpensesAmt>
+      <TotalAssetsBOYAmt>6865118</TotalAssetsBOYAmt>
+      <TotalAssetsEOYAmt>11552064</TotalAssetsEOYAmt>
+      <TotalLiabilitiesBOYAmt>184272</TotalLiabilitiesBOYAmt>
+      <TotalLiabilitiesEOYAmt>285437</TotalLiabilitiesEOYAmt>
+      <NetAssetsOrFundBalancesBOYAmt>6680846</NetAssetsOrFundBalancesBOYAmt>
+      <NetAssetsOrFundBalancesEOYAmt>11266627</NetAssetsOrFundBalancesEOYAmt>
+      <InfoInScheduleOPartIIIInd>X</InfoInScheduleOPartIIIInd>
+      <MissionDesc>PRO PUBLICA IS AN INDEPENDENT, NON-PROFIT, PULITZER PRIZE-WINNING NEWSROOM THAT PRODUCES INVESTIGATIVE JOURNALISM IN THE PUBLIC INTEREST. OUR WORK FOCUSES EXCLUSIVELY ON TRULY IMPORTANT STORIES. SEE "SCHEDULE O" FOR CONTINUATION.WE PRODUCE JOURNALISM THAT SHINES A LIGHT ON EXPLOITATION OF THE WEAK BY THE STRONG AND ON THE FAILURES OF THOSE WITH POWER TO VINDICATE THE TRUST PLACED IN THEM. IN THE BEST TRADITIONS OF AMERICAN JOURNALISM IN THE PUBLIC SERVICE, WE AIM TO STIMULATE POSITIVE CHANGE, UNCOVERING UNSAVORY PRACTICES AND ABUSES OF POWER IN ORDER TO PROD REFORM. WE DO THIS IN AN ENTIRELY NON-PARTISAN AND NON-IDEOLOGICAL MANNER, ADHERING TO THE STRICTEST STANDARDS OF JOURNALISTIC IMPARTIALITY.OUR STATED MISSION IS "TO EXPOSE ABUSES OF POWER AND BETRAYALS OF THE PUBLIC TRUST BY GOVERNMENT, BUSINESS, AND OTHER INSTITUTIONS, USING THE MORAL FORCE OF INVESTIGATIVE JOURNALISM TO SPUR REFORM THROUGH THE SUSTAINED SPOTLIGHTING OF WRONGDOING."</MissionDesc>
+      <SignificantNewProgramSrvcInd>0</SignificantNewProgramSrvcInd>
+      <SignificantChangeInd>0</SignificantChangeInd>
+      <ExpenseAmt>10716533</ExpenseAmt>
+      <RevenueAmt>111000</RevenueAmt>
+      <Desc>INVESTIGATIVE JOURNALISM IN THE PUBLIC INTEREST - SEE SCHEDULE O FOR DETAILS</Desc>
+      <TotalProgramServiceExpensesAmt>10716533</TotalProgramServiceExpensesAmt>
+      <DescribedInSection501c3Ind referenceDocumentId="RetDoc1039100001">1</DescribedInSection501c3Ind>
+      <ScheduleBRequiredInd referenceDocumentId="RetDoc1234500001">1</ScheduleBRequiredInd>
+      <PoliticalCampaignActyInd>0</PoliticalCampaignActyInd>
+      <LobbyingActivitiesInd>0</LobbyingActivitiesInd>
+      <SubjectToProxyTaxInd>0</SubjectToProxyTaxInd>
+      <DonorAdvisedFundInd referenceDocumentId="RetDoc1040000001">0</DonorAdvisedFundInd>
+      <ConservationEasementsInd referenceDocumentId="RetDoc1040000001">0</ConservationEasementsInd>
+      <CollectionsOfArtInd referenceDocumentId="RetDoc1040000001">0</CollectionsOfArtInd>
+      <CreditCounselingInd referenceDocumentId="RetDoc1040000001">0</CreditCounselingInd>
+      <TempOrPermanentEndowmentsInd referenceDocumentId="RetDoc1040000001">0</TempOrPermanentEndowmentsInd>
+      <ReportLandBuildingEquipmentInd referenceDocumentId="RetDoc1040000001">1</ReportLandBuildingEquipmentInd>
+      <ReportInvestmentsOtherSecInd referenceDocumentId="RetDoc1040000001">0</ReportInvestmentsOtherSecInd>
+      <ReportProgramRelatedInvstInd referenceDocumentId="RetDoc1040000001">0</ReportProgramRelatedInvstInd>
+      <ReportOtherAssetsInd referenceDocumentId="RetDoc1040000001">0</ReportOtherAssetsInd>
+      <ReportOtherLiabilitiesInd referenceDocumentId="RetDoc1040000001">0</ReportOtherLiabilitiesInd>
+      <IncludeFIN48FootnoteInd referenceDocumentId="RetDoc1040000001">1</IncludeFIN48FootnoteInd>
+      <IndependentAuditFinclStmtInd referenceDocumentId="RetDoc1040000001">1</IndependentAuditFinclStmtInd>
+      <ConsolidatedAuditFinclStmtInd referenceDocumentId="RetDoc1040000001">0</ConsolidatedAuditFinclStmtInd>
+      <SchoolOperatingInd>0</SchoolOperatingInd>
+      <ForeignOfficeInd>0</ForeignOfficeInd>
+      <ForeignActivitiesInd>0</ForeignActivitiesInd>
+      <MoreThan5000KToOrgInd>0</MoreThan5000KToOrgInd>
+      <MoreThan5000KToIndividualsInd>0</MoreThan5000KToIndividualsInd>
+      <ProfessionalFundraisingInd>0</ProfessionalFundraisingInd>
+      <FundraisingActivitiesInd>0</FundraisingActivitiesInd>
+      <GamingActivitiesInd>0</GamingActivitiesInd>
+      <OperateHospitalInd>0</OperateHospitalInd>
+      <GrantsToOrganizationsInd>0</GrantsToOrganizationsInd>
+      <GrantsToIndividualsInd>0</GrantsToIndividualsInd>
+      <ScheduleJRequiredInd referenceDocumentId="RetDoc1042400001">1</ScheduleJRequiredInd>
+      <TaxExemptBondsInd>0</TaxExemptBondsInd>
+      <EngagedInExcessBenefitTransInd>0</EngagedInExcessBenefitTransInd>
+      <PYExcessBenefitTransInd>0</PYExcessBenefitTransInd>
+      <LoanOutstandingInd>0</LoanOutstandingInd>
+      <GrantToRelatedPersonInd>0</GrantToRelatedPersonInd>
+      <BusinessRlnWithOrgMemInd>0</BusinessRlnWithOrgMemInd>
+      <BusinessRlnWithFamMemInd>0</BusinessRlnWithFamMemInd>
+      <BusinessRlnWithOfficerEntInd>0</BusinessRlnWithOfficerEntInd>
+      <DeductibleNonCashContriInd referenceDocumentId="RetDoc1042900001">1</DeductibleNonCashContriInd>
+      <DeductibleArtContributionInd referenceDocumentId="RetDoc1042900001">0</DeductibleArtContributionInd>
+      <TerminateOperationsInd>0</TerminateOperationsInd>
+      <PartialLiquidationInd>0</PartialLiquidationInd>
+      <DisregardedEntityInd>0</DisregardedEntityInd>
+      <RelatedEntityInd>0</RelatedEntityInd>
+      <RelatedOrganizationCtrlEntInd>0</RelatedOrganizationCtrlEntInd>
+      <TrnsfrExmptNonChrtblRltdOrgInd>0</TrnsfrExmptNonChrtblRltdOrgInd>
+      <ActivitiesConductedPrtshpInd>0</ActivitiesConductedPrtshpInd>
+      <ScheduleORequiredInd>1</ScheduleORequiredInd>
+      <IRPDocumentCnt>56</IRPDocumentCnt>
+      <IRPDocumentW2GCnt>0</IRPDocumentW2GCnt>
+      <EmployeeCnt>76</EmployeeCnt>
+      <EmploymentTaxReturnsFiledInd>1</EmploymentTaxReturnsFiledInd>
+      <UnrelatedBusIncmOverLimitInd>1</UnrelatedBusIncmOverLimitInd>
+      <Form990TFiledInd>1</Form990TFiledInd>
+      <ForeignFinancialAccountInd>0</ForeignFinancialAccountInd>
+      <ProhibitedTaxShelterTransInd>0</ProhibitedTaxShelterTransInd>
+      <TaxablePartyNotificationInd>0</TaxablePartyNotificationInd>
+      <NondeductibleContributionsInd>0</NondeductibleContributionsInd>
+      <QuidProQuoContributionsInd>0</QuidProQuoContributionsInd>
+      <Form8282PropertyDisposedOfInd>0</Form8282PropertyDisposedOfInd>
+      <RcvFndsToPayPrsnlBnftCntrctInd>0</RcvFndsToPayPrsnlBnftCntrctInd>
+      <PayPremiumsPrsnlBnftCntrctInd>0</PayPremiumsPrsnlBnftCntrctInd>
+      <IndoorTanningServicesInd>0</IndoorTanningServicesInd>
+      <InfoInScheduleOPartVIInd>X</InfoInScheduleOPartVIInd>
+      <GoverningBodyVotingMembersCnt>10</GoverningBodyVotingMembersCnt>
+      <IndependentVotingMemberCnt>9</IndependentVotingMemberCnt>
+      <FamilyOrBusinessRlnInd>0</FamilyOrBusinessRlnInd>
+      <DelegationOfMgmtDutiesInd>1</DelegationOfMgmtDutiesInd>
+      <ChangeToOrgDocumentsInd>0</ChangeToOrgDocumentsInd>
+      <MaterialDiversionOrMisuseInd>0</MaterialDiversionOrMisuseInd>
+      <MembersOrStockholdersInd>0</MembersOrStockholdersInd>
+      <ElectionOfBoardMembersInd>0</ElectionOfBoardMembersInd>
+      <DecisionsSubjectToApprovaInd>0</DecisionsSubjectToApprovaInd>
+      <MinutesOfGoverningBodyInd>1</MinutesOfGoverningBodyInd>
+      <MinutesOfCommitteesInd>1</MinutesOfCommitteesInd>
+      <OfficerMailingAddressInd>0</OfficerMailingAddressInd>
+      <LocalChaptersInd>0</LocalChaptersInd>
+      <Form990ProvidedToGvrnBodyInd>1</Form990ProvidedToGvrnBodyInd>
+      <ConflictOfInterestPolicyInd>1</ConflictOfInterestPolicyInd>
+      <AnnualDisclosureCoveredPrsnInd>1</AnnualDisclosureCoveredPrsnInd>
+      <RegularMonitoringEnfrcInd>1</RegularMonitoringEnfrcInd>
+      <WhistleblowerPolicyInd>1</WhistleblowerPolicyInd>
+      <DocumentRetentionPolicyInd>1</DocumentRetentionPolicyInd>
+      <CompensationProcessCEOInd>1</CompensationProcessCEOInd>
+      <CompensationProcessOtherInd>1</CompensationProcessOtherInd>
+      <InvestmentInJointVentureInd>0</InvestmentInJointVentureInd>
+      <StatesWhereCopyOfReturnIsFldCd>DC</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>AL</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>AK</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>AZ</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>AR</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>CA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>CT</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>FL</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>GA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>HI</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>IL</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>KS</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>KY</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>LA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>ME</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>MD</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>MA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>MI</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>MN</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>MS</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>MS</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>NH</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>NJ</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>NM</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>NY</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>NC</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>ND</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>OH</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>OK</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>OR</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>PA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>RI</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>SC</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>TN</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>UT</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>VA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>WA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>WV</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>WI</StatesWhereCopyOfReturnIsFldCd>
+      <OwnWebsiteInd>X</OwnWebsiteInd>
+      <OtherWebsiteInd>X</OtherWebsiteInd>
+      <UponRequestInd>X</UponRequestInd>
+      <BooksInCareOfDetail>
+        <BusinessName>
+          <BusinessNameLine1Txt>STEPHANIE N LITTLE DIRECTOR OF FINANCE &amp; HUMAN RESOURCES</BusinessNameLine1Txt>
+        </BusinessName>
+        <PhoneNum>2125145250</PhoneNum>
+        <USAddress>
+          <AddressLine1Txt>155 AVE OF THE AMERICAS NO 13 FL</AddressLine1Txt>
+          <CityNm>NEW YORK</CityNm>
+          <StateAbbreviationCd>NY</StateAbbreviationCd>
+          <ZIPCd>10013</ZIPCd>
+        </USAddress>
+      </BooksInCareOfDetail>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>HERBERT M SANDLER</PersonNm>
+        <TitleTxt>FOUNDING CHAIRMAN</TitleTxt>
+        <AverageHoursPerWeekRt>3.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>PAUL E STEIGER</PersonNm>
+        <TitleTxt>EXECUTIVE CHAIRMAN</TitleTxt>
+        <AverageHoursPerWeekRt>30.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>200482</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>14274</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>MARK COLODNY</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>HENRY LOUIS GATES JR</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>CLAIRE HOFFMAN</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>ROBERT CS MONKS</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>RON OLSON</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>PAUL SAGAN</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>KAT TAYLOR</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>TOM UNTERMAN</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>RICHARD TOFEL</PersonNm>
+        <TitleTxt>PRESIDENT AND CO-EXECUTIVE</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>385186</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>36796</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>STEPHEN ENGELBERG</PersonNm>
+        <TitleTxt>EDITOR-IN-CHIEF &amp; CO-EXECUTIVE</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>381030</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>49259</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>DEBRA GOLDBERG VICE PRESIDENT</PersonNm>
+        <TitleTxt>DEVELOPMENT UNTIL SEPT. 2015</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <KeyEmployeeInd>X</KeyEmployeeInd>
+        <ReportableCompFromOrgAmt>183138</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>22268</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>ROBIN FIELDS</PersonNm>
+        <TitleTxt>MANAGING EDITOR</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>239517</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>15735</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>TRACY WEBER</PersonNm>
+        <TitleTxt>SENIOR EDITOR</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>202698</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>30639</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>JOSEPH SEXTON</PersonNm>
+        <TitleTxt>SENIOR EDITOR</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>199799</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>28707</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>CHARLES ORNSTEIN</PersonNm>
+        <TitleTxt>SENIOR REPORTER</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>198761</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>40184</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>THOMAS C MILLER</PersonNm>
+        <TitleTxt>SENIOR REPORTER</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>188291</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>43447</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <TotalReportableCompFromOrgAmt>2178902</TotalReportableCompFromOrgAmt>
+      <TotReportableCompRltdOrgAmt>0</TotReportableCompRltdOrgAmt>
+      <TotalOtherCompensationAmt>281309</TotalOtherCompensationAmt>
+      <IndivRcvdGreaterThan100KCnt>32</IndivRcvdGreaterThan100KCnt>
+      <FormerOfcrEmployeesListedInd>0</FormerOfcrEmployeesListedInd>
+      <TotalCompGreaterThan150KInd>1</TotalCompGreaterThan150KInd>
+      <CompensationFromOtherSrcsInd>0</CompensationFromOtherSrcsInd>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>PREININGER CONTRUCTION GROUP</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>79 CARROLL AVE</AddressLine1Txt>
+            <CityNm>BRIDGEPORT</CityNm>
+            <StateAbbreviationCd>CT</StateAbbreviationCd>
+            <ZIPCd>06607</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>CONSTRUCTION</ServicesDesc>
+        <CompensationAmt>472511</CompensationAmt>
+      </ContractorCompensationGrp>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>ADP TOTALSOURCE</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>5800 WINDWARD PARKWAY</AddressLine1Txt>
+            <CityNm>ALPHARETTA</CityNm>
+            <StateAbbreviationCd>GA</StateAbbreviationCd>
+            <ZIPCd>30005</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>PROFESSIONAL EMPLOYER ORGANIZATION</ServicesDesc>
+        <CompensationAmt>124347</CompensationAmt>
+      </ContractorCompensationGrp>
+      <CntrctRcvdGreaterThan100KCnt>2</CntrctRcvdGreaterThan100KCnt>
+      <AllOtherContributionsAmt>16882164</AllOtherContributionsAmt>
+      <NoncashContributionsAmt>46666</NoncashContributionsAmt>
+      <TotalContributionsAmt>16882164</TotalContributionsAmt>
+      <ProgramServiceRevenueGrp>
+        <Desc>PROGRAM SERVICE FEES</Desc>
+        <BusinessCd>519130</BusinessCd>
+        <TotalRevenueColumnAmt>60000</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>60000</RelatedOrExemptFuncIncomeAmt>
+      </ProgramServiceRevenueGrp>
+      <TotalProgramServiceRevenueAmt>60000</TotalProgramServiceRevenueAmt>
+      <InvestmentIncomeGrp>
+        <TotalRevenueColumnAmt>3919</TotalRevenueColumnAmt>
+        <ExclusionAmt>3919</ExclusionAmt>
+      </InvestmentIncomeGrp>
+      <RoyaltiesRevenueGrp>
+        <TotalRevenueColumnAmt>70956</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>51000</RelatedOrExemptFuncIncomeAmt>
+        <ExclusionAmt>19956</ExclusionAmt>
+      </RoyaltiesRevenueGrp>
+      <GrossAmountSalesAssetsGrp>
+        <SecuritiesAmt>65311</SecuritiesAmt>
+      </GrossAmountSalesAssetsGrp>
+      <LessCostOthBasisSalesExpnssGrp>
+        <SecuritiesAmt>65311</SecuritiesAmt>
+      </LessCostOthBasisSalesExpnssGrp>
+      <GainOrLossGrp>
+        <SecuritiesAmt>0</SecuritiesAmt>
+      </GainOrLossGrp>
+      <OtherRevenueMiscGrp>
+        <Desc>ADVERTISING REVENUE</Desc>
+        <BusinessCd>541800</BusinessCd>
+        <TotalRevenueColumnAmt>19799</TotalRevenueColumnAmt>
+        <UnrelatedBusinessRevenueAmt>19799</UnrelatedBusinessRevenueAmt>
+      </OtherRevenueMiscGrp>
+      <OtherRevenueMiscGrp>
+        <Desc>HONORARIUMS REVENUE</Desc>
+        <BusinessCd>900099</BusinessCd>
+        <TotalRevenueColumnAmt>10092</TotalRevenueColumnAmt>
+        <ExclusionAmt>10092</ExclusionAmt>
+      </OtherRevenueMiscGrp>
+      <OtherRevenueTotalAmt>29891</OtherRevenueTotalAmt>
+      <TotalRevenueGrp>
+        <TotalRevenueColumnAmt>17046930</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>111000</RelatedOrExemptFuncIncomeAmt>
+        <UnrelatedBusinessRevenueAmt>19799</UnrelatedBusinessRevenueAmt>
+        <ExclusionAmt>33967</ExclusionAmt>
+      </TotalRevenueGrp>
+      <CompCurrentOfcrDirectorsGrp>
+        <TotalAmt>1272433</TotalAmt>
+        <ProgramServicesAmt>645045</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>424384</ManagementAndGeneralAmt>
+        <FundraisingAmt>203004</FundraisingAmt>
+      </CompCurrentOfcrDirectorsGrp>
+      <OtherSalariesAndWagesGrp>
+        <TotalAmt>6628192</TotalAmt>
+        <ProgramServicesAmt>6088828</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>396471</ManagementAndGeneralAmt>
+        <FundraisingAmt>142893</FundraisingAmt>
+      </OtherSalariesAndWagesGrp>
+      <PensionPlanContributionsGrp>
+        <TotalAmt>263737</TotalAmt>
+        <ProgramServicesAmt>252539</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>11198</ManagementAndGeneralAmt>
+      </PensionPlanContributionsGrp>
+      <OtherEmployeeBenefitsGrp>
+        <TotalAmt>655147</TotalAmt>
+        <ProgramServicesAmt>593886</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>45351</ManagementAndGeneralAmt>
+        <FundraisingAmt>15910</FundraisingAmt>
+      </OtherEmployeeBenefitsGrp>
+      <PayrollTaxesGrp>
+        <TotalAmt>540502</TotalAmt>
+        <ProgramServicesAmt>460271</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>57456</ManagementAndGeneralAmt>
+        <FundraisingAmt>22775</FundraisingAmt>
+      </PayrollTaxesGrp>
+      <FeesForServicesLegalGrp>
+        <TotalAmt>13042</TotalAmt>
+        <ManagementAndGeneralAmt>489</ManagementAndGeneralAmt>
+        <FundraisingAmt>12553</FundraisingAmt>
+      </FeesForServicesLegalGrp>
+      <FeesForServicesAccountingGrp>
+        <TotalAmt>29750</TotalAmt>
+        <ProgramServicesAmt>23800</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>2975</ManagementAndGeneralAmt>
+        <FundraisingAmt>2975</FundraisingAmt>
+      </FeesForServicesAccountingGrp>
+      <FeesForServicesOtherGrp>
+        <TotalAmt>346103</TotalAmt>
+        <ProgramServicesAmt>321885</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>18978</ManagementAndGeneralAmt>
+        <FundraisingAmt>5240</FundraisingAmt>
+      </FeesForServicesOtherGrp>
+      <AdvertisingGrp>
+        <TotalAmt>46297</TotalAmt>
+        <ProgramServicesAmt>45446</ProgramServicesAmt>
+        <FundraisingAmt>851</FundraisingAmt>
+      </AdvertisingGrp>
+      <OfficeExpensesGrp>
+        <TotalAmt>172469</TotalAmt>
+        <ProgramServicesAmt>145802</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>18573</ManagementAndGeneralAmt>
+        <FundraisingAmt>8094</FundraisingAmt>
+      </OfficeExpensesGrp>
+      <InformationTechnologyGrp>
+        <TotalAmt>429973</TotalAmt>
+        <ProgramServicesAmt>362213</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>31609</ManagementAndGeneralAmt>
+        <FundraisingAmt>36151</FundraisingAmt>
+      </InformationTechnologyGrp>
+      <OccupancyGrp>
+        <TotalAmt>1036179</TotalAmt>
+        <ProgramServicesAmt>851354</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>184825</ManagementAndGeneralAmt>
+      </OccupancyGrp>
+      <TravelGrp>
+        <TotalAmt>476409</TotalAmt>
+        <ProgramServicesAmt>459732</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>3677</ManagementAndGeneralAmt>
+        <FundraisingAmt>13000</FundraisingAmt>
+      </TravelGrp>
+      <ConferencesMeetingsGrp>
+        <TotalAmt>50571</TotalAmt>
+        <ProgramServicesAmt>41940</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>8195</ManagementAndGeneralAmt>
+        <FundraisingAmt>436</FundraisingAmt>
+      </ConferencesMeetingsGrp>
+      <DepreciationDepletionGrp>
+        <TotalAmt>160102</TotalAmt>
+        <ProgramServicesAmt>148398</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>11704</ManagementAndGeneralAmt>
+      </DepreciationDepletionGrp>
+      <InsuranceGrp>
+        <TotalAmt>10302</TotalAmt>
+        <ProgramServicesAmt>9029</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>1273</ManagementAndGeneralAmt>
+      </InsuranceGrp>
+      <OtherExpensesGrp>
+        <Desc>PUBLIC REC. COP. &amp; SUBS</Desc>
+        <TotalAmt>197502</TotalAmt>
+        <ProgramServicesAmt>149030</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>47816</ManagementAndGeneralAmt>
+        <FundraisingAmt>656</FundraisingAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>REPAIRS AND MAINTENANCE</Desc>
+        <TotalAmt>75179</TotalAmt>
+        <ProgramServicesAmt>67187</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>7992</ManagementAndGeneralAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>RECRUITMENT &amp; PROF DEVE</Desc>
+        <TotalAmt>51399</TotalAmt>
+        <ProgramServicesAmt>50148</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>668</ManagementAndGeneralAmt>
+        <FundraisingAmt>583</FundraisingAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>UBIT TAX EXPENSE</Desc>
+        <TotalAmt>5861</TotalAmt>
+        <ManagementAndGeneralAmt>5861</ManagementAndGeneralAmt>
+      </OtherExpensesGrp>
+      <TotalFunctionalExpensesGrp>
+        <TotalAmt>12461149</TotalAmt>
+        <ProgramServicesAmt>10716533</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>1279495</ManagementAndGeneralAmt>
+        <FundraisingAmt>465121</FundraisingAmt>
+      </TotalFunctionalExpensesGrp>
+      <CashNonInterestBearingGrp>
+        <BOYAmt>1144084</BOYAmt>
+        <EOYAmt>1733727</EOYAmt>
+      </CashNonInterestBearingGrp>
+      <SavingsAndTempCashInvstGrp>
+        <BOYAmt>3854329</BOYAmt>
+        <EOYAmt>3408243</EOYAmt>
+      </SavingsAndTempCashInvstGrp>
+      <PledgesAndGrantsReceivableGrp>
+        <BOYAmt>1435405</BOYAmt>
+        <EOYAmt>5821936</EOYAmt>
+      </PledgesAndGrantsReceivableGrp>
+      <AccountsReceivableGrp>
+        <BOYAmt>5817</BOYAmt>
+        <EOYAmt>1108</EOYAmt>
+      </AccountsReceivableGrp>
+      <PrepaidExpensesDefrdChargesGrp>
+        <BOYAmt>147817</BOYAmt>
+        <EOYAmt>171397</EOYAmt>
+      </PrepaidExpensesDefrdChargesGrp>
+      <LandBldgEquipCostOrOtherBssAmt>2087196</LandBldgEquipCostOrOtherBssAmt>
+      <LandBldgEquipAccumDeprecAmt>1678325</LandBldgEquipAccumDeprecAmt>
+      <LandBldgEquipBasisNetGrp>
+        <BOYAmt>252239</BOYAmt>
+        <EOYAmt>408871</EOYAmt>
+      </LandBldgEquipBasisNetGrp>
+      <InvestmentsPubTradedSecGrp>
+        <BOYAmt>21167</BOYAmt>
+        <EOYAmt>2522</EOYAmt>
+      </InvestmentsPubTradedSecGrp>
+      <OtherAssetsTotalGrp>
+        <BOYAmt>4260</BOYAmt>
+        <EOYAmt>4260</EOYAmt>
+      </OtherAssetsTotalGrp>
+      <TotalAssetsGrp>
+        <BOYAmt>6865118</BOYAmt>
+        <EOYAmt>11552064</EOYAmt>
+      </TotalAssetsGrp>
+      <AccountsPayableAccrExpnssGrp>
+        <BOYAmt>184272</BOYAmt>
+        <EOYAmt>136734</EOYAmt>
+      </AccountsPayableAccrExpnssGrp>
+      <DeferredRevenueGrp>
+        <EOYAmt>148703</EOYAmt>
+      </DeferredRevenueGrp>
+      <TotalLiabilitiesGrp>
+        <BOYAmt>184272</BOYAmt>
+        <EOYAmt>285437</EOYAmt>
+      </TotalLiabilitiesGrp>
+      <OrganizationFollowsSFAS117Ind>X</OrganizationFollowsSFAS117Ind>
+      <UnrestrictedNetAssetsGrp>
+        <BOYAmt>3442914</BOYAmt>
+        <EOYAmt>2792399</EOYAmt>
+      </UnrestrictedNetAssetsGrp>
+      <TemporarilyRstrNetAssetsGrp>
+        <BOYAmt>3237932</BOYAmt>
+        <EOYAmt>8474228</EOYAmt>
+      </TemporarilyRstrNetAssetsGrp>
+      <TotalNetAssetsFundBalanceGrp>
+        <BOYAmt>6680846</BOYAmt>
+        <EOYAmt>11266627</EOYAmt>
+      </TotalNetAssetsFundBalanceGrp>
+      <TotLiabNetAssetsFundBalanceGrp>
+        <BOYAmt>6865118</BOYAmt>
+        <EOYAmt>11552064</EOYAmt>
+      </TotLiabNetAssetsFundBalanceGrp>
+      <ReconcilationRevenueExpnssAmt>4585781</ReconcilationRevenueExpnssAmt>
+      <OtherChangesInNetAssetsAmt>0</OtherChangesInNetAssetsAmt>
+      <InfoInScheduleOPartXIIInd>X</InfoInScheduleOPartXIIInd>
+      <MethodOfAccountingAccrualInd>X</MethodOfAccountingAccrualInd>
+      <AccountantCompileOrReviewInd>0</AccountantCompileOrReviewInd>
+      <FSAuditedInd>1</FSAuditedInd>
+      <FSAuditedBasisGrp>
+        <SeparateBasisFinclStmtInd>X</SeparateBasisFinclStmtInd>
+      </FSAuditedBasisGrp>
+      <AuditCommitteeInd>1</AuditCommitteeInd>
+      <FederalGrantAuditRequiredInd>0</FederalGrantAuditRequiredInd>
+    </IRS990>
+    <IRS990ScheduleA documentId="RetDoc1039100001">
+      <PublicOrganization170Ind>X</PublicOrganization170Ind>
+      <GiftsGrantsContriRcvd170Grp>
+        <CurrentTaxYearMinus4YearsAmt>10115367</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>10920019</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>13678241</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>10169976</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>16882164</CurrentTaxYearAmt>
+        <TotalAmt>61765767</TotalAmt>
+      </GiftsGrantsContriRcvd170Grp>
+      <TotalCalendarYear170Grp>
+        <CurrentTaxYearMinus4YearsAmt>10115367</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>10920019</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>13678241</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>10169976</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>16882164</CurrentTaxYearAmt>
+        <TotalAmt>61765767</TotalAmt>
+      </TotalCalendarYear170Grp>
+      <SubstantialContributorsTotAmt>25511962</SubstantialContributorsTotAmt>
+      <PublicSupportTotal170Amt>36253805</PublicSupportTotal170Amt>
+      <GrossInvestmentIncome170Grp>
+        <CurrentTaxYearMinus4YearsAmt>16263</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>17146</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>51381</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>47898</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>23875</CurrentTaxYearAmt>
+        <TotalAmt>156563</TotalAmt>
+      </GrossInvestmentIncome170Grp>
+      <UnrelatedBusinessNetIncm170Grp>
+        <CurrentTaxYearMinus4YearsAmt>2401</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>8465</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>11842</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>12775</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>10286</CurrentTaxYearAmt>
+        <TotalAmt>45769</TotalAmt>
+      </UnrelatedBusinessNetIncm170Grp>
+      <OtherIncome170Grp>
+        <CurrentTaxYearMinus4YearsAmt>7103</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>2927</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>10100</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>23379</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>10092</CurrentTaxYearAmt>
+        <TotalAmt>53601</TotalAmt>
+      </OtherIncome170Grp>
+      <TotalSupportAmt>62021700</TotalSupportAmt>
+      <GrossReceiptsRltdActivitiesAmt>171500</GrossReceiptsRltdActivitiesAmt>
+      <PublicSupportCY170Pct>0.58450</PublicSupportCY170Pct>
+      <PublicSupportPY170Pct>0.54900</PublicSupportPY170Pct>
+      <ThirtyThrPctSuprtTestsCY170Ind>X</ThirtyThrPctSuprtTestsCY170Ind>
+      <Form990ScheduleAPartVIGrp>
+        <FormAndLineReferenceDesc>SCHEDULE A, PART II, LINE 10, EXPLANATION OF OTHER INCOME:</FormAndLineReferenceDesc>
+        <ExplanationTxt>HONORARIUMS REVENUE - 2011 AMOUNT: $ 7,103. 2012 AMOUNT: $ 2,827. 2013 AMOUNT: $ 10,100. 2014 AMOUNT: $ 23,379. 2015 AMOUNT: $ 10,092. OTHER REVENUE - 2012 AMOUNT: $ 100.</ExplanationTxt>
+      </Form990ScheduleAPartVIGrp>
+    </IRS990ScheduleA>
+    <IRS990ScheduleB documentId="RetDoc1234500001">
+      <ContributorInformationGrp>
+        <ContributorNum>RESTRICTED</ContributorNum>
+        <ContributorBusinessName>
+          <BusinessNameLine1>RESTRICTED</BusinessNameLine1>
+        </ContributorBusinessName>
+        <ContributorUSAddress>
+          <AddressLine1>RESTRICTED</AddressLine1>
+          <AddressLine2>RESTRICTED</AddressLine2>
+          <City>RESTRICTED</City>
+          <State>RESTRICTED</State>
+          <ZIPCode>RESTRICTED</ZIPCode>
+        </ContributorUSAddress>
+        <TotalContributionsAmt>RESTRICTED</TotalContributionsAmt>
+      </ContributorInformationGrp>
+    </IRS990ScheduleB>
+    <IRS990ScheduleD documentId="RetDoc1040000001">
+      <LeaseholdImprovementsGrp>
+        <OtherCostOrOtherBasisAmt>140403</OtherCostOrOtherBasisAmt>
+        <DepreciationAmt>15768</DepreciationAmt>
+        <BookValueAmt>124635</BookValueAmt>
+      </LeaseholdImprovementsGrp>
+      <EquipmentGrp>
+        <OtherCostOrOtherBasisAmt>770393</OtherCostOrOtherBasisAmt>
+        <DepreciationAmt>623559</DepreciationAmt>
+        <BookValueAmt>146834</BookValueAmt>
+      </EquipmentGrp>
+      <OtherLandBuildingsGrp>
+        <OtherCostOrOtherBasisAmt>1176400</OtherCostOrOtherBasisAmt>
+        <DepreciationAmt>1038998</DepreciationAmt>
+        <BookValueAmt>137402</BookValueAmt>
+      </OtherLandBuildingsGrp>
+      <TotalBookValueLandBuildingsAmt>408871</TotalBookValueLandBuildingsAmt>
+      <FootnoteTextInd>X</FootnoteTextInd>
+      <TotalRevEtcAuditedFinclStmtAmt>17046930</TotalRevEtcAuditedFinclStmtAmt>
+      <RevenueNotReportedAmt>0</RevenueNotReportedAmt>
+      <RevenueSubtotalAmt>17046930</RevenueSubtotalAmt>
+      <RevenueNotReportedFinclStmtAmt>0</RevenueNotReportedFinclStmtAmt>
+      <TotalRevenuePerForm990Amt>17046930</TotalRevenuePerForm990Amt>
+      <TotExpnsEtcAuditedFinclStmtAmt>12461149</TotExpnsEtcAuditedFinclStmtAmt>
+      <ExpensesNotReportedAmt>0</ExpensesNotReportedAmt>
+      <ExpensesSubtotalAmt>12461149</ExpensesSubtotalAmt>
+      <ExpensesNotRptFinclStmtAmt>0</ExpensesNotRptFinclStmtAmt>
+      <TotalExpensesPerForm990Amt>12461149</TotalExpensesPerForm990Amt>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART X, LINE 2:</FormAndLineReferenceDesc>
+        <ExplanationTxt>THE ORGANIZATION RECOGNIZES THE EFFECT OF INCOME TAX POSITIONS ONLY IF THOSE POSITIONS ARE MORE LIKELY THAN NOT OF BEING SUSTAINED. MANAGEMENT HAS DETERMINED THAT THE ORGANIZATION HAD NO UNCERTAIN TAX POSITIONS THAT WOULD REQUIRE FINANCIAL STATEMENT RECOGNITION OR DISCLOSURE. THE ORGANIZATION IS NO LONGER SUBJECT TO AUDITS BY THE APPLICABLE TAXING JURISDICTIONS FOR PERIODS PRIOR TO 2012.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleD>
+    <IRS990ScheduleJ documentId="RetDoc1042400001">
+      <IndependentConsultantInd>X</IndependentConsultantInd>
+      <Form990OfOtherOrganizationsInd>X</Form990OfOtherOrganizationsInd>
+      <CompensationSurveyInd>X</CompensationSurveyInd>
+      <BoardOrCommitteeApprovalInd>X</BoardOrCommitteeApprovalInd>
+      <SeverancePaymentInd>0</SeverancePaymentInd>
+      <SupplementalNonqualRtrPlanInd>0</SupplementalNonqualRtrPlanInd>
+      <EquityBasedCompArrngmInd>0</EquityBasedCompArrngmInd>
+      <CompBasedOnRevenueOfFlngOrgInd>0</CompBasedOnRevenueOfFlngOrgInd>
+      <CompBsdOnRevRelatedOrgsInd>0</CompBsdOnRevRelatedOrgsInd>
+      <CompBsdNetEarnsFlngOrgInd>0</CompBsdNetEarnsFlngOrgInd>
+      <CompBsdNetEarnsRltdOrgsInd>0</CompBsdNetEarnsRltdOrgsInd>
+      <AnyNonFixedPaymentsInd>0</AnyNonFixedPaymentsInd>
+      <InitialContractExceptionInd>0</InitialContractExceptionInd>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>PAUL E STEIGER</PersonNm>
+        <TitleTxt>EXECUTIVE CHAIRMAN</TitleTxt>
+        <BaseCompensationFilingOrgAmt>196774</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>3708</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>10000</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>4274</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>214756</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>RICHARD TOFEL</PersonNm>
+        <TitleTxt>PRESIDENT AND CO-EXECUTIVE</TitleTxt>
+        <BaseCompensationFilingOrgAmt>381574</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>3612</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>13250</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>23546</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>421982</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>STEPHEN ENGELBERG</PersonNm>
+        <TitleTxt>EDITOR-IN-CHIEF &amp; CO-EXECUTIVE</TitleTxt>
+        <BaseCompensationFilingOrgAmt>377418</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>3612</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>13250</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>36009</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>430289</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>DEBRA GOLDBERG VICE PRESIDENT</PersonNm>
+        <TitleTxt>DEVELOPMENT UNTIL SEPT. 2015</TitleTxt>
+        <BaseCompensationFilingOrgAmt>182184</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>954</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>12393</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>9875</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>205406</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>ROBIN FIELDS</PersonNm>
+        <TitleTxt>MANAGING EDITOR</TitleTxt>
+        <BaseCompensationFilingOrgAmt>238744</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>773</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>5994</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>9741</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>255252</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>TRACY WEBER</PersonNm>
+        <TitleTxt>SENIOR EDITOR</TitleTxt>
+        <BaseCompensationFilingOrgAmt>201685</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>1013</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>10450</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>20189</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>233337</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>JOSEPH SEXTON</PersonNm>
+        <TitleTxt>SENIOR EDITOR</TitleTxt>
+        <BaseCompensationFilingOrgAmt>197950</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>1849</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>10225</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>18482</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>228506</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>CHARLES ORNSTEIN</PersonNm>
+        <TitleTxt>SENIOR REPORTER</TitleTxt>
+        <BaseCompensationFilingOrgAmt>198319</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>442</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>10027</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>30157</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>238945</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>THOMAS C MILLER</PersonNm>
+        <TitleTxt>SENIOR REPORTER</TitleTxt>
+        <BaseCompensationFilingOrgAmt>187680</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>611</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>9863</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>33584</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>231738</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+    </IRS990ScheduleJ>
+    <IRS990ScheduleM documentId="RetDoc1042900001">
+      <SecuritiesPubliclyTradedGrp>
+        <NonCashCheckboxInd>X</NonCashCheckboxInd>
+        <ContributionCnt>7</ContributionCnt>
+        <NoncashContributionsRptF990Amt>46666</NoncashContributionsRptF990Amt>
+        <MethodOfDeterminingRevenuesTxt>FMV</MethodOfDeterminingRevenuesTxt>
+      </SecuritiesPubliclyTradedGrp>
+      <Form8283ReceivedCnt>0</Form8283ReceivedCnt>
+      <AnyPropertyThatMustBeHeldInd>0</AnyPropertyThatMustBeHeldInd>
+      <ReviewProcessUnusualNCGiftsInd>0</ReviewProcessUnusualNCGiftsInd>
+      <ThirdPartiesUsedInd>0</ThirdPartiesUsedInd>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART I, COLUMN (B):</FormAndLineReferenceDesc>
+        <ExplanationTxt>THE ORGANIZATION IS REPORTING THE NUMBER OF CONTRIBUTORS IN PART 1, COLUMN (B) OF SCHEDULE M.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleM>
+    <IRS990ScheduleO documentId="RetDoc1044400001">
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART III, LINE 4A</FormAndLineReferenceDesc>
+        <ExplanationTxt>INNOVATIVE APPROACHES ARE ESSENTIAL FOR PROPUBLICA TO SUCCEED IN OUR MISSION OF PRODUCING STORIES THAT EXPOSE ABUSES OF POWER AND BETRAYALS OF PUBLIC TRUST. OUR NEWSROOM'S USE OF DATA - FROM ANALYZING AND FILTERING RAW RECORDS TO CREATING CUTTING-EDGE VISUALIZATIONS AND NEWS APPLICATIONS THAT HELP READERS MAKE SENSE OF IT ALL - IS ONE CRITICAL WAY WE'RE EXPANDING THE FRONTIERS OF CONTEMPORARY JOURNALISM. OUR DATA RESEARCH GENERATED SOME OF 2015'S MOST GAME-CHANGING INVESTIGATIONS. PROPUBLICA'S INVESTIGATION OF THE NATION'S DEBT COLLECTION SYSTEM IS A POWERFUL EXAMPLE. REPORTER PAUL KIEL HAD ALREADY BEEN EXPLORING THIS ISSUE FOR MORE THAN A YEAR, PRODUCING AWARD-WINNING WORK THAT GENERATED THE FIRST EVER NATIONAL STUDY OF WAGE GARNISHMENT RATES. BUT HE WANTED TO DIG DEEPER INTO THE DATA. KIEL SUSPECTED THERE WAS A DIFFERENCE IN DEBT COLLECTION PATTERNS BETWEEN BLACK AND WHITE COMMUNITIES. TO TEST THIS THEORY, HE AND FELLOW ANNIE WALDMAN REQUESTED COURT RECORDS ON CIVIL JUDGMENTS FROM THE HIGHLY SEGREGATED CITIES OF ST. LOUIS, CHICAGO AND NEWARK. THEY WENT THROUGH MORE THAN HALF A MILLION CASES, GEOCODED EVERY ADDRESS AND ASSIGNED EACH TO A CENSUS TRACT. IN ALL THREE REGIONS, THE CORRELATION WAS CLEAR: THE HEAVIEST USE OF COLLECTION LAWSUITS CONSISTENTLY OVERLAPPED WITH MAJORITY BLACK NEIGHBORHOODS. EVEN WHEN ADJUSTING FOR INCOME, THE RATE OF LAWSUITS WAS NEARLY DOUBLE IN PREDOMINATELY BLACK AREAS THAN THAT OF MOSTLY WHITE COMMUNITIES. AFTER JUDGMENTS, DEBTORS IN BLACK NEIGHBORHOODS WERE SIGNIFICANTLY MORE LIKELY TO HAVE THEIR WAGES GARNISHED. OUR JOURNALISTS PUT THESE FINDINGS IN INTERACTIVE DATABASES OF THE THREE CITIES, ILLUSTRATING THE DISPARITIES. WHEN KIEL SPOKE WITH THE AFRICAN-AMERICAN MAYOR OF THE ST. LOUIS SUBURB OF JENNINGS (A SINGLE MOTHER WHO HAD BEEN SUED OVER DEBT HERSELF, AND HAD HER PAYCHECK GARNISHED), HE SHOWED HER PROPUBLICA'S DATABASE. IN MAYOR YOLANDA FOUNTAIN HENDERSON'S SMALL SUBURB, MORE THAN 4,500 COLLECTION LAWSUITS HAD BEEN FILED OVER THE COURSE OF FIVE YEARS. OUT OF 16 HOMES ON HER OWN BLOCK, EIGHT HOUSEHOLDS HAD BEEN SUED. "THEY'RE JUST SUING ALL OF US," HENDERSON SAID IN DISBELIEF. PROPUBLICA DIDN'T ONLY HIGHLIGHT THE PROBLEM; WE OFFERED POTENTIAL SOLUTIONS. IN AN ACCOMPANYING SIDEBAR TO THE STORY AND DATABASE, WE IDENTIFIED SIX WAYS THE DEBT COLLECTION SYSTEM MIGHT BE REFORMED. TWO MONTHS LATER, MISSOURI ATTORNEY GENERAL CHRIS KOSTER PROPOSED A SERIES OF CHANGES TO STATE COURT RULES, INCLUDING A REQUIREMENT FOR DEBT-BUYING COMPANIES TO PROVIDE PROOF THAT THEY OWN A DEBT BEFORE THEY CAN SUE A DEBTOR, AND MEASURES TO PREVENT COMPANIES FROM WINNING JUDGMENTS WHEN THE STATUTE OF LIMITATIONS ON A DEBT HAS EXPIRED. "EARLIER THIS YEAR, PROPUBLICA RELEASED A REPORT THAT CONFIRMS WHAT MANY CONSUMER PROTECTION ADVOCATES HAVE LONG SUSPECTED," KOSTER SAID IN A LETTER TO THE MISSOURI SUPREME COURT'S COMMISSION ON RACIAL AND ETHNIC FAIRNESS. "THE SCOPE OF THIS PROBLEM IS VAST, AND THERE IS A GROWING CONSENSUS THAT REFORM IS DESPERATELY NEEDED FOR OUR STATE COURT SYSTEM." PROPUBLICA'S DATA JOURNALISM IN 2015 ALSO IGNITED A NATIONAL CONVERSATION ON PATIENT SAFETY FOLLOWING OUR PUBLICATION OF SURGEON SCORECARD IN JULY. SPEARHEADED BY REPORTER MARSHALL ALLEN AND DEPUTY DATA EDITOR OLGA PIERCE, THIS GROUNDBREAKING TOOL COMPARES THE PERFORMANCE OF NEARLY 17,000 SURGEONS BY ANALYZING MILLIONS OF MEDICARE CLAIMS RECORDS. IT LETS PATIENTS, FOR THE FIRST TIME, WEIGH THE PAST PERFORMANCE OF SURGEONS ON EIGHT COMMON ELECTIVE PROCEDURES, ALLOWING THEM TO MAKE BETTER DECISIONS ABOUT THEIR HEALTHCARE. OUR METHODOLOGY, WHICH ACCOUNTS FOR FACTORS SUCH AS PATIENTS' HEALTH AND AGE, WAS CAREFULLY DESIGNED IN CLOSE CONSULTATION WITH SURGEONS AND OTHER LEADING EXPERTS. AS WE CREATED SURGEON SCORECARD, THEY REPEATEDLY TOLD US THAT MEDICAL ERRORS - IDENTIFIED BY ONE RECENT STUDY AS THE THIRD-LEADING CAUSE OF DEATH IN THE U.S. - CAN AND SHOULD HAPPEN FAR LESS FREQUENTLY. THEY ALSO TOLD US THAT GREATER TRANSPARENCY ABOUT SURGEONS' PERFORMANCE COULD HELP BRING ABOUT THAT GOAL. YET ALMOST UNIVERSALLY, HOSPITALS FAIL TO PUBLICLY REPORT SUCH DATA. TAKING THE POSITION THAT SURGEONS ARE ULTIMATELY RESPONSIBLE FOR THE FULL RANGE OF CARE IN AN OPERATION, AND THAT PATIENTS WOULD WANT TO USE DATA ABOUT A DECISION AS CONSEQUENTIAL AS CHOOSING A SURGEON, WE DISCLOSED WHAT HOSPITALS WOULD NOT. IMPORTANT STORIES EMERGED FROM THE DATA. A SMALL SHARE OF DOCTORS, 11 PERCENT, ACCOUNTED FOR ABOUT A QUARTER OF COMPLICATIONS. HUNDREDS OF SURGEONS ACROSS THE COUNTRY HAD RATES DOUBLE AND TRIPLE THE NATIONAL AVERAGE. AND WE FOUND THAT IT'S NOT THE REPUTATION OR STATUS OF A HOSPITAL THAT MATTERS MOST - WHEN IT COMES TO ELECTIVE OPERATIONS, IT IS MUCH MORE IMPORTANT TO PICK THE RIGHT SURGEON. WHILE SOME IN THE SURGICAL COMMUNITY HAVE BEEN CRITICAL OF THIS TOOL, QUESTIONING THE METHODOLOGY AND ALLEGING THAT IT UNFAIRLY TARNISHES SOME DOCTORS' REPUTATIONS, MANY OTHERS HAVE PRAISED IT AS A TRANSFORMATIVE STEP THAT WILL PROTECT PATIENTS. "A KEY VALUE OF THE PROPUBLICA EFFORT IS THAT IT HAS LAUNCHED AN IMPORTANT DEBATE ABOUT HOW WE ASSESS AND REPORT SURGICAL QUALITY," SAID DR. ASHISH JHA, PROFESSOR AT HARVARD SCHOOL OF PUBLIC HEALTH. "THE OLD WAY - WHERE ALL THE INFORMATION WAS PRIVILEGED AND KNOWN ONLY AMONG PHYSICIANS - IS GONE. AND IT IS NOT COMING BACK." IN COLLABORATION WITH NPR'S HOWARD BERKES, REPORTER MICHAEL GRABELL INVESTIGATED HOW OUR NATION'S WORKERS' COMPENSATION SYSTEM IS BEING DISMANTLED, OFTEN AT THE BEHEST OF BIG BUSINESS AND INSURANCE COMPANIES. SINCE 2013, 33 STATES HAVE CUT BENEFITS TO INJURED WORKERS, CREATED HURDLES TO GETTING CARE, OR MADE IT HARDER FOR WORKERS WITH CERTAIN INJURIES TO QUALIFY FOR WORKERS' COMP AT ALL. REPORTING ON THE GROUND IN 16 STATES AND THE DISTRICT OF COLUMBIA, GRABELL AND BERKES INTERVIEWED MORE THAN 200 INJURED WORKERS, WORKERS' COMP LAWYERS, EMPLOYERS, LAWMAKERS AND OTHERS. THE SCOPE OF THESE CHANGES HAD ATTRACTED ALMOST NO NATIONAL ATTENTION, AS POLITICIANS PASSED LAWS UNDER THE BANNER OF "REFORMS" THAT WOULD PROVIDE COST SAVINGS WHILE INJURED WORKERS OSTENSIBLY REMAINED PROTECTED. PROVIDING A MUCH-NEEDED FACT CHECK, PROPUBLICA COMBED THROUGH LAWS IN ALL 50 STATES SINCE 2003 AND BUILT A FIRST-EVER DATABASE OF THE CHANGES. WE PRESENTED OUR FINDINGS IN A NEWS APPLICATION SHOWING THE MAXIMUM COMPENSATION WORKERS COULD RECEIVE FOR EACH BODY PART IN EACH JURISDICTION. THIS REVEALED DRAMATIC DISCREPANCIES BETWEEN STATES IN THE BENEFITS PAID. FOR EXAMPLE, A LOST ARM IS WORTH $45,000 IN WORKERS' COMP IN ALABAMA, BUT MORE THAN $740,000 OVER A LIFETIME IN NEIGHBORING GEORGIA. A FURTHER STORY DEMONSTRATED THAT A MOVE IN SOME STATES TO PERMIT EMPLOYERS TO OPT-OUT OF LOCAL SYSTEMS WAS FURTHER HURTING THE VERY WORKERS THE SYSTEM IS SUPPOSEDLY DESIGNED TO PROTECT. THE STORIES PROMPTED NEW LEGISLATION TO RAISE BENEFITS IN ALABAMA. TEN MEMBERS OF CONGRESS, CITING PROPUBLICA'S INVESTIGATION, URGED THE U.S. LABOR SECRETARY TO DEVISE AN OVERSIGHT PLAN FOR STATE WORKERS' COMP PROGRAMS. "THE RACE TO THE BOTTOM NOW APPEARS TO BE NEARLY BOTTOMLESS," THE MEMBERS OF CONGRESS WROTE. OVER AND OVER AGAIN IN 2015, PROPUBLICA REPORTERS AND EDITORS EXAMINED AND DISTILLED MASSIVE DATA SETS TO HELP READERS MAKE SENSE OF IMPORTANT ISSUES. WE WORKED WITH DEPARTMENT OF EDUCATION DATA, WHICH INVOLVED 2,000 VARIABLES FOR EACH OF ABOUT 7,800 COLLEGES, TO BUILD AN INTERACTIVE DATABASE SHOWING READERS THE DISCOUNTS COLLEGES GIVE TO THEIR LEAST WEALTHY STUDENTS AND HOW MUCH DEBT AVERAGE STUDENTS TAKE ON. IN OUR INVESTIGATION WITH AL.COM OF AN ALABAMA "CHEMICAL ENDANGERMENT" STATUTE THAT MAKES PRENATAL DRUG USE A FELONY, REPORTERS OBTAINED RECORDS ON EVERY PERSON PROSECUTED UNDER THE MEASURE SINCE 2006, SIFTING THROUGH MORE THAN 6,000 CASES TO IDENTIFY NEARLY 500 WOMEN WHOSE PROSECUTIONS WERE PREGNANCY RELATED, IN ADDITION TO POLLING EVERY HOSPITAL IN THE STATE THAT DELIVERS BABIES ABOUT THEIR DRUG-TESTING POLICIES. WE WERE ALSO GUIDED BY SHOE-LEATHER REPORTING, KNOCKING ON DOORS TO REPORT ON THE MISHANDLING OF HORRIFYING SERIAL RAPE CASES, ABUSE AND NEGLECT AT A CALIFORNIA GROUP HOME FOR TROUBLED CHILDREN, THE UNSOLVED MURDER CASES OF FIVE VIETNAMESE-AMERICAN JOURNALISTS, THE FAILURES OF GUN CONTROL ADVOCATES TO ADDRESS THE CAUSES OF URBAN GUN VIOLENCE, AND THE WILLINGNESS OF NEW YORK CITY LANDLORDS TO FLOUT A LAW THAT GAVE THEM LUCRATIVE TAX BREAKS IN EXCHANGE FOR LIMITS ON RENT INCREASES AND GUARANTEES IN WORKER PAY. SUCH STORIES HAVE REAL POWER, AND CAN MAKE A DIFFERENCE IN A DEMOCRATIC SOCIETY. PROPUBLICA'S WORK IN 2015 DEMONSTRATED AGAIN THAT SOME OF THE MOST SIGNIFICANT OPPORTUNITIES FOR TELLING SUCH STORIES LIE AT THE INTERSECTION OF DATA AND REPORTING. WE LOOK FORWARD TO ANOTHER YEAR OF FINDING IMPORTANT BUT HIDDEN STORIES, AND BRINGING THEM TO LIGHT. THE MOST IMPORTANT TEST OF PROPUBLICA IS WHETHER OUR WORK IS HAVING IMPACT. BY THIS, WE MEAN NOT AUDIENCE SIZE OR PRIZES, BUT REAL-WORLD CHANGE. EXAMPLES OF WHAT WE MEAN, AND DISCUSSIONS OF HOW WE THINK AB</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART III, LINE 4A, DESCRIPTION OF PROGRAM SERVICE CON'T:</FormAndLineReferenceDesc>
+        <ExplanationTxt>ANOTHER SIGNIFICANT TEST IS RECOGNITION FROM PEERS IN JOURNALISM. PROPUBLICA WAS THE FIRST ONLINE NEWS ORGANIZATION TO WIN A PULITZER PRIZE (2010) AND THE FIRST TO WIN A PULITZER FOR STORIES NOT PUBLISHED IN PRINT (2011). OUR WORK WAS HONORED IN 2015 AS FOLLOWS: PROPUBLICA'S PROJECT WITH PBS FRONTLINE, "FIRESTONE AND THE WARLORD," ABOUT THE AMERICAN TIRE COMPANY'S ACTIVITIES IN LIBERIA DURING THE COUNTRY'S CIVIL WAR, WON TWO NEWS &amp; DOCUMENTARY EMMY AWARDS IN THE CATEGORIES OF OUTSTANDING INVESTIGATIVE JOURNALISM AND OUTSTANDING RESEARCH. T. CHRISTIAN MILLER AND JONATHAN JONES' REPORTING ON THIS STORY ALSO RECEIVED THE ROBERT F. KENNEDY JOURNALISM AWARD FOR NEW MEDIA, THE INVESTIGATIVE REPORTERS AND EDITORS AWARD FOR MULTIPLATFORM PROJECTS FOR LARGE ORGANIZATIONS, AND HUNTER COLLEGE'S ARONSON AWARD FOR SOCIAL JUSTICE JOURNALISM. OUR ARTICLE "SEGREGATION NOW," ON THE RE-SEGREGATION OF AMERICA'S SCHOOLS, PUBLISHED IN PARTNERSHIP WITH THE ATLANTIC, RECEIVED THE HECHINGER GRAND PRIZE FOR DISTINGUISHED EDUCATION REPORTING, THE HIGHEST HONOR IN EDUCATION JOURNALISM; THE NATIONAL AWARD FOR EDUCATION REPORTING FOR BEAT REPORTING; THE SOCIETY OF PROFESSIONAL JOURNALISTS' SIGMA DELTA CHI AWARD FOR PUBLIC SERVICE IN ONLINE JOURNALISM; THE DEADLINE CLUB AWARD FOR DIGITAL BEAT REPORTING; THE SOCIETY FOR NEWS DESIGN AWARD OF EXCELLENCE FOR FEATURES, SINGLE-SUBJECT PROJECT; HONORABLE MENTION FROM THE AMERICAN BAR ASSOCIATION'S SILVER GAVEL AWARDS; AND RECOGNITION AS A FINALIST FOR THE AMERICAN SOCIETY OF MAGAZINE EDITORS' NATIONAL MAGAZINE AWARD FOR PUBLIC INTEREST. THE NATIONAL ASSOCIATION OF BLACK JOURNALISTS NAMED NIKOLE HANNAH-JONES, THE REPORTER ON THIS PROJECT, ITS JOURNALIST OF THE YEAR. JESSE EISINGER'S COLUMN, "THE TRADE," FOCUSED ON WALL STREET ACCOUNTABILITY, WON THE GEORGE LOEB AWARD FOR DISTINGUISHED BUSINESS AND FINANCIAL JOURNALISM FOR COMMENTARY AND THE SOCIETY OF AMERICAN BUSINESS EDITORS AND WRITERS BEST IN BUSINESS AWARD FOR DIGITAL COMMENTARY. OUR REPORTING WITH THE LENS ON THE RAPID LOSS OF LAND ON THE LOUISIANA COAST WON A GOLD MEDAL FROM THE SOCIETY FOR NEWS DESIGN; THE INVESTIGATIVE REPORTERS AND EDITORS GANNETT AWARD FOR INNOVATION IN WATCHDOG JOURNALISM; THE NATIONAL HEADLINER AWARD FOR WRITING FOR A WEBSITE; A NATIONAL EDWARD R. MURROW AWARD IN THE WEBSITE CATEGORY; AN EDWARD R. MURROW REGIONAL AWARD; AND A SILVER MEDAL IN THE ENVIRONMENTAL CATEGORY OF THE MALOFIEJ INTERNATIONAL INFOGRAPHICS AWARDS. THIS PROJECT, REPORTED FOR PROPUBLICA BY AL SHAW AND BRIAN JACOBS, ALSO RECEIVED THREE AWARDS OF EXCELLENCE FROM THE SOCIETY FOR NEWS DESIGN FOR FEATURES, INFOGRAPHICS AND MULTIMEDIA. OUR COVERAGE OF THE DISMANTLING OF WORKERS' COMP, PUBLISHED IN PARTNERSHIP WITH NPR NEWS AND REPORTED FOR PROPUBLICA BY MICHAEL GRABELL, RECEIVED THE ONLINE NEWS ASSOCIATION'S AL NEUHARTH INNOVATION IN INVESTIGATIVE JOURNALISM AWARD. OUR COVERAGE OF THE RED CROSS AND ITS MISHANDLING OF SUPERSTORM SANDY, IN COLLABORATION WITH NPR NEWS AND REPORTED FOR PROPUBLICA BY JESSE EISINGER AND JUSTIN ELLIOT, WON THE SOCIETY OF SILURIANS EXCELLENCE IN JOURNALISM AWARD FOR PUBLIC SERVICE AND WAS SELECTED AS A FINALIST FOR THE GOLDSMITH PRIZE FOR INVESTIGATIVE REPORTING. OUR ARTICLE ON GUN VIOLENCE IN OUR CITIES AND POST-TRAUMATIC STRESS DISORDER, REPORTED BY LOIS BECKETT AND PUBLISHED IN PARTNERSHIP WITH ESSENCE, WON THE NATIONAL ASSOCIATION OF BLACK JOURNALISTS SALUTE TO EXCELLENCE AWARD FOR MAGAZINE INVESTIGATIVE JOURNALISM AND THE DEADLINE CLUB AWARD FOR PUBLIC SERVICE. A RELATED INFOGRAPHIC RECEIVED A SOCIETY FOR NEWS DESIGN AWARD OF EXCELLENCE. OUR INVESTIGATION ON THE U.S. GOVERNMENT'S PROGRAM TO IDENTIFY AND REPATRIATE THE BODIES OF MISSING SOLDIERS, REPORTED BY MEGAN MCCLOSKEY WITH NPR NEWS, RECEIVED THE ALLIANCE FOR WOMEN IN MEDIA "GRACIE" AWARD FOR OUTSTANDING INVESTIGATIVE PROGRAM OR FEATURE AND A SOCIETY FOR NEWS DESIGN AWARD OF EXCELLENCE FOR FEATURES. MCCLOSKEY WAS ALSO CHOSEN AS A FINALIST FOR THE LIVINGSTON AWARD FOR YOUNG JOURNALISTS IN NATIONAL REPORTING. OUR COVERAGE ON THE MAGNITUDE OF WAGE GARNISHMENT, PUBLISHED IN PARTNERSHIP WITH NPR NEWS AND REPORTED FOR PROPUBLICA BY PAUL KIEL, WON THE NATIONAL PRESS CLUB JOURNALISM CONTEST AWARD FOR CONSUMER JOURNALISM-BROADCAST. THE SERIES WAS ALSO NAMED A GERALD LOEB AWARD FINALIST FOR VIDEO/AUDIO, AND A FINALIST FOR A SCRIPPS HOWARD AWARD IN THE BUSINESS/ECONOMICS REPORTING CATEGORY. PROPUBLICA'S REPORTING ON THE EXCESSIVE USE OF RESTRAINTS IN PUBLIC SCHOOLS, BY HEATHER VOGELL AND ANNIE WALDMAN, RECEIVED THE NATIONAL AWARD FOR EDUCATION REPORTING FOR SINGLE-TOPIC NEWS OR FEATURE AND THE KATHERINE SCHNEIDER JOURNALISM AWARD FOR EXCELLENCE IN REPORTING ON DISABILITY. OUR REPORTING ON TOBACCO BONDS COSTING STATES BILLIONS WON THE SOCIETY OF SILURIANS EXCELLENCE IN JOURNALISM AWARD FOR ONLINE INVESTIGATIVE REPORTING, AND THE NEW YORK STATE SOCIETY OF CPAS EXCELLENCE IN FINANCIAL JOURNALISM AWARD FOR EXPLANATORY REPORTING, WHILE REPORTER CEZARY PODKUL RECEIVED THE SOCIETY OF AMERICAN BUSINESS EDITORS AND WRITERS' LARRY BIRGER AWARD, WHICH HONORS BUSINESS JOURNALISTS UNDER THE AGE OF 30. REPORTING ON DOPING IN TRACK AND FIELD BY REPORTER DAVID EPSTEIN IN PARTNERSHIP WITH THE BBC WON THE BRITISH JOURNALISM AWARD FOR SPORTS JOURNALISM. PROPUBLICA WAS A FINALIST FOR THE ONLINE NEWS ASSOCIATION'S GENERAL EXCELLENCE IN ONLINE JOURNALISM AWARD. THE NEWS APPLICATION "INSIDE THE FIREWALL: TRACKING THE NEWS THAT CHINA BLOCKS," BY SISI WEI, WON THREE AWARDS OF EXCELLENCE FROM THE SOCIETY FOR NEWS DESIGN FOR FEATURES, INFOGRAPHICS AND CONTINUOUS USE, AND WAS SELECTED FOR "BEST AMERICAN INFOGRAPHICS." OUR TREATMENT TRACKER NEWS APPLICATION ON PAYMENTS UNDER MEDICARE PART B WON A DATA JOURNALISM AWARD, AND THE SOCIETY FOR NEWS DESIGN AWARD OF EXCELLENCE FOR PLANNED COVERAGE AND SINGLE-SUBJECT FEATURE. OUR NEWS APPLICATIONS WON SEVERAL AWARDS OF EXCELLENCE FROM THE SOCIETY FOR NEWS DESIGN, INCLUDING HONORS FOR PROPUBLICA'S ORGANIZATIONAL PORTFOLIO AND THE INDIVIDUAL PORTFOLIOS OF DEVELOPERS LENA GROEGER AND SISI WEI; AN APP COMPARING INSURANCE PLANS UNDER THE AFFORDABLE CARE ACT; AN APP DETAILING THE MILLIONS THAT NEW YORK COUNTIES LOST IN TOBACCO BONDS; AN APP SHOWING THE SOURCES OF TRACED GUNS; AND AN INFOGRAPHIC TRACKING EXTINCTIONS. ARTICLES ON ALABAMA'S CRIMINALIZATION OF DRUG USE DURING PREGNANCY, PUBLISHED IN PARTNERSHIP WITH AL.COM, WON THE SIDNEY HILLMAN FOUNDATION'S OCTOBER SIDNEY AWARD. EXECUTIVE CHAIRMAN OF PROPUBLICA PAUL STEIGER WAS INDUCTED INTO THE DEADLINE CLUB HALL OF FAME, AN HONOR BESTOWED TO JOURNALISTS AND MEDIA EXECUTIVES WHOSE WORK HAS MADE A SIGNIFICANT CONTRIBUTION TO AMERICAN JOURNALISM. FOR THE ROLE OUR INVESTIGATIVE REPORTING PLAYS IN THE BROADER MEDIA INDUSTRY, PROPUBLICA RECEIVED PEN CENTER USA'S AWARD OF HONOR.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION A, LINE 3</FormAndLineReferenceDesc>
+        <ExplanationTxt>BEGINNING IN 2012, THE ORGANIZATION BEGAN USING ADP TOTALSOURCE, A PROFESSIONAL EMPLOYER ORGANIZATION ("PEO"). AS A PROFESSIONAL EMPLOYER ORGANIZATION, TOTALSOURCE PROVIDES PROFESSIONAL EMPLOYER SERVICES TO PRO PUBLICA. IN THE PEO RELATIONSHIP TOTALSOURCE AND PRO PUBLICA SHARE CERTAIN RESPONSIBILITIES AND ALLOCATE OTHER EMPLOYER RESPONSIBILITIES BETWEEN EACH OTHER. PRO PUBLICA REMAINS AN EMPLOYER OF THE WORKSITE EMPLOYEES AND TOTALSOURCE IS A CO-EMPLOYER OF PRO PUBLICA'S EMPLOYEES. PRO PUBLICA HAS: DIRECTION AND CONTROL OVER EMPLOYEES AS IS NECESSARY TO CONDUCT ITS BUSINESS, DISCHARGE AND FIDUCIARY RESPONSIBILITY IT MAY HAVE, OR COMPLY WITH ANY APPLICABLE LICENSURE, REGULATORY OR STATUTORY REQUIREMENT OF PRO PUBLICA. CONTROL OVER THE DAY TO DAY JOB DUTIES OF EMPLOYEES AND OVER THE JOB SITES AT WHICH, OR FROM WHICH EMPLOYEES PERFORM SERVICES RESPONSIBILITY OVER THE PROFESSIONAL AND LICENSED ACTIVITIES OF EMPLOYEES INCLUDING ENSURING THAT EMPLOYEES ARE SUPERVISED BY LICENSED INDIVIDUALS AS REQUIRED BY LAW AND FOR DETERMINING WHETHER AN APPLICANT OR EMPLOYEE MEETS PRO PUBLICA'S HIRING CRITERIA AND IS QUALIFIED TO SAFELY AND COMPLETELY PERFORM HIS OR HER JOB TOTALSOURCE RESERVES A RIGHT OF DIRECTION AND CONTROL OVER EMPLOYEES AS IS NECESSARY TO FULFILL ITS OBLIGATIONS AND PROVIDE ITS SERVICES UNDER AN AGREEMENT BETWEEN PRO PUBLICA, INC. AND TOTALSOURCE. TOTALSOURCE AND PRO PUBLICA, INC. HAVE A RIGHT TO HIRE, DISCIPLINE, AND TERMINATE EMPLOYEES AS TO EACH ONE'S EMPLOYMENT RELATIONSHIP WITH EMPLOYEES.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION B, LINE 11</FormAndLineReferenceDesc>
+        <ExplanationTxt>PRO PUBLICA HAS ITS FORM 990 PREPARED BY AN OUTSIDE ACCOUNTING FIRM AND HAS ESTABLISHED THE FOLLOWING REVIEW PROCESS TO ENSURE THAT THE INFORMATION REPORTED IS COMPLETE AND ACCURATE. WHEN THE FORM 990 HAS BEEN PREPARED, REVIEWED BY MANAGEMENT AND IS READY TO BE FILED WITH THE INTERNAL REVENUE SERVICE, IT'S SUBMITTED ELECTRONICALLY TO MEMBERS OF PRO PUBLICA'S GOVERNING BODY FOR ANY COMMENTS PRIOR TO ITS SUBMISSION. THE GOVERNING BODY IS PROVIDED WITH AT LEAST ONE WEEK TO REVIEW THE PREPARED FORM 990 AND PROVIDE THEIR COMMENTS. ANY COMMENTS ARE THEN GROUPED, SUMMARIZED AND PROVIDED TO THE AUDIT COMMITTEE FOR THEIR REVIEW. EACH ISSUE IS DOCUMENTED AND ADDRESSED UNTIL THE RETURN IS FINALIZED AND APPROVED FOR FILING.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION B, LINE 12C</FormAndLineReferenceDesc>
+        <ExplanationTxt>PRO PUBLICA HAS A CONFLICT OF INTEREST POLICY, WHICH APPLIES TO ALL BOARD MEMBERS, OFFICERS, AND EMPLOYEES. EACH OF THE BOARD MEMBERS AND OFFICERS ARE REQUIRED SIGN TO A CONFLICT OF INTEREST POLICY ANNUALLY. AN INTERESTED PERSON MUST DISCLOSE AS SOON AS PRACTICABLE TO THE SECRETARY THE EXISTENCE OF A POTENTIAL CONFLICT OF INTEREST AND ALL MATERIAL FACTS RELATED TO THE CONFLICT. IF A BOARD MEMBER OR OFFICER IS UNCERTAIN ABOUT WHETHER A CONFLICT EXISTS, HE/SHE SHOULD REPORT THE POSSIBLE CONFLICT IN ALL CASES IN WHICH A CRITICAL EXTERNAL OBSERVER MIGHT REASONABLE PERCEIVE A CONFLICT TO EXIST. THE BOARD COMMITTEE WILL DETERMINE IF A CONFLICT OF INTEREST EXISTS. IN THE EVENT THAT A CONFLICT OF INTEREST ARISES, THE BOARD MEMBER OR OFFICER WITH WHOM THE CONFLICT PERTAINS TO IS EXCLUDED FROM VOTING ON THE ISSUE. HE/SHE WILL LEAVE THE ROOM AND THE OTHER BOARD MEMBERS VOTE ON THE ISSUE PERTAINING TO THAT SPECIFIC TRANSACTION. WITH RESPECT TO ANY BOARD COMMITTEE'S DISCUSSION, DECISION, OR ACTIONS INVOLVING TRANSACTIONS IN WHICH A BOARD MEMBER OR OFFICER HAS A CONFLICT OF INTEREST, THE MINUTES OF THE BOARD COMMITTEE MEETING WILL REFLECT THE BOARD'S DELIBERATIONS AND VOTING PROCESS. IN CASE OF AN INTEREST PARTY WHO IS NOT A BOARD MEMBER OR OFFICER, THE PRESIDENT MONITORS AND ENFORCES THE ORGANIZATION'S COMPLIANCE WITH ITS CONFLICT OF INTEREST POLICY. IF AN EMPLOYEE HAS A CONFLICT OF INTEREST, HE/SHE EMPLOYEE COULD NOT PARTICIPATE IN THE DECISION MAKING THE CONFLICTED TRANSACTION.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION B, LINE 15</FormAndLineReferenceDesc>
+        <ExplanationTxt>SALARIES FOR THE CEOS, OFFICERS AND KEY EMPLOYEES ARE SET BY THE BOARD. THE BOARD USES THE SERVICES OF A LAW FIRM (CAPLIN &amp; DRYSDALE, WHO SPECIALIZE IN NOT FOR PROFIT ISSUES) FOR GUIDANCE ON ALL MATTERS OF COMPENSATION. IN 2012 CAPLIN &amp; DRYSDALE UPDATED THE COMPENSATION STUDY FOR THREE KEY EMPLOYEES. CAPLIN &amp; DRYSDALE STUDIED COMPENSATION OF SELECT NATIONAL NEWSPAPERS AND RELIED ON THEIR UNDERSTANDING OF PRO PUBLICA'S OPERATIONS AND STATUS IN THE FIELD OF JOURNALISM. THE BOARD ESTABLISHED COMPENSATION FOR THE CEO, OFFICERS AND KEY EMPLOYEES USING COMPARABLE DATA AND DETERMINED THAT THE SALARY IS REASONABLE. COMPARABLE DATA INCLUDES VARIETY OF INFORMATION FROM JOURNALISM OUTLETS AND OTHER NOT FOR PROFIT ORGANIZATIONS. MINUTES OF THE BOARD MEETINGS ARE KEPT IN FILE. THIS PROCESS WAS LAST COMPLETED IN 2014.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION C, LINE 19</FormAndLineReferenceDesc>
+        <ExplanationTxt>THE ORGANIZATION MAKES ITS FORM 990 AVAILABLE FOR PUBLIC INSPECTION AS REQUIRED UNDER SECTION 6104 OF THE INTERNAL REVENUE CODE. THE RETURN IS POSTED ON GUIDESTAR.ORG AND OTHER SIMILAR TYPES OF WEBSITES. IN ADDITION, THE FINANCIAL STATEMENTS, CONFLICT OF INTEREST POLICY, ARTICLES OF INCORPORATION, FORM 990, FORM 1023, AND BY-LAWS ARE ALSO AVAILABLE UPON WRITTEN REQUEST, AND ON THE ORGANIZATION'S WEBSITE (WWW.PROPUBLICA.ORG).</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART XII, LINE 2C:</FormAndLineReferenceDesc>
+        <ExplanationTxt>PRO PUBLICA HAS AN AUDIT COMMITTEE THAT ASSUMES RESPONSIBILITY FOR THE OVERSIGHT OF THE AUDIT OF ITS FINANCIAL STATEMENTS AND FOR THE SELECTION OF AN INDEPENDENT ACCOUNTANT. THE PROCESS HAS NOT CHANGED FROM THE PRIOR YEAR.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleO>
+  </ReturnData>
+</Return>
