@@ -7,12 +7,12 @@ This directory contains examples of 990's, returns, and schemas for major schedu
 
 - /correlated_examples/ contains the pdf version of a tax reform and it's corresponding xml filing (with the same name)
 
-- /main_schemas/ contain the XSD files for the main forms and their corresponding schedules.
+- /main_schemas/ contain the XSD files for the main forms and their corresponding schedules. There are many other schemas, of course, and many earlier versions--these come from 
 
 - /other_forms/ contains some random other 990's, most of which are randomly chosen, but some of which aren't. 
  
 
-American for Job Security is political group organized as a (c)6 which doesn't file electronically. 
+Americans for Job Security is political group organized as a (c)6 which doesn't file electronically. 
 
 Via Christi Health is a large health chain. See schedule R part 4 - their medical malpractice self-insurance entity is in the Cayman islands related org. 
 
