@@ -6,12 +6,21 @@ from schemas.schema_parse_utils import XSD_Parser
 
 
 class Command(BaseCommand):
-    help = """Read schema file data by reading files.
+    help = """  Read schema file data by reading files.
+                Default is to run all files;
                 Optionally pass a version_string as an arg
                 to run only on that version, e.g. 
                 $ python manage.py read_schema_files 2013v4.0
-                Hard undo: TK;
+
+                Checks the existence before creating (so rerunning shouldn't
+                cause errors). But runs slower. 
+                
+                Nuke from DB manually: [ +- where version_string='2013v4.0']
                 delete from schemas_simpletype;
+                delete from schemas_fileinclude;
+                delete from schemas_element;
+                delete from schemas_group;
+                delete from schemas_complextype;
             """
 
     def add_arguments(self, parser):
@@ -30,8 +39,14 @@ class Command(BaseCommand):
 
         for vs in version_list:
             print("Running schemas from version %s" % vs)
-            versioned_schemas = XSDFile.objects.filter(version_string=vs.version_string).exclude(file_read=True)
+            vsname = vs
+            if not isinstance(vs, basestring):
+                vsname = vs.version_string
+            
+
+
+            versioned_schemas = XSDFile.objects.filter(version_string=vsname).exclude(file_read=True)
             for versioned_schema in versioned_schemas:
-                #print("\tRunning %s" % versioned_schema.file_path) 
+                print("\tRunning %s" % versioned_schema.file_path) 
                 parser = XSD_Parser(versioned_schema)
                 parser.parse()

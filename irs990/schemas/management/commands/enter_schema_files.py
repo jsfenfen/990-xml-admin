@@ -19,7 +19,7 @@ class Command(BaseCommand):
             parser.add_argument('schema', nargs='?', type=version)
 
     def walk_dir(self, DIR, version_string):
-        print "Walk dir %s" % DIR
+        print("Walk dir %s version %s" % (DIR, version_string) ) 
         this_version = ProductionVersion.objects.get(version_string=version_string)
         this_version_name = this_version.version_string
 
@@ -48,7 +48,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
 
         if options['schema']:
-            version_list = options['schema']
+            version_list = [options['schema']]
             print("Entering versions: %s" % version_list)
 
         else:

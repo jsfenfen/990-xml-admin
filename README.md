@@ -29,5 +29,31 @@ It can take a while to do a complete sync, if you're logged in you probably want
 
 # Processing the files
 
-TKTK
+## Filing model
+
+### Commands:
+
+
+
+## Schemas model
+
+### Commands:
+
+
+	$ python manage.py enter_schema_files
+
+Enter the schema files by walking the SCHEMA_DIR. 
+Optionally pass a version_string as an arg to run only on that version, e.g. 
+	$ python manage.py enter\_schema\_files 2013v4.0 
+
+Hard SQL undo: delete from schemas\_xsdfile [ where version_string='2013v4.0'];
+
+
+$ python manage.py read\_schema\_files
+
+Optionally pass a version_string as an arg to run only on that version, e.g. 
+	$ python manage.py read\_schema\_files 2013v4.0 
+
+
+
 

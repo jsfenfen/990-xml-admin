@@ -1,5 +1,5 @@
 from collections import Counter
-from filing.type_utils import dictType, listType, unicodeType, noneType
+from filing.type_utils import dictType, listType, unicodeType, noneType, strType
 
 class json_stats_tracker:
 
@@ -7,14 +7,12 @@ class json_stats_tracker:
         self.raw_json = raw_json
 
     def parse_json(self, json_node, parent_path=""):
-
         this_node_type = type(json_node)
 
         if this_node_type == unicodeType:
             self.keys_found.update([parent_path,])
 
         elif this_node_type == listType:
-
             self.list_roots_found.update([parent_path,])
             for child_node in json_node:
                 self.parse_json(child_node, parent_path=parent_path)
@@ -27,6 +25,9 @@ class json_stats_tracker:
 
         elif this_node_type == noneType:
             pass
+        
+        elif this_node_type == strType:
+            print "String '%s'" % json_node
 
         else:
             raise Exception ("Unhandled type: %s" % (type(json_node)))
@@ -35,4 +36,5 @@ class json_stats_tracker:
         self.keys_found = Counter()
         self.list_roots_found = Counter()
         self.parse_json(self.raw_json)
+        print("self.keys_found has length %s" % (len( self.keys_found)) )
         return (self.keys_found, self.list_roots_found)
