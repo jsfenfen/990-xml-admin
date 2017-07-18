@@ -4,3 +4,4 @@ django>=1.11
 psycopg2
 xmltodict
 requests
+unicodecsv

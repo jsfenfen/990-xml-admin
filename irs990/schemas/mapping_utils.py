@@ -1,6 +1,7 @@
 import xmltodict
 import json
-import csv
+#import csv
+import unicodecsv as csv
 
 from schemas.models import XSDFile, ProductionVersion, FileInclude, Element, \
     Group, ComplexType, SimpleType
