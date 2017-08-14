@@ -30,14 +30,14 @@ class Command(BaseCommand):
                     full_path = (os.path.join(root, name))
                     assert full_path.startswith(DIR) 
                     relative_dir = full_path.lstrip(DIR)
-                    name_upper = name.upper().replace(".XSD","")
+                    name = name.replace(".xsd","")
                     (obj, created) = XSDFile.objects.get_or_create(
                         file_path=relative_dir, 
                         version_string=this_version_name,
                         defaults={
                             'version': this_version,
                             'version_string': this_version_name,
-                            'name': name_upper
+                            'name': name
                             # set schedule at a later point
                         })
                     if created:

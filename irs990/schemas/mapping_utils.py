@@ -102,7 +102,7 @@ class XSDReader(object):
         version = self.version_string
         elements = observed_xpath.objects.filter(version_string=version, raw_xpath__startswith=xpath_prefix).values('raw_xpath').distinct().order_by('raw_xpath')
         if len(elements)==0:
-            print("No elements found matching version string %s" % version)
+            print("No elements found matching version string %s prefix '%s' " % (version, xpath_prefix) )
             return None
         total = 0
         failures = 0
@@ -226,7 +226,8 @@ class XSDReader(object):
                 
                 child_data = child.get_standardized_hash(process_runs=parent['process_runs']+1, 
                                                             xsd_type='element', 
-                                                            xsd_prefix=parent['derived_xpath']                                                                ) 
+                                                            xsd_prefix=parent['derived_xpath'],
+                                                            parent_ordering=parent['ordering']) 
                 self.unprocessed_elements.append(child_data)
                 child_data = self.add_documentation(child_data, parent['line_number'], parent['name'], parent['documentation'] )
 
@@ -234,7 +235,8 @@ class XSDReader(object):
             elif this_type['xsd_type']=='complex':
                 child_data = child.get_standardized_hash(process_runs=parent['process_runs']+1, 
                                                         xsd_type='complex', 
-                                                        xsd_prefix=parent['derived_xpath']                                                            ) 
+                                                        xsd_prefix=parent['derived_xpath'],
+                                                        parent_ordering=parent['ordering'])
                 child_data = self.add_documentation(child_data, parent['line_number'], parent['name'], parent['documentation'] )
                 print("Adding complex child %s process runs %s" % (child_data, parent['process_runs'] ) )
                 self.unprocessed_complextypes.append(child_data)
@@ -243,7 +245,8 @@ class XSDReader(object):
             # treat as simple type ? This may be wrong. 
             child_data = child.get_standardized_hash(process_runs=parent['process_runs']+1, 
                                                     xsd_type='element', 
-                                                    xsd_prefix=parent['derived_xpath']
+                                                    xsd_prefix=parent['derived_xpath'],
+                                                    parent_ordering=parent['ordering']
                                                     )
             child_data = self.add_documentation(child_data, parent['line_number'], parent['name'], parent['documentation'] )
 
@@ -335,7 +338,12 @@ class XSDReader(object):
         # child groups
         child_groups = Group.objects_no_json.filter(source_file__pk__in=self.file_dependency_pk_list, xpath__startswith=search_xpath )
         for child_group in child_groups:
-            child_data = child_group.get_standardized_hash(process_runs=complex['process_runs']+1, xsd_type='group', xsd_prefix=complex['derived_xpath'], ignore_name=False) 
+            child_data = child_group.get_standardized_hash(
+                process_runs=complex['process_runs']+1, 
+                xsd_type='group', xsd_prefix=complex['derived_xpath'], 
+                ignore_name=False,
+                parent_ordering=complex['ordering']) 
+
             child_data = self.add_documentation(child_data, complex['line_number'], complex['name'], complex['documentation'] )
             self.unprocessed_groups.append(child_data)
             self.test_for_repeating(child_data)
@@ -548,7 +556,7 @@ class XSDReader(object):
         #    print(" ^^^^^ group root: '%s' " % key)
 
 
-        headers = ['ordering', 'derived_xpath', 'group_root', 'name', 'line_number', 'documentation', 'min_occurs', 'max_occurs', 'type']
+        headers = ['ordering', 'derived_xpath', 'group_root', 'name', 'line_number', 'documentation', 'min_occurs', 'max_occurs', 'type', 'version']
 
         with open(filename + '.csv', 'wb') as outfile:
             dw = csv.DictWriter(outfile, fieldnames=headers, extrasaction='ignore')
@@ -560,12 +568,14 @@ class XSDReader(object):
             for key in keylist:
                 group_result = self.test_against_groups(key)
                 self.derived_keys[key]['group_root']= group_result               
+                self.derived_keys[key]['version']= self.version_string             
 
                 dw.writerow(self.derived_keys[key])
 
 
 
-    def make_mappings(self, name_alternate=None):
+    def make_mappings(self, name_alternate=None, name_prefix=None):
+
         print ("make_mappings %s name='%s'" % (self.xsdfile_obj, self.xsdfile_obj.name) )
 
         # What are the file dependencies ? 
@@ -578,11 +588,17 @@ class XSDReader(object):
         print("file_dependency_pk_list %s" % (self.file_dependency_pk_list))
 
         self.hash_by_name()
+        arg1 = None
         if name_alternate:
-            self.start_from_root_element(name_alternate + "Type", name_alternate)
+            arg1 = name_alternate + "Type"
+            arg2 = name_alternate
         else:
-            self.start_from_root_element(self.xsdfile_obj.name + "Type", self.xsdfile_obj.name)
+            arg1 = self.xsdfile_obj.name + "Type"
+            arg2 = self.xsdfile_obj.name
+        if name_prefix:
+            arg2=name_prefix
 
+        self.start_from_root_element(arg1, arg2)
         self.write_entities_to_file(self.xsdfile_obj.name)
         
 

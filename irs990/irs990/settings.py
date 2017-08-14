@@ -128,6 +128,8 @@ IRS_XML_BUCKET = 'irs-form-990'
 IRS_XML_HTTP_BASE = "https://s3.amazonaws.com/%s/" % IRS_XML_BUCKET
 IRS_INDEX_FILE = IRS_XML_HTTP_BASE + "index_%s.csv" 
 
+# Most widely used at time of creation
+CANONICAL_VERSION = '2015v2.1'
 
 try:
     from local_settings import *

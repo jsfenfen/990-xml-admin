@@ -6,13 +6,23 @@ from schemas.mapping_utils import XSDReader
 
 # Should eventually go in settings or elsewhere
 
+
+
+
 # what files are we processing?
 #FILENAME_WHITELIST = [ 'IRS990EZ', ]
 #FILENAME_WHITELIST = [ 'IRS990SCHEDULEJ', ]
-FILENAME_WHITELIST = [ 'IRS990ScheduleA', ]
+#FILENAME_WHITELIST = [ 'IRS990ScheduleA', ]
 
-#FILENAME_WHITELIST = [ 'IRS990', ]
+#FILENAME_WHITELIST = [ 'ReturnHeader990x', ]
+
+FILENAME_WHITELIST = [ 'IRS990', ]
 #FILENAME_WHITELIST = ['IRS990', 'IRS990PF','IRS990EZ', 'IRS990SCHEDULEA', 'IRS990SCHEDULEB', 'IRS990SCHEDULEC', 'IRS990SCHEDULEJ' ] 
+
+## name alternates 
+
+
+# ReturnHeader990x --> name_alternate='ReturnHeader'
 
 class Command(BaseCommand):
     help = """  Generate mappings from whitelisted forms/schedules.
@@ -33,10 +43,11 @@ class Command(BaseCommand):
         versioned_schemas = XSDFile.objects.filter(version_string=vsname).exclude(file_read=True)
         for versioned_schema in versioned_schemas:
             # Decide if we should process it
-            if versioned_schema.name in [filename.upper() for filename in FILENAME_WHITELIST]:
+            if versioned_schema.name in FILENAME_WHITELIST:
                 this_reader = XSDReader(versioned_schema)
-                this_reader.make_mappings(name_alternate="IRS990ScheduleA")                    
+                this_reader.make_mappings()                    
                 
+                #this_reader.make_mappings(name_alternate='ReturnHeader', name_prefix="/Return/ReturnHeader")
                 # Need more comprehensive testing approach, hack
 
                 # 990
@@ -50,7 +61,13 @@ class Command(BaseCommand):
 
                 #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/IRS990/")
                 #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/IRS990EZ/")
-                this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/IRS990ScheduleA/")
+                this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/%s/" % (versioned_schema.name))
+                #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/ReturnHeader" )
+
+                # for header
+                #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnHeader/" )
+
+
 
     def handle(self, *args, **options):
 

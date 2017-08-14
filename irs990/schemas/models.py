@@ -7,25 +7,38 @@ from django.db import models
 from django.contrib.postgres.fields import JSONField
 from django.conf import settings
 
-# sql for testing/etc
-# insert into schemas_productionversion (version_string) select version_string from filing_known_version_string;
-#
+
 class ProductionVersion(models.Model):
     version_string = models.CharField(max_length=15, blank=True, null=True)
-    # Should this be identical to filing.known_version_string ? 
+    # This is different than filing.known_version_string because it only 
+    # contains versions we will process, but...
+    # insert into schemas_productionversion (version_string) select version_string from filing_known_version_string;
 
     def __unicode__(self):
         return self.version_string
 
+
 class ScheduleName(models.Model):
+    """ The names of schedules we 'support'. Enter from fixtures, TK """
     schedule_name = models.CharField(max_length=31, blank=True, null=True, help_text="Schedule name", editable=False)
-    # Should this include other random stuff ? i.e. INVESTMENTSCORPSTOCKSCHEDULE
-    
+    xml_root_path = models.CharField(max_length=255, blank=True, null=True, help_text="", editable=False)
+        
     def __unicode__(self):
         return "%s" % (self.schedule_name)
 
     class Meta:
         managed=True
+
+class SchedulePart(models.Model):
+    db_model_name = models.CharField(max_length=64, blank=True, null=True, help_text="db compliant name")
+    ordering_ordinal = models.IntegerField(null=True, blank=True, help_text="sort order of parts")
+    parent_sked = models.ForeignKey(ScheduleName)
+    raw_part_name = models.CharField(max_length=511, blank=True, null=True, help_text="From corrected XSD files")
+    canonical_version_string = models.CharField(max_length=15, blank=True, null=True, help_text="What version were the canonical form parts derived from?") 
+
+
+    def __unicode__(self):
+        return "%s - %s " % (self.raw_part_name, self.parent_sked)
 
 class XSDFile(models.Model):
     version = models.ForeignKey(ProductionVersion, null=True)
@@ -43,6 +56,19 @@ class XSDFile(models.Model):
         version_dir = self.version_string
         return os.path.join(settings.SCHEMA_DIR, main_dir, version_dir, self.file_path)
 
+class ScheduleInstance(models.Model):
+
+    schedule_instance = models.ForeignKey(XSDFile, null=True)
+    version_string = models.CharField(max_length=15, blank=True, null=True)
+    schedule_name = models.CharField(max_length=31, blank=True, null=True, help_text="Schedule name", editable=False)
+    schedule_type = models.ForeignKey(ScheduleName, null=True)
+
+    def __unicode__(self):
+        return "%s - %s - %s" % (self.schedule_year, self.schedule_version, self.schedule_type.schedule_name)
+
+###### Stuff below is contents of XSD files, helper classes
+
+
 class FileInclude(models.Model):
     version = models.ForeignKey(ProductionVersion, null=True)
     version_string = models.CharField(max_length=15, blank=True, null=True) # denormalize
@@ -56,29 +82,12 @@ class FileInclude(models.Model):
     def __unicode__(self):
         return "%s source_file='%s' included_file='%s'" % (self.version_string, self.source_file, self.included_file)
 
-#class Part(models.Model):
-#    part_ordinal_text = models.CharField(max_length=15, blank=True, null=True, help_text="Roman numerals?")
-#    ordering = models.IntegerField(null=True, help_text="Integer used to order parts as they appear")
-#    schedule = TK
-
-
-
 class NoJSONManager(models.Manager):
+    # Django's default is to return all models on all queries
+    # We don't want it to return the json unless we really want it
     def get_queryset(self):
         # should we pass the field names in as args, not hard code this?
         return super(NoJSONManager, self).get_queryset().defer('as_json')
-
-
-"""
-            'name':initial_root.name, 
-            'xpath':initial_root.xpath, 
-            'documentation':initial_root.description, 
-            'line_number':initial_root.line_number, 
-            'derived_path':initial_root.xpath, 
-            'type':initial_root.type,
-            'process_runs':0}
-"""
-
 
 class XSD_Base(models.Model):
     version = models.ForeignKey(ProductionVersion, null=True)
@@ -94,20 +103,21 @@ class XSD_Base(models.Model):
     max_occurs = models.IntegerField(null=True)
     as_json = JSONField(null=True)
 
-
-    # convenience method so django doesn't return us the json
-    # since the json objs can be rather large
+    # Specify objects with or without json
     objects = models.Manager()
     objects_no_json = NoJSONManager()
 
     class Meta:
         abstract = True
 
+    # This logic should go somewhere else, and get simplified
+    # Probably there should be an object version of this
     def get_standardized_hash(self, 
                                 process_runs=None, 
                                 xsd_type=None, 
                                 xsd_prefix=None, 
-                                ignore_name=False, 
+                                ignore_name=False,
+                                parent_ordering=None  
                             ):
 
         derived_xpath = self.xpath
@@ -125,6 +135,22 @@ class XSD_Base(models.Model):
 
         if derived_xpath:          
             derived_xpath = derived_xpath.replace("//","/")
+
+        ordering = None
+        try:
+            ordering = self.ordering
+        except AttributeError:
+            pass
+
+
+        if parent_ordering and process_runs > 1:
+            if process_runs==2:
+                ordering = parent_ordering + (self.ordering / 1000.0)
+            elif process_runs==3:
+                ordering = parent_ordering + (self.ordering / 1000000.0)
+            else:
+                ordering = parent_ordering
+
         print ("Get standardized hash '%s'   '%s'  '%s'" % (self.name, derived_xpath, self.xpath))
         return {            
             'name':self.name, 
@@ -182,6 +208,15 @@ class Element(XSD_Base):
         return "Element %s %s %s" % (self.name, self.version_string, self.xpath)
 
 
+############
+
+# class CanonicalVariable
+# class CanonicalGroup
+
+#class VersionedVariable(models.model):
+
+
+#class VersionedGroup(models.model):
 
 
 

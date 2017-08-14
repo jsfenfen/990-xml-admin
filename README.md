@@ -46,14 +46,20 @@ Enter the schema files by walking the SCHEMA_DIR.
 Optionally pass a version_string as an arg to run only on that version, e.g. 
 	$ python manage.py enter\_schema\_files 2013v4.0 
 
-Hard SQL undo: delete from schemas\_xsdfile [ where version_string='2013v4.0'];
+Hard SQL undo: 
+	delete from schemas_xsdfile [ where version_string='2013v4.0'];
 
 
 $ python manage.py read\_schema\_files
 
 Optionally pass a version_string as an arg to run only on that version, e.g. 
-	$ python manage.py read\_schema\_files 2013v4.0 
 
-
+	$ python manage.py read_schema_files 2013v4.0 
+	## delete with SQL:
+    delete from schemas_simpletype;
+    delete from schemas_fileinclude;
+    delete from schemas_element;
+    delete from schemas_group;
+    delete from schemas_complextype;
 
 

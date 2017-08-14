@@ -1,0 +1,31 @@
+from schemas.models import XSDFile, ProductionVersion, FileInclude, Element, \
+    Group, ComplexType, SimpleType
+
+
+
+class XSDReader(object):
+    
+    def __init__(self, xsdfile_obj):
+        self.elements = {}
+        self.simpletypes = {}
+        self.complextypes = {}
+        self.xsdfile_obj = xsdfile_obj
+
+    def run_file(self):
+        print ("processing %s name='%s'" % (self.xsdfile_obj, self.xsdfile_obj.name) )
+
+        # What are the file dependencies ? 
+        file_dependencies = FileInclude.objects.filter(source_file=self.xsdfile_obj)
+        file_dependency_pk_list = [self.xsdfile_obj.pk]
+        for file_dependency in file_dependencies:
+            print ("Processing file dependency %s" % (file_dependency) )
+            file_dependency_pk_list.append(file_dependency.included_file.pk)
+            ## Many files just include Common/efileTypes.xsd
+        print("file_dependency_pk_list %s" % (file_dependency_pk_list))
+
+        elements = Element.objects.filter(source_file__pk__in=file_dependency_pk_list).order_by('xpath', 'ordering',)
+        
+        # hash the elements by name for easier access. 
+
+        for element in elements:
+            print element
