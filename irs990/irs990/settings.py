@@ -131,7 +131,22 @@ IRS_INDEX_FILE = IRS_XML_HTTP_BASE + "index_%s.csv"
 # Most widely used at time of creation
 CANONICAL_VERSION = '2015v2.1'
 
+# Forms we can generate schemas for
+SUPPORTED_SCHEMAS = [
+     'IRS990.xsd', 'IRS990EZ.xsd', 'IRS990PF.xsd', 
+    'IRS990ScheduleA.xsd', 'IRS990ScheduleB.xsd', 
+    'IRS990ScheduleC.xsd', 'IRS990ScheduleD.xsd',
+    'IRS990ScheduleE.xsd', 'IRS990ScheduleF.xsd',
+    'IRS990ScheduleG.xsd', 'IRS990ScheduleH.xsd',
+    'IRS990ScheduleI.xsd', 'IRS990ScheduleJ.xsd',
+    'IRS990ScheduleK.xsd', 'IRS990ScheduleL.xsd',
+    'IRS990ScheduleM.xsd', 'IRS990ScheduleN.xsd',
+    'IRS990ScheduleO.xsd', 'IRS990ScheduleR.xsd',
+    'ReturnHeader990x.xsd']
+
+
+
 try:
     from local_settings import *
 except ImportError:
-    print "Error importing local_settings.py"
+    print("Error importing local_settings.py")

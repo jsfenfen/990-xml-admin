@@ -4,35 +4,27 @@ from filing.schema_name_utils import version
 from django.conf import settings
 from schemas.mapping_utils import XSDReader
 
-# Should eventually go in settings or elsewhere
+# Should eventually go in settings or elsewhere?
+# Which files are we processing?
+MAIN_SKEDS = [ 'ReturnHeader990x', 'IRS990', 'IRS990PF','IRS990EZ'] 
+LETTERED_SKEDS = [ 'IRS990ScheduleA', 'IRS990ScheduleB', 'IRS990ScheduleC', 'IRS990ScheduleD', 'IRS990ScheduleE',
+    'IRS990ScheduleF', 'IRS990ScheduleG', 'IRS990ScheduleH', 'IRS990ScheduleI', 'IRS990ScheduleJ', 'IRS990ScheduleK',
+    'IRS990ScheduleL', 'IRS990ScheduleM', 'IRS990ScheduleN', 'IRS990ScheduleO', 'IRS990ScheduleR']
+FILENAME_WHITELIST = MAIN_SKEDS + LETTERED_SKEDS
+#FILENAME_WHITELIST = MAIN_SKEDS 
 
-
-
-
-# what files are we processing?
-#FILENAME_WHITELIST = [ 'IRS990EZ', ]
-#FILENAME_WHITELIST = [ 'IRS990SCHEDULEJ', ]
-#FILENAME_WHITELIST = [ 'IRS990ScheduleA', ]
-
-#FILENAME_WHITELIST = [ 'ReturnHeader990x', ]
-
-FILENAME_WHITELIST = [ 'IRS990', ]
-#FILENAME_WHITELIST = ['IRS990', 'IRS990PF','IRS990EZ', 'IRS990SCHEDULEA', 'IRS990SCHEDULEB', 'IRS990SCHEDULEC', 'IRS990SCHEDULEJ' ] 
-
-## name alternates 
-
-
-# ReturnHeader990x --> name_alternate='ReturnHeader'
+# FILENAME_WHITELIST = ['IRS990',]
 
 class Command(BaseCommand):
     help = """  Generate mappings from whitelisted forms/schedules.
                 Optionally pass a version_string as an arg
                 to run only on that version, e.g. 
                 $ python manage.py generate_mappings 2013v4.0
-                Hard undo: TK;
-                
-            """
+                Hard undo: 
+                - elements: delete from schemas_versionedvariable
+                - groups: delete from schemas_versionedgroup;
 
+            """
 
     def add_arguments(self, parser):
             # Positional arguments
@@ -45,32 +37,16 @@ class Command(BaseCommand):
             # Decide if we should process it
             if versioned_schema.name in FILENAME_WHITELIST:
                 this_reader = XSDReader(versioned_schema)
-                this_reader.make_mappings()                    
-                
-                #this_reader.make_mappings(name_alternate='ReturnHeader', name_prefix="/Return/ReturnHeader")
-                # Need more comprehensive testing approach, hack
 
-                # 990
-                #sample_file = '/Users/jfenton/github-whitelabel/irs/irs990_admin/sample_990s/raw_examples/201500329349300000_public.xml'
-        
-                # 990ez: 
-                
-                #sample_file = '/Users/jfenton/github-whitelabel/irs/irs990_admin/sample_990s/raw_examples/201500329349200000_public.xml'
-
-                #this_reader.mappings_from_sample_file(sample_file, "/IRS990EZ/")
-
-                #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/IRS990/")
-                #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/IRS990EZ/")
-                this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/%s/" % (versioned_schema.name))
-                #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/ReturnHeader" )
-
-                # for header
-                #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnHeader/" )
-
+                if versioned_schema.name == 'ReturnHeader990x':
+                    this_reader.make_mappings(name_alternate='ReturnHeader')
+                    #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnHeader/" )
+                else:
+                    this_reader.make_mappings()
+                    #this_reader.mappings_from_db(xpath_prefix="/Return/ReturnData/%s/" % (versioned_schema.name))
 
 
     def handle(self, *args, **options):
-
 
         if options['schema']:
             version_list = [options['schema'],]

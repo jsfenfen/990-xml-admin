@@ -90,6 +90,9 @@ class NoJSONManager(models.Manager):
         return super(NoJSONManager, self).get_queryset().defer('as_json')
 
 class XSD_Base(models.Model):
+    """
+    Base class for things that we find in the XSD files that we care about
+    """
     version = models.ForeignKey(ProductionVersion, null=True)
     version_string = models.CharField(max_length=15, blank=True, null=True) # denormalize
     source_file = models.ForeignKey(XSDFile, null=True)
@@ -208,17 +211,49 @@ class Element(XSD_Base):
         return "Element %s %s %s" % (self.name, self.version_string, self.xpath)
 
 
-############
-
+############ TK: canonical vars
+# 
 # class CanonicalVariable
+# include db_safe_name = models.CharField(max_length=64, blank=True, null=True, help_text="database compliant name")
 # class CanonicalGroup
+# db_safe_name = models.CharField(max_length=64, blank=True, null=True, help_text="database compliant name")
 
-#class VersionedVariable(models.model):
+class VersionedGroup(models.Model):
+    name = models.CharField(max_length=127, blank=True, null=True, help_text="Name")
+    xpath = models.CharField(max_length=255, blank=True, null=True, help_text="xpath style key")
+    version = models.ForeignKey(ProductionVersion, null=True)
+    version_string = models.CharField(max_length=15, blank=True, null=True, help_text="denormalized version string")
+    parent_sked = models.ForeignKey(ScheduleName, null=True)
+    parent_sked_part= models.ForeignKey(SchedulePart, null=True)
+    ordering = models.IntegerField(null=True, help_text="Integer used to order groups within a form")
+    # to add: related canonical group
 
+    def __unicode__(self):
+        return "VersionedGroup %s %s" % (self.name, self.version_string)
 
-#class VersionedGroup(models.model):
+class VersionedVariable(models.Model):
+    name = models.CharField(max_length=127, blank=True, null=True, help_text="Name")
+    xpath = models.CharField(max_length=255, blank=True, null=True, help_text="xpath style key")
+    description = models.TextField(null=True)
+    line_number = models.TextField(null=True)
+    version = models.ForeignKey(ProductionVersion, null=True)
+    version_string = models.CharField(max_length=15, blank=True, null=True, help_text="denormalized version string")
+    parent_sked = models.ForeignKey(ScheduleName, null=True)
+    parent_sked_part= models.ForeignKey(SchedulePart, null=True)
+    ordering = models.FloatField(null=True, help_text="Integer used to order groups within a form")
+    in_a_group = models.NullBooleanField(default=False, help_text="Is this variable in a group")
+    parent_group = models.ForeignKey(VersionedGroup, null=True, help_text="If this is in_a_group, link to it. ")
+    irs_type = models.CharField(max_length=255, blank=True, null=True, help_text="IRS type, as recorded")
+    django_type = models.CharField(max_length=255, blank=True, null=True, help_text="Literal type for django")
+    sql_alch_type = models.CharField(max_length=255, blank=True, null=True, help_text="Literal type for sql alchemy")  
+    # to add: related canonical variable
 
+    # to add: link to lookup table for certain types: states, countries, etc. 
 
+    def __unicode__(self):
+         return "VersionedVariable %s %s" % (self.xpath, self.version_string)
+
+    
 
 
 

@@ -4,12 +4,11 @@ import json
 import unicodecsv as csv
 
 from schemas.models import XSDFile, ProductionVersion, FileInclude, Element, \
-    Group, ComplexType, SimpleType
+    Group, ComplexType, SimpleType, ScheduleName, VersionedGroup, VersionedVariable
 
 
 from filing.stats_utils import json_stats_tracker
 from filing.models import xml_submission, observed_xpath
-
 
 
 # fix for name tobe
@@ -394,6 +393,7 @@ class XSDReader(object):
         #  Could use a regex like [^\/], but using backslashes and slashes within regexes leads to escaping craziness
         #  Works from terminal: Element.objects.filter(xpath__iregex=r'\/IRS990Type\/[^\/]+\Z')
 
+
         for child in child_elements:
 
             child_xpath = child.xpath
@@ -541,7 +541,7 @@ class XSDReader(object):
 
     def test_against_groups(self, xpath):
         for key in self.group_roots.keys():
-            if xpath.startswith(key):
+            if xpath.startswith(key) or xpath == key:
                 print(" ++++ group child: '%s' parent '%s' " % (xpath, key) )
                 return key
 
@@ -572,6 +572,93 @@ class XSDReader(object):
 
                 dw.writerow(self.derived_keys[key])
 
+    def generate_group_bindings(self):
+        """ Create a group element  """
+        version = ProductionVersion.objects.get(version_string=self.version_string)
+        skedname = ScheduleName.objects.get(schedule_name=self.xsdfile_obj.name)
+        for key in self.group_roots.keys():
+            name = key.split("/")[-1]
+            try: 
+                vg = VersionedGroup.objects.get(
+                    version=version,
+                    version_string = version.version_string,
+                    parent_sked=skedname,
+                    name=name,
+                    xpath=key)
+
+            except VersionedGroup.DoesNotExist:
+                vg = VersionedGroup.objects.create(
+                    version=version,
+                    version_string = version.version_string,
+                    parent_sked=skedname,
+                    name=name,
+                    xpath=key)
+
+
+
+    def generate_element_bindings(self):
+        """ Make the bindings, but check if they first exist """
+        print("Generate bindings: %s %s" % (self.xsdfile_obj.name,self.version_string ) )
+        version = ProductionVersion.objects.get(version_string=self.version_string)
+        skedname = ScheduleName.objects.get(schedule_name=self.xsdfile_obj.name)
+
+        keylist = self.derived_keys.keys()
+        keylist.sort()
+
+        for key in keylist:
+            name = key.split("/")[-1]
+            group_result = self.test_against_groups(key)
+            element_data = self.derived_keys[key]
+            in_a_group = False
+            parent_group = None
+            if group_result:
+                print("Got keylist %s %s" % (group_result, element_data) )
+                in_a_group=True
+                parent_group = VersionedGroup.objects.get(
+                            version=version,
+                            xpath=group_result
+                            )
+
+            
+            
+            try:
+                vv = VersionedVariable.objects.get(
+                    version=version,
+                    version_string = version.version_string,
+                    parent_sked=skedname,
+                    name=name,
+                    xpath=key)
+            except VersionedVariable.DoesNotExist:
+
+                vv = VersionedVariable.objects.create(
+                        version=version,
+                        version_string = version.version_string,
+                        parent_sked=skedname,
+                        name=name,
+                        xpath=key,
+                        description=element_data['documentation'],
+                        ordering=element_data['ordering'],
+                        line_number=element_data['line_number'],
+                        in_a_group=in_a_group,
+                        parent_group=parent_group,
+                        irs_type=element_data['type']
+                        )
+
+            """
+             u'xpath': u'/IRS990Type/WhistleblowerPolicyInd'
+             u'line_number': u'[WhistleblowerPolicyInd] Part VI Section B Line 13'
+             u'process_runs': 1
+             u'derived_xpath': u'/IRS990/WhistleblowerPolicyInd'
+             u'type': u'BooleanType'
+             u'id': 688253
+             u'min_occurs': 1
+             u'name': u'WhistleblowerPolicyInd'
+             u'ordering': 232
+             u'ref': None
+             u'documentation': u'[WhistleblowerPolicyInd] Whistleblower policy?'
+             u'xsd_type': 'element'
+             u'max_occurs': 1
+            """
 
 
     def make_mappings(self, name_alternate=None, name_prefix=None):
@@ -600,5 +687,5 @@ class XSDReader(object):
 
         self.start_from_root_element(arg1, arg2)
         self.write_entities_to_file(self.xsdfile_obj.name)
-        
-
+        self.generate_group_bindings()
+        self.generate_element_bindings()

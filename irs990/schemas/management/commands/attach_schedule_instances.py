@@ -7,11 +7,11 @@ from schemas.models import ScheduleName, XSDFile, ProductionVersion, ScheduleIns
 from filing.schema_name_utils import version
 
 class Command(BaseCommand):
-    help = """Enter schema files by walking the SCHEMA_DIR.
+    help = """Create ScheduleInstance objects for each XSDFile
                 Optionally pass a version_string as an arg
                 to run only on that version, e.g. 
-                $ python manage.py enter_schema_files 2013v4.0
-                Hard undo: delete from schemas_xsdfile [ where version_string='2013v4.0'];
+                $ python manage.py attach_schedule_instances 2013v4.0
+                Hard undo: delete from schemas_scheduleinstance [ where version_string='2013v4.0'];
             """
 
     def add_arguments(self, parser):
