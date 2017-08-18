@@ -37,7 +37,7 @@ class Command(BaseCommand):
 
                 except ScheduleInstance.DoesNotExist:
                     try:
-                        print("Getting xsdfile  version_string = '%s' name = schedule_name'%s'" % (v, this_version))
+                        print("Getting xsdfile  version_string = '%s' name = schedule_name'%s'" % (v, sked.schedule_name))
 
                         xsd_file = XSDFile.objects.get(version_string=v, name=sked.schedule_name)
                         print("Creating sked instance '%s' '%s'" % (sked.schedule_name, this_version))
