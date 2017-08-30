@@ -4,7 +4,7 @@ from django.core.management.base import BaseCommand
 from schemas.models import VersionedGroup, VersionedVariable,            \
     CanonicalVariable, CanonicalGroup, ProductionVersion, ScheduleName
 
-from schemas.epoch_utils import apply_var_translation, test_for_missing, MODERN_EPOCH
+from schemas.epoch_utils import apply_var_translation, test_for_missing, MODERN_EPOCH, GROUP_TRANSFORMATIONS
 
 class Command(BaseCommand):
     help = """ 
@@ -101,11 +101,9 @@ class Command(BaseCommand):
 
                       
     def assign_variables(self):
-        #all_skeds = ScheduleName.objects.all()
-        #all_skeds = ScheduleName.objects.filter(schedule_name__in=['IRS990EZ', 'IRS990', 'IRS990PF', 'IRS990ScheduleA', , 'IRS990ScheduleB', , 'IRS990ScheduleC',
-        # 'IRS990ScheduleD', 'ReturnHeader990x'])
-
-        all_skeds = ScheduleName.objects.filter(schedule_name='IRS990ScheduleR')
+        all_skeds = ScheduleName.objects.all()
+        #all_skeds = ScheduleName.objects.filter(schedule_name__in=['IRS990EZ', 'IRS990', 'IRS990PF'])
+        #all_skeds = ScheduleName.objects.filter(schedule_name='IRS990ScheduleR')
         for sked in all_skeds:
             print ("Assigning canonical to %s" % sked)
             self.assign_variables_by_sked(sked)
@@ -121,9 +119,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self.init_version_errors()
-        # print ("Assinging groups... ")
-        # self.assign_groups()
-        # self.show_group_key_errors()
+        print ("Assinging groups... ")
+        self.assign_groups()
+        self.show_group_key_errors()
 
         print ("Assigning variables...")
         self.assign_variables()
