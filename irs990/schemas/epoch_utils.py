@@ -9,6 +9,7 @@ are assigned in a later management command (propagate_from_canonical).
 MODERN_EPOCH = ['2013v3.0', '2013v3.1', '2013v4.0', '2014v5.0', '2014v6.0', '2015v2.0', '2015v2.1', '2015v3.0']
 EARLY_AWS_EPOCH = ['2009v1.0', '2009v1.1', '2009v1.2', '2009v1.3', '2009v1.4', '2009v1.7', '2010v3.2', '2010v3.4', '2010v3.6', '2010v3.7', '2011v1.2', '2011v1.3', '2011v1.4', '2011v1.5', '2012v2.0', '2012v2.1', '2012v2.2', '2012v2.3', '2012v3.0']
 ENTIRE_AWS_ERA = MODERN_EPOCH + EARLY_AWS_EPOCH
+EPOCH_2012 = ['2012v2.0', '2012v2.1', '2012v2.2', '2012v2.3', '2012v3.0']
 EPOCH_2013 = ['2013v3.0', '2013v3.1', '2013v4.0']
 EPOCH_2014 = ['2014v5.0', '2014v6.0']
 EPOCH_2014_FORWARDS = ['2014v5.0', '2014v6.0', '2015v2.0', '2015v2.1', '2015v3.0']
@@ -176,3 +177,24 @@ def apply_var_translation(var, version):
 
     print("apply_var_translation: '%s' => '%s'" % (var, result))
     return result
+
+
+""" Notes for earlier epoch transitions
+
+2012 => 2013
+
+One type of change in groups....
+
+ 2012v3.0       | TransactionsRelatedOrgsTable
+ 2013v3.0       | TransactionsRelatedOrgGrp
+
+Another:
+ 2012v3.0       | ProgramServiceRevenue
+ 2013v3.0       | ProgramServiceRevenueGrp
+
+Some variables change like: 
+
+ 2012v3.0       | /IRS990ScheduleA/CertificationCheckbox
+ 2013v3.0       | /IRS990ScheduleA/CertificationInd
+
+ """

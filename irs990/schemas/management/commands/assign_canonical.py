@@ -126,24 +126,3 @@ class Command(BaseCommand):
         print ("Assigning variables...")
         self.assign_variables()
         self.show_var_key_errors()
-
-
-
-""" Notes for earlier epoch transitions
-
-2012 => 2013
-
-One type of change in groups....
-
- 2012v3.0       | TransactionsRelatedOrgsTable
- 2013v3.0       | TransactionsRelatedOrgGrp
-
-Another:
- 2012v3.0       | ProgramServiceRevenue
- 2013v3.0       | ProgramServiceRevenueGrp
-
-
- 2012v3.0       | /IRS990ScheduleA/CertificationCheckbox
- 2013v3.0       | /IRS990ScheduleA/CertificationInd
-
- """
