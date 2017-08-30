@@ -3,10 +3,10 @@ import re
 LINE_REGEX = re.compile(r'(line.+)')
 COLUMN_REGEX = re.compile(r'(column.+)')
 
-""" Text munging to help with process form parts """
+""" Form part text massage """
 
 def fix_name(raw_name):
-    # given a variable name, shorten it to no longer than 61 characters. 
+    # given a variable name, shorten it to no longer than 62 characters. 
     original = raw_name
     raw_name = raw_name.replace("IRS990", "")
     raw_name = raw_name.replace("Schedule", "Sked")
@@ -14,11 +14,9 @@ def fix_name(raw_name):
     raw_name = raw_name.replace("Grp", "")
     raw_name = raw_name.replace("Miscellaneous", "Misc")
     raw_name = raw_name.lstrip('_')
-    # remove lower case vowels
     raw_name =  re.sub("[aeiou]+", "", raw_name)
-    # hard truncate
-    raw_name = raw_name[:61]
-    #print "%s => %s" % (original, raw_name)
+    raw_name = raw_name[:62]
+    print("fix name '%s'=>'%s'" % (original, raw_name))
     return raw_name
 
 def munge_line_number(line_number):
@@ -29,12 +27,10 @@ def munge_line_number(line_number):
     line_number = line_number.replace("__", "_")
     line_number = line_number.replace(")", "")
     line_number = line_number.replace("(", "")
-
     return line_number
 
 def fix_line_number(raw_line_number):
     raw_line_number = raw_line_number.lower()
-
     line_found = re.search(LINE_REGEX, raw_line_number)
 
     if line_found:
@@ -52,7 +48,7 @@ def fix_line_number(raw_line_number):
 
 
 def fix_part_name(raw_name):
-    # given a variable name, shorten it to no longer than 61 characters. 
+    # given a part name, shorten it to no longer than 30 characters. 
     raw_name = raw_name.lower()
 
     raw_name = raw_name.replace(",","")
@@ -75,10 +71,9 @@ def fix_part_name(raw_name):
     #print "%s => %s" % (original, raw_name)
     return raw_name
 
-# Hack to help order roman numeral + occasional letter form parts. 
-# simpler than trying to make sense of it numerically...
-# If a new part appears that doesn't exist here, will need to be added.
-# This probably should be pushed to a utils file somewhere.
+# Work around, easier than making sense of roman numerals
+# Needs custom letters for sections (i.e. V-A) 
+# for part 5 section A
 ordinal_hash = {
     '0':0,
     'I':10,
@@ -109,7 +104,7 @@ ordinal_hash = {
     'XIV':140,
     'XV':150,
     'XVI':160,
-    'XVI-A':161,
+    'XVI-A':162,
     'XVI-B':162,
     'XVII':170
 }

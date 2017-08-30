@@ -46,6 +46,8 @@ class Command(BaseCommand):
         return_string = "\n\n  ***%s***  \n" % (self.markupify(var.xpath) ) 
         return_string += "Line number: %s  \n" % (self.most_recent( self.debracket(var.line_number) ) ) 
         return_string += "Description: %s  \n" % (self.most_recent( self.debracket(var.description) ) )
+        if var.django_type:
+            return_string += "Type: %s  \n" % ( var.django_type ) 
 
         return return_string
 

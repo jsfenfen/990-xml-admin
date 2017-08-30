@@ -32,7 +32,8 @@ from django.core.management.base import BaseCommand
 from django.conf import settings
 
 from schemas.naming_utils import fix_part_name, ordinal_hash
-from schemas.models import XSDFile, ScheduleInstance, SchedulePart, VersionedVariable, ScheduleName
+from schemas.models import XSDFile, ScheduleInstance, SchedulePart, \
+    VersionedVariable, ScheduleName, CanonicalVariable
 
 filelist = settings.SUPPORTED_SCHEMAS
 
@@ -45,7 +46,7 @@ ELEMENT_END = re.compile(r'</xsd:element>')
 
 
 class Command(BaseCommand):
-    help = 'Load schema file names; '
+    help = 'Parse parts of forms from hand-curated dir of sample files'
 
     def walk_schema_dir(self, file_base):
         print("Wsd: %s" % file_base)

@@ -62,5 +62,3 @@ class Command(BaseCommand):
                 vsname = vs.version_string
             self.handle_version(vsname)
             
-
-                    # get all named elements--requires resolving complex types. 

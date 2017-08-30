@@ -171,8 +171,6 @@ class XSD_Base(models.Model):
             'id':self.pk
         }
 
-        
-
 class SimpleType(XSD_Base):
     base_type = models.CharField(max_length=63, blank=True, null=True, help_text="")
     max_length = models.IntegerField(null=True, help_text="")
@@ -211,12 +209,45 @@ class Element(XSD_Base):
         return "Element %s %s %s" % (self.name, self.version_string, self.xpath)
 
 
-############ TK: canonical vars
-# 
-# class CanonicalVariable
-# include db_safe_name = models.CharField(max_length=64, blank=True, null=True, help_text="database compliant name")
-# class CanonicalGroup
-# db_safe_name = models.CharField(max_length=64, blank=True, null=True, help_text="database compliant name")
+### Could prob refactor the common fields: 
+
+class CanonicalGroup(models.Model):
+    db_safe_name = models.CharField(max_length=64, blank=True, null=True, help_text="database compliant name")
+    original_xpath = models.CharField(max_length=255, blank=True, null=True, help_text="xpath in the canonical version, may not be correct for all")
+    name = models.CharField(max_length=127, blank=True, null=True, help_text="Name")
+    version = models.ForeignKey(ProductionVersion, null=True)
+    version_string = models.CharField(max_length=15, blank=True, null=True, help_text="denormalized version string")
+    parent_sked = models.ForeignKey(ScheduleName, null=True)
+    parent_sked_part= models.ForeignKey(SchedulePart, null=True)
+    ordering = models.IntegerField(null=True, help_text="Integer used to order groups within a form")
+    empty_head = models.NullBooleanField(default=False, help_text="If the corresponding variable doesn't take variables, this is true")
+
+
+
+class CanonicalVariable(models.Model):
+    db_safe_name = models.CharField(max_length=64, blank=True, null=True, help_text="database compliant name")
+    original_xpath = models.CharField(max_length=255, blank=True, null=True, help_text="xpath in the canonical version, may not be correct for all")
+    version = models.ForeignKey(ProductionVersion, null=True)
+    version_string = models.CharField(max_length=15, blank=True, null=True, help_text="denormalized version string")
+    description = models.TextField(null=True)
+    line_number = models.TextField(null=True)
+    in_a_group = models.NullBooleanField(default=False, help_text="Is this variable in a group")
+    parent_group = models.ForeignKey(CanonicalGroup, null=True, help_text="Link to canonical group", on_delete=models.SET_NULL)
+    parent_sked = models.ForeignKey(ScheduleName, null=True)
+    parent_sked_part= models.ForeignKey(SchedulePart, null=True)
+    ordering = models.FloatField(null=True, help_text="non-integer used to order groups within a form")
+    irs_type = models.CharField(max_length=255, blank=True, null=True, help_text="IRS type, as recorded")
+    raw_type = models.CharField(max_length=255, blank=True, null=True, help_text="native type before translation to django / sql alchemy")
+    django_type = models.CharField(max_length=255, blank=True, null=True, help_text="Literal type for django")
+    sql_alch_type = models.CharField(max_length=255, blank=True, null=True, help_text="Literal type for sql alchemy")  
+
+    ## vars from NODC
+    var_name = models.CharField(max_length=255, blank=True, null=True, help_text="native type before translation to django / sql alchemy")
+    full_name = models.CharField(max_length=255, blank=True, null=True, help_text="full name per NODC")
+    scope = models.CharField(max_length=255, blank=True, null=True, help_text="scope")
+
+    ## NODC var but populated by PP
+    required = models.NullBooleanField(default=False)
 
 class VersionedGroup(models.Model):
     name = models.CharField(max_length=127, blank=True, null=True, help_text="Name")
@@ -226,7 +257,7 @@ class VersionedGroup(models.Model):
     parent_sked = models.ForeignKey(ScheduleName, null=True)
     parent_sked_part= models.ForeignKey(SchedulePart, null=True)
     ordering = models.IntegerField(null=True, help_text="Integer used to order groups within a form")
-    # to add: related canonical group
+    canonical_group = models.ForeignKey(CanonicalGroup, null=True, on_delete=models.SET_NULL)
 
     def __unicode__(self):
         return "VersionedGroup %s %s" % (self.name, self.version_string)
@@ -240,13 +271,13 @@ class VersionedVariable(models.Model):
     version_string = models.CharField(max_length=15, blank=True, null=True, help_text="denormalized version string")
     parent_sked = models.ForeignKey(ScheduleName, null=True)
     parent_sked_part= models.ForeignKey(SchedulePart, null=True)
-    ordering = models.FloatField(null=True, help_text="Integer used to order groups within a form")
+    ordering = models.FloatField(null=True, help_text="non-integer used to order groups within a form")
     in_a_group = models.NullBooleanField(default=False, help_text="Is this variable in a group")
     parent_group = models.ForeignKey(VersionedGroup, null=True, help_text="If this is in_a_group, link to it. ")
     irs_type = models.CharField(max_length=255, blank=True, null=True, help_text="IRS type, as recorded")
     django_type = models.CharField(max_length=255, blank=True, null=True, help_text="Literal type for django")
     sql_alch_type = models.CharField(max_length=255, blank=True, null=True, help_text="Literal type for sql alchemy")  
-    # to add: related canonical variable
+    canonical_variable = models.ForeignKey(CanonicalVariable, null=True, on_delete=models.SET_NULL)
 
     # to add: link to lookup table for certain types: states, countries, etc. 
 

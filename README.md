@@ -37,29 +37,112 @@ It can take a while to do a complete sync, if you're logged in you probably want
 
 ## Schemas model
 
-### Commands:
+### Commands
+
+#### 1. enter\_schema\_files
+
+This enters the schemas files as XSDFile objects.
 
 
 	$ python manage.py enter_schema_files
 
-Enter the schema files by walking the SCHEMA_DIR. 
-Optionally pass a version_string as an arg to run only on that version, e.g. 
+Enter the schema files by walking the SCHEMA\_DIR. 
+Optionally pass a version\_string as an arg to run only on that version, e.g. 
 	$ python manage.py enter\_schema\_files 2013v4.0 
+	
+
+Check db entry with: `select version_string, count(*) from schemas_xsdfile group by 1;`
+
 
 Hard SQL undo: 
-	delete from schemas_xsdfile [ where version_string='2013v4.0'];
+	delete from schemas\_xsdfile [ where version_string='2013v4.0'];
 
+
+#### 2. read\_schema\_files
+
+This enters the xsd elements, simpletypes, groups and complextypes from by reading the XSD files. 
 
 $ python manage.py read\_schema\_files
 
-Optionally pass a version_string as an arg to run only on that version, e.g. 
+Optionally pass a version\_string as an arg to run only on that version, e.g. 
 
 	$ python manage.py read_schema_files 2013v4.0 
-	## delete with SQL:
+	
+To undo with SQL:
+
     delete from schemas_simpletype;
     delete from schemas_fileinclude;
     delete from schemas_element;
     delete from schemas_group;
     delete from schemas_complextype;
 
+Check existence with queries like:
+`select version_string, count(*) from schemas_element group by 1;`
+etc.
 
+
+#### 3. Add the schedules we care about, from fixture
+
+The fixture is in schemas/fixtures/schedules.json 
+
+To add it use django's fixture thingy, i.e. type:
+
+`$ python manage.py loaddata schedules.json`
+
+It will note if it adds fixtures, if it's run for the first time output should be:
+
+`Installed 20 object(s) from 1 fixture(s)`
+
+undo with 
+`delete from schemas_scheduleinstance;`
+
+
+#### 4. attach\_schedule\_instances
+
+This step just attaches actual XSDFile instances in the db to the schedule instan
+
+
+#### 5. generate_mappings
+
+Generate mappings from whitelisted forms/schedules.  
+
+Optionally pass a version\_string as an arg
+to run only on that version, e.g.  
+
+$ python manage.py generate\_mappings 2013v4.0  
+
+Hard undo: 
+
+- elements: delete from schemas_versionedvariable
+- groups: delete from schemas\_versionedgroup;
+
+
+
+
+
+
+
+#### 6. parse_parts
+
+Attach variables in canonical version to schedule_parts (and generate schedule parts) if needed.
+
+
+#### 7. generate_canonical
+
+Drop and regenerate canonical groups and variables based on whatever is set in settings.py (or local_settings.py ) for CANONICAL_VERSION. This should be a current version into which prior versions are transformed; the values in this transformation were used with 2015v2.1.
+
+#### assign_canonical
+
+Match the groups and variables to the canonical ones. Works for 2013 forwards as is. 
+The details of how this works are in schemas.epoch_utils, which is described as: 
+"Gnarly custom variable transformations to stitch variables across years. Current target: 2013 forwards. Double check the documentation; it's possible for the *meaning* of a var to change even if xpath doesn't. 
+
+This assigns groups (schemas.models VersionedGroup to CanonicalGroup and VersionedVariable to CanonicalVariable)
+Additional details that are sourced through the canonical vars (specifically, the group and form/part hierarchy)
+are assigned in a later management command (propagate\_from\_canonical)."
+
+#### propagate\_from\_canonical
+
+####  generate_documentation
+
+#### TK: generate_models
