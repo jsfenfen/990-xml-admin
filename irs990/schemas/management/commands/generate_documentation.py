@@ -11,7 +11,7 @@ from schemas.models import ProductionVersion, XSDFile, ScheduleName, \
 
 fileoutput = "%s_documentation.md"
 
-BRACKET_RE = re.compile(r'\[.*?\]')
+from schemas.documentation_utils import most_recent, markupify, debracket
 
 class Command(BaseCommand):
     help = """  Generate documentation for whitelisted forms/schedules.
@@ -27,25 +27,10 @@ class Command(BaseCommand):
         # Positional arguments
         parser.add_argument('schema', nargs='?', type=version)
 
-    def markupify(self, string):
-        """ replace _ with \_  [ not need for all markup ] """
-        return string.replace("_","\_")
-
-    def debracket(self, string):
-        """ Eliminate the bracketed var names in doc, line strings """
-        result = re.sub(BRACKET_RE, ';', string)
-        result = unidecode.unidecode(result)
-        return result
-
-    def most_recent(self, semicolon_delimited_string):
-        result = semicolon_delimited_string.split(";")[-1]
-        return result
-
-
     def format_varoutput(self, var):
-        return_string = "\n\n  ***%s***  \n" % (self.markupify(var.xpath) ) 
-        return_string += "Line number: %s  \n" % (self.most_recent( self.debracket(var.line_number) ) ) 
-        return_string += "Description: %s  \n" % (self.most_recent( self.debracket(var.description) ) )
+        return_string = "\n\n  ***%s***  \n" % (markupify(var.xpath) ) 
+        return_string += "Line number: %s  \n" % (most_recent( debracket(var.line_number) ) ) 
+        return_string += "Description: %s  \n" % (most_recent( debracket(var.description) ) )
         if var.django_type:
             return_string += "Type: %s  \n" % ( var.django_type ) 
 
@@ -61,11 +46,11 @@ class Command(BaseCommand):
         skedlist = ScheduleName.objects.all().order_by('schedule_name')
         for schedule in skedlist:
             print("Running schedule %s" % schedule)
-            outputfh.write("\n\n# <a name=\"%s\"></a>%s" % (self.markupify(schedule.schedule_name), self.markupify(schedule.schedule_name) ) )
+            outputfh.write("\n\n# <a name=\"%s\"></a>%s" % (markupify(schedule.schedule_name), markupify(schedule.schedule_name) ) )
             form_parts = SchedulePart.objects.filter(parent_sked=schedule).order_by('ordering_ordinal')
             for form_part in form_parts:
-                print("\n\n- Found part %s: %s" % (self.markupify(form_part.db_model_name), self.markupify(form_part.raw_part_name)) )
-                outputfh.write("\n\n## %s: %s" % (self.markupify(form_part.db_model_name), self.markupify(form_part.raw_part_name)) )
+                print("\n\n- Found part %s: %s" % (markupify(form_part.db_model_name), markupify(form_part.raw_part_name)) )
+                outputfh.write("\n\n## %s: %s" % (markupify(form_part.db_model_name), markupify(form_part.raw_part_name)) )
 
                 variables_in_this_part = VersionedVariable.objects.filter(parent_sked_part=form_part, version_string=version_string).exclude(in_a_group=True).order_by('ordering',)
                 for var in variables_in_this_part:

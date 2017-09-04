@@ -222,6 +222,8 @@ class CanonicalGroup(models.Model):
     ordering = models.IntegerField(null=True, help_text="Integer used to order groups within a form")
     empty_head = models.NullBooleanField(default=False, help_text="If the corresponding variable doesn't take variables, this is true")
 
+    def __unicode__(self):
+        return "VersionedGroup %s %s" % (self.name, self.db_safe_name)
 
 
 class CanonicalVariable(models.Model):
@@ -245,9 +247,10 @@ class CanonicalVariable(models.Model):
     var_name = models.CharField(max_length=255, blank=True, null=True, help_text="native type before translation to django / sql alchemy")
     full_name = models.CharField(max_length=255, blank=True, null=True, help_text="full name per NODC")
     scope = models.CharField(max_length=255, blank=True, null=True, help_text="scope")
-
-    ## NODC var but populated by PP
     required = models.NullBooleanField(default=False)
+
+    def __unicode__(self):
+        return "VersionedVariable %s %s" % (self.db_safe_name, self.original_xpath) 
 
 class VersionedGroup(models.Model):
     name = models.CharField(max_length=127, blank=True, null=True, help_text="Name")

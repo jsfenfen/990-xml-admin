@@ -29,7 +29,7 @@ class Command(BaseCommand):
         group_dict['parent_sked_part'] = versioned_group.parent_sked_part
         group_dict['version'] = versioned_group.version
         group_dict['original_xpath'] = versioned_group.xpath
-        group_dict['db_safe_name'] = fix_name(group_dict['name'])
+        group_dict['db_safe_name'] = fix_name(versioned_group.parent_sked_part.db_model_name + group_dict['name'])
 
         # todo: set ordering, empty_head
 
