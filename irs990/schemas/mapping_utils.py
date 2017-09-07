@@ -6,6 +6,7 @@ import unicodecsv as csv
 from schemas.models import XSDFile, ProductionVersion, FileInclude, Element, \
     Group, ComplexType, SimpleType, ScheduleName, VersionedGroup, VersionedVariable
 
+from type_utils import get_django_type, get_sqlalchemy_type
 
 from filing.stats_utils import json_stats_tracker
 from filing.models import xml_submission, observed_xpath
@@ -33,27 +34,20 @@ class XSDReader(object):
         # Retrieve relevent elements from db once and hash them in the below
         self.all_named_entities = {} 
 
-
         self.simpletypes = {}
+        self.group_roots = {}
 
         self.unprocessed_elements = []
         self.unprocessed_complextypes = []
         self.unprocessed_groups = []
 
-
-        self.group_roots = {}
-
         self.file_dependency_pk_list = []
-
 
         # put the 'derived' xpaths by following types / unpacking complex types. 
         self.derived_keys = {}
 
-
-
     def mappings_from_sample_file(self, sample_file, key_prefix):
         """ Test a set of mappings against a sample xml file """ 
-
 
         print("Reading from sample file %s" % sample_file)
         raw_file = open(sample_file).read()
@@ -442,8 +436,7 @@ class XSDReader(object):
 
         if group['process_runs'] < 10:
             ## Only run this if we haven't already added a group child
-            ## Hack to prevent repeating children of children groups? 
-
+            ## Hack to prevent repeating children of children groups while testing--shouldn't happen in the wild? 
 
             child_groups =  Group.objects_no_json.filter(source_file__pk__in=self.file_dependency_pk_list, xpath__startswith=search_xpath).exclude(pk=group['id']).order_by('name')
             #  Could use a regex like [^\/], but using backslashes and slashes within regexes leads to escaping craziness
@@ -630,6 +623,13 @@ class XSDReader(object):
                     xpath=key)
             except VersionedVariable.DoesNotExist:
 
+                djangotype = None
+                sqlalchtype = None
+                if element_data['type']:
+                    djangotype = get_django_type(element_data['type'])
+                    sqlalchtype = get_sqlalchemy_type(element_data['type'])
+
+
                 vv = VersionedVariable.objects.create(
                         version=version,
                         version_string = version.version_string,
@@ -641,7 +641,9 @@ class XSDReader(object):
                         line_number=element_data['line_number'],
                         in_a_group=in_a_group,
                         parent_group=parent_group,
-                        irs_type=element_data['type']
+                        irs_type=element_data['type'],
+                        django_type=djangotype,
+                        sql_alch_type=sqlalchtype
                         )
 
             """
@@ -686,6 +688,6 @@ class XSDReader(object):
             arg2=name_prefix
 
         self.start_from_root_element(arg1, arg2)
-        self.write_entities_to_file(self.xsdfile_obj.name)
+        #self.write_entities_to_file(self.xsdfile_obj.name)
         self.generate_group_bindings()
         self.generate_element_bindings()
