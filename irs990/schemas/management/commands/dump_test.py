@@ -21,8 +21,6 @@ def get_type(schedule_list):
 def get_sked(result, schedule_list, sked_name):
     if sked_name == 'IRS990ScheduleK':
         pass
-        #for i, result in enumerate(schedule_list):
-        #    print i, result
 
     else:
         sked_index = None
@@ -39,6 +37,7 @@ class Command(BaseCommand):
     
     def handle(self, *args, **options):
         self.xml_runner = Runner()
+        count = 0
 
         headers = ["taxpayer_name", "ein", "tax_period", "sub_date", "object_id", "name", "title", "org_comp", "related_comp", "other_cmp", "form", "source"]
 
@@ -48,15 +47,18 @@ class Command(BaseCommand):
         dw.writeheader()
 
 
-        submissions =  xml_submission.objects.filter(schema_year__gte=2013).values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')[:1000]
+        submissions =  xml_submission.objects.filter(schema_year__gte=2013, sub_date__contains='2017').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         #submissions = xml_submission.objects.filter(object_id='201513209349102976').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         #submissions = xml_submission.objects.filter(return_type='990PF').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         for submission in submissions:
-            print submission['object_id']
+            #print submission['object_id']
+            count += 1
+            if count % 100 == 0:
+                print ("Processed %s filings" % count)
 
             result = self.xml_runner.run_filing(
                 submission['object_id'],
-                verbose=True,
+                verbose=False,
             )
             filing_info = {
                 'taxpayer_name': submission['taxpayer_name'],
@@ -64,11 +66,11 @@ class Command(BaseCommand):
                 'sub_date': submission['sub_date']
             }
             schedule_list = [sked['schedule_name'] for sked in result]
-            print schedule_list
+            #print schedule_list
 
             ## type
             form_type = get_type(schedule_list)
-            print form_type
+            #print form_type
 
             sked990 = get_sked(result, schedule_list, 'IRS990')
             sked990EZ = get_sked(result, schedule_list, 'IRS990EZ')
@@ -77,7 +79,7 @@ class Command(BaseCommand):
 
             
             if sked990: 
-                print("\n\t990")
+                #print("\n\t990")
                 #print sked990
                 assert sked990['schedule_name']=='IRS990'     
                 group_name = "Frm990PrtVIISctnA"
@@ -107,7 +109,7 @@ class Command(BaseCommand):
  
 
             if sked990EZ:
-                print("\n\n\t990EZ %s" % sked990EZ['schedule_name'])
+                #print("\n\n\t990EZ %s" % sked990EZ['schedule_name'])
                 assert sked990EZ['schedule_name']=='IRS990EZ'
                 group_name = "EZOffcrDrctrTrstEmpl"
 
@@ -117,7 +119,7 @@ class Command(BaseCommand):
                     employee_list = []
 
                 for employee in employee_list:
-                    print employee
+                    #print employee
                     this_employee = {
                         'ein': employee['ein'],
                         'object_id': employee['object_id'],
@@ -130,7 +132,7 @@ class Command(BaseCommand):
                         'source': 'EZOffcrDrctrTrstEmpl'
                     }
                     this_employee.update(filing_info)
-                    print this_employee
+                    #print this_employee
                     dw.writerow(this_employee)
 
                 ##
@@ -156,13 +158,13 @@ class Command(BaseCommand):
                     }
                     this_employee.update(filing_info)
                     #print "\n"
-                    print this_employee
+                    #print this_employee
                     dw.writerow(this_employee)
-                    print employee
+                    #print employee
 
 
             if sked990PF:
-                print("\n\t990PF %s" % sked990PF['schedule_name'])
+                #print("\n\t990PF %s" % sked990PF['schedule_name'])
                 assert sked990PF['schedule_name']=='IRS990PF'
                 
 
@@ -174,8 +176,8 @@ class Command(BaseCommand):
                     pass
 
                 for employee in employee_list:
-                    print "\n\n"
-                    print employee
+                    #print "\n\n"
+                    #print employee
                     this_employee = {
                         'ein': employee['ein'],
                         'object_id': employee['object_id'],
@@ -189,7 +191,7 @@ class Command(BaseCommand):
                     }
                     this_employee.update(filing_info)
                     #print "\n"
-                    print this_employee
+                    # print this_employee
                     dw.writerow(this_employee)
 
 
@@ -201,7 +203,7 @@ class Command(BaseCommand):
                     pass
 
                 for employee in employee_list:
-                    print employee
+                    #print employee
                     this_employee = {
                         'ein': employee['ein'],
                         'object_id': employee['object_id'],
@@ -215,11 +217,11 @@ class Command(BaseCommand):
                     }
                     this_employee.update(filing_info)
                     #print "\n"
-                    print this_employee
+                    #print this_employee
                     dw.writerow(this_employee)
                     
             if sked990J:
-                print("\n\t990J %s" % sked990J['schedule_name'])
+                #print("\n\t990J %s" % sked990J['schedule_name'])
                 assert sked990J['schedule_name']=='IRS990ScheduleJ'
                 
 
@@ -231,8 +233,8 @@ class Command(BaseCommand):
                     pass
 
                 for employee in employee_list:
-                    print "\n\n"
-                    print employee
+                    #print "\n\n"
+                    #print employee
                     this_employee = {
                         'ein': employee['ein'],
                         'object_id': employee['object_id'],
@@ -247,9 +249,11 @@ class Command(BaseCommand):
                     }
                     this_employee.update(filing_info)
                     #print "\n"
-                    print this_employee
+                    #print this_employee
                     dw.writerow(this_employee)
 
+
+        print ("Total of %s processed" % count)
 
 
 
