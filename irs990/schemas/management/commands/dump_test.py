@@ -40,7 +40,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.xml_runner = Runner()
 
-        headers = ["taxpayer_name", "ein", "tax_period", "object_id", "name", "title", "org_comp", "related_comp", "other_cmp", "form", "source"]
+        headers = ["taxpayer_name", "ein", "tax_period", "sub_date", "object_id", "name", "title", "org_comp", "related_comp", "other_cmp", "form", "source"]
 
 
         outfile = open("dumptest.csv", 'wb')
@@ -60,7 +60,8 @@ class Command(BaseCommand):
             )
             filing_info = {
                 'taxpayer_name': submission.taxpayer_name,
-                'tax_period': submission.tax_period
+                'tax_period': submission.tax_period,
+                'sub_date': submission.sub_date
             }
             schedule_list = [sked['schedule_name'] for sked in result]
             print schedule_list
