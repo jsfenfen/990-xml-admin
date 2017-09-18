@@ -33,6 +33,7 @@ class SchedulePart(models.Model):
     db_model_name = models.CharField(max_length=64, blank=True, null=True, help_text="db compliant name")
     ordering_ordinal = models.IntegerField(null=True, blank=True, help_text="sort order of parts")
     parent_sked = models.ForeignKey(ScheduleName)
+    is_shell = models.NullBooleanField(default=False, help_text="True if there are no canonical_variables directly contained (excludes repeating groups)")
     raw_part_name = models.CharField(max_length=511, blank=True, null=True, help_text="From corrected XSD files")
     canonical_version_string = models.CharField(max_length=15, blank=True, null=True, help_text="What version were the canonical form parts derived from?") 
 
