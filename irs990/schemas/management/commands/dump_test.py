@@ -48,7 +48,7 @@ class Command(BaseCommand):
         dw.writeheader()
 
 
-        submissions =  xml_submission.objects.all()[:100]
+        submissions =  xml_submission.objects.filter(schema_year__gte=2013)[:100]
         #submissions = xml_submission.objects.filter(object_id='201533089349301428')
         #submissions = xml_submission.objects.filter(return_type='990PF')
         for submission in submissions:
