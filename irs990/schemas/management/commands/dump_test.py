@@ -49,8 +49,8 @@ class Command(BaseCommand):
 
 
         submissions =  xml_submission.objects.filter(schema_year__gte=2013).values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')[:1000]
-        #submissions = xml_submission.objects.filter(object_id='201533089349301428')
-        #submissions = xml_submission.objects.filter(return_type='990PF')
+        #submissions = xml_submission.objects.filter(object_id='201513209349102976').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
+        #submissions = xml_submission.objects.filter(return_type='990PF').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         for submission in submissions:
             print submission['object_id']
 
@@ -206,8 +206,8 @@ class Command(BaseCommand):
                         'ein': employee['ein'],
                         'object_id': employee['object_id'],
                         'name': employee.get('CmpnstnHghstPdEmpl_PrsnNm'),
-                        'title': employee.get('PFCmpnstnHghstPdEmpl_TtlTxt'),
-                        'org_comp': employee.get('PFCmpnstnHghstPdEmpl_CmpnstnAmt'),
+                        'title': employee.get('CmpnstnHghstPdEmpl_TtlTxt'),
+                        'org_comp': employee.get('CmpnstnHghstPdEmpl_CmpnstnAmt'), 
                         # 'related_comp': NA 
                         #'other_cmp': CmpnstnHghstPdEmpl_EmplyBnftsAmt + CmpnstnHghstPdEmpl_ExpnsAccntAmt ? 
                         'form':'IRS990PF',
