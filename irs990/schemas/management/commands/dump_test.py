@@ -48,20 +48,20 @@ class Command(BaseCommand):
         dw.writeheader()
 
 
-        submissions =  xml_submission.objects.filter(schema_year__gte=2013)
+        submissions =  xml_submission.objects.filter(schema_year__gte=2013).values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')[:1000]
         #submissions = xml_submission.objects.filter(object_id='201533089349301428')
         #submissions = xml_submission.objects.filter(return_type='990PF')
         for submission in submissions:
-            print submission.object_id
+            print submission['object_id']
 
             result = self.xml_runner.run_filing(
-                submission.object_id,
+                submission['object_id'],
                 verbose=True,
             )
             filing_info = {
-                'taxpayer_name': submission.taxpayer_name,
-                'tax_period': submission.tax_period,
-                'sub_date': submission.sub_date
+                'taxpayer_name': submission['taxpayer_name'],
+                'tax_period': submission['tax_period'],
+                'sub_date': submission['sub_date']
             }
             schedule_list = [sked['schedule_name'] for sked in result]
             print schedule_list
