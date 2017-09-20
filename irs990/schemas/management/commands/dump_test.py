@@ -53,12 +53,7 @@ class Command(BaseCommand):
                 'sub_date': submission['sub_date']
             }
             schedule_list = processedFiling.list_schedules()
-            print schedule_list
             result = processedFiling.get_result()
-
-            ## type
-            form_type = processedFiling.get_type()
-            print form_type
 
             sked990_list = processedFiling.get_parsed_sked('IRS990')
             sked990EZ_list = processedFiling.get_parsed_sked('IRS990EZ')
@@ -154,7 +149,7 @@ class Command(BaseCommand):
 
             if sked990PF_list:
                 sked990PF = sked990PF_list[0]
-                print("\n\t990PF %s" % sked990PF['schedule_name'])
+                #print("\n\t990PF %s" % sked990PF['schedule_name'])
                 assert sked990PF['schedule_name']=='IRS990PF'
                 
 
