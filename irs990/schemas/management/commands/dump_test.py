@@ -1,45 +1,23 @@
-
-from irsx.runner import Runner
-from filing.models import xml_submission
-
 import unicodecsv as csv
+import json
 
 from django.core.management.base import BaseCommand
 from django.conf import settings
 
-def get_type(schedule_list):
-    if 'IRS990' in schedule_list:
-        return 'IRS990'
-    elif 'IRS990EZ' in schedule_list:
-        return 'IRS990EZ'
-    elif 'IRS990PF' in schedule_list:
-        return 'IRS990PF'    
-    else:
-        # todo - make a specific error so it can be caught?
-        raise Exception("Missing 990, 990EZ and 990PF")
-
-def get_sked(result, schedule_list, sked_name):
-    if sked_name == 'IRS990ScheduleK':
-        pass
-
-    else:
-        sked_index = None
-        try:
-            sked_index = schedule_list.index(sked_name)
-        except ValueError:
-            return None
-        
-        return result[sked_index]
+from irsx.xmlrunner import XMLRunner
+from irsx.filing import Filing
+from filing.models import xml_submission as XMLSubmission
 
 
 class Command(BaseCommand):
     help = 'Dump some fields that are of interest'
     
     def handle(self, *args, **options):
-        self.xml_runner = Runner()
+        self.xml_runner = XMLRunner()
         count = 0
 
         headers = ["taxpayer_name", "ein", "tax_period", "sub_date", "object_id", "name", "title", "org_comp", "related_comp", "other_cmp", "form", "source"]
+
 
 
         outfile = open("dumptest.csv", 'wb')
@@ -47,17 +25,26 @@ class Command(BaseCommand):
         dw.writeheader()
 
 
-        submissions =  xml_submission.objects.filter(schema_year__gte=2013, sub_date__contains='2017').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
-        #submissions = xml_submission.objects.filter(object_id='201513209349102976').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
-        #submissions = xml_submission.objects.filter(return_type='990PF').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
+        submissions =  XMLSubmission.objects.filter(schema_year__gte=2013, sub_date__contains='2017').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
+        #submissions = XMLSubmission.objects.filter(object_id='201513209349102976').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
+        #submissions = XMLSubmission.objects.filter(return_type='990PF').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         for submission in submissions:
             #print submission['object_id']
             count += 1
             if count % 100 == 0:
                 print ("Processed %s filings" % count)
 
-            result = self.xml_runner.run_filing(
-                submission['object_id'],
+            whole_submission = XMLSubmission.objects.get(object_id=submission['object_id'])
+            assert whole_submission.json_set
+            # This is a bug--should be returned as json? https://stackoverflow.com/questions/36352721/django-1-9-jsonfield-stored-dictionary-returns-unicode-instead
+            # django devs have decided to pretend it doesn't exist: https://code.djangoproject.com/ticket/27675
+
+            submission_json = json.loads(whole_submission.as_json) 
+
+            filingobj = Filing(submission['object_id'], json=submission_json)
+
+            processedFiling = self.xml_runner.run_from_filing_obj(
+                filingobj,
                 verbose=False,
             )
             filing_info = {
@@ -65,22 +52,23 @@ class Command(BaseCommand):
                 'tax_period': submission['tax_period'],
                 'sub_date': submission['sub_date']
             }
-            schedule_list = [sked['schedule_name'] for sked in result]
-            #print schedule_list
+            schedule_list = processedFiling.list_schedules()
+            print schedule_list
+            result = processedFiling.get_result()
 
             ## type
-            form_type = get_type(schedule_list)
-            #print form_type
+            form_type = processedFiling.get_type()
+            print form_type
 
-            sked990 = get_sked(result, schedule_list, 'IRS990')
-            sked990EZ = get_sked(result, schedule_list, 'IRS990EZ')
-            sked990PF = get_sked(result, schedule_list, 'IRS990PF')
-            sked990J = get_sked(result, schedule_list, 'IRS990ScheduleJ')
+            sked990_list = processedFiling.get_parsed_sked('IRS990')
+            sked990EZ_list = processedFiling.get_parsed_sked('IRS990EZ')
+            sked990PF_list = processedFiling.get_parsed_sked('IRS990PF')
+            sked990J_list = processedFiling.get_parsed_sked('IRS990ScheduleJ')
 
             
-            if sked990: 
+            if sked990_list: 
                 #print("\n\t990")
-                #print sked990
+                sked990 = sked990_list[0]
                 assert sked990['schedule_name']=='IRS990'     
                 group_name = "Frm990PrtVIISctnA"
                 try:
@@ -108,7 +96,8 @@ class Command(BaseCommand):
                     dw.writerow(this_employee)
  
 
-            if sked990EZ:
+            if sked990EZ_list:
+                sked990EZ = sked990EZ_list[0]
                 #print("\n\n\t990EZ %s" % sked990EZ['schedule_name'])
                 assert sked990EZ['schedule_name']=='IRS990EZ'
                 group_name = "EZOffcrDrctrTrstEmpl"
@@ -163,8 +152,9 @@ class Command(BaseCommand):
                     #print employee
 
 
-            if sked990PF:
-                #print("\n\t990PF %s" % sked990PF['schedule_name'])
+            if sked990PF_list:
+                sked990PF = sked990PF_list[0]
+                print("\n\t990PF %s" % sked990PF['schedule_name'])
                 assert sked990PF['schedule_name']=='IRS990PF'
                 
 
@@ -220,7 +210,8 @@ class Command(BaseCommand):
                     #print this_employee
                     dw.writerow(this_employee)
                     
-            if sked990J:
+            if sked990J_list:
+                sked990J = sked990J_list[0]
                 #print("\n\t990J %s" % sked990J['schedule_name'])
                 assert sked990J['schedule_name']=='IRS990ScheduleJ'
                 

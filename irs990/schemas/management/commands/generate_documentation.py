@@ -42,7 +42,6 @@ class Command(BaseCommand):
         outfile = fileoutput % version_string
         outputfh = open(outfile, 'w')
 
-        print("Running schemas from version %s" % version_string)
         skedlist = ScheduleName.objects.all().order_by('schedule_name')
         for schedule in skedlist:
             print("Running schedule %s" % schedule)
