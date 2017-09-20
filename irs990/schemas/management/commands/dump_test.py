@@ -3,6 +3,7 @@ import json
 
 from django.core.management.base import BaseCommand
 from django.conf import settings
+from django.db import reset_queries
 
 from irsx.xmlrunner import XMLRunner
 from irsx.filing import Filing
@@ -33,6 +34,7 @@ class Command(BaseCommand):
             count += 1
             if count % 100 == 0:
                 print ("Processed %s filings" % count)
+                reset_queries() # not sure this will matter, but...
 
             whole_submission = XMLSubmission.objects.get(object_id=submission['object_id'])
             assert whole_submission.json_set
