@@ -30,14 +30,15 @@ class Command(BaseCommand):
         #submissions = XMLSubmission.objects.filter(object_id='201513209349102976').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         #submissions = XMLSubmission.objects.filter(return_type='990PF').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         for submission in submissions:
-            if not self.xml_runner:
-                self.xml_runner = XMLRunner()
-            #print submission['object_id']
+            
             count += 1
             if count % 100 == 0:
                 print ("Processed %s filings" % count)
-                reset_queries() # not sure this will matter, but...
-                self.xml_runner = None
+                reset_queries()  # not sure this will matter, but...
+                self.xml_runner = None  # 
+
+            if not self.xml_runner:
+                self.xml_runner = XMLRunner()
 
             whole_submission = XMLSubmission.objects.get(object_id=submission['object_id'])
             assert whole_submission.json_set
