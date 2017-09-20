@@ -14,7 +14,7 @@ class Command(BaseCommand):
     help = 'Dump some fields that are of interest'
     
     def handle(self, *args, **options):
-        self.xml_runner = XMLRunner()
+        self.xml_runner = None
         count = 0
 
         headers = ["taxpayer_name", "ein", "tax_period", "sub_date", "object_id", "name", "title", "org_comp", "related_comp", "other_cmp", "form", "source"]
@@ -30,11 +30,14 @@ class Command(BaseCommand):
         #submissions = XMLSubmission.objects.filter(object_id='201513209349102976').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         #submissions = XMLSubmission.objects.filter(return_type='990PF').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         for submission in submissions:
+            if not self.xml_runner:
+                self.xml_runner = XMLRunner()
             #print submission['object_id']
             count += 1
             if count % 100 == 0:
                 print ("Processed %s filings" % count)
                 reset_queries() # not sure this will matter, but...
+                self.xml_runner = None
 
             whole_submission = XMLSubmission.objects.get(object_id=submission['object_id'])
             assert whole_submission.json_set
