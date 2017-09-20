@@ -7,6 +7,7 @@ from django.db import reset_queries
 
 from irsx.xmlrunner import XMLRunner
 from irsx.filing import Filing
+from irsx.standardizer import Standardizer
 from filing.models import xml_submission as XMLSubmission
 
 
@@ -15,16 +16,13 @@ class Command(BaseCommand):
     
     def handle(self, *args, **options):
         self.xml_runner = None
+        self.standardizer = Standardizer()
         count = 0
-
         headers = ["taxpayer_name", "ein", "tax_period", "sub_date", "object_id", "name", "title", "org_comp", "related_comp", "other_cmp", "form", "source"]
-
-
 
         outfile = open("dumptest.csv", 'wb')
         dw = csv.DictWriter(outfile, fieldnames=headers, extrasaction='ignore')
         dw.writeheader()
-
 
         submissions =  XMLSubmission.objects.filter(schema_year__gte=2013, sub_date__contains='2017').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         #submissions = XMLSubmission.objects.filter(object_id='201513209349102976').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
@@ -35,10 +33,10 @@ class Command(BaseCommand):
             if count % 100 == 0:
                 print ("Processed %s filings" % count)
                 reset_queries()  # not sure this will matter, but...
-                self.xml_runner = None  # 
+                self.xml_runner = None  # Erase this to prevent memory leaks
 
             if not self.xml_runner:
-                self.xml_runner = XMLRunner()
+                self.xml_runner = XMLRunner(standardizer=self.standardizer)  # will start up faster if we don't have to reread/import csvs
 
             whole_submission = XMLSubmission.objects.get(object_id=submission['object_id'])
             assert whole_submission.json_set
