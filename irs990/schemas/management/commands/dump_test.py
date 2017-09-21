@@ -144,7 +144,7 @@ class Command(BaseCommand):
                         'object_id': employee['object_id'],
                         'name': employee.get('PrsnNm'),
                         'title': employee.get('TtlTxt'),
-                        'org_comp': employee.get('CompnstnAmt'),
+                        'org_comp': employee.get('CmpnstnAmt'),
                         # 'related_comp': NA 
                         #'other_cmp': EmplyBnftsAmt + ExpnsAccntAmt ? 
                         'form':'IRS990EZ',
