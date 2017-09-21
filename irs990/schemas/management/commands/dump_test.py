@@ -41,16 +41,21 @@ class Command(BaseCommand):
             whole_submission = XMLSubmission.objects.get(object_id=submission['object_id'])
             assert whole_submission.json_set
             # This is a bug--should be returned as json? https://stackoverflow.com/questions/36352721/django-1-9-jsonfield-stored-dictionary-returns-unicode-instead
-            # django devs have decided to pretend it doesn't exist: https://code.djangoproject.com/ticket/27675
+            # Is this behaving correctly or not? 
 
             submission_json = json.loads(whole_submission.as_json) 
 
             filingobj = Filing(submission['object_id'], json=submission_json)
+            #print("\n\nObject id %s\n" % submission['object_id'])
+            #print submission_json
 
             processedFiling = self.xml_runner.run_from_filing_obj(
                 filingobj,
                 verbose=False,
             )
+
+            #print ("\n\nProcessed filing is %s" % processedFiling.get_result())
+
             filing_info = {
                 'taxpayer_name': submission['taxpayer_name'],
                 'tax_period': submission['tax_period'],
@@ -86,6 +91,7 @@ class Command(BaseCommand):
                         'org_comp': employee.get('RprtblCmpFrmOrgAmt', 0),
                         'related_comp': employee.get('RprtblCmpFrmRltdOrgAmt', 0),
                         'other_cmp': employee.get('OthrCmpnstnAmt', 0),
+                        'highest_ind':employee.get('HghstCmpnstdEmplyInd'),
                         'form':'IRS990',
                         'source': 'Frm990PrtVIISctnA'
                     }
@@ -97,7 +103,7 @@ class Command(BaseCommand):
 
             if sked990EZ_list:
                 sked990EZ = sked990EZ_list[0]
-                #print("\n\n\t990EZ %s" % sked990EZ['schedule_name'])
+                #print("\n\t990EZ %s" % sked990EZ['schedule_name'])
                 assert sked990EZ['schedule_name']=='IRS990EZ'
                 group_name = "EZOffcrDrctrTrstEmpl"
 
@@ -180,7 +186,7 @@ class Command(BaseCommand):
                     }
                     this_employee.update(filing_info)
                     #print "\n"
-                    # print this_employee
+                    #print this_employee
                     dw.writerow(this_employee)
 
 
@@ -223,8 +229,8 @@ class Command(BaseCommand):
                     pass
 
                 for employee in employee_list:
-                    #print "\n\n"
-                    #print employee
+                    print "\n\n sked J"
+                    print employee
                     this_employee = {
                         'ein': employee['ein'],
                         'object_id': employee['object_id'],
@@ -232,14 +238,14 @@ class Command(BaseCommand):
                         'bus_line_1':employee.get('BsnssNmLn1Txt'),
                         'title': employee.get('TtlTxt'),
                         'org_comp': employee.get('TtlCmpnstnFlngOrgAmt'),
-                        'related_comp': employee.get('CmpRprtPrr990RltdOrgsAmt'),
+                        'related_comp': employee.get('TtlCmpnstnRltdOrgsAmt'),
                         #'other_cmp': OffcrDrTrstKyEmpl_EmplyBnftPrgrmAmt + OffcrDrTrstKyEmpl_ExpnsAccntOthrAllwncAmt ? 
                         'form':'IRS990ScheduleJ',
                         'source': 'SkdJRltdOrgOffcrTrstKyEmpl'
                     }
                     this_employee.update(filing_info)
                     #print "\n"
-                    #print this_employee
+                    print this_employee
                     dw.writerow(this_employee)
 
 
