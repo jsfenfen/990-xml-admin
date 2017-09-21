@@ -151,10 +151,10 @@ class Command(BaseCommand):
                         'source': 'EZCmpnstnHghstPdEmpl'
                     }
                     this_employee.update(filing_info)
-                    #print "\n"
-                    #print this_employee
+                    print "\nEZ"
+                    print employee
+                    print this_employee
                     dw.writerow(this_employee)
-                    #print employee
 
 
             if sked990PF_list:
@@ -229,8 +229,8 @@ class Command(BaseCommand):
                     pass
 
                 for employee in employee_list:
-                    print "\n\n sked J"
-                    print employee
+                    #print "\n\n sked J"
+                    #print employee
                     this_employee = {
                         'ein': employee['ein'],
                         'object_id': employee['object_id'],
@@ -245,7 +245,7 @@ class Command(BaseCommand):
                     }
                     this_employee.update(filing_info)
                     #print "\n"
-                    print this_employee
+                    #print this_employee
                     dw.writerow(this_employee)
 
 
