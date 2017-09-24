@@ -23,6 +23,8 @@ class Command(BaseCommand):
 
         submissions =  XMLSubmission.objects.filter(schema_year__gte=2013, sub_date__contains='2017').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         for submission in submissions:
+
+
             
             count += 1
             if count % 100 == 0:
@@ -39,12 +41,10 @@ class Command(BaseCommand):
             if type(whole_submission.as_json)==unicodeType:
                 submission_json = json.loads(whole_submission.as_json)
             else:
-                # Assume it's a dict? We haven't seen this yet. 
+                # Assume it's a dict? We don't have any "working" installations that return json as json
                 submission_json=whole_submission.as_json
 
             filingobj = Filing(submission['object_id'], json=submission_json)
-            #print("\n\nObject id %s\n" % submission['object_id'])
-            #print submission_json
 
             parsedFiling = self.xml_runner.run_from_filing_obj(
                 filingobj,
@@ -57,7 +57,6 @@ class Command(BaseCommand):
             try:
                 ProcessedFiling.objects.get(object_id=submission['object_id'])
             except ProcessedFiling.DoesNotExist:
-                print ("Attempt create with whole submission type %s"  % type(whole_submission))
                 ProcessedFiling.objects.create(
                     ein = whole_submission.ein,
                     object_id = whole_submission.object_id,
@@ -66,7 +65,6 @@ class Command(BaseCommand):
                     has_keyerrors = has_keyerrors,
                     submission = whole_submission
                 )
-                print("Create processed filing for %s" % submission['object_id'])
 
 
 
