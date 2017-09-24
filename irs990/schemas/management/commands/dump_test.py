@@ -3,19 +3,41 @@ import json
 
 from django.core.management.base import BaseCommand
 from django.conf import settings
-from django.db import reset_queries
+from django.db import reset_queries, connection
 
 from irsx.xmlrunner import XMLRunner
 from irsx.filing import Filing
 from irsx.standardizer import Standardizer
 from filing.models import xml_submission as XMLSubmission
 
+unicodeType = type(unicode()) 
+
+# unicode thing, this seems not to work
+import psycopg2.extras
+psycopg2.extras.register_default_json(loads=lambda x: x)
+
+
 
 class Command(BaseCommand):
     help = 'Dump some fields that are of interest'
+
+
+    ### sadly, this doesn't work -- from https://bitbucket.org/schinckel/django-jsonfield/commits/221c256824d495bde6dba17a66b0beeaa56287de
+    def fix_connection(self):
+        loads = lambda x: json.loads(x)
+
+        import psycopg2.extras
+        if hasattr(psycopg2.extras, 'register_default_jsonb'):
+            print ("setting jsonb handler on connection.cursor().connection type: %s" % type(connection.cursor().connection))
+            psycopg2.extras.register_default_jsonb(
+                connection.cursor().connection,  # from https://stackoverflow.com/a/8405315
+                globally=True,
+                loads=loads
+        )
     
     def handle(self, *args, **options):
         self.xml_runner = None
+        #self.fix_connection()
         self.standardizer = Standardizer()
         count = 0
         headers = ["taxpayer_name", "ein", "tax_period", "sub_date", "object_id", "name", "title", "org_comp", "related_comp", "other_cmp", "form", "source"]
@@ -40,10 +62,19 @@ class Command(BaseCommand):
 
             whole_submission = XMLSubmission.objects.get(object_id=submission['object_id'])
             assert whole_submission.json_set
-            # This is a bug--should be returned as json? https://stackoverflow.com/questions/36352721/django-1-9-jsonfield-stored-dictionary-returns-unicode-instead
-            # Is this behaving correctly or not? 
 
-            submission_json = json.loads(whole_submission.as_json) 
+
+            # There's a bug that makes json objects get returned as unicode instead of as dicts
+            # similar to this one https://code.djangoproject.com/ticket/27675 
+            # though django-jsonfield isn't used in this object 
+            # See to register_json, though that doesn't work in this context
+            # http://initd.org/psycopg/docs/extras.html
+
+            if type(whole_submission.as_json)==unicodeType:
+                submission_json = json.loads(whole_submission.as_json)
+            else:
+                # Assume it's a dict? We haven't seen this yet. 
+                submission_json=whole_submission.as_json
 
             filingobj = Filing(submission['object_id'], json=submission_json)
             #print("\n\nObject id %s\n" % submission['object_id'])
@@ -63,6 +94,9 @@ class Command(BaseCommand):
             }
             schedule_list = processedFiling.list_schedules()
             result = processedFiling.get_result()
+            keyerrors = processedFiling.get_keyerrors()
+            if keyerrors:
+                print("\n\n\n***keyerrors\n\n%s" % keyerrors)
 
             sked990_list = processedFiling.get_parsed_sked('IRS990')
             sked990EZ_list = processedFiling.get_parsed_sked('IRS990EZ')

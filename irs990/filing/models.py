@@ -10,6 +10,7 @@ from django.conf import settings
 
 from filing.file_utils import stream_download
 from filing.schema_name_utils import get_year_version_from_schema
+from filing.type_utils import unicodeType
 
 class xml_submission(models.Model):
     ## Fields taken from index_YYYY.csv files
@@ -71,15 +72,26 @@ class xml_submission(models.Model):
             self.save()
         return True
 
-
     class Meta:
         verbose_name="XML Submission"
         managed=True
 
-    ## Do we need a default manager that defers json? Might be a good idea. 
+class ProcessedFiling(models.Model):
+   """ Place to hold processed json. This should hold standardized json only"""
+   ein = models.CharField(blank=False, max_length=15, help_text="employee id number")
+   object_id = models.CharField(max_length=31, primary_key=True)
+   processed_json = JSONField(null=True)
+   has_keyerrors = models.NullBooleanField() 
+   keyerrors = JSONField(null=True)
+   submission = models.ForeignKey(xml_submission, null=True)
 
+   # 
+   def get_json(self):
+       if type(self.processed_json)==unicodeType:
+           return json.loads(self.processed_json)
+       else:
+           return self.processed_json
 
-# to do - define relationship between observed_xpath and observed_group. Can an observed_xpath have multiple parent groups?
 
 class master_observed_group(models.Model):
     raw_xpath = models.CharField(max_length=511, blank=True, null=True)
@@ -125,6 +137,3 @@ class known_version_string(models.Model):
 
     def __unicode__(self):
         return self.version_string
-
-
-
