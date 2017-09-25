@@ -84,6 +84,7 @@ class ProcessedFiling(models.Model):
    has_keyerrors = models.NullBooleanField() 
    keyerrors = JSONField(null=True)
    submission = models.ForeignKey(xml_submission, null=True)
+   is_saved = models.NullBooleanField()   # has it been saved to related db?
 
    # 
    def get_json(self):
