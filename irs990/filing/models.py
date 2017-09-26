@@ -86,7 +86,8 @@ class ProcessedFiling(models.Model):
    submission = models.ForeignKey(xml_submission, null=True)
    is_saved = models.NullBooleanField()   # has it been saved to related db?
 
-   # 
+   # some sorta pscopg2 config bug sets this to return as string sometimes?
+   # make sure it's actually json
    def get_json(self):
        if type(self.processed_json)==unicodeType:
            return json.loads(self.processed_json)

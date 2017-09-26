@@ -99,7 +99,7 @@ undo with
 
 #### 4. attach\_schedule\_instances
 
-This step just attaches actual XSDFile instances in the db to the schedule instan
+This step just attaches actual XSDFile instances in the db to the schedule instances.
 
 
 #### 5. generate_mappings
@@ -145,4 +145,115 @@ are assigned in a later management command (propagate\_from\_canonical)."
 
 ####  generate_documentation
 
-#### TK: generate_models
+#### generate_mappings
+
+#### generate_models
+ 
+#### generate_csvs
+
+
+
+
+## Adding new schemas
+
+### When the .xsd files are available
+
+This is very much like creating the db from scratch, though some steps are omitted.
+
+For this example we're adding 2016v3.
+
+Notes: 
+-- filing\_known\_version\_string <- that's from the xml xpath "census" in the filing app. We're trying to add a new version that we don't necessarily have filings for yet. For the moment, we don't care about this--it's really a way of summarizing data about filings we have, so ignore it here. 
+
+1. Add a new production version. (This should probably be part of a fixture?). Hack: just run at the db prompt:
+
+		insert into schemas_productionversion (version_string) values ('2016v3.0');
+
+
+2. Try to add the schema files. If you're not sure if they are there check with something like this:  
+
+		select version_string, count(*) from schemas_xsdfile group by 1 order by 1;
+		
+	
+	To add run: 
+	
+		$ python manage.py enter_schema_files 2016v3.0
+
+	If you get "schemas.models.DoesNotExist: ProductionVersion matching query does not exist." it wasn't properly added. 
+	
+	It should say it entered 448 new XSDFiles. Verify with the same sql in the prior step. 
+
+3. Read the schema files with: 
+
+		python manage.py read_schema_files 2016v3.0 
+		
+
+	Check existence with queries like:
+	
+	`select version_string, count(*) from schemas_element group by 1 order by 1;`
+	`select version_string, count(*) from schemas_simpletype group by 1 order by 1;`
+	`select version_string, count(*) from schemas_fileinclude group by 1 order by 1;`
+	`select version_string, count(*) from schemas_element group by 1 order by 1;`
+	`select version_string, count(*) from schemas_group group by 1 order by 1;`
+	`select version_string, count(*) from schemas_complextype group by 1 order by 1;`
+
+	and if you need to delete them use: 
+
+
+	    delete from schemas_simpletype where version_string = '2016v3.0';
+	    delete from schemas_fileinclude where version_string = '2016v3.0';
+	    delete from schemas_element where version_string = '2016v3.0';
+	    delete from schemas_group where version_string = '2016v3.0';
+	    delete from schemas_complextype where version_string = '2016v3.0';
+ 
+4. Attach schedule instances to the new xsd file we created with:
+	 
+ 		$ python manage.py attach_schedule_instances 2016v3.0
+
+5. Generate the mappings with:
+
+		$ python manage.py generate\_mappings 2016v3.0
+
+	This should be creating the versioned\_group and versioned\_variable objects for 2016v3.0. Check in the db with:
+
+		select version_string, count(*) from schemas_versionedvariable group by 1 order by 1;
+
+6. assign_canonical
+
+	This is the hard part. We need to assign the canonical variables--which were created for version 2015v2.1--to 2016v3.0 variables. Moreover, we need to do this for several thousand variables as well as about 91 repeating groups. Also note that version 2016v3.0 introduces a new repeating group "/IRS990ScheduleA/AgriculturalNameAndAddressGrp" which didn't exist in prior versions. 
+	
+	To do this, read and modify the assign\_canonical management command. The really ugly version-specific transformation stuff is handled in schemas.epoch\_utils. Add the new version string to the definition of MODERN_EPOCH in epoch\_utils to make sure it gets processed.
+
+	It makes sense to handle the groups first. Note that assign\_canonical, when run on groups only, doesn't complain because there are no *missing* groups. You can figure out what the new group is with this (once the others have been assigned a canonical group by running assign\_canonical )
+
+		select xpath from schemas_versionedgroup where version_string = '2016v3.0' and canonical\_group\_id is null; 
+	
+	You may also want to consult the diff files availables in the IRS' schemas distributions. This version change, it should be noted, also includes a  new "FilingSecurityInformation" section of the returnheader and lots of new variables in a "HospitalFcltyPoliciesPrctcGrp" in Schedule H.
+		
+	The output of assign canonical looks like this, near the end:
+	
+			Missing Variable Keys: 
+		2013v3.0 155
+		2013v3.1 155
+		2013v4.0 155
+		2014v5.0 0
+		2014v6.0 0
+		2015v2.0 0
+		2015v2.1 0
+		2015v3.0 0
+		2016v3.0 16
+	
+	To figure out which ones are missing, run a db query like: 
+	
+	 select xpath from schemas_versionedvariable where canonical_variable_id is null and version_string = '2016v3.0' order by 1;
+	 
+	That includes both new variables in 2016 (which shouldn't be assigned) and variables that are missing (which should be assigned). 
+	
+7. Regenerate the csv files that are used downstream by 990-xml-reader. 
+Add the new version in the settings to: 
+CSV\_OUTPUT\_SUPPORTED
+
+
+### When the .xsd files are not available
+
+This is a harder process! Best approach is to get the schemas.
