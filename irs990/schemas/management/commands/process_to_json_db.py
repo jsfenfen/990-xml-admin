@@ -21,7 +21,10 @@ class Command(BaseCommand):
         self.standardizer = Standardizer()
         count = 0
 
-        submissions =  XMLSubmission.objects.filter(schema_year__gte=2013, sub_date__contains='2017').values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
+        submissions =  XMLSubmission.objects.filter(
+            schema_year__gte=2013, 
+            sub_date__contains='2017'
+        ).values('taxpayer_name', 'tax_period', 'sub_date', 'object_id')
         for submission in submissions:
 
 
@@ -33,15 +36,19 @@ class Command(BaseCommand):
                 self.xml_runner = None  # Erase this to prevent memory leaks
 
             if not self.xml_runner:
-                self.xml_runner = XMLRunner(standardizer=self.standardizer)  # will start up faster if we don't have to reread/import csvs
+                # will start up faster if we don't have to reread/import csvs
+                self.xml_runner = XMLRunner(standardizer=self.standardizer)
 
-            whole_submission = XMLSubmission.objects.get(object_id=submission['object_id'])
+            whole_submission = XMLSubmission.objects.get(
+                object_id=submission['object_id']
+            )
             
 
             if type(whole_submission.as_json)==unicodeType:
                 submission_json = json.loads(whole_submission.as_json)
             else:
-                # Assume it's a dict? We don't have any "working" installations that return json as json
+                # Assume it's a dict? 
+                # We don't have any "working" installations that return json as json
                 submission_json=whole_submission.as_json
 
             filingobj = Filing(submission['object_id'], json=submission_json)

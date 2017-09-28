@@ -11452,8 +11452,9 @@ class returnheader990x_part_i(models.Model):
     PrprrPrsn_SlfEmplydInd = models.CharField(null=True, blank=True, max_length=1)
     # xpath: /ReturnHeader/PreparerPersonGrp/SelfEmployedInd 
 
-    PrprrPrsn_SSN = models.CharField(null=True, blank=True, max_length=9)
+    PrprrPrsn_SSN = models.CharField(null=True, blank=True, max_length=15) # Not 9
     # xpath: /ReturnHeader/PreparerPersonGrp/SSN 
+    # OFTEN COMPLETED "XXX-XX-XXXX"; not sure why this is in the pub release
 
     PrprrPrsn_PTIN = models.CharField(null=True, blank=True, max_length=9)
     # xpath: /ReturnHeader/PreparerPersonGrp/PTIN 

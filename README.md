@@ -33,6 +33,27 @@ It can take a while to do a complete sync, if you're logged in you probably want
 
 ### Commands:
 
+#### retrieve\_annual\_file
+
+Refresh the yearly csv file.
+ Takes the four-digit year as a positional argument  
+ 
+    $ manage.py retrieve_annual_file 2017
+            
+
+#### enter\_yearly\_submissions
+
+Read the yearly csv file line by line and add new lines to the xml_submission model if they don't exist. Lines are added in bulk at the end.
+	
+	
+	$ python manage.py enter_yearly_submissions 2017
+	
+#### sdfsdf
+
+asdf
+
+	
+
 
 
 ## Schemas model
@@ -104,7 +125,7 @@ This step just attaches actual XSDFile instances in the db to the schedule insta
 
 #### 5. generate_mappings
 
-Generate mappings from whitelisted forms/schedules.  
+Create the versioned_variable and versioned_group elements from whitelisted forms/schedules.  This is generating the xpaths from the xsd files.
 
 Optionally pass a version\_string as an arg
 to run only on that version, e.g.  
@@ -144,8 +165,6 @@ are assigned in a later management command (propagate\_from\_canonical)."
 #### propagate\_from\_canonical
 
 ####  generate_documentation
-
-#### generate_mappings
 
 #### generate_models
  
@@ -245,7 +264,7 @@ Notes:
 	
 	To figure out which ones are missing, run a db query like: 
 	
-	 select xpath from schemas_versionedvariable where canonical_variable_id is null and version_string = '2016v3.0' order by 1;
+	 select xpath from schemas\_versionedvariable where canonical\_variable\_id is null and version\_string = '2016v3.0' order by 1;
 	 
 	That includes both new variables in 2016 (which shouldn't be assigned) and variables that are missing (which should be assigned). 
 	
@@ -256,4 +275,52 @@ CSV\_OUTPUT\_SUPPORTED
 
 ### When the .xsd files are not available
 
-This is a harder process! Best approach is to get the schemas.
+This is a harder process! Best approach is to get the schemas. But you can generally just run a version in the reader library by allowing earlier versions to run on later years. This will fail to pick up any new or changed variables, but misses will can be retrieved with Filing.get_keyerrors(), where Filing is the returned parsed result.
+
+### Recanonicalize
+
+You probably *don't* wan't to recanonicalize, since it has the power to rename the database bindings for every variable in the system, but here's how you might do it from 2015 to 2016.
+
+Also note you'll probably want to entirely drop and recreate the returndata tables, especially if they've changed. 
+
+1. Kill out the canonical groups variables
+
+		>>> from schemas.models import *
+		>>> a = CanonicalVariable.objects.all()
+		>>> a.delete()
+		(3188, {u'schemas.CanonicalVariable': 3188})
+		
+		>>> b = CanonicalGroup.objects.all()
+		>>> b.delete()
+		(91, {u'schemas.CanonicalGroup': 91})
+
+
+2. Set CANONICAL_VERSION = '2016v3.0' in the settings file. 
+
+3. Run parse_parts. This tries to put canonical variables into "parts" as divvied up by the tax forms, but this will likely miss any new variables that have appeared. Lets see which ones:
+
+		select count(*) from schemas_versionedvariable where version_string  = '2016v3.0' and parent_sked_part_id is null;
+		
+	Sometimes returnheader is not set, but it's easier to set manually. Likely what's left are the new sections		
+		
+		    select xpath from schemas_versionedvariable where version_string  = '2016v3.0' and parent_sked_part_id is null order by 1;
+		                                           xpath                                           
+-------------------------------------------------------------------------------------------
+ /IRS990ScheduleA/AgriculturalNameAndAddressGrp/CityNm
+ /IRS990ScheduleA/AgriculturalNameAndAddressGrp/CollegeUniversityName/BusinessNameLine1Txt
+ /IRS990ScheduleA/AgriculturalNameAndAddressGrp/CollegeUniversityName/BusinessNameLine2Txt
+ /IRS990ScheduleA/AgriculturalNameAndAddressGrp/CountryCd
+ /IRS990ScheduleA/AgriculturalNameAndAddressGrp/StateAbbreviationCd
+ /IRS990ScheduleA/AgriculturalResearchOrgInd
+(6 rows)
+
+This has happened because the parse parts script was looking at an outdated version. Edit the schema to reflect the new variables. 
+
+
+
+4. run generate_canonical
+
+5. run assign_canonical to assign vars to it
+
+6. Run propagate_from_canonical to reassign the schedule parts back to the vars
+

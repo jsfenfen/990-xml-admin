@@ -9,7 +9,7 @@ GENERATED_MODELS_DIR = settings.GENERATED_MODELS_DIR
 soft_tab = '    '
 
 class Command(BaseCommand):
-    help = """  Generate django model file. 
+    help = """  Generate django model file.
                 Hard overwrites the default file.
 
                 SQLAlchemy in development as a CLI option ( -sqlalchemy )
@@ -27,26 +27,34 @@ class Command(BaseCommand):
 
             result = "\n#######\n#\n# %s - %s\n" % (parent_sked_name, full_name)
             if repeating_group_part:
-                result += "# A repeating structure from %s\n" % (repeating_group_part)            
-            result += "#\n#######\n" 
+                result += "# A repeating structure from %s\n" % (repeating_group_part)
+            result += "#\n#######\n"
             ## write the start of the first group:
             result += "\nclass %s(models.Model):\n" % sked_name
-            result +=  soft_tab +  "return_id = models.CharField(max_length=31, blank=True, null=True, help_text=\"unique xml return id\")\n"
-            result +=  soft_tab +  "ein = models.CharField(max_length=15, blank=True, null=True, help_text=\"filer EIN\")"
-            
+            result +=  soft_tab +  "object_id = models.CharField(max_length=31, blank=True, null=True, help_text=\"unique xml return id\")\n"
+            result +=  soft_tab +  "ein = models.CharField(max_length=15, blank=True, null=True, help_text=\"filer EIN\")\n"
+            if parent_sked_name=='IRS990ScheduleK':
+                # It's not clear what the max length is; Return.xsd is unclear
+                result +=  soft_tab +  "documentId = models.TextField(blank=True, null=True, help_text=\"documentID attribute\")"
+
+
             return result
 
         elif self.run_sqlalchemy:
-            
+
             result = "\n#######\n#\n# %s - %s\n" % (parent_sked_name, full_name)
             if repeating_group_part:
-                result += "# A repeating structure from %s\n" % (repeating_group_part)            
-            result += "#\n#######\n" 
+                result += "# A repeating structure from %s\n" % (repeating_group_part)
+            result += "#\n#######\n"
             ## write the start of the first group:
             result += "\nclass %s(Base):\n%s__tablename__='%s'\n" % (sked_name,soft_tab, sked_name)
-            result +=  soft_tab +  "return_id = Column(String(31))\n"
+            result +=  soft_tab +  "object_id = Column(String(31))\n"
             result +=  soft_tab +  "ein = Column(String(15))\n"
+            if parent_sked_name=='IRS990ScheduleK':
+                result +=  soft_tab +  "documentId = Column(String(15))\n"
+
             result +=  soft_tab +  "id = Column(Integer, primary_key=True)\n" # Add a primary key explicitly
+
             return result
 
     def write_top_matter(self):
@@ -66,13 +74,13 @@ class Command(BaseCommand):
         if self.run_django:
             variable_output = variable.django_type
             if not variable_output:
-                variable_output = "TextField(null=True, blank=True)" 
+                variable_output = "TextField(null=True, blank=True)"
             result =  "\n" + soft_tab + "%s = models.%s" % (variable.db_safe_name, variable_output)
 
         elif self.run_sqlalchemy:
             variable_output = variable.sql_alch_type
             if not variable_output:
-                variable_output = "Text" 
+                variable_output = "Text"
             result =  "\n" + soft_tab + "%s = Column(%s)" % (variable.db_safe_name, variable_output)
 
         # add newline and documentation regardless of where it's going
@@ -91,9 +99,15 @@ class Command(BaseCommand):
         form_parts = SchedulePart.objects.filter(parent_sked=schedule).order_by('ordering_ordinal')
         for form_part in form_parts:
 
-            model_top = self.write_model_top(form_part.db_model_name, form_part.raw_part_name, schedule.schedule_name )
+            model_top = self.write_model_top(
+                form_part.db_model_name,
+                form_part.raw_part_name,
+                schedule.schedule_name
+            )
 
-            variables_in_this_part = CanonicalVariable.objects.filter(parent_sked_part=form_part).exclude(in_a_group=True).order_by('ordering',)
+            variables_in_this_part = CanonicalVariable.objects.filter(
+                parent_sked_part=form_part
+            ).exclude(in_a_group=True).order_by('ordering',)
             if variables_in_this_part:
                 # only write it if it contains anything
                 self.outfile.write(model_top)
@@ -103,12 +117,19 @@ class Command(BaseCommand):
                     this_var = self.write_variable(variable)
                     print(this_var)
                     self.outfile.write(this_var)
-            
-        groups_in_this_sked = CanonicalGroup.objects.filter(parent_sked=schedule).order_by('ordering',)
+
+        groups_in_this_sked = CanonicalGroup.objects.filter(
+            parent_sked=schedule
+        ).order_by('ordering',)
+
         for group in groups_in_this_sked:
-            
-            model_top = self.write_model_top(group.db_safe_name, group.name, schedule.schedule_name, repeating_group_part=group.parent_sked_part.raw_part_name )
-            
+            model_top = self.write_model_top(
+                group.db_safe_name,
+                group.name,
+                schedule.schedule_name,
+                repeating_group_part=group.parent_sked_part.raw_part_name
+            )
+
             variables_in_this_group = CanonicalVariable.objects.filter(parent_group=group).order_by('ordering',)
             if variables_in_this_group:
                 # only write it if it contains anything
@@ -119,26 +140,23 @@ class Command(BaseCommand):
                     this_var = self.write_variable(variable)
                     print(this_var)
                     self.outfile.write(this_var)
-                
+
 
     def handle(self, *args, **options):
         print options
         self.run_sqlalchemy = options['sqlalchemy']
-
         self.run_django = not self.run_sqlalchemy    # Only run one or the other.
 
         file_output = os.path.join(GENERATED_MODELS_DIR, "django_models_auto.py")
         if self.run_sqlalchemy:
             file_output = os.path.join(GENERATED_MODELS_DIR, "sqlalchemy_models_auto.py")
-
         self.outfile = open(file_output, 'w')
-
 
         self.write_top_matter()
         skedlist = ScheduleName.objects.all().order_by('schedule_name')
         for schedule in skedlist:
             self.write_sked(schedule)
-                
+
 
 
 

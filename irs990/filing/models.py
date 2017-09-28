@@ -25,11 +25,9 @@ class xml_submission(models.Model):
     dln = models.CharField(max_length=31, blank=True, null=True)
     object_id = models.CharField(max_length=31, blank=True, null=True)
     ## Fields added on
-    as_json = JSONField(null=True)
     schema_year = models.IntegerField(blank=True, null=True, help_text="Schema year")
     schema_version = models.TextField(null=True, help_text="Schema version") 
-    json_set = models.BooleanField(default=False, help_text="Has the json been set?")
-    
+    json_set = models.BooleanField(default=False, help_text="Has the json been set in ProcessedFiling?")
 
     def get_s3_URL(self):
         return  settings.IRS_XML_HTTP_BASE + "%s_public.xml" % self.object_id
@@ -43,56 +41,28 @@ class xml_submission(models.Model):
     def file_available(self):
         return os.path.isfile(self.get_local_file())
 
-    def get_as_json(self):
-        # Patch problem with how json is getting returned. Better fix?
-        return( json.loads(self.as_json) ) 
-
-    def set_year_version_from_json(self, save=True):
-        """ Only works if json has already been set! """
-        assert self.json_set # Todo: be more verbose to user about why this bails
-        version_string = self.get_as_json()['Return']['@returnVersion']
-        result = get_year_version_from_schema ( version_string )
-        self.schema_year = result['year']
-        self.schema_version = result['version']
-        if save:
-            self.save()
-
-
-    def set_json(self, save=False):
-        try:
-            fh = open(self.get_local_file())
-            raw_file=fh.read()
-            fh.close()
-        except IOError:
-            return False
-
-        self.as_json = json.dumps( xmltodict.parse(raw_file) )
-        self.json_set = True
-        if save:
-            self.save()
-        return True
-
     class Meta:
         verbose_name="XML Submission"
         managed=True
 
 class ProcessedFiling(models.Model):
-   """ Place to hold processed json. This should hold standardized json only"""
-   ein = models.CharField(blank=False, max_length=15, help_text="employee id number")
-   object_id = models.CharField(max_length=31, primary_key=True)
-   processed_json = JSONField(null=True)
-   has_keyerrors = models.NullBooleanField() 
-   keyerrors = JSONField(null=True)
-   submission = models.ForeignKey(xml_submission, null=True)
-   is_saved = models.NullBooleanField()   # has it been saved to related db?
+    """ Place to hold processed json. This should hold standardized json only"""
+    ein = models.CharField(blank=False, max_length=15, help_text="employee id number")
+    object_id = models.CharField(max_length=31, primary_key=True)
+    version_string = models.CharField(max_length=15, blank=True, null=True)
+    processed_json = JSONField(null=True)
+    has_keyerrors = models.NullBooleanField() 
+    keyerrors = JSONField(null=True)
+    submission = models.ForeignKey(xml_submission, null=True)
+    is_saved = models.NullBooleanField()   # has it been saved to related db?
 
-   # some sorta pscopg2 config bug sets this to return as string sometimes?
-   # make sure it's actually json
-   def get_json(self):
-       if type(self.processed_json)==unicodeType:
-           return json.loads(self.processed_json)
-       else:
-           return self.processed_json
+    # A psycopg2 / django / postgres config returns string not json
+    # make sure it's actually json
+    def get_json(self):
+        if type(self.processed_json)==unicodeType:
+            return json.loads(self.processed_json)
+        else:
+            return self.processed_json
 
 
 class master_observed_group(models.Model):

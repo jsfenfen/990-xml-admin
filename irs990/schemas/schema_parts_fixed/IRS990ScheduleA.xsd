@@ -125,6 +125,26 @@
 						</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
+				<!-- An agricultural research organization operated in conjunction with college or university. Section 170(b)(1)(A)(ix) -->
+					<xsd:sequence>
+						<xsd:element name="AgriculturalResearchOrgInd" type="CheckboxType">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>An agricultural research organization operated in conjunction with college or university. Section 170(b)(1)(A)(ix)</Description>
+									<LineNumber>Part I Line 9</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<!-- College's or University's Name, and Address -->
+						<xsd:element name="AgriculturalNameAndAddressGrp" type="AgricNameAndAddressGrpType" maxOccurs="50">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>College or university name, city, state, or country</Description>
+									<LineNumber>Part I Line 9</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+				</xsd:sequence>
 				<!-- Publicly Supported Organization 509(a)(2) -->
 				<xsd:element name="PubliclySupportedOrg509a2Ind" type="CheckboxType">
 					<xsd:annotation>

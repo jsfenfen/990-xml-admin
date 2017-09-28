@@ -12,7 +12,7 @@ Base = declarative_base()
 
 class part_0(Base):
     __tablename__='part_0'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -135,7 +135,7 @@ class part_0(Base):
 
 class part_i(Base):
     __tablename__='part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -264,7 +264,7 @@ class part_i(Base):
 
 class part_iii(Base):
     __tablename__='part_iii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -345,7 +345,7 @@ class part_iii(Base):
 
 class part_iv(Base):
     __tablename__='part_iv'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -516,7 +516,7 @@ class part_iv(Base):
 
 class part_v(Base):
     __tablename__='part_v'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -636,7 +636,7 @@ class part_v(Base):
 
 class part_vi(Base):
     __tablename__='part_vi'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -783,7 +783,7 @@ class part_vi(Base):
 
 class part_vii(Base):
     __tablename__='part_vii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -825,7 +825,7 @@ class part_vii(Base):
 
 class part_viii(Base):
     __tablename__='part_viii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -940,41 +940,35 @@ class part_viii(Base):
     TtlRvn_ExclsnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/TotalRevenueGrp/ExclusionAmt 
 
-    TtlOthPrgrmSrvcRv_TtlRvnClmnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/TotalRevenueColumnAmt 
-
-    NtIncmFrmGmng_TtlRvnClmnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetIncomeFromGamingGrp/TotalRevenueColumnAmt 
-
-    NtRntlIncmOrLss_TtlRvnClmnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetRentalIncomeOrLossGrp/TotalRevenueColumnAmt 
+    IncmFrmInvstBndPrcds_TtlRvnClmnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/TotalRevenueColumnAmt 
 
     NtIncmOrLss_TtlRvnClmnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetIncomeOrLossGrp/TotalRevenueColumnAmt 
 
+    RyltsRvn_TtlRvnClmnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/RoyaltiesRevenueGrp/TotalRevenueColumnAmt 
+
+    NtRntlIncmOrLss_TtlRvnClmnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetRentalIncomeOrLossGrp/TotalRevenueColumnAmt 
+
     MscRvn_TtlRvnClmnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/MiscellaneousRevenueGrp/TotalRevenueColumnAmt 
 
-    IncmFrmInvstBndPrcds_TtlRvnClmnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/TotalRevenueColumnAmt 
+    TtlOthPrgrmSrvcRv_TtlRvnClmnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/TotalRevenueColumnAmt 
 
     NtGnOrLssInvstmnts_TtlRvnClmnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetGainOrLossInvestmentsGrp/TotalRevenueColumnAmt 
 
-    RyltsRvn_TtlRvnClmnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/RoyaltiesRevenueGrp/TotalRevenueColumnAmt 
+    NtIncmFrmGmng_TtlRvnClmnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetIncomeFromGamingGrp/TotalRevenueColumnAmt 
 
     InvstmntIncm_TtlRvnClmnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/InvestmentIncomeGrp/TotalRevenueColumnAmt 
 
-    RyltsRvn_RltdOrExmptFncIncmAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/RoyaltiesRevenueGrp/RelatedOrExemptFuncIncomeAmt 
-
     TtlOthPrgrmSrvcRv_RltdOrExmptFncIncmAmt = Column(BigInteger)
     # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/RelatedOrExemptFuncIncomeAmt 
-
-    InvstmntIncm_RltdOrExmptFncIncmAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/InvestmentIncomeGrp/RelatedOrExemptFuncIncomeAmt 
 
     NtGnOrLssInvstmnts_RltdOrExmptFncIncmAmt = Column(BigInteger)
     # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/NetGainOrLossInvestmentsGrp/RelatedOrExemptFuncIncomeAmt 
@@ -991,38 +985,59 @@ class part_viii(Base):
     NtRntlIncmOrLss_RltdOrExmptFncIncmAmt = Column(BigInteger)
     # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/NetRentalIncomeOrLossGrp/RelatedOrExemptFuncIncomeAmt 
 
+    InvstmntIncm_RltdOrExmptFncIncmAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/InvestmentIncomeGrp/RelatedOrExemptFuncIncomeAmt 
+
+    RyltsRvn_RltdOrExmptFncIncmAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/RoyaltiesRevenueGrp/RelatedOrExemptFuncIncomeAmt 
+
     IncmFrmInvstBndPrcds_RltdOrExmptFncIncmAmt = Column(BigInteger)
     # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/RelatedOrExemptFuncIncomeAmt 
-
-    MscRvn_UnrltdBsnssRvnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/MiscellaneousRevenueGrp/UnrelatedBusinessRevenueAmt 
-
-    NtIncmFrmGmng_UnrltdBsnssRvnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetIncomeFromGamingGrp/UnrelatedBusinessRevenueAmt 
-
-    NtRntlIncmOrLss_UnrltdBsnssRvnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetRentalIncomeOrLossGrp/UnrelatedBusinessRevenueAmt 
-
-    NtGnOrLssInvstmnts_UnrltdBsnssRvnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetGainOrLossInvestmentsGrp/UnrelatedBusinessRevenueAmt 
-
-    RyltsRvn_UnrltdBsnssRvnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/RoyaltiesRevenueGrp/UnrelatedBusinessRevenueAmt 
-
-    IncmFrmInvstBndPrcds_UnrltdBsnssRvnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/UnrelatedBusinessRevenueAmt 
-
-    InvstmntIncm_UnrltdBsnssRvnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/InvestmentIncomeGrp/UnrelatedBusinessRevenueAmt 
 
     NtIncmOrLss_UnrltdBsnssRvnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetIncomeOrLossGrp/UnrelatedBusinessRevenueAmt 
 
+    RyltsRvn_UnrltdBsnssRvnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/RoyaltiesRevenueGrp/UnrelatedBusinessRevenueAmt 
+
     TtlOthPrgrmSrvcRv_UnrltdBsnssRvnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/UnrelatedBusinessRevenueAmt 
 
+    MscRvn_UnrltdBsnssRvnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/MiscellaneousRevenueGrp/UnrelatedBusinessRevenueAmt 
+
+    NtGnOrLssInvstmnts_UnrltdBsnssRvnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetGainOrLossInvestmentsGrp/UnrelatedBusinessRevenueAmt 
+
+    IncmFrmInvstBndPrcds_UnrltdBsnssRvnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/UnrelatedBusinessRevenueAmt 
+
+    NtRntlIncmOrLss_UnrltdBsnssRvnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetRentalIncomeOrLossGrp/UnrelatedBusinessRevenueAmt 
+
+    InvstmntIncm_UnrltdBsnssRvnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/InvestmentIncomeGrp/UnrelatedBusinessRevenueAmt 
+
+    NtIncmFrmGmng_UnrltdBsnssRvnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetIncomeFromGamingGrp/UnrelatedBusinessRevenueAmt 
+
+    RyltsRvn_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/RoyaltiesRevenueGrp/ExclusionAmt 
+
+    InvstmntIncm_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/InvestmentIncomeGrp/ExclusionAmt 
+
+    TtlOthPrgrmSrvcRv_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/TotalOthProgramServiceRevGrp/ExclusionAmt 
+
+    NtIncmFrmGmng_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetIncomeFromGamingGrp/ExclusionAmt 
+
     IncmFrmInvstBndPrcds_ExclsnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/IncmFromInvestBondProceedsGrp/ExclusionAmt 
+
+    NtIncmOrLss_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetIncomeOrLossGrp/ExclusionAmt 
 
     MscRvn_ExclsnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/MiscellaneousRevenueGrp/ExclusionAmt 
@@ -1030,23 +1045,8 @@ class part_viii(Base):
     NtGnOrLssInvstmnts_ExclsnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetGainOrLossInvestmentsGrp/ExclusionAmt 
 
-    NtIncmFrmGmng_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetIncomeFromGamingGrp/ExclusionAmt 
-
-    NtIncmOrLss_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetIncomeOrLossGrp/ExclusionAmt 
-
     NtRntlIncmOrLss_ExclsnAmt = Column(BigInteger)
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetRentalIncomeOrLossGrp/ExclusionAmt 
-
-    RyltsRvn_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/RoyaltiesRevenueGrp/ExclusionAmt 
-
-    TtlOthPrgrmSrvcRv_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/TotalOthProgramServiceRevGrp/ExclusionAmt 
-
-    InvstmntIncm_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/InvestmentIncomeGrp/ExclusionAmt 
 
 #######
 #
@@ -1056,7 +1056,7 @@ class part_viii(Base):
 
 class part_ix(Base):
     __tablename__='part_ix'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -1075,44 +1075,20 @@ class part_ix(Base):
     JntCstsInd = Column(String(length=1))
     # Line number:  Part IX Line 26  Description:  Joint costs?  xpath: /IRS990/JointCostsInd 
 
-    PyrllTxs_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PayrollTaxesGrp/TotalAmt 
+    Intrst_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InterestGrp/TotalAmt 
 
-    DprctnDpltn_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/DepreciationDepletionGrp/TotalAmt 
-
-    TtlFnctnlExpnss_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TotalFunctionalExpensesGrp/TotalAmt 
-
-    Insrnc_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InsuranceGrp/TotalAmt 
-
-    FsFrSrvcsAccntng_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesAccountingGrp/TotalAmt 
-
-    PymntsTAfflts_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PaymentsToAffiliatesGrp/TotalAmt 
-
-    Advrtsng_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/AdvertisingGrp/TotalAmt 
+    PnsnPlnCntrbtns_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PensionPlanContributionsGrp/TotalAmt 
 
     Occpncy_TtlAmt = Column(BigInteger)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/OccupancyGrp/TotalAmt 
 
-    FsFrSrvcsLgl_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesLegalGrp/TotalAmt 
-
-    OthrEmplyBnfts_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherEmployeeBenefitsGrp/TotalAmt 
-
     FsFrSrvcsLbbyng_TtlAmt = Column(BigInteger)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesLobbyingGrp/TotalAmt 
 
-    OthrSlrsAndWgs_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherSalariesAndWagesGrp/TotalAmt 
-
-    GrntsTDmstcOrgs_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/GrantsToDomesticOrgsGrp/TotalAmt 
+    TtlFnctnlExpnss_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TotalFunctionalExpensesGrp/TotalAmt 
 
     AllOthrExpnss_TtlAmt = Column(BigInteger)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/AllOtherExpensesGrp/TotalAmt 
@@ -1120,35 +1096,38 @@ class part_ix(Base):
     FsFrSrvcsMngmnt_TtlAmt = Column(BigInteger)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesManagementGrp/TotalAmt 
 
-    OffcExpnss_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OfficeExpensesGrp/TotalAmt 
-
-    BnftsTMmbrs_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/BenefitsToMembersGrp/TotalAmt 
-
-    Rylts_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/RoyaltiesGrp/TotalAmt 
-
-    FsFrSrvcsOthr_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesOtherGrp/TotalAmt 
-
-    PnsnPlnCntrbtns_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PensionPlanContributionsGrp/TotalAmt 
+    PyrllTxs_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PayrollTaxesGrp/TotalAmt 
 
     FsFrSrvcInvstMgmntFs_TtlAmt = Column(BigInteger)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/TotalAmt 
 
+    PymtTrvlEntrtnmntPbOfcl_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/TotalAmt 
+
+    OthrSlrsAndWgs_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherSalariesAndWagesGrp/TotalAmt 
+
+    PymntsTAfflts_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PaymentsToAffiliatesGrp/TotalAmt 
+
+    FsFrSrvcsOthr_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesOtherGrp/TotalAmt 
+
     FrgnGrnts_TtlAmt = Column(BigInteger)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/ForeignGrantsGrp/TotalAmt 
 
-    Intrst_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InterestGrp/TotalAmt 
+    GrntsTDmstcOrgs_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/GrantsToDomesticOrgsGrp/TotalAmt 
 
-    CmpCrrntOfcrDrctrs_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/TotalAmt 
+    GrntsTDmstcIndvdls_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/GrantsToDomesticIndividualsGrp/TotalAmt 
 
-    Trvl_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TravelGrp/TotalAmt 
+    Rylts_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/RoyaltiesGrp/TotalAmt 
+
+    BnftsTMmbrs_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/BenefitsToMembersGrp/TotalAmt 
 
     CmpDsqlPrsns_TtlAmt = Column(BigInteger)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/CompDisqualPersonsGrp/TotalAmt 
@@ -1156,92 +1135,107 @@ class part_ix(Base):
     InfrmtnTchnlgy_TtlAmt = Column(BigInteger)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/InformationTechnologyGrp/TotalAmt 
 
-    PymtTrvlEntrtnmntPbOfcl_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/TotalAmt 
+    CmpCrrntOfcrDrctrs_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/TotalAmt 
 
-    TtlJntCsts_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TotalJointCostsGrp/TotalAmt 
-
-    GrntsTDmstcIndvdls_TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/GrantsToDomesticIndividualsGrp/TotalAmt 
+    DprctnDpltn_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/DepreciationDepletionGrp/TotalAmt 
 
     CnfrncsMtngs_TtlAmt = Column(BigInteger)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/ConferencesMeetingsGrp/TotalAmt 
 
-    FrgnGrnts_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/ForeignGrantsGrp/ProgramServicesAmt 
+    Trvl_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TravelGrp/TotalAmt 
 
-    GrntsTDmstcIndvdls_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/GrantsToDomesticIndividualsGrp/ProgramServicesAmt 
+    Advrtsng_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/AdvertisingGrp/TotalAmt 
 
-    GrntsTDmstcOrgs_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/GrantsToDomesticOrgsGrp/ProgramServicesAmt 
+    OffcExpnss_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OfficeExpensesGrp/TotalAmt 
 
-    OffcExpnss_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OfficeExpensesGrp/ProgramServicesAmt 
+    Insrnc_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InsuranceGrp/TotalAmt 
 
-    Insrnc_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InsuranceGrp/ProgramServicesAmt 
+    OthrEmplyBnfts_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherEmployeeBenefitsGrp/TotalAmt 
 
-    Intrst_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InterestGrp/ProgramServicesAmt 
+    FsFrSrvcsLgl_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesLegalGrp/TotalAmt 
 
-    Occpncy_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OccupancyGrp/ProgramServicesAmt 
+    TtlJntCsts_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TotalJointCostsGrp/TotalAmt 
 
-    PnsnPlnCntrbtns_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PensionPlanContributionsGrp/ProgramServicesAmt 
+    FsFrSrvcsAccntng_TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesAccountingGrp/TotalAmt 
 
     TtlJntCsts_PrgrmSrvcsAmt = Column(BigInteger)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TotalJointCostsGrp/ProgramServicesAmt 
 
-    OthrSlrsAndWgs_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherSalariesAndWagesGrp/ProgramServicesAmt 
-
-    Advrtsng_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/AdvertisingGrp/ProgramServicesAmt 
-
-    TtlFnctnlExpnss_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TotalFunctionalExpensesGrp/ProgramServicesAmt 
-
-    AllOthrExpnss_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/AllOtherExpensesGrp/ProgramServicesAmt 
-
-    BnftsTMmbrs_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/BenefitsToMembersGrp/ProgramServicesAmt 
-
-    CmpCrrntOfcrDrctrs_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/ProgramServicesAmt 
-
-    Rylts_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/RoyaltiesGrp/ProgramServicesAmt 
-
-    CmpDsqlPrsns_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/CompDisqualPersonsGrp/ProgramServicesAmt 
+    Insrnc_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InsuranceGrp/ProgramServicesAmt 
 
     PymtTrvlEntrtnmntPbOfcl_PrgrmSrvcsAmt = Column(BigInteger)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/ProgramServicesAmt 
 
-    CnfrncsMtngs_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/ConferencesMeetingsGrp/ProgramServicesAmt 
+    BnftsTMmbrs_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/BenefitsToMembersGrp/ProgramServicesAmt 
+
+    OffcExpnss_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OfficeExpensesGrp/ProgramServicesAmt 
 
     DprctnDpltn_PrgrmSrvcsAmt = Column(BigInteger)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/DepreciationDepletionGrp/ProgramServicesAmt 
 
+    Occpncy_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OccupancyGrp/ProgramServicesAmt 
+
     PyrllTxs_PrgrmSrvcsAmt = Column(BigInteger)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PayrollTaxesGrp/ProgramServicesAmt 
+
+    PnsnPlnCntrbtns_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PensionPlanContributionsGrp/ProgramServicesAmt 
+
+    OthrEmplyBnfts_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherEmployeeBenefitsGrp/ProgramServicesAmt 
+
+    Advrtsng_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/AdvertisingGrp/ProgramServicesAmt 
+
+    OthrSlrsAndWgs_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherSalariesAndWagesGrp/ProgramServicesAmt 
+
+    PymntsTAfflts_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PaymentsToAffiliatesGrp/ProgramServicesAmt 
 
     FsFrSrvcsAccntng_PrgrmSrvcsAmt = Column(BigInteger)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesAccountingGrp/ProgramServicesAmt 
 
-    InfrmtnTchnlgy_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InformationTechnologyGrp/ProgramServicesAmt 
+    GrntsTDmstcOrgs_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/GrantsToDomesticOrgsGrp/ProgramServicesAmt 
+
+    AllOthrExpnss_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/AllOtherExpensesGrp/ProgramServicesAmt 
+
+    GrntsTDmstcIndvdls_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/GrantsToDomesticIndividualsGrp/ProgramServicesAmt 
+
+    FsFrSrvcInvstMgmntFs_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/ProgramServicesAmt 
+
+    CmpDsqlPrsns_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/CompDisqualPersonsGrp/ProgramServicesAmt 
+
+    CnfrncsMtngs_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/ConferencesMeetingsGrp/ProgramServicesAmt 
+
+    FrgnGrnts_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/ForeignGrantsGrp/ProgramServicesAmt 
+
+    Trvl_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TravelGrp/ProgramServicesAmt 
 
     FsFrSrvcsLgl_PrgrmSrvcsAmt = Column(BigInteger)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesLegalGrp/ProgramServicesAmt 
-
-    PymntsTAfflts_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PaymentsToAffiliatesGrp/ProgramServicesAmt 
 
     FsFrSrvcsLbbyng_PrgrmSrvcsAmt = Column(BigInteger)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesLobbyingGrp/ProgramServicesAmt 
@@ -1249,32 +1243,50 @@ class part_ix(Base):
     FsFrSrvcsMngmnt_PrgrmSrvcsAmt = Column(BigInteger)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesManagementGrp/ProgramServicesAmt 
 
-    OthrEmplyBnfts_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherEmployeeBenefitsGrp/ProgramServicesAmt 
+    TtlFnctnlExpnss_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TotalFunctionalExpensesGrp/ProgramServicesAmt 
 
-    Trvl_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TravelGrp/ProgramServicesAmt 
+    CmpCrrntOfcrDrctrs_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/ProgramServicesAmt 
 
     FsFrSrvcsOthr_PrgrmSrvcsAmt = Column(BigInteger)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesOtherGrp/ProgramServicesAmt 
 
-    FsFrSrvcInvstMgmntFs_PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/ProgramServicesAmt 
+    InfrmtnTchnlgy_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InformationTechnologyGrp/ProgramServicesAmt 
 
-    Insrnc_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InsuranceGrp/ManagementAndGeneralAmt 
+    Rylts_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/RoyaltiesGrp/ProgramServicesAmt 
 
-    PnsnPlnCntrbtns_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PensionPlanContributionsGrp/ManagementAndGeneralAmt 
+    Intrst_PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InterestGrp/ProgramServicesAmt 
+
+    FsFrSrvcsMngmnt_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesManagementGrp/ManagementAndGeneralAmt 
+
+    CmpCrrntOfcrDrctrs_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/ManagementAndGeneralAmt 
 
     FsFrSrvcInvstMgmntFs_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/ManagementAndGeneralAmt 
 
-    InfrmtnTchnlgy_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InformationTechnologyGrp/ManagementAndGeneralAmt 
+    Insrnc_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InsuranceGrp/ManagementAndGeneralAmt 
 
-    OthrSlrsAndWgs_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherSalariesAndWagesGrp/ManagementAndGeneralAmt 
+    Intrst_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InterestGrp/ManagementAndGeneralAmt 
+
+    FsFrSrvcsAccntng_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesAccountingGrp/ManagementAndGeneralAmt 
+
+    OthrEmplyBnfts_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherEmployeeBenefitsGrp/ManagementAndGeneralAmt 
+
+    PnsnPlnCntrbtns_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PensionPlanContributionsGrp/ManagementAndGeneralAmt 
+
+    TtlFnctnlExpnss_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/TotalFunctionalExpensesGrp/ManagementAndGeneralAmt 
 
     Advrtsng_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/AdvertisingGrp/ManagementAndGeneralAmt 
@@ -1282,20 +1294,11 @@ class part_ix(Base):
     AllOthrExpnss_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/AllOtherExpensesGrp/ManagementAndGeneralAmt 
 
-    CmpCrrntOfcrDrctrs_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/ManagementAndGeneralAmt 
-
     CmpDsqlPrsns_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/CompDisqualPersonsGrp/ManagementAndGeneralAmt 
 
-    CnfrncsMtngs_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/ConferencesMeetingsGrp/ManagementAndGeneralAmt 
-
     DprctnDpltn_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/DepreciationDepletionGrp/ManagementAndGeneralAmt 
-
-    FsFrSrvcsAccntng_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesAccountingGrp/ManagementAndGeneralAmt 
 
     FsFrSrvcsLgl_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesLegalGrp/ManagementAndGeneralAmt 
@@ -1303,26 +1306,20 @@ class part_ix(Base):
     FsFrSrvcsLbbyng_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesLobbyingGrp/ManagementAndGeneralAmt 
 
-    FsFrSrvcsMngmnt_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesManagementGrp/ManagementAndGeneralAmt 
-
     FsFrSrvcsOthr_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesOtherGrp/ManagementAndGeneralAmt 
 
-    Intrst_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InterestGrp/ManagementAndGeneralAmt 
-
-    Occpncy_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OccupancyGrp/ManagementAndGeneralAmt 
+    InfrmtnTchnlgy_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InformationTechnologyGrp/ManagementAndGeneralAmt 
 
     OffcExpnss_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OfficeExpensesGrp/ManagementAndGeneralAmt 
 
-    OthrEmplyBnfts_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherEmployeeBenefitsGrp/ManagementAndGeneralAmt 
+    Occpncy_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OccupancyGrp/ManagementAndGeneralAmt 
 
-    PymntsTAfflts_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PaymentsToAffiliatesGrp/ManagementAndGeneralAmt 
+    OthrSlrsAndWgs_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherSalariesAndWagesGrp/ManagementAndGeneralAmt 
 
     PyrllTxs_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PayrollTaxesGrp/ManagementAndGeneralAmt 
@@ -1333,62 +1330,41 @@ class part_ix(Base):
     Rylts_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/RoyaltiesGrp/ManagementAndGeneralAmt 
 
-    TtlFnctnlExpnss_MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/TotalFunctionalExpensesGrp/ManagementAndGeneralAmt 
-
     TtlJntCsts_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/TotalJointCostsGrp/ManagementAndGeneralAmt 
 
     Trvl_MngmntAndGnrlAmt = Column(BigInteger)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/TravelGrp/ManagementAndGeneralAmt 
 
-    FsFrSrvcsMngmnt_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesManagementGrp/FundraisingAmt 
+    CnfrncsMtngs_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/ConferencesMeetingsGrp/ManagementAndGeneralAmt 
 
-    PymntsTAfflts_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PaymentsToAffiliatesGrp/FundraisingAmt 
-
-    Trvl_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TravelGrp/FundraisingAmt 
-
-    FsFrSrvcsLbbyng_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesLobbyingGrp/FundraisingAmt 
-
-    FsFrSrvcsLgl_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesLegalGrp/FundraisingAmt 
-
-    PyrllTxs_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PayrollTaxesGrp/FundraisingAmt 
-
-    OthrEmplyBnfts_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherEmployeeBenefitsGrp/FundraisingAmt 
-
-    FsFrSrvcsAccntng_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesAccountingGrp/FundraisingAmt 
-
-    DprctnDpltn_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/DepreciationDepletionGrp/FundraisingAmt 
+    PymntsTAfflts_MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PaymentsToAffiliatesGrp/ManagementAndGeneralAmt 
 
     PymtTrvlEntrtnmntPbOfcl_FndrsngAmt = Column(BigInteger)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/FundraisingAmt 
 
-    Advrtsng_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/AdvertisingGrp/FundraisingAmt 
+    AllOthrExpnss_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/AllOtherExpensesGrp/FundraisingAmt 
 
-    CnfrncsMtngs_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/ConferencesMeetingsGrp/FundraisingAmt 
+    OffcExpnss_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OfficeExpensesGrp/FundraisingAmt 
 
     Rylts_FndrsngAmt = Column(BigInteger)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/RoyaltiesGrp/FundraisingAmt 
 
-    PnsnPlnCntrbtns_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PensionPlanContributionsGrp/FundraisingAmt 
+    Advrtsng_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/AdvertisingGrp/FundraisingAmt 
 
-    CmpDsqlPrsns_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/CompDisqualPersonsGrp/FundraisingAmt 
+    Intrst_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InterestGrp/FundraisingAmt 
 
-    CmpCrrntOfcrDrctrs_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/FundraisingAmt 
+    InfrmtnTchnlgy_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InformationTechnologyGrp/FundraisingAmt 
+
+    FsFrSrvcsOthr_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesOtherGrp/FundraisingAmt 
 
     TtlFnctnlExpnss_FndrsngAmt = Column(BigInteger)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TotalFunctionalExpensesGrp/FundraisingAmt 
@@ -1396,32 +1372,56 @@ class part_ix(Base):
     FsFrSrvcInvstMgmntFs_FndrsngAmt = Column(BigInteger)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/FundraisingAmt 
 
-    Occpncy_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OccupancyGrp/FundraisingAmt 
-
-    Intrst_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InterestGrp/FundraisingAmt 
-
-    OffcExpnss_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OfficeExpensesGrp/FundraisingAmt 
-
-    AllOthrExpnss_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/AllOtherExpensesGrp/FundraisingAmt 
-
-    Insrnc_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InsuranceGrp/FundraisingAmt 
-
-    InfrmtnTchnlgy_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InformationTechnologyGrp/FundraisingAmt 
+    FsFrSrvcsMngmnt_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesManagementGrp/FundraisingAmt 
 
     TtlJntCsts_FndrsngAmt = Column(BigInteger)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TotalJointCostsGrp/FundraisingAmt 
 
-    FsFrSrvcsOthr_FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesOtherGrp/FundraisingAmt 
+    CmpCrrntOfcrDrctrs_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/FundraisingAmt 
+
+    FsFrSrvcsLbbyng_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesLobbyingGrp/FundraisingAmt 
+
+    FsFrSrvcsAccntng_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesAccountingGrp/FundraisingAmt 
+
+    Trvl_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TravelGrp/FundraisingAmt 
+
+    Insrnc_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InsuranceGrp/FundraisingAmt 
+
+    FsFrSrvcsLgl_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesLegalGrp/FundraisingAmt 
+
+    DprctnDpltn_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/DepreciationDepletionGrp/FundraisingAmt 
+
+    CnfrncsMtngs_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/ConferencesMeetingsGrp/FundraisingAmt 
+
+    PymntsTAfflts_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PaymentsToAffiliatesGrp/FundraisingAmt 
+
+    PyrllTxs_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PayrollTaxesGrp/FundraisingAmt 
+
+    PnsnPlnCntrbtns_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PensionPlanContributionsGrp/FundraisingAmt 
+
+    OthrEmplyBnfts_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherEmployeeBenefitsGrp/FundraisingAmt 
+
+    CmpDsqlPrsns_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/CompDisqualPersonsGrp/FundraisingAmt 
 
     OthrSlrsAndWgs_FndrsngAmt = Column(BigInteger)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherSalariesAndWagesGrp/FundraisingAmt 
+
+    Occpncy_FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OccupancyGrp/FundraisingAmt 
 
 #######
 #
@@ -1431,7 +1431,7 @@ class part_ix(Base):
 
 class part_x(Base):
     __tablename__='part_x'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -1662,7 +1662,7 @@ class part_x(Base):
 
 class part_xi(Base):
     __tablename__='part_xi'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -1695,7 +1695,7 @@ class part_xi(Base):
 
 class part_xii(Base):
     __tablename__='part_xii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -1746,6 +1746,78 @@ class part_xii(Base):
 
 #######
 #
+# IRS990 - OtherExpensesGrp
+# A repeating structure from  Part IX Functional Expense 
+#
+#######
+
+class OthrExpnss(Base):
+    __tablename__='OthrExpnss'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    Dsc = Column(String(length=100))
+    # Line number:  Part IX Line 24a - 24d  Description:  Description  xpath: /IRS990/OtherExpensesGrp/Desc 
+
+    TtlAmt = Column(BigInteger)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherExpensesGrp/TotalAmt 
+
+    PrgrmSrvcsAmt = Column(BigInteger)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherExpensesGrp/ProgramServicesAmt 
+
+    MngmntAndGnrlAmt = Column(BigInteger)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherExpensesGrp/ManagementAndGeneralAmt 
+
+    FndrsngAmt = Column(BigInteger)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherExpensesGrp/FundraisingAmt 
+
+#######
+#
+# IRS990 - ProgSrvcAccomActyOtherGrp
+# A repeating structure from  Part III Program Service Accomplishments 
+#
+#######
+
+class PrgSrvcAccmActyOthr(Base):
+    __tablename__='PrgSrvcAccmActyOthr'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    ActvtyCd = Column(BigInteger)
+    # Line number:  Part III  Description:  Activity code  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/ActivityCd 
+
+    ExpnsAmt = Column(BigInteger)
+    # Line number:  Part III  Description:  Expense  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/ExpenseAmt 
+
+    GrntAmt = Column(BigInteger)
+    # Line number:  Part III  Description:  Grants  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/GrantAmt 
+
+    RvnAmt = Column(BigInteger)
+    # Line number:  Part III  Description:  Revenue  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/RevenueAmt 
+
+    Dsc = Column(Text)
+    # Line number:  Part III  Description:  Description  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/Desc 
+
+#######
+#
+# IRS990 - ForeignCountryCd
+# A repeating structure from  Part V Other Filings 
+#
+#######
+
+class FrgnCntryCd(Base):
+    __tablename__='FrgnCntryCd'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    FrgnCntryCd = Column(String(length=2))
+    # Line number:  Part V Line 4b  Description:  Name of foreign country  xpath: /IRS990/ForeignCountryCd 
+
+#######
+#
 # IRS990 - Form990PartVIISectionAGrp
 # A repeating structure from  Part VII Compensation 
 #
@@ -1753,7 +1825,7 @@ class part_xii(Base):
 
 class Frm990PrtVIISctnA(Base):
     __tablename__='Frm990PrtVIISctnA'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -1807,90 +1879,70 @@ class Frm990PrtVIISctnA(Base):
 
 #######
 #
-# IRS990 - OtherExpensesGrp
-# A repeating structure from  Part IX Functional Expense 
+# IRS990 - ContractorCompensationGrp
+# A repeating structure from  Part VII Compensation 
 #
 #######
 
-class OthrExpnss(Base):
-    __tablename__='OthrExpnss'
-    return_id = Column(String(31))
+class CntrctrCmpnstn(Base):
+    __tablename__='CntrctrCmpnstn'
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
-    Dsc = Column(String(length=100))
-    # Line number:  Part IX Line 24a - 24d  Description:  Description  xpath: /IRS990/OtherExpensesGrp/Desc 
+    CntrctrCmpnstn_CntrctrNm = Column(Text)
+    # Line number:  Part VII Section B  Description:  Name of contractor  xpath: /IRS990/ContractorCompensationGrp/ContractorName 
 
-    TtlAmt = Column(BigInteger)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherExpensesGrp/TotalAmt 
+    CntrctrNm_PrsnNm = Column(String(length=35))
+    # Line number:  Part VII Section B Line 1(A)  Description:  Name - Person  xpath: /IRS990/ContractorCompensationGrp/ContractorName/PersonNm 
 
-    PrgrmSrvcsAmt = Column(BigInteger)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherExpensesGrp/ProgramServicesAmt 
+    BsnssNm_BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part VII Section B Line 1(A)  Description:  Business name line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorName/BusinessName/BusinessNameLine2Txt 
 
-    MngmntAndGnrlAmt = Column(BigInteger)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherExpensesGrp/ManagementAndGeneralAmt 
+    BsnssNm_BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part VII Section B Line 1(A)  Description:  Business name line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorName/BusinessName/BusinessNameLine1Txt 
 
-    FndrsngAmt = Column(BigInteger)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherExpensesGrp/FundraisingAmt 
+    CntrctrCmpnstn_CntrctrAddrss = Column(Text)
+    # Line number:  Part VII Section B  Description:  Address of contractor  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress 
 
-#######
-#
-# IRS990 - OtherRevenueMiscGrp
-# A repeating structure from  Part VIII Revenue 
-#
-#######
+    USAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/AddressLine1Txt 
 
-class OthrRvnMsc(Base):
-    __tablename__='OthrRvnMsc'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
+    USAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part VII Section B Line 1(A)  Description:  ZIP code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/ZIPCd 
 
-    Dsc = Column(String(length=100))
-    # Line number:  Part VIII Line 11a 11b 11c  Description:  Description  xpath: /IRS990/OtherRevenueMiscGrp/Desc 
+    USAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part VII Section B Line 1(A)  Description:  State  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/StateAbbreviationCd 
 
-    TtlRvnClmnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/OtherRevenueMiscGrp/TotalRevenueColumnAmt 
+    USAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/CityNm 
 
-    RltdOrExmptFncIncmAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/OtherRevenueMiscGrp/RelatedOrExemptFuncIncomeAmt 
+    USAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/AddressLine2Txt 
 
-    UnrltdBsnssRvnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/OtherRevenueMiscGrp/UnrelatedBusinessRevenueAmt 
+    FrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Province or state  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/ProvinceOrStateNm 
 
-    ExclsnAmt = Column(BigInteger)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/OtherRevenueMiscGrp/ExclusionAmt 
+    FrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Postal code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/ForeignPostalCd 
 
-    BsnssCd = Column(Text)
-    # Line number:  Part VIII  Description:  Business code  xpath: /IRS990/OtherRevenueMiscGrp/BusinessCd 
+    FrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Part VII Section B Line 1(A)  Description:  Country  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/CountryCd 
 
-#######
-#
-# IRS990 - ProgSrvcAccomActyOtherGrp
-# A repeating structure from  Part III Program Service Accomplishments 
-#
-#######
+    FrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/CityNm 
 
-class PrgSrvcAccmActyOthr(Base):
-    __tablename__='PrgSrvcAccmActyOthr'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
+    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/AddressLine2Txt 
 
-    ActvtyCd = Column(BigInteger)
-    # Line number:  Part III  Description:  Activity code  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/ActivityCd 
+    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/AddressLine1Txt 
 
-    ExpnsAmt = Column(BigInteger)
-    # Line number:  Part III  Description:  Expense  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/ExpenseAmt 
+    CntrctrCmpnstn_SrvcsDsc = Column(String(length=100))
+    # Line number:  Part VII Section B Line 1(B)  Description:  Description of services  xpath: /IRS990/ContractorCompensationGrp/ServicesDesc 
 
-    GrntAmt = Column(BigInteger)
-    # Line number:  Part III  Description:  Grants  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/GrantAmt 
-
-    RvnAmt = Column(BigInteger)
-    # Line number:  Part III  Description:  Revenue  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/RevenueAmt 
-
-    Dsc = Column(Text)
-    # Line number:  Part III  Description:  Description  xpath: /IRS990/ProgSrvcAccomActyOtherGrp/Desc 
+    CntrctrCmpnstn_CmpnstnAmt = Column(BigInteger)
+    # Line number:  Part VII Section B Line 1(C)  Description:  Compensation  xpath: /IRS990/ContractorCompensationGrp/CompensationAmt 
 
 #######
 #
@@ -1901,7 +1953,7 @@ class PrgSrvcAccmActyOthr(Base):
 
 class PrgrmSrvcRvn(Base):
     __tablename__='PrgrmSrvcRvn'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -1925,86 +1977,34 @@ class PrgrmSrvcRvn(Base):
 
 #######
 #
-# IRS990 - ForeignCountryCd
-# A repeating structure from  Part V Other Filings 
+# IRS990 - OtherRevenueMiscGrp
+# A repeating structure from  Part VIII Revenue 
 #
 #######
 
-class FrgnCntryCd(Base):
-    __tablename__='FrgnCntryCd'
-    return_id = Column(String(31))
+class OthrRvnMsc(Base):
+    __tablename__='OthrRvnMsc'
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
-    FrgnCntryCd = Column(String(length=2))
-    # Line number:  Part V Line 4b  Description:  Name of foreign country  xpath: /IRS990/ForeignCountryCd 
+    Dsc = Column(String(length=100))
+    # Line number:  Part VIII Line 11a 11b 11c  Description:  Description  xpath: /IRS990/OtherRevenueMiscGrp/Desc 
 
-#######
-#
-# IRS990 - ContractorCompensationGrp
-# A repeating structure from  Part VII Compensation 
-#
-#######
+    TtlRvnClmnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/OtherRevenueMiscGrp/TotalRevenueColumnAmt 
 
-class CntrctrCmpnstn(Base):
-    __tablename__='CntrctrCmpnstn'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
+    RltdOrExmptFncIncmAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/OtherRevenueMiscGrp/RelatedOrExemptFuncIncomeAmt 
 
-    CntrctrCmpnstn_CntrctrNm = Column(Text)
-    # Line number:  Part VII Section B  Description:  Name of contractor  xpath: /IRS990/ContractorCompensationGrp/ContractorName 
+    UnrltdBsnssRvnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/OtherRevenueMiscGrp/UnrelatedBusinessRevenueAmt 
 
-    CntrctrNm_PrsnNm = Column(String(length=35))
-    # Line number:  Part VII Section B Line 1(A)  Description:  Name - Person  xpath: /IRS990/ContractorCompensationGrp/ContractorName/PersonNm 
+    ExclsnAmt = Column(BigInteger)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/OtherRevenueMiscGrp/ExclusionAmt 
 
-    BsnssNm_BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part VII Section B Line 1(A)  Description:  Business name line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorName/BusinessName/BusinessNameLine2Txt 
-
-    BsnssNm_BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part VII Section B Line 1(A)  Description:  Business name line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorName/BusinessName/BusinessNameLine1Txt 
-
-    CntrctrCmpnstn_CntrctrAddrss = Column(Text)
-    # Line number:  Part VII Section B  Description:  Address of contractor  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress 
-
-    USAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/AddressLine1Txt 
-
-    USAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/AddressLine2Txt 
-
-    USAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/CityNm 
-
-    USAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part VII Section B Line 1(A)  Description:  State  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/StateAbbreviationCd 
-
-    USAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part VII Section B Line 1(A)  Description:  ZIP code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/ZIPCd 
-
-    FrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Part VII Section B Line 1(A)  Description:  Province or state  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/ProvinceOrStateNm 
-
-    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/AddressLine1Txt 
-
-    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/AddressLine2Txt 
-
-    FrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/CityNm 
-
-    FrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Part VII Section B Line 1(A)  Description:  Country  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/CountryCd 
-
-    FrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Part VII Section B Line 1(A)  Description:  Postal code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/ForeignPostalCd 
-
-    CntrctrCmpnstn_SrvcsDsc = Column(String(length=100))
-    # Line number:  Part VII Section B Line 1(B)  Description:  Description of services  xpath: /IRS990/ContractorCompensationGrp/ServicesDesc 
-
-    CntrctrCmpnstn_CmpnstnAmt = Column(BigInteger)
-    # Line number:  Part VII Section B Line 1(C)  Description:  Compensation  xpath: /IRS990/ContractorCompensationGrp/CompensationAmt 
+    BsnssCd = Column(Text)
+    # Line number:  Part VIII  Description:  Business code  xpath: /IRS990/OtherRevenueMiscGrp/BusinessCd 
 
 #######
 #
@@ -2015,7 +2015,7 @@ class CntrctrCmpnstn(Base):
 
 class SttsWhrCpyOfRtrnIsFldCd(Base):
     __tablename__='SttsWhrCpyOfRtrnIsFldCd'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2031,7 +2031,7 @@ class SttsWhrCpyOfRtrnIsFldCd(Base):
 
 class SpclCndtnDsc(Base):
     __tablename__='SpclCndtnDsc'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2046,7 +2046,7 @@ class SpclCndtnDsc(Base):
 
 class ez_part_0(Base):
     __tablename__='ez_part_0'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2118,7 +2118,7 @@ class ez_part_0(Base):
 
 class ez_part_i(Base):
     __tablename__='ez_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2217,7 +2217,7 @@ class ez_part_i(Base):
 
 class ez_part_ii(Base):
     __tablename__='ez_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2271,7 +2271,7 @@ class ez_part_ii(Base):
 
 class ez_part_iii(Base):
     __tablename__='ez_part_iii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2292,7 +2292,7 @@ class ez_part_iii(Base):
 
 class ez_part_iv(Base):
     __tablename__='ez_part_iv'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2307,7 +2307,7 @@ class ez_part_iv(Base):
 
 class ez_part_v(Base):
     __tablename__='ez_part_v'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2457,7 +2457,7 @@ class ez_part_v(Base):
 
 class ez_part_vi(Base):
     __tablename__='ez_part_vi'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2500,12 +2500,150 @@ class ez_part_vi(Base):
 
 class EZSpclCndtnDsc(Base):
     __tablename__='EZSpclCndtnDsc'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
     SpclCndtnDsc = Column(Text)
     # Description:  Special condition description  xpath: /IRS990EZ/SpecialConditionDesc 
+
+#######
+#
+# IRS990EZ - ProgramSrvcAccomplishmentGrp
+# A repeating structure from EZ Part III Program Service Accomplishments 
+#
+#######
+
+class EZPrgrmSrvcAccmplshmnt(Base):
+    __tablename__='EZPrgrmSrvcAccmplshmnt'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    DscrptnPrgrmSrvcAccmTxt = Column(Text)
+    # Line number:  Part III  Description:  Description of program service accomplishments  xpath: /IRS990EZ/ProgramSrvcAccomplishmentGrp/DescriptionProgramSrvcAccomTxt 
+
+    GrntsAndAllctnsAmt = Column(BigInteger)
+    # Line number:  Part III  Description:  Grants and allocations  xpath: /IRS990EZ/ProgramSrvcAccomplishmentGrp/GrantsAndAllocationsAmt 
+
+    FrgnGrntsInd = Column(String(length=1))
+    # Line number:  Part III  Description:  Includes foreign grants?  xpath: /IRS990EZ/ProgramSrvcAccomplishmentGrp/ForeignGrantsInd 
+
+    PrgrmSrvcExpnssAmt = Column(BigInteger)
+    # Line number:  Part III  Description:  Program service expenses  xpath: /IRS990EZ/ProgramSrvcAccomplishmentGrp/ProgramServiceExpensesAmt 
+
+#######
+#
+# IRS990EZ - OfficerDirectorTrusteeEmplGrp
+# A repeating structure from EZ Part IV Compensation 
+#
+#######
+
+class EZOffcrDrctrTrstEmpl(Base):
+    __tablename__='EZOffcrDrctrTrstEmpl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    PrsnNm = Column(Text)
+    # Line number:  Part IV - Column (a)  Description:  Person Name  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/PersonNm 
+
+    BsnssNm = Column(Text)
+    # Line number:  Part IV - Column (a)  Description:  Business Name  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/BusinessName 
+
+    TtlTxt = Column(String(length=100))
+    # Line number:  Part IV - Column (a)  Description:  Title  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/TitleTxt 
+
+    AvrgHrsPrWkDvtdTPsRt = Column(Text)
+    # Line number:  Part IV - Column (b)  Description:  Average Hours per week devoted to position  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/AverageHrsPerWkDevotedToPosRt 
+
+    CmpnstnAmt = Column(BigInteger)
+    # Line number:  Part IV - Column (c)  Description:  Compensation  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/CompensationAmt 
+
+    EmplyBnftPrgrmAmt = Column(BigInteger)
+    # Line number:  Part IV - Column (d)  Description:  Contributions to employee benefit plans and deferred compensation  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/EmployeeBenefitProgramAmt 
+
+    ExpnsAccntOthrAllwncAmt = Column(BigInteger)
+    # Line number:  Part IV - Column (e)  Description:  Expense account and other allowances  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/ExpenseAccountOtherAllwncAmt 
+
+#######
+#
+# IRS990EZ - StatesWhereCopyOfReturnIsFldCd
+# A repeating structure from EZ Part V Other Information 
+#
+#######
+
+class EZSttsWhrCpyOfRtrnIsFldCd(Base):
+    __tablename__='EZSttsWhrCpyOfRtrnIsFldCd'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SttsWhrCpyOfRtrnIsFldCd = Column(String(length=2))
+    # Line number:  Part V Line 41  Description:  States With Which a Copy of This Return is Filed  xpath: /IRS990EZ/StatesWhereCopyOfReturnIsFldCd 
+
+#######
+#
+# IRS990EZ - ForeignFinancialAccountCntryCd
+# A repeating structure from EZ Part V Other Information 
+#
+#######
+
+class EZFrgnFnnclAccntCntryCd(Base):
+    __tablename__='EZFrgnFnnclAccntCntryCd'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    FrgnFnnclAccntCntryCd = Column(String(length=2))
+    # Line number:  Part V Line 42b  Description:  Name of foreign country  xpath: /IRS990EZ/ForeignFinancialAccountCntryCd 
+
+#######
+#
+# IRS990EZ - ForeignOfficeCountryCd
+# A repeating structure from EZ Part V Other Information 
+#
+#######
+
+class EZFrgnOffcCntryCd(Base):
+    __tablename__='EZFrgnOffcCntryCd'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    FrgnOffcCntryCd = Column(String(length=2))
+    # Line number:  Part V Line 42c  Description:  Name of foreign country  xpath: /IRS990EZ/ForeignOfficeCountryCd 
+
+#######
+#
+# IRS990EZ - CompensationHighestPaidEmplGrp
+# A repeating structure from EZ Part VI Section 501(c)(3) Organizations Only 
+#
+#######
+
+class EZCmpnstnHghstPdEmpl(Base):
+    __tablename__='EZCmpnstnHghstPdEmpl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    PrsnNm = Column(Text)
+    # Line number:  Part VI Line 50 Column (a)  Description:  Highest paid employee's name  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/PersonNm 
+
+    TtlTxt = Column(String(length=100))
+    # Line number:  Part VI Line 50 Column (a)  Description:  Title  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/TitleTxt 
+
+    AvrgHrsPrWkRt = Column(Text)
+    # Line number:  Part VI Line 50 Column (b)  Description:  Average hours per week  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/AverageHoursPerWeekRt 
+
+    CmpnstnAmt = Column(BigInteger)
+    # Line number:  Part VI Line 50 Column (c)  Description:  Compensation  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/CompensationAmt 
+
+    EmplyBnftsAmt = Column(BigInteger)
+    # Line number:  Part VI Line 50 Column (d)  Description:  Employee benefits  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/EmployeeBenefitsAmt 
+
+    ExpnsAccntAmt = Column(BigInteger)
+    # Line number:  Part VI Line 50 Column (e)  Description:  Expense Account  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/ExpenseAccountAmt 
 
 #######
 #
@@ -2516,7 +2654,7 @@ class EZSpclCndtnDsc(Base):
 
 class EZCmpnstnOfHghstPdCntrct(Base):
     __tablename__='EZCmpnstnOfHghstPdCntrct'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2567,151 +2705,13 @@ class EZCmpnstnOfHghstPdCntrct(Base):
 
 #######
 #
-# IRS990EZ - ForeignOfficeCountryCd
-# A repeating structure from EZ Part V Other Information 
-#
-#######
-
-class EZFrgnOffcCntryCd(Base):
-    __tablename__='EZFrgnOffcCntryCd'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    FrgnOffcCntryCd = Column(String(length=2))
-    # Line number:  Part V Line 42c  Description:  Name of foreign country  xpath: /IRS990EZ/ForeignOfficeCountryCd 
-
-#######
-#
-# IRS990EZ - ProgramSrvcAccomplishmentGrp
-# A repeating structure from EZ Part III Program Service Accomplishments 
-#
-#######
-
-class EZPrgrmSrvcAccmplshmnt(Base):
-    __tablename__='EZPrgrmSrvcAccmplshmnt'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    DscrptnPrgrmSrvcAccmTxt = Column(Text)
-    # Line number:  Part III  Description:  Description of program service accomplishments  xpath: /IRS990EZ/ProgramSrvcAccomplishmentGrp/DescriptionProgramSrvcAccomTxt 
-
-    GrntsAndAllctnsAmt = Column(BigInteger)
-    # Line number:  Part III  Description:  Grants and allocations  xpath: /IRS990EZ/ProgramSrvcAccomplishmentGrp/GrantsAndAllocationsAmt 
-
-    FrgnGrntsInd = Column(String(length=1))
-    # Line number:  Part III  Description:  Includes foreign grants?  xpath: /IRS990EZ/ProgramSrvcAccomplishmentGrp/ForeignGrantsInd 
-
-    PrgrmSrvcExpnssAmt = Column(BigInteger)
-    # Line number:  Part III  Description:  Program service expenses  xpath: /IRS990EZ/ProgramSrvcAccomplishmentGrp/ProgramServiceExpensesAmt 
-
-#######
-#
-# IRS990EZ - StatesWhereCopyOfReturnIsFldCd
-# A repeating structure from EZ Part V Other Information 
-#
-#######
-
-class EZSttsWhrCpyOfRtrnIsFldCd(Base):
-    __tablename__='EZSttsWhrCpyOfRtrnIsFldCd'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SttsWhrCpyOfRtrnIsFldCd = Column(String(length=2))
-    # Line number:  Part V Line 41  Description:  States With Which a Copy of This Return is Filed  xpath: /IRS990EZ/StatesWhereCopyOfReturnIsFldCd 
-
-#######
-#
-# IRS990EZ - ForeignFinancialAccountCntryCd
-# A repeating structure from EZ Part V Other Information 
-#
-#######
-
-class EZFrgnFnnclAccntCntryCd(Base):
-    __tablename__='EZFrgnFnnclAccntCntryCd'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    FrgnFnnclAccntCntryCd = Column(String(length=2))
-    # Line number:  Part V Line 42b  Description:  Name of foreign country  xpath: /IRS990EZ/ForeignFinancialAccountCntryCd 
-
-#######
-#
-# IRS990EZ - OfficerDirectorTrusteeEmplGrp
-# A repeating structure from EZ Part IV Compensation 
-#
-#######
-
-class EZOffcrDrctrTrstEmpl(Base):
-    __tablename__='EZOffcrDrctrTrstEmpl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    PrsnNm = Column(Text)
-    # Line number:  Part IV - Column (a)  Description:  Person Name  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/PersonNm 
-
-    BsnssNm = Column(Text)
-    # Line number:  Part IV - Column (a)  Description:  Business Name  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/BusinessName 
-
-    TtlTxt = Column(String(length=100))
-    # Line number:  Part IV - Column (a)  Description:  Title  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/TitleTxt 
-
-    AvrgHrsPrWkDvtdTPsRt = Column(Text)
-    # Line number:  Part IV - Column (b)  Description:  Average Hours per week devoted to position  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/AverageHrsPerWkDevotedToPosRt 
-
-    CmpnstnAmt = Column(BigInteger)
-    # Line number:  Part IV - Column (c)  Description:  Compensation  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/CompensationAmt 
-
-    EmplyBnftPrgrmAmt = Column(BigInteger)
-    # Line number:  Part IV - Column (d)  Description:  Contributions to employee benefit plans and deferred compensation  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/EmployeeBenefitProgramAmt 
-
-    ExpnsAccntOthrAllwncAmt = Column(BigInteger)
-    # Line number:  Part IV - Column (e)  Description:  Expense account and other allowances  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/ExpenseAccountOtherAllwncAmt 
-
-#######
-#
-# IRS990EZ - CompensationHighestPaidEmplGrp
-# A repeating structure from EZ Part VI Section 501(c)(3) Organizations Only 
-#
-#######
-
-class EZCmpnstnHghstPdEmpl(Base):
-    __tablename__='EZCmpnstnHghstPdEmpl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    PrsnNm = Column(Text)
-    # Line number:  Part VI Line 50 Column (a)  Description:  Highest paid employee's name  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/PersonNm 
-
-    TtlTxt = Column(String(length=100))
-    # Line number:  Part VI Line 50 Column (a)  Description:  Title  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/TitleTxt 
-
-    AvrgHrsPrWkRt = Column(Text)
-    # Line number:  Part VI Line 50 Column (b)  Description:  Average hours per week  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/AverageHoursPerWeekRt 
-
-    CmpnstnAmt = Column(BigInteger)
-    # Line number:  Part VI Line 50 Column (c)  Description:  Compensation  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/CompensationAmt 
-
-    EmplyBnftsAmt = Column(BigInteger)
-    # Line number:  Part VI Line 50 Column (d)  Description:  Employee benefits  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/EmployeeBenefitsAmt 
-
-    ExpnsAccntAmt = Column(BigInteger)
-    # Line number:  Part VI Line 50 Column (e)  Description:  Expense Account  xpath: /IRS990EZ/CompensationHighestPaidEmplGrp/ExpenseAccountAmt 
-
-#######
-#
 # IRS990PF - PF Part 0 Prefatory material 
 #
 #######
 
 class pf_part_0(Base):
     __tablename__='pf_part_0'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -2762,7 +2762,7 @@ class pf_part_0(Base):
 
 class pf_part_i(Base):
     __tablename__='pf_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3050,7 +3050,7 @@ class pf_part_i(Base):
 
 class pf_part_ii(Base):
     __tablename__='pf_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3353,7 +3353,7 @@ class pf_part_ii(Base):
 
 class pf_part_iii(Base):
     __tablename__='pf_part_iii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3386,7 +3386,7 @@ class pf_part_iii(Base):
 
 class pf_part_iv(Base):
     __tablename__='pf_part_iv'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3407,7 +3407,7 @@ class pf_part_iv(Base):
 
 class pf_part_v(Base):
     __tablename__='pf_part_v'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3491,7 +3491,7 @@ class pf_part_v(Base):
 
 class pf_part_vi(Base):
     __tablename__='pf_part_vi'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3569,7 +3569,7 @@ class pf_part_vi(Base):
 
 class pf_part_viia(Base):
     __tablename__='pf_part_viia'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3698,7 +3698,7 @@ class pf_part_viia(Base):
 
 class pf_part_viib(Base):
     __tablename__='pf_part_viib'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3818,7 +3818,7 @@ class pf_part_viib(Base):
 
 class pf_part_viii(Base):
     __tablename__='pf_part_viii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3845,7 +3845,7 @@ class pf_part_viii(Base):
 
 class pf_part_ixa(Base):
     __tablename__='pf_part_ixa'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3884,7 +3884,7 @@ class pf_part_ixa(Base):
 
 class pf_part_ixb(Base):
     __tablename__='pf_part_ixb'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3917,7 +3917,7 @@ class pf_part_ixb(Base):
 
 class pf_part_x(Base):
     __tablename__='pf_part_x'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -3962,7 +3962,7 @@ class pf_part_x(Base):
 
 class pf_part_xi(Base):
     __tablename__='pf_part_xi'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -4007,7 +4007,7 @@ class pf_part_xi(Base):
 
 class pf_part_xii(Base):
     __tablename__='pf_part_xii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -4046,7 +4046,7 @@ class pf_part_xii(Base):
 
 class pf_part_xiii(Base):
     __tablename__='pf_part_xiii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -4163,7 +4163,7 @@ class pf_part_xiii(Base):
 
 class pf_part_xiv(Base):
     __tablename__='pf_part_xiv'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -4367,7 +4367,7 @@ class pf_part_xiv(Base):
 
 class pf_part_xv(Base):
     __tablename__='pf_part_xv'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -4391,7 +4391,7 @@ class pf_part_xv(Base):
 
 class pf_part_xvia(Base):
     __tablename__='pf_part_xvia'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -4413,11 +4413,32 @@ class pf_part_xvia(Base):
     AnlyssIncmPrdcngActy_TtlIncmPrdcngActyAmt = Column(BigInteger)
     # Line number:  Part XVI-A Line 13  Description:  Total (add line 104, columns (B), (D), and (E))  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/TotalIncomeProducingActyAmt 
 
+    NtRntlIncmPrsnlPrp_BsnssCd = Column(Text)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/BusinessCd 
+
     NtRntlIncmRDbtFncdPrp_BsnssCd = Column(Text)
     # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/BusinessCd 
 
+    NtRntlIncmRNtDbtFncdPrp_BsnssCd = Column(Text)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/BusinessCd 
+
     NtIncmLssFrmSpclEvt_BsnssCd = Column(Text)
     # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/BusinessCd 
+
+    DvAndIntFrmScPrtVII_BsnssCd = Column(Text)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/BusinessCd 
+
+    GnSlsAstOthThnInvntry_BsnssCd = Column(Text)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/BusinessCd 
+
+    OthrInvstmntIncmPrtVII_BsnssCd = Column(Text)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/BusinessCd 
+
+    FsCntrctsFrmGvtAg_BsnssCd = Column(Text)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/BusinessCd 
+
+    IntOnSvAndTmpCshInvst_BsnssCd = Column(Text)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/BusinessCd 
 
     GrssPrftLssSlsOfInvntry_BsnssCd = Column(Text)
     # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/BusinessCd 
@@ -4425,86 +4446,44 @@ class pf_part_xvia(Base):
     MmbrshpDsAndAssmnt_BsnssCd = Column(Text)
     # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/BusinessCd 
 
-    OthrInvstmntIncmPrtVII_BsnssCd = Column(Text)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/BusinessCd 
-
-    NtRntlIncmPrsnlPrp_BsnssCd = Column(Text)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/BusinessCd 
-
-    IntOnSvAndTmpCshInvst_BsnssCd = Column(Text)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/BusinessCd 
-
-    DvAndIntFrmScPrtVII_BsnssCd = Column(Text)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/BusinessCd 
-
-    FsCntrctsFrmGvtAg_BsnssCd = Column(Text)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/BusinessCd 
-
-    GnSlsAstOthThnInvntry_BsnssCd = Column(Text)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/BusinessCd 
-
-    NtRntlIncmRNtDbtFncdPrp_BsnssCd = Column(Text)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/BusinessCd 
-
-    NtRntlIncmRDbtFncdPrp_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/UnrelatedBusinessTaxblIncmAmt 
+    GrssPrftLssSlsOfInvntry_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/UnrelatedBusinessTaxblIncmAmt 
 
     IntOnSvAndTmpCshInvst_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    NtRntlIncmRNtDbtFncdPrp_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/UnrelatedBusinessTaxblIncmAmt 
-
-    GnSlsAstOthThnInvntry_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/UnrelatedBusinessTaxblIncmAmt 
-
-    DvAndIntFrmScPrtVII_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
-
-    FsCntrctsFrmGvtAg_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/UnrelatedBusinessTaxblIncmAmt 
-
-    GrssPrftLssSlsOfInvntry_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/UnrelatedBusinessTaxblIncmAmt 
+    OthrInvstmntIncmPrtVII_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
 
     MmbrshpDsAndAssmnt_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    NtIncmLssFrmSpclEvt_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/UnrelatedBusinessTaxblIncmAmt 
+    GnSlsAstOthThnInvntry_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/UnrelatedBusinessTaxblIncmAmt 
+
+    FsCntrctsFrmGvtAg_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/UnrelatedBusinessTaxblIncmAmt 
 
     NtRntlIncmPrsnlPrp_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    OthrInvstmntIncmPrtVII_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
+    DvAndIntFrmScPrtVII_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    NtRntlIncmRNtDbtFncdPrp_ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/ExclusionCd 
+    NtIncmLssFrmSpclEvt_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    GnSlsAstOthThnInvntry_ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/ExclusionCd 
+    NtRntlIncmRNtDbtFncdPrp_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/UnrelatedBusinessTaxblIncmAmt 
 
-    GrssPrftLssSlsOfInvntry_ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/ExclusionCd 
+    NtRntlIncmRDbtFncdPrp_UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/UnrelatedBusinessTaxblIncmAmt 
 
     IntOnSvAndTmpCshInvst_ExclsnCd = Column(Text)
     # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/ExclusionCd 
 
-    NtIncmLssFrmSpclEvt_ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/ExclusionCd 
-
-    MmbrshpDsAndAssmnt_ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/ExclusionCd 
-
-    OthrInvstmntIncmPrtVII_ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/ExclusionCd 
-
-    NtRntlIncmPrsnlPrp_ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/ExclusionCd 
-
-    NtRntlIncmRDbtFncdPrp_ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/ExclusionCd 
+    GnSlsAstOthThnInvntry_ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/ExclusionCd 
 
     DvAndIntFrmScPrtVII_ExclsnCd = Column(Text)
     # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/ExclusionCd 
@@ -4512,8 +4491,41 @@ class pf_part_xvia(Base):
     FsCntrctsFrmGvtAg_ExclsnCd = Column(Text)
     # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/ExclusionCd 
 
+    MmbrshpDsAndAssmnt_ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/ExclusionCd 
+
+    GrssPrftLssSlsOfInvntry_ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/ExclusionCd 
+
+    NtRntlIncmRNtDbtFncdPrp_ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/ExclusionCd 
+
+    NtRntlIncmPrsnlPrp_ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/ExclusionCd 
+
+    NtIncmLssFrmSpclEvt_ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/ExclusionCd 
+
+    OthrInvstmntIncmPrtVII_ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/ExclusionCd 
+
+    NtRntlIncmRDbtFncdPrp_ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/ExclusionCd 
+
+    GrssPrftLssSlsOfInvntry_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/ExclusionAmt 
+
+    NtRntlIncmPrsnlPrp_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/ExclusionAmt 
+
     MmbrshpDsAndAssmnt_ExclsnAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/ExclusionAmt 
+
+    NtIncmLssFrmSpclEvt_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/ExclusionAmt 
+
+    DvAndIntFrmScPrtVII_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/ExclusionAmt 
 
     GnSlsAstOthThnInvntry_ExclsnAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/ExclusionAmt 
@@ -4524,50 +4536,20 @@ class pf_part_xvia(Base):
     FsCntrctsFrmGvtAg_ExclsnAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/ExclusionAmt 
 
-    GrssPrftLssSlsOfInvntry_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/ExclusionAmt 
-
-    NtRntlIncmRNtDbtFncdPrp_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/ExclusionAmt 
-
-    NtRntlIncmPrsnlPrp_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/ExclusionAmt 
-
     OthrInvstmntIncmPrtVII_ExclsnAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/ExclusionAmt 
 
     IntOnSvAndTmpCshInvst_ExclsnAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/ExclusionAmt 
 
-    DvAndIntFrmScPrtVII_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/ExclusionAmt 
-
-    NtIncmLssFrmSpclEvt_ExclsnAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/ExclusionAmt 
-
-    IntOnSvAndTmpCshInvst_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/RelatedOrExemptFunctionIncmAmt 
-
-    FsCntrctsFrmGvtAg_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/RelatedOrExemptFunctionIncmAmt 
+    NtRntlIncmRNtDbtFncdPrp_ExclsnAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/ExclusionAmt 
 
     NtIncmLssFrmSpclEvt_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/RelatedOrExemptFunctionIncmAmt 
 
-    OthrInvstmntIncmPrtVII_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/RelatedOrExemptFunctionIncmAmt 
-
-    DvAndIntFrmScPrtVII_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/RelatedOrExemptFunctionIncmAmt 
-
     NtRntlIncmPrsnlPrp_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/RelatedOrExemptFunctionIncmAmt 
-
-    GrssPrftLssSlsOfInvntry_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/RelatedOrExemptFunctionIncmAmt 
-
-    GnSlsAstOthThnInvntry_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/RelatedOrExemptFunctionIncmAmt 
 
     NtRntlIncmRNtDbtFncdPrp_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/RelatedOrExemptFunctionIncmAmt 
@@ -4575,8 +4557,26 @@ class pf_part_xvia(Base):
     NtRntlIncmRDbtFncdPrp_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/RelatedOrExemptFunctionIncmAmt 
 
+    FsCntrctsFrmGvtAg_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/RelatedOrExemptFunctionIncmAmt 
+
+    GrssPrftLssSlsOfInvntry_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/RelatedOrExemptFunctionIncmAmt 
+
+    IntOnSvAndTmpCshInvst_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/RelatedOrExemptFunctionIncmAmt 
+
+    DvAndIntFrmScPrtVII_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/RelatedOrExemptFunctionIncmAmt 
+
     MmbrshpDsAndAssmnt_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/RelatedOrExemptFunctionIncmAmt 
+
+    GnSlsAstOthThnInvntry_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/RelatedOrExemptFunctionIncmAmt 
+
+    OthrInvstmntIncmPrtVII_RltdOrExmptFnctnIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/RelatedOrExemptFunctionIncmAmt 
 
 #######
 #
@@ -4586,7 +4586,7 @@ class pf_part_xvia(Base):
 
 class pf_part_xvib(Base):
     __tablename__='pf_part_xvib'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -4601,7 +4601,7 @@ class pf_part_xvib(Base):
 
 class pf_part_xvii(Base):
     __tablename__='pf_part_xvii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -4640,622 +4640,6 @@ class pf_part_xvii(Base):
 
 #######
 #
-# IRS990PF - OrgReportOrRegisterStateCd
-# A repeating structure from PF Part VII-A Statements Regarding Activities 
-#
-#######
-
-class PFOrgRprtOrRgstrSttCd(Base):
-    __tablename__='PFOrgRprtOrRgstrSttCd'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    OrgRprtOrRgstrSttCd = Column(String(length=2))
-    # Line number:  Part VII-A Line 8a  Description:  States Filed With  xpath: /IRS990PF/StatementsRegardingActyGrp/OrgReportOrRegisterStateCd 
-
-#######
-#
-# IRS990PF - OfficerDirTrstKeyEmplGrp
-# A repeating structure from PF Part VIII Compensation 
-#
-#######
-
-class PFOffcrDrTrstKyEmpl(Base):
-    __tablename__='PFOffcrDrTrstKyEmpl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    OffcrDrTrstKyEmplInf_OffcrDrTrstKyEmpl = Column(Text)
-    # Line number:  Part VIII Line 1  Description:  Officer, Director, Trustee, or Key Employee  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp 
-
-    OffcrDrTrstKyEmpl_PrsnNm = Column(Text)
-    # Line number:  Part VIII Line 1(a)  Description:  Person Name  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/PersonNm 
-
-    OffcrDrTrstKyEmpl_BsnssNm = Column(Text)
-    # Line number:  Part VIII Line 1(a)  Description:  Business Name  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/BusinessName 
-
-    USAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part VIII Line 1(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/StateAbbreviationCd 
-
-    USAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part VIII Line 1(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/ZIPCd 
-
-    USAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine1Txt 
-
-    USAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 1(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine2Txt 
-
-    USAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/CityNm 
-
-    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/AddressLine1Txt 
-
-    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 1(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/AddressLine2Txt 
-
-    FrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/CityNm 
-
-    FrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Part VIII Line 1(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/CountryCd 
-
-    FrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Part VIII Line 1(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/ForeignPostalCd 
-
-    FrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Part VIII Line 1(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/ProvinceOrStateNm 
-
-    OffcrDrTrstKyEmpl_TtlTxt = Column(String(length=100))
-    # Line number:  Part VIII Line 1(b)  Description:  Title  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/TitleTxt 
-
-    OffcrDrTrstKyEmpl_AvrgHrsPrWkDvtdTPsRt = Column(Text)
-    # Line number:  Part VIII Line 1(b)  Description:  Average Hours per week devoted to position  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/AverageHrsPerWkDevotedToPosRt 
-
-    OffcrDrTrstKyEmpl_CmpnstnAmt = Column(BigInteger)
-    # Line number:  Part VIII Line 1(c)  Description:  Compensation  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/CompensationAmt 
-
-    OffcrDrTrstKyEmpl_EmplyBnftPrgrmAmt = Column(BigInteger)
-    # Line number:  Part VIII Line 1(d)  Description:  Contributions to employee benefit plans and deferred compensation  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/EmployeeBenefitProgramAmt 
-
-    OffcrDrTrstKyEmpl_ExpnsAccntOthrAllwncAmt = Column(BigInteger)
-    # Line number:  Part VIII Line 1(e)  Description:  Expense account and other allowances  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ExpenseAccountOtherAllwncAmt 
-
-#######
-#
-# IRS990PF - GrantOrContributionPdDurYrGrp
-# A repeating structure from PF Part XV Supplementary Information 
-#
-#######
-
-class PFGrntOrCntrbtnPdDrYr(Base):
-    __tablename__='PFGrntOrCntrbtnPdDrYr'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    GrntOrCntrbtnPdDrYr_RcpntPrsnNm = Column(String(length=35))
-    # Line number:  Part XV Line 3a  Description:  Recipient Person Name  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientPersonNm 
-
-    RcpntBsnssNm_BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part XV Line 3a  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine1Txt 
-
-    RcpntBsnssNm_BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part XV Line 3a  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine2Txt 
-
-    RcpntUSAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part XV Line 3a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/ZIPCd 
-
-    RcpntUSAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine1Txt 
-
-    RcpntUSAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine2Txt 
-
-    RcpntUSAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/CityNm 
-
-    RcpntUSAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part XV Line 3a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/StateAbbreviationCd 
-
-    RcpntFrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/CityNm 
-
-    RcpntFrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Part XV Line 3a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/ForeignPostalCd 
-
-    RcpntFrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Part XV Line 3a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/ProvinceOrStateNm 
-
-    RcpntFrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine2Txt 
-
-    RcpntFrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine1Txt 
-
-    RcpntFrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Part XV Line 3a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/CountryCd 
-
-    GrntOrCntrbtnPdDrYr_RcpntRltnshpTxt = Column(String(length=100))
-    # Line number:  Part XV Line 3a  Description:  Recipient Relationship to Foundation Manager or Substantial Contributor  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientRelationshipTxt 
-
-    GrntOrCntrbtnPdDrYr_RcpntFndtnSttsTxt = Column(String(length=20))
-    # Line number:  Part XV Line 3a  Description:  Recipient's Foundation Status  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientFoundationStatusTxt 
-
-    GrntOrCntrbtnPdDrYr_GrntOrCntrbtnPrpsTxt = Column(Text)
-    # Line number:  Part XV Line 3a  Description:  Purpose of Grant or Contribution  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/GrantOrContributionPurposeTxt 
-
-    GrntOrCntrbtnPdDrYr_Amt = Column(BigInteger)
-    # Line number:  Part XV Line 3a  Description:  Amount  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/Amt 
-
-#######
-#
-# IRS990PF - TransferScheduleDetail
-# A repeating structure from PF Part XVII Transfers, Transactions Relationships With Noncharitable Exempt Organizations 
-#
-#######
-
-class PFTrnsfrSkdDtl(Base):
-    __tablename__='PFTrnsfrSkdDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    LnNmbrTxt = Column(Text)
-    # Line number:  Part XVII Line 1d Column (a)  Description:  Line number  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/LineNumberTxt 
-
-    InvlvdAmt = Column(BigInteger)
-    # Line number:  Part XVII Line 1d Column (b)  Description:  Amount involved  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/InvolvedAmt 
-
-    BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part XVII Line 1d Column (c)  Description:  Business name line 1  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/NoncharitableExemptOrgName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part XVII Line 1d Column (c)  Description:  Business name line 2  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/NoncharitableExemptOrgName/BusinessNameLine2Txt 
-
-    TrnsfrsTrnsAndShrArrngmDsc = Column(Text)
-    # Line number:  Part XVII Line 1d Column (d)  Description:  Description of transfers, transactions, and sharing arrangements  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/TransfersTransAndShrArrngmDesc 
-
-#######
-#
-# IRS990PF - ShareholderManagerNm
-# A repeating structure from PF Part XV Supplementary Information 
-#
-#######
-
-class PFShrhldrMngrNm(Base):
-    __tablename__='PFShrhldrMngrNm'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    ShrhldrMngrNm = Column(String(length=35))
-    # Line number:  Part XV Line 1b  Description:  Shareholder Manager  xpath: /IRS990PF/SupplementaryInformationGrp/ShareholderManagerNm 
-
-#######
-#
-# IRS990PF - CompensationHighestPaidEmplGrp
-# A repeating structure from PF Part VIII Compensation 
-#
-#######
-
-class PFCmpnstnHghstPdEmpl(Base):
-    __tablename__='PFCmpnstnHghstPdEmpl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    OffcrDrTrstKyEmplInf_CmpnstnHghstPdEmpl = Column(Text)
-    # Line number:  Part VIII Line 2  Description:  Compensation of the five highest paid employees other than officers, directors, and trustees  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp 
-
-    CmpnstnHghstPdEmpl_PrsnNm = Column(Text)
-    # Line number:  Part VIII Line 2(a)  Description:  Highest paid employee's name  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/PersonNm 
-
-    CmpnstnHghstPdEmpl_TtlTxt = Column(String(length=20))
-    # Line number:  Part VIII Line 2(b)  Description:  Title  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/TitleTxt 
-
-    CmpnstnHghstPdEmpl_AvrgHrsPrWkDvtdTPsRt = Column(Text)
-    # Line number:  Part VIII Line 2(b)  Description:  Average hours per week  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/AverageHrsPerWkDevotedToPosRt 
-
-    CmpnstnHghstPdEmpl_CmpnstnAmt = Column(BigInteger)
-    # Line number:  Part VIII Line 2(c)  Description:  Compensation  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/CompensationAmt 
-
-    CmpnstnHghstPdEmpl_EmplyBnftsAmt = Column(BigInteger)
-    # Line number:  Part VIII Line 2(d)  Description:  Employee benefits  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/EmployeeBenefitsAmt 
-
-    CmpnstnHghstPdEmpl_ExpnsAccntAmt = Column(BigInteger)
-    # Line number:  Part VIII Line 2(e)  Description:  Expense Account  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ExpenseAccountAmt 
-
-    USAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part VIII Line 2(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/ZIPCd 
-
-    USAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 2(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/AddressLine1Txt 
-
-    USAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 2(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/AddressLine2Txt 
-
-    USAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/CityNm 
-
-    USAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part VIII Line 2(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/StateAbbreviationCd 
-
-    FrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Part VIII Line 2(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/ProvinceOrStateNm 
-
-    FrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Part VIII Line 2(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/ForeignPostalCd 
-
-    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 2(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/AddressLine1Txt 
-
-    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 2(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/AddressLine2Txt 
-
-    FrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Part VIII Line 2(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/CountryCd 
-
-    FrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/CityNm 
-
-#######
-#
-# IRS990PF - OtherRevenueDescribedGrp
-# A repeating structure from PF Part XVI-A Analysis of Income-Producing Activities 
-#
-#######
-
-class PFOthrRvnDscrbd(Base):
-    __tablename__='PFOthrRvnDscrbd'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    Dsc = Column(String(length=100))
-    # Line number:  Part XVI-A Line 11  Description:  Description  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/Desc 
-
-    BsnssCd = Column(Text)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/BusinessCd 
-
-    UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/UnrelatedBusinessTaxblIncmAmt 
-
-    ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/ExclusionCd 
-
-    ExclsnAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/ExclusionAmt 
-
-    RltdOrExmptFnctnIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/RelatedOrExemptFunctionIncmAmt 
-
-#######
-#
-# IRS990PF - SpecialConditionDesc
-# A repeating structure from PF Part 0 Prefatory material 
-#
-#######
-
-class PFSpclCndtnDsc(Base):
-    __tablename__='PFSpclCndtnDsc'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpclCndtnDsc = Column(Text)
-    # Description:  Special condition description  xpath: /IRS990PF/SpecialConditionDesc 
-
-#######
-#
-# IRS990PF - ApplicationSubmissionInfoGrp
-# A repeating structure from PF Part XV Supplementary Information 
-#
-#######
-
-class PFApplctnSbmssnInf(Base):
-    __tablename__='PFApplctnSbmssnInf'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpplmntryInfrmtn_ApplctnSbmssnInf = Column(Text)
-    # xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp 
-
-    ApplctnSbmssnInf_RcpntPrsnNm = Column(String(length=35))
-    # Line number:  Part XV Line 2a  Description:  Name of Person to Receive Applications  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientPersonNm 
-
-    ApplctnSbmssnInf_RcpntPhnNm = Column(String(length=10))
-    # Line number:  Part XV Line 2a  Description:  Phone Number of Person to Receive Applications  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientPhoneNum 
-
-    ApplctnSbmssnInf_RcpntEmlAddrssTxt = Column(String(length=100))
-    # Line number:  Part XV Line 2a  Description:  Recipient Email Address  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientEmailAddressTxt 
-
-    ApplctnSbmssnInf_FrmAndInfAndMtrlsTxt = Column(Text)
-    # Line number:  Part XV Line 2b  Description:  Form and Information and Materials To Include  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/FormAndInfoAndMaterialsTxt 
-
-    ApplctnSbmssnInf_SbmssnDdlnsTxt = Column(String(length=100))
-    # Line number:  Part XV Line 2c  Description:  Subsmission Deadlines  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/SubmissionDeadlinesTxt 
-
-    ApplctnSbmssnInf_RstrctnsOnAwrdsTxt = Column(Text)
-    # Line number:  Part XV Line 2d  Description:  Restrictions on Awards  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RestrictionsOnAwardsTxt 
-
-    RcpntUSAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine2Txt 
-
-    RcpntUSAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/CityNm 
-
-    RcpntUSAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part XV Line 2a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/StateAbbreviationCd 
-
-    RcpntUSAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part XV Line 2a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/ZIPCd 
-
-    RcpntUSAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine1Txt 
-
-    RcpntFrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/CityNm 
-
-    RcpntFrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine1Txt 
-
-    RcpntFrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Part XV Line 2a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/CountryCd 
-
-    RcpntFrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Part XV Line 2a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/ForeignPostalCd 
-
-    RcpntFrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Part XV Line 2a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/ProvinceOrStateNm 
-
-    RcpntFrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine2Txt 
-
-#######
-#
-# IRS990PF - CompensationOfHghstPdCntrctGrp
-# A repeating structure from PF Part VIII Compensation 
-#
-#######
-
-class PFCmpnstnOfHghstPdCntrct(Base):
-    __tablename__='PFCmpnstnOfHghstPdCntrct'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    OffcrDrTrstKyEmplInf_CmpnstnOfHghstPdCntrct = Column(Text)
-    # Line number:  Part VIII Line 3  Description:  Compensation of the five highest paid independent contractors for professional services  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp 
-
-    CmpnstnOfHghstPdCntrct_BsnssNm = Column(Text)
-    # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Business  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/BusinessName 
-
-    CmpnstnOfHghstPdCntrct_PrsnNm = Column(Text)
-    # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Person  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/PersonNm 
-
-    USAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part VIII Line 3(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/ZIPCd 
-
-    USAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part VIII Line 3(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/CityNm 
-
-    USAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 3(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine2Txt 
-
-    USAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 3(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine1Txt 
-
-    USAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part VIII Line 3(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/StateAbbreviationCd 
-
-    FrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Part VIII Line 3(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/ForeignPostalCd 
-
-    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 3(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine1Txt 
-
-    FrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Part VIII Line 3(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/CityNm 
-
-    FrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Part VIII Line 3(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/CountryCd 
-
-    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VIII Line 3(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine2Txt 
-
-    FrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Part VIII Line 3(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/ProvinceOrStateNm 
-
-    CmpnstnOfHghstPdCntrct_SrvcTxt = Column(String(length=100))
-    # Line number:  Part VIII Line 3(b)  Description:  Type of service  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ServiceTypeTxt 
-
-    CmpnstnOfHghstPdCntrct_CmpnstnAmt = Column(BigInteger)
-    # Line number:  Part VIII Line 3(c)  Description:  Compensation  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/CompensationAmt 
-
-#######
-#
-# IRS990PF - RelationshipScheduleDetail
-# A repeating structure from PF Part XVII Transfers, Transactions Relationships With Noncharitable Exempt Organizations 
-#
-#######
-
-class PFRltnshpSkdDtl(Base):
-    __tablename__='PFRltnshpSkdDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part XVII Line 2b Column (a)  Description:  Business name line 1  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationBusinessName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part XVII Line 2b Column (a)  Description:  Business name line 2  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationBusinessName/BusinessNameLine2Txt 
-
-    OrgnztnDsc = Column(String(length=20))
-    # Line number:  Part XVII Line 2b Column (b)  Description:  Type of organization  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationTypeDesc 
-
-    RltnshpDscrptnTxt = Column(Text)
-    # Line number:  Part XVII Line 2b Column (c)  Description:  Description of relationship  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/RelationshipDescriptionTxt 
-
-#######
-#
-# IRS990PF - ContributingManagerNm
-# A repeating structure from PF Part XV Supplementary Information 
-#
-#######
-
-class PFCntrbtngMngrNm(Base):
-    __tablename__='PFCntrbtngMngrNm'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    CntrbtngMngrNm = Column(String(length=35))
-    # Line number:  Part XV Line 1a  Description:  Contributing Manager  xpath: /IRS990PF/SupplementaryInformationGrp/ContributingManagerNm 
-
-#######
-#
-# IRS990PF - RlnOfActyToAccomOfExmptPrpsGrp
-# A repeating structure from PF Part XVI-B Relationship of Activities to the Accomplishment of Exempt Purposes 
-#
-#######
-
-class PFRlnOfActyTAccmOfExmptPrps(Base):
-    __tablename__='PFRlnOfActyTAccmOfExmptPrps'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    RlnOfActyTAccmOfExmptPrps = Column(Text)
-    # Line number:  Part XVI-B  Description:  Relationship of activities to the accomplishment of exempt purposes  xpath: /IRS990PF/RlnOfActyToAccomOfExmptPrpsGrp/RlnOfActyToAccomOfExmptPrpsGrp 
-
-    LnNmbrTxt = Column(Text)
-    # Line number:  Part XVI-B  Description:  Line number  xpath: /IRS990PF/RlnOfActyToAccomOfExmptPrpsGrp/RlnOfActyToAccomOfExmptPrpsGrp/LineNumberTxt 
-
-    RltnshpSttmntTxt = Column(Text)
-    # Line number:  Part XVI-B  Description:  Relationship statement  xpath: /IRS990PF/RlnOfActyToAccomOfExmptPrpsGrp/RlnOfActyToAccomOfExmptPrpsGrp/RelationshipStatementTxt 
-
-#######
-#
-# IRS990PF - ProgramServiceRevPartVIIGrp
-# A repeating structure from PF Part XVI-A Analysis of Income-Producing Activities 
-#
-#######
-
-class PFPrgrmSrvcRvPrtVII(Base):
-    __tablename__='PFPrgrmSrvcRvPrtVII'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    Dsc = Column(String(length=100))
-    # Line number:  Part XVI-A Line 1  Description:  Description  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/Desc 
-
-    BsnssCd = Column(Text)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/BusinessCd 
-
-    UnrltdBsnssTxblIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
-
-    ExclsnCd = Column(Text)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/ExclusionCd 
-
-    ExclsnAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/ExclusionAmt 
-
-    RltdOrExmptFnctnIncmAmt = Column(BigInteger)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/RelatedOrExemptFunctionIncmAmt 
-
-#######
-#
-# IRS990PF - ForeignCountryCd
-# A repeating structure from PF Part VII-A Statements Regarding Activities 
-#
-#######
-
-class PFFrgnCntryCd(Base):
-    __tablename__='PFFrgnCntryCd'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    FrgnCntryCd = Column(String(length=2))
-    # Line number:  Part VII-A Line 16  Description:  Name of foreign country  xpath: /IRS990PF/StatementsRegardingActyGrp/ForeignCountryCd 
-
-#######
-#
-# IRS990PF - GrantOrContriApprvForFutGrp
-# A repeating structure from PF Part XV Supplementary Information 
-#
-#######
-
-class PFGrntOrCntrApprvFrFt(Base):
-    __tablename__='PFGrntOrCntrApprvFrFt'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    GrntOrCntrApprvFrFt_RcpntPrsnNm = Column(String(length=35))
-    # Line number:  Part XV Line 3b  Description:  Recipient Person Name  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientPersonNm 
-
-    RcpntBsnssNm_BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part XV Line 3b  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine1Txt 
-
-    RcpntBsnssNm_BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part XV Line 3b  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine2Txt 
-
-    RcpntUSAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part XV Line 3b  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/StateAbbreviationCd 
-
-    RcpntUSAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part XV Line 3b  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/ZIPCd 
-
-    RcpntUSAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine1Txt 
-
-    RcpntUSAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine2Txt 
-
-    RcpntUSAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/CityNm 
-
-    RcpntFrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine2Txt 
-
-    RcpntFrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Part XV Line 3b  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/CountryCd 
-
-    RcpntFrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Part XV Line 3b  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/ForeignPostalCd 
-
-    RcpntFrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Part XV Line 3b  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/ProvinceOrStateNm 
-
-    RcpntFrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine1Txt 
-
-    RcpntFrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/CityNm 
-
-    GrntOrCntrApprvFrFt_RcpntRltnshpTxt = Column(String(length=100))
-    # Line number:  Part XV Line 3b  Description:  Recipient Relationship to Foundation Manager or Substantial Contributor  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientRelationshipTxt 
-
-    GrntOrCntrApprvFrFt_RcpntFndtnSttsTxt = Column(String(length=20))
-    # Line number:  Part XV Line 3b  Description:  Recipient's Foundation Status  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientFoundationStatusTxt 
-
-    GrntOrCntrApprvFrFt_GrntOrCntrbtnPrpsTxt = Column(Text)
-    # Line number:  Part XV Line 3b  Description:  Purpose of Grant or Contribution  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/GrantOrContributionPurposeTxt 
-
-    GrntOrCntrApprvFrFt_Amt = Column(BigInteger)
-    # Line number:  Part XV Line 3b  Description:  Amount  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/Amt 
-
-#######
-#
 # IRS990PF - CapGainsLossTxInvstIncmGrp
 # A repeating structure from PF Part IV Capital Gains and Losses for Tax on Investment Income 
 #
@@ -5263,7 +4647,7 @@ class PFGrntOrCntrApprvFrFt(Base):
 
 class PFCpGnsLssTxInvstIncm(Base):
     __tablename__='PFCpGnsLssTxInvstIncm'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -5308,13 +4692,629 @@ class PFCpGnsLssTxInvstIncm(Base):
 
 #######
 #
+# IRS990PF - ForeignCountryCd
+# A repeating structure from PF Part VII-A Statements Regarding Activities 
+#
+#######
+
+class PFFrgnCntryCd(Base):
+    __tablename__='PFFrgnCntryCd'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    FrgnCntryCd = Column(String(length=2))
+    # Line number:  Part VII-A Line 16  Description:  Name of foreign country  xpath: /IRS990PF/StatementsRegardingActyGrp/ForeignCountryCd 
+
+#######
+#
+# IRS990PF - OrgReportOrRegisterStateCd
+# A repeating structure from PF Part VII-A Statements Regarding Activities 
+#
+#######
+
+class PFOrgRprtOrRgstrSttCd(Base):
+    __tablename__='PFOrgRprtOrRgstrSttCd'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    OrgRprtOrRgstrSttCd = Column(String(length=2))
+    # Line number:  Part VII-A Line 8a  Description:  States Filed With  xpath: /IRS990PF/StatementsRegardingActyGrp/OrgReportOrRegisterStateCd 
+
+#######
+#
+# IRS990PF - CompensationHighestPaidEmplGrp
+# A repeating structure from PF Part VIII Compensation 
+#
+#######
+
+class PFCmpnstnHghstPdEmpl(Base):
+    __tablename__='PFCmpnstnHghstPdEmpl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    OffcrDrTrstKyEmplInf_CmpnstnHghstPdEmpl = Column(Text)
+    # Line number:  Part VIII Line 2  Description:  Compensation of the five highest paid employees other than officers, directors, and trustees  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp 
+
+    CmpnstnHghstPdEmpl_PrsnNm = Column(Text)
+    # Line number:  Part VIII Line 2(a)  Description:  Highest paid employee's name  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/PersonNm 
+
+    CmpnstnHghstPdEmpl_TtlTxt = Column(String(length=20))
+    # Line number:  Part VIII Line 2(b)  Description:  Title  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/TitleTxt 
+
+    CmpnstnHghstPdEmpl_AvrgHrsPrWkDvtdTPsRt = Column(Text)
+    # Line number:  Part VIII Line 2(b)  Description:  Average hours per week  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/AverageHrsPerWkDevotedToPosRt 
+
+    CmpnstnHghstPdEmpl_CmpnstnAmt = Column(BigInteger)
+    # Line number:  Part VIII Line 2(c)  Description:  Compensation  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/CompensationAmt 
+
+    CmpnstnHghstPdEmpl_EmplyBnftsAmt = Column(BigInteger)
+    # Line number:  Part VIII Line 2(d)  Description:  Employee benefits  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/EmployeeBenefitsAmt 
+
+    CmpnstnHghstPdEmpl_ExpnsAccntAmt = Column(BigInteger)
+    # Line number:  Part VIII Line 2(e)  Description:  Expense Account  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ExpenseAccountAmt 
+
+    USAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 2(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/AddressLine2Txt 
+
+    USAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/CityNm 
+
+    USAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part VIII Line 2(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/ZIPCd 
+
+    USAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 2(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part VIII Line 2(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/StateAbbreviationCd 
+
+    FrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Part VIII Line 2(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/CountryCd 
+
+    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 2(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Part VIII Line 2(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/CityNm 
+
+    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 2(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/AddressLine2Txt 
+
+    FrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Part VIII Line 2(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/ForeignPostalCd 
+
+#######
+#
+# IRS990PF - CompensationOfHghstPdCntrctGrp
+# A repeating structure from PF Part VIII Compensation 
+#
+#######
+
+class PFCmpnstnOfHghstPdCntrct(Base):
+    __tablename__='PFCmpnstnOfHghstPdCntrct'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    OffcrDrTrstKyEmplInf_CmpnstnOfHghstPdCntrct = Column(Text)
+    # Line number:  Part VIII Line 3  Description:  Compensation of the five highest paid independent contractors for professional services  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp 
+
+    CmpnstnOfHghstPdCntrct_BsnssNm = Column(Text)
+    # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Business  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/BusinessName 
+
+    CmpnstnOfHghstPdCntrct_PrsnNm = Column(Text)
+    # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Person  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/PersonNm 
+
+    USAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part VIII Line 3(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/StateAbbreviationCd 
+
+    USAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 3(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 3(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine2Txt 
+
+    USAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part VIII Line 3(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/ZIPCd 
+
+    USAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part VIII Line 3(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/CityNm 
+
+    FrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Part VIII Line 3(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/CityNm 
+
+    FrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Part VIII Line 3(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Part VIII Line 3(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 3(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Part VIII Line 3(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/CountryCd 
+
+    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 3(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine2Txt 
+
+    CmpnstnOfHghstPdCntrct_SrvcTxt = Column(String(length=100))
+    # Line number:  Part VIII Line 3(b)  Description:  Type of service  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ServiceTypeTxt 
+
+    CmpnstnOfHghstPdCntrct_CmpnstnAmt = Column(BigInteger)
+    # Line number:  Part VIII Line 3(c)  Description:  Compensation  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/CompensationAmt 
+
+#######
+#
+# IRS990PF - OfficerDirTrstKeyEmplGrp
+# A repeating structure from PF Part VIII Compensation 
+#
+#######
+
+class PFOffcrDrTrstKyEmpl(Base):
+    __tablename__='PFOffcrDrTrstKyEmpl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    OffcrDrTrstKyEmplInf_OffcrDrTrstKyEmpl = Column(Text)
+    # Line number:  Part VIII Line 1  Description:  Officer, Director, Trustee, or Key Employee  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp 
+
+    OffcrDrTrstKyEmpl_PrsnNm = Column(Text)
+    # Line number:  Part VIII Line 1(a)  Description:  Person Name  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/PersonNm 
+
+    OffcrDrTrstKyEmpl_BsnssNm = Column(Text)
+    # Line number:  Part VIII Line 1(a)  Description:  Business Name  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/BusinessName 
+
+    USAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part VIII Line 1(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/StateAbbreviationCd 
+
+    USAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part VIII Line 1(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/ZIPCd 
+
+    USAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/CityNm 
+
+    USAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine2Txt 
+
+    FrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Part VIII Line 1(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/CountryCd 
+
+    FrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Part VIII Line 1(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Part VIII Line 1(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/CityNm 
+
+    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/AddressLine2Txt 
+
+    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/AddressLine1Txt 
+
+    OffcrDrTrstKyEmpl_TtlTxt = Column(String(length=100))
+    # Line number:  Part VIII Line 1(b)  Description:  Title  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/TitleTxt 
+
+    OffcrDrTrstKyEmpl_AvrgHrsPrWkDvtdTPsRt = Column(Text)
+    # Line number:  Part VIII Line 1(b)  Description:  Average Hours per week devoted to position  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/AverageHrsPerWkDevotedToPosRt 
+
+    OffcrDrTrstKyEmpl_CmpnstnAmt = Column(BigInteger)
+    # Line number:  Part VIII Line 1(c)  Description:  Compensation  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/CompensationAmt 
+
+    OffcrDrTrstKyEmpl_EmplyBnftPrgrmAmt = Column(BigInteger)
+    # Line number:  Part VIII Line 1(d)  Description:  Contributions to employee benefit plans and deferred compensation  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/EmployeeBenefitProgramAmt 
+
+    OffcrDrTrstKyEmpl_ExpnsAccntOthrAllwncAmt = Column(BigInteger)
+    # Line number:  Part VIII Line 1(e)  Description:  Expense account and other allowances  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ExpenseAccountOtherAllwncAmt 
+
+#######
+#
+# IRS990PF - ApplicationSubmissionInfoGrp
+# A repeating structure from PF Part XV Supplementary Information 
+#
+#######
+
+class PFApplctnSbmssnInf(Base):
+    __tablename__='PFApplctnSbmssnInf'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpplmntryInfrmtn_ApplctnSbmssnInf = Column(Text)
+    # xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp 
+
+    ApplctnSbmssnInf_RcpntPrsnNm = Column(String(length=35))
+    # Line number:  Part XV Line 2a  Description:  Name of Person to Receive Applications  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientPersonNm 
+
+    ApplctnSbmssnInf_RcpntPhnNm = Column(String(length=10))
+    # Line number:  Part XV Line 2a  Description:  Phone Number of Person to Receive Applications  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientPhoneNum 
+
+    ApplctnSbmssnInf_RcpntEmlAddrssTxt = Column(String(length=100))
+    # Line number:  Part XV Line 2a  Description:  Recipient Email Address  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientEmailAddressTxt 
+
+    ApplctnSbmssnInf_FrmAndInfAndMtrlsTxt = Column(Text)
+    # Line number:  Part XV Line 2b  Description:  Form and Information and Materials To Include  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/FormAndInfoAndMaterialsTxt 
+
+    ApplctnSbmssnInf_SbmssnDdlnsTxt = Column(String(length=100))
+    # Line number:  Part XV Line 2c  Description:  Subsmission Deadlines  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/SubmissionDeadlinesTxt 
+
+    ApplctnSbmssnInf_RstrctnsOnAwrdsTxt = Column(Text)
+    # Line number:  Part XV Line 2d  Description:  Restrictions on Awards  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RestrictionsOnAwardsTxt 
+
+    RcpntUSAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine2Txt 
+
+    RcpntUSAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/CityNm 
+
+    RcpntUSAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part XV Line 2a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/ZIPCd 
+
+    RcpntUSAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part XV Line 2a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/StateAbbreviationCd 
+
+    RcpntUSAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine1Txt 
+
+    RcpntFrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Part XV Line 2a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/ProvinceOrStateNm 
+
+    RcpntFrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Part XV Line 2a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/ForeignPostalCd 
+
+    RcpntFrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine1Txt 
+
+    RcpntFrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/CityNm 
+
+    RcpntFrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Part XV Line 2a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/CountryCd 
+
+    RcpntFrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine2Txt 
+
+#######
+#
+# IRS990PF - GrantOrContriApprvForFutGrp
+# A repeating structure from PF Part XV Supplementary Information 
+#
+#######
+
+class PFGrntOrCntrApprvFrFt(Base):
+    __tablename__='PFGrntOrCntrApprvFrFt'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    GrntOrCntrApprvFrFt_RcpntPrsnNm = Column(String(length=35))
+    # Line number:  Part XV Line 3b  Description:  Recipient Person Name  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientPersonNm 
+
+    RcpntBsnssNm_BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part XV Line 3b  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine1Txt 
+
+    RcpntBsnssNm_BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part XV Line 3b  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine2Txt 
+
+    RcpntUSAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/CityNm 
+
+    RcpntUSAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine2Txt 
+
+    RcpntUSAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine1Txt 
+
+    RcpntUSAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part XV Line 3b  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/ZIPCd 
+
+    RcpntUSAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part XV Line 3b  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/StateAbbreviationCd 
+
+    RcpntFrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Part XV Line 3b  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/ForeignPostalCd 
+
+    RcpntFrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine2Txt 
+
+    RcpntFrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Part XV Line 3b  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/CountryCd 
+
+    RcpntFrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/CityNm 
+
+    RcpntFrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine1Txt 
+
+    RcpntFrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Part XV Line 3b  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/ProvinceOrStateNm 
+
+    GrntOrCntrApprvFrFt_RcpntRltnshpTxt = Column(String(length=100))
+    # Line number:  Part XV Line 3b  Description:  Recipient Relationship to Foundation Manager or Substantial Contributor  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientRelationshipTxt 
+
+    GrntOrCntrApprvFrFt_RcpntFndtnSttsTxt = Column(String(length=20))
+    # Line number:  Part XV Line 3b  Description:  Recipient's Foundation Status  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientFoundationStatusTxt 
+
+    GrntOrCntrApprvFrFt_GrntOrCntrbtnPrpsTxt = Column(Text)
+    # Line number:  Part XV Line 3b  Description:  Purpose of Grant or Contribution  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/GrantOrContributionPurposeTxt 
+
+    GrntOrCntrApprvFrFt_Amt = Column(BigInteger)
+    # Line number:  Part XV Line 3b  Description:  Amount  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/Amt 
+
+#######
+#
+# IRS990PF - GrantOrContributionPdDurYrGrp
+# A repeating structure from PF Part XV Supplementary Information 
+#
+#######
+
+class PFGrntOrCntrbtnPdDrYr(Base):
+    __tablename__='PFGrntOrCntrbtnPdDrYr'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    GrntOrCntrbtnPdDrYr_RcpntPrsnNm = Column(String(length=35))
+    # Line number:  Part XV Line 3a  Description:  Recipient Person Name  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientPersonNm 
+
+    RcpntBsnssNm_BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part XV Line 3a  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine2Txt 
+
+    RcpntBsnssNm_BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part XV Line 3a  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine1Txt 
+
+    RcpntUSAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part XV Line 3a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/ZIPCd 
+
+    RcpntUSAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part XV Line 3a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/StateAbbreviationCd 
+
+    RcpntUSAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/CityNm 
+
+    RcpntUSAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine2Txt 
+
+    RcpntUSAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine1Txt 
+
+    RcpntFrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine1Txt 
+
+    RcpntFrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Part XV Line 3a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/ProvinceOrStateNm 
+
+    RcpntFrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Part XV Line 3a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/CountryCd 
+
+    RcpntFrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/CityNm 
+
+    RcpntFrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine2Txt 
+
+    RcpntFrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Part XV Line 3a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/ForeignPostalCd 
+
+    GrntOrCntrbtnPdDrYr_RcpntRltnshpTxt = Column(String(length=100))
+    # Line number:  Part XV Line 3a  Description:  Recipient Relationship to Foundation Manager or Substantial Contributor  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientRelationshipTxt 
+
+    GrntOrCntrbtnPdDrYr_RcpntFndtnSttsTxt = Column(String(length=20))
+    # Line number:  Part XV Line 3a  Description:  Recipient's Foundation Status  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientFoundationStatusTxt 
+
+    GrntOrCntrbtnPdDrYr_GrntOrCntrbtnPrpsTxt = Column(Text)
+    # Line number:  Part XV Line 3a  Description:  Purpose of Grant or Contribution  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/GrantOrContributionPurposeTxt 
+
+    GrntOrCntrbtnPdDrYr_Amt = Column(BigInteger)
+    # Line number:  Part XV Line 3a  Description:  Amount  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/Amt 
+
+#######
+#
+# IRS990PF - ContributingManagerNm
+# A repeating structure from PF Part XV Supplementary Information 
+#
+#######
+
+class PFCntrbtngMngrNm(Base):
+    __tablename__='PFCntrbtngMngrNm'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    CntrbtngMngrNm = Column(String(length=35))
+    # Line number:  Part XV Line 1a  Description:  Contributing Manager  xpath: /IRS990PF/SupplementaryInformationGrp/ContributingManagerNm 
+
+#######
+#
+# IRS990PF - ShareholderManagerNm
+# A repeating structure from PF Part XV Supplementary Information 
+#
+#######
+
+class PFShrhldrMngrNm(Base):
+    __tablename__='PFShrhldrMngrNm'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    ShrhldrMngrNm = Column(String(length=35))
+    # Line number:  Part XV Line 1b  Description:  Shareholder Manager  xpath: /IRS990PF/SupplementaryInformationGrp/ShareholderManagerNm 
+
+#######
+#
+# IRS990PF - OtherRevenueDescribedGrp
+# A repeating structure from PF Part XVI-A Analysis of Income-Producing Activities 
+#
+#######
+
+class PFOthrRvnDscrbd(Base):
+    __tablename__='PFOthrRvnDscrbd'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    Dsc = Column(String(length=100))
+    # Line number:  Part XVI-A Line 11  Description:  Description  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/Desc 
+
+    BsnssCd = Column(Text)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/BusinessCd 
+
+    UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/UnrelatedBusinessTaxblIncmAmt 
+
+    ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/ExclusionCd 
+
+    ExclsnAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/ExclusionAmt 
+
+    RltdOrExmptFnctnIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/RelatedOrExemptFunctionIncmAmt 
+
+#######
+#
+# IRS990PF - ProgramServiceRevPartVIIGrp
+# A repeating structure from PF Part XVI-A Analysis of Income-Producing Activities 
+#
+#######
+
+class PFPrgrmSrvcRvPrtVII(Base):
+    __tablename__='PFPrgrmSrvcRvPrtVII'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    Dsc = Column(String(length=100))
+    # Line number:  Part XVI-A Line 1  Description:  Description  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/Desc 
+
+    BsnssCd = Column(Text)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/BusinessCd 
+
+    UnrltdBsnssTxblIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
+
+    ExclsnCd = Column(Text)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/ExclusionCd 
+
+    ExclsnAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/ExclusionAmt 
+
+    RltdOrExmptFnctnIncmAmt = Column(BigInteger)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/RelatedOrExemptFunctionIncmAmt 
+
+#######
+#
+# IRS990PF - RlnOfActyToAccomOfExmptPrpsGrp
+# A repeating structure from PF Part XVI-B Relationship of Activities to the Accomplishment of Exempt Purposes 
+#
+#######
+
+class PFRlnOfActyTAccmOfExmptPrps(Base):
+    __tablename__='PFRlnOfActyTAccmOfExmptPrps'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    RlnOfActyTAccmOfExmptPrps = Column(Text)
+    # Line number:  Part XVI-B  Description:  Relationship of activities to the accomplishment of exempt purposes  xpath: /IRS990PF/RlnOfActyToAccomOfExmptPrpsGrp/RlnOfActyToAccomOfExmptPrpsGrp 
+
+    LnNmbrTxt = Column(Text)
+    # Line number:  Part XVI-B  Description:  Line number  xpath: /IRS990PF/RlnOfActyToAccomOfExmptPrpsGrp/RlnOfActyToAccomOfExmptPrpsGrp/LineNumberTxt 
+
+    RltnshpSttmntTxt = Column(Text)
+    # Line number:  Part XVI-B  Description:  Relationship statement  xpath: /IRS990PF/RlnOfActyToAccomOfExmptPrpsGrp/RlnOfActyToAccomOfExmptPrpsGrp/RelationshipStatementTxt 
+
+#######
+#
+# IRS990PF - RelationshipScheduleDetail
+# A repeating structure from PF Part XVII Transfers, Transactions Relationships With Noncharitable Exempt Organizations 
+#
+#######
+
+class PFRltnshpSkdDtl(Base):
+    __tablename__='PFRltnshpSkdDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part XVII Line 2b Column (a)  Description:  Business name line 1  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationBusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part XVII Line 2b Column (a)  Description:  Business name line 2  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationBusinessName/BusinessNameLine2Txt 
+
+    OrgnztnDsc = Column(String(length=20))
+    # Line number:  Part XVII Line 2b Column (b)  Description:  Type of organization  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationTypeDesc 
+
+    RltnshpDscrptnTxt = Column(Text)
+    # Line number:  Part XVII Line 2b Column (c)  Description:  Description of relationship  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/RelationshipDescriptionTxt 
+
+#######
+#
+# IRS990PF - TransferScheduleDetail
+# A repeating structure from PF Part XVII Transfers, Transactions Relationships With Noncharitable Exempt Organizations 
+#
+#######
+
+class PFTrnsfrSkdDtl(Base):
+    __tablename__='PFTrnsfrSkdDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    LnNmbrTxt = Column(Text)
+    # Line number:  Part XVII Line 1d Column (a)  Description:  Line number  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/LineNumberTxt 
+
+    InvlvdAmt = Column(BigInteger)
+    # Line number:  Part XVII Line 1d Column (b)  Description:  Amount involved  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/InvolvedAmt 
+
+    BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part XVII Line 1d Column (c)  Description:  Business name line 2  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/NoncharitableExemptOrgName/BusinessNameLine2Txt 
+
+    BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part XVII Line 1d Column (c)  Description:  Business name line 1  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/NoncharitableExemptOrgName/BusinessNameLine1Txt 
+
+    TrnsfrsTrnsAndShrArrngmDsc = Column(Text)
+    # Line number:  Part XVII Line 1d Column (d)  Description:  Description of transfers, transactions, and sharing arrangements  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/TransfersTransAndShrArrngmDesc 
+
+#######
+#
+# IRS990PF - SpecialConditionDesc
+# A repeating structure from PF Part 0 Prefatory material 
+#
+#######
+
+class PFSpclCndtnDsc(Base):
+    __tablename__='PFSpclCndtnDsc'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpclCndtnDsc = Column(Text)
+    # Description:  Special condition description  xpath: /IRS990PF/SpecialConditionDesc 
+
+#######
+#
 # IRS990ScheduleA - ScheduleA Part I Reason for Non-Private Foundation Status 
 #
 #######
 
 class skeda_part_i(Base):
     __tablename__='skeda_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -5340,43 +5340,46 @@ class skeda_part_i(Base):
     # Line number:  Part I Line 8  Description:  A community trust. Section 170(b)(1)(A)(vi)  xpath: /IRS990ScheduleA/CommunityTrustInd 
 
     PblclySpprtdOrg5092Ind = Column(String(length=1))
-    # Line number:  Part I Line 9  Description:  Publicly supported organization 509(a)(2)  xpath: /IRS990ScheduleA/PubliclySupportedOrg509a2Ind 
+    # Line number:  Part I Line 10  Description:  Publicly supported organization 509(a)(2)  xpath: /IRS990ScheduleA/PubliclySupportedOrg509a2Ind 
 
     TstPblcSftyInd = Column(String(length=1))
-    # Line number:  Part I Line 10  Description:  An organization organized and operated to test for public safety. Section 509(a)(4)  xpath: /IRS990ScheduleA/TestPublicSafetyInd 
+    # Line number:  Part I Line 11  Description:  An organization organized and operated to test for public safety. Section 509(a)(4)  xpath: /IRS990ScheduleA/TestPublicSafetyInd 
 
     MdclRsrchOrgnztnInd = Column(String(length=1))
     # Line number:  Part I Line 4  Description:  A medical research organization operated in conjunction with a hospital. Section 170(b)(1)(A)(iii)  xpath: /IRS990ScheduleA/MedicalResearchOrganizationInd 
 
+    AgrcltrlRsrchOrgInd = Column(String(length=1))
+    # Line number:  Part I Line 9  Description:  An agricultural research organization operated in conjunction with college or university. Section 170(b)(1)(A)(ix)  xpath: /IRS990ScheduleA/AgriculturalResearchOrgInd 
+
     SpprtngOrgnztn5093Ind = Column(String(length=1))
-    # Line number:  Part I Line 11  Description:  Supporting organization 509(a)(3)  xpath: /IRS990ScheduleA/SupportingOrganization509a3Ind 
+    # Line number:  Part I Line 12  Description:  Supporting organization 509(a)(3)  xpath: /IRS990ScheduleA/SupportingOrganization509a3Ind 
 
     SpprtngOrg1Ind = Column(String(length=1))
-    # Line number:  Part I Line 11a  Description:  Supporting organization 509(a)(3) - Type 1  xpath: /IRS990ScheduleA/SupportingOrgType1Ind 
+    # Line number:  Part I Line 12a  Description:  Supporting organization 509(a)(3) - Type 1  xpath: /IRS990ScheduleA/SupportingOrgType1Ind 
 
     SpprtngOrg2Ind = Column(String(length=1))
-    # Line number:  Part I Line 11b  Description:  Supporting organization 509(a)(3) - Type 2  xpath: /IRS990ScheduleA/SupportingOrgType2Ind 
+    # Line number:  Part I Line 12b  Description:  Supporting organization 509(a)(3) - Type 2  xpath: /IRS990ScheduleA/SupportingOrgType2Ind 
 
     SpprtngOrg3FncIntInd = Column(String(length=1))
-    # Line number:  Part I Line 11c  Description:  Supporting organization 509(a)(3) - Type 3 functionally integrated  xpath: /IRS990ScheduleA/SupportingOrgType3FuncIntInd 
+    # Line number:  Part I Line 12c  Description:  Supporting organization 509(a)(3) - Type 3 functionally integrated  xpath: /IRS990ScheduleA/SupportingOrgType3FuncIntInd 
 
     SpprtngOrg3NnFncInd = Column(String(length=1))
-    # Line number:  Part I Line 11d  Description:  Supporting organization 509(a)(3) - Type 3 Non-functionally integrated  xpath: /IRS990ScheduleA/SupportingOrgType3NonFuncInd 
+    # Line number:  Part I Line 12d  Description:  Supporting organization 509(a)(3) - Type 3 Non-functionally integrated  xpath: /IRS990ScheduleA/SupportingOrgType3NonFuncInd 
 
     IRSWrttnDtrmntnInd = Column(String(length=1))
-    # Line number:  Part I Line 11e  Description:  Does the organization have a written determination from the IRS that it is a Type I, Type II or Type III supporting organization?  xpath: /IRS990ScheduleA/IRSWrittenDeterminationInd 
+    # Line number:  Part I Line 12e  Description:  Does the organization have a written determination from the IRS that it is a Type I, Type II or Type III supporting organization?  xpath: /IRS990ScheduleA/IRSWrittenDeterminationInd 
 
     SpprtdOrgnztnsCnt = Column(BigInteger)
-    # Line number:  Part I Line 11f  Description:  Number of supported organizations  xpath: /IRS990ScheduleA/SupportedOrganizationsCnt 
+    # Line number:  Part I Line 12f  Description:  Number of supported organizations  xpath: /IRS990ScheduleA/SupportedOrganizationsCnt 
 
     SpprtdOrgnztnsTtlCnt = Column(BigInteger)
-    # Line number:  Part I Line 11g(i), Total  Description:  Total number of supported organizations  xpath: /IRS990ScheduleA/SupportedOrganizationsTotalCnt 
+    # Line number:  Part I Line 12g(i), Total  Description:  Total number of supported organizations  xpath: /IRS990ScheduleA/SupportedOrganizationsTotalCnt 
 
     SpprtSmAmt = Column(BigInteger)
-    # Line number:  Part I Line 11g(v), Total  Description:  Sum of amounts of support  xpath: /IRS990ScheduleA/SupportSumAmt 
+    # Line number:  Part I Line 12g(v), Total  Description:  Sum of amounts of support  xpath: /IRS990ScheduleA/SupportSumAmt 
 
     OthrSpprtSmAmt = Column(BigInteger)
-    # Line number:  Part I Line 11g(vi) Total  Description:  Sum of amounts of other support  xpath: /IRS990ScheduleA/OtherSupportSumAmt 
+    # Line number:  Part I Line 12g(vi) Total  Description:  Sum of amounts of other support  xpath: /IRS990ScheduleA/OtherSupportSumAmt 
 
 #######
 #
@@ -5386,7 +5389,7 @@ class skeda_part_i(Base):
 
 class skeda_part_ii(Base):
     __tablename__='skeda_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -5560,7 +5563,7 @@ class skeda_part_ii(Base):
 
 class skeda_part_iii(Base):
     __tablename__='skeda_part_iii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -5869,7 +5872,7 @@ class skeda_part_iii(Base):
 
 class skeda_part_iv(Base):
     __tablename__='skeda_part_iv'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -5998,7 +6001,7 @@ class skeda_part_iv(Base):
 
 class skeda_part_v(Base):
     __tablename__='skeda_part_v'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6194,6 +6197,9 @@ class skeda_part_v(Base):
     DstrbtnAllctns_UndrdstrbtnsAmt = Column(BigInteger)
     # Line number:  Part V Section E Line 2(ii)  Description:  Underdistributions for years prior to current year  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/UnderdistributionsAmt 
 
+    DstrbtnAllctns_ExcssDstrbtnCyvYr3Amt = Column(BigInteger)
+    # Line number:  Part V Section E Line 3(c)  Description:  Excess distributions carryover - year 3  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessDistributionCyovYr3Amt 
+
     DstrbtnAllctns_ExcssDstrbtnCyvYr2Amt = Column(BigInteger)
     # Line number:  Part V Section E Line 3(d)  Description:  Excess distributions carryover - year 2  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessDistributionCyovYr2Amt 
 
@@ -6233,6 +6239,9 @@ class skeda_part_v(Base):
     DstrbtnAllctns_ExcssDstrCyvTNxtYrAmt = Column(BigInteger)
     # Line number:  Part V Section E Line 7(i)  Description:  Excess distribution carryover to next year  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessDistriCyovToNextYrAmt 
 
+    DstrbtnAllctns_ExcssFrmYr4Amt = Column(BigInteger)
+    # Line number:  Part V Section E Line 8b  Description:  Excess from year 4  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessFromYear4Amt 
+
     DstrbtnAllctns_ExcssFrmYr3Amt = Column(BigInteger)
     # Line number:  Part V Section E Line 8c  Description:  Excess from year 3  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessFromYear3Amt 
 
@@ -6250,7 +6259,7 @@ class skeda_part_v(Base):
 
 class skeda_part_vi(Base):
     __tablename__='skeda_part_vi'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6266,7 +6275,7 @@ class skeda_part_vi(Base):
 
 class SkdAHsptlNmAndAddrss(Base):
     __tablename__='SkdAHsptlNmAndAddrss'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6294,30 +6303,58 @@ class SkdAHsptlNmAndAddrss(Base):
 
 class SkdASpprtdOrgInfrmtn(Base):
     __tablename__='SkdASpprtdOrgInfrmtn'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
     BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part I Line 11g Column (i)  Description:  Business name line 1  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine1Txt 
+    # Line number:  Part I Line 12g Column (i)  Description:  Business name line 1  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine1Txt 
 
     BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part I Line 11g Column (i)  Description:  Business name line 2  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine2Txt 
+    # Line number:  Part I Line 12g Column (i)  Description:  Business name line 2  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine2Txt 
 
     EIN = Column(String(length=9))
-    # Line number:  Part I Line 11g Column (ii)  Description:  EIN of supported organization  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/EIN 
+    # Line number:  Part I Line 12g Column (ii)  Description:  EIN of supported organization  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/EIN 
 
     OrgnztnCd = Column(Text)
-    # Line number:  Part I Line 11g(iii)  Description:  Type of organization  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/OrganizationTypeCd 
+    # Line number:  Part I Line 12g(iii)  Description:  Type of organization  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/OrganizationTypeCd 
 
     GvrnngDcmntLstdInd = Column(String(length=5))
-    # Line number:  Part I Line 11g Column (iv)  Description:  Is the supported organization listed in your governing documents?  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/GoverningDocumentListedInd 
+    # Line number:  Part I Line 12g Column (iv)  Description:  Is the supported organization listed in your governing documents?  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/GoverningDocumentListedInd 
 
     SpprtAmt = Column(BigInteger)
-    # Line number:  Part I Line 11g Column (v)  Description:  Amount of support  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportAmt 
+    # Line number:  Part I Line 12g Column (v)  Description:  Amount of support  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportAmt 
 
     OthrSpprtAmt = Column(BigInteger)
-    # Line number:  Part I Line 11g Column (vi)  Description:  Estimated value of diversion  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/OtherSupportAmt 
+    # Line number:  Part I Line 12g Column (vi)  Description:  Estimated value of diversion  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/OtherSupportAmt 
+
+#######
+#
+# IRS990ScheduleA - AgriculturalNameAndAddressGrp
+# A repeating structure from ScheduleA Part I Reason for Non-Private Foundation Status 
+#
+#######
+
+class SkdAAgrcltrlNmAndAddrss(Base):
+    __tablename__='SkdAAgrcltrlNmAndAddrss'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part I Line 9  Description:  Business name line 1  xpath: /IRS990ScheduleA/AgriculturalNameAndAddressGrp/CollegeUniversityName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part I Line 9  Description:  Business name line 2  xpath: /IRS990ScheduleA/AgriculturalNameAndAddressGrp/CollegeUniversityName/BusinessNameLine2Txt 
+
+    CtyNm = Column(String(length=22))
+    # Line number:  Part I Line 9  Description:  US city or foreign city  xpath: /IRS990ScheduleA/AgriculturalNameAndAddressGrp/CityNm 
+
+    SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part I Line 9  Description:  US address State  xpath: /IRS990ScheduleA/AgriculturalNameAndAddressGrp/StateAbbreviationCd 
+
+    CntryCd = Column(String(length=2))
+    # Line number:  Part I Line 9  Description:  Foreign address Country  xpath: /IRS990ScheduleA/AgriculturalNameAndAddressGrp/CountryCd 
 
 #######
 #
@@ -6328,7 +6365,7 @@ class SkdASpprtdOrgInfrmtn(Base):
 
 class SkdAFrm990SkdAPrtVI(Base):
     __tablename__='SkdAFrm990SkdAPrtVI'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6349,7 +6386,7 @@ class SkdAFrm990SkdAPrtVI(Base):
 
 class skedb_part_0(Base):
     __tablename__='skedb_part_0'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6391,107 +6428,12 @@ class skedb_part_0(Base):
 
 class skedb_part_ii(Base):
     __tablename__='skedb_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
     TtlUndr1000CntrbtnsAmt = Column(BigInteger)
     # Line number:  Part III  Description:  Total of contributions of $1,000 or less  xpath: /IRS990ScheduleB/TotalUnder1000ContributionsAmt 
-
-#######
-#
-# IRS990ScheduleB - NonCashPropertyContributionGrp
-# A repeating structure from ScheduleB Part II - Noncash Property 
-#
-#######
-
-class SkdBNnCshPrprtyCntrbtn(Base):
-    __tablename__='SkdBNnCshPrprtyCntrbtn'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    CntrbtrNm = Column(BigInteger)
-    # Line number:  Part II Column (a)  Description:  Contributor number from Part I  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/ContributorNum 
-
-    NncshPrprtyDsc = Column(String(length=100))
-    # Line number:  Part II Column (b)  Description:  Description of noncash property given  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/NoncashPropertyDesc 
-
-    FrMrktVlAmt = Column(BigInteger)
-    # Line number:  Part II Column (c)  Description:  FMV (or estimate)  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/FairMarketValueAmt 
-
-    RcvdDt = Column(String(length=31))
-    # Line number:  Part II Column (d)  Description:  Date received  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/ReceivedDt 
-
-#######
-#
-# IRS990ScheduleB - CharitableContributionsDetail
-# A repeating structure from ScheduleB Part II - Noncash Property 
-#
-#######
-
-class SkdBChrtblCntrbtnsDtl(Base):
-    __tablename__='SkdBChrtblCntrbtnsDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    ChrtblCntrbtnsDtl_CntrbtrNm = Column(BigInteger)
-    # Line number:  Part III Column (a)  Description:  Contributor number from Part I  xpath: /IRS990ScheduleB/CharitableContributionsDetail/ContributorNum 
-
-    ChrtblCntrbtnsDtl_GftPrpsTxt = Column(String(length=100))
-    # Line number:  Part III Column (b)  Description:  Purpose of gift  xpath: /IRS990ScheduleB/CharitableContributionsDetail/GiftPurposeTxt 
-
-    ChrtblCntrbtnsDtl_GftUsTxt = Column(String(length=100))
-    # Line number:  Part III Column (c)  Description:  Use of gift  xpath: /IRS990ScheduleB/CharitableContributionsDetail/GiftUseTxt 
-
-    ChrtblCntrbtnsDtl_HwGftIsHldDsc = Column(String(length=100))
-    # Line number:  Part III Column (d)  Description:  Description of how gift is held  xpath: /IRS990ScheduleB/CharitableContributionsDetail/HowGiftIsHeldDesc 
-
-    ChrtblCntrbtnsDtl_RlnOfTrnsfrrTTrnsfrTxt = Column(String(length=100))
-    # Line number:  Part III Column (e)  Description:  Relationship of transferor to transferee  xpath: /IRS990ScheduleB/CharitableContributionsDetail/RlnOfTransferorToTransfereeTxt 
-
-    TrnsfrNmBsnss_BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part III Column (e)  Description:  Business name line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameBusiness/BusinessNameLine1Txt 
-
-    TrnsfrNmBsnss_BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part III Column (e)  Description:  Business name line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameBusiness/BusinessNameLine2Txt 
-
-    ChrtblCntrbtnsDtl_TrnsfrNmIndvdl = Column(String(length=35))
-    # Line number:  Part III Column (e)  Description:  Transferee name - Individual  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameIndividual 
-
-    TrnsfrUSAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part III Column (e)  Description:  Address line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/AddressLine1Txt 
-
-    TrnsfrUSAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part III Column (e)  Description:  Address line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/AddressLine2Txt 
-
-    TrnsfrUSAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part III Column (e)  Description:  City  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/CityNm 
-
-    TrnsfrUSAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part III Column (e)  Description:  State  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/StateAbbreviationCd 
-
-    TrnsfrUSAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part III Column (e)  Description:  ZIP code  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/ZIPCd 
-
-    TrnsfrFrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part III Column (e)  Description:  Address line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/AddressLine1Txt 
-
-    TrnsfrFrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part III Column (e)  Description:  Address line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/AddressLine2Txt 
-
-    TrnsfrFrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Part III Column (e)  Description:  City  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/CityNm 
-
-    TrnsfrFrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Part III Column (e)  Description:  Province or state  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/ProvinceOrStateNm 
-
-    TrnsfrFrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Part III Column (e)  Description:  Country  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/CountryCd 
-
-    TrnsfrFrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Part III Column (e)  Description:  Postal code  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/ForeignPostalCd 
 
 #######
 #
@@ -6502,7 +6444,7 @@ class SkdBChrtblCntrbtnsDtl(Base):
 
 class SkdBCntrbtrInfrmtn(Base):
     __tablename__='SkdBCntrbtrInfrmtn'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6568,13 +6510,108 @@ class SkdBCntrbtrInfrmtn(Base):
 
 #######
 #
+# IRS990ScheduleB - NonCashPropertyContributionGrp
+# A repeating structure from ScheduleB Part II - Noncash Property 
+#
+#######
+
+class SkdBNnCshPrprtyCntrbtn(Base):
+    __tablename__='SkdBNnCshPrprtyCntrbtn'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    CntrbtrNm = Column(BigInteger)
+    # Line number:  Part II Column (a)  Description:  Contributor number from Part I  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/ContributorNum 
+
+    NncshPrprtyDsc = Column(String(length=100))
+    # Line number:  Part II Column (b)  Description:  Description of noncash property given  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/NoncashPropertyDesc 
+
+    FrMrktVlAmt = Column(BigInteger)
+    # Line number:  Part II Column (c)  Description:  FMV (or estimate)  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/FairMarketValueAmt 
+
+    RcvdDt = Column(String(length=31))
+    # Line number:  Part II Column (d)  Description:  Date received  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/ReceivedDt 
+
+#######
+#
+# IRS990ScheduleB - CharitableContributionsDetail
+# A repeating structure from ScheduleB Part II - Noncash Property 
+#
+#######
+
+class SkdBChrtblCntrbtnsDtl(Base):
+    __tablename__='SkdBChrtblCntrbtnsDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    ChrtblCntrbtnsDtl_CntrbtrNm = Column(BigInteger)
+    # Line number:  Part III Column (a)  Description:  Contributor number from Part I  xpath: /IRS990ScheduleB/CharitableContributionsDetail/ContributorNum 
+
+    ChrtblCntrbtnsDtl_GftPrpsTxt = Column(String(length=100))
+    # Line number:  Part III Column (b)  Description:  Purpose of gift  xpath: /IRS990ScheduleB/CharitableContributionsDetail/GiftPurposeTxt 
+
+    ChrtblCntrbtnsDtl_GftUsTxt = Column(String(length=100))
+    # Line number:  Part III Column (c)  Description:  Use of gift  xpath: /IRS990ScheduleB/CharitableContributionsDetail/GiftUseTxt 
+
+    ChrtblCntrbtnsDtl_HwGftIsHldDsc = Column(String(length=100))
+    # Line number:  Part III Column (d)  Description:  Description of how gift is held  xpath: /IRS990ScheduleB/CharitableContributionsDetail/HowGiftIsHeldDesc 
+
+    ChrtblCntrbtnsDtl_RlnOfTrnsfrrTTrnsfrTxt = Column(String(length=100))
+    # Line number:  Part III Column (e)  Description:  Relationship of transferor to transferee  xpath: /IRS990ScheduleB/CharitableContributionsDetail/RlnOfTransferorToTransfereeTxt 
+
+    TrnsfrNmBsnss_BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part III Column (e)  Description:  Business name line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameBusiness/BusinessNameLine1Txt 
+
+    TrnsfrNmBsnss_BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part III Column (e)  Description:  Business name line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameBusiness/BusinessNameLine2Txt 
+
+    ChrtblCntrbtnsDtl_TrnsfrNmIndvdl = Column(String(length=35))
+    # Line number:  Part III Column (e)  Description:  Transferee name - Individual  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameIndividual 
+
+    TrnsfrUSAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part III Column (e)  Description:  Address line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/AddressLine1Txt 
+
+    TrnsfrUSAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part III Column (e)  Description:  Address line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/AddressLine2Txt 
+
+    TrnsfrUSAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part III Column (e)  Description:  City  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/CityNm 
+
+    TrnsfrUSAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part III Column (e)  Description:  State  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/StateAbbreviationCd 
+
+    TrnsfrUSAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part III Column (e)  Description:  ZIP code  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/ZIPCd 
+
+    TrnsfrFrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part III Column (e)  Description:  Address line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/AddressLine1Txt 
+
+    TrnsfrFrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part III Column (e)  Description:  Address line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/AddressLine2Txt 
+
+    TrnsfrFrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Part III Column (e)  Description:  City  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/CityNm 
+
+    TrnsfrFrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Part III Column (e)  Description:  Province or state  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/ProvinceOrStateNm 
+
+    TrnsfrFrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Part III Column (e)  Description:  Country  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/CountryCd 
+
+    TrnsfrFrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Part III Column (e)  Description:  Postal code  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/ForeignPostalCd 
+
+#######
+#
 # IRS990ScheduleC - ScheduleC Part 0 Prefatory material 
 #
 #######
 
 class skedc_part_0(Base):
     __tablename__='skedc_part_0'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6616,7 +6653,7 @@ class skedc_part_0(Base):
 
 class skedc_part_iia(Base):
     __tablename__='skedc_part_iia'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6757,7 +6794,7 @@ class skedc_part_iia(Base):
 
 class skedc_part_iib(Base):
     __tablename__='skedc_part_iib'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6832,7 +6869,7 @@ class skedc_part_iib(Base):
 
 class skedc_part_iiia(Base):
     __tablename__='skedc_part_iiia'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6853,7 +6890,7 @@ class skedc_part_iiia(Base):
 
 class skedc_part_iiib(Base):
     __tablename__='skedc_part_iiib'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6880,28 +6917,6 @@ class skedc_part_iiib(Base):
 
 #######
 #
-# IRS990ScheduleC - SupplementalInformationDetail
-# A repeating structure from ScheduleC Part IV : Explanations 
-#
-#######
-
-class SkdCSpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdCSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpplmntlInfrmtnDtl = Column(Text)
-    # Description:  Part IV contents  xpath: /IRS990ScheduleC/SupplementalInformationDetail 
-
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part IV  Description:  Form, part and line number reference  xpath: /IRS990ScheduleC/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = Column(Text)
-    # Line number:  Part IV  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleC/SupplementalInformationDetail/ExplanationTxt 
-
-#######
-#
 # IRS990ScheduleC - Section527PoliticalOrgGrp
 # A repeating structure from ScheduleC Part 0 Prefatory material 
 #
@@ -6909,7 +6924,7 @@ class SkdCSpplmntlInfrmtnDtl(Base):
 
 class SkdCSctn527PltclOrg(Base):
     __tablename__='SkdCSctn527PltclOrg'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -6966,13 +6981,35 @@ class SkdCSctn527PltclOrg(Base):
 
 #######
 #
+# IRS990ScheduleC - SupplementalInformationDetail
+# A repeating structure from ScheduleC Part IV : Explanations 
+#
+#######
+
+class SkdCSpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdCSpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpplmntlInfrmtnDtl = Column(Text)
+    # Description:  Part IV contents  xpath: /IRS990ScheduleC/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part IV  Description:  Form, part and line number reference  xpath: /IRS990ScheduleC/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = Column(Text)
+    # Line number:  Part IV  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleC/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleD - ScheduleD Part I Organizations Maintaining Donor Advised Funds or Other Similar Funds or Accounts 
 #
 #######
 
 class skedd_part_i(Base):
     __tablename__='skedd_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7014,7 +7051,7 @@ class skedd_part_i(Base):
 
 class skedd_part_ii(Base):
     __tablename__='skedd_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7071,7 +7108,7 @@ class skedd_part_ii(Base):
 
 class skedd_part_iii(Base):
     __tablename__='skedd_part_iii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7119,7 +7156,7 @@ class skedd_part_iii(Base):
 
 class skedd_part_iv(Base):
     __tablename__='skedd_part_iv'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7152,7 +7189,7 @@ class skedd_part_iv(Base):
 
 class skedd_part_v(Base):
     __tablename__='skedd_part_v'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7287,7 +7324,7 @@ class skedd_part_v(Base):
 
 class skedd_part_vi(Base):
     __tablename__='skedd_part_vi'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7309,17 +7346,26 @@ class skedd_part_vi(Base):
     Lnd_InvstmntCstOrOthrBssAmt = Column(BigInteger)
     # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/LandGrp/InvestmentCostOrOtherBasisAmt 
 
-    Bldngs_InvstmntCstOrOthrBssAmt = Column(BigInteger)
-    # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/BuildingsGrp/InvestmentCostOrOtherBasisAmt 
+    LshldImprvmnts_InvstmntCstOrOthrBssAmt = Column(BigInteger)
+    # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/LeaseholdImprovementsGrp/InvestmentCostOrOtherBasisAmt 
 
     Eqpmnt_InvstmntCstOrOthrBssAmt = Column(BigInteger)
     # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/EquipmentGrp/InvestmentCostOrOtherBasisAmt 
 
-    LshldImprvmnts_InvstmntCstOrOthrBssAmt = Column(BigInteger)
-    # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/LeaseholdImprovementsGrp/InvestmentCostOrOtherBasisAmt 
+    Bldngs_InvstmntCstOrOthrBssAmt = Column(BigInteger)
+    # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/BuildingsGrp/InvestmentCostOrOtherBasisAmt 
 
     OthrLndBldngs_InvstmntCstOrOthrBssAmt = Column(BigInteger)
     # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/OtherLandBuildingsGrp/InvestmentCostOrOtherBasisAmt 
+
+    Lnd_OthrCstOrOthrBssAmt = Column(BigInteger)
+    # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/LandGrp/OtherCostOrOtherBasisAmt 
+
+    Bldngs_OthrCstOrOthrBssAmt = Column(BigInteger)
+    # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/BuildingsGrp/OtherCostOrOtherBasisAmt 
+
+    Eqpmnt_OthrCstOrOthrBssAmt = Column(BigInteger)
+    # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/EquipmentGrp/OtherCostOrOtherBasisAmt 
 
     LshldImprvmnts_OthrCstOrOthrBssAmt = Column(BigInteger)
     # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/LeaseholdImprovementsGrp/OtherCostOrOtherBasisAmt 
@@ -7327,29 +7373,20 @@ class skedd_part_vi(Base):
     OthrLndBldngs_OthrCstOrOthrBssAmt = Column(BigInteger)
     # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/OtherLandBuildingsGrp/OtherCostOrOtherBasisAmt 
 
-    Bldngs_OthrCstOrOthrBssAmt = Column(BigInteger)
-    # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/BuildingsGrp/OtherCostOrOtherBasisAmt 
-
-    Lnd_OthrCstOrOthrBssAmt = Column(BigInteger)
-    # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/LandGrp/OtherCostOrOtherBasisAmt 
-
-    Eqpmnt_OthrCstOrOthrBssAmt = Column(BigInteger)
-    # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/EquipmentGrp/OtherCostOrOtherBasisAmt 
+    LshldImprvmnts_BkVlAmt = Column(BigInteger)
+    # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/LeaseholdImprovementsGrp/BookValueAmt 
 
     Bldngs_BkVlAmt = Column(BigInteger)
     # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/BuildingsGrp/BookValueAmt 
 
+    Eqpmnt_BkVlAmt = Column(BigInteger)
+    # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/EquipmentGrp/BookValueAmt 
+
     Lnd_BkVlAmt = Column(BigInteger)
     # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/LandGrp/BookValueAmt 
 
-    LshldImprvmnts_BkVlAmt = Column(BigInteger)
-    # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/LeaseholdImprovementsGrp/BookValueAmt 
-
     OthrLndBldngs_BkVlAmt = Column(BigInteger)
     # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/OtherLandBuildingsGrp/BookValueAmt 
-
-    Eqpmnt_BkVlAmt = Column(BigInteger)
-    # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/EquipmentGrp/BookValueAmt 
 
 #######
 #
@@ -7359,7 +7396,7 @@ class skedd_part_vi(Base):
 
 class skedd_part_vii(Base):
     __tablename__='skedd_part_vii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7372,11 +7409,11 @@ class skedd_part_vii(Base):
     FnnclDrvtvs_BkVlAmt = Column(BigInteger)
     # Line number:  Column (b)  Description:  Book value  xpath: /IRS990ScheduleD/FinancialDerivativesGrp/BookValueAmt 
 
-    ClslyHldEqtyIntrsts_MthdVltnCd = Column(Text)
-    # Line number:  Column (c)  Description:  Method of valuation  xpath: /IRS990ScheduleD/CloselyHeldEquityInterestsGrp/MethodValuationCd 
-
     FnnclDrvtvs_MthdVltnCd = Column(Text)
     # Line number:  Column (c)  Description:  Method of valuation  xpath: /IRS990ScheduleD/FinancialDerivativesGrp/MethodValuationCd 
+
+    ClslyHldEqtyIntrsts_MthdVltnCd = Column(Text)
+    # Line number:  Column (c)  Description:  Method of valuation  xpath: /IRS990ScheduleD/CloselyHeldEquityInterestsGrp/MethodValuationCd 
 
 #######
 #
@@ -7386,7 +7423,7 @@ class skedd_part_vii(Base):
 
 class skedd_part_viii(Base):
     __tablename__='skedd_part_viii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7401,7 +7438,7 @@ class skedd_part_viii(Base):
 
 class skedd_part_ix(Base):
     __tablename__='skedd_part_ix'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7416,7 +7453,7 @@ class skedd_part_ix(Base):
 
 class skedd_part_x(Base):
     __tablename__='skedd_part_x'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7437,7 +7474,7 @@ class skedd_part_x(Base):
 
 class skedd_part_xi(Base):
     __tablename__='skedd_part_xi'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7482,7 +7519,7 @@ class skedd_part_xi(Base):
 
 class skedd_part_xii(Base):
     __tablename__='skedd_part_xii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7521,28 +7558,6 @@ class skedd_part_xii(Base):
 
 #######
 #
-# IRS990ScheduleD - OtherSecuritiesGrp
-# A repeating structure from ScheduleD Part VII Investments, Other Securities
-#
-#######
-
-class SkdDOthrScrts(Base):
-    __tablename__='SkdDOthrScrts'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    Dsc = Column(String(length=100))
-    # Line number:  Column (a)  Description:  Description  xpath: /IRS990ScheduleD/OtherSecuritiesGrp/Desc 
-
-    BkVlAmt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Book value  xpath: /IRS990ScheduleD/OtherSecuritiesGrp/BookValueAmt 
-
-    MthdVltnCd = Column(Text)
-    # Line number:  Column (c)  Description:  Method of valuation  xpath: /IRS990ScheduleD/OtherSecuritiesGrp/MethodValuationCd 
-
-#######
-#
 # IRS990ScheduleD - SupplementalInformationDetail
 # A repeating structure from ScheduleD Part XIII Supplemental Information 
 #
@@ -7550,7 +7565,7 @@ class SkdDOthrScrts(Base):
 
 class SkdDSpplmntlInfrmtnDtl(Base):
     __tablename__='SkdDSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7565,6 +7580,28 @@ class SkdDSpplmntlInfrmtnDtl(Base):
 
 #######
 #
+# IRS990ScheduleD - OtherSecuritiesGrp
+# A repeating structure from ScheduleD Part VII Investments, Other Securities
+#
+#######
+
+class SkdDOthrScrts(Base):
+    __tablename__='SkdDOthrScrts'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    Dsc = Column(String(length=100))
+    # Line number:  Column (a)  Description:  Description  xpath: /IRS990ScheduleD/OtherSecuritiesGrp/Desc 
+
+    BkVlAmt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Book value  xpath: /IRS990ScheduleD/OtherSecuritiesGrp/BookValueAmt 
+
+    MthdVltnCd = Column(Text)
+    # Line number:  Column (c)  Description:  Method of valuation  xpath: /IRS990ScheduleD/OtherSecuritiesGrp/MethodValuationCd 
+
+#######
+#
 # IRS990ScheduleD - InvstProgramRelatedOrgGrp
 # A repeating structure from ScheduleD Part VIII Investments - Program Related 
 #
@@ -7572,7 +7609,7 @@ class SkdDSpplmntlInfrmtnDtl(Base):
 
 class SkdDInvstPrgrmRltdOrg(Base):
     __tablename__='SkdDInvstPrgrmRltdOrg'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7587,25 +7624,6 @@ class SkdDInvstPrgrmRltdOrg(Base):
 
 #######
 #
-# IRS990ScheduleD - OtherLiabilitiesOrgGrp
-# A repeating structure from ScheduleD Part X Other Liabilities 
-#
-#######
-
-class SkdDOthrLbltsOrg(Base):
-    __tablename__='SkdDOthrLbltsOrg'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    Dsc = Column(String(length=100))
-    # Line number:  Column (a)  Description:  Description  xpath: /IRS990ScheduleD/OtherLiabilitiesOrgGrp/Desc 
-
-    Amt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Amount  xpath: /IRS990ScheduleD/OtherLiabilitiesOrgGrp/Amt 
-
-#######
-#
 # IRS990ScheduleD - OtherAssetsOrgGrp
 # A repeating structure from ScheduleD Part IX Other Assets 
 #
@@ -7613,7 +7631,7 @@ class SkdDOthrLbltsOrg(Base):
 
 class SkdDOthrAsstsOrg(Base):
     __tablename__='SkdDOthrAsstsOrg'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7625,13 +7643,32 @@ class SkdDOthrAsstsOrg(Base):
 
 #######
 #
+# IRS990ScheduleD - OtherLiabilitiesOrgGrp
+# A repeating structure from ScheduleD Part X Other Liabilities 
+#
+#######
+
+class SkdDOthrLbltsOrg(Base):
+    __tablename__='SkdDOthrLbltsOrg'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    Dsc = Column(String(length=100))
+    # Line number:  Column (a)  Description:  Description  xpath: /IRS990ScheduleD/OtherLiabilitiesOrgGrp/Desc 
+
+    Amt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Amount  xpath: /IRS990ScheduleD/OtherLiabilitiesOrgGrp/Amt 
+
+#######
+#
 # IRS990ScheduleE - ScheduleE Part I 
 #
 #######
 
 class skede_part_i(Base):
     __tablename__='skede_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7698,7 +7735,7 @@ class skede_part_i(Base):
 
 class SkdESpplmntlInfrmtnDtl(Base):
     __tablename__='SkdESpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7719,7 +7756,7 @@ class SkdESpplmntlInfrmtnDtl(Base):
 
 class skedf_part_i(Base):
     __tablename__='skedf_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7761,7 +7798,7 @@ class skedf_part_i(Base):
 
 class skedf_part_ii(Base):
     __tablename__='skedf_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7779,7 +7816,7 @@ class skedf_part_ii(Base):
 
 class skedf_part_iv(Base):
     __tablename__='skedf_part_iv'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7803,65 +7840,6 @@ class skedf_part_iv(Base):
 
 #######
 #
-# IRS990ScheduleF - SupplementalInformationDetail
-# A repeating structure from ScheduleF Part V  Supplemental Information 
-#
-#######
-
-class SkdFSpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdFSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpplmntlInfrmtnDtl = Column(Text)
-    # Description:  Part V contents  xpath: /IRS990ScheduleF/SupplementalInformationDetail 
-
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part V  Description:  Form, part and line number reference  xpath: /IRS990ScheduleF/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = Column(Text)
-    # Line number:  Part V  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleF/SupplementalInformationDetail/ExplanationTxt 
-
-#######
-#
-# IRS990ScheduleF - ForeignIndividualsGrantsGrp
-# A repeating structure from ScheduleF Part III Grants and Other Assistance to Individuals Outside the United States 
-#
-#######
-
-class SkdFFrgnIndvdlsGrnts(Base):
-    __tablename__='SkdFFrgnIndvdlsGrnts'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    OfAssstncTxt = Column(Text)
-    # Line number:  Column (a)  Description:  Type of assistance  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/TypeOfAssistanceTxt 
-
-    RgnTxt = Column(String(length=100))
-    # Line number:  Column (b)  Description:  Region  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/RegionTxt 
-
-    RcpntCnt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Number of recipients  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/RecipientCnt 
-
-    CshGrntAmt = Column(BigInteger)
-    # Line number:  Column (d)  Description:  Amount of cash grant  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/CashGrantAmt 
-
-    MnnrOfCshDsbrsmntTxt = Column(String(length=100))
-    # Line number:  Column (e)  Description:  Manner of cash disbursement  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/MannerOfCashDisbursementTxt 
-
-    NnCshAssstncAmt = Column(BigInteger)
-    # Line number:  Column (f)  Description:  Amount of non-cash assistance  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/NonCashAssistanceAmt 
-
-    DscrptnOfNnCshAsstTxt = Column(Text)
-    # Line number:  Column (g)  Description:  Description of non-cash assistance  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/DescriptionOfNonCashAsstTxt 
-
-    VltnMthdUsdDsc = Column(String(length=100))
-    # Line number:  Column (h)  Description:  Method of valuation  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/ValuationMethodUsedDesc 
-
-#######
-#
 # IRS990ScheduleF - AccountActivitiesOutsideUSGrp
 # A repeating structure from ScheduleF Part I General Activities Outside the U.S. 
 #
@@ -7869,7 +7847,7 @@ class SkdFFrgnIndvdlsGrnts(Base):
 
 class SkdFAccntActvtsOtsdUS(Base):
     __tablename__='SkdFAccntActvtsOtsdUS'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7900,7 +7878,7 @@ class SkdFAccntActvtsOtsdUS(Base):
 
 class SkdFGrntsTOrgOtsdUS(Base):
     __tablename__='SkdFGrntsTOrgOtsdUS'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7927,13 +7905,72 @@ class SkdFGrntsTOrgOtsdUS(Base):
 
 #######
 #
+# IRS990ScheduleF - ForeignIndividualsGrantsGrp
+# A repeating structure from ScheduleF Part III Grants and Other Assistance to Individuals Outside the United States 
+#
+#######
+
+class SkdFFrgnIndvdlsGrnts(Base):
+    __tablename__='SkdFFrgnIndvdlsGrnts'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    OfAssstncTxt = Column(Text)
+    # Line number:  Column (a)  Description:  Type of assistance  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/TypeOfAssistanceTxt 
+
+    RgnTxt = Column(String(length=100))
+    # Line number:  Column (b)  Description:  Region  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/RegionTxt 
+
+    RcpntCnt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Number of recipients  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/RecipientCnt 
+
+    CshGrntAmt = Column(BigInteger)
+    # Line number:  Column (d)  Description:  Amount of cash grant  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/CashGrantAmt 
+
+    MnnrOfCshDsbrsmntTxt = Column(String(length=100))
+    # Line number:  Column (e)  Description:  Manner of cash disbursement  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/MannerOfCashDisbursementTxt 
+
+    NnCshAssstncAmt = Column(BigInteger)
+    # Line number:  Column (f)  Description:  Amount of non-cash assistance  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/NonCashAssistanceAmt 
+
+    DscrptnOfNnCshAsstTxt = Column(Text)
+    # Line number:  Column (g)  Description:  Description of non-cash assistance  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/DescriptionOfNonCashAsstTxt 
+
+    VltnMthdUsdDsc = Column(String(length=100))
+    # Line number:  Column (h)  Description:  Method of valuation  xpath: /IRS990ScheduleF/ForeignIndividualsGrantsGrp/ValuationMethodUsedDesc 
+
+#######
+#
+# IRS990ScheduleF - SupplementalInformationDetail
+# A repeating structure from ScheduleF Part V  Supplemental Information 
+#
+#######
+
+class SkdFSpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdFSpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpplmntlInfrmtnDtl = Column(Text)
+    # Description:  Part V contents  xpath: /IRS990ScheduleF/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part V  Description:  Form, part and line number reference  xpath: /IRS990ScheduleF/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = Column(Text)
+    # Line number:  Part V  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleF/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleG - ScheduleG Part I Fundraising Activities 
 #
 #######
 
 class skedg_part_i(Base):
     __tablename__='skedg_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -7981,7 +8018,7 @@ class skedg_part_i(Base):
 
 class skedg_part_ii(Base):
     __tablename__='skedg_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -8116,7 +8153,7 @@ class skedg_part_ii(Base):
 
 class skedg_part_iii(Base):
     __tablename__='skedg_part_iii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -8353,28 +8390,6 @@ class skedg_part_iii(Base):
 
 #######
 #
-# IRS990ScheduleG - SupplementalInformationDetail
-# A repeating structure from ScheduleG Part IV Supplemental Information 
-#
-#######
-
-class SkdGSpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdGSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpplmntlInfrmtnDtl = Column(Text)
-    # Description:  Part IV contents  xpath: /IRS990ScheduleG/SupplementalInformationDetail 
-
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part IV  Description:  Form, part and line number reference  xpath: /IRS990ScheduleG/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = Column(Text)
-    # Line number:  Part IV  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleG/SupplementalInformationDetail/ExplanationTxt 
-
-#######
-#
 # IRS990ScheduleG - StatesWhereGamingConductedCd
 # A repeating structure from ScheduleG Part III Gaming Information 
 #
@@ -8382,28 +8397,12 @@ class SkdGSpplmntlInfrmtnDtl(Base):
 
 class SkdGSttsWhrGmngCndctdCd(Base):
     __tablename__='SkdGSttsWhrGmngCndctdCd'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
     SttsWhrGmngCndctdCd = Column(String(length=2))
     # Line number:  Part III Line 9  Description:  Enter state where organization conducts gaming activities  xpath: /IRS990ScheduleG/StatesWhereGamingConductedCd 
-
-#######
-#
-# IRS990ScheduleG - LicensedStatesCd
-# A repeating structure from ScheduleG Part I Fundraising Activities 
-#
-#######
-
-class SkdGLcnsdSttsCd(Base):
-    __tablename__='SkdGLcnsdSttsCd'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    LcnsdSttsCd = Column(String(length=2))
-    # Line number:  Part I Line 3  Description:  List all states in which the organization is registered or licensed to solicit funds or has been notified it is exempt from registration or licensing  xpath: /IRS990ScheduleG/LicensedStatesCd 
 
 #######
 #
@@ -8414,7 +8413,7 @@ class SkdGLcnsdSttsCd(Base):
 
 class SkdGFndrsrActvtyInf(Base):
     __tablename__='SkdGFndrsrActvtyInf'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -8477,13 +8476,51 @@ class SkdGFndrsrActvtyInf(Base):
 
 #######
 #
+# IRS990ScheduleG - LicensedStatesCd
+# A repeating structure from ScheduleG Part I Fundraising Activities 
+#
+#######
+
+class SkdGLcnsdSttsCd(Base):
+    __tablename__='SkdGLcnsdSttsCd'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    LcnsdSttsCd = Column(String(length=2))
+    # Line number:  Part I Line 3  Description:  List all states in which the organization is registered or licensed to solicit funds or has been notified it is exempt from registration or licensing  xpath: /IRS990ScheduleG/LicensedStatesCd 
+
+#######
+#
+# IRS990ScheduleG - SupplementalInformationDetail
+# A repeating structure from ScheduleG Part IV Supplemental Information 
+#
+#######
+
+class SkdGSpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdGSpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpplmntlInfrmtnDtl = Column(Text)
+    # Description:  Part IV contents  xpath: /IRS990ScheduleG/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part IV  Description:  Form, part and line number reference  xpath: /IRS990ScheduleG/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = Column(Text)
+    # Line number:  Part IV  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleG/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleH - ScheduleH Part I - Community Benefit Report 
 #
 #######
 
 class skedh_part_i(Base):
     __tablename__='skedh_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -8774,7 +8811,7 @@ class skedh_part_i(Base):
 
 class skedh_part_ii(Base):
     __tablename__='skedh_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -8966,7 +9003,7 @@ class skedh_part_ii(Base):
 
 class skedh_part_iii(Base):
     __tablename__='skedh_part_iii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9014,7 +9051,7 @@ class skedh_part_iii(Base):
 
 class skedh_part_va(Base):
     __tablename__='skedh_part_va'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9029,7 +9066,7 @@ class skedh_part_va(Base):
 
 class skedh_part_vd(Base):
     __tablename__='skedh_part_vd'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9048,7 +9085,7 @@ class skedh_part_vd(Base):
 
 class SkdHMngmntCAndJntVntrs(Base):
     __tablename__='SkdHMngmntCAndJntVntrs'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9075,175 +9112,6 @@ class SkdHMngmntCAndJntVntrs(Base):
 
 #######
 #
-# IRS990ScheduleH - OthHlthCareFcltsGrp
-# A repeating structure from ScheduleH Part V-D - Other Health Care Facilities 
-#
-#######
-
-class SkdHOthHlthCrFclts(Base):
-    __tablename__='SkdHOthHlthCrFclts'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    OthHlthCrFclts = Column(Text)
-    # Description:  Part V Section D repeating group  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp 
-
-    BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part V Section D  Description:  Business name line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part V Section D  Description:  Business name line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine2Txt 
-
-    AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part V Section D  Description:  Address line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine2Txt 
-
-    ZIPCd = Column(String(length=15))
-    # Line number:  Part V Section D  Description:  ZIP code  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/ZIPCd 
-
-    AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part V Section D  Description:  Address line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine1Txt 
-
-    CtyNm = Column(String(length=22))
-    # Line number:  Part V Section D  Description:  City  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/CityNm 
-
-    SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part V Section D  Description:  State  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/StateAbbreviationCd 
-
-    FcltyTxt = Column(String(length=100))
-    # Line number:  Part V Section D  Description:  Facility type  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/FacilityTxt 
-
-#######
-#
-# IRS990ScheduleH - SupplementalInformationDetail
-# A repeating structure from ScheduleH Part VI Supplemental Information 
-#
-#######
-
-class SkdHSpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdHSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpplmntlInfrmtnDtl = Column(Text)
-    # Description:  Part VI contents  xpath: /IRS990ScheduleH/SupplementalInformationDetail 
-
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part VI  Description:  Form, part and line number reference  xpath: /IRS990ScheduleH/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = Column(Text)
-    # Line number:  Part VI  Description:  Form, part and line number explanation  xpath: /IRS990ScheduleH/SupplementalInformationDetail/ExplanationTxt 
-
-#######
-#
-# IRS990ScheduleH - HospitalFacilitiesGrp
-# A repeating structure from ScheduleH Part V-A - Facility Information 
-#
-#######
-
-class SkdHHsptlFclts(Base):
-    __tablename__='SkdHHsptlFclts'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SkdH_HsptlFclts = Column(Text)
-    # Description:  Part V Section A repeating group  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp 
-
-    HsptlFclts_FcltyNm = Column(Integer)
-    # Line number:  Part V Section A  Description:  Hospital facility number  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/FacilityNum 
-
-    BsnssNm_BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part V Section A  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/BusinessName/BusinessNameLine1Txt 
-
-    BsnssNm_BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part V Section A  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/BusinessName/BusinessNameLine2Txt 
-
-    USAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part V Section A  Description:  Address line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/AddressLine1Txt 
-
-    USAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part V Section A  Description:  Address line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/AddressLine2Txt 
-
-    USAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part V Section A  Description:  City  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/CityNm 
-
-    USAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part V Section A  Description:  State  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/StateAbbreviationCd 
-
-    USAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part V Section A  Description:  ZIP code  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/ZIPCd 
-
-    HsptlFclts_WbstAddrssTxt = Column(String(length=100))
-    # Line number:  Part V Section A  Description:  Primary website address of the hospital facility  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/WebsiteAddressTxt 
-
-    HsptlFclts_SttLcnsNm = Column(Text)
-    # Line number:  Part V Section A  Description:  Hospital facilities state license number  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/StateLicenseNum 
-
-    SbrdntHsptlNm_BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part V Section A  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalName/BusinessNameLine1Txt 
-
-    SbrdntHsptlNm_BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part V Section A  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalName/BusinessNameLine2Txt 
-
-    HsptlFclts_SbrdntHsptlEIN = Column(String(length=9))
-    # Line number:  Part V Section A  Description:  EIN, subordinate hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalEIN 
-
-    HsptlFclts_LcnsdHsptlInd = Column(String(length=1))
-    # Line number:  Part V Section A  Description:  Licensed hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/LicensedHospitalInd 
-
-    HsptlFclts_GnrlMdclAndSrgclInd = Column(String(length=1))
-    # Line number:  Part V Section A  Description:  General medical and surgical  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/GeneralMedicalAndSurgicalInd 
-
-    HsptlFclts_ChldrnsHsptlInd = Column(String(length=1))
-    # Line number:  Part V Section A  Description:  Children's hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/ChildrensHospitalInd 
-
-    HsptlFclts_TchngHsptlInd = Column(String(length=1))
-    # Line number:  Part V Section A  Description:  Teaching hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/TeachingHospitalInd 
-
-    HsptlFclts_CrtclAccssHsptlInd = Column(String(length=1))
-    # Line number:  Part V Section A  Description:  Critical Access hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/CriticalAccessHospitalInd 
-
-    HsptlFclts_RsrchFcltyInd = Column(String(length=1))
-    # Line number:  Part V Section A  Description:  Research facility  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/ResearchFacilityInd 
-
-    HsptlFclts_EmrgncyRm24HrsInd = Column(String(length=1))
-    # Line number:  Part V Section A  Description:  ER - 24 hours  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/EmergencyRoom24HrsInd 
-
-    HsptlFclts_EmrgncyRmOthrInd = Column(String(length=1))
-    # Line number:  Part V Section A  Description:  ER - other  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/EmergencyRoomOtherInd 
-
-    HsptlFclts_OthrDsc = Column(String(length=100))
-    # Line number:  Part V Section A  Description:  Other  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/OtherDesc 
-
-    HsptlFclts_FcltyRprtngGrpCd = Column(Text)
-    # Line number:  Part V Section A  Description:  Facility reporting group  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/FacilityReportingGroupCd 
-
-#######
-#
-# IRS990ScheduleH - SupplementalInformationGrp
-# A repeating structure from ScheduleH Part V-C - Supplemental Information for Part V, Section B 
-#
-#######
-
-class SkdHSpplmntlInfrmtn(Base):
-    __tablename__='SkdHSpplmntlInfrmtn'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpplmntlInfrmtn = Column(Text)
-    # Description:  Part V Section C, Supplemental Information for Part V Section B  xpath: /IRS990ScheduleH/SupplementalInformationGrp 
-
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part V  Description:  Form, part and line number reference  xpath: /IRS990ScheduleH/SupplementalInformationGrp/FormAndLineReferenceDesc 
-
-    ExplntnTxt = Column(Text)
-    # Line number:  Part V  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleH/SupplementalInformationGrp/ExplanationTxt 
-
-#######
-#
 # IRS990ScheduleH - HospitalFcltyPoliciesPrctcGrp
 # A repeating structure from ScheduleH Part V-B - Facility Information 
 #
@@ -9251,7 +9119,7 @@ class SkdHSpplmntlInfrmtn(Base):
 
 class SkdHHsptlFcltyPlcsPrctc(Base):
     __tablename__='SkdHHsptlFcltyPlcsPrctc'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9300,8 +9168,8 @@ class SkdHHsptlFcltyPlcsPrctc(Base):
     CnsltngPrcssInd = Column(String(length=1))
     # Line number:  Part V Section B Line 3h  Description:  Consulting process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ConsultingProcessInd 
 
-    InfrmtnGpsInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 3i  Description:  Information gaps  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/InformationGapsInd 
+    PrrCHNAImpctInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 3i  Description:  Impact of actions taken identified in prior CHNA  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PriorCHNAImpactInd 
 
     OthrInd = Column(String(length=1))
     # Line number:  Part V Section B Line 3j  Description:  CHNA describes other  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherInd 
@@ -9447,14 +9315,17 @@ class SkdHHsptlFcltyPlcsPrctc(Base):
     FAPSmAvlblOnRqstNChrgInd = Column(String(length=1))
     # Line number:  Part V Section B Line 16f  Description:  FAP plain language summary available upon request and without charge  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPSumAvlblOnRequestNoChrgInd 
 
-    FAPNtcDsplydInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 16g  Description:  Notice of availability of FAP displayed throughout hospital facility  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPNoticeDisplayedInd 
+    NtfdFAPCpyBllDsplyInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 16g  Description:  Notified of FAP by paper copy, on billing statement, and public displays  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NotifiedFAPCopyBillDisplayInd 
 
     CmmnttyNtfdFAPInd = Column(String(length=1))
     # Line number:  Part V Section B Line 16h  Description:  Notified community about availability of FAP  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommuntityNotifiedFAPInd 
 
+    FAPTrnsltdInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 16i  Description:  FAP translated into primary language spoken  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPTranslatedInd 
+
     OthrPblctyInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 16i  Description:  Other publicity  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherPublicityInd 
+    # Line number:  Part V Section B Line 16j  Description:  Other publicity  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherPublicityInd 
 
     FAPActnsOnNnpymntInd = Column(String(length=5))
     # Line number:  Part V Section B Line 17  Description:  Policy explains actions taken upon non-payment?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPActionsOnNonpaymentInd 
@@ -9465,14 +9336,17 @@ class SkdHHsptlFcltyPlcsPrctc(Base):
     PrmtSllngDbtInd = Column(String(length=1))
     # Line number:  Part V Section B Line 18b  Description:  Selling debt permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitSellingDebtInd 
 
+    PrmtDfrDnyRqrPymntInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 18c  Description:  Deferring, denying or requiring payment before care due to previous nonpayment permitted.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitDeferDenyRqrPaymentInd 
+
     PrmtLglJdclPrcssInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 18c  Description:  Actions that required a legal or judicial process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitLegalJudicialProcessInd 
+    # Line number:  Part V Section B Line 18d  Description:  Actions that required a legal or judicial process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitLegalJudicialProcessInd 
 
     PrmtOthrActnsInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 18d  Description:  Other actions permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitOtherActionsInd 
+    # Line number:  Part V Section B Line 18e  Description:  Other actions permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitOtherActionsInd 
 
     PrmtNActnsInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 18e  Description:  None of these actions or similar actions permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitNoActionsInd 
+    # Line number:  Part V Section B Line 18f  Description:  None of these actions or similar actions permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitNoActionsInd 
 
     CllctnActvtsInd = Column(String(length=5))
     # Line number:  Part V Section B Line 19  Description:  Authorize third-party to engage in collection activities?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CollectionActivitiesInd 
@@ -9483,23 +9357,26 @@ class SkdHHsptlFcltyPlcsPrctc(Base):
     EnggdSllngDbtInd = Column(String(length=1))
     # Line number:  Part V Section B Line 19b  Description:  Selling debt engaged  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngagedSellingDebtInd 
 
+    EnggDfrDnyRqrPymntInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 19c  Description:  Engaged actions to defer, deny or requirment payment before providing care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngageDeferDenyRqrPaymentInd 
+
     EnggdLglJdclPrcssInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 19c  Description:  Engaged actions that required a legal or judicial process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngagedLegalJudicialProcessInd 
+    # Line number:  Part V Section B Line 19d  Description:  Engaged actions that required a legal or judicial process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngagedLegalJudicialProcessInd 
 
     OthrActnsInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 19d  Description:  Other actions engaged  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherActionsInd 
+    # Line number:  Part V Section B Line 19e  Description:  Other actions engaged  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherActionsInd 
 
-    FAPNtfdUpnAdmssnInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 20a  Description:  Notified upon admission  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPNotifiedUponAdmissionInd 
+    PrvddWrttnNtcInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 20a  Description:  Provided written notice and plain language summary of FAP  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProvidedWrittenNoticeInd 
 
-    FAPNtfdBfrDschrgInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 20b  Description:  Notified prior to discharge  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPNotifiedBeforeDischargeInd 
+    MdEffrtOrllyNtfyInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 20b  Description:  Reasonable effort to orally notify individual about FAP  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MadeEffortOrallyNotifyInd 
 
-    FAPNtfdAllPtntsInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 20c  Description:  Notified patients in communications  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPNotifiedAllPatientsInd 
+    PrcssdFAPApplctnInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 20c  Description:  Processed incomplete and complete FAP applications  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProcessedFAPApplicationInd 
 
-    DcmntdElgDtrmntnInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 20d  Description:  Documented determination  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/DocumentedEligDeterminationInd 
+    MdPrsmptvElgDtrmInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 20d  Description:  Made presumptive eligibility determinations  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MadePresumptiveEligDetermInd 
 
     OthrActnsTknInd = Column(String(length=1))
     # Line number:  Part V Section B Line 20e  Description:  Other action taken  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherActionsTakenInd 
@@ -9522,17 +9399,17 @@ class SkdHHsptlFcltyPlcsPrctc(Base):
     OthrRsnInd = Column(String(length=1))
     # Line number:  Part V Section B Line 21d  Description:  Other reason  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherReasonInd 
 
-    LwstNgttdRtsInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 22a  Description:  Charged amount in excess of lowest negotiated rates?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LowestNegotiatedRatesInd 
+    LkBckMdcrInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 22a  Description:  Look-back method based on claims allowed by medicare fee for service  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LookBackMedicareInd 
 
-    AvrgNgttdRtsInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 22b  Description:  Charged amount in excess of average negotiated rates?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/AverageNegotiatedRatesInd 
+    LkBckMdcrPrvtInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 22b  Description:  Look-back method based on claims allowed by medicare fee for service and all private health insurance  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LookBackMedicarePrivateInd 
 
-    MdcrRtsInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 22c  Description:  Charged more than medicare rate?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MedicareRatesInd 
+    LkBckMdcdMdcrPrvtInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 22c  Description:  Look-back method based on claims allowed by nedicaid, medicare fee for service and all private health insurance  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LookBackMedicaidMedcrPrvtInd 
 
-    OthrMthdUsdInd = Column(String(length=1))
-    # Line number:  Part V Section B Line 22d  Description:  Used other method  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherMethodUsedInd 
+    PrspctvMdcrMdcdInd = Column(String(length=1))
+    # Line number:  Part V Section B Line 22d  Description:  Prospective medicare or medicaid method  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProspectiveMedicareMedicaidInd 
 
     AmntsGnrllyBlldInd = Column(String(length=5))
     # Line number:  Part V Section B Line 23  Description:  Charged more than amount generally billed?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/AmountsGenerallyBilledInd 
@@ -9542,13 +9419,182 @@ class SkdHHsptlFcltyPlcsPrctc(Base):
 
 #######
 #
+# IRS990ScheduleH - OthHlthCareFcltsGrp
+# A repeating structure from ScheduleH Part V-D - Other Health Care Facilities 
+#
+#######
+
+class SkdHOthHlthCrFclts(Base):
+    __tablename__='SkdHOthHlthCrFclts'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    OthHlthCrFclts = Column(Text)
+    # Description:  Part V Section D repeating group  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp 
+
+    BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part V Section D  Description:  Business name line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine2Txt 
+
+    BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part V Section D  Description:  Business name line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine1Txt 
+
+    AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part V Section D  Description:  Address line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine1Txt 
+
+    SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part V Section D  Description:  State  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/StateAbbreviationCd 
+
+    AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part V Section D  Description:  Address line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine2Txt 
+
+    CtyNm = Column(String(length=22))
+    # Line number:  Part V Section D  Description:  City  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/CityNm 
+
+    ZIPCd = Column(String(length=15))
+    # Line number:  Part V Section D  Description:  ZIP code  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/ZIPCd 
+
+    FcltyTxt = Column(String(length=100))
+    # Line number:  Part V Section D  Description:  Facility type  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/FacilityTxt 
+
+#######
+#
+# IRS990ScheduleH - SupplementalInformationDetail
+# A repeating structure from ScheduleH Part VI Supplemental Information 
+#
+#######
+
+class SkdHSpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdHSpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpplmntlInfrmtnDtl = Column(Text)
+    # Description:  Part VI contents  xpath: /IRS990ScheduleH/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part VI  Description:  Form, part and line number reference  xpath: /IRS990ScheduleH/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = Column(Text)
+    # Line number:  Part VI  Description:  Form, part and line number explanation  xpath: /IRS990ScheduleH/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
+# IRS990ScheduleH - HospitalFacilitiesGrp
+# A repeating structure from ScheduleH Part V-A - Facility Information 
+#
+#######
+
+class SkdHHsptlFclts(Base):
+    __tablename__='SkdHHsptlFclts'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SkdH_HsptlFclts = Column(Text)
+    # Description:  Part V Section A repeating group  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp 
+
+    HsptlFclts_FcltyNm = Column(Integer)
+    # Line number:  Part V Section A  Description:  Hospital facility number  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/FacilityNum 
+
+    BsnssNm_BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part V Section A  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNm_BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part V Section A  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/BusinessName/BusinessNameLine2Txt 
+
+    USAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part V Section A  Description:  Address line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part V Section A  Description:  Address line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/AddressLine2Txt 
+
+    USAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part V Section A  Description:  City  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part V Section A  Description:  State  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/StateAbbreviationCd 
+
+    USAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part V Section A  Description:  ZIP code  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/ZIPCd 
+
+    HsptlFclts_WbstAddrssTxt = Column(String(length=100))
+    # Line number:  Part V Section A  Description:  Primary website address of the hospital facility  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/WebsiteAddressTxt 
+
+    HsptlFclts_SttLcnsNm = Column(Text)
+    # Line number:  Part V Section A  Description:  Hospital facilities state license number  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/StateLicenseNum 
+
+    SbrdntHsptlNm_BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part V Section A  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalName/BusinessNameLine1Txt 
+
+    SbrdntHsptlNm_BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part V Section A  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalName/BusinessNameLine2Txt 
+
+    HsptlFclts_SbrdntHsptlEIN = Column(String(length=9))
+    # Line number:  Part V Section A  Description:  EIN, subordinate hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalEIN 
+
+    HsptlFclts_LcnsdHsptlInd = Column(String(length=1))
+    # Line number:  Part V Section A  Description:  Licensed hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/LicensedHospitalInd 
+
+    HsptlFclts_GnrlMdclAndSrgclInd = Column(String(length=1))
+    # Line number:  Part V Section A  Description:  General medical and surgical  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/GeneralMedicalAndSurgicalInd 
+
+    HsptlFclts_ChldrnsHsptlInd = Column(String(length=1))
+    # Line number:  Part V Section A  Description:  Children's hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/ChildrensHospitalInd 
+
+    HsptlFclts_TchngHsptlInd = Column(String(length=1))
+    # Line number:  Part V Section A  Description:  Teaching hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/TeachingHospitalInd 
+
+    HsptlFclts_CrtclAccssHsptlInd = Column(String(length=1))
+    # Line number:  Part V Section A  Description:  Critical Access hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/CriticalAccessHospitalInd 
+
+    HsptlFclts_RsrchFcltyInd = Column(String(length=1))
+    # Line number:  Part V Section A  Description:  Research facility  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/ResearchFacilityInd 
+
+    HsptlFclts_EmrgncyRm24HrsInd = Column(String(length=1))
+    # Line number:  Part V Section A  Description:  ER - 24 hours  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/EmergencyRoom24HrsInd 
+
+    HsptlFclts_EmrgncyRmOthrInd = Column(String(length=1))
+    # Line number:  Part V Section A  Description:  ER - other  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/EmergencyRoomOtherInd 
+
+    HsptlFclts_OthrDsc = Column(String(length=100))
+    # Line number:  Part V Section A  Description:  Other  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/OtherDesc 
+
+    HsptlFclts_FcltyRprtngGrpCd = Column(Text)
+    # Line number:  Part V Section A  Description:  Facility reporting group  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/FacilityReportingGroupCd 
+
+#######
+#
+# IRS990ScheduleH - SupplementalInformationGrp
+# A repeating structure from ScheduleH Part V-C - Supplemental Information for Part V, Section B 
+#
+#######
+
+class SkdHSpplmntlInfrmtn(Base):
+    __tablename__='SkdHSpplmntlInfrmtn'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpplmntlInfrmtn = Column(Text)
+    # Description:  Part V Section C, Supplemental Information for Part V Section B  xpath: /IRS990ScheduleH/SupplementalInformationGrp 
+
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part V  Description:  Form, part and line number reference  xpath: /IRS990ScheduleH/SupplementalInformationGrp/FormAndLineReferenceDesc 
+
+    ExplntnTxt = Column(Text)
+    # Line number:  Part V  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleH/SupplementalInformationGrp/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleI - ScheduleI Part I General Information on Grants and Assistance 
 #
 #######
 
 class skedi_part_i(Base):
     __tablename__='skedi_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9563,7 +9609,7 @@ class skedi_part_i(Base):
 
 class skedi_part_ii(Base):
     __tablename__='skedi_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9575,6 +9621,28 @@ class skedi_part_ii(Base):
 
 #######
 #
+# IRS990ScheduleI - SupplementalInformationDetail
+# A repeating structure from ScheduleI Part IV Supplemental Information
+#
+#######
+
+class SkdISpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdISpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpplmntlInfrmtnDtl = Column(Text)
+    # Description:  Part IV content  xpath: /IRS990ScheduleI/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part IV  Description:  Form, part and line number reference  xpath: /IRS990ScheduleI/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = Column(Text)
+    # Line number:  Part IV  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleI/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleI - RecipientTable
 # A repeating structure from ScheduleI Part II Grants and Other Assistance to Governments and Organizations in the United States 
 #
@@ -9582,7 +9650,7 @@ class skedi_part_ii(Base):
 
 class SkdIRcpntTbl(Base):
     __tablename__='SkdIRcpntTbl'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9658,7 +9726,7 @@ class SkdIRcpntTbl(Base):
 
 class SkdIGrntsOthrAsstTIndvInUS(Base):
     __tablename__='SkdIGrntsOthrAsstTIndvInUS'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9685,35 +9753,13 @@ class SkdIGrntsOthrAsstTIndvInUS(Base):
 
 #######
 #
-# IRS990ScheduleI - SupplementalInformationDetail
-# A repeating structure from ScheduleI Part IV Supplemental Information
-#
-#######
-
-class SkdISpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdISpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpplmntlInfrmtnDtl = Column(Text)
-    # Description:  Part IV content  xpath: /IRS990ScheduleI/SupplementalInformationDetail 
-
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part IV  Description:  Form, part and line number reference  xpath: /IRS990ScheduleI/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = Column(Text)
-    # Line number:  Part IV  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleI/SupplementalInformationDetail/ExplanationTxt 
-
-#######
-#
 # IRS990ScheduleJ - ScheduleJ Part I Questions Regarding Compensation
 #
 #######
 
 class skedj_part_i(Base):
     __tablename__='skedj_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9797,28 +9843,6 @@ class skedj_part_i(Base):
 
 #######
 #
-# IRS990ScheduleJ - SupplementalInformationDetail
-# A repeating structure from ScheduleJ Part III Supplemental Information
-#
-#######
-
-class SkdJSpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdJSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpplmntlInfrmtnDtl = Column(Text)
-    # Description:  Part III contents  xpath: /IRS990ScheduleJ/SupplementalInformationDetail 
-
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part III  Description:  Form, Part and line number reference  xpath: /IRS990ScheduleJ/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = Column(Text)
-    # Line number:  Part III  Description:  Form, Part and line number reference explanation  xpath: /IRS990ScheduleJ/SupplementalInformationDetail/ExplanationTxt 
-
-#######
-#
 # IRS990ScheduleJ - RltdOrgOfficerTrstKeyEmplGrp
 # A repeating structure from ScheduleJ Part II Officers, Directors, Trustees, Key Employees, and Highest Compensated Employees 
 #
@@ -9826,7 +9850,7 @@ class SkdJSpplmntlInfrmtnDtl(Base):
 
 class SkdJRltdOrgOffcrTrstKyEmpl(Base):
     __tablename__='SkdJRltdOrgOffcrTrstKyEmpl'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -9889,44 +9913,25 @@ class SkdJRltdOrgOffcrTrstKyEmpl(Base):
 
 #######
 #
-# IRS990ScheduleK - SupplementalInformationDetail
-# A repeating structure from ScheduleK Part VI - Supplemental Information 
+# IRS990ScheduleJ - SupplementalInformationDetail
+# A repeating structure from ScheduleJ Part III Supplemental Information
 #
 #######
 
-class SkdKSpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdKSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
+class SkdJSpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdJSpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
     SpplmntlInfrmtnDtl = Column(Text)
-    # Description:  Part VI contents  xpath: /IRS990ScheduleK/SupplementalInformationDetail 
+    # Description:  Part III contents  xpath: /IRS990ScheduleJ/SupplementalInformationDetail 
 
     FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part VI  Description:  Form, part and line number reference  xpath: /IRS990ScheduleK/SupplementalInformationDetail/FormAndLineReferenceDesc 
+    # Line number:  Part III  Description:  Form, Part and line number reference  xpath: /IRS990ScheduleJ/SupplementalInformationDetail/FormAndLineReferenceDesc 
 
     ExplntnTxt = Column(Text)
-    # Line number:  Part VI  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleK/SupplementalInformationDetail/ExplanationTxt 
-
-#######
-#
-# IRS990ScheduleK - ProceduresCorrectiveActionGrp
-# A repeating structure from ScheduleK Part V - Violations Identified and Corrected 
-#
-#######
-
-class SkdKPrcdrsCrrctvActn(Base):
-    __tablename__='SkdKPrcdrsCrrctvActn'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    BndRfrncCd = Column(Text)
-    # Line number:  Part V  Description:  Bond issue reference number (A-D)  xpath: /IRS990ScheduleK/ProceduresCorrectiveActionGrp/BondReferenceCd 
-
-    PrcdrsCrrctvActnInd = Column(String(length=5))
-    # Line number:  Part V  Description:  Procedures to ensure violations identified and corrected?  xpath: /IRS990ScheduleK/ProceduresCorrectiveActionGrp/ProceduresCorrectiveActionInd 
+    # Line number:  Part III  Description:  Form, Part and line number reference explanation  xpath: /IRS990ScheduleJ/SupplementalInformationDetail/ExplanationTxt 
 
 #######
 #
@@ -9937,8 +9942,9 @@ class SkdKPrcdrsCrrctvActn(Base):
 
 class SkdKTxExmptBndsPrcds(Base):
     __tablename__='SkdKTxExmptBndsPrcds'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
+    documentId = Column(String(15))
     id = Column(Integer, primary_key=True)
 
     BndRfrncCd = Column(Text)
@@ -10004,8 +10010,9 @@ class SkdKTxExmptBndsPrcds(Base):
 
 class SkdKTxExmptBndsIsss(Base):
     __tablename__='SkdKTxExmptBndsIsss'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
+    documentId = Column(String(15))
     id = Column(Integer, primary_key=True)
 
     BndRfrncCd = Column(Text)
@@ -10043,6 +10050,65 @@ class SkdKTxExmptBndsIsss(Base):
 
 #######
 #
+# IRS990ScheduleK - TaxExemptBondsPrivateBusUseGrp
+# A repeating structure from ScheduleK Part III - Private Use 
+#
+#######
+
+class SkdKTxExmptBndsPrvtBsUs(Base):
+    __tablename__='SkdKTxExmptBndsPrvtBsUs'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    documentId = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    BndRfrncCd = Column(Text)
+    # Line number:  Part III  Description:  Bond issue reference number (A-D)  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/BondReferenceCd 
+
+    OwnngBndFnncdPrprtyInd = Column(String(length=5))
+    # Line number:  Part III Line 1  Description:  Partnership or LLC owning bond financed property?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/OwningBondFinancedPropertyInd 
+
+    AnyLsArrngmntsInd = Column(String(length=5))
+    # Line number:  Part III Line 2  Description:  Any lease arrangements?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/AnyLeaseArrangementsInd 
+
+    MgmtCntrctBndFncdPrpInd = Column(String(length=5))
+    # Line number:  Part III Line 3a  Description:  Management contract for bond financed property?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/MgmtContractBondFincdPropInd 
+
+    EnggBndCnslCntrctsInd = Column(String(length=5))
+    # Line number:  Part III Line 3b  Description:  Bond Counsel routinely engaged to review management or service contracts?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/EngageBondCounselContractsInd 
+
+    AnyRsrchAgrmntsInd = Column(String(length=5))
+    # Line number:  Part III Line 3c  Description:  Any research agreements?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/AnyResearchAgreementsInd 
+
+    EnggBndCnslRsrchInd = Column(String(length=5))
+    # Line number:  Part III Line 3d  Description:  Bond Counsel routinely engaged to review management or service contracts?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/EngageBondCounselResearchInd 
+
+    PrvtBsUsByOthrsPct = Column(Numeric(precision=6))
+    # Line number:  Part III Line 4  Description:  Percentage of private business use by others  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/PrivateBusUseByOthersPct 
+
+    PrvtBsCncrnngUBIPct = Column(Numeric(precision=6))
+    # Line number:  Part III Line 5  Description:  Percentage of private business concerning UBI  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/PrivateBusConcerningUBIPct 
+
+    TtlPrvtBsnssUsPct = Column(Numeric(precision=6))
+    # Line number:  Part III Line 6  Description:  Total of lines 4 and 5  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/TotalPrivateBusinessUsePct 
+
+    BndIssMtPrvtScPymtTstInd = Column(String(length=5))
+    # Line number:  Part III Line 7  Description:  Bond issue meets private security or payment test?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/BondIssMeetPrvtSecPymtTestInd 
+
+    ChngInUsBndFnncdPrpInd = Column(String(length=5))
+    # Line number:  Part III Line 8a  Description:  Change in use of bond financed property?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/ChangeInUseBondFinancedPropInd 
+
+    ChngInUsBndFnncdPrpPct = Column(Numeric(precision=6))
+    # Line number:  Part III Line 8b  Description:  Percentage change in use of bond financed property  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/ChangeInUseBondFinancedPropPct 
+
+    RmdlActnTknInd = Column(String(length=5))
+    # Line number:  Part III Line 8c  Description:  Remedial action taken?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/RemedialActionTakenInd 
+
+    PrcsNnqlfdBndRmdtdInd = Column(String(length=5))
+    # Line number:  Part III Line 9  Description:  Nonqualified bonds remediated procedures?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/ProcsNonqualifiedBondRemdtdInd 
+
+#######
+#
 # IRS990ScheduleK - TaxExemptBondsArbitrageGrp
 # A repeating structure from ScheduleK Part IV - Arbitrage 
 #
@@ -10050,8 +10116,9 @@ class SkdKTxExmptBndsIsss(Base):
 
 class SkdKTxExmptBndsArbtrg(Base):
     __tablename__='SkdKTxExmptBndsArbtrg'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
+    documentId = Column(String(15))
     id = Column(Integer, primary_key=True)
 
     TxExmptBndsArbtrg_BndRfrncCd = Column(Text)
@@ -10113,61 +10180,46 @@ class SkdKTxExmptBndsArbtrg(Base):
 
 #######
 #
-# IRS990ScheduleK - TaxExemptBondsPrivateBusUseGrp
-# A repeating structure from ScheduleK Part III - Private Use 
+# IRS990ScheduleK - ProceduresCorrectiveActionGrp
+# A repeating structure from ScheduleK Part V - Violations Identified and Corrected 
 #
 #######
 
-class SkdKTxExmptBndsPrvtBsUs(Base):
-    __tablename__='SkdKTxExmptBndsPrvtBsUs'
-    return_id = Column(String(31))
+class SkdKPrcdrsCrrctvActn(Base):
+    __tablename__='SkdKPrcdrsCrrctvActn'
+    object_id = Column(String(31))
     ein = Column(String(15))
+    documentId = Column(String(15))
     id = Column(Integer, primary_key=True)
 
     BndRfrncCd = Column(Text)
-    # Line number:  Part III  Description:  Bond issue reference number (A-D)  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/BondReferenceCd 
+    # Line number:  Part V  Description:  Bond issue reference number (A-D)  xpath: /IRS990ScheduleK/ProceduresCorrectiveActionGrp/BondReferenceCd 
 
-    OwnngBndFnncdPrprtyInd = Column(String(length=5))
-    # Line number:  Part III Line 1  Description:  Partnership or LLC owning bond financed property?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/OwningBondFinancedPropertyInd 
+    PrcdrsCrrctvActnInd = Column(String(length=5))
+    # Line number:  Part V  Description:  Procedures to ensure violations identified and corrected?  xpath: /IRS990ScheduleK/ProceduresCorrectiveActionGrp/ProceduresCorrectiveActionInd 
 
-    AnyLsArrngmntsInd = Column(String(length=5))
-    # Line number:  Part III Line 2  Description:  Any lease arrangements?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/AnyLeaseArrangementsInd 
+#######
+#
+# IRS990ScheduleK - SupplementalInformationDetail
+# A repeating structure from ScheduleK Part VI - Supplemental Information 
+#
+#######
 
-    MgmtCntrctBndFncdPrpInd = Column(String(length=5))
-    # Line number:  Part III Line 3a  Description:  Management contract for bond financed property?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/MgmtContractBondFincdPropInd 
+class SkdKSpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdKSpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    documentId = Column(String(15))
+    id = Column(Integer, primary_key=True)
 
-    EnggBndCnslCntrctsInd = Column(String(length=5))
-    # Line number:  Part III Line 3b  Description:  Bond Counsel routinely engaged to review management or service contracts?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/EngageBondCounselContractsInd 
+    SpplmntlInfrmtnDtl = Column(Text)
+    # Description:  Part VI contents  xpath: /IRS990ScheduleK/SupplementalInformationDetail 
 
-    AnyRsrchAgrmntsInd = Column(String(length=5))
-    # Line number:  Part III Line 3c  Description:  Any research agreements?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/AnyResearchAgreementsInd 
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part VI  Description:  Form, part and line number reference  xpath: /IRS990ScheduleK/SupplementalInformationDetail/FormAndLineReferenceDesc 
 
-    EnggBndCnslRsrchInd = Column(String(length=5))
-    # Line number:  Part III Line 3d  Description:  Bond Counsel routinely engaged to review management or service contracts?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/EngageBondCounselResearchInd 
-
-    PrvtBsUsByOthrsPct = Column(Numeric(precision=6))
-    # Line number:  Part III Line 4  Description:  Percentage of private business use by others  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/PrivateBusUseByOthersPct 
-
-    PrvtBsCncrnngUBIPct = Column(Numeric(precision=6))
-    # Line number:  Part III Line 5  Description:  Percentage of private business concerning UBI  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/PrivateBusConcerningUBIPct 
-
-    TtlPrvtBsnssUsPct = Column(Numeric(precision=6))
-    # Line number:  Part III Line 6  Description:  Total of lines 4 and 5  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/TotalPrivateBusinessUsePct 
-
-    BndIssMtPrvtScPymtTstInd = Column(String(length=5))
-    # Line number:  Part III Line 7  Description:  Bond issue meets private security or payment test?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/BondIssMeetPrvtSecPymtTestInd 
-
-    ChngInUsBndFnncdPrpInd = Column(String(length=5))
-    # Line number:  Part III Line 8a  Description:  Change in use of bond financed property?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/ChangeInUseBondFinancedPropInd 
-
-    ChngInUsBndFnncdPrpPct = Column(Numeric(precision=6))
-    # Line number:  Part III Line 8b  Description:  Percentage change in use of bond financed property  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/ChangeInUseBondFinancedPropPct 
-
-    RmdlActnTknInd = Column(String(length=5))
-    # Line number:  Part III Line 8c  Description:  Remedial action taken?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/RemedialActionTakenInd 
-
-    PrcsNnqlfdBndRmdtdInd = Column(String(length=5))
-    # Line number:  Part III Line 9  Description:  Nonqualified bonds remediated procedures?  xpath: /IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp/ProcsNonqualifiedBondRemdtdInd 
+    ExplntnTxt = Column(Text)
+    # Line number:  Part VI  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleK/SupplementalInformationDetail/ExplanationTxt 
 
 #######
 #
@@ -10177,7 +10229,7 @@ class SkdKTxExmptBndsPrvtBsUs(Base):
 
 class skedl_part_i(Base):
     __tablename__='skedl_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10195,7 +10247,7 @@ class skedl_part_i(Base):
 
 class skedl_part_ii(Base):
     __tablename__='skedl_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10211,7 +10263,7 @@ class skedl_part_ii(Base):
 
 class SkdLSpplmntlInfrmtnDtl(Base):
     __tablename__='SkdLSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10226,6 +10278,37 @@ class SkdLSpplmntlInfrmtnDtl(Base):
 
 #######
 #
+# IRS990ScheduleL - DisqualifiedPersonExBnftTrGrp
+# A repeating structure from ScheduleL Part I Excess Benefit Transactions 
+#
+#######
+
+class SkdLDsqlfdPrsnExBnftTr(Base):
+    __tablename__='SkdLDsqlfdPrsnExBnftTr'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    PrsnNm = Column(String(length=35))
+    # Line number:  Part I Column (1a)  Description:  Name - Person  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/PersonNm 
+
+    BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part I Column (1a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part I Column (1a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/BusinessName/BusinessNameLine2Txt 
+
+    RlnDsqlfdPrsnOrgTxt = Column(String(length=100))
+    # Line number:  Part I Column (1b)  Description:  Relationship between disqualified person and organization  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/RlnDisqualifiedPersonOrgTxt 
+
+    TrnsctnDsc = Column(Text)
+    # Line number:  Part I Column (1c)  Description:  Description of transaction  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/TransactionDesc 
+
+    TrnsctnCrrctdInd = Column(String(length=5))
+    # Line number:  Part I Column (1d)  Description:  Transaction corrected?  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/TransactionCorrectedInd 
+
+#######
+#
 # IRS990ScheduleL - LoansBtwnOrgInterestedPrsnGrp
 # A repeating structure from ScheduleL Part II Loans to and/or From Interested Persons 
 #
@@ -10233,7 +10316,7 @@ class SkdLSpplmntlInfrmtnDtl(Base):
 
 class SkdLLnsBtwnOrgIntrstdPrsn(Base):
     __tablename__='SkdLLnsBtwnOrgIntrstdPrsn'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10282,7 +10365,7 @@ class SkdLLnsBtwnOrgIntrstdPrsn(Base):
 
 class SkdLGrntAsstBnftIntrstdPrsn(Base):
     __tablename__='SkdLGrntAsstBnftIntrstdPrsn'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10319,7 +10402,7 @@ class SkdLGrntAsstBnftIntrstdPrsn(Base):
 
 class SkdLBsTrInvlvIntrstdPrsn(Base):
     __tablename__='SkdLBsTrInvlvIntrstdPrsn'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10352,44 +10435,13 @@ class SkdLBsTrInvlvIntrstdPrsn(Base):
 
 #######
 #
-# IRS990ScheduleL - DisqualifiedPersonExBnftTrGrp
-# A repeating structure from ScheduleL Part I Excess Benefit Transactions 
-#
-#######
-
-class SkdLDsqlfdPrsnExBnftTr(Base):
-    __tablename__='SkdLDsqlfdPrsnExBnftTr'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    PrsnNm = Column(String(length=35))
-    # Line number:  Part I Column (1a)  Description:  Name - Person  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/PersonNm 
-
-    BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part I Column (1a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/BusinessName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part I Column (1a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/BusinessName/BusinessNameLine2Txt 
-
-    RlnDsqlfdPrsnOrgTxt = Column(String(length=100))
-    # Line number:  Part I Column (1b)  Description:  Relationship between disqualified person and organization  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/RlnDisqualifiedPersonOrgTxt 
-
-    TrnsctnDsc = Column(Text)
-    # Line number:  Part I Column (1c)  Description:  Description of transaction  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/TransactionDesc 
-
-    TrnsctnCrrctdInd = Column(String(length=5))
-    # Line number:  Part I Column (1d)  Description:  Transaction corrected?  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/TransactionCorrectedInd 
-
-#######
-#
 # IRS990ScheduleM - ScheduleM Part I Types of Property 
 #
 #######
 
 class skedm_part_i(Base):
     __tablename__='skedm_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10405,68 +10457,29 @@ class skedm_part_i(Base):
     SkdM_ThrdPrtsUsdInd = Column(String(length=5))
     # Line number:  Part I Line 32a  Description:  Third parties used?  xpath: /IRS990ScheduleM/ThirdPartiesUsedInd 
 
-    Txdrmy_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/TaxidermyGrp/NonCashCheckboxInd 
-
-    ScrPrtnrshpTrstIntrsts_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/NonCashCheckboxInd 
-
     BtsAndPlns_NnCshChckbxInd = Column(String(length=1))
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/NonCashCheckboxInd 
-
-    ScrtsClslyHldStck_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/NonCashCheckboxInd 
-
-    QlfdCntrbOthr_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/NonCashCheckboxInd 
-
-    ScrtsPblclyTrdd_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/NonCashCheckboxInd 
-
-    RlEsttRsdntl_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/NonCashCheckboxInd 
-
-    FdInvntry_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/FoodInventoryGrp/NonCashCheckboxInd 
-
-    BksAndPblctns_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/NonCashCheckboxInd 
-
-    CrsAndOthrVhcls_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/NonCashCheckboxInd 
-
-    RlEsttCmmrcl_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/NonCashCheckboxInd 
-
-    ScrtsMsc_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/NonCashCheckboxInd 
-
-    Cllctbls_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/CollectiblesGrp/NonCashCheckboxInd 
-
-    HstrclArtfcts_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/NonCashCheckboxInd 
-
-    RlEsttOthr_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateOtherGrp/NonCashCheckboxInd 
-
-    DrgsAndMdclSppls_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/NonCashCheckboxInd 
 
     IntllctlPrprty_NnCshChckbxInd = Column(String(length=1))
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/NonCashCheckboxInd 
 
-    ClthngAndHshldGds_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/NonCashCheckboxInd 
+    HstrclArtfcts_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/NonCashCheckboxInd 
 
-    WrksOfArt_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/WorksOfArtGrp/NonCashCheckboxInd 
+    Cllctbls_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/CollectiblesGrp/NonCashCheckboxInd 
 
-    ScntfcSpcmns_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/NonCashCheckboxInd 
+    DrgsAndMdclSppls_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/NonCashCheckboxInd 
 
-    ArtFrctnlIntrst_NnCshChckbxInd = Column(String(length=1))
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/NonCashCheckboxInd 
+    FdInvntry_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/FoodInventoryGrp/NonCashCheckboxInd 
+
+    Txdrmy_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/TaxidermyGrp/NonCashCheckboxInd 
+
+    ScrtsClslyHldStck_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/NonCashCheckboxInd 
 
     ArchlgclArtfcts_NnCshChckbxInd = Column(String(length=1))
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/NonCashCheckboxInd 
@@ -10474,125 +10487,173 @@ class skedm_part_i(Base):
     ArtHstrclTrsrs_NnCshChckbxInd = Column(String(length=1))
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/NonCashCheckboxInd 
 
+    ScrtsMsc_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/NonCashCheckboxInd 
+
+    ScrtsPblclyTrdd_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/NonCashCheckboxInd 
+
+    ArtFrctnlIntrst_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/NonCashCheckboxInd 
+
+    WrksOfArt_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/WorksOfArtGrp/NonCashCheckboxInd 
+
+    ClthngAndHshldGds_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/NonCashCheckboxInd 
+
+    ScntfcSpcmns_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/NonCashCheckboxInd 
+
+    BksAndPblctns_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/NonCashCheckboxInd 
+
+    RlEsttOthr_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateOtherGrp/NonCashCheckboxInd 
+
+    ScrPrtnrshpTrstIntrsts_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/NonCashCheckboxInd 
+
+    RlEsttRsdntl_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/NonCashCheckboxInd 
+
+    CrsAndOthrVhcls_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/NonCashCheckboxInd 
+
     QlfdCntrbHstStrct_NnCshChckbxInd = Column(String(length=1))
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/NonCashCheckboxInd 
 
-    ScrtsPblclyTrdd_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/ContributionCnt 
+    RlEsttCmmrcl_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/NonCashCheckboxInd 
 
-    HstrclArtfcts_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/ContributionCnt 
-
-    IntllctlPrprty_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/ContributionCnt 
-
-    Txdrmy_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/TaxidermyGrp/ContributionCnt 
+    QlfdCntrbOthr_NnCshChckbxInd = Column(String(length=1))
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/NonCashCheckboxInd 
 
     QlfdCntrbHstStrct_CntrbtnCnt = Column(BigInteger)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/ContributionCnt 
 
-    QlfdCntrbOthr_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/ContributionCnt 
-
-    ArchlgclArtfcts_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/ContributionCnt 
-
-    RlEsttCmmrcl_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/ContributionCnt 
+    WrksOfArt_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/WorksOfArtGrp/ContributionCnt 
 
     ArtHstrclTrsrs_CntrbtnCnt = Column(BigInteger)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/ContributionCnt 
 
-    RlEsttRsdntl_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/ContributionCnt 
-
-    ScrPrtnrshpTrstIntrsts_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/ContributionCnt 
+    ScrtsClslyHldStck_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/ContributionCnt 
 
     ArtFrctnlIntrst_CntrbtnCnt = Column(BigInteger)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/ContributionCnt 
 
-    RlEsttOthr_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateOtherGrp/ContributionCnt 
-
-    Cllctbls_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/CollectiblesGrp/ContributionCnt 
-
-    BtsAndPlns_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/ContributionCnt 
+    ArchlgclArtfcts_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/ContributionCnt 
 
     BksAndPblctns_CntrbtnCnt = Column(BigInteger)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/ContributionCnt 
 
-    ScntfcSpcmns_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/ContributionCnt 
-
     CrsAndOthrVhcls_CntrbtnCnt = Column(BigInteger)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/ContributionCnt 
 
-    WrksOfArt_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/WorksOfArtGrp/ContributionCnt 
-
-    ScrtsMsc_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/ContributionCnt 
+    BtsAndPlns_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/ContributionCnt 
 
     ClthngAndHshldGds_CntrbtnCnt = Column(BigInteger)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/ContributionCnt 
 
-    DrgsAndMdclSppls_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/ContributionCnt 
-
-    ScrtsClslyHldStck_CntrbtnCnt = Column(BigInteger)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/ContributionCnt 
+    Cllctbls_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/CollectiblesGrp/ContributionCnt 
 
     FdInvntry_CntrbtnCnt = Column(BigInteger)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/FoodInventoryGrp/ContributionCnt 
 
-    RlEsttOthr_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateOtherGrp/NoncashContributionsRptF990Amt 
+    HstrclArtfcts_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/ContributionCnt 
 
-    RlEsttRsdntl_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/NoncashContributionsRptF990Amt 
+    QlfdCntrbOthr_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/ContributionCnt 
 
-    ScntfcSpcmns_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/NoncashContributionsRptF990Amt 
+    RlEsttCmmrcl_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/ContributionCnt 
 
-    ScrPrtnrshpTrstIntrsts_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/NoncashContributionsRptF990Amt 
+    ScrPrtnrshpTrstIntrsts_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/ContributionCnt 
 
-    ScrtsClslyHldStck_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/NoncashContributionsRptF990Amt 
+    RlEsttRsdntl_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/ContributionCnt 
 
-    ScrtsMsc_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/NoncashContributionsRptF990Amt 
+    RlEsttOthr_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateOtherGrp/ContributionCnt 
 
-    WrksOfArt_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/WorksOfArtGrp/NoncashContributionsRptF990Amt 
+    ScntfcSpcmns_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/ContributionCnt 
 
-    Txdrmy_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/TaxidermyGrp/NoncashContributionsRptF990Amt 
+    ScrtsPblclyTrdd_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/ContributionCnt 
 
-    ArchlgclArtfcts_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/NoncashContributionsRptF990Amt 
+    ScrtsMsc_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/ContributionCnt 
 
-    ArtFrctnlIntrst_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/NoncashContributionsRptF990Amt 
+    Txdrmy_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/TaxidermyGrp/ContributionCnt 
 
-    ArtHstrclTrsrs_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/NoncashContributionsRptF990Amt 
+    IntllctlPrprty_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/ContributionCnt 
+
+    DrgsAndMdclSppls_CntrbtnCnt = Column(BigInteger)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/ContributionCnt 
+
+    HstrclArtfcts_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/NoncashContributionsRptF990Amt 
 
     BtsAndPlns_NncshCntrbtnsRptF990Amt = Column(BigInteger)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/NoncashContributionsRptF990Amt 
 
-    BksAndPblctns_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/NoncashContributionsRptF990Amt 
+    QlfdCntrbOthr_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/NoncashContributionsRptF990Amt 
 
     CrsAndOthrVhcls_NncshCntrbtnsRptF990Amt = Column(BigInteger)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/NoncashContributionsRptF990Amt 
 
-    ClthngAndHshldGds_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/NoncashContributionsRptF990Amt 
+    RlEsttRsdntl_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/NoncashContributionsRptF990Amt 
+
+    RlEsttCmmrcl_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/NoncashContributionsRptF990Amt 
+
+    BksAndPblctns_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/NoncashContributionsRptF990Amt 
+
+    RlEsttOthr_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateOtherGrp/NoncashContributionsRptF990Amt 
+
+    ScntfcSpcmns_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/NoncashContributionsRptF990Amt 
+
+    ArtFrctnlIntrst_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/NoncashContributionsRptF990Amt 
+
+    ScrtsPblclyTrdd_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/NoncashContributionsRptF990Amt 
+
+    ScrtsClslyHldStck_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/NoncashContributionsRptF990Amt 
+
+    ArchlgclArtfcts_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/NoncashContributionsRptF990Amt 
+
+    ArtHstrclTrsrs_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/NoncashContributionsRptF990Amt 
+
+    ScrtsMsc_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/NoncashContributionsRptF990Amt 
+
+    Txdrmy_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/TaxidermyGrp/NoncashContributionsRptF990Amt 
+
+    ScrPrtnrshpTrstIntrsts_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/NoncashContributionsRptF990Amt 
+
+    FdInvntry_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/FoodInventoryGrp/NoncashContributionsRptF990Amt 
 
     Cllctbls_NncshCntrbtnsRptF990Amt = Column(BigInteger)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/CollectiblesGrp/NoncashContributionsRptF990Amt 
@@ -10600,120 +10661,89 @@ class skedm_part_i(Base):
     DrgsAndMdclSppls_NncshCntrbtnsRptF990Amt = Column(BigInteger)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/NoncashContributionsRptF990Amt 
 
-    FdInvntry_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/FoodInventoryGrp/NoncashContributionsRptF990Amt 
-
-    HstrclArtfcts_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/NoncashContributionsRptF990Amt 
+    ClthngAndHshldGds_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/NoncashContributionsRptF990Amt 
 
     IntllctlPrprty_NncshCntrbtnsRptF990Amt = Column(BigInteger)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/NoncashContributionsRptF990Amt 
 
-    ScrtsPblclyTrdd_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/NoncashContributionsRptF990Amt 
+    WrksOfArt_NncshCntrbtnsRptF990Amt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/WorksOfArtGrp/NoncashContributionsRptF990Amt 
 
     QlfdCntrbHstStrct_NncshCntrbtnsRptF990Amt = Column(BigInteger)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/NoncashContributionsRptF990Amt 
 
-    QlfdCntrbOthr_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/NoncashContributionsRptF990Amt 
-
-    RlEsttCmmrcl_NncshCntrbtnsRptF990Amt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/NoncashContributionsRptF990Amt 
-
-    WrksOfArt_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/WorksOfArtGrp/MethodOfDeterminingRevenuesTxt 
-
-    ClthngAndHshldGds_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/MethodOfDeterminingRevenuesTxt 
-
-    ArtFrctnlIntrst_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/MethodOfDeterminingRevenuesTxt 
-
-    RlEsttCmmrcl_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/MethodOfDeterminingRevenuesTxt 
-
-    Cllctbls_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/CollectiblesGrp/MethodOfDeterminingRevenuesTxt 
-
-    ArchlgclArtfcts_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/MethodOfDeterminingRevenuesTxt 
-
-    ArtHstrclTrsrs_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/MethodOfDeterminingRevenuesTxt 
-
-    BtsAndPlns_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/MethodOfDeterminingRevenuesTxt 
-
-    BksAndPblctns_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/MethodOfDeterminingRevenuesTxt 
-
-    CrsAndOthrVhcls_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/MethodOfDeterminingRevenuesTxt 
-
-    DrgsAndMdclSppls_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/MethodOfDeterminingRevenuesTxt 
-
-    FdInvntry_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/FoodInventoryGrp/MethodOfDeterminingRevenuesTxt 
-
-    HstrclArtfcts_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/MethodOfDeterminingRevenuesTxt 
-
-    IntllctlPrprty_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/MethodOfDeterminingRevenuesTxt 
-
-    QlfdCntrbHstStrct_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/MethodOfDeterminingRevenuesTxt 
+    ScrtsPblclyTrdd_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/MethodOfDeterminingRevenuesTxt 
 
     QlfdCntrbOthr_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
     # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/MethodOfDeterminingRevenuesTxt 
 
-    RlEsttOthr_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateOtherGrp/MethodOfDeterminingRevenuesTxt 
+    Cllctbls_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/CollectiblesGrp/MethodOfDeterminingRevenuesTxt 
 
-    RlEsttRsdntl_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/MethodOfDeterminingRevenuesTxt 
+    FdInvntry_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/FoodInventoryGrp/MethodOfDeterminingRevenuesTxt 
 
-    ScntfcSpcmns_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/MethodOfDeterminingRevenuesTxt 
+    ClthngAndHshldGds_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/MethodOfDeterminingRevenuesTxt 
+
+    BtsAndPlns_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/MethodOfDeterminingRevenuesTxt 
+
+    ArchlgclArtfcts_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/MethodOfDeterminingRevenuesTxt 
 
     ScrPrtnrshpTrstIntrsts_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
     # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/MethodOfDeterminingRevenuesTxt 
 
-    ScrtsClslyHldStck_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/MethodOfDeterminingRevenuesTxt 
+    QlfdCntrbHstStrct_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/MethodOfDeterminingRevenuesTxt 
+
+    RlEsttRsdntl_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/MethodOfDeterminingRevenuesTxt 
 
     ScrtsMsc_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
     # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/MethodOfDeterminingRevenuesTxt 
 
-    ScrtsPblclyTrdd_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/MethodOfDeterminingRevenuesTxt 
+    RlEsttCmmrcl_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/MethodOfDeterminingRevenuesTxt 
+
+    DrgsAndMdclSppls_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/MethodOfDeterminingRevenuesTxt 
+
+    ScrtsClslyHldStck_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/MethodOfDeterminingRevenuesTxt 
+
+    RlEsttOthr_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateOtherGrp/MethodOfDeterminingRevenuesTxt 
+
+    CrsAndOthrVhcls_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/MethodOfDeterminingRevenuesTxt 
 
     Txdrmy_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
     # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/TaxidermyGrp/MethodOfDeterminingRevenuesTxt 
 
-#######
-#
-# IRS990ScheduleM - SupplementalInformationDetail
-# A repeating structure from ScheduleM Part II Repeating Explanation Table 
-#
-#######
+    IntllctlPrprty_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/MethodOfDeterminingRevenuesTxt 
 
-class SkdMSpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdMSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
+    ScntfcSpcmns_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/MethodOfDeterminingRevenuesTxt 
 
-    SpplmntlInfrmtnDtl = Column(Text)
-    # Line number:  Part II  Description:  Explanation repeating group  xpath: /IRS990ScheduleM/SupplementalInformationDetail 
+    BksAndPblctns_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/MethodOfDeterminingRevenuesTxt 
 
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part II  Description:  Form, part and line number reference  xpath: /IRS990ScheduleM/SupplementalInformationDetail/FormAndLineReferenceDesc 
+    WrksOfArt_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/WorksOfArtGrp/MethodOfDeterminingRevenuesTxt 
 
-    ExplntnTxt = Column(Text)
-    # Line number:  Part II  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleM/SupplementalInformationDetail/ExplanationTxt 
+    HstrclArtfcts_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/MethodOfDeterminingRevenuesTxt 
+
+    ArtHstrclTrsrs_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/MethodOfDeterminingRevenuesTxt 
+
+    ArtFrctnlIntrst_MthdOfDtrmnngRvnsTxt = Column(String(length=100))
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/MethodOfDeterminingRevenuesTxt 
 
 #######
 #
@@ -10724,7 +10754,7 @@ class SkdMSpplmntlInfrmtnDtl(Base):
 
 class SkdMOthrNnCshCntrTbl(Base):
     __tablename__='SkdMOthrNnCshCntrTbl'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10745,13 +10775,35 @@ class SkdMOthrNnCshCntrTbl(Base):
 
 #######
 #
+# IRS990ScheduleM - SupplementalInformationDetail
+# A repeating structure from ScheduleM Part II Repeating Explanation Table 
+#
+#######
+
+class SkdMSpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdMSpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpplmntlInfrmtnDtl = Column(Text)
+    # Line number:  Part II  Description:  Explanation repeating group  xpath: /IRS990ScheduleM/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part II  Description:  Form, part and line number reference  xpath: /IRS990ScheduleM/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = Column(Text)
+    # Line number:  Part II  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleM/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleN - ScheduleN Part I Liquidation, Termination or Dissolution 
 #
 #######
 
 class skedn_part_i(Base):
     __tablename__='skedn_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10796,7 +10848,7 @@ class skedn_part_i(Base):
 
 class skedn_part_ii(Base):
     __tablename__='skedn_part_ii'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10814,25 +10866,76 @@ class skedn_part_ii(Base):
 
 #######
 #
-# IRS990ScheduleN - SupplementalInformationDetail
-# A repeating structure from ScheduleN Part III Explanations 
+# IRS990ScheduleN - LiquidationOfAssetsDetail
+# A repeating structure from ScheduleN Part I Liquidation, Termination or Dissolution 
 #
 #######
 
-class SkdNSpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdNSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
+class SkdNLqdtnOfAsstsDtl(Base):
+    __tablename__='SkdNLqdtnOfAsstsDtl'
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
-    SpplmntlInfrmtnDtl = Column(Text)
-    # Description:  Part III contents  xpath: /IRS990ScheduleN/SupplementalInformationDetail 
+    LqdtnOfAsstsDtl_AsstsDstrOrExpnssPdDsc = Column(Text)
+    # Line number:  Column (a)  Description:  Description of asset(s) distributed or transactional expenses paid  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/AssetsDistriOrExpnssPaidDesc 
 
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part III  Description:  Form, part and line number reference  xpath: /IRS990ScheduleN/SupplementalInformationDetail/FormAndLineReferenceDesc 
+    LqdtnOfAsstsDtl_DstrbtnDt = Column(String(length=31))
+    # Line number:  Column (b)  Description:  Date of distribution  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/DistributionDt 
 
-    ExplntnTxt = Column(Text)
-    # Line number:  Part III  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleN/SupplementalInformationDetail/ExplanationTxt 
+    LqdtnOfAsstsDtl_FrMrktVlOfAsstAmt = Column(BigInteger)
+    # Line number:  Column (c)  Description:  Fair market value of asset(s) distributed or amount of transactional expenses  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/FairMarketValueOfAssetAmt 
+
+    LqdtnOfAsstsDtl_MthdOfFMVDtrmntnTxt = Column(Text)
+    # Line number:  Column (d)  Description:  Method of determining FMV for asset(s) distributed or transactional expenses  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/MethodOfFMVDeterminationTxt 
+
+    LqdtnOfAsstsDtl_EIN = Column(String(length=9))
+    # Line number:  Column (e)  Description:  EIN of recipient (if tax-exempt)  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/EIN 
+
+    LqdtnOfAsstsDtl_IRCSctnTxt = Column(String(length=100))
+    # Line number:  Column (g)  Description:  IRC code section of recipient(s) (if tax-exempt) or type of entity  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/IRCSectionTxt 
+
+    LqdtnOfAsstsDtl_PrsnNm = Column(String(length=35))
+    # Line number:  Column (f)  Description:  Name - Person  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/PersonNm 
+
+    BsnssNm_BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/BusinessName/BusinessNameLine2Txt 
+
+    BsnssNm_BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/BusinessName/BusinessNameLine1Txt 
+
+    USAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Column (f)  Description:  ZIP code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/ZIPCd 
+
+    USAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Column (f)  Description:  State  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/StateAbbreviationCd 
+
+    USAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/CityNm 
+
+    USAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/AddressLine2Txt 
+
+    USAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/AddressLine1Txt 
+
+    FrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Column (f)  Description:  Postal code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Column (f)  Description:  Province or state  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/CityNm 
+
+    FrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Column (f)  Description:  Country  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/CountryCd 
+
+    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/AddressLine2Txt 
 
 #######
 #
@@ -10843,7 +10946,7 @@ class SkdNSpplmntlInfrmtnDtl(Base):
 
 class SkdNDspstnOfAsstsDtl(Base):
     __tablename__='SkdNDspstnOfAsstsDtl'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -10909,76 +11012,25 @@ class SkdNDspstnOfAsstsDtl(Base):
 
 #######
 #
-# IRS990ScheduleN - LiquidationOfAssetsDetail
-# A repeating structure from ScheduleN Part I Liquidation, Termination or Dissolution 
+# IRS990ScheduleN - SupplementalInformationDetail
+# A repeating structure from ScheduleN Part III Explanations 
 #
 #######
 
-class SkdNLqdtnOfAsstsDtl(Base):
-    __tablename__='SkdNLqdtnOfAsstsDtl'
-    return_id = Column(String(31))
+class SkdNSpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdNSpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
-    LqdtnOfAsstsDtl_AsstsDstrOrExpnssPdDsc = Column(Text)
-    # Line number:  Column (a)  Description:  Description of asset(s) distributed or transactional expenses paid  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/AssetsDistriOrExpnssPaidDesc 
+    SpplmntlInfrmtnDtl = Column(Text)
+    # Description:  Part III contents  xpath: /IRS990ScheduleN/SupplementalInformationDetail 
 
-    LqdtnOfAsstsDtl_DstrbtnDt = Column(String(length=31))
-    # Line number:  Column (b)  Description:  Date of distribution  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/DistributionDt 
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part III  Description:  Form, part and line number reference  xpath: /IRS990ScheduleN/SupplementalInformationDetail/FormAndLineReferenceDesc 
 
-    LqdtnOfAsstsDtl_FrMrktVlOfAsstAmt = Column(BigInteger)
-    # Line number:  Column (c)  Description:  Fair market value of asset(s) distributed or amount of transactional expenses  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/FairMarketValueOfAssetAmt 
-
-    LqdtnOfAsstsDtl_MthdOfFMVDtrmntnTxt = Column(Text)
-    # Line number:  Column (d)  Description:  Method of determining FMV for asset(s) distributed or transactional expenses  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/MethodOfFMVDeterminationTxt 
-
-    LqdtnOfAsstsDtl_EIN = Column(String(length=9))
-    # Line number:  Column (e)  Description:  EIN of recipient (if tax-exempt)  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/EIN 
-
-    LqdtnOfAsstsDtl_IRCSctnTxt = Column(String(length=100))
-    # Line number:  Column (g)  Description:  IRC code section of recipient(s) (if tax-exempt) or type of entity  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/IRCSectionTxt 
-
-    LqdtnOfAsstsDtl_PrsnNm = Column(String(length=35))
-    # Line number:  Column (f)  Description:  Name - Person  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/PersonNm 
-
-    BsnssNm_BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/BusinessName/BusinessNameLine1Txt 
-
-    BsnssNm_BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/BusinessName/BusinessNameLine2Txt 
-
-    USAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Column (f)  Description:  ZIP code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/ZIPCd 
-
-    USAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/AddressLine2Txt 
-
-    USAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Column (f)  Description:  State  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/StateAbbreviationCd 
-
-    USAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/AddressLine1Txt 
-
-    USAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/CityNm 
-
-    FrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Column (f)  Description:  Province or state  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/ProvinceOrStateNm 
-
-    FrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/CityNm 
-
-    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/AddressLine2Txt 
-
-    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/AddressLine1Txt 
-
-    FrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Column (f)  Description:  Country  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/CountryCd 
-
-    FrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Column (f)  Description:  Postal code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/ForeignPostalCd 
+    ExplntnTxt = Column(Text)
+    # Line number:  Part III  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleN/SupplementalInformationDetail/ExplanationTxt 
 
 #######
 #
@@ -10989,7 +11041,7 @@ class SkdNLqdtnOfAsstsDtl(Base):
 
 class SkdOSpplmntlInfrmtnDtl(Base):
     __tablename__='SkdOSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -11007,7 +11059,7 @@ class SkdOSpplmntlInfrmtnDtl(Base):
 
 class skedr_part_v(Base):
     __tablename__='skedr_part_v'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -11077,7 +11129,7 @@ class skedr_part_v(Base):
 
 class SkdRIdDsrgrddEntts(Base):
     __tablename__='SkdRIdDsrgrddEntts'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -11159,7 +11211,7 @@ class SkdRIdDsrgrddEntts(Base):
 
 class SkdRIdRltdTxExmptOrg(Base):
     __tablename__='SkdRIdRltdTxExmptOrg'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -11244,7 +11296,7 @@ class SkdRIdRltdTxExmptOrg(Base):
 
 class SkdRIdRltdOrgTxblPrtnrshp(Base):
     __tablename__='SkdRIdRltdOrgTxblPrtnrshp'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -11334,147 +11386,6 @@ class SkdRIdRltdOrgTxblPrtnrshp(Base):
 
 #######
 #
-# IRS990ScheduleR - TransactionsRelatedOrgGrp
-# A repeating structure from ScheduleR Part V - Transactions with Related Organizations and Noncharitable Exempt Organizations 
-#
-#######
-
-class SkdRTrnsctnsRltdOrg(Base):
-    __tablename__='SkdRTrnsctnsRltdOrg'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part V Line 2 Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/OtherOrganizationName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part V Line 2 Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/OtherOrganizationName/BusinessNameLine2Txt 
-
-    TrnsctnTxt = Column(Text)
-    # Line number:  Part V Line 2 Column (b)  Description:  Transaction type, enter up to five characters  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/TransactionTypeTxt 
-
-    InvlvdAmt = Column(BigInteger)
-    # Line number:  Part V Line 2 Column (c)  Description:  Amount involved ($)  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/InvolvedAmt 
-
-    MthdOfAmntDtrmntnTxt = Column(Text)
-    # Line number:  Part V Line 2 Column (d)  Description:  Method of determining amount involved  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/MethodOfAmountDeterminationTxt 
-
-#######
-#
-# IRS990ScheduleR - SupplementalInformationDetail
-# A repeating structure from ScheduleR Part VII Supplemental Information 
-#
-#######
-
-class SkdRSpplmntlInfrmtnDtl(Base):
-    __tablename__='SkdRSpplmntlInfrmtnDtl'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SpplmntlInfrmtnDtl = Column(Text)
-    # Description:  Part VII contents  xpath: /IRS990ScheduleR/SupplementalInformationDetail 
-
-    FrmAndLnRfrncDsc = Column(String(length=100))
-    # Line number:  Part VII  Description:  Form, part and line number reference  xpath: /IRS990ScheduleR/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = Column(Text)
-    # Line number:  Part VII  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleR/SupplementalInformationDetail/ExplanationTxt 
-
-#######
-#
-# IRS990ScheduleR - UnrelatedOrgTxblPartnershipGrp
-# A repeating structure from ScheduleR Part VI 
-#
-#######
-
-class SkdRUnrltdOrgTxblPrtnrshp(Base):
-    __tablename__='SkdRUnrltdOrgTxblPrtnrshp'
-    return_id = Column(String(31))
-    ein = Column(String(15))
-    id = Column(Integer, primary_key=True)
-
-    SkdR_UnrltdOrgTxblPrtnrshp = Column(Text)
-    # Description:  Part VI content  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp 
-
-    BsnssNm_BsnssNmLn1Txt = Column(String(length=75))
-    # Line number:  Part VI Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/BusinessName/BusinessNameLine1Txt 
-
-    BsnssNm_BsnssNmLn2Txt = Column(String(length=75))
-    # Line number:  Part VI Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/BusinessName/BusinessNameLine2Txt 
-
-    UnrltdOrgTxblPrtnrshp_EIN = Column(String(length=9))
-    # Line number:  Part VI Column (a)  Description:  EIN  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/EIN 
-
-    UnrltdOrgTxblPrtnrshp_PrmryActvtsTxt = Column(String(length=100))
-    # Line number:  Part VI Column (b)  Description:  Primary activity  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/PrimaryActivitiesTxt 
-
-    UnrltdOrgTxblPrtnrshp_PrdmntIncmDsc = Column(Text)
-    # Line number:  Part VI Column (d)  Description:  Predominate income (related, investment, unrelated)  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/PredominateIncomeDesc 
-
-    UnrltdOrgTxblPrtnrshp_AllPrtnrsC3SInd = Column(String(length=5))
-    # Line number:  Part VI Column (e)  Description:  All partners c3s?  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/AllPartnersC3SInd 
-
-    UnrltdOrgTxblPrtnrshp_ShrOfTtlIncmAmt = Column(BigInteger)
-    # Line number:  Part VI Column (f)  Description:  Share of total income ($)  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ShareOfTotalIncomeAmt 
-
-    UnrltdOrgTxblPrtnrshp_ShrOfEOYAsstsAmt = Column(BigInteger)
-    # Line number:  Part VI Column (g)  Description:  Share of end-of-year assets ($)  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ShareOfEOYAssetsAmt 
-
-    UnrltdOrgTxblPrtnrshp_DsprprtntAllctnsInd = Column(String(length=5))
-    # Line number:  Part VI Column (h)  Description:  Disproportionate allocations?  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/DisproportionateAllocationsInd 
-
-    UnrltdOrgTxblPrtnrshp_UBICdVAmt = Column(BigInteger)
-    # Line number:  Part VI Column (i)  Description:  Code V amount  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/UBICodeVAmt 
-
-    UnrltdOrgTxblPrtnrshp_GnrlOrMngngPrtnrInd = Column(String(length=5))
-    # Line number:  Part VI Column (j)  Description:  General or managing partner?  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/GeneralOrManagingPartnerInd 
-
-    UnrltdOrgTxblPrtnrshp_OwnrshpPct = Column(Numeric(precision=6))
-    # Line number:  Part VI Column (k)  Description:  Percentage ownership  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/OwnershipPct 
-
-    USAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VI Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/AddressLine1Txt 
-
-    USAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VI Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/AddressLine2Txt 
-
-    USAddrss_CtyNm = Column(String(length=22))
-    # Line number:  Part VI Column (a)  Description:  City  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/CityNm 
-
-    USAddrss_SttAbbrvtnCd = Column(String(length=2))
-    # Line number:  Part VI Column (a)  Description:  State  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/StateAbbreviationCd 
-
-    USAddrss_ZIPCd = Column(String(length=15))
-    # Line number:  Part VI Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/ZIPCd 
-
-    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
-    # Line number:  Part VI Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine1Txt 
-
-    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
-    # Line number:  Part VI Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine2Txt 
-
-    FrgnAddrss_CtyNm = Column(Text)
-    # Line number:  Part VI Column (a)  Description:  City  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/CityNm 
-
-    FrgnAddrss_PrvncOrSttNm = Column(Text)
-    # Line number:  Part VI Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/ProvinceOrStateNm 
-
-    FrgnAddrss_CntryCd = Column(String(length=2))
-    # Line number:  Part VI Column (a)  Description:  Country  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/CountryCd 
-
-    FrgnAddrss_FrgnPstlCd = Column(Text)
-    # Line number:  Part VI Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/ForeignPostalCd 
-
-    UnrltdOrgTxblPrtnrshp_LglDmclSttCd = Column(String(length=2))
-    # Line number:  Part VI Column (c)  Description:  Legal domicile - State  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/LegalDomicileStateCd 
-
-    UnrltdOrgTxblPrtnrshp_LglDmclFrgnCntryCd = Column(String(length=2))
-    # Line number:  Part VI Column (c)  Description:  Legal domicile - Foreign Country  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/LegalDomicileForeignCountryCd 
-
-#######
-#
 # IRS990ScheduleR - IdRelatedOrgTxblCorpTrGrp
 # A repeating structure from ScheduleR Part IV - Identification of Related Organizations Taxable as a Corporation or Trust 
 #
@@ -11482,7 +11393,7 @@ class SkdRUnrltdOrgTxblPrtnrshp(Base):
 
 class SkdRIdRltdOrgTxblCrpTr(Base):
     __tablename__='SkdRIdRltdOrgTxblCrpTr'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -11566,13 +11477,154 @@ class SkdRIdRltdOrgTxblCrpTr(Base):
 
 #######
 #
+# IRS990ScheduleR - TransactionsRelatedOrgGrp
+# A repeating structure from ScheduleR Part V - Transactions with Related Organizations and Noncharitable Exempt Organizations 
+#
+#######
+
+class SkdRTrnsctnsRltdOrg(Base):
+    __tablename__='SkdRTrnsctnsRltdOrg'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part V Line 2 Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/OtherOrganizationName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part V Line 2 Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/OtherOrganizationName/BusinessNameLine2Txt 
+
+    TrnsctnTxt = Column(Text)
+    # Line number:  Part V Line 2 Column (b)  Description:  Transaction type, enter up to five characters  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/TransactionTypeTxt 
+
+    InvlvdAmt = Column(BigInteger)
+    # Line number:  Part V Line 2 Column (c)  Description:  Amount involved ($)  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/InvolvedAmt 
+
+    MthdOfAmntDtrmntnTxt = Column(Text)
+    # Line number:  Part V Line 2 Column (d)  Description:  Method of determining amount involved  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/MethodOfAmountDeterminationTxt 
+
+#######
+#
+# IRS990ScheduleR - UnrelatedOrgTxblPartnershipGrp
+# A repeating structure from ScheduleR Part VI 
+#
+#######
+
+class SkdRUnrltdOrgTxblPrtnrshp(Base):
+    __tablename__='SkdRUnrltdOrgTxblPrtnrshp'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SkdR_UnrltdOrgTxblPrtnrshp = Column(Text)
+    # Description:  Part VI content  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp 
+
+    BsnssNm_BsnssNmLn1Txt = Column(String(length=75))
+    # Line number:  Part VI Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNm_BsnssNmLn2Txt = Column(String(length=75))
+    # Line number:  Part VI Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/BusinessName/BusinessNameLine2Txt 
+
+    UnrltdOrgTxblPrtnrshp_EIN = Column(String(length=9))
+    # Line number:  Part VI Column (a)  Description:  EIN  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/EIN 
+
+    UnrltdOrgTxblPrtnrshp_PrmryActvtsTxt = Column(String(length=100))
+    # Line number:  Part VI Column (b)  Description:  Primary activity  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/PrimaryActivitiesTxt 
+
+    UnrltdOrgTxblPrtnrshp_PrdmntIncmDsc = Column(Text)
+    # Line number:  Part VI Column (d)  Description:  Predominate income (related, investment, unrelated)  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/PredominateIncomeDesc 
+
+    UnrltdOrgTxblPrtnrshp_AllPrtnrsC3SInd = Column(String(length=5))
+    # Line number:  Part VI Column (e)  Description:  All partners c3s?  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/AllPartnersC3SInd 
+
+    UnrltdOrgTxblPrtnrshp_ShrOfTtlIncmAmt = Column(BigInteger)
+    # Line number:  Part VI Column (f)  Description:  Share of total income ($)  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ShareOfTotalIncomeAmt 
+
+    UnrltdOrgTxblPrtnrshp_ShrOfEOYAsstsAmt = Column(BigInteger)
+    # Line number:  Part VI Column (g)  Description:  Share of end-of-year assets ($)  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ShareOfEOYAssetsAmt 
+
+    UnrltdOrgTxblPrtnrshp_DsprprtntAllctnsInd = Column(String(length=5))
+    # Line number:  Part VI Column (h)  Description:  Disproportionate allocations?  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/DisproportionateAllocationsInd 
+
+    UnrltdOrgTxblPrtnrshp_UBICdVAmt = Column(BigInteger)
+    # Line number:  Part VI Column (i)  Description:  Code V amount  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/UBICodeVAmt 
+
+    UnrltdOrgTxblPrtnrshp_GnrlOrMngngPrtnrInd = Column(String(length=5))
+    # Line number:  Part VI Column (j)  Description:  General or managing partner?  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/GeneralOrManagingPartnerInd 
+
+    UnrltdOrgTxblPrtnrshp_OwnrshpPct = Column(Numeric(precision=6))
+    # Line number:  Part VI Column (k)  Description:  Percentage ownership  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/OwnershipPct 
+
+    USAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VI Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VI Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/AddressLine2Txt 
+
+    USAddrss_CtyNm = Column(String(length=22))
+    # Line number:  Part VI Column (a)  Description:  City  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = Column(String(length=2))
+    # Line number:  Part VI Column (a)  Description:  State  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/StateAbbreviationCd 
+
+    USAddrss_ZIPCd = Column(String(length=15))
+    # Line number:  Part VI Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/ZIPCd 
+
+    FrgnAddrss_AddrssLn1Txt = Column(String(length=35))
+    # Line number:  Part VI Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = Column(String(length=35))
+    # Line number:  Part VI Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine2Txt 
+
+    FrgnAddrss_CtyNm = Column(Text)
+    # Line number:  Part VI Column (a)  Description:  City  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/CityNm 
+
+    FrgnAddrss_PrvncOrSttNm = Column(Text)
+    # Line number:  Part VI Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = Column(String(length=2))
+    # Line number:  Part VI Column (a)  Description:  Country  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/CountryCd 
+
+    FrgnAddrss_FrgnPstlCd = Column(Text)
+    # Line number:  Part VI Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/ForeignPostalCd 
+
+    UnrltdOrgTxblPrtnrshp_LglDmclSttCd = Column(String(length=2))
+    # Line number:  Part VI Column (c)  Description:  Legal domicile - State  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/LegalDomicileStateCd 
+
+    UnrltdOrgTxblPrtnrshp_LglDmclFrgnCntryCd = Column(String(length=2))
+    # Line number:  Part VI Column (c)  Description:  Legal domicile - Foreign Country  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/LegalDomicileForeignCountryCd 
+
+#######
+#
+# IRS990ScheduleR - SupplementalInformationDetail
+# A repeating structure from ScheduleR Part VII Supplemental Information 
+#
+#######
+
+class SkdRSpplmntlInfrmtnDtl(Base):
+    __tablename__='SkdRSpplmntlInfrmtnDtl'
+    object_id = Column(String(31))
+    ein = Column(String(15))
+    id = Column(Integer, primary_key=True)
+
+    SpplmntlInfrmtnDtl = Column(Text)
+    # Description:  Part VII contents  xpath: /IRS990ScheduleR/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = Column(String(length=100))
+    # Line number:  Part VII  Description:  Form, part and line number reference  xpath: /IRS990ScheduleR/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = Column(Text)
+    # Line number:  Part VII  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleR/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # ReturnHeader990x - ReturnHeader990x Part I Return Header Data 
 #
 #######
 
 class returnheader990x_part_i(Base):
     __tablename__='returnheader990x_part_i'
-    return_id = Column(String(31))
+    object_id = Column(String(31))
     ein = Column(String(15))
     id = Column(Integer, primary_key=True)
 
@@ -11774,23 +11826,38 @@ class returnheader990x_part_i(Base):
     PrprrPrsn_PTIN = Column(String(length=9))
     # xpath: /ReturnHeader/PreparerPersonGrp/PTIN 
 
+    RtrnHdr_FlngScrtyInfrmtn = Column(Text)
+    # xpath: /ReturnHeader/FilingSecurityInformation 
+
     IPAddrss_IPv4AddrssTxt = Column(String(length=31))
-    # xpath: /ReturnHeader/IPAddress/IPv4AddressTxt 
+    # xpath: /ReturnHeader/FilingSecurityInformation/IPAddress/IPv4AddressTxt 
 
     IPAddrss_IPv6AddrssTxt = Column(String(length=31))
-    # xpath: /ReturnHeader/IPAddress/IPv6AddressTxt 
+    # xpath: /ReturnHeader/FilingSecurityInformation/IPAddress/IPv6AddressTxt 
 
-    RtrnHdr_IPDt = Column(String(length=31))
-    # xpath: /ReturnHeader/IPDt 
+    FlngScrtyInfrmtn_IPDt = Column(String(length=31))
+    # xpath: /ReturnHeader/FilingSecurityInformation/IPDt 
 
-    RtrnHdr_IPTm = Column(String(length=15))
-    # xpath: /ReturnHeader/IPTm 
+    FlngScrtyInfrmtn_IPTm = Column(String(length=15))
+    # xpath: /ReturnHeader/FilingSecurityInformation/IPTm 
 
-    RtrnHdr_IPTmznCd = Column(String(length=31))
-    # xpath: /ReturnHeader/IPTimezoneCd 
+    FlngScrtyInfrmtn_IPTmznCd = Column(String(length=31))
+    # xpath: /ReturnHeader/FilingSecurityInformation/IPTimezoneCd 
 
-    RtrnHdr_DvcId = Column(String(length=40))
-    # xpath: /ReturnHeader/DeviceId 
+    FlngScrtyInfrmtn_FdrlOrgnlSbmssnId = Column(Text)
+    # xpath: /ReturnHeader/FilingSecurityInformation/FederalOriginalSubmissionId 
+
+    FlngScrtyInfrmtn_FdrlOrgnlSbmssnIdDt = Column(String(length=31))
+    # xpath: /ReturnHeader/FilingSecurityInformation/FederalOriginalSubmissionIdDt 
+
+    FlngScrtyInfrmtn_FlngLcnsCd = Column(Text)
+    # xpath: /ReturnHeader/FilingSecurityInformation/FilingLicenseTypeCd 
+
+    FlngScrtyInfrmtn_AtSbmssnCrtnDvcId = Column(String(length=40))
+    # xpath: /ReturnHeader/FilingSecurityInformation/AtSubmissionCreationDeviceId 
+
+    FlngScrtyInfrmtn_AtSbmssnFlngDvcId = Column(String(length=40))
+    # xpath: /ReturnHeader/FilingSecurityInformation/AtSubmissionFilingDeviceId 
 
     RtrnHdr_TxYr = Column(Integer)
     # xpath: /ReturnHeader/TaxYr 
