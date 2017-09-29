@@ -4,8 +4,8 @@ from django.apps import apps
 from django.forms import model_to_dict
 
 # Setting too big will create memory problems
-BATCH_SIZE = 100
-VERBOSE = False
+BATCH_SIZE = 1
+VERBOSE = True
 APPNAME = 'returndata'
 listtype = type([])
 # TODO: allow appname to be passed as an argument. 
@@ -51,6 +51,7 @@ class Accumulator(object):
             self.model_dict[model_name] = []
 
     def add_model(self, model_name, model_dict):
+        print("Add model '%s'" % model_name)
         this_model = self._get_model(model_name)
         self._clean_restricted(model_dict)
         model_instance = this_model(**model_dict)

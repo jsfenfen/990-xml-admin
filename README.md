@@ -48,11 +48,19 @@ Read the yearly csv file line by line and add new lines to the xml_submission mo
 	
 	$ python manage.py enter_yearly_submissions 2017
 	
-#### sdfsdf
+#### run\_new\_filings
 
-asdf
 
-	
+
+
+erase data from *all* return tables with:
+
+	python manage.py dbshell < returndata/sql/remove_returns.sql
+
+
+
+#### Quirks 
+ - The 2014 csv is "broken" in that it has a comma in a field. Look for "AMAGEMENT" and it can be fixed by hand. 
 
 
 
@@ -323,4 +331,5 @@ This has happened because the parse parts script was looking at an outdated vers
 5. run assign_canonical to assign vars to it
 
 6. Run propagate_from_canonical to reassign the schedule parts back to the vars
+
 

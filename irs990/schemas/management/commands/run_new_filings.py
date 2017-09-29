@@ -9,9 +9,9 @@ from filing.type_utils import unicodeType
 from schemas.model_accumulator import Accumulator
 
 
-BATCHSIZE = 100
+BATCHSIZE = 1
 LOOP_MAX = 100
-
+ids = ['201531059349300953', '201531059349300963', '201531049349200813', '201531049349201053', '201531069349200108', '201531069349200703', '201541049349200129', '201541049349200204', '201541049349200329', '201541049349200429', '201501019349200000', '201501039349200030', '201501039349200130', '201501039349200200', '201531069349300613', '201501059349200715', '201501059349200810', '201501059349200815', '201501059349200840', '201501059349201075', '201501059349201165', '201511009349200751', '201511019349200406', '201511049349200426', '201511049349200516', '201511049349200521', '201511049349200706', '201521009349200757', '201521009349200767', '201521059349200202', '201521059349200247', '201521059349200407', '201521059349200417', '201521059349200427', '201531019349200113', '201531019349200403', '201531059349300988', '201531059349301093', '201531059349301098', '201531059349301108', '201531059349301128', '201531059349301143', '201531059349301173', '201531059349301203']
 def processed_filing_from_result_filing(completed_filing, parent_submission):
     """ Turn the returned filing object into an unsaved ProcessedFiling  """
 
@@ -42,7 +42,7 @@ class Command(BaseCommand):
         for part in sked['schedule_parts'].keys():
             partname = part
             partdata = sked['schedule_parts'][part]
-            #print(partdata['object_id'])
+
             self.accumulator.add_model(partname, partdata)
 
         for groupname in sked['groups'].keys():
@@ -54,7 +54,10 @@ class Command(BaseCommand):
                 #    del groupdata['return_id']
                 #except KeyError:
                 #    pass
-                self.accumulator.add_model(groupname, groupdata)
+                if  groupname == 'null':    # wtf?
+                    print("\n\n\n%s" % groupdata)
+                else:
+                    self.accumulator.add_model(groupname, groupdata)
 
 
     def enter_from_result(self, result):
@@ -67,7 +70,7 @@ class Command(BaseCommand):
         newpf_list = []
         for xml_submission in xml_submission_queryset:
 
-            print("Handling object id %s sub_date=%s. Sleeping .1" % (xml_submission.object_id, xml_submission.sub_date))
+            print("Handling object id %s sub_date=%s." % (xml_submission.object_id, xml_submission.sub_date))
             try:
                 exists = ProcessedFiling.objects.get(object_id=xml_submission.object_id)
             except ProcessedFiling.DoesNotExist:
@@ -96,8 +99,8 @@ class Command(BaseCommand):
                 newpf_list.append(new_pf)
 
         
-                #self.accumulator.commit_all() # for testing, should go at the end when running. 
-        self.accumulator.commit_all()
+                self.accumulator.commit_all() # for testing, should go at the end when running. 
+        #self.accumulator.commit_all()
 
 
         print("Processing %s filings in bulk" % len(newpf_list))
@@ -111,8 +114,9 @@ class Command(BaseCommand):
 
         count = 0
         while True:
-            xml_batch = XMLSubmission.objects.filter(year=2015).exclude(json_set=True)[:BATCHSIZE]
-            #xml_batch = XMLSubmission.objects.filter(object_id__in=['201643199349306294',])
+            #xml_batch = XMLSubmission.objects.filter(year=2015).exclude(json_set=True)[:BATCHSIZE]
+            #xml_batch = XMLSubmission.objects.filter(object_id__in=ids).exclude(json_set=True)[:BATCHSIZE]
+            xml_batch = XMLSubmission.objects.filter(object_id__in=['201531059349301203',])[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=test2016ids).exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(sub_date__regex=r'^8.+2017.*').exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=test2016ids).exclude(json_set=True)[:BATCHSIZE]

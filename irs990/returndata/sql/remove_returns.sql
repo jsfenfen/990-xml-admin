@@ -180,3 +180,4 @@ delete from returndata_skedn_part_ii;
 delete from returndata_skedr_part_v;
 delete from returndata_spclcndtndsc;
 delete from returndata_sttswhrcpyofrtrnisfldcd;
+delete from returndata_skdaagrcltrlnmandaddrss;
