@@ -24,7 +24,14 @@ class Accumulator(object):
             if type(dict[key])==listtype:
                 print("\n\n***list found %s" % (key))
 
-            elif dict[key]=='RESTRICTED':
+
+            # IRS will replace anything they think is a SSN with "XXX-XX-XXXX"
+            # this seems to include 9 digit numbers. 
+            # The result is that the irs can lengthen fields (breaking max_length)
+            # by doing this, so use a formulation that's shorter than this.
+            dict[key]=dict[key].replace('XXX-XX-XXXX', '-SSN-')  
+
+            if dict[key]=='RESTRICTED':
                 # These are numeric fields, don't try to save 'RESTRICTED'
                 del(dict[key])
 
