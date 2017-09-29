@@ -114,9 +114,9 @@ class Command(BaseCommand):
 
         count = 0
         while True:
-            #xml_batch = XMLSubmission.objects.filter(year=2015).exclude(json_set=True)[:BATCHSIZE]
+            xml_batch = XMLSubmission.objects.filter(year=2015).exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=ids).exclude(json_set=True)[:BATCHSIZE]
-            xml_batch = XMLSubmission.objects.filter(object_id__in=['201531059349301203',])[:BATCHSIZE]
+            #xml_batch = XMLSubmission.objects.filter(object_id__in=['201531059349301203',])[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=test2016ids).exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(sub_date__regex=r'^8.+2017.*').exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=test2016ids).exclude(json_set=True)[:BATCHSIZE]

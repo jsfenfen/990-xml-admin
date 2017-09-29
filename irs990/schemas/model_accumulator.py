@@ -5,7 +5,7 @@ from django.forms import model_to_dict
 
 # Setting too big will create memory problems
 BATCH_SIZE = 100
-VERBOSE = True
+VERBOSE = False
 APPNAME = 'returndata'
 listtype = type([])
 # TODO: allow appname to be passed as an argument. 
