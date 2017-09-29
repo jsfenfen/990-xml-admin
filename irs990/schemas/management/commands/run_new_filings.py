@@ -11,8 +11,9 @@ from filing.type_utils import unicodeType
 from schemas.model_accumulator import Accumulator
 
 
+# new version test data:
+# from schemas.version2016v3 import object_ids as test2016ids
 
-from schemas.version2016v3 import object_ids as test2016ids
 BATCHSIZE = 1
 
 def processed_filing_from_result_filing(completed_filing, parent_submission):
