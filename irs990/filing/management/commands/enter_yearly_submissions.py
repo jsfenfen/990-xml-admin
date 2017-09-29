@@ -30,7 +30,7 @@ class Command(BaseCommand):
                 (return_id, filing_type, ein, tax_period, sub_date, taxpayer_name, return_type, dln, object_id) = line
                 
                 try:
-                    obj = xml_submission.objects.get(return_id=return_id)
+                    obj = xml_submission.objects.get(object_id=object_id)
                 except xml_submission.DoesNotExist:
                     new_sub  = xml_submission(
                         return_id=return_id,
