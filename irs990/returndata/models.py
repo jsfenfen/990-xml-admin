@@ -3335,7 +3335,7 @@ class pf_part_v(models.Model):
     NtVlNnchrtblAsstsYr1Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Line 1(c), row 1  Description:  Noncharitable Assets - Year 1  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr1Amt 
 
-    DstrbtnYr1Rt = models.DecimalField(null=True, blank=True, max_digits=9, decimal_places=6)
+    DstrbtnYr1Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
     # Line number:  Part V Line 1(d), row 1  Description:  Distribution Ratio - Year 1  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr1Rt 
 
     AdjstdQlfyDstrYr2Amt = models.BigIntegerField(null=True, blank=True)
@@ -3344,7 +3344,7 @@ class pf_part_v(models.Model):
     NtVlNnchrtblAsstsYr2Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Line 1(c), row 2  Description:  Noncharitable Assets - Year 2  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr2Amt 
 
-    DstrbtnYr2Rt = models.DecimalField(null=True, blank=True, max_digits=9, decimal_places=6)
+    DstrbtnYr2Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
     # Line number:  Part V Line 1(d), row 2  Description:  Distribution Ratio - Year 2  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr2Rt 
 
     AdjstdQlfyDstrYr3Amt = models.BigIntegerField(null=True, blank=True)
@@ -3353,7 +3353,7 @@ class pf_part_v(models.Model):
     NtVlNnchrtblAsstsYr3Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Line 1(c), row 3  Description:  Noncharitable Assets - Year 3  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr3Amt 
 
-    DstrbtnYr3Rt = models.DecimalField(null=True, blank=True, max_digits=9, decimal_places=6)
+    DstrbtnYr3Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
     # Line number:  Part V Line 1(d), row 3  Description:  Distribution Ratio - Year 3  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr3Rt 
 
     AdjstdQlfyDstrYr4Amt = models.BigIntegerField(null=True, blank=True)
@@ -3362,7 +3362,7 @@ class pf_part_v(models.Model):
     NtVlNnchrtblAsstsYr4Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Line 1(c), row 4  Description:  Noncharitable Assets - Year 4  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr4Amt 
 
-    DstrbtnYr4Rt = models.DecimalField(null=True, blank=True, max_digits=9, decimal_places=6)
+    DstrbtnYr4Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
     # Line number:  Part V Line 1(d), row 4  Description:  Distribution Ratio - Year 4  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr4Rt 
 
     AdjstdQlfyDstrYr5Amt = models.BigIntegerField(null=True, blank=True)
@@ -3371,13 +3371,13 @@ class pf_part_v(models.Model):
     NtVlNnchrtblAsstsYr5Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Line 1(c), row 5  Description:  Noncharitable Assets - Year 5  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr5Amt 
 
-    DstrbtnYr5Rt = models.DecimalField(null=True, blank=True, max_digits=9, decimal_places=6)
+    DstrbtnYr5Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
     # Line number:  Part V Line 1(d), row 5  Description:  Distribution Ratio - Year 5  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr5Rt 
 
-    TtlDstrbtnRt = models.DecimalField(null=True, blank=True, max_digits=9, decimal_places=6)
+    TtlDstrbtnRt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
     # Line number:  Part V Line 2  Description:  Total Distribution Ratio  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/TotalDistributionRt 
 
-    AvrgDstrbtnRt = models.DecimalField(null=True, blank=True, max_digits=9, decimal_places=6)
+    AvrgDstrbtnRt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
     # Line number:  Part V Line 3  Description:  Average Distribution Ratio  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AverageDistributionRt 
 
     NtVlNnchrtblAsstsAmt = models.BigIntegerField(null=True, blank=True)
