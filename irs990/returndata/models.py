@@ -6344,7 +6344,7 @@ class SkdBNnCshPrprtyCntrbtn(models.Model):
     CntrbtrNm = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part II Column (a)  Description:  Contributor number from Part I  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/ContributorNum 
 
-    NncshPrprtyDsc = models.CharField(null=True, blank=True, max_length=100)
+    NncshPrprtyDsc = models.TextField(null=True, blank=True)
     # Line number:  Part II Column (b)  Description:  Description of noncash property given  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/NoncashPropertyDesc 
 
     FrMrktVlAmt = models.BigIntegerField(null=True, blank=True)
