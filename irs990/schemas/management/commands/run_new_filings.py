@@ -1,8 +1,6 @@
 import json
-
 from django.core.management.base import BaseCommand
 #from django.conf import settings
-
 from irsx.xmlrunner import XMLRunner
 from irsx.filing import Filing
 from irsx.standardizer import Standardizer
@@ -11,10 +9,8 @@ from filing.type_utils import unicodeType
 from schemas.model_accumulator import Accumulator
 
 
-# new version test data:
-# from schemas.version2016v3 import object_ids as test2016ids
-
-BATCHSIZE = 1
+BATCHSIZE = 100
+LOOP_MAX = 100
 
 def processed_filing_from_result_filing(completed_filing, parent_submission):
     """ Turn the returned filing object into an unsaved ProcessedFiling  """
@@ -71,8 +67,7 @@ class Command(BaseCommand):
         newpf_list = []
         for xml_submission in xml_submission_queryset:
 
-            print("Handling object id %s sub_date=%s" % (xml_submission.object_id, xml_submission.sub_date))
-
+            print("Handling object id %s sub_date=%s. Sleeping .1" % (xml_submission.object_id, xml_submission.sub_date))
             try:
                 exists = ProcessedFiling.objects.get(object_id=xml_submission.object_id)
             except ProcessedFiling.DoesNotExist:
@@ -101,8 +96,8 @@ class Command(BaseCommand):
                 newpf_list.append(new_pf)
 
         
-                self.accumulator.commit_all() # for testing, should go at the end when running. 
-        #self.accumulator.commit_all()
+                #self.accumulator.commit_all() # for testing, should go at the end when running. 
+        self.accumulator.commit_all()
 
 
         print("Processing %s filings in bulk" % len(newpf_list))
@@ -116,7 +111,7 @@ class Command(BaseCommand):
 
         count = 0
         while True:
-            xml_batch = XMLSubmission.objects.filter(year=2017).exclude(json_set=True)[:BATCHSIZE]
+            xml_batch = XMLSubmission.objects.filter(year=2015).exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=['201643199349306294',])
             #xml_batch = XMLSubmission.objects.filter(object_id__in=test2016ids).exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(sub_date__regex=r'^8.+2017.*').exclude(json_set=True)[:BATCHSIZE]
@@ -133,6 +128,6 @@ class Command(BaseCommand):
 
 
             # for testing
-            if count > 100:
+            if count > LOOP_MAX:
                 break
 

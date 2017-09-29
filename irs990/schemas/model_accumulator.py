@@ -4,7 +4,7 @@ from django.apps import apps
 from django.forms import model_to_dict
 
 # Setting too big will create memory problems
-BATCH_SIZE = 1
+BATCH_SIZE = 100
 VERBOSE = False
 APPNAME = 'returndata'
 listtype = type([])
