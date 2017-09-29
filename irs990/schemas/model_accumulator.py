@@ -51,7 +51,6 @@ class Accumulator(object):
             self.model_dict[model_name] = []
 
     def add_model(self, model_name, model_dict):
-        print("Add model '%s'" % model_name)
         this_model = self._get_model(model_name)
         self._clean_restricted(model_dict)
         model_instance = this_model(**model_dict)
