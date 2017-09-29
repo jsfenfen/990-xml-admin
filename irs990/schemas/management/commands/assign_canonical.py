@@ -119,10 +119,10 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self.init_version_errors()
-        print ("Assinging groups... ")
+        print ("Assigning groups... ")
         self.assign_groups()
         self.show_group_key_errors()
 
         print ("Assigning variables...")
-        self.assign_variables()
-        self.show_var_key_errors()
+        #self.assign_variables()
+        #self.show_var_key_errors()

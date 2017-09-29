@@ -4,4 +4,7 @@ django>=1.11
 psycopg2
 xmltodict
 requests
-unicodecsv
+
+unicodecsv;python_version<"3.0"
+
+#irsx
