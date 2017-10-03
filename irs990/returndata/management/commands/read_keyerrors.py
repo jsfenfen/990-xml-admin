@@ -10,7 +10,7 @@ class Command(BaseCommand):
 
         missing_dict = {}
 
-        haskeyerrors = ProcessedFiling.objects.filter(has_keyerrors=True)[:SAMPLE_SIZE]
+        haskeyerrors = ProcessedFiling.objects.filter(has_keyerrors=True).only('keyerrors')[:SAMPLE_SIZE]
         for thisfiling in haskeyerrors:
             print("Processing filing %s" % thisfiling.object_id)
             for schedule in thisfiling.keyerrors:
