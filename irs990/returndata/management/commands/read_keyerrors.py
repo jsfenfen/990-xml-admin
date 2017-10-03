@@ -10,17 +10,19 @@ class Command(BaseCommand):
 
         missing_dict = {}
 
-        haskeyerrors = ProcessedFiling.objects.filter(has_keyerrors=True).only('keyerrors')[:SAMPLE_SIZE]
+        haskeyerrors = ProcessedFiling.objects.filter(has_keyerrors=True).only('keyerrors', 'version_string')[:SAMPLE_SIZE]
         for thisfiling in haskeyerrors:
             print("Processing filing %s" % thisfiling.object_id)
             for schedule in thisfiling.keyerrors:
                 print("Handling keyerrors for sked %s" % schedule['schedule_name'])
                 for keyerror in schedule['keyerrors']:
                     #print ("keyerror: %s" % keyerror['element_path'])
+                    thiskey = thisfiling.version_string + keyerror['element_path']
                     try:
-                        missing_dict[keyerror['element_path']]+= 1
+
+                        missing_dict[thiskey]+= 1
                     except KeyError:
-                        missing_dict[keyerror['element_path']] = 1
+                        missing_dict[thiskey] = 1
 
                 for keyerror in schedule['group_keyerrors']:
                     print ("group_keyerrors: %s" % keyerror['element_path'])
