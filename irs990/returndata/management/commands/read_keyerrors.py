@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 from filing.models import ProcessedFiling
 
-SAMPLE_SIZE = 1000
+SAMPLE_MAX = 100000
 
 class Command(BaseCommand):
     help = """  Drop and regenerate canonical groups and variables.
@@ -10,7 +10,7 @@ class Command(BaseCommand):
 
         missing_dict = {}
 
-        haskeyerrors = ProcessedFiling.objects.filter(has_keyerrors=True).only('keyerrors', 'version_string')[:SAMPLE_SIZE]
+        haskeyerrors = ProcessedFiling.objects.filter(has_keyerrors=True).only('keyerrors', 'version_string')[:SAMPLE_MAX]
         for thisfiling in haskeyerrors:
             print("Processing filing %s" % thisfiling.object_id)
             for schedule in thisfiling.keyerrors:
