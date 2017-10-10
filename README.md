@@ -58,6 +58,12 @@ erase data from *all* return tables with:
 	python manage.py dbshell < returndata/sql/remove_returns.sql
 
 
+Shows number of entries (in all tables) credit [StackOverflow](https://stackoverflow.com/a/2611745):
+
+	SELECT schemaname,relname,n_live_tup 
+  	FROM pg_stat_user_tables 
+  	ORDER BY n_live_tup DESC;
+  
 
 #### Quirks 
  - The 2014 csv is "broken" in that it has a comma in a field. Look for "AMAGEMENT" and it can be fixed by hand. 
@@ -174,10 +180,15 @@ are assigned in a later management command (propagate\_from\_canonical)."
 
 ####  generate_documentation
 
+Writes documentation
+
 #### generate_models
+
+Generates the django models for returndata, by default in schemas/generated_models/. In development: -sqlalchemy option, which will export a sqlalchemy models file. 
  
 #### generate_csvs
 
+Generates schedule_parts.csv, groups.csv and variables.csv, which are used to feed xml-reader.
 
 
 

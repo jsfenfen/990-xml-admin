@@ -44,7 +44,7 @@ var_types = {
     'CountType':{'type':'Integer', 'length':7}, # max length is 6
     'Count2Type':{'type':'Integer', 'length':7}, # max length is 6
     'PhoneNumberType':{'type':'Char', 'length':10},
-    'IRS990PFPartVDistriRatioType':{'type':'Decimal', 'totalDigits':9, 'fractionDigits':6},
+    'IRS990PFPartVDistriRatioType':{'type':'Decimal', 'totalDigits':12, 'fractionDigits':6}, # was 9, manual fix
     'LargeRatioType':{'type':'Decimal', 'totalDigits':22, 'fractionDigits':12},
     'DecimalNNType':{'type':'Decimal', 'totalDigits':22, 'fractionDigits':2}, # dunno upper bound
     'EFINType':{'type':'Char', 'length':6}, # Type for Electronic Filing Identification No. - 6 digits
@@ -53,7 +53,7 @@ var_types = {
     'SoftwareVersionType':{'type':'Char', 'length':20},
     'TimeType':{'type':'Char', 'length':15}, #  Should be no more than 9 chars, but... [0-9]{2}:[0-9]{2}:[0-9]{2}
     'CUSIPNumberType':{'type':'Char', 'length':9},
-    'SSNType':{'type':'Char', 'length':9},
+    'SSNType':{'type':'Char', 'length':12}, # should be 9 but needs to fit "XXX-XX-XXXX" which has 11
     'DeviceIdType':{'type':'Char', 'length':40},
     'BusinessNameControlType':{'type':'Char', 'length':7}, # max is 4: ([A-Z0-9\-]|&#x26;){1,4}
     'PersonTitleType':{'type':'Char', 'length':35}, 

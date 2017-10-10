@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 from django.db import models
 
 #######
@@ -23,7 +24,13 @@ class part_0(models.Model):
     # Line number:  B  Description:  Indicates this return is an amended return  xpath: /IRS990/AmendedReturnInd 
 
     DngBsnssAsNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  C  Description:  Business name line 1  xpath: /IRS990/DoingBusinessAsName/BusinessNameLine1 
+
+    DngBsnssAsNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  C  Description:  Business name line 1  xpath: /IRS990/DoingBusinessAsName/BusinessNameLine1Txt 
+
+    DngBsnssAsNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  C  Description:  Business name line 2  xpath: /IRS990/DoingBusinessAsName/BusinessNameLine2 
 
     DngBsnssAsNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  C  Description:  Business name line 2  xpath: /IRS990/DoingBusinessAsName/BusinessNameLine2Txt 
@@ -65,19 +72,37 @@ class part_0(models.Model):
     # Line number:  F  Description:  Name of principal officer - Person  xpath: /IRS990/PrincipalOfficerNm 
 
     PrncplOfcrBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  F  Description:  Business name line 1  xpath: /IRS990/PrincipalOfcrBusinessAddress/BusinessNameLine1 
+
+    PrncplOfcrBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  F  Description:  Business name line 1  xpath: /IRS990/PrincipalOfcrBusinessName/BusinessNameLine1Txt 
+
+    PrncplOfcrBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  F  Description:  Business name line 2  xpath: /IRS990/PrincipalOfcrBusinessAddress/BusinessNameLine2 
 
     PrncplOfcrBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  F  Description:  Business name line 2  xpath: /IRS990/PrincipalOfcrBusinessName/BusinessNameLine2Txt 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  F  Description:  Address line 1  xpath: /IRS990/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  F  Description:  Address line 1  xpath: /IRS990/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  F  Description:  Address line 2  xpath: /IRS990/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  F  Description:  Address line 2  xpath: /IRS990/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  F  Description:  City  xpath: /IRS990/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  F  Description:  City  xpath: /IRS990/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  F  Description:  State  xpath: /IRS990/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  F  Description:  State  xpath: /IRS990/USAddress/StateAbbreviationCd 
@@ -85,17 +110,35 @@ class part_0(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  F  Description:  ZIP code  xpath: /IRS990/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  F  Description:  ZIP code  xpath: /IRS990/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  F  Description:  Address line 1  xpath: /IRS990/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  F  Description:  Address line 1  xpath: /IRS990/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  F  Description:  Address line 2  xpath: /IRS990/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  F  Description:  Address line 2  xpath: /IRS990/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  F  Description:  City  xpath: /IRS990/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  F  Description:  City  xpath: /IRS990/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  F  Description:  Province or state  xpath: /IRS990/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  F  Description:  Province or state  xpath: /IRS990/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  F  Description:  Country  xpath: /IRS990/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  F  Description:  Country  xpath: /IRS990/ForeignAddress/CountryCd 
@@ -103,17 +146,20 @@ class part_0(models.Model):
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  F  Description:  Postal code  xpath: /IRS990/ForeignAddress/ForeignPostalCd 
 
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  F  Description:  Postal code  xpath: /IRS990/ForeignAddress/PostalCode 
+
     Orgnztn501c3Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  I  Description:  Indicates a 501(c)(3) organization  xpath: /IRS990/Organization501c3Ind 
+    # Line number:  I  Description: Indicates a 501(c)(3) organization  xpath: /IRS990/Organization501c3Ind 
 
     Orgnztn501cInd = models.TextField(null=True, blank=True)
-    # Line number:  I  Description:  Indicates a 501(c) organization  xpath: /IRS990/Organization501cInd 
+    # Line number:  I  Description: Indicates a 501(c) organization  xpath: /IRS990/Organization501cInd 
 
     Orgnztn49471NtPFInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  I  Description:  Indicates a 4947(a)(1) organization  xpath: /IRS990/Organization4947a1NotPFInd 
+    # Line number:  I  Description: Indicates a 4947(a)(1) organization  xpath: /IRS990/Organization4947a1NotPFInd 
 
     Orgnztn527Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  I  Description:  Indicates a 527 organization  xpath: /IRS990/Organization527Ind 
+    # Line number:  I  Description: Indicates a 527 organization  xpath: /IRS990/Organization527Ind 
 
     LglDmclSttCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  M  Description:  State of legal domicile  xpath: /IRS990/LegalDomicileStateCd 
@@ -132,121 +178,121 @@ class part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     ActvtyOrMssnDsc = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 1  Description:  Activity or mission description  xpath: /IRS990/ActivityOrMissionDesc 
+    # Line number: Part I Line 1  Description:  Activity or mission description  xpath: /IRS990/ActivityOrMissionDesc 
 
     CntrctTrmntnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 2  Description:  Termination or contraction  xpath: /IRS990/ContractTerminationInd 
+    # Line number: Part I Line 2  Description:  Termination or contraction  xpath: /IRS990/ContractTerminationInd 
 
     VtngMmbrsGvrnngBdyCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3  Description:  Number voting members governing body  xpath: /IRS990/VotingMembersGoverningBodyCnt 
+    # Line number: Part I Line 3  Description:  Number voting members governing body  xpath: /IRS990/VotingMembersGoverningBodyCnt 
 
     VtngMmbrsIndpndntCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 4  Description:  Number independent voting members  xpath: /IRS990/VotingMembersIndependentCnt 
+    # Line number: Part I Line 4  Description:  Number independent voting members  xpath: /IRS990/VotingMembersIndependentCnt 
 
     TtlEmplyCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 5  Description:  total Number employees  xpath: /IRS990/TotalEmployeeCnt 
+    # Line number: Part I Line 5  Description:  total Number employees  xpath: /IRS990/TotalEmployeeCnt 
 
     TtlVlntrsCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 6  Description:  Total number volunteers  xpath: /IRS990/TotalVolunteersCnt 
+    # Line number: Part I Line 6  Description:  Total number volunteers  xpath: /IRS990/TotalVolunteersCnt 
 
     TtlGrssUBIAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 7a  Description:  Total gross UBI  xpath: /IRS990/TotalGrossUBIAmt 
+    # Line number: Part I Line 7a  Description:  Total gross UBI  xpath: /IRS990/TotalGrossUBIAmt 
 
     NtUnrltdBsTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 7b  Description:  Net unrelated business taxable income  xpath: /IRS990/NetUnrelatedBusTxblIncmAmt 
+    # Line number: Part I Line 7b  Description:  Net unrelated business taxable income  xpath: /IRS990/NetUnrelatedBusTxblIncmAmt 
 
     PYCntrbtnsGrntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 8  Description:  Contributions and grants - prior year  xpath: /IRS990/PYContributionsGrantsAmt 
+    # Line number: Part I Line 8  Description:  Contributions and grants - prior year  xpath: /IRS990/PYContributionsGrantsAmt 
 
     CYCntrbtnsGrntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 8  Description:  Contributions and grants - current year  xpath: /IRS990/CYContributionsGrantsAmt 
+    # Line number: Part I Line 8  Description:  Contributions and grants - current year  xpath: /IRS990/CYContributionsGrantsAmt 
 
     PYPrgrmSrvcRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 9  Description:  Program service revenue - prior year  xpath: /IRS990/PYProgramServiceRevenueAmt 
+    # Line number: Part I Line 9  Description:  Program service revenue - prior year  xpath: /IRS990/PYProgramServiceRevenueAmt 
 
     CYPrgrmSrvcRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 9  Description:  Program service revenue - current year  xpath: /IRS990/CYProgramServiceRevenueAmt 
+    # Line number: Part I Line 9  Description:  Program service revenue - current year  xpath: /IRS990/CYProgramServiceRevenueAmt 
 
     PYInvstmntIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 10  Description:  Investment income - prior year  xpath: /IRS990/PYInvestmentIncomeAmt 
+    # Line number: Part I Line 10  Description:  Investment income - prior year  xpath: /IRS990/PYInvestmentIncomeAmt 
 
     CYInvstmntIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 10  Description:  Investment income - current year  xpath: /IRS990/CYInvestmentIncomeAmt 
+    # Line number: Part I Line 10  Description:  Investment income - current year  xpath: /IRS990/CYInvestmentIncomeAmt 
 
     PYOthrRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 11  Description:  Other revenue - prior year  xpath: /IRS990/PYOtherRevenueAmt 
+    # Line number: Part I Line 11  Description:  Other revenue - prior year  xpath: /IRS990/PYOtherRevenueAmt 
 
     CYOthrRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 11  Description:  Other revenue - current year  xpath: /IRS990/CYOtherRevenueAmt 
+    # Line number: Part I Line 11  Description:  Other revenue - current year  xpath: /IRS990/CYOtherRevenueAmt 
 
     PYTtlRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12  Description:  Total revenue - prior year  xpath: /IRS990/PYTotalRevenueAmt 
+    # Line number: Part I Line 12  Description:  Total revenue - prior year  xpath: /IRS990/PYTotalRevenueAmt 
 
     CYTtlRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12  Description:  Total revenue - current year  xpath: /IRS990/CYTotalRevenueAmt 
+    # Line number: Part I Line 12  Description:  Total revenue - current year  xpath: /IRS990/CYTotalRevenueAmt 
 
     PYGrntsAndSmlrPdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 13  Description:  Grants and similar amounts - prior year  xpath: /IRS990/PYGrantsAndSimilarPaidAmt 
+    # Line number: Part I Line 13  Description:  Grants and similar amounts - prior year  xpath: /IRS990/PYGrantsAndSimilarPaidAmt 
 
     CYGrntsAndSmlrPdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 13  Description:  Grants and similar amounts - current year  xpath: /IRS990/CYGrantsAndSimilarPaidAmt 
+    # Line number: Part I Line 13  Description:  Grants and similar amounts - current year  xpath: /IRS990/CYGrantsAndSimilarPaidAmt 
 
     PYBnftsPdTMmbrsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 14  Description:  Benefits paid to members - prior year  xpath: /IRS990/PYBenefitsPaidToMembersAmt 
+    # Line number: Part I Line 14  Description:  Benefits paid to members - prior year  xpath: /IRS990/PYBenefitsPaidToMembersAmt 
 
     CYBnftsPdTMmbrsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 14  Description:  Benefits paid to members - current year  xpath: /IRS990/CYBenefitsPaidToMembersAmt 
+    # Line number: Part I Line 14  Description:  Benefits paid to members - current year  xpath: /IRS990/CYBenefitsPaidToMembersAmt 
 
     PYSlrsCmpEmpBnftPdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 15  Description:  Salaries, etc - prior year  xpath: /IRS990/PYSalariesCompEmpBnftPaidAmt 
+    # Line number: Part I Line 15  Description:  Salaries, etc - prior year  xpath: /IRS990/PYSalariesCompEmpBnftPaidAmt 
 
     CYSlrsCmpEmpBnftPdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 15  Description:  Salaries, etc - current year  xpath: /IRS990/CYSalariesCompEmpBnftPaidAmt 
+    # Line number: Part I Line 15  Description:  Salaries, etc - current year  xpath: /IRS990/CYSalariesCompEmpBnftPaidAmt 
 
     PYTtlPrfFndrsngExpnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16a  Description:  Total professional fundraising expense - prior year  xpath: /IRS990/PYTotalProfFndrsngExpnsAmt 
+    # Line number: Part I Line 16a  Description:  Total professional fundraising expense - prior year  xpath: /IRS990/PYTotalProfFndrsngExpnsAmt 
 
     CYTtlPrfFndrsngExpnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16a  Description:  Total professional fundraising expense - current year  xpath: /IRS990/CYTotalProfFndrsngExpnsAmt 
+    # Line number: Part I Line 16a  Description:  Total professional fundraising expense - current year  xpath: /IRS990/CYTotalProfFndrsngExpnsAmt 
 
     CYTtlFndrsngExpnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16b  Description:  Total fundraising expense - current year  xpath: /IRS990/CYTotalFundraisingExpenseAmt 
+    # Line number: Part I Line 16b  Description:  Total fundraising expense - current year  xpath: /IRS990/CYTotalFundraisingExpenseAmt 
 
     PYOthrExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 17  Description:  Other expenses - prior year  xpath: /IRS990/PYOtherExpensesAmt 
+    # Line number: Part I Line 17  Description:  Other expenses - prior year  xpath: /IRS990/PYOtherExpensesAmt 
 
     CYOthrExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 17  Description:  Other expenses - current year  xpath: /IRS990/CYOtherExpensesAmt 
+    # Line number: Part I Line 17  Description:  Other expenses - current year  xpath: /IRS990/CYOtherExpensesAmt 
 
     PYTtlExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 18  Description:  Total Expenses - prior year  xpath: /IRS990/PYTotalExpensesAmt 
+    # Line number: Part I Line 18  Description:  Total Expenses - prior year  xpath: /IRS990/PYTotalExpensesAmt 
 
     CYTtlExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 18  Description:  Total Expenses - current year  xpath: /IRS990/CYTotalExpensesAmt 
+    # Line number: Part I Line 18  Description:  Total Expenses - current year  xpath: /IRS990/CYTotalExpensesAmt 
 
     PYRvnsLssExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 19  Description:  Revenues less expenses - prior year  xpath: /IRS990/PYRevenuesLessExpensesAmt 
+    # Line number: Part I Line 19  Description:  Revenues less expenses - prior year  xpath: /IRS990/PYRevenuesLessExpensesAmt 
 
     CYRvnsLssExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 19  Description:  Revenues less expenses - current year  xpath: /IRS990/CYRevenuesLessExpensesAmt 
+    # Line number: Part I Line 19  Description:  Revenues less expenses - current year  xpath: /IRS990/CYRevenuesLessExpensesAmt 
 
     TtlAsstsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 20  Description:  Total Assets, BOY  xpath: /IRS990/TotalAssetsBOYAmt 
+    # Line number: Part I Line 20  Description:  Total Assets, BOY  xpath: /IRS990/TotalAssetsBOYAmt 
 
     TtlAsstsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 20  Description:  Total Assets, EOY  xpath: /IRS990/TotalAssetsEOYAmt 
+    # Line number: Part I Line 20  Description:  Total Assets, EOY  xpath: /IRS990/TotalAssetsEOYAmt 
 
     TtlLbltsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 21  Description:  Total Liabilities, BOY  xpath: /IRS990/TotalLiabilitiesBOYAmt 
+    # Line number: Part I Line 21  Description:  Total Liabilities, BOY  xpath: /IRS990/TotalLiabilitiesBOYAmt 
 
     TtlLbltsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 21  Description:  Total Liabilities, EOY  xpath: /IRS990/TotalLiabilitiesEOYAmt 
+    # Line number: Part I Line 21  Description:  Total Liabilities, EOY  xpath: /IRS990/TotalLiabilitiesEOYAmt 
 
     NtAsstsOrFndBlncsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 22  Description:  Net Assets or Fund Balances, BOY  xpath: /IRS990/NetAssetsOrFundBalancesBOYAmt 
+    # Line number: Part I Line 22  Description:  Net Assets or Fund Balances, BOY  xpath: /IRS990/NetAssetsOrFundBalancesBOYAmt 
 
     NtAsstsOrFndBlncsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 22  Description:  Net Assets or Fund Balances, EOY  xpath: /IRS990/NetAssetsOrFundBalancesEOYAmt 
+    # Line number: Part I Line 22  Description:  Net Assets or Fund Balances, EOY  xpath: /IRS990/NetAssetsOrFundBalancesEOYAmt 
 
 #######
 #
@@ -262,28 +308,28 @@ class part_iii(models.Model):
     # Line number:  Part III  Description:  Schedule O contains a response to a question in Part III  xpath: /IRS990/InfoInScheduleOPartIIIInd 
 
     MssnDsc = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 1  Description:  Mission description  xpath: /IRS990/MissionDesc 
+    # Line number: Part III Line 1  Description:  Mission description  xpath: /IRS990/MissionDesc 
 
     SgnfcntNwPrgrmSrvcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Line 2  Description:  Significant new program services?  xpath: /IRS990/SignificantNewProgramSrvcInd 
+    # Line number: Part III Line 2  Description:  Significant new program services?  xpath: /IRS990/SignificantNewProgramSrvcInd 
 
     SgnfcntChngInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Line 3  Description:  Significant change?  xpath: /IRS990/SignificantChangeInd 
+    # Line number: Part III Line 3  Description:  Significant change?  xpath: /IRS990/SignificantChangeInd 
 
     ActvtyCd = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 4a  Description:  Activity code  xpath: /IRS990/ActivityCd 
+    # Line number: Part III Line 4a  Description:  Activity code  xpath: /IRS990/ActivityCd 
 
     ExpnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 4a  Description:  Expense  xpath: /IRS990/ExpenseAmt 
+    # Line number: Part III Line 4a  Description:  Expense  xpath: /IRS990/ExpenseAmt 
 
     GrntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 4a  Description:  Grants  xpath: /IRS990/GrantAmt 
+    # Line number: Part III Line 4a  Description:  Grants  xpath: /IRS990/GrantAmt 
 
     RvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 4a  Description:  Revenue  xpath: /IRS990/RevenueAmt 
+    # Line number: Part III Line 4a  Description:  Revenue  xpath: /IRS990/RevenueAmt 
 
     Dsc = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 4a  Description:  Description  xpath: /IRS990/Desc 
+    # Line number: Part III Line 4a  Description:  Description  xpath: /IRS990/Desc 
 
     PrgSrvcAccmActy2_ActvtyCd = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part III  Description:  Activity code  xpath: /IRS990/ProgSrvcAccomActy2Grp/ActivityCd 
@@ -316,16 +362,16 @@ class part_iii(models.Model):
     # Line number:  Part III  Description:  Description  xpath: /IRS990/ProgSrvcAccomActy3Grp/Desc 
 
     TtlOthrPrgSrvcExpnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 4d  Description:  Total of other program service expense  xpath: /IRS990/TotalOtherProgSrvcExpenseAmt 
+    # Line number: Part III Line 4d  Description:  Total of other program service expense  xpath: /IRS990/TotalOtherProgSrvcExpenseAmt 
 
     TtlOthrPrgSrvcGrntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 4d  Description:  Total of other program service grants  xpath: /IRS990/TotalOtherProgSrvcGrantAmt 
+    # Line number: Part III Line 4d  Description:  Total of other program service grants  xpath: /IRS990/TotalOtherProgSrvcGrantAmt 
 
     TtlOthrPrgSrvcRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 4d  Description:  Total of other program service revenue  xpath: /IRS990/TotalOtherProgSrvcRevenueAmt 
+    # Line number: Part III Line 4d  Description:  Total of other program service revenue  xpath: /IRS990/TotalOtherProgSrvcRevenueAmt 
 
     TtlPrgrmSrvcExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 4e  Description:  Total program service expense  xpath: /IRS990/TotalProgramServiceExpensesAmt 
+    # Line number: Part III Line 4e  Description:  Total program service expense  xpath: /IRS990/TotalProgramServiceExpensesAmt 
 
 #######
 #
@@ -338,163 +384,163 @@ class part_iv(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     DscrbdInSctn501c3Ind = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 1  Description:  Described in 501(c)(3)?  xpath: /IRS990/DescribedInSection501c3Ind 
+    # Line number: Part IV Line 1  Description: Described in 501(c)(3)?  xpath: /IRS990/DescribedInSection501c3Ind 
 
     SkdBRqrdInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 2  Description:  Schedule B required?  xpath: /IRS990/ScheduleBRequiredInd 
+    # Line number: Part IV Line 2  Description:  Schedule B required?  xpath: /IRS990/ScheduleBRequiredInd 
 
     PltclCmpgnActyInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 3  Description:  Political activities?  xpath: /IRS990/PoliticalCampaignActyInd 
+    # Line number: Part IV Line 3  Description:  Political activities?  xpath: /IRS990/PoliticalCampaignActyInd 
 
     LbbyngActvtsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 4  Description:  Lobbying activities?  xpath: /IRS990/LobbyingActivitiesInd 
+    # Line number: Part IV Line 4  Description:  Lobbying activities?  xpath: /IRS990/LobbyingActivitiesInd 
 
     SbjctTPrxyTxInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 5  Description:  Subject to proxy tax?  xpath: /IRS990/SubjectToProxyTaxInd 
+    # Line number: Part IV Line 5  Description:  Subject to proxy tax?  xpath: /IRS990/SubjectToProxyTaxInd 
 
     DnrAdvsdFndInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 6  Description:  Donor advised funds?  xpath: /IRS990/DonorAdvisedFundInd 
+    # Line number: Part IV Line 6  Description:  Donor advised funds?  xpath: /IRS990/DonorAdvisedFundInd 
 
     CnsrvtnEsmntsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 7  Description:  Conservation easements?  xpath: /IRS990/ConservationEasementsInd 
+    # Line number: Part IV Line 7  Description:  Conservation easements?  xpath: /IRS990/ConservationEasementsInd 
 
     CllctnsOfArtInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 8  Description:  Collections of art?  xpath: /IRS990/CollectionsOfArtInd 
+    # Line number: Part IV Line 8  Description:  Collections of art?  xpath: /IRS990/CollectionsOfArtInd 
 
     CrdtCnslngInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 9  Description:  Credit counseling?  xpath: /IRS990/CreditCounselingInd 
+    # Line number: Part IV Line 9  Description:  Credit counseling?  xpath: /IRS990/CreditCounselingInd 
 
     TmpOrPrmnntEndwmntsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 10  Description:  Term or permanent endowments?  xpath: /IRS990/TempOrPermanentEndowmentsInd 
+    # Line number: Part IV Line 10  Description:  Term or permanent endowments?  xpath: /IRS990/TempOrPermanentEndowmentsInd 
 
     RprtLndBldngEqpmntInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 11a  Description:  Balance sheet land, buildings, equipment amounts reported?  xpath: /IRS990/ReportLandBuildingEquipmentInd 
+    # Line number: Part IV Line 11a  Description:  Balance sheet land, buildings, equipment amounts reported?  xpath: /IRS990/ReportLandBuildingEquipmentInd 
 
     RprtInvstmntsOthrScInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 11b  Description:  Balance sheet investments - other securities amounts reported?  xpath: /IRS990/ReportInvestmentsOtherSecInd 
+    # Line number: Part IV Line 11b  Description:  Balance sheet investments - other securities amounts reported?  xpath: /IRS990/ReportInvestmentsOtherSecInd 
 
     RprtPrgrmRltdInvstInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 11c  Description:  Balance sheet investments - program related amounts reported?  xpath: /IRS990/ReportProgramRelatedInvstInd 
+    # Line number: Part IV Line 11c  Description:  Balance sheet investments - program related amounts reported?  xpath: /IRS990/ReportProgramRelatedInvstInd 
 
     RprtOthrAsstsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 11d  Description:  Balance sheet other assets amounts reported?  xpath: /IRS990/ReportOtherAssetsInd 
+    # Line number: Part IV Line 11d  Description:  Balance sheet other assets amounts reported?  xpath: /IRS990/ReportOtherAssetsInd 
 
     RprtOthrLbltsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 11e  Description:  Balance sheet other liabilities amounts reported?  xpath: /IRS990/ReportOtherLiabilitiesInd 
+    # Line number: Part IV Line 11e  Description:  Balance sheet other liabilities amounts reported?  xpath: /IRS990/ReportOtherLiabilitiesInd 
 
     IncldFIN48FtntInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 11f  Description:  Balance sheet footnote for liability under FIN 48?  xpath: /IRS990/IncludeFIN48FootnoteInd 
+    # Line number: Part IV Line 11f  Description: Balance sheet footnote for liability under FIN 48?  xpath: /IRS990/IncludeFIN48FootnoteInd 
 
     IndpndntAdtFnclStmtInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 12a  Description:  Independent audited financial statements?  xpath: /IRS990/IndependentAuditFinclStmtInd 
+    # Line number: Part IV Line 12a  Description:  Independent audited financial statements?  xpath: /IRS990/IndependentAuditFinclStmtInd 
 
     CnsldtdAdtFnclStmtInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 12b  Description:  Consolidated audited financial statement?  xpath: /IRS990/ConsolidatedAuditFinclStmtInd 
+    # Line number: Part IV Line 12b  Description:  Consolidated audited financial statement?  xpath: /IRS990/ConsolidatedAuditFinclStmtInd 
 
     SchlOprtngInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 13  Description:  School?  xpath: /IRS990/SchoolOperatingInd 
+    # Line number: Part IV Line 13  Description:  School?  xpath: /IRS990/SchoolOperatingInd 
 
     FrgnOffcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 14a  Description:  Foreign office?  xpath: /IRS990/ForeignOfficeInd 
+    # Line number: Part IV Line 14a  Description:  Foreign office?  xpath: /IRS990/ForeignOfficeInd 
 
     FrgnActvtsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 14b  Description:  Foreign activities, etc?  xpath: /IRS990/ForeignActivitiesInd 
+    # Line number: Part IV Line 14b  Description:  Foreign activities, etc?  xpath: /IRS990/ForeignActivitiesInd 
 
     MrThn5000KTOrgInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 15  Description:  More than $5000 to organizations Part IX, line 3?  xpath: /IRS990/MoreThan5000KToOrgInd 
+    # Line number: Part IV Line 15  Description: More than $5000 to organizations Part IX, line 3?  xpath: /IRS990/MoreThan5000KToOrgInd 
 
     MrThn5000KTIndvdlsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 16  Description:  More than $5000 to individuals Part IX, line 3?  xpath: /IRS990/MoreThan5000KToIndividualsInd 
+    # Line number: Part IV Line 16  Description: More than $5000 to individuals Part IX, line 3?  xpath: /IRS990/MoreThan5000KToIndividualsInd 
 
     PrfssnlFndrsngInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 17  Description:  Professional fundraising?  xpath: /IRS990/ProfessionalFundraisingInd 
+    # Line number: Part IV Line 17  Description:  Professional fundraising?  xpath: /IRS990/ProfessionalFundraisingInd 
 
     FndrsngActvtsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 18  Description:  Fundraising activities?  xpath: /IRS990/FundraisingActivitiesInd 
+    # Line number: Part IV Line 18  Description:  Fundraising activities?  xpath: /IRS990/FundraisingActivitiesInd 
 
     GmngActvtsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 19  Description:  Gaming?  xpath: /IRS990/GamingActivitiesInd 
+    # Line number: Part IV Line 19  Description:  Gaming?  xpath: /IRS990/GamingActivitiesInd 
 
     OprtHsptlInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 20a  Description:  Hospital?  xpath: /IRS990/OperateHospitalInd 
+    # Line number: Part IV Line 20a  Description:  Hospital?  xpath: /IRS990/OperateHospitalInd 
 
     AdtdFnnclStmtAttInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 20b  Description:  Audited financial statement attached?  xpath: /IRS990/AuditedFinancialStmtAttInd 
+    # Line number: Part IV Line 20b  Description:  Audited financial statement attached?  xpath: /IRS990/AuditedFinancialStmtAttInd 
 
     GrntsTOrgnztnsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 21  Description:  Grants to organizations?  xpath: /IRS990/GrantsToOrganizationsInd 
+    # Line number: Part IV Line 21  Description:  Grants to organizations?  xpath: /IRS990/GrantsToOrganizationsInd 
 
     GrntsTIndvdlsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 22  Description:  Grants to individuals?  xpath: /IRS990/GrantsToIndividualsInd 
+    # Line number: Part IV Line 22  Description:  Grants to individuals?  xpath: /IRS990/GrantsToIndividualsInd 
 
     SkdJRqrdInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 23  Description:  Part VII, Lines 3, 4, or 5 = "Yes"?  xpath: /IRS990/ScheduleJRequiredInd 
+    # Line number: Part IV Line 23  Description: Part VII, Lines 3, 4, or 5 = "Yes"?  xpath: /IRS990/ScheduleJRequiredInd 
 
     TxExmptBndsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 24a  Description:  Tax exempt bonds?  xpath: /IRS990/TaxExemptBondsInd 
+    # Line number: Part IV Line 24a  Description:  Tax exempt bonds?  xpath: /IRS990/TaxExemptBondsInd 
 
     InvstTxExmptBndsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 24b  Description:  Investment income?  xpath: /IRS990/InvestTaxExemptBondsInd 
+    # Line number: Part IV Line 24b  Description:  Investment income?  xpath: /IRS990/InvestTaxExemptBondsInd 
 
     EscrwAccntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 24c  Description:  Escrow account?  xpath: /IRS990/EscrowAccountInd 
+    # Line number: Part IV Line 24c  Description:  Escrow account?  xpath: /IRS990/EscrowAccountInd 
 
     OnBhlfOfIssrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 24d  Description:  On behalf of issuer?  xpath: /IRS990/OnBehalfOfIssuerInd 
+    # Line number: Part IV Line 24d  Description:  On behalf of issuer?  xpath: /IRS990/OnBehalfOfIssuerInd 
 
     EnggdInExcssBnftTrnsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 25a  Description:  Excess benefit transaction?  xpath: /IRS990/EngagedInExcessBenefitTransInd 
+    # Line number: Part IV Line 25a  Description:  Excess benefit transaction?  xpath: /IRS990/EngagedInExcessBenefitTransInd 
 
     PYExcssBnftTrnsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 25b  Description:  Prior excess benefit transaction?  xpath: /IRS990/PYExcessBenefitTransInd 
+    # Line number: Part IV Line 25b  Description:  Prior excess benefit transaction?  xpath: /IRS990/PYExcessBenefitTransInd 
 
     LnOtstndngInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 26  Description:  Loan to officer or DQP?  xpath: /IRS990/LoanOutstandingInd 
+    # Line number: Part IV Line 26  Description:  Loan to officer or DQP?  xpath: /IRS990/LoanOutstandingInd 
 
     GrntTRltdPrsnInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 27  Description:  Grant to related person?  xpath: /IRS990/GrantToRelatedPersonInd 
+    # Line number: Part IV Line 27  Description:  Grant to related person?  xpath: /IRS990/GrantToRelatedPersonInd 
 
     BsnssRlnWthOrgMmInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 28a  Description:  Business relationship with organization?  xpath: /IRS990/BusinessRlnWithOrgMemInd 
+    # Line number: Part IV Line 28a  Description:  Business relationship with organization?  xpath: /IRS990/BusinessRlnWithOrgMemInd 
 
     BsnssRlnWthFmMmInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 28b  Description:  Business relationship thru family member?  xpath: /IRS990/BusinessRlnWithFamMemInd 
+    # Line number: Part IV Line 28b  Description:  Business relationship thru family member?  xpath: /IRS990/BusinessRlnWithFamMemInd 
 
     BsnssRlnWthOffcrEntInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 28c  Description:  Officer, etc. of entity with business relationship?  xpath: /IRS990/BusinessRlnWithOfficerEntInd 
+    # Line number: Part IV Line 28c  Description:  Officer, etc. of entity with business relationship?  xpath: /IRS990/BusinessRlnWithOfficerEntInd 
 
     DdctblNnCshCntrInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 29  Description:  Deductible non-cash contributions?  xpath: /IRS990/DeductibleNonCashContriInd 
+    # Line number: Part IV Line 29  Description:  Deductible non-cash contributions?  xpath: /IRS990/DeductibleNonCashContriInd 
 
     DdctblArtCntrbtnInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 30  Description:  Deductible contributions of art, etc?  xpath: /IRS990/DeductibleArtContributionInd 
+    # Line number: Part IV Line 30  Description:  Deductible contributions of art, etc?  xpath: /IRS990/DeductibleArtContributionInd 
 
     TrmntOprtnsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 31  Description:  Terminated?  xpath: /IRS990/TerminateOperationsInd 
+    # Line number: Part IV Line 31  Description:  Terminated?  xpath: /IRS990/TerminateOperationsInd 
 
     PrtlLqdtnInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 32  Description:  Partial liquidation?  xpath: /IRS990/PartialLiquidationInd 
+    # Line number: Part IV Line 32  Description:  Partial liquidation?  xpath: /IRS990/PartialLiquidationInd 
 
     DsrgrddEnttyInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 33  Description:  Disregarded entity?  xpath: /IRS990/DisregardedEntityInd 
+    # Line number: Part IV Line 33  Description:  Disregarded entity?  xpath: /IRS990/DisregardedEntityInd 
 
     RltdEnttyInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 34  Description:  Related entity?  xpath: /IRS990/RelatedEntityInd 
+    # Line number: Part IV Line 34  Description:  Related entity?  xpath: /IRS990/RelatedEntityInd 
 
     RltdOrgnztnCtrlEntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 35a  Description:  Related organization a controlled entity?  xpath: /IRS990/RelatedOrganizationCtrlEntInd 
+    # Line number: Part IV Line 35a  Description:  Related organization a controlled entity?  xpath: /IRS990/RelatedOrganizationCtrlEntInd 
 
     TrnsctnWthCntrlEntInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 35b  Description:  Payment from or engage in transaction with a controlled entity?  xpath: /IRS990/TransactionWithControlEntInd 
+    # Line number: Part IV Line 35b  Description:  Payment from or engage in transaction with a controlled entity?  xpath: /IRS990/TransactionWithControlEntInd 
 
     TrnsfrExmptNnChrtblRltdOrgInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 36  Description:  Any transfers to exempt non-charitable org?  xpath: /IRS990/TrnsfrExmptNonChrtblRltdOrgInd 
+    # Line number: Part IV Line 36  Description:  Any transfers to exempt non-charitable org?  xpath: /IRS990/TrnsfrExmptNonChrtblRltdOrgInd 
 
     ActvtsCndctdPrtshpInd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 37  Description:  Activities conducted thru partnership?  xpath: /IRS990/ActivitiesConductedPrtshpInd 
+    # Line number: Part IV Line 37  Description:  Activities conducted thru partnership?  xpath: /IRS990/ActivitiesConductedPrtshpInd 
 
     SkdORqrdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 38  Description:  Governing body and public disclosure explained in Schedule O?  xpath: /IRS990/ScheduleORequiredInd 
+    # Line number: Part IV Line 38  Description:  Governing body and public disclosure explained in Schedule O?  xpath: /IRS990/ScheduleORequiredInd 
 
 #######
 #
@@ -510,109 +556,112 @@ class part_v(models.Model):
     # Line number:  Part V  Description:  Schedule O contains a response to a question in Part V  xpath: /IRS990/InfoInScheduleOPartVInd 
 
     IRPDcmntCnt = models.IntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1a  Description:  Number forms transmitted with 1096  xpath: /IRS990/IRPDocumentCnt 
+    # Line number: Part V Line 1a  Description: Number forms transmitted with 1096  xpath: /IRS990/IRPDocumentCnt 
 
     IRPDcmntW2GCnt = models.IntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1b  Description:  Number W-2Gs included in 1a  xpath: /IRS990/IRPDocumentW2GCnt 
+    # Line number: Part V Line 1b  Description: Number W-2Gs included in 1a  xpath: /IRS990/IRPDocumentW2GCnt 
 
     BckpWthldCmplncInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1c  Description:  Compliance with backup witholding?  xpath: /IRS990/BackupWthldComplianceInd 
+    # Line number: Part V Line 1c  Description:  Compliance with backup witholding?  xpath: /IRS990/BackupWthldComplianceInd 
 
     EmplyCnt = models.IntegerField(null=True, blank=True)
-    # Line number:  Part V Line 2a  Description:  Number of employees  xpath: /IRS990/EmployeeCnt 
+    # Line number: Part V Line 2a  Description:  Number of employees  xpath: /IRS990/EmployeeCnt 
 
     EmplymntTxRtrnsFldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 2b  Description:  Employment tax returns filed?  xpath: /IRS990/EmploymentTaxReturnsFiledInd 
+    # Line number: Part V Line 2b  Description:  Employment tax returns filed?  xpath: /IRS990/EmploymentTaxReturnsFiledInd 
 
     UnrltdBsIncmOvrLmtInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 3a  Description:  Unrelated business income?  xpath: /IRS990/UnrelatedBusIncmOverLimitInd 
+    # Line number: Part V Line 3a  Description:  Unrelated business income?  xpath: /IRS990/UnrelatedBusIncmOverLimitInd 
 
     Frm990TFldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 3b  Description:  Form 990-T filed?  xpath: /IRS990/Form990TFiledInd 
+    # Line number: Part V Line 3b  Description: Form 990-T filed?  xpath: /IRS990/Form990TFiledInd 
 
     FrgnFnnclAccntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 4a  Description:  Foreign financial account?  xpath: /IRS990/ForeignFinancialAccountInd 
+    # Line number: Part V Line 4a  Description:  Foreign financial account?  xpath: /IRS990/ForeignFinancialAccountInd 
 
     PrhbtdTxShltrTrnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 5a  Description:  Prohibited tax shelter transaction?  xpath: /IRS990/ProhibitedTaxShelterTransInd 
+    # Line number: Part V Line 5a  Description:  Prohibited tax shelter transaction?  xpath: /IRS990/ProhibitedTaxShelterTransInd 
 
     TxblPrtyNtfctnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 5b  Description:  Taxable party notification?  xpath: /IRS990/TaxablePartyNotificationInd 
+    # Line number: Part V Line 5b  Description:  Taxable party notification?  xpath: /IRS990/TaxablePartyNotificationInd 
 
     Frm8886TFldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 5c  Description:  Form 8886-T filed?  xpath: /IRS990/Form8886TFiledInd 
+    # Line number: Part V Line 5c  Description: Form 8886-T filed?  xpath: /IRS990/Form8886TFiledInd 
 
     NnddctblCntrbtnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 6a  Description:  Non-deductible contributions?  xpath: /IRS990/NondeductibleContributionsInd 
+    # Line number: Part V Line 6a  Description:  Non-deductible contributions?  xpath: /IRS990/NondeductibleContributionsInd 
 
     NnddctblCntrDsclInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 6b  Description:  Non-deduct. disclosure?  xpath: /IRS990/NondeductibleContriDisclInd 
+    # Line number: Part V Line 6b  Description:  Non-deduct. disclosure?  xpath: /IRS990/NondeductibleContriDisclInd 
 
     QdPrQCntrbtnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 7a  Description:  Quid pro quo contributions?  xpath: /IRS990/QuidProQuoContributionsInd 
+    # Line number: Part V Line 7a  Description:  Quid pro quo contributions?  xpath: /IRS990/QuidProQuoContributionsInd 
 
     QdPrQCntrDsclInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 7b  Description:  Quid pro quo disclosure?  xpath: /IRS990/QuidProQuoContriDisclInd 
+    # Line number: Part V Line 7b  Description:  Quid pro quo disclosure?  xpath: /IRS990/QuidProQuoContriDisclInd 
 
     Frm8282PrprtyDspsdOfInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 7c  Description:  Form 8282 property disposed of?  xpath: /IRS990/Form8282PropertyDisposedOfInd 
+    # Line number: Part V Line 7c  Description: Form 8282 property disposed of?  xpath: /IRS990/Form8282PropertyDisposedOfInd 
 
     Frm8282FldCnt = models.IntegerField(null=True, blank=True)
-    # Line number:  Part V Line 7d  Description:  Number of 8282s filed  xpath: /IRS990/Form8282FiledCnt 
+    # Line number: Part V Line 7d  Description: Number of 8282s filed  xpath: /IRS990/Form8282FiledCnt 
 
     RcvFndsTPyPrsnlBnftCntrctInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 7e  Description:  Funds to pay premiums?  xpath: /IRS990/RcvFndsToPayPrsnlBnftCntrctInd 
+    # Line number: Part V Line 7e  Description:  Funds to pay premiums?  xpath: /IRS990/RcvFndsToPayPrsnlBnftCntrctInd 
 
     PyPrmmsPrsnlBnftCntrctInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 7f  Description:  Premiums paid?  xpath: /IRS990/PayPremiumsPrsnlBnftCntrctInd 
+    # Line number: Part V Line 7f  Description:  Premiums paid?  xpath: /IRS990/PayPremiumsPrsnlBnftCntrctInd 
 
     Frm8899Fldnd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 7g  Description:  Form 8899 filed?  xpath: /IRS990/Form8899Filedind 
+    # Line number: Part V Line 7g  Description: Form 8899 filed?  xpath: /IRS990/Form8899Filedind 
 
     Frm1098CFldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 7h  Description:  Form 1098-C filed?  xpath: /IRS990/Form1098CFiledInd 
+    # Line number: Part V Line 7h  Description: Form 1098-C filed?  xpath: /IRS990/Form1098CFiledInd 
 
     DAFExcssBsnssHldngsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 8  Description:  Donor advised fund have excess business holdings?  xpath: /IRS990/DAFExcessBusinessHoldingsInd 
+    # Line number: Part V Line 8  Description:  Donor advised fund have excess business holdings?  xpath: /IRS990/DAFExcessBusinessHoldingsInd 
+
+    DAFExcssBsnssHldngsInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Line 8  Description:  Donor advised fund have excess business holdings?  xpath: /IRS990/ExcessBusinessHoldingsInd 
 
     TxblDstrbtnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 9a  Description:  Taxable distributions?  xpath: /IRS990/TaxableDistributionsInd 
+    # Line number: Part V Line 9a  Description:  Taxable distributions?  xpath: /IRS990/TaxableDistributionsInd 
 
     DstrbtnTDnrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 9b  Description:  Distribution to donor?  xpath: /IRS990/DistributionToDonorInd 
+    # Line number: Part V Line 9b  Description:  Distribution to donor?  xpath: /IRS990/DistributionToDonorInd 
 
     InttnFsAndCpCntrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 10a  Description:  Initiation fees amount  xpath: /IRS990/InitiationFeesAndCapContriAmt 
+    # Line number: Part V Line 10a  Description:  Initiation fees amount  xpath: /IRS990/InitiationFeesAndCapContriAmt 
 
     GrssRcptsFrPblcUsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 10b  Description:  Gross receipts amount  xpath: /IRS990/GrossReceiptsForPublicUseAmt 
+    # Line number: Part V Line 10b  Description:  Gross receipts amount  xpath: /IRS990/GrossReceiptsForPublicUseAmt 
 
     MmbrsAndShrGrssIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 11a  Description:  Gross income from members  xpath: /IRS990/MembersAndShrGrossIncomeAmt 
+    # Line number: Part V Line 11a  Description:  Gross income from members  xpath: /IRS990/MembersAndShrGrossIncomeAmt 
 
     OthrSrcsGrssIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 11b  Description:  Gross income, other sources  xpath: /IRS990/OtherSourcesGrossIncomeAmt 
+    # Line number: Part V Line 11b  Description:  Gross income, other sources  xpath: /IRS990/OtherSourcesGrossIncomeAmt 
 
     OrgFldInLOfFrm1041Ind = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 12a  Description:  Filed lieu 1041?  xpath: /IRS990/OrgFiledInLieuOfForm1041Ind 
+    # Line number: Part V Line 12a  Description: Filed lieu 1041?  xpath: /IRS990/OrgFiledInLieuOfForm1041Ind 
 
     TxExmptIntrstAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 12b  Description:  Amount of tax exempt interest  xpath: /IRS990/TaxExemptInterestAmt 
+    # Line number: Part V Line 12b  Description:  Amount of tax exempt interest  xpath: /IRS990/TaxExemptInterestAmt 
 
     LcnsdMrThnOnSttInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 13a  Description:  Is the organization licensed to issue qualified health plans in more than one state?  xpath: /IRS990/LicensedMoreThanOneStateInd 
+    # Line number: Part V Line 13a  Description:  Is the organization licensed to issue qualified health plans in more than one state?  xpath: /IRS990/LicensedMoreThanOneStateInd 
 
     SttRqrdRsrvsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 13b  Description:  State required reserves amount  xpath: /IRS990/StateRequiredReservesAmt 
+    # Line number: Part V Line 13b  Description:  State required reserves amount  xpath: /IRS990/StateRequiredReservesAmt 
 
     RsrvsMntndAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 13c  Description:  Reserves maintained amount  xpath: /IRS990/ReservesMaintainedAmt 
+    # Line number: Part V Line 13c  Description:  Reserves maintained amount  xpath: /IRS990/ReservesMaintainedAmt 
 
     IndrTnnngSrvcsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 14a  Description:  Payments received for indoor tanning services?  xpath: /IRS990/IndoorTanningServicesInd 
+    # Line number: Part V Line 14a  Description:  Payments received for indoor tanning services?  xpath: /IRS990/IndoorTanningServicesInd 
 
     Frm720FldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 14b  Description:  Form 720 filed and taxes paid on indoor tanning services?  xpath: /IRS990/Form720FiledInd 
+    # Line number: Part V Line 14b  Description: Form 720 filed and taxes paid on indoor tanning services?  xpath: /IRS990/Form720FiledInd 
 
 #######
 #
@@ -628,136 +677,175 @@ class part_vi(models.Model):
     # Line number:  Part VI  Description:  Schedule O contains a response to a question in Part VI  xpath: /IRS990/InfoInScheduleOPartVIInd 
 
     GvrnngBdyVtngMmbrsCnt = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VI Section A Line 1a  Description:  Number of voting governing body members  xpath: /IRS990/GoverningBodyVotingMembersCnt 
+    # Line number: Part VI Section A Line 1a  Description:  Number of voting governing body members  xpath: /IRS990/GoverningBodyVotingMembersCnt 
 
     IndpndntVtngMmbrCnt = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VI Section A Line 1b  Description:  Number of independent voting members  xpath: /IRS990/IndependentVotingMemberCnt 
+    # Line number: Part VI Section A Line 1b  Description:  Number of independent voting members  xpath: /IRS990/IndependentVotingMemberCnt 
 
     FmlyOrBsnssRlnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 2  Description:  Family or business relationship?  xpath: /IRS990/FamilyOrBusinessRlnInd 
+    # Line number: Part VI Section A Line 2  Description:  Family or business relationship?  xpath: /IRS990/FamilyOrBusinessRlnInd 
 
     DlgtnOfMgmtDtsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 3  Description:  Delegation of management duties?  xpath: /IRS990/DelegationOfMgmtDutiesInd 
+    # Line number: Part VI Section A Line 3  Description:  Delegation of management duties?  xpath: /IRS990/DelegationOfMgmtDutiesInd 
 
     ChngTOrgDcmntsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 4  Description:  Changes to organizing docs?  xpath: /IRS990/ChangeToOrgDocumentsInd 
+    # Line number: Part VI Section A Line 4  Description:  Changes to organizing docs?  xpath: /IRS990/ChangeToOrgDocumentsInd 
 
     MtrlDvrsnOrMssInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 5  Description:  Material diversion or misuse?  xpath: /IRS990/MaterialDiversionOrMisuseInd 
+    # Line number: Part VI Section A Line 5  Description:  Material diversion or misuse?  xpath: /IRS990/MaterialDiversionOrMisuseInd 
 
     MmbrsOrStckhldrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 6  Description:  Members or stockholders?  xpath: /IRS990/MembersOrStockholdersInd 
+    # Line number: Part VI Section A Line 6  Description:  Members or stockholders?  xpath: /IRS990/MembersOrStockholdersInd 
 
     ElctnOfBrdMmbrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 7a  Description:  election of board members?  xpath: /IRS990/ElectionOfBoardMembersInd 
+    # Line number: Part VI Section A Line 7a  Description:  election of board members?  xpath: /IRS990/ElectionOfBoardMembersInd 
 
     DcsnsSbjctTApprvInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 7b  Description:  decisions subject to approval?  xpath: /IRS990/DecisionsSubjectToApprovaInd 
+    # Line number: Part VI Section A Line 7b  Description:  decisions subject to approval?  xpath: /IRS990/DecisionsSubjectToApprovaInd 
 
     MntsOfGvrnngBdyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 8a  Description:  Minutes of governing body?  xpath: /IRS990/MinutesOfGoverningBodyInd 
+    # Line number: Part VI Section A Line 8a  Description:  Minutes of governing body?  xpath: /IRS990/MinutesOfGoverningBodyInd 
 
     MntsOfCmmttsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 8b  Description:  Minutes of committees?  xpath: /IRS990/MinutesOfCommitteesInd 
+    # Line number: Part VI Section A Line 8b  Description:  Minutes of committees?  xpath: /IRS990/MinutesOfCommitteesInd 
 
     OffcrMlngAddrssInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section A Line 9  Description:  Officer mailing address?  xpath: /IRS990/OfficerMailingAddressInd 
+    # Line number: Part VI Section A Line 9  Description:  Officer mailing address?  xpath: /IRS990/OfficerMailingAddressInd 
 
     LclChptrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 10a  Description:  Local chapters?  xpath: /IRS990/LocalChaptersInd 
+    # Line number: Part VI Section B Line 10a  Description:  Local chapters?  xpath: /IRS990/LocalChaptersInd 
 
     PlcsRfrncChptrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 10b  Description:  Policies reference chapters?  xpath: /IRS990/PoliciesReferenceChaptersInd 
+    # Line number: Part VI Section B Line 10b  Description:  Policies reference chapters?  xpath: /IRS990/PoliciesReferenceChaptersInd 
 
     Frm990PrvddTGvrnBdyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 11  Description:  Form 990 provided to governing body?  xpath: /IRS990/Form990ProvidedToGvrnBodyInd 
+    # Line number: Part VI Section B Line 11  Description: Form 990 provided to governing body?  xpath: /IRS990/Form990ProvidedToGvrnBodyInd 
 
     CnflctOfIntrstPlcyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 12a  Description:  Conflict of interest policy?  xpath: /IRS990/ConflictOfInterestPolicyInd 
+    # Line number: Part VI Section B Line 12a  Description:  Conflict of interest policy?  xpath: /IRS990/ConflictOfInterestPolicyInd 
 
     AnnlDsclsrCvrdPrsnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 12b  Description:  Annual disclosure by covered persons?  xpath: /IRS990/AnnualDisclosureCoveredPrsnInd 
+    # Line number: Part VI Section B Line 12b  Description:  Annual disclosure by covered persons?  xpath: /IRS990/AnnualDisclosureCoveredPrsnInd 
 
     RglrMntrngEnfrcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 12c  Description:  Regular monitoring and enforcement?  xpath: /IRS990/RegularMonitoringEnfrcInd 
+    # Line number: Part VI Section B Line 12c  Description:  Regular monitoring and enforcement?  xpath: /IRS990/RegularMonitoringEnfrcInd 
 
     WhstlblwrPlcyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 13  Description:  Whistleblower policy?  xpath: /IRS990/WhistleblowerPolicyInd 
+    # Line number: Part VI Section B Line 13  Description:  Whistleblower policy?  xpath: /IRS990/WhistleblowerPolicyInd 
 
     DcmntRtntnPlcyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 14  Description:  Document retention policy?  xpath: /IRS990/DocumentRetentionPolicyInd 
+    # Line number: Part VI Section B Line 14  Description:  Document retention policy?  xpath: /IRS990/DocumentRetentionPolicyInd 
 
     CmpnstnPrcssCEOInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 15a  Description:  Compensation process CEO?  xpath: /IRS990/CompensationProcessCEOInd 
+    # Line number: Part VI Section B Line 15a  Description:  Compensation process CEO?  xpath: /IRS990/CompensationProcessCEOInd 
 
     CmpnstnPrcssOthrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 15b  Description:  Compensation process other?  xpath: /IRS990/CompensationProcessOtherInd 
+    # Line number: Part VI Section B Line 15b  Description:  Compensation process other?  xpath: /IRS990/CompensationProcessOtherInd 
 
     InvstmntInJntVntrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 16a  Description:  Investment in joint venture?  xpath: /IRS990/InvestmentInJointVentureInd 
+    # Line number: Part VI Section B Line 16a  Description:  Investment in joint venture?  xpath: /IRS990/InvestmentInJointVentureInd 
 
     WrttnPlcyOrPrcdrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Section B Line 16b  Description:  Written policy or procedure?  xpath: /IRS990/WrittenPolicyOrProcedureInd 
+    # Line number: Part VI Section B Line 16b  Description:  Written policy or procedure?  xpath: /IRS990/WrittenPolicyOrProcedureInd 
 
     OwnWbstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VI Section C Line 18  Description:  Own website  xpath: /IRS990/OwnWebsiteInd 
+    # Line number: Part VI Section C Line 18  Description:  Own website  xpath: /IRS990/OwnWebsiteInd 
 
     OthrWbstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VI Section C Line 18  Description:  Other website  xpath: /IRS990/OtherWebsiteInd 
+    # Line number: Part VI Section C Line 18  Description:  Other website  xpath: /IRS990/OtherWebsiteInd 
 
     UpnRqstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VI Section C Line 18  Description:  Upon request  xpath: /IRS990/UponRequestInd 
+    # Line number: Part VI Section C Line 18  Description:  Upon request  xpath: /IRS990/UponRequestInd 
 
     OthrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VI Section C Line 18  Description:  Other (Explain in Schedule O)  xpath: /IRS990/OtherInd 
+    # Line number: Part VI Section C Line 18  Description:  Other (Explain in Schedule O)  xpath: /IRS990/OtherInd 
 
     BksInCrOfDtl = models.TextField(null=True, blank=True)
     # Description:  The books are in care of  xpath: /IRS990/BooksInCareOfDetail 
 
     BksInCrOfDtl_PrsnNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VI Section C Line 20  Description:  Name - Person  xpath: /IRS990/BooksInCareOfDetail/PersonNm 
+    # Line number: Part VI Section C Line 20  Description:  Name - Person  xpath: /IRS990/BooksInCareOfDetail/PersonNm 
 
     BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part VI Section C Line 20  Description:  Business name line 1  xpath: /IRS990/BooksInCareOfDetail/BusinessName/BusinessNameLine1Txt 
+    # Line number: Part VI Section C Line 20  Description:  Business name line 1  xpath: /IRS990/BooksInCareOfDetail/BusinessName/BusinessNameLine1 
+
+    BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part VI Section C Line 20  Description:  Business name line 1  xpath: /IRS990/BooksInCareOfDetail/BusinessName/BusinessNameLine1Txt 
 
     BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part VI Section C Line 20  Description:  Business name line 2  xpath: /IRS990/BooksInCareOfDetail/BusinessName/BusinessNameLine2Txt 
+    # Line number: Part VI Section C Line 20  Description:  Business name line 2  xpath: /IRS990/BooksInCareOfDetail/BusinessName/BusinessNameLine2 
+
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part VI Section C Line 20  Description:  Business name line 2  xpath: /IRS990/BooksInCareOfDetail/BusinessName/BusinessNameLine2Txt 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VI Section C Line 20  Description:  Address line 1  xpath: /IRS990/BooksInCareOfDetail/USAddress/AddressLine1Txt 
+    # Line number: Part VI Section C Line 20  Description:  Address line 1  xpath: /IRS990/BooksInCareOfDetail/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part VI Section C Line 20  Description:  Address line 1  xpath: /IRS990/BooksInCareOfDetail/USAddress/AddressLine1Txt 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VI Section C Line 20  Description:  Address line 2  xpath: /IRS990/BooksInCareOfDetail/USAddress/AddressLine2Txt 
+    # Line number: Part VI Section C Line 20  Description:  Address line 2  xpath: /IRS990/BooksInCareOfDetail/USAddress/AddressLine2 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part VI Section C Line 20  Description:  Address line 2  xpath: /IRS990/BooksInCareOfDetail/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part VI Section C Line 20  Description:  City  xpath: /IRS990/BooksInCareOfDetail/USAddress/CityNm 
+    # Line number: Part VI Section C Line 20  Description:  City  xpath: /IRS990/BooksInCareOfDetail/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part VI Section C Line 20  Description:  City  xpath: /IRS990/BooksInCareOfDetail/USAddress/CityNm 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VI Section C Line 20  Description:  State  xpath: /IRS990/BooksInCareOfDetail/USAddress/StateAbbreviationCd 
+    # Line number: Part VI Section C Line 20  Description:  State  xpath: /IRS990/BooksInCareOfDetail/USAddress/State 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part VI Section C Line 20  Description:  State  xpath: /IRS990/BooksInCareOfDetail/USAddress/StateAbbreviationCd 
 
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part VI Section C Line 20  Description:  ZIP code  xpath: /IRS990/BooksInCareOfDetail/USAddress/ZIPCd 
+    # Line number: Part VI Section C Line 20  Description:  ZIP code  xpath: /IRS990/BooksInCareOfDetail/USAddress/ZIPCd 
+
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part VI Section C Line 20  Description:  ZIP code  xpath: /IRS990/BooksInCareOfDetail/USAddress/ZIPCode 
 
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VI Section C Line 20  Description:  Address line 1  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/AddressLine1Txt 
+    # Line number: Part VI Section C Line 20  Description:  Address line 1  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/AddressLine1 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part VI Section C Line 20  Description:  Address line 1  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/AddressLine1Txt 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VI Section C Line 20  Description:  Address line 2  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/AddressLine2Txt 
+    # Line number: Part VI Section C Line 20  Description:  Address line 2  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/AddressLine2 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part VI Section C Line 20  Description:  Address line 2  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Section C Line 20  Description:  City  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/CityNm 
+    # Line number: Part VI Section C Line 20  Description:  City  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part VI Section C Line 20  Description:  City  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Section C Line 20  Description:  Province or state  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/ProvinceOrStateNm 
+    # Line number: Part VI Section C Line 20  Description:  Province or state  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part VI Section C Line 20  Description:  Province or state  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/ProvinceOrStateNm 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VI Section C Line 20  Description:  Country  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/CountryCd 
+    # Line number: Part VI Section C Line 20  Description:  Country  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/Country 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part VI Section C Line 20  Description:  Country  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Section C Line 20  Description:  Postal code  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/ForeignPostalCd 
+    # Line number: Part VI Section C Line 20  Description:  Postal code  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part VI Section C Line 20  Description:  Postal code  xpath: /IRS990/BooksInCareOfDetail/ForeignAddress/PostalCode 
 
     BksInCrOfDtl_PhnNm = models.CharField(null=True, blank=True, max_length=10)
-    # Line number:  Part VI Section C Line 20  Description:  Telephone number  xpath: /IRS990/BooksInCareOfDetail/PhoneNum 
+    # Line number: Part VI Section C Line 20  Description:  Telephone number  xpath: /IRS990/BooksInCareOfDetail/PhoneNum 
 
 #######
 #
@@ -776,28 +864,28 @@ class part_vii(models.Model):
     # Line number:  Part VII Section A  Description:  No listed persons compensated  xpath: /IRS990/NoListedPersonsCompensatedInd 
 
     TtlRprtblCmpFrmOrgAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII Section A Line 1d D  Description:  Total, column D  xpath: /IRS990/TotalReportableCompFromOrgAmt 
+    # Line number: Part VII Section A Line 1d D  Description:  Total, column D  xpath: /IRS990/TotalReportableCompFromOrgAmt 
 
     TtRprtblCmpRltdOrgAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII Section A Line 1d E  Description:  Total, column E  xpath: /IRS990/TotReportableCompRltdOrgAmt 
+    # Line number: Part VII Section A Line 1d E  Description:  Total, column E  xpath: /IRS990/TotReportableCompRltdOrgAmt 
 
     TtlOthrCmpnstnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII Section A Line 1d F  Description:  Total, column F  xpath: /IRS990/TotalOtherCompensationAmt 
+    # Line number: Part VII Section A Line 1d F  Description:  Total, column F  xpath: /IRS990/TotalOtherCompensationAmt 
 
     IndvRcvdGrtrThn100KCnt = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII Section A Line 2  Description:  Number individuals greater than $100K  xpath: /IRS990/IndivRcvdGreaterThan100KCnt 
+    # Line number: Part VII Section A Line 2  Description: Number individuals greater than $100K  xpath: /IRS990/IndivRcvdGreaterThan100KCnt 
 
     FrmrOfcrEmplysLstdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII Section A Line 3  Description:  Formers listed in 1a?  xpath: /IRS990/FormerOfcrEmployeesListedInd 
+    # Line number: Part VII Section A Line 3  Description: Formers listed in 1a?  xpath: /IRS990/FormerOfcrEmployeesListedInd 
 
     TtlCmpGrtrThn150KInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII Section A Line 4  Description:  Line1a, total greater than $150K?  xpath: /IRS990/TotalCompGreaterThan150KInd 
+    # Line number: Part VII Section A Line 4  Description: Line1a, total greater than $150K?  xpath: /IRS990/TotalCompGreaterThan150KInd 
 
     CmpnstnFrmOthrSrcsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII Section A Line 5  Description:  Compensation from other sources?  xpath: /IRS990/CompensationFromOtherSrcsInd 
+    # Line number: Part VII Section A Line 5  Description:  Compensation from other sources?  xpath: /IRS990/CompensationFromOtherSrcsInd 
 
     CntrctRcvdGrtrThn100KCnt = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII Section B Line 2  Description:  Number of contractors greater than $100K  xpath: /IRS990/CntrctRcvdGreaterThan100KCnt 
+    # Line number: Part VII Section B Line 2  Description: Number of contractors greater than $100K  xpath: /IRS990/CntrctRcvdGreaterThan100KCnt 
 
 #######
 #
@@ -813,31 +901,31 @@ class part_viii(models.Model):
     # Line number:  Part VIII  Description:  Schedule O contains a response to a question in Part VIII  xpath: /IRS990/InfoInScheduleOPartVIIIInd 
 
     FdrtdCmpgnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 1a  Description:  Federated campaigns  xpath: /IRS990/FederatedCampaignsAmt 
+    # Line number: Part VIII Line 1a  Description:  Federated campaigns  xpath: /IRS990/FederatedCampaignsAmt 
 
     MmbrshpDsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 1b  Description:  Outside fundraising or commercial co-ventures  xpath: /IRS990/MembershipDuesAmt 
+    # Line number: Part VIII Line 1b  Description:  Outside fundraising or commercial co-ventures  xpath: /IRS990/MembershipDuesAmt 
 
     FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 1c  Description:  Fundraising events  xpath: /IRS990/FundraisingAmt 
+    # Line number: Part VIII Line 1c  Description:  Fundraising events  xpath: /IRS990/FundraisingAmt 
 
     RltdOrgnztnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 1d  Description:  Related organizations  xpath: /IRS990/RelatedOrganizationsAmt 
+    # Line number: Part VIII Line 1d  Description:  Related organizations  xpath: /IRS990/RelatedOrganizationsAmt 
 
     GvrnmntGrntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 1e  Description:  Government grants (contributions)  xpath: /IRS990/GovernmentGrantsAmt 
+    # Line number: Part VIII Line 1e  Description:  Government grants (contributions)  xpath: /IRS990/GovernmentGrantsAmt 
 
     AllOthrCntrbtnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 1f  Description:  All other contributions, gifts, grants, and similar amounts not included in above  xpath: /IRS990/AllOtherContributionsAmt 
+    # Line number: Part VIII Line 1f  Description:  All other contributions, gifts, grants, and similar amounts not included in above  xpath: /IRS990/AllOtherContributionsAmt 
 
     NncshCntrbtnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 1g  Description:  Noncash contributions  xpath: /IRS990/NoncashContributionsAmt 
+    # Line number: Part VIII Line 1g  Description:  Noncash contributions  xpath: /IRS990/NoncashContributionsAmt 
 
     TtlCntrbtnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 1h Column (A)  Description:  Total contributions  xpath: /IRS990/TotalContributionsAmt 
+    # Line number: Part VIII Line 1h Column (A)  Description:  Total contributions  xpath: /IRS990/TotalContributionsAmt 
 
     TtlPrgrmSrvcRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 2g  Description:  Program service revenue total  xpath: /IRS990/TotalProgramServiceRevenueAmt 
+    # Line number: Part VIII Line 2g  Description:  Program service revenue total  xpath: /IRS990/TotalProgramServiceRevenueAmt 
 
     GrssRnts_RlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (i)  Description:  Real amount  xpath: /IRS990/GrossRentsGrp/RealAmt 
@@ -876,13 +964,13 @@ class part_viii(models.Model):
     # Line number:  Part VIII Column (ii)  Description:  Other amount  xpath: /IRS990/GainOrLossGrp/OtherAmt 
 
     FndrsngGrssIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 8a  Description:  Gross income from fundraising events, Line 8a box  xpath: /IRS990/FundraisingGrossIncomeAmt 
+    # Line number: Part VIII Line 8a  Description: Gross income from fundraising events, Line 8a box  xpath: /IRS990/FundraisingGrossIncomeAmt 
 
     CntrRptFndrsngEvntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 8a  Description:  Contributions reported from fundraising events on line 1c, Line 8a underline  xpath: /IRS990/ContriRptFundraisingEventAmt 
+    # Line number: Part VIII Line 8a  Description: Contributions reported from fundraising events on line 1c, Line 8a underline  xpath: /IRS990/ContriRptFundraisingEventAmt 
 
     FndrsngDrctExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 8b  Description:  Direct expenses  xpath: /IRS990/FundraisingDirectExpensesAmt 
+    # Line number: Part VIII Line 8b  Description:  Direct expenses  xpath: /IRS990/FundraisingDirectExpensesAmt 
 
     NtIncmFrmFndrsngEvt_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetIncmFromFundraisingEvtGrp/TotalRevenueColumnAmt 
@@ -894,19 +982,19 @@ class part_viii(models.Model):
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetIncmFromFundraisingEvtGrp/ExclusionAmt 
 
     GmngGrssIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 9a  Description:  Gross income from gaming  xpath: /IRS990/GamingGrossIncomeAmt 
+    # Line number: Part VIII Line 9a  Description:  Gross income from gaming  xpath: /IRS990/GamingGrossIncomeAmt 
 
     GmngDrctExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 9b  Description:  Direct expenses  xpath: /IRS990/GamingDirectExpensesAmt 
+    # Line number: Part VIII Line 9b  Description:  Direct expenses  xpath: /IRS990/GamingDirectExpensesAmt 
 
     GrssSlsOfInvntryAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 10a  Description:  Gross sales of inventory, less returns and allowances  xpath: /IRS990/GrossSalesOfInventoryAmt 
+    # Line number: Part VIII Line 10a  Description:  Gross sales of inventory, less returns and allowances  xpath: /IRS990/GrossSalesOfInventoryAmt 
 
     CstOfGdsSldAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 10b  Description:  Less cost of goods sold  xpath: /IRS990/CostOfGoodsSoldAmt 
+    # Line number: Part VIII Line 10b  Description:  Less cost of goods sold  xpath: /IRS990/CostOfGoodsSoldAmt 
 
     OthrRvnTtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Line 11e  Description:  Other miscellaneous revenue total  xpath: /IRS990/OtherRevenueTotalAmt 
+    # Line number: Part VIII Line 11e  Description:  Other miscellaneous revenue total  xpath: /IRS990/OtherRevenueTotalAmt 
 
     TtlRvn_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/TotalRevenueGrp/TotalRevenueColumnAmt 
@@ -923,20 +1011,11 @@ class part_viii(models.Model):
     IncmFrmInvstBndPrcds_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/TotalRevenueColumnAmt 
 
-    NtIncmOrLss_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetIncomeOrLossGrp/TotalRevenueColumnAmt 
-
-    RyltsRvn_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/RoyaltiesRevenueGrp/TotalRevenueColumnAmt 
-
-    NtRntlIncmOrLss_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetRentalIncomeOrLossGrp/TotalRevenueColumnAmt 
+    InvstmntIncm_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/InvestmentIncomeGrp/TotalRevenueColumnAmt 
 
     MscRvn_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/MiscellaneousRevenueGrp/TotalRevenueColumnAmt 
-
-    TtlOthPrgrmSrvcRv_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/TotalRevenueColumnAmt 
 
     NtGnOrLssInvstmnts_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetGainOrLossInvestmentsGrp/TotalRevenueColumnAmt 
@@ -944,11 +1023,26 @@ class part_viii(models.Model):
     NtIncmFrmGmng_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetIncomeFromGamingGrp/TotalRevenueColumnAmt 
 
-    InvstmntIncm_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/InvestmentIncomeGrp/TotalRevenueColumnAmt 
+    NtIncmOrLss_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetIncomeOrLossGrp/TotalRevenueColumnAmt 
 
-    TtlOthPrgrmSrvcRv_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/RelatedOrExemptFuncIncomeAmt 
+    NtRntlIncmOrLss_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/NetRentalIncomeOrLossGrp/TotalRevenueColumnAmt 
+
+    RyltsRvn_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/RoyaltiesRevenueGrp/TotalRevenueColumnAmt 
+
+    TtlOthPrgrmSrvcRv_TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/TotalRevenueColumnAmt 
+
+    IncmFrmInvstBndPrcds_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/RelatedOrExemptFuncIncomeAmt 
+
+    InvstmntIncm_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/InvestmentIncomeGrp/RelatedOrExemptFuncIncomeAmt 
+
+    MscRvn_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/MiscellaneousRevenueGrp/RelatedOrExemptFuncIncomeAmt 
 
     NtGnOrLssInvstmnts_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/NetGainOrLossInvestmentsGrp/RelatedOrExemptFuncIncomeAmt 
@@ -959,29 +1053,20 @@ class part_viii(models.Model):
     NtIncmOrLss_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/NetIncomeOrLossGrp/RelatedOrExemptFuncIncomeAmt 
 
-    MscRvn_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/MiscellaneousRevenueGrp/RelatedOrExemptFuncIncomeAmt 
-
     NtRntlIncmOrLss_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/NetRentalIncomeOrLossGrp/RelatedOrExemptFuncIncomeAmt 
-
-    InvstmntIncm_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/InvestmentIncomeGrp/RelatedOrExemptFuncIncomeAmt 
 
     RyltsRvn_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/RoyaltiesRevenueGrp/RelatedOrExemptFuncIncomeAmt 
 
-    IncmFrmInvstBndPrcds_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/RelatedOrExemptFuncIncomeAmt 
+    TtlOthPrgrmSrvcRv_RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/RelatedOrExemptFuncIncomeAmt 
 
-    NtIncmOrLss_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetIncomeOrLossGrp/UnrelatedBusinessRevenueAmt 
+    IncmFrmInvstBndPrcds_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/UnrelatedBusinessRevenueAmt 
 
-    RyltsRvn_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/RoyaltiesRevenueGrp/UnrelatedBusinessRevenueAmt 
-
-    TtlOthPrgrmSrvcRv_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/UnrelatedBusinessRevenueAmt 
+    InvstmntIncm_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/InvestmentIncomeGrp/UnrelatedBusinessRevenueAmt 
 
     MscRvn_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/MiscellaneousRevenueGrp/UnrelatedBusinessRevenueAmt 
@@ -989,35 +1074,26 @@ class part_viii(models.Model):
     NtGnOrLssInvstmnts_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetGainOrLossInvestmentsGrp/UnrelatedBusinessRevenueAmt 
 
-    IncmFrmInvstBndPrcds_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/IncmFromInvestBondProceedsGrp/UnrelatedBusinessRevenueAmt 
+    NtIncmFrmGmng_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetIncomeFromGamingGrp/UnrelatedBusinessRevenueAmt 
+
+    NtIncmOrLss_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetIncomeOrLossGrp/UnrelatedBusinessRevenueAmt 
 
     NtRntlIncmOrLss_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetRentalIncomeOrLossGrp/UnrelatedBusinessRevenueAmt 
 
-    InvstmntIncm_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/InvestmentIncomeGrp/UnrelatedBusinessRevenueAmt 
+    RyltsRvn_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/RoyaltiesRevenueGrp/UnrelatedBusinessRevenueAmt 
 
-    NtIncmFrmGmng_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/NetIncomeFromGamingGrp/UnrelatedBusinessRevenueAmt 
-
-    RyltsRvn_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/RoyaltiesRevenueGrp/ExclusionAmt 
-
-    InvstmntIncm_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/InvestmentIncomeGrp/ExclusionAmt 
-
-    TtlOthPrgrmSrvcRv_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/TotalOthProgramServiceRevGrp/ExclusionAmt 
-
-    NtIncmFrmGmng_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetIncomeFromGamingGrp/ExclusionAmt 
+    TtlOthPrgrmSrvcRv_UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/TotalOthProgramServiceRevGrp/UnrelatedBusinessRevenueAmt 
 
     IncmFrmInvstBndPrcds_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/IncmFromInvestBondProceedsGrp/ExclusionAmt 
 
-    NtIncmOrLss_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetIncomeOrLossGrp/ExclusionAmt 
+    InvstmntIncm_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/InvestmentIncomeGrp/ExclusionAmt 
 
     MscRvn_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/MiscellaneousRevenueGrp/ExclusionAmt 
@@ -1025,8 +1101,20 @@ class part_viii(models.Model):
     NtGnOrLssInvstmnts_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetGainOrLossInvestmentsGrp/ExclusionAmt 
 
+    NtIncmFrmGmng_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetIncomeFromGamingGrp/ExclusionAmt 
+
+    NtIncmOrLss_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetIncomeOrLossGrp/ExclusionAmt 
+
     NtRntlIncmOrLss_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/NetRentalIncomeOrLossGrp/ExclusionAmt 
+
+    RyltsRvn_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/RoyaltiesRevenueGrp/ExclusionAmt 
+
+    TtlOthPrgrmSrvcRv_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/TotalOthProgramServiceRevGrp/ExclusionAmt 
 
 #######
 #
@@ -1042,7 +1130,7 @@ class part_ix(models.Model):
     # Line number:  Part IX  Description:  Schedule O contains a response to a question in Part IX  xpath: /IRS990/InfoInScheduleOPartIXInd 
 
     FsFrSrvcsPrfFndrsng = models.TextField(null=True, blank=True)
-    # Line number:  Part IX Line 11e  Description:  Fees for services (non-employees): Professional fundraising  xpath: /IRS990/FeesForServicesProfFundraising 
+    # Line number: Part IX Line 11e  Description:  Fees for services (non-employees): Professional fundraising  xpath: /IRS990/FeesForServicesProfFundraising 
 
     FsFrSrvcsPrfFndrsng_TtlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesProfFundraising/TotalAmt 
@@ -1051,37 +1139,73 @@ class part_ix(models.Model):
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesProfFundraising/FundraisingAmt 
 
     JntCstsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part IX Line 26  Description:  Joint costs?  xpath: /IRS990/JointCostsInd 
+    # Line number: Part IX Line 26  Description:  Joint costs?  xpath: /IRS990/JointCostsInd 
 
-    Intrst_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InterestGrp/TotalAmt 
-
-    PnsnPlnCntrbtns_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PensionPlanContributionsGrp/TotalAmt 
-
-    Occpncy_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OccupancyGrp/TotalAmt 
-
-    FsFrSrvcsLbbyng_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesLobbyingGrp/TotalAmt 
-
-    TtlFnctnlExpnss_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TotalFunctionalExpensesGrp/TotalAmt 
+    Advrtsng_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/AdvertisingGrp/TotalAmt 
 
     AllOthrExpnss_TtlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/AllOtherExpensesGrp/TotalAmt 
 
+    BnftsTMmbrs_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/BenefitsToMembersGrp/TotalAmt 
+
+    CmpCrrntOfcrDrctrs_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/TotalAmt 
+
+    CmpDsqlPrsns_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/CompDisqualPersonsGrp/TotalAmt 
+
+    CnfrncsMtngs_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/ConferencesMeetingsGrp/TotalAmt 
+
+    DprctnDpltn_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/DepreciationDepletionGrp/TotalAmt 
+
+    FsFrSrvcsAccntng_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesAccountingGrp/TotalAmt 
+
+    FsFrSrvcsLgl_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesLegalGrp/TotalAmt 
+
+    FsFrSrvcsLbbyng_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesLobbyingGrp/TotalAmt 
+
     FsFrSrvcsMngmnt_TtlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesManagementGrp/TotalAmt 
 
-    PyrllTxs_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PayrollTaxesGrp/TotalAmt 
+    FsFrSrvcsOthr_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesOtherGrp/TotalAmt 
 
     FsFrSrvcInvstMgmntFs_TtlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/TotalAmt 
 
-    PymtTrvlEntrtnmntPbOfcl_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/TotalAmt 
+    FrgnGrnts_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/ForeignGrantsGrp/TotalAmt 
+
+    GrntsTDmstcIndvdls_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/GrantsToDomesticIndividualsGrp/TotalAmt 
+
+    GrntsTDmstcOrgs_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/GrantsToDomesticOrgsGrp/TotalAmt 
+
+    InfrmtnTchnlgy_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InformationTechnologyGrp/TotalAmt 
+
+    Insrnc_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InsuranceGrp/TotalAmt 
+
+    Intrst_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InterestGrp/TotalAmt 
+
+    Occpncy_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OccupancyGrp/TotalAmt 
+
+    OffcExpnss_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OfficeExpensesGrp/TotalAmt 
+
+    OthrEmplyBnfts_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherEmployeeBenefitsGrp/TotalAmt 
 
     OthrSlrsAndWgs_TtlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherSalariesAndWagesGrp/TotalAmt 
@@ -1089,116 +1213,38 @@ class part_ix(models.Model):
     PymntsTAfflts_TtlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/PaymentsToAffiliatesGrp/TotalAmt 
 
-    FsFrSrvcsOthr_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesOtherGrp/TotalAmt 
+    PyrllTxs_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PayrollTaxesGrp/TotalAmt 
 
-    FrgnGrnts_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/ForeignGrantsGrp/TotalAmt 
+    PnsnPlnCntrbtns_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PensionPlanContributionsGrp/TotalAmt 
 
-    GrntsTDmstcOrgs_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/GrantsToDomesticOrgsGrp/TotalAmt 
-
-    GrntsTDmstcIndvdls_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/GrantsToDomesticIndividualsGrp/TotalAmt 
+    PymtTrvlEntrtnmntPbOfcl_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/TotalAmt 
 
     Rylts_TtlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/RoyaltiesGrp/TotalAmt 
 
-    BnftsTMmbrs_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/BenefitsToMembersGrp/TotalAmt 
-
-    CmpDsqlPrsns_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/CompDisqualPersonsGrp/TotalAmt 
-
-    InfrmtnTchnlgy_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InformationTechnologyGrp/TotalAmt 
-
-    CmpCrrntOfcrDrctrs_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/TotalAmt 
-
-    DprctnDpltn_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/DepreciationDepletionGrp/TotalAmt 
-
-    CnfrncsMtngs_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/ConferencesMeetingsGrp/TotalAmt 
-
-    Trvl_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TravelGrp/TotalAmt 
-
-    Advrtsng_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/AdvertisingGrp/TotalAmt 
-
-    OffcExpnss_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OfficeExpensesGrp/TotalAmt 
-
-    Insrnc_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/InsuranceGrp/TotalAmt 
-
-    OthrEmplyBnfts_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherEmployeeBenefitsGrp/TotalAmt 
-
-    FsFrSrvcsLgl_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesLegalGrp/TotalAmt 
+    TtlFnctnlExpnss_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TotalFunctionalExpensesGrp/TotalAmt 
 
     TtlJntCsts_TtlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (A)  Description:  Total  xpath: /IRS990/TotalJointCostsGrp/TotalAmt 
 
-    FsFrSrvcsAccntng_TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/FeesForServicesAccountingGrp/TotalAmt 
-
-    TtlJntCsts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TotalJointCostsGrp/ProgramServicesAmt 
-
-    Insrnc_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InsuranceGrp/ProgramServicesAmt 
-
-    PymtTrvlEntrtnmntPbOfcl_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/ProgramServicesAmt 
-
-    BnftsTMmbrs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/BenefitsToMembersGrp/ProgramServicesAmt 
-
-    OffcExpnss_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OfficeExpensesGrp/ProgramServicesAmt 
-
-    DprctnDpltn_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/DepreciationDepletionGrp/ProgramServicesAmt 
-
-    Occpncy_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OccupancyGrp/ProgramServicesAmt 
-
-    PyrllTxs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PayrollTaxesGrp/ProgramServicesAmt 
-
-    PnsnPlnCntrbtns_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PensionPlanContributionsGrp/ProgramServicesAmt 
-
-    OthrEmplyBnfts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherEmployeeBenefitsGrp/ProgramServicesAmt 
+    Trvl_TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/TravelGrp/TotalAmt 
 
     Advrtsng_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/AdvertisingGrp/ProgramServicesAmt 
 
-    OthrSlrsAndWgs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherSalariesAndWagesGrp/ProgramServicesAmt 
-
-    PymntsTAfflts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PaymentsToAffiliatesGrp/ProgramServicesAmt 
-
-    FsFrSrvcsAccntng_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesAccountingGrp/ProgramServicesAmt 
-
-    GrntsTDmstcOrgs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/GrantsToDomesticOrgsGrp/ProgramServicesAmt 
-
     AllOthrExpnss_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/AllOtherExpensesGrp/ProgramServicesAmt 
 
-    GrntsTDmstcIndvdls_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/GrantsToDomesticIndividualsGrp/ProgramServicesAmt 
+    BnftsTMmbrs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/BenefitsToMembersGrp/ProgramServicesAmt 
 
-    FsFrSrvcInvstMgmntFs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/ProgramServicesAmt 
+    CmpCrrntOfcrDrctrs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/ProgramServicesAmt 
 
     CmpDsqlPrsns_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/CompDisqualPersonsGrp/ProgramServicesAmt 
@@ -1206,11 +1252,11 @@ class part_ix(models.Model):
     CnfrncsMtngs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/ConferencesMeetingsGrp/ProgramServicesAmt 
 
-    FrgnGrnts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/ForeignGrantsGrp/ProgramServicesAmt 
+    DprctnDpltn_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/DepreciationDepletionGrp/ProgramServicesAmt 
 
-    Trvl_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TravelGrp/ProgramServicesAmt 
+    FsFrSrvcsAccntng_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesAccountingGrp/ProgramServicesAmt 
 
     FsFrSrvcsLgl_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesLegalGrp/ProgramServicesAmt 
@@ -1221,50 +1267,65 @@ class part_ix(models.Model):
     FsFrSrvcsMngmnt_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesManagementGrp/ProgramServicesAmt 
 
-    TtlFnctnlExpnss_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TotalFunctionalExpensesGrp/ProgramServicesAmt 
-
-    CmpCrrntOfcrDrctrs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/ProgramServicesAmt 
-
     FsFrSrvcsOthr_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForServicesOtherGrp/ProgramServicesAmt 
+
+    FsFrSrvcInvstMgmntFs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/ProgramServicesAmt 
+
+    FrgnGrnts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/ForeignGrantsGrp/ProgramServicesAmt 
+
+    GrntsTDmstcIndvdls_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/GrantsToDomesticIndividualsGrp/ProgramServicesAmt 
+
+    GrntsTDmstcOrgs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/GrantsToDomesticOrgsGrp/ProgramServicesAmt 
 
     InfrmtnTchnlgy_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InformationTechnologyGrp/ProgramServicesAmt 
 
-    Rylts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/RoyaltiesGrp/ProgramServicesAmt 
+    Insrnc_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InsuranceGrp/ProgramServicesAmt 
 
     Intrst_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (B)  Description:  Program services  xpath: /IRS990/InterestGrp/ProgramServicesAmt 
 
-    FsFrSrvcsMngmnt_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesManagementGrp/ManagementAndGeneralAmt 
+    Occpncy_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OccupancyGrp/ProgramServicesAmt 
 
-    CmpCrrntOfcrDrctrs_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/ManagementAndGeneralAmt 
+    OffcExpnss_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OfficeExpensesGrp/ProgramServicesAmt 
 
-    FsFrSrvcInvstMgmntFs_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/ManagementAndGeneralAmt 
+    OthrEmplyBnfts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherEmployeeBenefitsGrp/ProgramServicesAmt 
 
-    Insrnc_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InsuranceGrp/ManagementAndGeneralAmt 
+    OthrSlrsAndWgs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherSalariesAndWagesGrp/ProgramServicesAmt 
 
-    Intrst_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InterestGrp/ManagementAndGeneralAmt 
+    PymntsTAfflts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PaymentsToAffiliatesGrp/ProgramServicesAmt 
 
-    FsFrSrvcsAccntng_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesAccountingGrp/ManagementAndGeneralAmt 
+    PyrllTxs_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PayrollTaxesGrp/ProgramServicesAmt 
 
-    OthrEmplyBnfts_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherEmployeeBenefitsGrp/ManagementAndGeneralAmt 
+    PnsnPlnCntrbtns_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PensionPlanContributionsGrp/ProgramServicesAmt 
 
-    PnsnPlnCntrbtns_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PensionPlanContributionsGrp/ManagementAndGeneralAmt 
+    PymtTrvlEntrtnmntPbOfcl_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/ProgramServicesAmt 
 
-    TtlFnctnlExpnss_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/TotalFunctionalExpensesGrp/ManagementAndGeneralAmt 
+    Rylts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/RoyaltiesGrp/ProgramServicesAmt 
+
+    TtlFnctnlExpnss_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TotalFunctionalExpensesGrp/ProgramServicesAmt 
+
+    TtlJntCsts_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TotalJointCostsGrp/ProgramServicesAmt 
+
+    Trvl_PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/TravelGrp/ProgramServicesAmt 
 
     Advrtsng_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/AdvertisingGrp/ManagementAndGeneralAmt 
@@ -1272,11 +1333,20 @@ class part_ix(models.Model):
     AllOthrExpnss_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/AllOtherExpensesGrp/ManagementAndGeneralAmt 
 
+    CmpCrrntOfcrDrctrs_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/ManagementAndGeneralAmt 
+
     CmpDsqlPrsns_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/CompDisqualPersonsGrp/ManagementAndGeneralAmt 
 
+    CnfrncsMtngs_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/ConferencesMeetingsGrp/ManagementAndGeneralAmt 
+
     DprctnDpltn_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/DepreciationDepletionGrp/ManagementAndGeneralAmt 
+
+    FsFrSrvcsAccntng_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesAccountingGrp/ManagementAndGeneralAmt 
 
     FsFrSrvcsLgl_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesLegalGrp/ManagementAndGeneralAmt 
@@ -1284,23 +1354,44 @@ class part_ix(models.Model):
     FsFrSrvcsLbbyng_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesLobbyingGrp/ManagementAndGeneralAmt 
 
+    FsFrSrvcsMngmnt_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesManagementGrp/ManagementAndGeneralAmt 
+
     FsFrSrvcsOthr_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForServicesOtherGrp/ManagementAndGeneralAmt 
+
+    FsFrSrvcInvstMgmntFs_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/ManagementAndGeneralAmt 
 
     InfrmtnTchnlgy_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InformationTechnologyGrp/ManagementAndGeneralAmt 
 
-    OffcExpnss_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OfficeExpensesGrp/ManagementAndGeneralAmt 
+    Insrnc_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InsuranceGrp/ManagementAndGeneralAmt 
+
+    Intrst_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/InterestGrp/ManagementAndGeneralAmt 
 
     Occpncy_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OccupancyGrp/ManagementAndGeneralAmt 
 
+    OffcExpnss_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OfficeExpensesGrp/ManagementAndGeneralAmt 
+
+    OthrEmplyBnfts_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherEmployeeBenefitsGrp/ManagementAndGeneralAmt 
+
     OthrSlrsAndWgs_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherSalariesAndWagesGrp/ManagementAndGeneralAmt 
 
+    PymntsTAfflts_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PaymentsToAffiliatesGrp/ManagementAndGeneralAmt 
+
     PyrllTxs_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PayrollTaxesGrp/ManagementAndGeneralAmt 
+
+    PnsnPlnCntrbtns_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PensionPlanContributionsGrp/ManagementAndGeneralAmt 
 
     PymtTrvlEntrtnmntPbOfcl_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/ManagementAndGeneralAmt 
@@ -1308,77 +1399,71 @@ class part_ix(models.Model):
     Rylts_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/RoyaltiesGrp/ManagementAndGeneralAmt 
 
+    TtlFnctnlExpnss_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/TotalFunctionalExpensesGrp/ManagementAndGeneralAmt 
+
     TtlJntCsts_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/TotalJointCostsGrp/ManagementAndGeneralAmt 
 
     Trvl_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/TravelGrp/ManagementAndGeneralAmt 
 
-    CnfrncsMtngs_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/ConferencesMeetingsGrp/ManagementAndGeneralAmt 
-
-    PymntsTAfflts_MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/PaymentsToAffiliatesGrp/ManagementAndGeneralAmt 
-
-    PymtTrvlEntrtnmntPbOfcl_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/FundraisingAmt 
+    Advrtsng_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/AdvertisingGrp/FundraisingAmt 
 
     AllOthrExpnss_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/AllOtherExpensesGrp/FundraisingAmt 
 
-    OffcExpnss_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OfficeExpensesGrp/FundraisingAmt 
-
-    Rylts_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/RoyaltiesGrp/FundraisingAmt 
-
-    Advrtsng_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/AdvertisingGrp/FundraisingAmt 
-
-    Intrst_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InterestGrp/FundraisingAmt 
-
-    InfrmtnTchnlgy_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InformationTechnologyGrp/FundraisingAmt 
-
-    FsFrSrvcsOthr_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesOtherGrp/FundraisingAmt 
-
-    TtlFnctnlExpnss_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TotalFunctionalExpensesGrp/FundraisingAmt 
-
-    FsFrSrvcInvstMgmntFs_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/FundraisingAmt 
-
-    FsFrSrvcsMngmnt_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesManagementGrp/FundraisingAmt 
-
-    TtlJntCsts_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TotalJointCostsGrp/FundraisingAmt 
-
     CmpCrrntOfcrDrctrs_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/CompCurrentOfcrDirectorsGrp/FundraisingAmt 
 
-    FsFrSrvcsLbbyng_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesLobbyingGrp/FundraisingAmt 
+    CmpDsqlPrsns_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/CompDisqualPersonsGrp/FundraisingAmt 
 
-    FsFrSrvcsAccntng_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesAccountingGrp/FundraisingAmt 
-
-    Trvl_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TravelGrp/FundraisingAmt 
-
-    Insrnc_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InsuranceGrp/FundraisingAmt 
-
-    FsFrSrvcsLgl_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesLegalGrp/FundraisingAmt 
+    CnfrncsMtngs_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/ConferencesMeetingsGrp/FundraisingAmt 
 
     DprctnDpltn_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/DepreciationDepletionGrp/FundraisingAmt 
 
-    CnfrncsMtngs_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/ConferencesMeetingsGrp/FundraisingAmt 
+    FsFrSrvcsAccntng_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesAccountingGrp/FundraisingAmt 
+
+    FsFrSrvcsLgl_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesLegalGrp/FundraisingAmt 
+
+    FsFrSrvcsLbbyng_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesLobbyingGrp/FundraisingAmt 
+
+    FsFrSrvcsMngmnt_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesManagementGrp/FundraisingAmt 
+
+    FsFrSrvcsOthr_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForServicesOtherGrp/FundraisingAmt 
+
+    FsFrSrvcInvstMgmntFs_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/FeesForSrvcInvstMgmntFeesGrp/FundraisingAmt 
+
+    InfrmtnTchnlgy_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InformationTechnologyGrp/FundraisingAmt 
+
+    Insrnc_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InsuranceGrp/FundraisingAmt 
+
+    Intrst_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/InterestGrp/FundraisingAmt 
+
+    Occpncy_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OccupancyGrp/FundraisingAmt 
+
+    OffcExpnss_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OfficeExpensesGrp/FundraisingAmt 
+
+    OthrEmplyBnfts_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherEmployeeBenefitsGrp/FundraisingAmt 
+
+    OthrSlrsAndWgs_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherSalariesAndWagesGrp/FundraisingAmt 
 
     PymntsTAfflts_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PaymentsToAffiliatesGrp/FundraisingAmt 
@@ -1389,17 +1474,20 @@ class part_ix(models.Model):
     PnsnPlnCntrbtns_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PensionPlanContributionsGrp/FundraisingAmt 
 
-    OthrEmplyBnfts_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherEmployeeBenefitsGrp/FundraisingAmt 
+    PymtTrvlEntrtnmntPbOfcl_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/PymtTravelEntrtnmntPubOfclGrp/FundraisingAmt 
 
-    CmpDsqlPrsns_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/CompDisqualPersonsGrp/FundraisingAmt 
+    Rylts_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/RoyaltiesGrp/FundraisingAmt 
 
-    OthrSlrsAndWgs_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherSalariesAndWagesGrp/FundraisingAmt 
+    TtlFnctnlExpnss_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TotalFunctionalExpensesGrp/FundraisingAmt 
 
-    Occpncy_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OccupancyGrp/FundraisingAmt 
+    TtlJntCsts_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TotalJointCostsGrp/FundraisingAmt 
+
+    Trvl_FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/TravelGrp/FundraisingAmt 
 
 #######
 #
@@ -1469,10 +1557,10 @@ class part_x(models.Model):
     # Line number:  Part X Column (B)  Description:  Ending of year  xpath: /IRS990/PrepaidExpensesDefrdChargesGrp/EOYAmt 
 
     LndBldgEqpCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 10a  Description:  Land, buildings, and equipment basis  xpath: /IRS990/LandBldgEquipCostOrOtherBssAmt 
+    # Line number: Part X Line 10a  Description:  Land, buildings, and equipment basis  xpath: /IRS990/LandBldgEquipCostOrOtherBssAmt 
 
     LndBldgEqpAccmDprcAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 10b  Description:  Less: accumulated depreciation  xpath: /IRS990/LandBldgEquipAccumDeprecAmt 
+    # Line number: Part X Line 10b  Description:  Less: accumulated depreciation  xpath: /IRS990/LandBldgEquipAccumDeprecAmt 
 
     LndBldgEqpBssNt_BOYAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part X Column (A)  Description:  Beginnning of year  xpath: /IRS990/LandBldgEquipBasisNetGrp/BOYAmt 
@@ -1577,7 +1665,7 @@ class part_x(models.Model):
     # Line number:  Part X Column (B)  Description:  Ending of year  xpath: /IRS990/TotalLiabilitiesGrp/EOYAmt 
 
     OrgnztnFllwsSFAS117Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part X  Description:  Organizations that follow SFAS 117, check here  xpath: /IRS990/OrganizationFollowsSFAS117Ind 
+    # Line number:  Part X  Description: Organizations that follow SFAS 117, check here  xpath: /IRS990/OrganizationFollowsSFAS117Ind 
 
     UnrstrctdNtAssts_BOYAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part X Column (A)  Description:  Beginnning of year  xpath: /IRS990/UnrestrictedNetAssetsGrp/BOYAmt 
@@ -1598,7 +1686,7 @@ class part_x(models.Model):
     # Line number:  Part X Column (B)  Description:  Ending of year  xpath: /IRS990/PermanentlyRstrNetAssetsGrp/EOYAmt 
 
     OrgDsNtFllwSFAS117Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part X  Description:  Organizations that do not follow SFAS 117, check here  xpath: /IRS990/OrgDoesNotFollowSFAS117Ind 
+    # Line number:  Part X  Description: Organizations that do not follow SFAS 117, check here  xpath: /IRS990/OrgDoesNotFollowSFAS117Ind 
 
     CpStkTrPrnCrrntFnds_BOYAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part X Column (A)  Description:  Beginnning of year  xpath: /IRS990/CapStkTrPrinCurrentFundsGrp/BOYAmt 
@@ -1644,22 +1732,22 @@ class part_xi(models.Model):
     # Line number:  Part XI  Description:  Schedule O contains a response to a question in Part XI  xpath: /IRS990/InfoInScheduleOPartXIInd 
 
     RcncltnRvnExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 3  Description:  Revenue less expenses  xpath: /IRS990/ReconcilationRevenueExpnssAmt 
+    # Line number: Part XI Line 3  Description:  Revenue less expenses  xpath: /IRS990/ReconcilationRevenueExpnssAmt 
 
     NtUnrlzdGnsLsssInvstAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 5  Description:  Net unrealized gains (losses) on investments  xpath: /IRS990/NetUnrlzdGainsLossesInvstAmt 
+    # Line number: Part XI Line 5  Description:  Net unrealized gains (losses) on investments  xpath: /IRS990/NetUnrlzdGainsLossesInvstAmt 
 
     DntdSrvcsAndUsFcltsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 6  Description:  Donated services and use of facilities  xpath: /IRS990/DonatedServicesAndUseFcltsAmt 
+    # Line number: Part XI Line 6  Description:  Donated services and use of facilities  xpath: /IRS990/DonatedServicesAndUseFcltsAmt 
 
     InvstmntExpnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 7  Description:  Investment expenses  xpath: /IRS990/InvestmentExpenseAmt 
+    # Line number: Part XI Line 7  Description:  Investment expenses  xpath: /IRS990/InvestmentExpenseAmt 
 
     PrrPrdAdjstmntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 8  Description:  Prior period adjustments  xpath: /IRS990/PriorPeriodAdjustmentsAmt 
+    # Line number: Part XI Line 8  Description:  Prior period adjustments  xpath: /IRS990/PriorPeriodAdjustmentsAmt 
 
     OthrChngsInNtAsstsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 9  Description:  Other changes in net assets or fund balances  xpath: /IRS990/OtherChangesInNetAssetsAmt 
+    # Line number: Part XI Line 9  Description:  Other changes in net assets or fund balances  xpath: /IRS990/OtherChangesInNetAssetsAmt 
 
 #######
 #
@@ -1675,7 +1763,7 @@ class part_xii(models.Model):
     # Line number:  Part XII  Description:  Schedule O contains a response to a question in Part XII  xpath: /IRS990/InfoInScheduleOPartXIIInd 
 
     AccntntCmplOrRvwInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XII Line 2a  Description:  Accountant provide compilation or review?  xpath: /IRS990/AccountantCompileOrReviewInd 
+    # Line number: Part XII Line 2a  Description:  Accountant provide compilation or review?  xpath: /IRS990/AccountantCompileOrReviewInd 
 
     AcctCmplOrRvwBss_SprtBssFnclStmtInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Part XII Lines 2a and 2b  Description:  Financial statement issued on separate basis  xpath: /IRS990/AcctCompileOrReviewBasisGrp/SeparateBasisFinclStmtInd 
@@ -1687,7 +1775,7 @@ class part_xii(models.Model):
     # Line number:  Part XII Lines 2a and 2b  Description:  Financial statement issued on consolidated and separate basis  xpath: /IRS990/AcctCompileOrReviewBasisGrp/ConsolAndSepBasisFinclStmtInd 
 
     FSAdtdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XII Line 2b  Description:  Financial sheets audited?  xpath: /IRS990/FSAuditedInd 
+    # Line number: Part XII Line 2b  Description:  Financial sheets audited?  xpath: /IRS990/FSAuditedInd 
 
     FSAdtdBss_SprtBssFnclStmtInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Part XII Lines 2a and 2b  Description:  Financial statement issued on separate basis  xpath: /IRS990/FSAuditedBasisGrp/SeparateBasisFinclStmtInd 
@@ -1699,53 +1787,43 @@ class part_xii(models.Model):
     # Line number:  Part XII Lines 2a and 2b  Description:  Financial statement issued on consolidated and separate basis  xpath: /IRS990/FSAuditedBasisGrp/ConsolAndSepBasisFinclStmtInd 
 
     AdtCmmttInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XII Line 2c  Description:  Does the organization have an audit committee?  xpath: /IRS990/AuditCommitteeInd 
+    # Line number: Part XII Line 2c  Description:  Does the organization have an audit committee?  xpath: /IRS990/AuditCommitteeInd 
 
     FdrlGrntAdtRqrdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XII Line 3a  Description:  Federal grant audit required?  xpath: /IRS990/FederalGrantAuditRequiredInd 
+    # Line number: Part XII Line 3a  Description:  Federal grant audit required?  xpath: /IRS990/FederalGrantAuditRequiredInd 
 
     FdrlGrntAdtPrfrmdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XII Line 3b  Description:  Federal grant audit performed?  xpath: /IRS990/FederalGrantAuditPerformedInd 
+    # Line number: Part XII Line 3b  Description:  Federal grant audit performed?  xpath: /IRS990/FederalGrantAuditPerformedInd 
 
     MthdOfAccntngCshInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part XII Line 1  Description:  Method of accounting - Cash  xpath: /IRS990/MethodOfAccountingCashInd 
+    # Line number: Part XII Line 1  Description:  Method of accounting - Cash  xpath: /IRS990/MethodOfAccountingCashInd 
 
     MthdOfAccntngAccrlInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part XII Line 1  Description:  Method of accounting - Accrual  xpath: /IRS990/MethodOfAccountingAccrualInd 
+    # Line number: Part XII Line 1  Description:  Method of accounting - Accrual  xpath: /IRS990/MethodOfAccountingAccrualInd 
 
     MthdOfAccntngOthrInd = models.TextField(null=True, blank=True)
-    # Line number:  Part XII Line 1  Description:  Method of accounting - Other  xpath: /IRS990/MethodOfAccountingOtherInd 
+    # Line number: Part XII Line 1  Description:  Method of accounting - Other  xpath: /IRS990/MethodOfAccountingOtherInd 
 
 #######
 #
-# IRS990 - OtherExpensesGrp
-# A repeating structure from  Part IX Functional Expense 
+# IRS990 - SpclCndtnDsc
+# Description:  Special condition description
+# A repeating structure from part_0
 #
 #######
 
-class OthrExpnss(models.Model):
+class SpclCndtnDsc(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    Dsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part IX Line 24a - 24d  Description:  Description  xpath: /IRS990/OtherExpensesGrp/Desc 
-
-    TtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherExpensesGrp/TotalAmt 
-
-    PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherExpensesGrp/ProgramServicesAmt 
-
-    MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherExpensesGrp/ManagementAndGeneralAmt 
-
-    FndrsngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherExpensesGrp/FundraisingAmt 
+    SpclCndtnDsc = models.TextField(null=True, blank=True)
+    # Description:  Special condition description  xpath: /IRS990/SpecialConditionDesc 
 
 #######
 #
-# IRS990 - ProgSrvcAccomActyOtherGrp
-# A repeating structure from  Part III Program Service Accomplishments 
+# IRS990 - PrgSrvcAccmActyOthr
+# Description: Describe the organization’s program service accomplishments
+# A repeating structure from part_iii
 #
 #######
 
@@ -1770,8 +1848,9 @@ class PrgSrvcAccmActyOthr(models.Model):
 
 #######
 #
-# IRS990 - ForeignCountryCd
-# A repeating structure from  Part V Other Filings 
+# IRS990 - FrgnCntryCd
+# Description: Name of foreign country
+# A repeating structure from part_v
 #
 #######
 
@@ -1780,71 +1859,28 @@ class FrgnCntryCd(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     FrgnCntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part V Line 4b  Description:  Name of foreign country  xpath: /IRS990/ForeignCountryCd 
+    # Line number: Part V Line 4b  Description:  Name of foreign country  xpath: /IRS990/ForeignCountryCd 
 
 #######
 #
-# IRS990 - Form990PartVIISectionAGrp
-# A repeating structure from  Part VII Compensation 
+# IRS990 - SttsWhrCpyOfRtrnIsFldCd
+# Description: States where return filed
+# A repeating structure from part_vi
 #
 #######
 
-class Frm990PrtVIISctnA(models.Model):
+class SttsWhrCpyOfRtrnIsFldCd(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    Frm990PrtVIISctnA = models.TextField(null=True, blank=True)
-    # Description:  Section A, at least name required  xpath: /IRS990/Form990PartVIISectionAGrp 
-
-    PrsnNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VII Section A Line 1a A  Description:  Name - Person  xpath: /IRS990/Form990PartVIISectionAGrp/PersonNm 
-
-    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part VII Section A Line 1a A  Description:  Business name line 1  xpath: /IRS990/Form990PartVIISectionAGrp/BusinessName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part VII Section A Line 1a A  Description:  Business name line 2  xpath: /IRS990/Form990PartVIISectionAGrp/BusinessName/BusinessNameLine2Txt 
-
-    TtlTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part VII Section A Line 1a A  Description:  Title  xpath: /IRS990/Form990PartVIISectionAGrp/TitleTxt 
-
-    AvrgHrsPrWkRt = models.TextField(null=True, blank=True)
-    # Line number:  Part VII Section A Line 1a B  Description:  Average hours per week  xpath: /IRS990/Form990PartVIISectionAGrp/AverageHoursPerWeekRt 
-
-    AvrgHrsPrWkRltdOrgRt = models.TextField(null=True, blank=True)
-    # Line number:  Part VII Section A Line 1a B  Description:  Average hours per week for related organizations  xpath: /IRS990/Form990PartVIISectionAGrp/AverageHoursPerWeekRltdOrgRt 
-
-    IndvdlTrstOrDrctrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VII Section A Line 1a C  Description:  Individual trustee or director  xpath: /IRS990/Form990PartVIISectionAGrp/IndividualTrusteeOrDirectorInd 
-
-    InstttnlTrstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VII Section A Line 1a C  Description:  Institutional Trustee  xpath: /IRS990/Form990PartVIISectionAGrp/InstitutionalTrusteeInd 
-
-    OffcrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VII Section A Line 1a C  Description:  Officer  xpath: /IRS990/Form990PartVIISectionAGrp/OfficerInd 
-
-    KyEmplyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VII Section A Line 1a C  Description:  Key Employee  xpath: /IRS990/Form990PartVIISectionAGrp/KeyEmployeeInd 
-
-    HghstCmpnstdEmplyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VII Section A Line 1a C  Description:  Highest compensated employee  xpath: /IRS990/Form990PartVIISectionAGrp/HighestCompensatedEmployeeInd 
-
-    FrmrOfcrDrctrTrstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VII Section A Line 1a C  Description:  Former  xpath: /IRS990/Form990PartVIISectionAGrp/FormerOfcrDirectorTrusteeInd 
-
-    RprtblCmpFrmOrgAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII Section A Line 1a D  Description:  Reportable compensation from organization  xpath: /IRS990/Form990PartVIISectionAGrp/ReportableCompFromOrgAmt 
-
-    RprtblCmpFrmRltdOrgAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII Section A Line 1a E  Description:  Reportable compensation from related organizations  xpath: /IRS990/Form990PartVIISectionAGrp/ReportableCompFromRltdOrgAmt 
-
-    OthrCmpnstnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII Section A Line 1a F  Description:  Other compensation  xpath: /IRS990/Form990PartVIISectionAGrp/OtherCompensationAmt 
+    SttsWhrCpyOfRtrnIsFldCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part VI Section C Line 17  Description:  States where return filed  xpath: /IRS990/StatesWhereCopyOfReturnIsFldCd 
 
 #######
 #
-# IRS990 - ContractorCompensationGrp
-# A repeating structure from  Part VII Compensation 
+# IRS990 - CntrctrCmpnstn
+# Description: Section B - Independent contractors: complete this table for the five highest compensated independent contractors that received more than $100,000 of compensation from the organization.
+# A repeating structure from part_vii
 #
 #######
 
@@ -1858,47 +1894,86 @@ class CntrctrCmpnstn(models.Model):
     CntrctrNm_PrsnNm = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VII Section B Line 1(A)  Description:  Name - Person  xpath: /IRS990/ContractorCompensationGrp/ContractorName/PersonNm 
 
-    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part VII Section B Line 1(A)  Description:  Business name line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorName/BusinessName/BusinessNameLine2Txt 
+    BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Business name line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorName/BusinessName/BusinessNameLine1 
 
     BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part VII Section B Line 1(A)  Description:  Business name line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorName/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Business name line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorName/BusinessName/BusinessNameLine2 
+
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Business name line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorName/BusinessName/BusinessNameLine2Txt 
 
     CntrctrCmpnstn_CntrctrAddrss = models.TextField(null=True, blank=True)
     # Line number:  Part VII Section B  Description:  Address of contractor  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VII Section B Line 1(A)  Description:  Address line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/AddressLine1Txt 
 
-    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part VII Section B Line 1(A)  Description:  ZIP code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/ZIPCd 
-
-    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VII Section B Line 1(A)  Description:  State  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/StateAbbreviationCd 
-
-    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/CityNm 
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VII Section B Line 1(A)  Description:  Address line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/AddressLine2Txt 
 
-    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VII Section B Line 1(A)  Description:  Province or state  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/ProvinceOrStateNm 
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/City 
 
-    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII Section B Line 1(A)  Description:  Postal code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/ForeignPostalCd 
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/CityNm 
 
-    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VII Section B Line 1(A)  Description:  Country  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/CountryCd 
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VII Section B Line 1(A)  Description:  State  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/State 
 
-    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/CityNm 
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VII Section B Line 1(A)  Description:  State  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/StateAbbreviationCd 
+
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part VII Section B Line 1(A)  Description:  ZIP code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/ZIPCd 
+
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part VII Section B Line 1(A)  Description:  ZIP code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/AddressLine1 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VII Section B Line 1(A)  Description:  Address line 2  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/AddressLine2Txt 
 
-    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VII Section B Line 1(A)  Description:  Address line 1  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/AddressLine1Txt 
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VII Section B Line 1(A)  Description:  City  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/CityNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Country  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/Country 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Country  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/CountryCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Postal code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Postal code  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/PostalCode 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Province or state  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VII Section B Line 1(A)  Description:  Province or state  xpath: /IRS990/ContractorCompensationGrp/ContractorAddress/ForeignAddress/ProvinceOrStateNm 
 
     CntrctrCmpnstn_SrvcsDsc = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Part VII Section B Line 1(B)  Description:  Description of services  xpath: /IRS990/ContractorCompensationGrp/ServicesDesc 
@@ -1908,37 +1983,75 @@ class CntrctrCmpnstn(models.Model):
 
 #######
 #
-# IRS990 - ProgramServiceRevenueGrp
-# A repeating structure from  Part VIII Revenue 
+# IRS990 - Frm990PrtVIISctnA
+# Description: Section A: - Officers, Directors, Trustees, Key Employees and Highest Compensated Employees
+# A repeating structure from part_vii
 #
 #######
 
-class PrgrmSrvcRvn(models.Model):
+class Frm990PrtVIISctnA(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    Dsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part VIII Line 2a - 2e  Description:  Description  xpath: /IRS990/ProgramServiceRevenueGrp/Desc 
+    Frm990PrtVIISctnA = models.TextField(null=True, blank=True)
+    # Description:  Section A, at least name required  xpath: /IRS990/Form990PartVIISectionAGrp 
 
-    TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/ProgramServiceRevenueGrp/TotalRevenueColumnAmt 
+    PrsnNm = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part VII Section A Line 1a A  Description:  Name - Person  xpath: /IRS990/Form990PartVIISectionAGrp/PersonNm 
 
-    RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/ProgramServiceRevenueGrp/RelatedOrExemptFuncIncomeAmt 
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part VII Section A Line 1a A  Description:  Business name line 1  xpath: /IRS990/Form990PartVIISectionAGrp/BusinessName/BusinessNameLine1 
 
-    UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/ProgramServiceRevenueGrp/UnrelatedBusinessRevenueAmt 
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part VII Section A Line 1a A  Description:  Business name line 1  xpath: /IRS990/Form990PartVIISectionAGrp/BusinessName/BusinessNameLine1Txt 
 
-    ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/ProgramServiceRevenueGrp/ExclusionAmt 
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part VII Section A Line 1a A  Description:  Business name line 2  xpath: /IRS990/Form990PartVIISectionAGrp/BusinessName/BusinessNameLine2 
 
-    BsnssCd = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII  Description:  Business code  xpath: /IRS990/ProgramServiceRevenueGrp/BusinessCd 
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part VII Section A Line 1a A  Description:  Business name line 2  xpath: /IRS990/Form990PartVIISectionAGrp/BusinessName/BusinessNameLine2Txt 
+
+    TtlTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part VII Section A Line 1a A  Description:  Title  xpath: /IRS990/Form990PartVIISectionAGrp/TitleTxt 
+
+    AvrgHrsPrWkRt = models.TextField(null=True, blank=True)
+    # Line number: Part VII Section A Line 1a B  Description:  Average hours per week  xpath: /IRS990/Form990PartVIISectionAGrp/AverageHoursPerWeekRt 
+
+    AvrgHrsPrWkRltdOrgRt = models.TextField(null=True, blank=True)
+    # Line number: Part VII Section A Line 1a B  Description:  Average hours per week for related organizations  xpath: /IRS990/Form990PartVIISectionAGrp/AverageHoursPerWeekRltdOrgRt 
+
+    IndvdlTrstOrDrctrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part VII Section A Line 1a C  Description:  Individual trustee or director  xpath: /IRS990/Form990PartVIISectionAGrp/IndividualTrusteeOrDirectorInd 
+
+    InstttnlTrstInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part VII Section A Line 1a C  Description:  Institutional Trustee  xpath: /IRS990/Form990PartVIISectionAGrp/InstitutionalTrusteeInd 
+
+    OffcrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part VII Section A Line 1a C  Description:  Officer  xpath: /IRS990/Form990PartVIISectionAGrp/OfficerInd 
+
+    KyEmplyInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part VII Section A Line 1a C  Description:  Key Employee  xpath: /IRS990/Form990PartVIISectionAGrp/KeyEmployeeInd 
+
+    HghstCmpnstdEmplyInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part VII Section A Line 1a C  Description:  Highest compensated employee  xpath: /IRS990/Form990PartVIISectionAGrp/HighestCompensatedEmployeeInd 
+
+    FrmrOfcrDrctrTrstInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part VII Section A Line 1a C  Description:  Former  xpath: /IRS990/Form990PartVIISectionAGrp/FormerOfcrDirectorTrusteeInd 
+
+    RprtblCmpFrmOrgAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number: Part VII Section A Line 1a D  Description:  Reportable compensation from organization  xpath: /IRS990/Form990PartVIISectionAGrp/ReportableCompFromOrgAmt 
+
+    RprtblCmpFrmRltdOrgAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number: Part VII Section A Line 1a E  Description:  Reportable compensation from related organizations  xpath: /IRS990/Form990PartVIISectionAGrp/ReportableCompFromRltdOrgAmt 
+
+    OthrCmpnstnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number: Part VII Section A Line 1a F  Description:  Other compensation  xpath: /IRS990/Form990PartVIISectionAGrp/OtherCompensationAmt 
 
 #######
 #
-# IRS990 - OtherRevenueMiscGrp
-# A repeating structure from  Part VIII Revenue 
+# IRS990 - OthrRvnMsc
+# Description: Other Miscellaneous Revenue
+# A repeating structure from part_viii
 #
 #######
 
@@ -1947,7 +2060,7 @@ class OthrRvnMsc(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     Dsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part VIII Line 11a 11b 11c  Description:  Description  xpath: /IRS990/OtherRevenueMiscGrp/Desc 
+    # Line number: Part VIII Line 11a 11b 11c  Description:  Description  xpath: /IRS990/OtherRevenueMiscGrp/Desc 
 
     TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/OtherRevenueMiscGrp/TotalRevenueColumnAmt 
@@ -1966,31 +2079,60 @@ class OthrRvnMsc(models.Model):
 
 #######
 #
-# IRS990 - StatesWhereCopyOfReturnIsFldCd
-# A repeating structure from  Part VI Governance 
+# IRS990 - PrgrmSrvcRvn
+# Description: Program Service Revenue
+# A repeating structure from part_viii
 #
 #######
 
-class SttsWhrCpyOfRtrnIsFldCd(models.Model):
+class PrgrmSrvcRvn(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    SttsWhrCpyOfRtrnIsFldCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VI Section C Line 17  Description:  States where return filed  xpath: /IRS990/StatesWhereCopyOfReturnIsFldCd 
+    Dsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part VIII Line 2a - 2e  Description:  Description  xpath: /IRS990/ProgramServiceRevenueGrp/Desc 
+
+    TtlRvnClmnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (A)  Description:  Total revenue  xpath: /IRS990/ProgramServiceRevenueGrp/TotalRevenueColumnAmt 
+
+    RltdOrExmptFncIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (B)  Description:  Related or exempt function revenue  xpath: /IRS990/ProgramServiceRevenueGrp/RelatedOrExemptFuncIncomeAmt 
+
+    UnrltdBsnssRvnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (C)  Description:  Unrelated business revenue  xpath: /IRS990/ProgramServiceRevenueGrp/UnrelatedBusinessRevenueAmt 
+
+    ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VIII Column (D)  Description:  Excluded by section 512, 513, or 514: amount  xpath: /IRS990/ProgramServiceRevenueGrp/ExclusionAmt 
+
+    BsnssCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII  Description:  Business code  xpath: /IRS990/ProgramServiceRevenueGrp/BusinessCd 
 
 #######
 #
-# IRS990 - SpecialConditionDesc
-# A repeating structure from  Part 0 Prefatory material 
+# IRS990 - OthrExpnss
+# Description: Other Expenses
+# A repeating structure from part_ix
 #
 #######
 
-class SpclCndtnDsc(models.Model):
+class OthrExpnss(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    SpclCndtnDsc = models.TextField(null=True, blank=True)
-    # Description:  Special condition description  xpath: /IRS990/SpecialConditionDesc 
+    Dsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part IX Line 24a - 24d  Description:  Description  xpath: /IRS990/OtherExpensesGrp/Desc 
+
+    TtlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (A)  Description:  Total  xpath: /IRS990/OtherExpensesGrp/TotalAmt 
+
+    PrgrmSrvcsAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (B)  Description:  Program services  xpath: /IRS990/OtherExpensesGrp/ProgramServicesAmt 
+
+    MngmntAndGnrlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (C)  Description:  Management and general  xpath: /IRS990/OtherExpensesGrp/ManagementAndGeneralAmt 
+
+    FndrsngAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  col (D)  Description:  Fundraising  xpath: /IRS990/OtherExpensesGrp/FundraisingAmt 
 
 #######
 #
@@ -2051,16 +2193,16 @@ class ez_part_0(models.Model):
     # Line number:  G  Description:  Method of accounting - Other  xpath: /IRS990EZ/MethodOfAccountingOtherDesc 
 
     Orgnztn501c3Ind = models.TextField(null=True, blank=True)
-    # Line number:  J  Description:  Indicates a 501(c)(3) organization  xpath: /IRS990EZ/Organization501c3Ind 
+    # Line number:  J  Description: Indicates a 501(c)(3) organization  xpath: /IRS990EZ/Organization501c3Ind 
 
     Orgnztn501cInd = models.TextField(null=True, blank=True)
-    # Line number:  J  Description:  Indicates a 501(c) organization  xpath: /IRS990EZ/Organization501cInd 
+    # Line number:  J  Description: Indicates a 501(c) organization  xpath: /IRS990EZ/Organization501cInd 
 
     Orgnztn49471NtPFInd = models.TextField(null=True, blank=True)
-    # Line number:  J  Description:  Indicates a 4947(a)(1) organization  xpath: /IRS990EZ/Organization4947a1NotPFInd 
+    # Line number:  J  Description: Indicates a 4947(a)(1) organization  xpath: /IRS990EZ/Organization4947a1NotPFInd 
 
     Orgnztn527Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  J  Description:  Indicates a 527 organization  xpath: /IRS990EZ/Organization527Ind 
+    # Line number:  J  Description: Indicates a 527 organization  xpath: /IRS990EZ/Organization527Ind 
 
 #######
 #
@@ -2076,88 +2218,88 @@ class ez_part_i(models.Model):
     # Line number:  Part I  Description:  Schedule O contains a response to a question in Part I  xpath: /IRS990EZ/InfoInScheduleOPartIInd 
 
     CntrbtnsGftsGrntsEtcAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 1  Description:  Contributions, gifts, grants, and similar amounts received  xpath: /IRS990EZ/ContributionsGiftsGrantsEtcAmt 
+    # Line number: Part I Line 1  Description:  Contributions, gifts, grants, and similar amounts received  xpath: /IRS990EZ/ContributionsGiftsGrantsEtcAmt 
 
     PrgrmSrvcRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 2  Description:  ProgramServiceRevenue  xpath: /IRS990EZ/ProgramServiceRevenueAmt 
+    # Line number: Part I Line 2  Description:  ProgramServiceRevenue  xpath: /IRS990EZ/ProgramServiceRevenueAmt 
 
     MmbrshpDsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3  Description:  Membership dues and assessments  xpath: /IRS990EZ/MembershipDuesAmt 
+    # Line number: Part I Line 3  Description:  Membership dues and assessments  xpath: /IRS990EZ/MembershipDuesAmt 
 
     InvstmntIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 4  Description:  Investment income  xpath: /IRS990EZ/InvestmentIncomeAmt 
+    # Line number: Part I Line 4  Description:  Investment income  xpath: /IRS990EZ/InvestmentIncomeAmt 
 
     SlOfAsstsGrssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 5a  Description:  Gross amount from sale of assets other than inventory  xpath: /IRS990EZ/SaleOfAssetsGrossAmt 
+    # Line number: Part I Line 5a  Description:  Gross amount from sale of assets other than inventory  xpath: /IRS990EZ/SaleOfAssetsGrossAmt 
 
     CstOrOthrBssExpnsSlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 5b  Description:  Cost or other basis and sales expenses  xpath: /IRS990EZ/CostOrOtherBasisExpenseSaleAmt 
+    # Line number: Part I Line 5b  Description:  Cost or other basis and sales expenses  xpath: /IRS990EZ/CostOrOtherBasisExpenseSaleAmt 
 
     GnOrLssFrmSlOfAsstsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 5c  Description:  Gain or (loss) from sale of assets other than inventory  xpath: /IRS990EZ/GainOrLossFromSaleOfAssetsAmt 
+    # Line number: Part I Line 5c  Description:  Gain or (loss) from sale of assets other than inventory  xpath: /IRS990EZ/GainOrLossFromSaleOfAssetsAmt 
 
     GmngGrssIncmAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 6a  Description:  Special events Indicates revenue from gaming  xpath: /IRS990EZ/GamingGrossIncomeAmt 
+    # Line number: Part I Line 6a  Description:  Special events Indicates revenue from gaming  xpath: /IRS990EZ/GamingGrossIncomeAmt 
 
     FndrsngGrssIncmAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 6b  Description:  Fundraising gross income  xpath: /IRS990EZ/FundraisingGrossIncomeAmt 
+    # Line number: Part I Line 6b  Description:  Fundraising gross income  xpath: /IRS990EZ/FundraisingGrossIncomeAmt 
 
     SpclEvntsDrctExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 6c  Description:  Special events direct expenses  xpath: /IRS990EZ/SpecialEventsDirectExpensesAmt 
+    # Line number: Part I Line 6c  Description:  Special events direct expenses  xpath: /IRS990EZ/SpecialEventsDirectExpensesAmt 
 
     SpclEvntsNtIncmLssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 6d  Description:  Special events net income (or loss)  xpath: /IRS990EZ/SpecialEventsNetIncomeLossAmt 
+    # Line number: Part I Line 6d  Description:  Special events net income (or loss)  xpath: /IRS990EZ/SpecialEventsNetIncomeLossAmt 
 
     GrssSlsOfInvntryAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 7a  Description:  Gross sales of inventory  xpath: /IRS990EZ/GrossSalesOfInventoryAmt 
+    # Line number: Part I Line 7a  Description:  Gross sales of inventory  xpath: /IRS990EZ/GrossSalesOfInventoryAmt 
 
     CstOfGdsSldAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 7b  Description:  Less: cost of goods sold  xpath: /IRS990EZ/CostOfGoodsSoldAmt 
+    # Line number: Part I Line 7b  Description:  Less: cost of goods sold  xpath: /IRS990EZ/CostOfGoodsSoldAmt 
 
     GrssPrftLssSlsOfInvntryAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 7c  Description:  Gross profit (or loss) from sales of inventory  xpath: /IRS990EZ/GrossProfitLossSlsOfInvntryAmt 
+    # Line number: Part I Line 7c  Description:  Gross profit (or loss) from sales of inventory  xpath: /IRS990EZ/GrossProfitLossSlsOfInvntryAmt 
 
     OthrRvnTtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 8  Description:  Other revenue - total  xpath: /IRS990EZ/OtherRevenueTotalAmt 
+    # Line number: Part I Line 8  Description:  Other revenue - total  xpath: /IRS990EZ/OtherRevenueTotalAmt 
 
     TtlRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 9  Description:  Total revenue  xpath: /IRS990EZ/TotalRevenueAmt 
+    # Line number: Part I Line 9  Description:  Total revenue  xpath: /IRS990EZ/TotalRevenueAmt 
 
     GrntsAndSmlrAmntsPdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 10  Description:  Grants and similar amounts paid  xpath: /IRS990EZ/GrantsAndSimilarAmountsPaidAmt 
+    # Line number: Part I Line 10  Description:  Grants and similar amounts paid  xpath: /IRS990EZ/GrantsAndSimilarAmountsPaidAmt 
 
     BnftsPdTOrFrMmbrsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 11  Description:  Benefits paid to or for members  xpath: /IRS990EZ/BenefitsPaidToOrForMembersAmt 
+    # Line number: Part I Line 11  Description:  Benefits paid to or for members  xpath: /IRS990EZ/BenefitsPaidToOrForMembersAmt 
 
     SlrsOthrCmpEmplBnftAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12  Description:  Salaries, other compensation, and employee benefits  xpath: /IRS990EZ/SalariesOtherCompEmplBnftAmt 
+    # Line number: Part I Line 12  Description:  Salaries, other compensation, and employee benefits  xpath: /IRS990EZ/SalariesOtherCompEmplBnftAmt 
 
     FsAndOthrPymtTIndCntrctAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 13  Description:  Professional fees and other payments to independent contractors  xpath: /IRS990EZ/FeesAndOtherPymtToIndCntrctAmt 
+    # Line number: Part I Line 13  Description:  Professional fees and other payments to independent contractors  xpath: /IRS990EZ/FeesAndOtherPymtToIndCntrctAmt 
 
     OccpncyRntUtltsAndMntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 14  Description:  Occupancy, rent, utilities, and maintenance  xpath: /IRS990EZ/OccupancyRentUtltsAndMaintAmt 
+    # Line number: Part I Line 14  Description:  Occupancy, rent, utilities, and maintenance  xpath: /IRS990EZ/OccupancyRentUtltsAndMaintAmt 
 
     PrntngPblctnsPstgAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 15  Description:  Printing, publications, postage, and shipping  xpath: /IRS990EZ/PrintingPublicationsPostageAmt 
+    # Line number: Part I Line 15  Description:  Printing, publications, postage, and shipping  xpath: /IRS990EZ/PrintingPublicationsPostageAmt 
 
     OthrExpnssTtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16  Description:  Other expenses - total  xpath: /IRS990EZ/OtherExpensesTotalAmt 
+    # Line number: Part I Line 16  Description:  Other expenses - total  xpath: /IRS990EZ/OtherExpensesTotalAmt 
 
     TtlExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 17  Description:  Total expenses  xpath: /IRS990EZ/TotalExpensesAmt 
+    # Line number: Part I Line 17  Description:  Total expenses  xpath: /IRS990EZ/TotalExpensesAmt 
 
     ExcssOrDfctFrYrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 18  Description:  Excess or deficit  xpath: /IRS990EZ/ExcessOrDeficitForYearAmt 
+    # Line number: Part I Line 18  Description:  Excess or deficit  xpath: /IRS990EZ/ExcessOrDeficitForYearAmt 
 
     NtAsstsOrFndBlncsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 19  Description:  Net assets BOY  xpath: /IRS990EZ/NetAssetsOrFundBalancesBOYAmt 
+    # Line number: Part I Line 19  Description:  Net assets BOY  xpath: /IRS990EZ/NetAssetsOrFundBalancesBOYAmt 
 
     OthrChngsInNtAsstsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 20  Description:  Other changes in net assets  xpath: /IRS990EZ/OtherChangesInNetAssetsAmt 
+    # Line number: Part I Line 20  Description:  Other changes in net assets  xpath: /IRS990EZ/OtherChangesInNetAssetsAmt 
 
     NtAsstsOrFndBlncsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 21  Description:  Net assets EOY  xpath: /IRS990EZ/NetAssetsOrFundBalancesEOYAmt 
+    # Line number: Part I Line 21  Description:  Net assets EOY  xpath: /IRS990EZ/NetAssetsOrFundBalancesEOYAmt 
 
 #######
 #
@@ -2203,7 +2345,7 @@ class ez_part_ii(models.Model):
     # Line number:  Part II - Column (B)  Description:  Ending of year  xpath: /IRS990EZ/SumOfTotalLiabilitiesGrp/EOYAmt 
 
     EZ_NtAsstsOrFndBlncs = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 27  Description:  Net assets or fund balances  xpath: /IRS990EZ/NetAssetsOrFundBalancesGrp 
+    # Line number: Part II Line 27  Description:  Net assets or fund balances  xpath: /IRS990EZ/NetAssetsOrFundBalancesGrp 
 
     NtAsstsOrFndBlncs_BOYAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part II Line 27 Column (A)  Description:  Beginnning of year  xpath: /IRS990EZ/NetAssetsOrFundBalancesGrp/BOYAmt 
@@ -2228,7 +2370,7 @@ class ez_part_iii(models.Model):
     # Line number:  Part III  Description:  Primary exempt purpose  xpath: /IRS990EZ/PrimaryExemptPurposeTxt 
 
     TtlPrgrmSrvcExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 32  Description:  Total Program Service Expenses  xpath: /IRS990EZ/TotalProgramServiceExpensesAmt 
+    # Line number: Part III Line 32  Description:  Total Program Service Expenses  xpath: /IRS990EZ/TotalProgramServiceExpensesAmt 
 
 #######
 #
@@ -2257,139 +2399,178 @@ class ez_part_v(models.Model):
     # Line number:  Part V  Description:  Schedule O contains a response to a question in Part V  xpath: /IRS990EZ/InfoInScheduleOPartVInd 
 
     EZ_ActvtsNtPrvslyRptInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 33  Description:  Did the organization engage in any activity not previously reported to the IRS?  xpath: /IRS990EZ/ActivitiesNotPreviouslyRptInd 
+    # Line number: Part V Line 33  Description:  Did the organization engage in any activity not previously reported to the IRS?  xpath: /IRS990EZ/ActivitiesNotPreviouslyRptInd 
 
     EZ_ChgMdTOrgnzngDcNtRptInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 34  Description:  Were any changes made in the organizing or governing documents but not reported to the IRS?  xpath: /IRS990EZ/ChgMadeToOrgnzngDocNotRptInd 
+    # Line number: Part V Line 34  Description:  Were any changes made in the organizing or governing documents but not reported to the IRS?  xpath: /IRS990EZ/ChgMadeToOrgnzngDocNotRptInd 
 
     EZ_OrgnztnHdUBIInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 35a  Description:  Did the organization have unrelated business gross income of $1,000 or more during the year covered by this return?  xpath: /IRS990EZ/OrganizationHadUBIInd 
+    # Line number: Part V Line 35a  Description: Did the organization have unrelated business gross income of $1,000 or more during the year covered by this return?  xpath: /IRS990EZ/OrganizationHadUBIInd 
 
     EZ_OrgnztnFld990TInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 35b  Description:  If "Yes" for Line 35a, has it filed a tax return on Form 990-T for this year?  xpath: /IRS990EZ/OrganizationFiled990TInd 
+    # Line number: Part V Line 35b  Description: If "Yes" for Line 35a, has it filed a tax return on Form 990-T for this year?  xpath: /IRS990EZ/OrganizationFiled990TInd 
 
     EZ_SbjctTPrxyTxInd = models.TextField(null=True, blank=True)
-    # Line number:  Part V Line 35c  Description:  Subject to proxy tax?  xpath: /IRS990EZ/SubjectToProxyTaxInd 
+    # Line number: Part V Line 35c  Description:  Subject to proxy tax?  xpath: /IRS990EZ/SubjectToProxyTaxInd 
 
     EZ_OrgnztnDsslvdEtcInd = models.TextField(null=True, blank=True)
-    # Line number:  Part V Line 36  Description:  Was there a liquidation, dissolution, termination, or substantial contraction during the year?  xpath: /IRS990EZ/OrganizationDissolvedEtcInd 
+    # Line number: Part V Line 36  Description:  Was there a liquidation, dissolution, termination, or substantial contraction during the year?  xpath: /IRS990EZ/OrganizationDissolvedEtcInd 
 
     EZ_DrctIndrctPltclExpndAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 37a  Description:  Direct or indirect political expenditures.  xpath: /IRS990EZ/DirectIndirectPltclExpendAmt 
+    # Line number: Part V Line 37a  Description:  Direct or indirect political expenditures.  xpath: /IRS990EZ/DirectIndirectPltclExpendAmt 
 
     EZ_Frm1120PlFldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 37b  Description:  Did the organization file Form 1120-POL for this year?  xpath: /IRS990EZ/Form1120PolFiledInd 
+    # Line number: Part V Line 37b  Description: Did the organization file Form 1120-POL for this year?  xpath: /IRS990EZ/Form1120PolFiledInd 
 
     EZ_MdLnsTFrmOffcrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 38a  Description:  Did the organization borrow from, or make any loans to, any officer, director, trustee, or key employee or were any such loans made in a prior year and still unpaid at the start of the period caovered by this return?  xpath: /IRS990EZ/MadeLoansToFromOfficersInd 
+    # Line number: Part V Line 38a  Description:  Did the organization borrow from, or make any loans to, any officer, director, trustee, or key employee or were any such loans made in a prior year and still unpaid at the start of the period caovered by this return?  xpath: /IRS990EZ/MadeLoansToFromOfficersInd 
 
     EZ_LnsTFrmOffcrsAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part V Line 38b  Description:  Loans to/from officers amount  xpath: /IRS990EZ/LoansToFromOfficersAmt 
+    # Line number: Part V Line 38b  Description:  Loans to/from officers amount  xpath: /IRS990EZ/LoansToFromOfficersAmt 
 
     EZ_InttnFsAndCpCntrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 39a  Description:  501(c)(7) orgs: Initiation fees and capital contributions included on line 9  xpath: /IRS990EZ/InitiationFeesAndCapContriAmt 
+    # Line number: Part V Line 39a  Description: 501(c)(7) orgs: Initiation fees and capital contributions included on line 9  xpath: /IRS990EZ/InitiationFeesAndCapContriAmt 
 
     EZ_GrssRcptsFrPblcUsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 39b  Description:  501(c)(7) orgs: Gross receipts, included on line 9, for public use of club facilities  xpath: /IRS990EZ/GrossReceiptsForPublicUseAmt 
+    # Line number: Part V Line 39b  Description: 501(c)(7) orgs: Gross receipts, included on line 9, for public use of club facilities  xpath: /IRS990EZ/GrossReceiptsForPublicUseAmt 
 
     EZ_TxImpsdUndrIRC4911Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 40a  Description:  501(c)(3) Organizations: Amount of tax imposed on the organization furing the year under section 4911  xpath: /IRS990EZ/TaxImposedUnderIRC4911Amt 
+    # Line number: Part V Line 40a  Description: 501(c)(3) Organizations: Amount of tax imposed on the organization furing the year under section 4911  xpath: /IRS990EZ/TaxImposedUnderIRC4911Amt 
 
     EZ_TxImpsdUndrIRC4912Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 40a  Description:  501(c)(3) Organizations: Amount of tax imposed on the organization furing the year under section 4912  xpath: /IRS990EZ/TaxImposedUnderIRC4912Amt 
+    # Line number: Part V Line 40a  Description: 501(c)(3) Organizations: Amount of tax imposed on the organization furing the year under section 4912  xpath: /IRS990EZ/TaxImposedUnderIRC4912Amt 
 
     EZ_TxImpsdUndrIRC4955Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 40a  Description:  501(c)(3) Organizations: Amount of tax imposed on the organization furing the year under section 4955  xpath: /IRS990EZ/TaxImposedUnderIRC4955Amt 
+    # Line number: Part V Line 40a  Description: 501(c)(3) Organizations: Amount of tax imposed on the organization furing the year under section 4955  xpath: /IRS990EZ/TaxImposedUnderIRC4955Amt 
 
     EZ_EnggdInExcssBnftTrnsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part V Line 40b  Description:  501(c)(3) and 501(c)(4) orgs: Did the organization engage in any section 4958 excess benefit transaction during the year, etc?  xpath: /IRS990EZ/EngagedInExcessBenefitTransInd 
+    # Line number: Part V Line 40b  Description: 501(c)(3) and 501(c)(4) orgs: Did the organization engage in any section 4958 excess benefit transaction during the year, etc?  xpath: /IRS990EZ/EngagedInExcessBenefitTransInd 
 
     EZ_TxImpsdOnOrgnztnMgrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 40c  Description:  Amount of tax imposed on the organization managers etc during the year under sections 4912, 4955, and 4958  xpath: /IRS990EZ/TaxImposedOnOrganizationMgrAmt 
+    # Line number: Part V Line 40c  Description: Amount of tax imposed on the organization managers etc during the year under sections 4912, 4955, and 4958  xpath: /IRS990EZ/TaxImposedOnOrganizationMgrAmt 
 
     EZ_TxRmbrsdByOrgnztnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 40d  Description:  Amount of tax on line 40c, above, reimbursed by the organization  xpath: /IRS990EZ/TaxReimbursedByOrganizationAmt 
+    # Line number: Part V Line 40d  Description: Amount of tax on line 40c, above, reimbursed by the organization  xpath: /IRS990EZ/TaxReimbursedByOrganizationAmt 
 
     EZ_PrhbtdTxShltrTrnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 40e  Description:  At any time during the tax year, was the organization a party to a prohibited tax shelter transaction?  xpath: /IRS990EZ/ProhibitedTaxShelterTransInd 
+    # Line number: Part V Line 40e  Description:  At any time during the tax year, was the organization a party to a prohibited tax shelter transaction?  xpath: /IRS990EZ/ProhibitedTaxShelterTransInd 
 
     EZ_BksInCrOfDtl = models.TextField(null=True, blank=True)
     # Description:  The books are in care of  xpath: /IRS990EZ/BooksInCareOfDetail 
 
     BksInCrOfDtl_PrsnNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part V Line 42a  Description:  Name - Person  xpath: /IRS990EZ/BooksInCareOfDetail/PersonNm 
+    # Line number: Part V Line 42a  Description:  Name - Person  xpath: /IRS990EZ/BooksInCareOfDetail/PersonNm 
 
     BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part V Line 42a  Description:  Business name line 1  xpath: /IRS990EZ/BooksInCareOfDetail/BusinessName/BusinessNameLine1Txt 
+    # Line number: Part V Line 42a  Description:  Business name line 1  xpath: /IRS990EZ/BooksInCareOfDetail/BusinessName/BusinessNameLine1 
+
+    BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part V Line 42a  Description:  Business name line 1  xpath: /IRS990EZ/BooksInCareOfDetail/BusinessName/BusinessNameLine1Txt 
 
     BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part V Line 42a  Description:  Business name line 2  xpath: /IRS990EZ/BooksInCareOfDetail/BusinessName/BusinessNameLine2Txt 
+    # Line number: Part V Line 42a  Description:  Business name line 2  xpath: /IRS990EZ/BooksInCareOfDetail/BusinessName/BusinessNameLine2 
+
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part V Line 42a  Description:  Business name line 2  xpath: /IRS990EZ/BooksInCareOfDetail/BusinessName/BusinessNameLine2Txt 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part V Line 42a  Description:  Address line 1  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/AddressLine1Txt 
+    # Line number: Part V Line 42a  Description:  Address line 1  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part V Line 42a  Description:  Address line 1  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/AddressLine1Txt 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part V Line 42a  Description:  Address line 2  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/AddressLine2Txt 
+    # Line number: Part V Line 42a  Description:  Address line 2  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/AddressLine2 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part V Line 42a  Description:  Address line 2  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part V Line 42a  Description:  City  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/CityNm 
+    # Line number: Part V Line 42a  Description:  City  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part V Line 42a  Description:  City  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/CityNm 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part V Line 42a  Description:  State  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/StateAbbreviationCd 
+    # Line number: Part V Line 42a  Description:  State  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/State 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part V Line 42a  Description:  State  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/StateAbbreviationCd 
 
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part V Line 42a  Description:  ZIP code  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/ZIPCd 
+    # Line number: Part V Line 42a  Description:  ZIP code  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/ZIPCd 
+
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part V Line 42a  Description:  ZIP code  xpath: /IRS990EZ/BooksInCareOfDetail/USAddress/ZIPCode 
 
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part V Line 42a  Description:  Address line 1  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/AddressLine1Txt 
+    # Line number: Part V Line 42a  Description:  Address line 1  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/AddressLine1 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part V Line 42a  Description:  Address line 1  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/AddressLine1Txt 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part V Line 42a  Description:  Address line 2  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/AddressLine2Txt 
+    # Line number: Part V Line 42a  Description:  Address line 2  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/AddressLine2 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part V Line 42a  Description:  Address line 2  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part V Line 42a  Description:  City  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/CityNm 
+    # Line number: Part V Line 42a  Description:  City  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part V Line 42a  Description:  City  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part V Line 42a  Description:  Province or state  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/ProvinceOrStateNm 
+    # Line number: Part V Line 42a  Description:  Province or state  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part V Line 42a  Description:  Province or state  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/ProvinceOrStateNm 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part V Line 42a  Description:  Country  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/CountryCd 
+    # Line number: Part V Line 42a  Description:  Country  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/Country 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part V Line 42a  Description:  Country  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part V Line 42a  Description:  Postal code  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/ForeignPostalCd 
+    # Line number: Part V Line 42a  Description:  Postal code  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part V Line 42a  Description:  Postal code  xpath: /IRS990EZ/BooksInCareOfDetail/ForeignAddress/PostalCode 
 
     BksInCrOfDtl_PhnNm = models.CharField(null=True, blank=True, max_length=10)
-    # Line number:  Part V Line 42a  Description:  Telephone number  xpath: /IRS990EZ/BooksInCareOfDetail/PhoneNum 
+    # Line number: Part V Line 42a  Description:  Telephone number  xpath: /IRS990EZ/BooksInCareOfDetail/PhoneNum 
 
     EZ_FrgnFnnclAccntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 42b  Description:  Did the organization have an interest in or authority over a financial account in a foreign country?  xpath: /IRS990EZ/ForeignFinancialAccountInd 
+    # Line number: Part V Line 42b  Description:  Did the organization have an interest in or authority over a financial account in a foreign country?  xpath: /IRS990EZ/ForeignFinancialAccountInd 
 
     EZ_FrgnOffcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 42c  Description:  At any time during the calender year, did the organization maintain an office outside of the U.S.?  xpath: /IRS990EZ/ForeignOfficeInd 
+    # Line number: Part V Line 42c  Description:  At any time during the calender year, did the organization maintain an office outside of the U.S.?  xpath: /IRS990EZ/ForeignOfficeInd 
 
     EZ_NECTFlngFrm990Ind = models.TextField(null=True, blank=True)
-    # Line number:  Part V Line 43  Description:  Indicates section 4947(a)(1) nonexempt charitable trusts filing Form 990 in lieu of Form 1041  xpath: /IRS990EZ/NECTFilingForm990Ind 
+    # Line number: Part V Line 43  Description: Indicates section 4947(a)(1) nonexempt charitable trusts filing Form 990 in lieu of Form 1041  xpath: /IRS990EZ/NECTFilingForm990Ind 
 
     EZ_DnrAdvsdFndsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 44a  Description:  Maintain any donor advised funds?  xpath: /IRS990EZ/DonorAdvisedFndsInd 
+    # Line number: Part V Line 44a  Description:  Maintain any donor advised funds?  xpath: /IRS990EZ/DonorAdvisedFndsInd 
 
     EZ_OprtHsptlInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 44b  Description:  Operate one or more hospital facilities?  xpath: /IRS990EZ/OperateHospitalInd 
+    # Line number: Part V Line 44b  Description:  Operate one or more hospital facilities?  xpath: /IRS990EZ/OperateHospitalInd 
 
     EZ_TnnngSrvcsPrvddInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 44c  Description:  Payments received for indoor tanning services?  xpath: /IRS990EZ/TanningServicesProvidedInd 
+    # Line number: Part V Line 44c  Description:  Payments received for indoor tanning services?  xpath: /IRS990EZ/TanningServicesProvidedInd 
 
     EZ_Frm720FldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 44d  Description:  Form 720 filed and taxes paid on indoor tanning services?  xpath: /IRS990EZ/Form720FiledInd 
+    # Line number: Part V Line 44d  Description: Form 720 filed and taxes paid on indoor tanning services?  xpath: /IRS990EZ/Form720FiledInd 
 
     EZ_RltdOrgnztnCtrlEntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 45a  Description:  Is any related organization a controlled entity within the meaning of section 512(b)(13)?  xpath: /IRS990EZ/RelatedOrganizationCtrlEntInd 
+    # Line number: Part V Line 45a  Description: Is any related organization a controlled entity within the meaning of section 512(b)(13)?  xpath: /IRS990EZ/RelatedOrganizationCtrlEntInd 
 
     EZ_TrnsctnWthCntrlEntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 45b  Description:  Payment from or engage in transaction with a controlled entity?  xpath: /IRS990EZ/TransactionWithControlEntInd 
+    # Line number: Part V Line 45b  Description:  Payment from or engage in transaction with a controlled entity?  xpath: /IRS990EZ/TransactionWithControlEntInd 
 
     EZ_PltclCmpgnActyInd = models.TextField(null=True, blank=True)
-    # Line number:  Part V Line 46  Description:  Did the organization engage in direct or indirect political campaign activities on behalf of or in opposition to candidates for public office?  xpath: /IRS990EZ/PoliticalCampaignActyInd 
+    # Line number: Part V Line 46  Description:  Did the organization engage in direct or indirect political campaign activities on behalf of or in opposition to candidates for public office?  xpath: /IRS990EZ/PoliticalCampaignActyInd 
 
 #######
 #
@@ -2405,36 +2586,37 @@ class ez_part_vi(models.Model):
     # Line number:  Part VI  Description:  Schedule O contains a response to a question in Part VI  xpath: /IRS990EZ/InfoInScheduleOPartVIInd 
 
     LbbyngActvtsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 47  Description:  Did the organization engage in lobbying activities?  xpath: /IRS990EZ/LobbyingActivitiesInd 
+    # Line number: Part VI Line 47  Description:  Did the organization engage in lobbying activities?  xpath: /IRS990EZ/LobbyingActivitiesInd 
 
     SchlOprtngInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 48  Description:  Is the organization operating a school as described in section 170(b)(1)(A)(ii)?  xpath: /IRS990EZ/SchoolOperatingInd 
+    # Line number: Part VI Line 48  Description: Is the organization operating a school as described in section 170(b)(1)(A)(ii)?  xpath: /IRS990EZ/SchoolOperatingInd 
 
     TrnsfrExmptNnChrtblRltdOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Line 49a  Description:  Did the organization make any transfers to an exempt non-charitable related organization?  xpath: /IRS990EZ/TrnsfrExmptNonChrtblRltdOrgInd 
+    # Line number: Part VI Line 49a  Description:  Did the organization make any transfers to an exempt non-charitable related organization?  xpath: /IRS990EZ/TrnsfrExmptNonChrtblRltdOrgInd 
 
     RltdOrgSct527OrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Line 49b  Description:  If "Yes," was the related organization(s) a section 527 organization?  xpath: /IRS990EZ/RelatedOrgSect527OrgInd 
+    # Line number: Part VI Line 49b  Description: If "Yes," was the related organization(s) a section 527 organization?  xpath: /IRS990EZ/RelatedOrgSect527OrgInd 
 
     OthrEmplyPdOvr100kCnt = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 50f  Description:  Total number of other employees paid over $100,000  xpath: /IRS990EZ/OtherEmployeePaidOver100kCnt 
+    # Line number: Part VI Line 50f  Description: Total number of other employees paid over $100,000  xpath: /IRS990EZ/OtherEmployeePaidOver100kCnt 
 
     CntrctRcvdGrtrThn100KCnt = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 51d  Description:  Total number of other independent contractors receiving over $100,000  xpath: /IRS990EZ/CntrctRcvdGreaterThan100KCnt 
+    # Line number: Part VI Line 51d  Description: Total number of other independent contractors receiving over $100,000  xpath: /IRS990EZ/CntrctRcvdGreaterThan100KCnt 
 
     FldSkdAInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VI Line 52  Description:  Did the organization complete Schedule A?  xpath: /IRS990EZ/FiledScheduleAInd 
+    # Line number: Part VI Line 52  Description:  Did the organization complete Schedule A?  xpath: /IRS990EZ/FiledScheduleAInd 
 
     PrtVIOfCmpOfHghstPdEmplTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 50  Description:  If there are none, enter "None"  xpath: /IRS990EZ/PartVIOfCompOfHghstPdEmplTxt 
+    # Line number: Part VI Line 50  Description:  If there are none, enter "None"  xpath: /IRS990EZ/PartVIOfCompOfHghstPdEmplTxt 
 
     PrtVIHghstPdCntrctPrfSrvcTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 51  Description:  If there are none, enter "None"  xpath: /IRS990EZ/PartVIHghstPdCntrctProfSrvcTxt 
+    # Line number: Part VI Line 51  Description:  If there are none, enter "None"  xpath: /IRS990EZ/PartVIHghstPdCntrctProfSrvcTxt 
 
 #######
 #
-# IRS990EZ - SpecialConditionDesc
-# A repeating structure from EZ Part 0 Prefatory material 
+# IRS990EZ - EZSpclCndtnDsc
+# Description:  Special condition description
+# A repeating structure from ez_part_0
 #
 #######
 
@@ -2447,8 +2629,8 @@ class EZSpclCndtnDsc(models.Model):
 
 #######
 #
-# IRS990EZ - ProgramSrvcAccomplishmentGrp
-# A repeating structure from EZ Part III Program Service Accomplishments 
+# IRS990EZ - EZPrgrmSrvcAccmplshmnt
+# A repeating structure from ez_part_iii
 #
 #######
 
@@ -2470,8 +2652,8 @@ class EZPrgrmSrvcAccmplshmnt(models.Model):
 
 #######
 #
-# IRS990EZ - OfficerDirectorTrusteeEmplGrp
-# A repeating structure from EZ Part IV Compensation 
+# IRS990EZ - EZOffcrDrctrTrstEmpl
+# A repeating structure from ez_part_iv
 #
 #######
 
@@ -2482,8 +2664,17 @@ class EZOffcrDrctrTrstEmpl(models.Model):
     PrsnNm = models.TextField(null=True, blank=True)
     # Line number:  Part IV - Column (a)  Description:  Person Name  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/PersonNm 
 
-    BsnssNm = models.TextField(null=True, blank=True)
-    # Line number:  Part IV - Column (a)  Description:  Business Name  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/BusinessName 
+    BsnssNmLn1 = models.TextField(null=True, blank=True)
+    # Line number:  Part IV - Column (a)  Description:  Business Name Line 1  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/BusinessName/BusinessNameLine1 
+
+    BsnssNmLn2 = models.TextField(null=True, blank=True)
+    # Line number:  Part IV - Column (a)  Description:  Business Name Line 2  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/BusinessName/BusinessNameLine2 
+
+    BsnssNmLn1 = models.TextField(null=True, blank=True)
+    # Line number:  Part IV - Column (a)  Description:  Business Name Line 1  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2 = models.TextField(null=True, blank=True)
+    # Line number:  Part IV - Column (a)  Description:  Business Name Line 2  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/BusinessName/BusinessNameLine2Txt 
 
     TtlTxt = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Part IV - Column (a)  Description:  Title  xpath: /IRS990EZ/OfficerDirectorTrusteeEmplGrp/TitleTxt 
@@ -2502,22 +2693,9 @@ class EZOffcrDrctrTrstEmpl(models.Model):
 
 #######
 #
-# IRS990EZ - StatesWhereCopyOfReturnIsFldCd
-# A repeating structure from EZ Part V Other Information 
-#
-#######
-
-class EZSttsWhrCpyOfRtrnIsFldCd(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    SttsWhrCpyOfRtrnIsFldCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part V Line 41  Description:  States With Which a Copy of This Return is Filed  xpath: /IRS990EZ/StatesWhereCopyOfReturnIsFldCd 
-
-#######
-#
-# IRS990EZ - ForeignFinancialAccountCntryCd
-# A repeating structure from EZ Part V Other Information 
+# IRS990EZ - EZFrgnFnnclAccntCntryCd
+# Description:  Name of foreign country
+# A repeating structure from ez_part_v
 #
 #######
 
@@ -2526,12 +2704,13 @@ class EZFrgnFnnclAccntCntryCd(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     FrgnFnnclAccntCntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part V Line 42b  Description:  Name of foreign country  xpath: /IRS990EZ/ForeignFinancialAccountCntryCd 
+    # Line number: Part V Line 42b  Description:  Name of foreign country  xpath: /IRS990EZ/ForeignFinancialAccountCntryCd 
 
 #######
 #
-# IRS990EZ - ForeignOfficeCountryCd
-# A repeating structure from EZ Part V Other Information 
+# IRS990EZ - EZFrgnOffcCntryCd
+# Description:  Name of foreign country
+# A repeating structure from ez_part_v
 #
 #######
 
@@ -2540,12 +2719,27 @@ class EZFrgnOffcCntryCd(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     FrgnOffcCntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part V Line 42c  Description:  Name of foreign country  xpath: /IRS990EZ/ForeignOfficeCountryCd 
+    # Line number: Part V Line 42c  Description:  Name of foreign country  xpath: /IRS990EZ/ForeignOfficeCountryCd 
 
 #######
 #
-# IRS990EZ - CompensationHighestPaidEmplGrp
-# A repeating structure from EZ Part VI Section 501(c)(3) Organizations Only 
+# IRS990EZ - EZSttsWhrCpyOfRtrnIsFldCd
+# Description:  States With Which a Copy of This Return is Filed
+# A repeating structure from ez_part_v
+#
+#######
+
+class EZSttsWhrCpyOfRtrnIsFldCd(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    SttsWhrCpyOfRtrnIsFldCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part V Line 41  Description:  States With Which a Copy of This Return is Filed  xpath: /IRS990EZ/StatesWhereCopyOfReturnIsFldCd 
+
+#######
+#
+# IRS990EZ - EZCmpnstnHghstPdEmpl
+# A repeating structure from ez_part_vi
 #
 #######
 
@@ -2573,8 +2767,8 @@ class EZCmpnstnHghstPdEmpl(models.Model):
 
 #######
 #
-# IRS990EZ - CompensationOfHghstPdCntrctGrp
-# A repeating structure from EZ Part VI Section 501(c)(3) Organizations Only 
+# IRS990EZ - EZCmpnstnOfHghstPdCntrct
+# A repeating structure from ez_part_vi
 #
 #######
 
@@ -2582,20 +2776,41 @@ class EZCmpnstnOfHghstPdCntrct(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    CmpnstnOfHghstPdCntrct_BsnssNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 51 Column (a)  Description:  Highest paid contractor's name - Business  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/BusinessName 
+    CmpnstnOfHghstPdCntrct_BsnssNmLn1 = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Highest paid contractor's name - Business Name Line 1  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/BusinessName/BusinessNameLine1 
+
+    CmpnstnOfHghstPdCntrct_BsnssNmLn2 = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Highest paid contractor's name - Business Name Line 2  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/BusinessName/BusinessNameLine2 
+
+    CmpnstnOfHghstPdCntrct_BsnssNmLn1 = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Highest paid contractor's name - Business Name Line 1  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/BusinessName/BusinessNameLine1Txt 
+
+    CmpnstnOfHghstPdCntrct_BsnssNmLn2 = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Highest paid contractor's name - Business Name Line 2  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/BusinessName/BusinessNameLine2Txt 
 
     CmpnstnOfHghstPdCntrct_PrsnNm = models.TextField(null=True, blank=True)
     # Line number:  Part VI Line 51 Column (a)  Description:  Highest paid contractor's name - Person  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/PersonNm 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Address line 1  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VI Line 51 Column (a)  Description:  Address line 1  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Address line 2  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VI Line 51 Column (a)  Description:  Address line 2  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part VI Line 51 Column (a)  Description:  City  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part VI Line 51 Column (a)  Description:  City  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VI Line 51 Column (a)  Description:  State  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part VI Line 51 Column (a)  Description:  State  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/StateAbbreviationCd 
@@ -2603,23 +2818,44 @@ class EZCmpnstnOfHghstPdCntrct(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part VI Line 51 Column (a)  Description:  ZIP code  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part VI Line 51 Column (a)  Description:  ZIP code  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Address line 1  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VI Line 51 Column (a)  Description:  Address line 1  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Address line 2  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VI Line 51 Column (a)  Description:  Address line 2  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Line 51 Column (a)  Description:  City  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Part VI Line 51 Column (a)  Description:  City  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Province or state  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Part VI Line 51 Column (a)  Description:  Province or state  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Country  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part VI Line 51 Column (a)  Description:  Country  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part VI Line 51 Column (a)  Description:  Postal code  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Line 51 Column (a)  Description:  Postal code  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ForeignAddress/PostalCode 
 
     CmpnstnOfHghstPdCntrct_SrvcTxt = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Part VI Line 51 Column (b)  Description:  Type of service  xpath: /IRS990EZ/CompensationOfHghstPdCntrctGrp/ServiceTypeTxt 
@@ -2638,7 +2874,7 @@ class pf_part_0(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     PFSttsTrmSct507b1AInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  E  Description:  Indicates private foundation status terminated under section 507(b)(1)(A)  xpath: /IRS990PF/PFStatusTermSect507b1AInd 
+    # Line number:  E  Description: Indicates private foundation status terminated under section 507(b)(1)(A)  xpath: /IRS990PF/PFStatusTermSect507b1AInd 
 
     IntlRtrnInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  G  Description:  Indicates this is an initial return  xpath: /IRS990PF/InitialReturnInd 
@@ -2659,10 +2895,10 @@ class pf_part_0(models.Model):
     # Line number:  I  Description:  Fair market value of all assets at end of year  xpath: /IRS990PF/FMVAssetsEOYAmt 
 
     Orgnztn501c3ExmptPFInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  H  Description:  Section 501(c)(3) exempt private foundation  xpath: /IRS990PF/Organization501c3ExemptPFInd 
+    # Line number:  H  Description: Section 501(c)(3) exempt private foundation  xpath: /IRS990PF/Organization501c3ExemptPFInd 
 
     Orgnztn49471TrtdPFInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  H  Description:  Section 4947(a)(1) nonexempt charitable trust  xpath: /IRS990PF/Organization4947a1TrtdPFInd 
+    # Line number:  H  Description: Section 4947(a)(1) nonexempt charitable trust  xpath: /IRS990PF/Organization4947a1TrtdPFInd 
 
     Orgnztn501c3TxblPFInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  H  Description:  Other taxable private foundation  xpath: /IRS990PF/Organization501c3TaxablePFInd 
@@ -2690,277 +2926,277 @@ class pf_part_i(models.Model):
     # xpath: /IRS990PF/AnalysisOfRevenueAndExpenses 
 
     CntrRcvdRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 1(a)  Description:  Contributions Received - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ContriRcvdRevAndExpnssAmt 
+    # Line number: Part I Line 1(a)  Description:  Contributions Received - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ContriRcvdRevAndExpnssAmt 
 
     SkdBNtRqrdInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 2  Description:  Not required to attach Schedule B  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ScheduleBNotRequiredInd 
+    # Line number: Part I Line 2  Description:  Not required to attach Schedule B  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ScheduleBNotRequiredInd 
 
     IntrstOnSvRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3(a)  Description:  Interest on Savings and Temporary Cash Investments - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestOnSavRevAndExpnssAmt 
+    # Line number: Part I Line 3(a)  Description:  Interest on Savings and Temporary Cash Investments - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestOnSavRevAndExpnssAmt 
 
     IntrstOnSvNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3(b)  Description:  Interest on Savings and Temporary Cash Investments - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestOnSavNetInvstIncmAmt 
+    # Line number: Part I Line 3(b)  Description:  Interest on Savings and Temporary Cash Investments - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestOnSavNetInvstIncmAmt 
 
     IntrstOnSvngsAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3(c)  Description:  Interest on Savings and Temporary Cash Investments - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestOnSavingsAdjNetIncmAmt 
+    # Line number: Part I Line 3(c)  Description:  Interest on Savings and Temporary Cash Investments - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestOnSavingsAdjNetIncmAmt 
 
     DvdndsRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 4(a)  Description:  Dividends and Interest from Securities - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DividendsRevAndExpnssAmt 
+    # Line number: Part I Line 4(a)  Description:  Dividends and Interest from Securities - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DividendsRevAndExpnssAmt 
 
     DvdndsNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 4(b)  Description:  Dividends and Interest from Securities - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DividendsNetInvstIncmAmt 
+    # Line number: Part I Line 4(b)  Description:  Dividends and Interest from Securities - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DividendsNetInvstIncmAmt 
 
     DvdndsAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 4(c)  Description:  Dividends and Interest from Securities - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DividendsAdjNetIncmAmt 
+    # Line number: Part I Line 4(c)  Description:  Dividends and Interest from Securities - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DividendsAdjNetIncmAmt 
 
     GrssRntsRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 5a(a)  Description:  Gross Rents - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossRentsRevAndExpnssAmt 
+    # Line number: Part I Line 5a(a)  Description:  Gross Rents - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossRentsRevAndExpnssAmt 
 
     GrssRntsNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 5a(b)  Description:  Gross Rents - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossRentsNetInvstIncmAmt 
+    # Line number: Part I Line 5a(b)  Description:  Gross Rents - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossRentsNetInvstIncmAmt 
 
     GrssRntsAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 5a(c)  Description:  Gross Rents - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossRentsAdjNetIncmAmt 
+    # Line number: Part I Line 5a(c)  Description:  Gross Rents - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossRentsAdjNetIncmAmt 
 
     NtRntlIncmOrLssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 5b  Description:  Net Rental Income or Los  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/NetRentalIncomeOrLossAmt 
+    # Line number: Part I Line 5b  Description:  Net Rental Income or Los  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/NetRentalIncomeOrLossAmt 
 
     NtGnSlAstRvAndExpnssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 6a(a)  Description:  Net Gain from Sale of Assets - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/NetGainSaleAstRevAndExpnssAmt 
+    # Line number: Part I Line 6a(a)  Description:  Net Gain from Sale of Assets - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/NetGainSaleAstRevAndExpnssAmt 
 
     GrssSlsPrcAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 6b  Description:  Gross Sales Price  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossSalesPriceAmt 
+    # Line number: Part I Line 6b  Description:  Gross Sales Price  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossSalesPriceAmt 
 
     CpGnNtIncmNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 7(b)  Description:  Capital Gain Net Income - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CapGainNetIncmNetInvstIncmAmt 
+    # Line number: Part I Line 7(b)  Description:  Capital Gain Net Income - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CapGainNetIncmNetInvstIncmAmt 
 
     NtSTCptlGnAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 8(c)  Description:  Net Short-Term Capital Gain - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/NetSTCapitalGainAdjNetIncmAmt 
+    # Line number: Part I Line 8(c)  Description:  Net Short-Term Capital Gain - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/NetSTCapitalGainAdjNetIncmAmt 
 
     IncmMdfctnsAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 9(c)  Description:  Income Modifications - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/IncmModificationsAdjNetIncmAmt 
+    # Line number: Part I Line 9(c)  Description:  Income Modifications - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/IncmModificationsAdjNetIncmAmt 
 
     GrssSlsLssRtAndAllwncAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 10a  Description:  Gross Sales Less Returns and Allowances  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossSalesLessRetAndAllwncAmt 
+    # Line number: Part I Line 10a  Description:  Gross Sales Less Returns and Allowances  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossSalesLessRetAndAllwncAmt 
 
     CstOfGdsSldAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 10b  Description:  Cost of Goods Sold  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CostOfGoodsSoldAmt 
+    # Line number: Part I Line 10b  Description:  Cost of Goods Sold  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CostOfGoodsSoldAmt 
 
     GrssPrftRvAndExpnssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 10c(a)  Description:  Gross Profit - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossProfitRevAndExpnssAmt 
+    # Line number: Part I Line 10c(a)  Description:  Gross Profit - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossProfitRevAndExpnssAmt 
 
     GrssPrftAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 10c(c)  Description:  Gross Profit - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossProfitAdjNetIncmAmt 
+    # Line number: Part I Line 10c(c)  Description:  Gross Profit - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/GrossProfitAdjNetIncmAmt 
 
     OthrIncmRvAndExpnssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 11(a)  Description:  Other Income - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherIncomeRevAndExpnssAmt 
+    # Line number: Part I Line 11(a)  Description:  Other Income - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherIncomeRevAndExpnssAmt 
 
     OthrIncmNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 11(b)  Description:  Other Income - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherIncomeNetInvstIncmAmt 
+    # Line number: Part I Line 11(b)  Description:  Other Income - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherIncomeNetInvstIncmAmt 
 
     OthrIncmAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 11(c)  Description:  Other Income - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherIncomeAdjNetIncmAmt 
+    # Line number: Part I Line 11(c)  Description:  Other Income - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherIncomeAdjNetIncmAmt 
 
     TtlRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12(a)  Description:  Total - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalRevAndExpnssAmt 
+    # Line number: Part I Line 12(a)  Description:  Total - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalRevAndExpnssAmt 
 
     TtlNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12(b)  Description:  Total - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalNetInvstIncmAmt 
+    # Line number: Part I Line 12(b)  Description:  Total - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalNetInvstIncmAmt 
 
     TtlAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12(c)  Description:  Total - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalAdjNetIncmAmt 
+    # Line number: Part I Line 12(c)  Description:  Total - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalAdjNetIncmAmt 
 
     CmpOfcrDrTrstRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 13(a)  Description:  Compensation of Officers, Directors, Trustees, etc. - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CompOfcrDirTrstRevAndExpnssAmt 
+    # Line number: Part I Line 13(a)  Description:  Compensation of Officers, Directors, Trustees, etc. - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CompOfcrDirTrstRevAndExpnssAmt 
 
     CmpOfcrDrTrstNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 13(b)  Description:  Compensation of Officers, Directors, Trustees, etc. - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CompOfcrDirTrstNetInvstIncmAmt 
+    # Line number: Part I Line 13(b)  Description:  Compensation of Officers, Directors, Trustees, etc. - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CompOfcrDirTrstNetInvstIncmAmt 
 
     CmpOfcrDrTrstAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 13(c)  Description:  Compensation of Officers, Directors, Trustees, etc. - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CompOfcrDirTrstAdjNetIncmAmt 
+    # Line number: Part I Line 13(c)  Description:  Compensation of Officers, Directors, Trustees, etc. - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CompOfcrDirTrstAdjNetIncmAmt 
 
     CmpOfcrDrTrstDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 13(d)  Description:  Compensation of Officers, Directors, Trustees, etc. - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CompOfcrDirTrstDsbrsChrtblAmt 
+    # Line number: Part I Line 13(d)  Description:  Compensation of Officers, Directors, Trustees, etc. - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/CompOfcrDirTrstDsbrsChrtblAmt 
 
     OthEmplSlrsWgsRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 14(a)  Description:  Other Employee Salaries and Wages - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OthEmplSlrsWgsRevAndExpnssAmt 
+    # Line number: Part I Line 14(a)  Description:  Other Employee Salaries and Wages - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OthEmplSlrsWgsRevAndExpnssAmt 
 
     OthEmplSlrsWgsNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 14(b)  Description:  Other Employee Salaries and Wages - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OthEmplSlrsWgsNetInvstIncmAmt 
+    # Line number: Part I Line 14(b)  Description:  Other Employee Salaries and Wages - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OthEmplSlrsWgsNetInvstIncmAmt 
 
     OthEmplSlrsWgsAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 14(c)  Description:  Other Employee Salaries and Wages - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OthEmplSlrsWgsAdjNetIncmAmt 
+    # Line number: Part I Line 14(c)  Description:  Other Employee Salaries and Wages - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OthEmplSlrsWgsAdjNetIncmAmt 
 
     OthEmplSlrsWgsDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 14(d)  Description:  Other Employee Salaries and Wages - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OthEmplSlrsWgsDsbrsChrtblAmt 
+    # Line number: Part I Line 14(d)  Description:  Other Employee Salaries and Wages - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OthEmplSlrsWgsDsbrsChrtblAmt 
 
     PnsnEmplBnftRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 15(a)  Description:  Pension Plans, Employee Benefits - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PensionEmplBnftRevAndExpnssAmt 
+    # Line number: Part I Line 15(a)  Description:  Pension Plans, Employee Benefits - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PensionEmplBnftRevAndExpnssAmt 
 
     PnsnEmplBnftNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 15(b)  Description:  Pension Plans, Employee Benefits - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PensionEmplBnftNetInvstIncmAmt 
+    # Line number: Part I Line 15(b)  Description:  Pension Plans, Employee Benefits - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PensionEmplBnftNetInvstIncmAmt 
 
     PnsnEmplBnftAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 15(c)  Description:  Pension Plans, Employee Benefits - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PensionEmplBnftAdjNetIncmAmt 
+    # Line number: Part I Line 15(c)  Description:  Pension Plans, Employee Benefits - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PensionEmplBnftAdjNetIncmAmt 
 
     PnsnEmplBnftDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 15(d)  Description:  Pension Plans, Employee Benefits - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PensionEmplBnftDsbrsChrtblAmt 
+    # Line number: Part I Line 15(d)  Description:  Pension Plans, Employee Benefits - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PensionEmplBnftDsbrsChrtblAmt 
 
     LglFsRvAndExpnssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 16a(a)  Description:  Legal Fees - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/LegalFeesRevAndExpnssAmt 
+    # Line number: Part I Line 16a(a)  Description:  Legal Fees - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/LegalFeesRevAndExpnssAmt 
 
     LglFsNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16a(b)  Description:  Legal Fees - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/LegalFeesNetInvstIncmAmt 
+    # Line number: Part I Line 16a(b)  Description:  Legal Fees - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/LegalFeesNetInvstIncmAmt 
 
     LglFsAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16a(c)  Description:  Legal Fees - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/LegalFeesAdjNetIncmAmt 
+    # Line number: Part I Line 16a(c)  Description:  Legal Fees - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/LegalFeesAdjNetIncmAmt 
 
     LglFsDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16a(d)  Description:  Legal Fees - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/LegalFeesDsbrsChrtblAmt 
+    # Line number: Part I Line 16a(d)  Description:  Legal Fees - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/LegalFeesDsbrsChrtblAmt 
 
     AccntngFsRvAndExpnssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 16b(a)  Description:  Accounting Fees - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AccountingFeesRevAndExpnssAmt 
+    # Line number: Part I Line 16b(a)  Description:  Accounting Fees - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AccountingFeesRevAndExpnssAmt 
 
     AccntngFsNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16b(b)  Description:  Accounting Fees - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AccountingFeesNetInvstIncmAmt 
+    # Line number: Part I Line 16b(b)  Description:  Accounting Fees - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AccountingFeesNetInvstIncmAmt 
 
     AccntngFsAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16b(c)  Description:  Accounting Fees - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AccountingFeesAdjNetIncmAmt 
+    # Line number: Part I Line 16b(c)  Description:  Accounting Fees - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AccountingFeesAdjNetIncmAmt 
 
     AccntngFsChrtblPrpsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16b(d)  Description:  Accounting Fees - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AccountingFeesChrtblPrpsAmt 
+    # Line number: Part I Line 16b(d)  Description:  Accounting Fees - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AccountingFeesChrtblPrpsAmt 
 
     OthrPrfFsRvAndExpnssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 16c(a)  Description:  Other Professional Fees - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherProfFeesRevAndExpnssAmt 
+    # Line number: Part I Line 16c(a)  Description:  Other Professional Fees - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherProfFeesRevAndExpnssAmt 
 
     OthrPrfFsNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16c(b)  Description:  Other Professional Fees - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherProfFeesNetInvstIncmAmt 
+    # Line number: Part I Line 16c(b)  Description:  Other Professional Fees - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherProfFeesNetInvstIncmAmt 
 
     OthrPrfFsAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16c(c)  Description:  Other Professional Fees - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherProfFeesAdjNetIncmAmt 
+    # Line number: Part I Line 16c(c)  Description:  Other Professional Fees - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherProfFeesAdjNetIncmAmt 
 
     OthrPrfFsDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 16c(d)  Description:  Other Professional Fees - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherProfFeesDsbrsChrtblAmt 
+    # Line number: Part I Line 16c(d)  Description:  Other Professional Fees - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherProfFeesDsbrsChrtblAmt 
 
     IntrstRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 17(a)  Description:  Interest - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestRevAndExpnssAmt 
+    # Line number: Part I Line 17(a)  Description:  Interest - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestRevAndExpnssAmt 
 
     IntrstNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 17(b)  Description:  Interest - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestNetInvstIncmAmt 
+    # Line number: Part I Line 17(b)  Description:  Interest - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestNetInvstIncmAmt 
 
     IntrstAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 17(c)  Description:  Interest - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestAdjNetIncmAmt 
+    # Line number: Part I Line 17(c)  Description:  Interest - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestAdjNetIncmAmt 
 
     IntrstDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 17(d)  Description:  Interest - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestDsbrsChrtblAmt 
+    # Line number: Part I Line 17(d)  Description:  Interest - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/InterestDsbrsChrtblAmt 
 
     TxsRvAndExpnssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 18(a)  Description:  Taxes - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TaxesRevAndExpnssAmt 
+    # Line number: Part I Line 18(a)  Description:  Taxes - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TaxesRevAndExpnssAmt 
 
     TxsNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 18(b)  Description:  Taxes - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TaxesNetInvstIncmAmt 
+    # Line number: Part I Line 18(b)  Description:  Taxes - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TaxesNetInvstIncmAmt 
 
     TxsAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 18(c)  Description:  Taxes - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TaxesAdjNetIncmAmt 
+    # Line number: Part I Line 18(c)  Description:  Taxes - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TaxesAdjNetIncmAmt 
 
     TxsDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 18(d)  Description:  Taxes - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TaxesDsbrsChrtblAmt 
+    # Line number: Part I Line 18(d)  Description:  Taxes - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TaxesDsbrsChrtblAmt 
 
     DprcAndDpltnRvAndExpnssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 19(a)  Description:  Depreciation and Depletion - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DeprecAndDpltnRevAndExpnssAmt 
+    # Line number: Part I Line 19(a)  Description:  Depreciation and Depletion - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DeprecAndDpltnRevAndExpnssAmt 
 
     DprcAndDpltnNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 19(b)  Description:  Depreciation and Depletion - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DeprecAndDpltnNetInvstIncmAmt 
+    # Line number: Part I Line 19(b)  Description:  Depreciation and Depletion - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DeprecAndDpltnNetInvstIncmAmt 
 
     DprcAndDpltnAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 19(c)  Description:  Depreciation and Depletion - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DeprecAndDpltnAdjNetIncmAmt 
+    # Line number: Part I Line 19(c)  Description:  Depreciation and Depletion - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/DeprecAndDpltnAdjNetIncmAmt 
 
     OccpncyRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 20(a)  Description:  Occupancy - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OccupancyRevAndExpnssAmt 
+    # Line number: Part I Line 20(a)  Description:  Occupancy - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OccupancyRevAndExpnssAmt 
 
     OccpncyNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 20(b)  Description:  Occupancy - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OccupancyNetInvstIncmAmt 
+    # Line number: Part I Line 20(b)  Description:  Occupancy - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OccupancyNetInvstIncmAmt 
 
     OccpncyAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 20(c)  Description:  Occupancy - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OccupancyAdjNetIncmAmt 
+    # Line number: Part I Line 20(c)  Description:  Occupancy - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OccupancyAdjNetIncmAmt 
 
     OccpncyDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 20(d)  Description:  Occupancy - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OccupancyDsbrsChrtblAmt 
+    # Line number: Part I Line 20(d)  Description:  Occupancy - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OccupancyDsbrsChrtblAmt 
 
     TrvCnfMtngRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 21(a)  Description:  Travel, Conferences, and Meetings - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TravConfMeetingRevAndExpnssAmt 
+    # Line number: Part I Line 21(a)  Description:  Travel, Conferences, and Meetings - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TravConfMeetingRevAndExpnssAmt 
 
     TrvCnfMtngNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 21(b)  Description:  Travel, Conferences, and Meetings - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TravConfMeetingNetInvstIncmAmt 
+    # Line number: Part I Line 21(b)  Description:  Travel, Conferences, and Meetings - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TravConfMeetingNetInvstIncmAmt 
 
     TrvCnfMtngAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 21(c)  Description:  Travel, Conferences, and Meetings - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TravConfMeetingAdjNetIncmAmt 
+    # Line number: Part I Line 21(c)  Description:  Travel, Conferences, and Meetings - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TravConfMeetingAdjNetIncmAmt 
 
     TrvCnfMtngDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 21(d)  Description:  Travel, Conferences, and Meetings - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TravConfMeetingDsbrsChrtblAmt 
+    # Line number: Part I Line 21(d)  Description:  Travel, Conferences, and Meetings - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TravConfMeetingDsbrsChrtblAmt 
 
     PrntngAndPbRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 22(a)  Description:  Printing and Publications - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PrintingAndPubRevAndExpnssAmt 
+    # Line number: Part I Line 22(a)  Description:  Printing and Publications - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PrintingAndPubRevAndExpnssAmt 
 
     PrntngAndPbNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 22(b)  Description:  Printing and Publications - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PrintingAndPubNetInvstIncmAmt 
+    # Line number: Part I Line 22(b)  Description:  Printing and Publications - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PrintingAndPubNetInvstIncmAmt 
 
     PrntngAndPbAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 22(c)  Description:  Printing and Publications - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PrintingAndPubAdjNetIncmAmt 
+    # Line number: Part I Line 22(c)  Description:  Printing and Publications - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PrintingAndPubAdjNetIncmAmt 
 
     PrntngAndPbDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 22(d)  Description:  Printing and Publications - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PrintingAndPubDsbrsChrtblAmt 
+    # Line number: Part I Line 22(d)  Description:  Printing and Publications - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/PrintingAndPubDsbrsChrtblAmt 
 
     OthrExpnssRvAndExpnssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 23(a)  Description:  Other Expenses - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherExpensesRevAndExpnssAmt 
+    # Line number: Part I Line 23(a)  Description:  Other Expenses - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherExpensesRevAndExpnssAmt 
 
     OthrExpnssNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 23(b)  Description:  Other Expenses - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherExpensesNetInvstIncmAmt 
+    # Line number: Part I Line 23(b)  Description:  Other Expenses - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherExpensesNetInvstIncmAmt 
 
     OthrExpnssAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 23(c)  Description:  Other Expenses - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherExpensesAdjNetIncmAmt 
+    # Line number: Part I Line 23(c)  Description:  Other Expenses - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherExpensesAdjNetIncmAmt 
 
     OthrExpnssDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 23(d)  Description:  Other Expenses - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherExpensesDsbrsChrtblAmt 
+    # Line number: Part I Line 23(d)  Description:  Other Expenses - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/OtherExpensesDsbrsChrtblAmt 
 
     TtOprExpnssRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 24(a)  Description:  Total Operating and Administrative Expenses - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotOprExpensesRevAndExpnssAmt 
+    # Line number: Part I Line 24(a)  Description:  Total Operating and Administrative Expenses - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotOprExpensesRevAndExpnssAmt 
 
     TtOprExpnssNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 24(b)  Description:  Total Operating and Administrative Expenses - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotOprExpensesNetInvstIncmAmt 
+    # Line number: Part I Line 24(b)  Description:  Total Operating and Administrative Expenses - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotOprExpensesNetInvstIncmAmt 
 
     TtOprExpnssAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 24(c)  Description:  Total Operating and Administrative Expenses - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotOprExpensesAdjNetIncmAmt 
+    # Line number: Part I Line 24(c)  Description:  Total Operating and Administrative Expenses - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotOprExpensesAdjNetIncmAmt 
 
     TtOprExpnssDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 24(d)  Description:  Total Operating and Administrative Expenses - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotOprExpensesDsbrsChrtblAmt 
+    # Line number: Part I Line 24(d)  Description:  Total Operating and Administrative Expenses - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotOprExpensesDsbrsChrtblAmt 
 
     CntrPdRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 25(a)  Description:  Contributions, Gifts, Grants Paid - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ContriPaidRevAndExpnssAmt 
+    # Line number: Part I Line 25(a)  Description:  Contributions, Gifts, Grants Paid - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ContriPaidRevAndExpnssAmt 
 
     CntrPdDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 25(d)  Description:  Contributions, Gifts, Grants Paid - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ContriPaidDsbrsChrtblAmt 
+    # Line number: Part I Line 25(d)  Description:  Contributions, Gifts, Grants Paid - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ContriPaidDsbrsChrtblAmt 
 
     TtlExpnssRvAndExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 26(a)  Description:  Total Expenses and Disbursements - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalExpensesRevAndExpnssAmt 
+    # Line number: Part I Line 26(a)  Description:  Total Expenses and Disbursements - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalExpensesRevAndExpnssAmt 
 
     TtlExpnssNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 26(b)  Description:  Total Expenses and Disbursements - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalExpensesNetInvstIncmAmt 
+    # Line number: Part I Line 26(b)  Description:  Total Expenses and Disbursements - Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalExpensesNetInvstIncmAmt 
 
     TtlExpnssAdjNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 26(c)  Description:  Total Expenses and Disbursements - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalExpensesAdjNetIncmAmt 
+    # Line number: Part I Line 26(c)  Description:  Total Expenses and Disbursements - Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalExpensesAdjNetIncmAmt 
 
     TtlExpnssDsbrsChrtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 26(d)  Description:  Total Expenses and Disbursements - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalExpensesDsbrsChrtblAmt 
+    # Line number: Part I Line 26(d)  Description:  Total Expenses and Disbursements - Disbursements for Charitable Purposes  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/TotalExpensesDsbrsChrtblAmt 
 
     ExcssRvnOvrExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 27a(a)  Description:  Excess of Revenue Over Expenses and Disbursements - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ExcessRevenueOverExpensesAmt 
+    # Line number: Part I Line 27a(a)  Description:  Excess of Revenue Over Expenses and Disbursements - Revenue and Expenses per Books  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/ExcessRevenueOverExpensesAmt 
 
     NtInvstmntIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 27b(b)  Description:  Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/NetInvestmentIncomeAmt 
+    # Line number: Part I Line 27b(b)  Description:  Net Investment Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/NetInvestmentIncomeAmt 
 
     AdjstdNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 27c(c)  Description:  Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AdjustedNetIncomeAmt 
+    # Line number: Part I Line 27c(c)  Description:  Adjusted Net Income  xpath: /IRS990PF/AnalysisOfRevenueAndExpenses/AdjustedNetIncomeAmt 
 
 #######
 #
@@ -2976,292 +3212,292 @@ class pf_part_ii(models.Model):
     # xpath: /IRS990PF/Form990PFBalanceSheetsGrp 
 
     CshBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 1(a)  Description:  Cash - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CashBOYAmt 
+    # Line number: Part II Line 1(a)  Description:  Cash - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CashBOYAmt 
 
     CshEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 1(b)  Description:  Cash - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CashEOYAmt 
+    # Line number: Part II Line 1(b)  Description:  Cash - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CashEOYAmt 
 
     CshEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 1(c)  Description:  Cash - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CashEOYFMVAmt 
+    # Line number: Part II Line 1(c)  Description:  Cash - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CashEOYFMVAmt 
 
     SvAndTmpCshInvstBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 2(a)  Description:  Savings and Temporary Cash Investments - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/SavAndTempCashInvstBOYAmt 
+    # Line number: Part II Line 2(a)  Description:  Savings and Temporary Cash Investments - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/SavAndTempCashInvstBOYAmt 
 
     SvAndTmpCshInvstEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 2(b)  Description:  Savings and Temporary Cash Investments - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/SavAndTempCashInvstEOYAmt 
+    # Line number: Part II Line 2(b)  Description:  Savings and Temporary Cash Investments - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/SavAndTempCashInvstEOYAmt 
 
     SvAndTmpCshInvstEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 2(c)  Description:  Savings and Temporary Cash Investments - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/SavAndTempCashInvstEOYFMVAmt 
+    # Line number: Part II Line 2(c)  Description:  Savings and Temporary Cash Investments - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/SavAndTempCashInvstEOYFMVAmt 
 
     AcctRcvblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 3  Description:  Accounts Receivable  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblAmt 
+    # Line number: Part II Line 3  Description:  Accounts Receivable  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblAmt 
 
     AcctRcvblAllwncDbtflAcctAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 3  Description:  Allowance for Doubtful Accounts (for Accounts Receivable)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblAllwncDbtflAcctAmt 
+    # Line number: Part II Line 3  Description:  Allowance for Doubtful Accounts (for Accounts Receivable)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblAllwncDbtflAcctAmt 
 
     AcctRcvblBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 3(a)  Description:  Accounts Receivable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblBOYAmt 
+    # Line number: Part II Line 3(a)  Description:  Accounts Receivable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblBOYAmt 
 
     AcctRcvblEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 3(b)  Description:  Accounts Receivable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblEOYAmt 
+    # Line number: Part II Line 3(b)  Description:  Accounts Receivable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblEOYAmt 
 
     AcctRcvblEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 3(c)  Description:  Accounts Receivable - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblEOYFMVAmt 
+    # Line number: Part II Line 3(c)  Description:  Accounts Receivable - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AcctRcvblEOYFMVAmt 
 
     PldgsRcvblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 4  Description:  Pledges Receivable  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblAmt 
+    # Line number: Part II Line 4  Description:  Pledges Receivable  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblAmt 
 
     PldgsRcvblAllwncDbtflAcctAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 4  Description:  Allowance for Doubtful Accounts (for Pledges Receivable)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblAllwncDbtflAcctAmt 
+    # Line number: Part II Line 4  Description:  Allowance for Doubtful Accounts (for Pledges Receivable)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblAllwncDbtflAcctAmt 
 
     PldgsRcvblBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 4(a)  Description:  Pledges Receivable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblBOYAmt 
+    # Line number: Part II Line 4(a)  Description:  Pledges Receivable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblBOYAmt 
 
     PldgsRcvblEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 4(b)  Description:  Pledges Receivable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblEOYAmt 
+    # Line number: Part II Line 4(b)  Description:  Pledges Receivable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblEOYAmt 
 
     PldgsRcvblEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 4(c)  Description:  Pledges Receivable - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblEOYFMVAmt 
+    # Line number: Part II Line 4(c)  Description:  Pledges Receivable - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PledgesRcvblEOYFMVAmt 
 
     GrntsRcvblBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 5(a)  Description:  Grants Receivable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsReceivableBOYAmt 
+    # Line number: Part II Line 5(a)  Description:  Grants Receivable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsReceivableBOYAmt 
 
     GrntsRcvblEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 5(b)  Description:  Grants Receivable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsReceivableEOYAmt 
+    # Line number: Part II Line 5(b)  Description:  Grants Receivable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsReceivableEOYAmt 
 
     GrntsRcvblEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 5(c)  Description:  Grants Receivable - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsReceivableEOYFMVAmt 
+    # Line number: Part II Line 5(c)  Description:  Grants Receivable - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsReceivableEOYFMVAmt 
 
     RcvblFrmOffcrsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 6(a)  Description:  Receivables from Officers - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RcvblFromOfficersBOYAmt 
+    # Line number: Part II Line 6(a)  Description:  Receivables from Officers - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RcvblFromOfficersBOYAmt 
 
     RcvblFrmOffcrsEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 6(b)  Description:  Receivables from Officers - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RcvblFromOfficersEOYAmt 
+    # Line number: Part II Line 6(b)  Description:  Receivables from Officers - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RcvblFromOfficersEOYAmt 
 
     RcvblFrmOffcrsEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 6(c)  Description:  Receivables from Officers - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RcvblFromOfficersEOYFMVAmt 
+    # Line number: Part II Line 6(c)  Description:  Receivables from Officers - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RcvblFromOfficersEOYFMVAmt 
 
     OthrNtsAndLnsRcvblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 7  Description:  Other Notes and Loans Receivable  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherNtsAndLoansRcvblAmt 
+    # Line number: Part II Line 7  Description:  Other Notes and Loans Receivable  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherNtsAndLoansRcvblAmt 
 
     OthrRcvblAllwncDbtflAcctAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 7  Description:  Allowance for Doubtful Accounts (for Other Notes and Loans Receivable)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherRcvblAllwncDbtflAcctAmt 
+    # Line number: Part II Line 7  Description:  Allowance for Doubtful Accounts (for Other Notes and Loans Receivable)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherRcvblAllwncDbtflAcctAmt 
 
     OthrNtsAndLnsRcvblBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 7(a)  Description:  Other Notes and Loans Receivable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherNtsAndLoansRcvblBOYAmt 
+    # Line number: Part II Line 7(a)  Description:  Other Notes and Loans Receivable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherNtsAndLoansRcvblBOYAmt 
 
     OthrNtsAndLnsRcvblEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 7(b)  Description:  Other Notes and Loans Receivable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherNtsAndLoansRcvblEOYAmt 
+    # Line number: Part II Line 7(b)  Description:  Other Notes and Loans Receivable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherNtsAndLoansRcvblEOYAmt 
 
     OthrNtsAndLnsRcvblEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 7(c)  Description:  Other Notes and Loans Receivable - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherNtsAndLoansRcvblEOYFMVAmt 
+    # Line number: Part II Line 7(c)  Description:  Other Notes and Loans Receivable - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherNtsAndLoansRcvblEOYFMVAmt 
 
     InvntrsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 8(a)  Description:  Inventories for Sale or Use - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InventoriesBOYAmt 
+    # Line number: Part II Line 8(a)  Description:  Inventories for Sale or Use - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InventoriesBOYAmt 
 
     InvntrsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 8(b)  Description:  Inventories for Sale or Use - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InventoriesEOYAmt 
+    # Line number: Part II Line 8(b)  Description:  Inventories for Sale or Use - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InventoriesEOYAmt 
 
     InvntrsEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 8(c)  Description:  Inventories for Sale or Use - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InventoriesEOYFMVAmt 
+    # Line number: Part II Line 8(c)  Description:  Inventories for Sale or Use - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InventoriesEOYFMVAmt 
 
     PrpdExpnssBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 9(a)  Description:  Prepaid Expenses - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PrepaidExpensesBOYAmt 
+    # Line number: Part II Line 9(a)  Description:  Prepaid Expenses - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PrepaidExpensesBOYAmt 
 
     PrpdExpnssEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 9(b)  Description:  Prepaid Expenses - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PrepaidExpensesEOYAmt 
+    # Line number: Part II Line 9(b)  Description:  Prepaid Expenses - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PrepaidExpensesEOYAmt 
 
     PrpdExpnssEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 9(c)  Description:  Prepaid Expenses - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PrepaidExpensesEOYFMVAmt 
+    # Line number: Part II Line 9(c)  Description:  Prepaid Expenses - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PrepaidExpensesEOYFMVAmt 
 
     USGvrnmntOblgtnsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 10a(a)  Description:  Investments, Government Obligations - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/USGovernmentObligationsBOYAmt 
+    # Line number: Part II Line 10a(a)  Description:  Investments, Government Obligations - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/USGovernmentObligationsBOYAmt 
 
     USGvrnmntOblgtnsEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 10a(b)  Description:  Investments, Government Obligations - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/USGovernmentObligationsEOYAmt 
+    # Line number: Part II Line 10a(b)  Description:  Investments, Government Obligations - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/USGovernmentObligationsEOYAmt 
 
     USGvtOblgtnsEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 10a(c)  Description:  Investments, Government Obligations - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/USGovtObligationsEOYFMVAmt 
+    # Line number: Part II Line 10a(c)  Description:  Investments, Government Obligations - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/USGovtObligationsEOYFMVAmt 
 
     CrprtStckBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 10b(a)  Description:  Investments, Corporate Stock - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateStockBOYAmt 
+    # Line number: Part II Line 10b(a)  Description:  Investments, Corporate Stock - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateStockBOYAmt 
 
     CrprtStckEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 10b(b)  Description:  Investments, Corporate Stock - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateStockEOYAmt 
+    # Line number: Part II Line 10b(b)  Description:  Investments, Corporate Stock - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateStockEOYAmt 
 
     CrprtStckEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 10b(c)  Description:  Investments, Corporate Stock - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateStockEOYFMVAmt 
+    # Line number: Part II Line 10b(c)  Description:  Investments, Corporate Stock - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateStockEOYFMVAmt 
 
     CrprtBndsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 10c(a)  Description:  Investments, Corporate Bonds - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateBondsBOYAmt 
+    # Line number: Part II Line 10c(a)  Description:  Investments, Corporate Bonds - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateBondsBOYAmt 
 
     CrprtBndsEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 10c(b)  Description:  Investments, Corporate Bonds - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateBondsEOYAmt 
+    # Line number: Part II Line 10c(b)  Description:  Investments, Corporate Bonds - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateBondsEOYAmt 
 
     CrprtBndsEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 10c(c)  Description:  Investments, Corporate Bonds - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateBondsEOYFMVAmt 
+    # Line number: Part II Line 10c(c)  Description:  Investments, Corporate Bonds - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CorporateBondsEOYFMVAmt 
 
     InvstLndCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 11  Description:  Investments, Land, Etc. Basis  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InvstLandCostOrOtherBasisAmt 
+    # Line number: Part II Line 11  Description:  Investments, Land, Etc. Basis  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InvstLandCostOrOtherBasisAmt 
 
     InvstLndAccmDprctnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 11  Description:  Accumulated Depreciation (for Investments, Land, Etc.)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InvstLandAccumDepreciationAmt 
+    # Line number: Part II Line 11  Description:  Accumulated Depreciation (for Investments, Land, Etc.)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/InvstLandAccumDepreciationAmt 
 
     LndBldgInvstmntsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 11(a)  Description:  Investments, Land, Etc. - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgInvestmentsBOYAmt 
+    # Line number: Part II Line 11(a)  Description:  Investments, Land, Etc. - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgInvestmentsBOYAmt 
 
     LndBldgInvstmntsEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 11(b)  Description:  Investments, Land, Etc. - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgInvestmentsEOYAmt 
+    # Line number: Part II Line 11(b)  Description:  Investments, Land, Etc. - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgInvestmentsEOYAmt 
 
     LndBldgInvstmntsEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 11(c)  Description:  Investments, Land, Etc. - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgInvestmentsEOYFMVAmt 
+    # Line number: Part II Line 11(c)  Description:  Investments, Land, Etc. - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgInvestmentsEOYFMVAmt 
 
     MrtggLnsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 12(a)  Description:  Investments, Mortgage Loans - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgageLoansBOYAmt 
+    # Line number: Part II Line 12(a)  Description:  Investments, Mortgage Loans - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgageLoansBOYAmt 
 
     MrtggLnsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 12(b)  Description:  Investments, Mortgage Loans - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgageLoansEOYAmt 
+    # Line number: Part II Line 12(b)  Description:  Investments, Mortgage Loans - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgageLoansEOYAmt 
 
     MrtggLnsEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 12(c)  Description:  Investments, Mortgage Loans - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgageLoansEOYFMVAmt 
+    # Line number: Part II Line 12(c)  Description:  Investments, Mortgage Loans - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgageLoansEOYFMVAmt 
 
     OthrInvstmntsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 13(a)  Description:  Investments, Other - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherInvestmentsBOYAmt 
+    # Line number: Part II Line 13(a)  Description:  Investments, Other - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherInvestmentsBOYAmt 
 
     OthrInvstmntsEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 13(b)  Description:  Investments, Other - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherInvestmentsEOYAmt 
+    # Line number: Part II Line 13(b)  Description:  Investments, Other - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherInvestmentsEOYAmt 
 
     OthrInvstmntsEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 13(c)  Description:  Investments, Other - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherInvestmentsEOYFMVAmt 
+    # Line number: Part II Line 13(c)  Description:  Investments, Other - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherInvestmentsEOYFMVAmt 
 
     LndBldgEqpCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 14  Description:  Land, Buildings, and Equipment - Basis  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgEquipCostOrOtherBssAmt 
+    # Line number: Part II Line 14  Description:  Land, Buildings, and Equipment - Basis  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgEquipCostOrOtherBssAmt 
 
     LndBldgEqpAccmDprcAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 14  Description:  Accumulated Depreciation (for Land, Buildings, and Equipment)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgEquipAccumDeprecAmt 
+    # Line number: Part II Line 14  Description:  Accumulated Depreciation (for Land, Buildings, and Equipment)  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBldgEquipAccumDeprecAmt 
 
     LndBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 14(a)  Description:  Land, Buildings, and Equipment - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBOYAmt 
+    # Line number: Part II Line 14(a)  Description:  Land, Buildings, and Equipment - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandBOYAmt 
 
     LndEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 14(b)  Description:  Land, Buildings, and Equipment - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandEOYAmt 
+    # Line number: Part II Line 14(b)  Description:  Land, Buildings, and Equipment - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandEOYAmt 
 
     LndEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 14(c)  Description:  Land, Buildings, and Equipment - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandEOYFMVAmt 
+    # Line number: Part II Line 14(c)  Description:  Land, Buildings, and Equipment - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LandEOYFMVAmt 
 
     OthrAsstsBOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 15(a)  Description:  Other Assets - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherAssetsBOYAmt 
+    # Line number: Part II Line 15(a)  Description:  Other Assets - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherAssetsBOYAmt 
 
     OthrAsstsEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 15(b)  Description:  Other Assets - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherAssetsEOYAmt 
+    # Line number: Part II Line 15(b)  Description:  Other Assets - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherAssetsEOYAmt 
 
     OthrAsstsEOYFMVAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 15(c)  Description:  Other Assets - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherAssetsEOYFMVAmt 
+    # Line number: Part II Line 15(c)  Description:  Other Assets - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherAssetsEOYFMVAmt 
 
     TtlAsstsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 16(a)  Description:  Total Assets - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalAssetsBOYAmt 
+    # Line number: Part II Line 16(a)  Description:  Total Assets - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalAssetsBOYAmt 
 
     TtlAsstsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 16(b)  Description:  Total Assets - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalAssetsEOYAmt 
+    # Line number: Part II Line 16(b)  Description:  Total Assets - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalAssetsEOYAmt 
 
     TtlAsstsEOYFMVAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 16(c)  Description:  Total Assets - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalAssetsEOYFMVAmt 
+    # Line number: Part II Line 16(c)  Description:  Total Assets - End of Year - Fair Market Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalAssetsEOYFMVAmt 
 
     AccntsPyblBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 17(a)  Description:  Accounts Payable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AccountsPayableBOYAmt 
+    # Line number: Part II Line 17(a)  Description:  Accounts Payable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AccountsPayableBOYAmt 
 
     AccntsPyblEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 17(b)  Description:  Accounts Payable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AccountsPayableEOYAmt 
+    # Line number: Part II Line 17(b)  Description:  Accounts Payable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AccountsPayableEOYAmt 
 
     GrntsPyblBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 18(a)  Description:  Grants Payable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsPayableBOYAmt 
+    # Line number: Part II Line 18(a)  Description:  Grants Payable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsPayableBOYAmt 
 
     GrntsPyblEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 18(b)  Description:  Grants Payable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsPayableEOYAmt 
+    # Line number: Part II Line 18(b)  Description:  Grants Payable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/GrantsPayableEOYAmt 
 
     DfrrdRvnBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 19(a)  Description:  Deferred Revenue - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/DeferredRevenueBOYAmt 
+    # Line number: Part II Line 19(a)  Description:  Deferred Revenue - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/DeferredRevenueBOYAmt 
 
     DfrrdRvnEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 19(b)  Description:  Deferred Revenue - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/DeferredRevenueEOYAmt 
+    # Line number: Part II Line 19(b)  Description:  Deferred Revenue - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/DeferredRevenueEOYAmt 
 
     LnsFrmOffcrsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 20(a)  Description:  Loans from Officers - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LoansFromOfficersBOYAmt 
+    # Line number: Part II Line 20(a)  Description:  Loans from Officers - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LoansFromOfficersBOYAmt 
 
     LnsFrmOffcrsEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 20(b)  Description:  Loans from Officers - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LoansFromOfficersEOYAmt 
+    # Line number: Part II Line 20(b)  Description:  Loans from Officers - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/LoansFromOfficersEOYAmt 
 
     MrtggsAndNtsPyblBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 21(a)  Description:  Mortgages and Notes Payable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgagesAndNotesPayableBOYAmt 
+    # Line number: Part II Line 21(a)  Description:  Mortgages and Notes Payable - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgagesAndNotesPayableBOYAmt 
 
     MrtggsAndNtsPyblEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 21(b)  Description:  Mortgages and Notes Payable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgagesAndNotesPayableEOYAmt 
+    # Line number: Part II Line 21(b)  Description:  Mortgages and Notes Payable - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/MortgagesAndNotesPayableEOYAmt 
 
     OthrLbltsBOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 22(a)  Description:  Other Liabilities - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherLiabilitiesBOYAmt 
+    # Line number: Part II Line 22(a)  Description:  Other Liabilities - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherLiabilitiesBOYAmt 
 
     OthrLbltsEOYAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part II Line 22(b)  Description:  Other Liabilities - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherLiabilitiesEOYAmt 
+    # Line number: Part II Line 22(b)  Description:  Other Liabilities - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OtherLiabilitiesEOYAmt 
 
     TtlLbltsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 23(a)  Description:  Total Liabilities - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalLiabilitiesBOYAmt 
+    # Line number: Part II Line 23(a)  Description:  Total Liabilities - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalLiabilitiesBOYAmt 
 
     TtlLbltsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 23(b)  Description:  Total Liabilities - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalLiabilitiesEOYAmt 
+    # Line number: Part II Line 23(b)  Description:  Total Liabilities - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalLiabilitiesEOYAmt 
 
     OrgnztnFllwsSFAS117Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  Organizations That Follow SFAS 117  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OrganizationFollowsSFAS117Ind 
+    # Description: Organizations That Follow SFAS 117  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OrganizationFollowsSFAS117Ind 
 
     UnrstrctdBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 24(a)  Description:  Unrestricted - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/UnrestrictedBOYAmt 
+    # Line number: Part II Line 24(a)  Description:  Unrestricted - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/UnrestrictedBOYAmt 
 
     UnrstrctdEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 24(b)  Description:  Unrestricted - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/UnrestrictedEOYAmt 
+    # Line number: Part II Line 24(b)  Description:  Unrestricted - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/UnrestrictedEOYAmt 
 
     TmprrlyRstrctdBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 25(a)  Description:  Temporarily Restricted - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TemporarilyRestrictedBOYAmt 
+    # Line number: Part II Line 25(a)  Description:  Temporarily Restricted - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TemporarilyRestrictedBOYAmt 
 
     TmprrlyRstrctdEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 25(b)  Description:  Temporarily Restricted - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TemporarilyRestrictedEOYAmt 
+    # Line number: Part II Line 25(b)  Description:  Temporarily Restricted - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TemporarilyRestrictedEOYAmt 
 
     PrmnntlyRstrctdBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 26(a)  Description:  Permanently Restricted - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PermanentlyRestrictedBOYAmt 
+    # Line number: Part II Line 26(a)  Description:  Permanently Restricted - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PermanentlyRestrictedBOYAmt 
 
     PrmnntlyRstrctdEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 26(b)  Description:  Permanently Restricted - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PermanentlyRestrictedEOYAmt 
+    # Line number: Part II Line 26(b)  Description:  Permanently Restricted - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/PermanentlyRestrictedEOYAmt 
 
     OrgDsNtFllwSFAS117Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  Organizations That Do Not Follow SFAS 117  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OrgDoesNotFollowSFAS117Ind 
+    # Description: Organizations That Do Not Follow SFAS 117  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/OrgDoesNotFollowSFAS117Ind 
 
     CptlStckBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 27(a)  Description:  Capital Stock - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CapitalStockBOYAmt 
+    # Line number: Part II Line 27(a)  Description:  Capital Stock - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CapitalStockBOYAmt 
 
     CptlStckEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 27(b)  Description:  Capital Stock - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CapitalStockEOYAmt 
+    # Line number: Part II Line 27(b)  Description:  Capital Stock - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/CapitalStockEOYAmt 
 
     AddtnlPdInCptlBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 28(a)  Description:  Paid-in or Capital Surplus - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AdditionalPaidInCapitalBOYAmt 
+    # Line number: Part II Line 28(a)  Description:  Paid-in or Capital Surplus - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AdditionalPaidInCapitalBOYAmt 
 
     AddtnlPdInCptlEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 28(b)  Description:  Paid-in or Capital Surplus - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AdditionalPaidInCapitalEOYAmt 
+    # Line number: Part II Line 28(b)  Description:  Paid-in or Capital Surplus - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/AdditionalPaidInCapitalEOYAmt 
 
     RtndErnngBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 29(a)  Description:  Retained Earnings - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RetainedEarningBOYAmt 
+    # Line number: Part II Line 29(a)  Description:  Retained Earnings - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RetainedEarningBOYAmt 
 
     RtndErnngEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 29(b)  Description:  Retained Earnings - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RetainedEarningEOYAmt 
+    # Line number: Part II Line 29(b)  Description:  Retained Earnings - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/RetainedEarningEOYAmt 
 
     TtNtAstOrFndBlncsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 30(a)  Description:  Total Net Assets or Fund Balances - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotNetAstOrFundBalancesBOYAmt 
+    # Line number: Part II Line 30(a)  Description:  Total Net Assets or Fund Balances - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotNetAstOrFundBalancesBOYAmt 
 
     TtNtAstOrFndBlncsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 30(b)  Description:  Total Net Assets or Fund Balances - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotNetAstOrFundBalancesEOYAmt 
+    # Line number: Part II Line 30(b)  Description:  Total Net Assets or Fund Balances - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotNetAstOrFundBalancesEOYAmt 
 
     TtlLbltsNtAstBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 31(a)  Description:  Total Liabilities and Net Assets - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalLiabilitiesNetAstBOYAmt 
+    # Line number: Part II Line 31(a)  Description:  Total Liabilities and Net Assets - Beginning of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalLiabilitiesNetAstBOYAmt 
 
     TtlLbltsNtAstEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 31(b)  Description:  Total Liabilities and Net Assets - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalLiabilitiesNetAstEOYAmt 
+    # Line number: Part II Line 31(b)  Description:  Total Liabilities and Net Assets - End of Year - Book Value  xpath: /IRS990PF/Form990PFBalanceSheetsGrp/TotalLiabilitiesNetAstEOYAmt 
 
 #######
 #
@@ -3277,22 +3513,22 @@ class pf_part_iii(models.Model):
     # xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp 
 
     TtNtAstOrFndBlncsBOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 1  Description:  Total Net Assets or Fund Balances at Beginning of Year  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/TotNetAstOrFundBalancesBOYAmt 
+    # Line number: Part III Line 1  Description:  Total Net Assets or Fund Balances at Beginning of Year  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/TotNetAstOrFundBalancesBOYAmt 
 
     ExcssRvnOvrExpnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 2  Description:  Excess of Revenue Over Expenses and Disbursements - Revenue and Expenses per Books  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/ExcessRevenueOverExpensesAmt 
+    # Line number: Part III Line 2  Description:  Excess of Revenue Over Expenses and Disbursements - Revenue and Expenses per Books  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/ExcessRevenueOverExpensesAmt 
 
     OthrIncrssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 3  Description:  Other Increases  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/OtherIncreasesAmt 
+    # Line number: Part III Line 3  Description:  Other Increases  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/OtherIncreasesAmt 
 
     SbttlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 4  Description:  Subtotal  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/SubtotalAmt 
+    # Line number: Part III Line 4  Description:  Subtotal  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/SubtotalAmt 
 
     OthrDcrssAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 5  Description:  Other Decreases  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/OtherDecreasesAmt 
+    # Line number: Part III Line 5  Description:  Other Decreases  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/OtherDecreasesAmt 
 
     TtNtAstOrFndBlncsEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 6  Description:  Total Net Assets or Fund Balances at End of Year  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/TotNetAstOrFundBalancesEOYAmt 
+    # Line number: Part III Line 6  Description:  Total Net Assets or Fund Balances at End of Year  xpath: /IRS990PF/ChgInNetAssetsFundBalancesGrp/TotNetAstOrFundBalancesEOYAmt 
 
 #######
 #
@@ -3308,10 +3544,10 @@ class pf_part_iv(models.Model):
     # xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail 
 
     CptlGnNtIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 2  Description:  Capital Gain Net Income  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapitalGainNetIncomeAmt 
+    # Line number: Part IV Line 2  Description:  Capital Gain Net Income  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapitalGainNetIncomeAmt 
 
     NtShrtTrmCptlGnLssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 3  Description:  Net Short-Term Capital Gain or Loss  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/NetShortTermCapitalGainLossAmt 
+    # Line number: Part IV Line 3  Description:  Net Short-Term Capital Gain or Loss  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/NetShortTermCapitalGainLossAmt 
 
 #######
 #
@@ -3327,73 +3563,73 @@ class pf_part_v(models.Model):
     # xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp 
 
     LblSctn4942TxInd = models.CharField(null=True, blank=True, max_length=5)
-    # Description:  Liable for 4942 Tax?  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/LiableSection4942TaxInd 
+    # Description: Liable for 4942 Tax?  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/LiableSection4942TaxInd 
 
     AdjstdQlfyDstrYr1Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(b), row 1  Description:  Qualifying Distributions - Year 1  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr1Amt 
+    # Line number: Part V Line 1(b), row 1  Description: Qualifying Distributions - Year 1  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr1Amt 
 
     NtVlNnchrtblAsstsYr1Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(c), row 1  Description:  Noncharitable Assets - Year 1  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr1Amt 
+    # Line number: Part V Line 1(c), row 1  Description: Noncharitable Assets - Year 1  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr1Amt 
 
     DstrbtnYr1Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
-    # Line number:  Part V Line 1(d), row 1  Description:  Distribution Ratio - Year 1  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr1Rt 
+    # Line number: Part V Line 1(d), row 1  Description: Distribution Ratio - Year 1  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr1Rt 
 
     AdjstdQlfyDstrYr2Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(b), row 2  Description:  Qualifying Distributions - Year 2  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr2Amt 
+    # Line number: Part V Line 1(b), row 2  Description: Qualifying Distributions - Year 2  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr2Amt 
 
     NtVlNnchrtblAsstsYr2Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(c), row 2  Description:  Noncharitable Assets - Year 2  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr2Amt 
+    # Line number: Part V Line 1(c), row 2  Description: Noncharitable Assets - Year 2  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr2Amt 
 
     DstrbtnYr2Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
-    # Line number:  Part V Line 1(d), row 2  Description:  Distribution Ratio - Year 2  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr2Rt 
+    # Line number: Part V Line 1(d), row 2  Description: Distribution Ratio - Year 2  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr2Rt 
 
     AdjstdQlfyDstrYr3Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(b), row 3  Description:  Qualifying Distributions - Year 3  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr3Amt 
+    # Line number: Part V Line 1(b), row 3  Description: Qualifying Distributions - Year 3  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr3Amt 
 
     NtVlNnchrtblAsstsYr3Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(c), row 3  Description:  Noncharitable Assets - Year 3  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr3Amt 
+    # Line number: Part V Line 1(c), row 3  Description: Noncharitable Assets - Year 3  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr3Amt 
 
     DstrbtnYr3Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
-    # Line number:  Part V Line 1(d), row 3  Description:  Distribution Ratio - Year 3  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr3Rt 
+    # Line number: Part V Line 1(d), row 3  Description: Distribution Ratio - Year 3  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr3Rt 
 
     AdjstdQlfyDstrYr4Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(b), row 4  Description:  Qualifying Distributions - Year 4  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr4Amt 
+    # Line number: Part V Line 1(b), row 4  Description: Qualifying Distributions - Year 4  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr4Amt 
 
     NtVlNnchrtblAsstsYr4Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(c), row 4  Description:  Noncharitable Assets - Year 4  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr4Amt 
+    # Line number: Part V Line 1(c), row 4  Description: Noncharitable Assets - Year 4  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr4Amt 
 
     DstrbtnYr4Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
-    # Line number:  Part V Line 1(d), row 4  Description:  Distribution Ratio - Year 4  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr4Rt 
+    # Line number: Part V Line 1(d), row 4  Description: Distribution Ratio - Year 4  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr4Rt 
 
     AdjstdQlfyDstrYr5Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(b), row 5  Description:  Qualifying Distributions - Year 5  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr5Amt 
+    # Line number: Part V Line 1(b), row 5  Description: Qualifying Distributions - Year 5  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjustedQlfyDistriYr5Amt 
 
     NtVlNnchrtblAsstsYr5Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 1(c), row 5  Description:  Noncharitable Assets - Year 5  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr5Amt 
+    # Line number: Part V Line 1(c), row 5  Description: Noncharitable Assets - Year 5  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsYr5Amt 
 
     DstrbtnYr5Rt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
-    # Line number:  Part V Line 1(d), row 5  Description:  Distribution Ratio - Year 5  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr5Rt 
+    # Line number: Part V Line 1(d), row 5  Description: Distribution Ratio - Year 5  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/DistributionYr5Rt 
 
     TtlDstrbtnRt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
-    # Line number:  Part V Line 2  Description:  Total Distribution Ratio  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/TotalDistributionRt 
+    # Line number: Part V Line 2  Description:  Total Distribution Ratio  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/TotalDistributionRt 
 
     AvrgDstrbtnRt = models.DecimalField(null=True, blank=True, max_digits=12, decimal_places=6)
-    # Line number:  Part V Line 3  Description:  Average Distribution Ratio  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AverageDistributionRt 
+    # Line number: Part V Line 3  Description:  Average Distribution Ratio  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AverageDistributionRt 
 
     NtVlNnchrtblAsstsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 4  Description:  Net Noncharitable Assets  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsAmt 
+    # Line number: Part V Line 4  Description:  Net Noncharitable Assets  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetVlNoncharitableAssetsAmt 
 
     AdjNtVlNnchrtblAsstsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 5  Description:  Adjusted Noncharitable Assets (multiply Line 4 by Line 3)  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjNetVlNoncharitableAssetsAmt 
+    # Line number: Part V Line 5  Description: Adjusted Noncharitable Assets (multiply Line 4 by Line 3)  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjNetVlNoncharitableAssetsAmt 
 
     NtInvstmntIncmPctAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 6  Description:  1% of Net Investment Income  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetInvestmentIncomePctAmt 
+    # Line number: Part V Line 6  Description: 1% of Net Investment Income  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/NetInvestmentIncomePctAmt 
 
     AdjNnchrtblNtInvstIncmPctAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 7  Description:  Adjusted Noncharitable Assets and 1% of Net Investment Income (add lines 5 and 6)  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjNonchrtblNetInvstIncmPctAmt 
+    # Line number: Part V Line 7  Description: Adjusted Noncharitable Assets and 1% of Net Investment Income (add lines 5 and 6)  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/AdjNonchrtblNetInvstIncmPctAmt 
 
     QlfyngDstrbtnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Line 8  Description:  Qualifying Distributions  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/QualifyingDistributionsAmt 
+    # Line number: Part V Line 8  Description:  Qualifying Distributions  xpath: /IRS990PF/QlfyUndSect4940eReducedTaxGrp/QualifyingDistributionsAmt 
 
 #######
 #
@@ -3409,67 +3645,67 @@ class pf_part_vi(models.Model):
     # xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp 
 
     ExmptOprtngFndtnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VI Line 1a  Description:  Exempt Operating Foundations  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/ExemptOperatingFoundationsInd 
+    # Line number: Part VI Line 1a  Description:  Exempt Operating Foundations  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/ExemptOperatingFoundationsInd 
 
     RlngLttrDt = models.CharField(null=True, blank=True, max_length=31)
-    # Line number:  Part VI Line 1a  Description:  Date of Ruling Letter  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/RulingLetterDt 
+    # Line number: Part VI Line 1a  Description:  Date of Ruling Letter  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/RulingLetterDt 
 
     DmstcOrgMtngSct4940Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VI Line 1b  Description:  Domestic Organizations Meeting Section 4940(e) Requirements  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/DomesticOrgMeetingSect4940eInd 
+    # Line number: Part VI Line 1b  Description: Domestic Organizations Meeting Section 4940(e) Requirements  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/DomesticOrgMeetingSect4940eInd 
 
     TxUndrSctn511Amt = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 2  Description:  Tax Under Section 511  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/TaxUnderSection511Amt 
+    # Line number: Part VI Line 2  Description: Tax Under Section 511  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/TaxUnderSection511Amt 
 
     SbttlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 3  Description:  Subtotal (add lines 1 and 2)  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/SubtotalAmt 
+    # Line number: Part VI Line 3  Description: Subtotal (add lines 1 and 2)  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/SubtotalAmt 
 
     SbttlATxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 4  Description:  Subtitle A Tax  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/SubtitleATaxAmt 
+    # Line number: Part VI Line 4  Description:  Subtitle A Tax  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/SubtitleATaxAmt 
 
     TxBsdOnInvstmntIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 5  Description:  Tax Based on Investment Income  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/TaxBasedOnInvestmentIncomeAmt 
+    # Line number: Part VI Line 5  Description:  Tax Based on Investment Income  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/TaxBasedOnInvestmentIncomeAmt 
 
     EstmtdPlsOvpmtIncmTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 6a  Description:  Estimated Tax Payments and Overpayment Credited  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/EstimatedPlusOvpmtIncmTxAmt 
+    # Line number: Part VI Line 6a  Description:  Estimated Tax Payments and Overpayment Credited  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/EstimatedPlusOvpmtIncmTxAmt 
 
     AppldTEsTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 6c  Description:  Tax Paid with Extension  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/AppliedToEsTaxAmt 
+    # Line number: Part VI Line 6c  Description:  Tax Paid with Extension  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/AppliedToEsTaxAmt 
 
     BckpWthhldngWthhldAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 6d  Description:  Backup Withholding Erroneously Withheld  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/BackupWithholdingWithheldAmt 
+    # Line number: Part VI Line 6d  Description:  Backup Withholding Erroneously Withheld  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/BackupWithholdingWithheldAmt 
 
     TtlPymntsAndCrdtsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 7  Description:  Total Credits and Payments  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/TotalPaymentsAndCreditsAmt 
+    # Line number: Part VI Line 7  Description:  Total Credits and Payments  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/TotalPaymentsAndCreditsAmt 
 
     Frm2220AttchdInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 8  Description:  Indicates Form 2220 is attached  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/Form2220AttachedInd 
+    # Line number: Part VI Line 8  Description: Indicates Form 2220 is attached  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/Form2220AttachedInd 
 
     EsPnltyAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 8  Description:  Penalty for Underpayment  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/EsPenaltyAmt 
+    # Line number: Part VI Line 8  Description:  Penalty for Underpayment  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/EsPenaltyAmt 
 
     AppldTESTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 11  Description:  Amount Credited to Next Year  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/AppliedToESTaxAmt 
+    # Line number: Part VI Line 11  Description:  Amount Credited to Next Year  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/AppliedToESTaxAmt 
 
     RfndAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 11  Description:  Amount to be refunded  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/RefundAmt 
+    # Line number: Part VI Line 11  Description:  Amount to be refunded  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/RefundAmt 
 
     InvstmntIncmExcsTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 1  Description:  Investment Income Excise Tax - amount  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/InvestmentIncomeExciseTaxAmt 
+    # Line number: Part VI Line 1  Description:  Investment Income Excise Tax - amount  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/InvestmentIncomeExciseTaxAmt 
 
     NtApplcblCd = models.TextField(null=True, blank=True)
-    # Line number:  Part VI Line 1  Description:  Investment Income Excise Tax - "N/A"  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/NotApplicableCd 
+    # Line number: Part VI Line 1  Description:  Investment Income Excise Tax - "N/A"  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/NotApplicableCd 
 
     OrgnlRtrnTxPdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 7 Tax Paid with Orig Return  Description:  Tax Paid with the Original Return  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/OriginalReturnTaxPaidAmt 
+    # Line number: Part VI Line 7 Tax Paid with Orig Return  Description:  Tax Paid with the Original Return  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/OriginalReturnTaxPaidAmt 
 
     OrgnlRtrnOvrpymntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 7 Orig Return Overpayment  Description:  Original Return Overpayment  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/OriginalReturnOverpaymentAmt 
+    # Line number: Part VI Line 7 Orig Return Overpayment  Description:  Original Return Overpayment  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/OriginalReturnOverpaymentAmt 
 
     TxDAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 9  Description:  Tax Due  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/TaxDueAmt 
+    # Line number: Part VI Line 9  Description:  Tax Due  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/TaxDueAmt 
 
     OvrpymntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 10  Description:  Overpayment  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/OverpaymentAmt 
+    # Line number: Part VI Line 10  Description:  Overpayment  xpath: /IRS990PF/ExciseTaxBasedOnInvstIncmGrp/OverpaymentAmt 
 
 #######
 #
@@ -3485,118 +3721,157 @@ class pf_part_viia(models.Model):
     # xpath: /IRS990PF/StatementsRegardingActyGrp 
 
     SttmntsRgrdngActy_LgsltvPltclActyInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 1a  Description:  Legislative and Political Activities?  xpath: /IRS990PF/StatementsRegardingActyGrp/LegislativePoliticalActyInd 
+    # Line number: Part VII-A Line 1a  Description:  Legislative and Political Activities?  xpath: /IRS990PF/StatementsRegardingActyGrp/LegislativePoliticalActyInd 
 
     SttmntsRgrdngActy_MrThn100SpntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 1b  Description:  More Than $100 Spent?  xpath: /IRS990PF/StatementsRegardingActyGrp/MoreThan100SpentInd 
+    # Line number: Part VII-A Line 1b  Description: More Than $100 Spent?  xpath: /IRS990PF/StatementsRegardingActyGrp/MoreThan100SpentInd 
 
     SttmntsRgrdngActy_Frm1120POLFldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 1c  Description:  Form 1120-POL Filed?  xpath: /IRS990PF/StatementsRegardingActyGrp/Form1120POLFiledInd 
+    # Line number: Part VII-A Line 1c  Description: Form 1120-POL Filed?  xpath: /IRS990PF/StatementsRegardingActyGrp/Form1120POLFiledInd 
 
     SttmntsRgrdngActy_Sctn4955OrgnztnTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII-A Line 1d(1)  Description:  Section 4955 Tax on Organization  xpath: /IRS990PF/StatementsRegardingActyGrp/Section4955OrganizationTaxAmt 
+    # Line number: Part VII-A Line 1d(1)  Description: Section 4955 Tax on Organization  xpath: /IRS990PF/StatementsRegardingActyGrp/Section4955OrganizationTaxAmt 
 
     SttmntsRgrdngActy_Sctn4955MngrsTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII-A Line 1d(2)  Description:  Section 4955 Tax on Managers  xpath: /IRS990PF/StatementsRegardingActyGrp/Section4955ManagersTaxAmt 
+    # Line number: Part VII-A Line 1d(2)  Description: Section 4955 Tax on Managers  xpath: /IRS990PF/StatementsRegardingActyGrp/Section4955ManagersTaxAmt 
 
     SttmntsRgrdngActy_TxRmbrsdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII-A Line 1e  Description:  Reimbursement of Tax  xpath: /IRS990PF/StatementsRegardingActyGrp/TaxReimbursedAmt 
+    # Line number: Part VII-A Line 1e  Description:  Reimbursement of Tax  xpath: /IRS990PF/StatementsRegardingActyGrp/TaxReimbursedAmt 
 
     SttmntsRgrdngActy_ActvtsNtPrvslyRptInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 2  Description:  Activities Not Previously Reported?  xpath: /IRS990PF/StatementsRegardingActyGrp/ActivitiesNotPreviouslyRptInd 
+    # Line number: Part VII-A Line 2  Description:  Activities Not Previously Reported?  xpath: /IRS990PF/StatementsRegardingActyGrp/ActivitiesNotPreviouslyRptInd 
 
     SttmntsRgrdngActy_ChngsTArtclsOrBylwsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 3  Description:  Changes to Articles or Bylaws?  xpath: /IRS990PF/StatementsRegardingActyGrp/ChangesToArticlesOrBylawsInd 
+    # Line number: Part VII-A Line 3  Description:  Changes to Articles or Bylaws?  xpath: /IRS990PF/StatementsRegardingActyGrp/ChangesToArticlesOrBylawsInd 
 
     SttmntsRgrdngActy_UnrltdBsIncmOvrLmtInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 4a  Description:  Unrelated Business Income Over $1000?  xpath: /IRS990PF/StatementsRegardingActyGrp/UnrelatedBusIncmOverLimitInd 
+    # Line number: Part VII-A Line 4a  Description: Unrelated Business Income Over $1000?  xpath: /IRS990PF/StatementsRegardingActyGrp/UnrelatedBusIncmOverLimitInd 
 
     SttmntsRgrdngActy_Frm990TFldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 4b  Description:  Form 990-T Filed?  xpath: /IRS990PF/StatementsRegardingActyGrp/Form990TFiledInd 
+    # Line number: Part VII-A Line 4b  Description: Form 990-T Filed?  xpath: /IRS990PF/StatementsRegardingActyGrp/Form990TFiledInd 
 
     SttmntsRgrdngActy_OrgnztnDsslvdEtcInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 5  Description:  Termination, etc.?  xpath: /IRS990PF/StatementsRegardingActyGrp/OrganizationDissolvedEtcInd 
+    # Line number: Part VII-A Line 5  Description:  Termination, etc.?  xpath: /IRS990PF/StatementsRegardingActyGrp/OrganizationDissolvedEtcInd 
 
     SttmntsRgrdngActy_Sctn508RqrStsfdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 6  Description:  Requirements of Section 508(e)?  xpath: /IRS990PF/StatementsRegardingActyGrp/Section508eRqrSatisfiedInd 
+    # Line number: Part VII-A Line 6  Description: Requirements of Section 508(e)?  xpath: /IRS990PF/StatementsRegardingActyGrp/Section508eRqrSatisfiedInd 
 
     SttmntsRgrdngActy_AtLst5000InAsstsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 7  Description:  At least $5000 in Assets?  xpath: /IRS990PF/StatementsRegardingActyGrp/AtLeast5000InAssetsInd 
+    # Line number: Part VII-A Line 7  Description: At least $5000 in Assets?  xpath: /IRS990PF/StatementsRegardingActyGrp/AtLeast5000InAssetsInd 
 
     SttmntsRgrdngActy_Frm990PFFldWthAttyGnInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 8b  Description:  Form 990-PF Filed with Attorney General?  xpath: /IRS990PF/StatementsRegardingActyGrp/Form990PFFiledWithAttyGenInd 
+    # Line number: Part VII-A Line 8b  Description: Form 990-PF Filed with Attorney General?  xpath: /IRS990PF/StatementsRegardingActyGrp/Form990PFFiledWithAttyGenInd 
 
     SttmntsRgrdngActy_PrvtOprtngFndtnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 9  Description:  Private Operating Foundation?  xpath: /IRS990PF/StatementsRegardingActyGrp/PrivateOperatingFoundationInd 
+    # Line number: Part VII-A Line 9  Description:  Private Operating Foundation?  xpath: /IRS990PF/StatementsRegardingActyGrp/PrivateOperatingFoundationInd 
 
     SttmntsRgrdngActy_NwSbstntlCntrbtrsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 10  Description:  New Substantial Contributors?  xpath: /IRS990PF/StatementsRegardingActyGrp/NewSubstantialContributorsInd 
+    # Line number: Part VII-A Line 10  Description:  New Substantial Contributors?  xpath: /IRS990PF/StatementsRegardingActyGrp/NewSubstantialContributorsInd 
 
     SttmntsRgrdngActy_OwnCntrlldEnttyInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 11  Description:  At any time during the year, did the foundation, directly or indirectly, own a controlled entity within the meaning of section 51 2(b)(l3)?  xpath: /IRS990PF/StatementsRegardingActyGrp/OwnControlledEntityInd 
+    # Line number: Part VII-A Line 11  Description: At any time during the year, did the foundation, directly or indirectly, own a controlled entity within the meaning of section 51 2(b)(l3)?  xpath: /IRS990PF/StatementsRegardingActyGrp/OwnControlledEntityInd 
 
     SttmntsRgrdngActy_DnrAdvsdFndInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 12  Description:  Did Ihe organization acquire a direct or indirect interest in any applicable insurance contract?  xpath: /IRS990PF/StatementsRegardingActyGrp/DonorAdvisedFundInd 
+    # Line number: Part VII-A Line 12  Description:  Did Ihe organization acquire a direct or indirect interest in any applicable insurance contract?  xpath: /IRS990PF/StatementsRegardingActyGrp/DonorAdvisedFundInd 
 
     SttmntsRgrdngActy_CmplyWthPblcInspRqrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 13  Description:  Comply with Public Inspection Requirements?  xpath: /IRS990PF/StatementsRegardingActyGrp/ComplyWithPublicInspRqrInd 
+    # Line number: Part VII-A Line 13  Description:  Comply with Public Inspection Requirements?  xpath: /IRS990PF/StatementsRegardingActyGrp/ComplyWithPublicInspRqrInd 
 
     SttmntsRgrdngActy_WbstAddrssTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part VII-A Line 13  Description:  Website Address  xpath: /IRS990PF/StatementsRegardingActyGrp/WebsiteAddressTxt 
+    # Line number: Part VII-A Line 13  Description:  Website Address  xpath: /IRS990PF/StatementsRegardingActyGrp/WebsiteAddressTxt 
 
     SttmntsRgrdngActy_PhnNm = models.CharField(null=True, blank=True, max_length=10)
-    # Line number:  Part VII-A Line 14  Description:  Books In Care Of - Phone Number  xpath: /IRS990PF/StatementsRegardingActyGrp/PhoneNum 
+    # Line number: Part VII-A Line 14  Description:  Books In Care Of - Phone Number  xpath: /IRS990PF/StatementsRegardingActyGrp/PhoneNum 
 
     SttmntsRgrdngActy_NECTFlngInLOFFrm1041Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VII-A Line 15  Description:  Section 4947(a)(1) Nonexempt Charitable Trusts Filing in lieu of Form 1041  xpath: /IRS990PF/StatementsRegardingActyGrp/NECTFilingInLieuOFForm1041Ind 
+    # Line number: Part VII-A Line 15  Description: Section 4947(a)(1) Nonexempt Charitable Trusts Filing in lieu of Form 1041  xpath: /IRS990PF/StatementsRegardingActyGrp/NECTFilingInLieuOFForm1041Ind 
 
     SttmntsRgrdngActy_TxExmptIntrstAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VII-A Line 15  Description:  Tax Exempt Interest Received  xpath: /IRS990PF/StatementsRegardingActyGrp/TaxExemptInterestAmt 
+    # Line number: Part VII-A Line 15  Description:  Tax Exempt Interest Received  xpath: /IRS990PF/StatementsRegardingActyGrp/TaxExemptInterestAmt 
 
     SttmntsRgrdngActy_FrgnAccntsQstnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-A Line 16  Description:  Interest or a signature or other authority over a bank, securities, or other financial account in a foreign country?  xpath: /IRS990PF/StatementsRegardingActyGrp/ForeignAccountsQuestionInd 
+    # Line number: Part VII-A Line 16  Description:  Interest or a signature or other authority over a bank, securities, or other financial account in a foreign country?  xpath: /IRS990PF/StatementsRegardingActyGrp/ForeignAccountsQuestionInd 
 
     PrsnsWthBksNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part VII-A Line 14  Description:  Business name line 1  xpath: /IRS990PF/StatementsRegardingActyGrp/PersonsWithBooksName/BusinessNameLine1Txt 
+    # Line number: Part VII-A Line 14  Description:  Business name line 1  xpath: /IRS990PF/StatementsRegardingActyGrp/PersonsWithBooksName/BusinessNameLine1 
+
+    PrsnsWthBksNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part VII-A Line 14  Description:  Business name line 1  xpath: /IRS990PF/StatementsRegardingActyGrp/PersonsWithBooksName/BusinessNameLine1Txt 
 
     PrsnsWthBksNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part VII-A Line 14  Description:  Business name line 2  xpath: /IRS990PF/StatementsRegardingActyGrp/PersonsWithBooksName/BusinessNameLine2Txt 
+    # Line number: Part VII-A Line 14  Description:  Business name line 2  xpath: /IRS990PF/StatementsRegardingActyGrp/PersonsWithBooksName/BusinessNameLine2 
+
+    PrsnsWthBksNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part VII-A Line 14  Description:  Business name line 2  xpath: /IRS990PF/StatementsRegardingActyGrp/PersonsWithBooksName/BusinessNameLine2Txt 
 
     SttmntsRgrdngActy_IndvdlWthBksNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VII-A Line 14  Description:  Books In Care Of - Person Name  xpath: /IRS990PF/StatementsRegardingActyGrp/IndividualWithBooksNm 
+    # Line number: Part VII-A Line 14  Description:  Books In Care Of - Person Name  xpath: /IRS990PF/StatementsRegardingActyGrp/IndividualWithBooksNm 
 
     LctnOfBksUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VII-A Line 14  Description:  Address line 1  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/AddressLine1Txt 
+    # Line number: Part VII-A Line 14  Description:  Address line 1  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/AddressLine1 
+
+    LctnOfBksUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part VII-A Line 14  Description:  Address line 1  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/AddressLine1Txt 
 
     LctnOfBksUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VII-A Line 14  Description:  Address line 2  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/AddressLine2Txt 
+    # Line number: Part VII-A Line 14  Description:  Address line 2  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/AddressLine2 
+
+    LctnOfBksUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part VII-A Line 14  Description:  Address line 2  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/AddressLine2Txt 
 
     LctnOfBksUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part VII-A Line 14  Description:  City  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/CityNm 
+    # Line number: Part VII-A Line 14  Description:  City  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/City 
+
+    LctnOfBksUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part VII-A Line 14  Description:  City  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/CityNm 
 
     LctnOfBksUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VII-A Line 14  Description:  State  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/StateAbbreviationCd 
+    # Line number: Part VII-A Line 14  Description:  State  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/State 
+
+    LctnOfBksUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part VII-A Line 14  Description:  State  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/StateAbbreviationCd 
 
     LctnOfBksUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part VII-A Line 14  Description:  ZIP code  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/ZIPCd 
+    # Line number: Part VII-A Line 14  Description:  ZIP code  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/ZIPCd 
+
+    LctnOfBksUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part VII-A Line 14  Description:  ZIP code  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksUSAddress/ZIPCode 
 
     LctnOfBksFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VII-A Line 14  Description:  Address line 1  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/AddressLine1Txt 
+    # Line number: Part VII-A Line 14  Description:  Address line 1  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/AddressLine1 
+
+    LctnOfBksFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part VII-A Line 14  Description:  Address line 1  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/AddressLine1Txt 
 
     LctnOfBksFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VII-A Line 14  Description:  Address line 2  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/AddressLine2Txt 
+    # Line number: Part VII-A Line 14  Description:  Address line 2  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/AddressLine2 
+
+    LctnOfBksFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part VII-A Line 14  Description:  Address line 2  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/AddressLine2Txt 
 
     LctnOfBksFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 14  Description:  City  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/CityNm 
+    # Line number: Part VII-A Line 14  Description:  City  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/City 
+
+    LctnOfBksFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part VII-A Line 14  Description:  City  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/CityNm 
 
     LctnOfBksFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 14  Description:  Province or state  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/ProvinceOrStateNm 
+    # Line number: Part VII-A Line 14  Description:  Province or state  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/ProvinceOrState 
+
+    LctnOfBksFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part VII-A Line 14  Description:  Province or state  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/ProvinceOrStateNm 
 
     LctnOfBksFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VII-A Line 14  Description:  Country  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/CountryCd 
+    # Line number: Part VII-A Line 14  Description:  Country  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/Country 
+
+    LctnOfBksFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part VII-A Line 14  Description:  Country  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/CountryCd 
 
     LctnOfBksFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-A Line 14  Description:  Postal code  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/ForeignPostalCd 
+    # Line number: Part VII-A Line 14  Description:  Postal code  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/ForeignPostalCd 
+
+    LctnOfBksFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part VII-A Line 14  Description:  Postal code  xpath: /IRS990PF/StatementsRegardingActyGrp/LocationOfBooksForeignAddress/PostalCode 
 
 #######
 #
@@ -3612,109 +3887,109 @@ class pf_part_viib(models.Model):
     # xpath: /IRS990PF/StatementsRegardingActy4720Grp 
 
     SlOrExchDsqlfdPrsnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 1a(1)  Description:  Sale or Exchange with a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/SaleOrExchDisqualifiedPrsnInd 
+    # Line number: Part VII-B Line 1a(1)  Description:  Sale or Exchange with a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/SaleOrExchDisqualifiedPrsnInd 
 
     BrrwOrLndDsqlfdPrsnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 1a(2)  Description:  Borrow or Lend with a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/BrrwOrLendDisqualifiedPrsnInd 
+    # Line number: Part VII-B Line 1a(2)  Description:  Borrow or Lend with a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/BrrwOrLendDisqualifiedPrsnInd 
 
     FrnGdsDsqlfdPrsnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 1a(3)  Description:  Furnished Goods, etc. with a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/FurnGoodsDisqualifiedPrsnInd 
+    # Line number: Part VII-B Line 1a(3)  Description:  Furnished Goods, etc. with a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/FurnGoodsDisqualifiedPrsnInd 
 
     PyCmpDsqlfdPrsnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 1a(4)  Description:  Pay Compensation to a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/PayCompDisqualifiedPrsnInd 
+    # Line number: Part VII-B Line 1a(4)  Description:  Pay Compensation to a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/PayCompDisqualifiedPrsnInd 
 
     TrnsfrAstDsqlfdPrsnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 1a(5)  Description:  Transfer Assets to a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/TransferAstDisqualifiedPrsnInd 
+    # Line number: Part VII-B Line 1a(5)  Description:  Transfer Assets to a Disqualified Person?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/TransferAstDisqualifiedPrsnInd 
 
     PymntTGvrnmntOffclInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 1a(6)  Description:  Payment to a Government Official?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/PaymentToGovernmentOfficialInd 
+    # Line number: Part VII-B Line 1a(6)  Description:  Payment to a Government Official?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/PaymentToGovernmentOfficialInd 
 
     ActsFlTQlfyAsExcptnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 1b  Description:  Any Acts Fail to Qualify as Exceptions?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/ActsFailToQlfyAsExceptionsInd 
+    # Line number: Part VII-B Line 1b  Description:  Any Acts Fail to Qualify as Exceptions?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/ActsFailToQlfyAsExceptionsInd 
 
     RlyngCrrntNtcDsstrAsstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VII-B Line 1b  Description:  Relying on Current Notice of Disaster Assistance  xpath: /IRS990PF/StatementsRegardingActy4720Grp/RelyingCurrentNtcDsstrAsstInd 
+    # Line number: Part VII-B Line 1b  Description:  Relying on Current Notice of Disaster Assistance  xpath: /IRS990PF/StatementsRegardingActy4720Grp/RelyingCurrentNtcDsstrAsstInd 
 
     UncrrctdPrrActsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 1c  Description:  Uncorrected Prior Acts?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UncorrectedPriorActsInd 
+    # Line number: Part VII-B Line 1c  Description:  Uncorrected Prior Acts?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UncorrectedPriorActsInd 
 
     UndstrbtdIncmPYInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 2a  Description:  Undistributed Income Prior Years?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePYInd 
+    # Line number: Part VII-B Line 2a  Description:  Undistributed Income Prior Years?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePYInd 
 
     UndstrbtdIncmPY1Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII-B Line 2a  Description:  Undistributed Income Prior Year 1  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePY1Yr 
+    # Line number: Part VII-B Line 2a  Description: Undistributed Income Prior Year 1  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePY1Yr 
 
     UndstrbtdIncmPY2Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII-B Line 2a  Description:  Undistributed Income Prior Year 2  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePY2Yr 
+    # Line number: Part VII-B Line 2a  Description: Undistributed Income Prior Year 2  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePY2Yr 
 
     UndstrbtdIncmPY3Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII-B Line 2a  Description:  Undistributed Income Prior Year 3  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePY3Yr 
+    # Line number: Part VII-B Line 2a  Description: Undistributed Income Prior Year 3  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePY3Yr 
 
     UndstrbtdIncmPY4Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII-B Line 2a  Description:  Undistributed Income Prior Year 4  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePY4Yr 
+    # Line number: Part VII-B Line 2a  Description: Undistributed Income Prior Year 4  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistributedIncomePY4Yr 
 
     UndstrIncmSct49422NtAppInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-B Line 2b  Description:  Undistributed Income 4942(a)(2) Not Applied?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2NotAppInd 
+    # Line number: Part VII-B Line 2b  Description: Undistributed Income 4942(a)(2) Not Applied?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2NotAppInd 
 
     UndstrIncmSct49422AppYr1Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII-B Line 2c  Description:  Undistributed Income 4942(a)(2) Applied Year 1  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2AppYr1Yr 
+    # Line number: Part VII-B Line 2c  Description: Undistributed Income 4942(a)(2) Applied Year 1  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2AppYr1Yr 
 
     UndstrIncmSct49422AppYr2Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII-B Line 2c  Description:  Undistributed Income 4942(a)(2) Applied Year 2  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2AppYr2Yr 
+    # Line number: Part VII-B Line 2c  Description: Undistributed Income 4942(a)(2) Applied Year 2  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2AppYr2Yr 
 
     UndstrIncmSct49422AppYr3Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII-B Line 2c  Description:  Undistributed Income 4942(a)(2) Applied Year 3  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2AppYr3Yr 
+    # Line number: Part VII-B Line 2c  Description: Undistributed Income 4942(a)(2) Applied Year 3  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2AppYr3Yr 
 
     UndstrIncmSct49422AppYr4Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part VII-B Line 2c  Description:  Undistributed Income 4942(a)(2) Applied Year 4  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2AppYr4Yr 
+    # Line number: Part VII-B Line 2c  Description: Undistributed Income 4942(a)(2) Applied Year 4  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UndistrIncmSect4942a2AppYr4Yr 
 
     BsnssHldngsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 3a  Description:  Business Holdings?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/BusinessHoldingsInd 
+    # Line number: Part VII-B Line 3a  Description:  Business Holdings?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/BusinessHoldingsInd 
 
     ExcssBsnssHldngsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 3b  Description:  Excess Business Holdings?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/ExcessBusinessHoldingsInd 
+    # Line number: Part VII-B Line 3b  Description:  Excess Business Holdings?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/ExcessBusinessHoldingsInd 
 
     JprdyInvstmntsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 4a  Description:  Jeopardy Investments?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/JeopardyInvestmentsInd 
+    # Line number: Part VII-B Line 4a  Description:  Jeopardy Investments?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/JeopardyInvestmentsInd 
 
     UncrrctdPYJprdyInvstInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 4b  Description:  Uncorrected Jeopardy Investments?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UncorrectedPYJeopardyInvstInd 
+    # Line number: Part VII-B Line 4b  Description:  Uncorrected Jeopardy Investments?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/UncorrectedPYJeopardyInvstInd 
 
     InflncLgsltnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 5a(1)  Description:  Influence Legislation?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/InfluenceLegislationInd 
+    # Line number: Part VII-B Line 5a(1)  Description:  Influence Legislation?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/InfluenceLegislationInd 
 
     InflncElctnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 5a(2)  Description:  Influence Election?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/InfluenceElectionInd 
+    # Line number: Part VII-B Line 5a(2)  Description:  Influence Election?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/InfluenceElectionInd 
 
     GrntsTIndvdlsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 5a(3)  Description:  Grants to Individuals?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/GrantsToIndividualsInd 
+    # Line number: Part VII-B Line 5a(3)  Description:  Grants to Individuals?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/GrantsToIndividualsInd 
 
     GrntsTOrgnztnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 5a(4)  Description:  Grants to Organizations?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/GrantsToOrganizationsInd 
+    # Line number: Part VII-B Line 5a(4)  Description:  Grants to Organizations?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/GrantsToOrganizationsInd 
 
     NnchrtblPrpsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 5a(5)  Description:  Noncharitable Purpose?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/NoncharitablePurposeInd 
+    # Line number: Part VII-B Line 5a(5)  Description:  Noncharitable Purpose?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/NoncharitablePurposeInd 
 
     TrnsctnsFlTQlfyAsExcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 5b  Description:  Any Transactions Fail to Qualify as Exceptions?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/TransactionsFailToQlfyAsExcInd 
+    # Line number: Part VII-B Line 5b  Description:  Any Transactions Fail to Qualify as Exceptions?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/TransactionsFailToQlfyAsExcInd 
 
     RlyngCrrntNtcDsstrAsst1Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part VII-B Line 5b  Description:  Relying on Current Notice of Disaster Assistance  xpath: /IRS990PF/StatementsRegardingActy4720Grp/RelyingCurrentNtcDsstrAsst1Ind 
+    # Line number: Part VII-B Line 5b  Description:  Relying on Current Notice of Disaster Assistance  xpath: /IRS990PF/StatementsRegardingActy4720Grp/RelyingCurrentNtcDsstrAsst1Ind 
 
     MntndExpndtrRspnsInd = models.TextField(null=True, blank=True)
-    # Line number:  Part VII-B Line 5c  Description:  Maintained Expenditure Responsibility?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/MaintainedExpenditureRspnsInd 
+    # Line number: Part VII-B Line 5c  Description:  Maintained Expenditure Responsibility?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/MaintainedExpenditureRspnsInd 
 
     RcvFndsTPyPrsnlBnftCntrctInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 6a  Description:  Receive Funds to Pay Premiums on a Personal Benefit Contract?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/RcvFndsToPayPrsnlBnftCntrctInd 
+    # Line number: Part VII-B Line 6a  Description:  Receive Funds to Pay Premiums on a Personal Benefit Contract?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/RcvFndsToPayPrsnlBnftCntrctInd 
 
     PyPrmmsPrsnlBnftCntrctInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 6b  Description:  Pay Premiums on a Personal Benefit Contract?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/PayPremiumsPrsnlBnftCntrctInd 
+    # Line number: Part VII-B Line 6b  Description:  Pay Premiums on a Personal Benefit Contract?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/PayPremiumsPrsnlBnftCntrctInd 
 
     PrhbtdTxShltrTrnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 7a  Description:  Prohibited Tax Shelter Transaction?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/ProhibitedTaxShelterTransInd 
+    # Line number: Part VII-B Line 7a  Description:  Prohibited Tax Shelter Transaction?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/ProhibitedTaxShelterTransInd 
 
     PrcdsOrNtIncmInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part VII-B Line 7b  Description:  Proceeds Or Net Income?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/ProceedsOrNetIncomeInd 
+    # Line number: Part VII-B Line 7b  Description:  Proceeds Or Net Income?  xpath: /IRS990PF/StatementsRegardingActy4720Grp/ProceedsOrNetIncomeInd 
 
 #######
 #
@@ -3730,16 +4005,16 @@ class pf_part_viii(models.Model):
     # xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp 
 
     OthrEmplyPdOvr50kCnt = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 2  Description:  Total number of other employees paid over $50,000  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OtherEmployeePaidOver50kCnt 
+    # Line number: Part VIII Line 2  Description: Total number of other employees paid over $50,000  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OtherEmployeePaidOver50kCnt 
 
     CntrctrPdOvr50kCnt = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 3  Description:  Total number of other contractors paid over $50,000  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/ContractorPaidOver50kCnt 
+    # Line number: Part VIII Line 3  Description: Total number of other contractors paid over $50,000  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/ContractorPaidOver50kCnt 
 
     CmpOfHghstPdEmplOrNONETxt = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 2  Description:  If there are none, enter "None"  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompOfHghstPdEmplOrNONETxt 
+    # Line number: Part VIII Line 2  Description:  If there are none, enter "None"  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompOfHghstPdEmplOrNONETxt 
 
     CmpOfHghstPdCntrctOrNONETxt = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 3  Description:  If there are none, enter "None"  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompOfHghstPdCntrctOrNONETxt 
+    # Line number: Part VIII Line 3  Description:  If there are none, enter "None"  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompOfHghstPdCntrctOrNONETxt 
 
 #######
 #
@@ -3755,28 +4030,28 @@ class pf_part_ixa(models.Model):
     # xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp 
 
     Dscrptn1Txt = models.TextField(null=True, blank=True)
-    # Line number:  Part IX-A Line 1  Description:  Description 1  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Description1Txt 
+    # Line number: Part IX-A Line 1  Description: Description 1  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Description1Txt 
 
     Expnss1Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IX-A Line 1  Description:  Expenses 1  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Expenses1Amt 
+    # Line number: Part IX-A Line 1  Description: Expenses 1  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Expenses1Amt 
 
     Dscrptn2Txt = models.TextField(null=True, blank=True)
-    # Line number:  Part IX-A Line 2  Description:  Description 2  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Description2Txt 
+    # Line number: Part IX-A Line 2  Description: Description 2  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Description2Txt 
 
     Expnss2Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IX-A Line 2  Description:  Expenses 2  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Expenses2Amt 
+    # Line number: Part IX-A Line 2  Description: Expenses 2  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Expenses2Amt 
 
     Dscrptn3Txt = models.TextField(null=True, blank=True)
-    # Line number:  Part IX-A Line 3  Description:  Description 3  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Description3Txt 
+    # Line number: Part IX-A Line 3  Description: Description 3  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Description3Txt 
 
     Expnss3Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IX-A Line 3  Description:  Expenses 3  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Expenses3Amt 
+    # Line number: Part IX-A Line 3  Description: Expenses 3  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Expenses3Amt 
 
     Dscrptn4Txt = models.TextField(null=True, blank=True)
-    # Line number:  Part IX-A Line 4  Description:  Description 4  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Description4Txt 
+    # Line number: Part IX-A Line 4  Description: Description 4  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Description4Txt 
 
     Expnss4Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IX-A Line 4  Description:  Expenses 4  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Expenses4Amt 
+    # Line number: Part IX-A Line 4  Description: Expenses 4  xpath: /IRS990PF/SummaryOfDirectChrtblActyGrp/Expenses4Amt 
 
 #######
 #
@@ -3792,19 +4067,19 @@ class pf_part_ixb(models.Model):
     # xpath: /IRS990PF/SumOfProgramRelatedInvstGrp 
 
     Dscrptn1Txt = models.TextField(null=True, blank=True)
-    # Line number:  Part IX-B Line 1  Description:  Description 1  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/Description1Txt 
+    # Line number: Part IX-B Line 1  Description: Description 1  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/Description1Txt 
 
     Expnss1Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IX-B Line 1  Description:  Amount 1  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/Expenses1Amt 
+    # Line number: Part IX-B Line 1  Description: Amount 1  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/Expenses1Amt 
 
     Dscrptn2Txt = models.TextField(null=True, blank=True)
-    # Line number:  Part IX-B Line 2  Description:  Description 2  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/Description2Txt 
+    # Line number: Part IX-B Line 2  Description: Description 2  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/Description2Txt 
 
     Expnss2Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IX-B Line 2  Description:  Amount 2  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/Expenses2Amt 
+    # Line number: Part IX-B Line 2  Description: Amount 2  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/Expenses2Amt 
 
     AllOthrPrgrmRltdInvstTtAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part IX-B Line 3  Description:  All Other Program-Related Investments Total  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/AllOtherProgramRltdInvstTotAmt 
+    # Line number: Part IX-B Line 3  Description:  All Other Program-Related Investments Total  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/AllOtherProgramRltdInvstTotAmt 
 
     TtlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part IX-B Total  Description:  Total  xpath: /IRS990PF/SumOfProgramRelatedInvstGrp/TotalAmt 
@@ -3823,34 +4098,34 @@ class pf_part_x(models.Model):
     # xpath: /IRS990PF/MinimumInvestmentReturnGrp 
 
     AvrgMnthlyFMVOfScAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 1a  Description:  Average Monthly FMV of Securities  xpath: /IRS990PF/MinimumInvestmentReturnGrp/AverageMonthlyFMVOfSecAmt 
+    # Line number: Part X Line 1a  Description:  Average Monthly FMV of Securities  xpath: /IRS990PF/MinimumInvestmentReturnGrp/AverageMonthlyFMVOfSecAmt 
 
     AvrgMnthlyCshBlncsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 1b  Description:  Average Monthly Cash Balances  xpath: /IRS990PF/MinimumInvestmentReturnGrp/AverageMonthlyCashBalancesAmt 
+    # Line number: Part X Line 1b  Description:  Average Monthly Cash Balances  xpath: /IRS990PF/MinimumInvestmentReturnGrp/AverageMonthlyCashBalancesAmt 
 
     FMVAllOthrNnchrtblAstAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 1c  Description:  FMV of All Other Noncharitable Assets  xpath: /IRS990PF/MinimumInvestmentReturnGrp/FMVAllOtherNoncharitableAstAmt 
+    # Line number: Part X Line 1c  Description:  FMV of All Other Noncharitable Assets  xpath: /IRS990PF/MinimumInvestmentReturnGrp/FMVAllOtherNoncharitableAstAmt 
 
     TtlFMVOfUnsdAsstsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 1d  Description:  Total FMV of Unused Assets  xpath: /IRS990PF/MinimumInvestmentReturnGrp/TotalFMVOfUnusedAssetsAmt 
+    # Line number: Part X Line 1d  Description:  Total FMV of Unused Assets  xpath: /IRS990PF/MinimumInvestmentReturnGrp/TotalFMVOfUnusedAssetsAmt 
 
     RdctnClmdAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part X Line 1e  Description:  Reduction Claimed  xpath: /IRS990PF/MinimumInvestmentReturnGrp/ReductionClaimedAmt 
+    # Line number: Part X Line 1e  Description:  Reduction Claimed  xpath: /IRS990PF/MinimumInvestmentReturnGrp/ReductionClaimedAmt 
 
     AcqstnIndbtdnssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 2  Description:  Acquisition Indebtedness  xpath: /IRS990PF/MinimumInvestmentReturnGrp/AcquisitionIndebtednessAmt 
+    # Line number: Part X Line 2  Description:  Acquisition Indebtedness  xpath: /IRS990PF/MinimumInvestmentReturnGrp/AcquisitionIndebtednessAmt 
 
     AdjstdTtlFMVOfUnsdAstAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 3  Description:  Adjusted Total FMV of Unused Assets (subtract line 2 from line 1d)  xpath: /IRS990PF/MinimumInvestmentReturnGrp/AdjustedTotalFMVOfUnusedAstAmt 
+    # Line number: Part X Line 3  Description: Adjusted Total FMV of Unused Assets (subtract line 2 from line 1d)  xpath: /IRS990PF/MinimumInvestmentReturnGrp/AdjustedTotalFMVOfUnusedAstAmt 
 
     CshDmdChrtblAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part X Line 4  Description:  Cash Deemed Charitable  xpath: /IRS990PF/MinimumInvestmentReturnGrp/CashDeemedCharitableAmt 
+    # Line number: Part X Line 4  Description:  Cash Deemed Charitable  xpath: /IRS990PF/MinimumInvestmentReturnGrp/CashDeemedCharitableAmt 
 
     NtVlNnchrtblAsstsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 5  Description:  Net Noncharitable Assets  xpath: /IRS990PF/MinimumInvestmentReturnGrp/NetVlNoncharitableAssetsAmt 
+    # Line number: Part X Line 5  Description:  Net Noncharitable Assets  xpath: /IRS990PF/MinimumInvestmentReturnGrp/NetVlNoncharitableAssetsAmt 
 
     MnmmInvstmntRtrnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part X Line 6  Description:  Minimum Investment Return  xpath: /IRS990PF/MinimumInvestmentReturnGrp/MinimumInvestmentReturnAmt 
+    # Line number: Part X Line 6  Description:  Minimum Investment Return  xpath: /IRS990PF/MinimumInvestmentReturnGrp/MinimumInvestmentReturnAmt 
 
 #######
 #
@@ -3866,34 +4141,34 @@ class pf_part_xi(models.Model):
     # xpath: /IRS990PF/DistributableAmountGrp 
 
     Sct4942j3j5FndtnAndFrgnOrgInd = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  Section 4942(j)(3)&(j)(5) Private Operating Foundations and Certain Foreign Organizations  xpath: /IRS990PF/DistributableAmountGrp/Sect4942j3j5FndtnAndFrgnOrgInd 
+    # Description: Section 4942(j)(3)&(j)(5) Private Operating Foundations and Certain Foreign Organizations  xpath: /IRS990PF/DistributableAmountGrp/Sect4942j3j5FndtnAndFrgnOrgInd 
 
     MnmmInvstmntRtrnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 1  Description:  Minimum Investment Return  xpath: /IRS990PF/DistributableAmountGrp/MinimumInvestmentReturnAmt 
+    # Line number: Part XI Line 1  Description:  Minimum Investment Return  xpath: /IRS990PF/DistributableAmountGrp/MinimumInvestmentReturnAmt 
 
     TxBsdOnInvstmntIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 2a  Description:  Tax Based on Investment Income  xpath: /IRS990PF/DistributableAmountGrp/TaxBasedOnInvestmentIncomeAmt 
+    # Line number: Part XI Line 2a  Description:  Tax Based on Investment Income  xpath: /IRS990PF/DistributableAmountGrp/TaxBasedOnInvestmentIncomeAmt 
 
     IncmTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 2b  Description:  Income Tax for This Year  xpath: /IRS990PF/DistributableAmountGrp/IncomeTaxAmt 
+    # Line number: Part XI Line 2b  Description:  Income Tax for This Year  xpath: /IRS990PF/DistributableAmountGrp/IncomeTaxAmt 
 
     TtlTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 2c  Description:  Total Tax (add lines 2a and 2b)  xpath: /IRS990PF/DistributableAmountGrp/TotalTaxAmt 
+    # Line number: Part XI Line 2c  Description: Total Tax (add lines 2a and 2b)  xpath: /IRS990PF/DistributableAmountGrp/TotalTaxAmt 
 
     DstrbtblBfrAdjAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 3  Description:  Distributable Amount Before Adjustments  xpath: /IRS990PF/DistributableAmountGrp/DistributableBeforeAdjAmt 
+    # Line number: Part XI Line 3  Description:  Distributable Amount Before Adjustments  xpath: /IRS990PF/DistributableAmountGrp/DistributableBeforeAdjAmt 
 
     RcvrsQlfdDstrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 4  Description:  Recoveries of Qualified Distributions  xpath: /IRS990PF/DistributableAmountGrp/RecoveriesQualfiedDistriAmt 
+    # Line number: Part XI Line 4  Description:  Recoveries of Qualified Distributions  xpath: /IRS990PF/DistributableAmountGrp/RecoveriesQualfiedDistriAmt 
 
     DstrbtblBfrDdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 5  Description:  Distributable Amount Before Deduction (add lines 3 and 4)  xpath: /IRS990PF/DistributableAmountGrp/DistributableBeforeDedAmt 
+    # Line number: Part XI Line 5  Description: Distributable Amount Before Deduction (add lines 3 and 4)  xpath: /IRS990PF/DistributableAmountGrp/DistributableBeforeDedAmt 
 
     DdctnFrmDstrbtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 6  Description:  Deduction from Distributable Amount  xpath: /IRS990PF/DistributableAmountGrp/DeductionFromDistributableAmt 
+    # Line number: Part XI Line 6  Description:  Deduction from Distributable Amount  xpath: /IRS990PF/DistributableAmountGrp/DeductionFromDistributableAmt 
 
     DstrbtblAsAdjstdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 7  Description:  Distributable Amount as Adjusted  xpath: /IRS990PF/DistributableAmountGrp/DistributableAsAdjustedAmt 
+    # Line number: Part XI Line 7  Description:  Distributable Amount as Adjusted  xpath: /IRS990PF/DistributableAmountGrp/DistributableAsAdjustedAmt 
 
 #######
 #
@@ -3909,28 +4184,28 @@ class pf_part_xii(models.Model):
     # xpath: /IRS990PF/QualifyingDistriPartXIIGrp 
 
     ExpnssAndCntrbtnsAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part XII Line 1a  Description:  Expenses and Contributions  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/ExpensesAndContributionsAmt 
+    # Line number: Part XII Line 1a  Description:  Expenses and Contributions  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/ExpensesAndContributionsAmt 
 
     PrgrmRltdInvstTtlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 1b  Description:  Program Related Investments Total  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/ProgramRelatedInvstTotalAmt 
+    # Line number: Part XII Line 1b  Description:  Program Related Investments Total  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/ProgramRelatedInvstTotalAmt 
 
     ChrtblAsstsAcqsPdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 2  Description:  Amounts Paid to Acquire Charitable Assets  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/CharitableAssetsAcquisPaidAmt 
+    # Line number: Part XII Line 2  Description:  Amounts Paid to Acquire Charitable Assets  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/CharitableAssetsAcquisPaidAmt 
 
     StAsdStbltyTstAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 3a  Description:  Amounts Set Aside - Suitability Test  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/SetAsideSuitabilityTestAmt 
+    # Line number: Part XII Line 3a  Description:  Amounts Set Aside - Suitability Test  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/SetAsideSuitabilityTestAmt 
 
     StAsdCshDstrTstAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part XII Line 3b  Description:  Amounts Set Aside - Cash Distribution Test  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/SetAsideCashDistriTestAmt 
+    # Line number: Part XII Line 3b  Description:  Amounts Set Aside - Cash Distribution Test  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/SetAsideCashDistriTestAmt 
 
     QlfyngDstrbtnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 4  Description:  Qualifying Distributions  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/QualifyingDistributionsAmt 
+    # Line number: Part XII Line 4  Description:  Qualifying Distributions  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/QualifyingDistributionsAmt 
 
     PctSct4940OrgNtInvstIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 5  Description:  1% of Section 4940(e) Organizations Net Investment Income  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/PctSect4940eOrgNetInvstIncmAmt 
+    # Line number: Part XII Line 5  Description: 1% of Section 4940(e) Organizations Net Investment Income  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/PctSect4940eOrgNetInvstIncmAmt 
 
     AdjstdQlfyngDstrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 6  Description:  Adjusted Qualifying Distributions  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/AdjustedQualifyingDistriAmt 
+    # Line number: Part XII Line 6  Description:  Adjusted Qualifying Distributions  xpath: /IRS990PF/QualifyingDistriPartXIIGrp/AdjustedQualifyingDistriAmt 
 
 #######
 #
@@ -3946,106 +4221,106 @@ class pf_part_xiii(models.Model):
     # xpath: /IRS990PF/UndistributedIncomeGrp 
 
     DstrbtblAsAdjstdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 1(d)  Description:  Distributable Amount as Adjusted  xpath: /IRS990PF/UndistributedIncomeGrp/DistributableAsAdjustedAmt 
+    # Line number: Part XIII Line 1(d)  Description:  Distributable Amount as Adjusted  xpath: /IRS990PF/UndistributedIncomeGrp/DistributableAsAdjustedAmt 
 
     UndstrbtdIncmPYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 2a(c)  Description:  Undistributed Income Prior Year  xpath: /IRS990PF/UndistributedIncomeGrp/UndistributedIncomePYAmt 
+    # Line number: Part XIII Line 2a(c)  Description:  Undistributed Income Prior Year  xpath: /IRS990PF/UndistributedIncomeGrp/UndistributedIncomePYAmt 
 
     PrrYr1Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 2b  Description:  Prior Year 1  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYear1Yr 
+    # Line number: Part XIII Line 2b  Description: Prior Year 1  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYear1Yr 
 
     PrrYr2Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 2b  Description:  Prior Year 2  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYear2Yr 
+    # Line number: Part XIII Line 2b  Description: Prior Year 2  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYear2Yr 
 
     PrrYr3Yr = models.IntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 2b  Description:  Prior Year 3  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYear3Yr 
+    # Line number: Part XIII Line 2b  Description: Prior Year 3  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYear3Yr 
 
     TtlFrPrrYrsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 2b(b)  Description:  Total for Prior Years  xpath: /IRS990PF/UndistributedIncomeGrp/TotalForPriorYearsAmt 
+    # Line number: Part XIII Line 2b(b)  Description:  Total for Prior Years  xpath: /IRS990PF/UndistributedIncomeGrp/TotalForPriorYearsAmt 
 
     ExcssDstrbtnCyvYr5Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 3a  Description:  Excess Distributions Carryover - Year 5  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr5Amt 
+    # Line number: Part XIII Line 3a  Description: Excess Distributions Carryover - Year 5  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr5Amt 
 
     ExcssDstrbtnCyvYr4Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 3b  Description:  Excess Distributions Carryover - Year 4  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr4Amt 
+    # Line number: Part XIII Line 3b  Description: Excess Distributions Carryover - Year 4  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr4Amt 
 
     ExcssDstrbtnCyvYr3Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 3c  Description:  Excess Distributions Carryover - Year 3  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr3Amt 
+    # Line number: Part XIII Line 3c  Description: Excess Distributions Carryover - Year 3  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr3Amt 
 
     ExcssDstrbtnCyvYr2Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 3d  Description:  Excess Distributions Carryover - Year 2  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr2Amt 
+    # Line number: Part XIII Line 3d  Description: Excess Distributions Carryover - Year 2  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr2Amt 
 
     ExcssDstrbtnCyvYr1Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 3e  Description:  Excess Distributions Carryover - Year 1  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr1Amt 
+    # Line number: Part XIII Line 3e  Description: Excess Distributions Carryover - Year 1  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovYr1Amt 
 
     TtlExcssDstrbtnCyvAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 3f(a)  xpath: /IRS990PF/UndistributedIncomeGrp/TotalExcessDistributionCyovAmt 
+    # Line number: Part XIII Line 3f(a)  xpath: /IRS990PF/UndistributedIncomeGrp/TotalExcessDistributionCyovAmt 
 
     QlfyngDstrbtnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 4  Description:  Qualifying Distributions  xpath: /IRS990PF/UndistributedIncomeGrp/QualifyingDistributionsAmt 
+    # Line number: Part XIII Line 4  Description:  Qualifying Distributions  xpath: /IRS990PF/UndistributedIncomeGrp/QualifyingDistributionsAmt 
 
     AppldTYr1Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 4a(c)  Description:  Applied to Year 1  xpath: /IRS990PF/UndistributedIncomeGrp/AppliedToYear1Amt 
+    # Line number: Part XIII Line 4a(c)  Description: Applied to Year 1  xpath: /IRS990PF/UndistributedIncomeGrp/AppliedToYear1Amt 
 
     AppldTPrrYrsAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part XIII Line 4b(b)  Description:  Applied to Prior Years  xpath: /IRS990PF/UndistributedIncomeGrp/AppliedToPriorYearsAmt 
+    # Line number: Part XIII Line 4b(b)  Description:  Applied to Prior Years  xpath: /IRS990PF/UndistributedIncomeGrp/AppliedToPriorYearsAmt 
 
     TrtdAsDstrFrmCrpsAmt = models.TextField(null=True, blank=True)
-    # Line number:  Part XIII Line 4c(a)  Description:  Treated as Distribution from Corpus  xpath: /IRS990PF/UndistributedIncomeGrp/TreatedAsDistriFromCorpusAmt 
+    # Line number: Part XIII Line 4c(a)  Description:  Treated as Distribution from Corpus  xpath: /IRS990PF/UndistributedIncomeGrp/TreatedAsDistriFromCorpusAmt 
 
     AppldTCrrntYrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 4d(d)  Description:  Applied to Current Year  xpath: /IRS990PF/UndistributedIncomeGrp/AppliedToCurrentYearAmt 
+    # Line number: Part XIII Line 4d(d)  Description:  Applied to Current Year  xpath: /IRS990PF/UndistributedIncomeGrp/AppliedToCurrentYearAmt 
 
     RmnngDstrFrmCrpsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 4e(a)  Description:  Remaining Amount Distributed from Corpus  xpath: /IRS990PF/UndistributedIncomeGrp/RemainingDistriFromCorpusAmt 
+    # Line number: Part XIII Line 4e(a)  Description:  Remaining Amount Distributed from Corpus  xpath: /IRS990PF/UndistributedIncomeGrp/RemainingDistriFromCorpusAmt 
 
     ExcssDstrCyvAppCYCrpsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 5(a)  Description:  Excess Distributions Carryover Applied to Current Year - Corpus  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistriCyovAppCYCorpusAmt 
+    # Line number: Part XIII Line 5(a)  Description:  Excess Distributions Carryover Applied to Current Year - Corpus  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistriCyovAppCYCorpusAmt 
 
     ExcssDstrbtnCyvAppCYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 5(d)  Description:  Excess Distributions Carryover Applied to Current Year  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovAppCYAmt 
+    # Line number: Part XIII Line 5(d)  Description:  Excess Distributions Carryover Applied to Current Year  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistributionCyovAppCYAmt 
 
     TtlCrpsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 6a(a)  Description:  Total Corpus  xpath: /IRS990PF/UndistributedIncomeGrp/TotalCorpusAmt 
+    # Line number: Part XIII Line 6a(a)  Description:  Total Corpus  xpath: /IRS990PF/UndistributedIncomeGrp/TotalCorpusAmt 
 
     PrrYrUndstrbtdIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 6b(b)  Description:  Prior Year's Undistributed Income  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYearUndistributedIncmAmt 
+    # Line number: Part XIII Line 6b(b)  Description:  Prior Year's Undistributed Income  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYearUndistributedIncmAmt 
 
     PrrYrDfcncyOrTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 6c(b)  Description:  Prior Year's Deficiency or Tax  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYearDeficiencyOrTaxAmt 
+    # Line number: Part XIII Line 6c(b)  Description:  Prior Year's Deficiency or Tax  xpath: /IRS990PF/UndistributedIncomeGrp/PriorYearDeficiencyOrTaxAmt 
 
     Txbl1Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 6d(b)  Description:  Taxable Amount 1  xpath: /IRS990PF/UndistributedIncomeGrp/Taxable1Amt 
+    # Line number: Part XIII Line 6d(b)  Description: Taxable Amount 1  xpath: /IRS990PF/UndistributedIncomeGrp/Taxable1Amt 
 
     Txbl2Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 6e(c)  Description:  Taxable Amount 2  xpath: /IRS990PF/UndistributedIncomeGrp/Taxable2Amt 
+    # Line number: Part XIII Line 6e(c)  Description: Taxable Amount 2  xpath: /IRS990PF/UndistributedIncomeGrp/Taxable2Amt 
 
     UndstrbtdIncmCYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 6f(d)  Description:  Undistributed Income for Current Year  xpath: /IRS990PF/UndistributedIncomeGrp/UndistributedIncomeCYAmt 
+    # Line number: Part XIII Line 6f(d)  Description:  Undistributed Income for Current Year  xpath: /IRS990PF/UndistributedIncomeGrp/UndistributedIncomeCYAmt 
 
     CrpsDstr170b1EOr4942g3Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 7(a)  Description:  Treated as Distribution from Corpus to Satisfy Requirements Imposed by Section 170(b)(1)(E) or 4942(g)(3)  xpath: /IRS990PF/UndistributedIncomeGrp/CorpusDistri170b1EOr4942g3Amt 
+    # Line number: Part XIII Line 7(a)  Description: Treated as Distribution from Corpus to Satisfy Requirements Imposed by Section 170(b)(1)(E) or 4942(g)(3)  xpath: /IRS990PF/UndistributedIncomeGrp/CorpusDistri170b1EOr4942g3Amt 
 
     ExcssDstrCyvFrmYr5Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 8(a)  Description:  Excess Distribution Carryover from Year 5  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistriCyovFromYr5Amt 
+    # Line number: Part XIII Line 8(a)  Description: Excess Distribution Carryover from Year 5  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistriCyovFromYr5Amt 
 
     ExcssDstrCyvTNxtYrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 9(a)  Description:  Excess Distribution Carryover to Next Year  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistriCyovToNextYrAmt 
+    # Line number: Part XIII Line 9(a)  Description:  Excess Distribution Carryover to Next Year  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessDistriCyovToNextYrAmt 
 
     ExcssFrmYr4Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 10a  Description:  Excess from Year 4  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromYear4Amt 
+    # Line number: Part XIII Line 10a  Description: Excess from Year 4  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromYear4Amt 
 
     ExcssFrmYr3Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 10b  Description:  Excess from Year 3  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromYear3Amt 
+    # Line number: Part XIII Line 10b  Description: Excess from Year 3  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromYear3Amt 
 
     ExcssFrmYr2Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 10c  Description:  Excess from Year 2  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromYear2Amt 
+    # Line number: Part XIII Line 10c  Description: Excess from Year 2  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromYear2Amt 
 
     ExcssFrmYr1Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 10d  Description:  Excess from Year 1  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromYear1Amt 
+    # Line number: Part XIII Line 10d  Description: Excess from Year 1  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromYear1Amt 
 
     ExcssFrmCrrntYrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XIII Line 10e  Description:  Excess from Current Year  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromCurrentYearAmt 
+    # Line number: Part XIII Line 10e  Description:  Excess from Current Year  xpath: /IRS990PF/UndistributedIncomeGrp/ExcessFromCurrentYearAmt 
 
 #######
 #
@@ -4061,7 +4336,7 @@ class pf_part_xiv(models.Model):
     # xpath: /IRS990PF/PrivateOperatingFoundationsGrp 
 
     PrvtOprtngFndtns_PrvtOprtngFndtnRlngDt = models.CharField(null=True, blank=True, max_length=31)
-    # Line number:  Part XIV Line 1a  Description:  Date of Ruling  xpath: /IRS990PF/PrivateOperatingFoundationsGrp/PrivateOperatingFndtnRulingDt 
+    # Line number: Part XIV Line 1a  Description:  Date of Ruling  xpath: /IRS990PF/PrivateOperatingFoundationsGrp/PrivateOperatingFndtnRulingDt 
 
     LssrAdjNtIncmMnInvstRt_CrrntYrAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  column (a)  Description:  Current Year  xpath: /IRS990PF/PrivateOperatingFoundationsGrp/LessorAdjNetIncmMinInvstRetGrp/CurrentYearAmt 
@@ -4244,10 +4519,10 @@ class pf_part_xiv(models.Model):
     # Line number:  column (e)  Description:  Total  xpath: /IRS990PF/PrivateOperatingFoundationsGrp/GrossInvestmentIncomeGrp/TotalAmt 
 
     PrvtOprtngFndtns_Sctn4942j3Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part XIV Line 1b  Description:  Section 4942(j)(3)  xpath: /IRS990PF/PrivateOperatingFoundationsGrp/Section4942j3Ind 
+    # Line number: Part XIV Line 1b  Description: Section 4942(j)(3)  xpath: /IRS990PF/PrivateOperatingFoundationsGrp/Section4942j3Ind 
 
     PrvtOprtngFndtns_Sctn4942j5Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part XIV Line 1b  Description:  Section 4942(j)(5)  xpath: /IRS990PF/PrivateOperatingFoundationsGrp/Section4942j5Ind 
+    # Line number: Part XIV Line 1b  Description: Section 4942(j)(5)  xpath: /IRS990PF/PrivateOperatingFoundationsGrp/Section4942j5Ind 
 
 #######
 #
@@ -4263,13 +4538,13 @@ class pf_part_xv(models.Model):
     # xpath: /IRS990PF/SupplementaryInformationGrp 
 
     OnlyCntrTPrslctdInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part XV Line 2  Description:  Only Contributes to Preselected Charitable Organizations  xpath: /IRS990PF/SupplementaryInformationGrp/OnlyContriToPreselectedInd 
+    # Line number: Part XV Line 2  Description:  Only Contributes to Preselected Charitable Organizations  xpath: /IRS990PF/SupplementaryInformationGrp/OnlyContriToPreselectedInd 
 
     TtlGrntOrCntrPdDrYrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XV Line 3a Total  Description:  Total Grant or Contribution Paid During Year  xpath: /IRS990PF/SupplementaryInformationGrp/TotalGrantOrContriPdDurYrAmt 
+    # Line number: Part XV Line 3a Total  Description:  Total Grant or Contribution Paid During Year  xpath: /IRS990PF/SupplementaryInformationGrp/TotalGrantOrContriPdDurYrAmt 
 
     TtlGrntOrCntrApprvFtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XV Line 3b Total  Description:  Total Grant or Contribution Approved for Future Payment  xpath: /IRS990PF/SupplementaryInformationGrp/TotalGrantOrContriApprvFutAmt 
+    # Line number: Part XV Line 3b Total  Description:  Total Grant or Contribution Approved for Future Payment  xpath: /IRS990PF/SupplementaryInformationGrp/TotalGrantOrContriApprvFutAmt 
 
 #######
 #
@@ -4285,7 +4560,7 @@ class pf_part_xvia(models.Model):
     # xpath: /IRS990PF/AnalysisIncomeProducingActyGrp 
 
     AnlyssIncmPrdcngActy_SbttlsIncmPrdcngActy = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A Line 12  Description:  Subtotal (add columns (B), (D), and (E))  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/SubtotalsIncmProducingActyGrp 
+    # Line number: Part XVI-A Line 12  Description:  Subtotal (add columns (B), (D), and (E))  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/SubtotalsIncmProducingActyGrp 
 
     SbttlsIncmPrdcngActy_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/SubtotalsIncmProducingActyGrp/UnrelatedBusinessTaxblIncmAmt 
@@ -4297,7 +4572,28 @@ class pf_part_xvia(models.Model):
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/SubtotalsIncmProducingActyGrp/RelatedOrExemptFunctionIncmAmt 
 
     AnlyssIncmPrdcngActy_TtlIncmPrdcngActyAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A Line 13  Description:  Total (add line 104, columns (B), (D), and (E))  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/TotalIncomeProducingActyAmt 
+    # Line number: Part XVI-A Line 13  Description: Total (add line 104, columns (B), (D), and (E))  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/TotalIncomeProducingActyAmt 
+
+    DvAndIntFrmScPrtVII_BsnssCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/BusinessCd 
+
+    FsCntrctsFrmGvtAg_BsnssCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/BusinessCd 
+
+    GnSlsAstOthThnInvntry_BsnssCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/BusinessCd 
+
+    GrssPrftLssSlsOfInvntry_BsnssCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/BusinessCd 
+
+    IntOnSvAndTmpCshInvst_BsnssCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/BusinessCd 
+
+    MmbrshpDsAndAssmnt_BsnssCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/BusinessCd 
+
+    NtIncmLssFrmSpclEvt_BsnssCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/BusinessCd 
 
     NtRntlIncmPrsnlPrp_BsnssCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/BusinessCd 
@@ -4308,29 +4604,17 @@ class pf_part_xvia(models.Model):
     NtRntlIncmRNtDbtFncdPrp_BsnssCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/BusinessCd 
 
-    NtIncmLssFrmSpclEvt_BsnssCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/BusinessCd 
-
-    DvAndIntFrmScPrtVII_BsnssCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/BusinessCd 
-
-    GnSlsAstOthThnInvntry_BsnssCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/BusinessCd 
-
     OthrInvstmntIncmPrtVII_BsnssCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/BusinessCd 
 
-    FsCntrctsFrmGvtAg_BsnssCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/BusinessCd 
+    DvAndIntFrmScPrtVII_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    IntOnSvAndTmpCshInvst_BsnssCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/BusinessCd 
+    FsCntrctsFrmGvtAg_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    GrssPrftLssSlsOfInvntry_BsnssCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/BusinessCd 
-
-    MmbrshpDsAndAssmnt_BsnssCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/BusinessCd 
+    GnSlsAstOthThnInvntry_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/UnrelatedBusinessTaxblIncmAmt 
 
     GrssPrftLssSlsOfInvntry_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/UnrelatedBusinessTaxblIncmAmt 
@@ -4338,38 +4622,23 @@ class pf_part_xvia(models.Model):
     IntOnSvAndTmpCshInvst_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    OthrInvstmntIncmPrtVII_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
-
     MmbrshpDsAndAssmnt_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/UnrelatedBusinessTaxblIncmAmt 
-
-    GnSlsAstOthThnInvntry_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/UnrelatedBusinessTaxblIncmAmt 
-
-    FsCntrctsFrmGvtAg_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/UnrelatedBusinessTaxblIncmAmt 
-
-    NtRntlIncmPrsnlPrp_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/UnrelatedBusinessTaxblIncmAmt 
-
-    DvAndIntFrmScPrtVII_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
 
     NtIncmLssFrmSpclEvt_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    NtRntlIncmRNtDbtFncdPrp_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/UnrelatedBusinessTaxblIncmAmt 
+    NtRntlIncmPrsnlPrp_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/UnrelatedBusinessTaxblIncmAmt 
 
     NtRntlIncmRDbtFncdPrp_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/UnrelatedBusinessTaxblIncmAmt 
 
-    IntOnSvAndTmpCshInvst_ExclsnCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/ExclusionCd 
+    NtRntlIncmRNtDbtFncdPrp_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/UnrelatedBusinessTaxblIncmAmt 
 
-    GnSlsAstOthThnInvntry_ExclsnCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/ExclusionCd 
+    OthrInvstmntIncmPrtVII_UnrltdBsnssTxblIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (B)  Description:  Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/UnrelatedBusinessTaxblIncmAmt 
 
     DvAndIntFrmScPrtVII_ExclsnCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/ExclusionCd 
@@ -4377,32 +4646,47 @@ class pf_part_xvia(models.Model):
     FsCntrctsFrmGvtAg_ExclsnCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/ExclusionCd 
 
-    MmbrshpDsAndAssmnt_ExclsnCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/ExclusionCd 
+    GnSlsAstOthThnInvntry_ExclsnCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/ExclusionCd 
 
     GrssPrftLssSlsOfInvntry_ExclsnCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/ExclusionCd 
 
-    NtRntlIncmRNtDbtFncdPrp_ExclsnCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/ExclusionCd 
+    IntOnSvAndTmpCshInvst_ExclsnCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/ExclusionCd 
 
-    NtRntlIncmPrsnlPrp_ExclsnCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/ExclusionCd 
+    MmbrshpDsAndAssmnt_ExclsnCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/ExclusionCd 
 
     NtIncmLssFrmSpclEvt_ExclsnCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/ExclusionCd 
 
-    OthrInvstmntIncmPrtVII_ExclsnCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/ExclusionCd 
+    NtRntlIncmPrsnlPrp_ExclsnCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/ExclusionCd 
 
     NtRntlIncmRDbtFncdPrp_ExclsnCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/ExclusionCd 
 
+    NtRntlIncmRNtDbtFncdPrp_ExclsnCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/ExclusionCd 
+
+    OthrInvstmntIncmPrtVII_ExclsnCd = models.TextField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (C)  Description:  Exclusion code (01 through 43)  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/ExclusionCd 
+
+    DvAndIntFrmScPrtVII_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/ExclusionAmt 
+
+    FsCntrctsFrmGvtAg_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/ExclusionAmt 
+
+    GnSlsAstOthThnInvntry_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/ExclusionAmt 
+
     GrssPrftLssSlsOfInvntry_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/ExclusionAmt 
 
-    NtRntlIncmPrsnlPrp_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/ExclusionAmt 
+    IntOnSvAndTmpCshInvst_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/ExclusionAmt 
 
     MmbrshpDsAndAssmnt_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/ExclusionAmt 
@@ -4410,41 +4694,26 @@ class pf_part_xvia(models.Model):
     NtIncmLssFrmSpclEvt_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/ExclusionAmt 
 
-    DvAndIntFrmScPrtVII_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/ExclusionAmt 
-
-    GnSlsAstOthThnInvntry_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/ExclusionAmt 
+    NtRntlIncmPrsnlPrp_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/ExclusionAmt 
 
     NtRntlIncmRDbtFncdPrp_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/ExclusionAmt 
 
-    FsCntrctsFrmGvtAg_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/ExclusionAmt 
+    NtRntlIncmRNtDbtFncdPrp_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/ExclusionAmt 
 
     OthrInvstmntIncmPrtVII_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/ExclusionAmt 
 
-    IntOnSvAndTmpCshInvst_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/ExclusionAmt 
-
-    NtRntlIncmRNtDbtFncdPrp_ExclsnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (D)  Description:  Excluded by section 512, 513, or 514: Amount  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/ExclusionAmt 
-
-    NtIncmLssFrmSpclEvt_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/RelatedOrExemptFunctionIncmAmt 
-
-    NtRntlIncmPrsnlPrp_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/RelatedOrExemptFunctionIncmAmt 
-
-    NtRntlIncmRNtDbtFncdPrp_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/RelatedOrExemptFunctionIncmAmt 
-
-    NtRntlIncmRDbtFncdPrp_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/RelatedOrExemptFunctionIncmAmt 
+    DvAndIntFrmScPrtVII_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/RelatedOrExemptFunctionIncmAmt 
 
     FsCntrctsFrmGvtAg_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/FeesContractsFromGovtAgGrp/RelatedOrExemptFunctionIncmAmt 
+
+    GnSlsAstOthThnInvntry_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/RelatedOrExemptFunctionIncmAmt 
 
     GrssPrftLssSlsOfInvntry_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GrossProfitLossSlsOfInvntryGrp/RelatedOrExemptFunctionIncmAmt 
@@ -4452,14 +4721,20 @@ class pf_part_xvia(models.Model):
     IntOnSvAndTmpCshInvst_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/IntOnSavAndTempCashInvstGrp/RelatedOrExemptFunctionIncmAmt 
 
-    DvAndIntFrmScPrtVII_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/DivAndIntFromSecPartVIIGrp/RelatedOrExemptFunctionIncmAmt 
-
     MmbrshpDsAndAssmnt_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/MembershipDuesAndAssmntGrp/RelatedOrExemptFunctionIncmAmt 
 
-    GnSlsAstOthThnInvntry_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/GainSalesAstOthThanInvntryGrp/RelatedOrExemptFunctionIncmAmt 
+    NtIncmLssFrmSpclEvt_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetIncomeLossFromSpecialEvtGrp/RelatedOrExemptFunctionIncmAmt 
+
+    NtRntlIncmPrsnlPrp_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRentalIncomePersonalPropGrp/RelatedOrExemptFunctionIncmAmt 
+
+    NtRntlIncmRDbtFncdPrp_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReDebtFincdPropGrp/RelatedOrExemptFunctionIncmAmt 
+
+    NtRntlIncmRNtDbtFncdPrp_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/NetRntlIncmReNotDebtFincdProp/RelatedOrExemptFunctionIncmAmt 
 
     OthrInvstmntIncmPrtVII_RltdOrExmptFnctnIncmAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (E)  Description:  Related or exempt function income  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherInvestmentIncmPartVIIGrp/RelatedOrExemptFunctionIncmAmt 
@@ -4491,39 +4766,55 @@ class pf_part_xvii(models.Model):
     # xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp 
 
     TrnsfrOfCshTNnchrtblEOInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 1a(1)  Description:  Transfers of cash to noncharitable EO  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TrnsfrOfCashToNonchrtblEOInd 
+    # Line number: Part XVII Line 1a(1)  Description:  Transfers of cash to noncharitable EO  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TrnsfrOfCashToNonchrtblEOInd 
 
     TrnsfrOthrAsstNnchrtblEOInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 1a(2)  Description:  Transfers of other assets to noncharitable EO  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TrnsfrOtherAssetNonchrtblEOInd 
+    # Line number: Part XVII Line 1a(2)  Description:  Transfers of other assets to noncharitable EO  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TrnsfrOtherAssetNonchrtblEOInd 
 
     SlsOrExchngsOfAsstsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 1b(1)  Description:  Other transactions : Sales or exchanges of assets with a noncharitable exempt organization  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/SalesOrExchangesOfAssetsInd 
+    # Line number: Part XVII Line 1b(1)  Description:  Other transactions : Sales or exchanges of assets with a noncharitable exempt organization  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/SalesOrExchangesOfAssetsInd 
 
     PrchsOfAsstsNnchrtblEOInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 1b(2)  Description:  Other transactions : Purchases of assets from a noncharitable exempt organization  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/PurchaseOfAssetsNonchrtblEOInd 
+    # Line number: Part XVII Line 1b(2)  Description:  Other transactions : Purchases of assets from a noncharitable exempt organization  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/PurchaseOfAssetsNonchrtblEOInd 
 
     RntlOfFcltsOthAsstsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 1b(3)  Description:  Other transactions : Rental of facilities, equipment, or other assets  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RentalOfFacilitiesOthAssetsInd 
+    # Line number: Part XVII Line 1b(3)  Description:  Other transactions : Rental of facilities, equipment, or other assets  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RentalOfFacilitiesOthAssetsInd 
 
     RmbrsmntArrngmntsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 1b(4)  Description:  Other transactions : Reimbursement arrangements  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/ReimbursementArrangementsInd 
+    # Line number: Part XVII Line 1b(4)  Description:  Other transactions : Reimbursement arrangements  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/ReimbursementArrangementsInd 
 
     LnsOrLnGrntsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 1b(5)  Description:  Other transactions : Loans or loan guarantees  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/LoansOrLoanGuaranteesInd 
+    # Line number: Part XVII Line 1b(5)  Description:  Other transactions : Loans or loan guarantees  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/LoansOrLoanGuaranteesInd 
 
     PrfrmncOfSrvcsEtcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 1b(6)  Description:  Other transactions : Performance of Services or membership or fundraising solicitations  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/PerformanceOfServicesEtcInd 
+    # Line number: Part XVII Line 1b(6)  Description:  Other transactions : Performance of Services or membership or fundraising solicitations  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/PerformanceOfServicesEtcInd 
 
     ShrngOfFcltsEtcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 1c  Description:  Other transactions : Sharing of facilities, equipment, mailing lists, other assets, or paid employees  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/SharingOfFacilitiesEtcInd 
+    # Line number: Part XVII Line 1c  Description:  Other transactions : Sharing of facilities, equipment, mailing lists, other assets, or paid employees  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/SharingOfFacilitiesEtcInd 
 
     RltnshpsNnchrtblEOInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part XVII Line 2a  Description:  Relationships with noncharitable EOs  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipsNonchrtblEOInd 
+    # Line number: Part XVII Line 2a  Description:  Relationships with noncharitable EOs  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipsNonchrtblEOInd 
 
 #######
 #
-# IRS990PF - CapGainsLossTxInvstIncmGrp
-# A repeating structure from PF Part IV Capital Gains and Losses for Tax on Investment Income 
+# IRS990PF - PFSpclCndtnDsc
+# Description: Special condition description
+# A repeating structure from pf_part_0
+#
+#######
+
+class PFSpclCndtnDsc(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    SpclCndtnDsc = models.TextField(null=True, blank=True)
+    # Description:  Special condition description  xpath: /IRS990PF/SpecialConditionDesc 
+
+#######
+#
+# IRS990PF - PFCpGnsLssTxInvstIncm
+# Description: Capital Gains and Losses for Tax on Investment Income
+# A repeating structure from pf_part_iv
 #
 #######
 
@@ -4535,45 +4826,46 @@ class PFCpGnsLssTxInvstIncm(models.Model):
     # xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp 
 
     PrprtyDsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part IV Line 1(a)  Description:  Description of Asset  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/PropertyDesc 
+    # Line number: Part IV Line 1(a)  Description:  Description of Asset  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/PropertyDesc 
 
     HwAcqrdCd = models.TextField(null=True, blank=True)
-    # Line number:  Part IV Line 1(b)  Description:  How Acquired  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/HowAcquiredCd 
+    # Line number: Part IV Line 1(b)  Description:  How Acquired  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/HowAcquiredCd 
 
     AcqrdDt = models.CharField(null=True, blank=True, max_length=31)
-    # Line number:  Part IV Line 1(c)  Description:  Date Acquired  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/AcquiredDt 
+    # Line number: Part IV Line 1(c)  Description:  Date Acquired  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/AcquiredDt 
 
     SldDt = models.CharField(null=True, blank=True, max_length=31)
-    # Line number:  Part IV Line 1(d)  Description:  Date Sold  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/SoldDt 
+    # Line number: Part IV Line 1(d)  Description:  Date Sold  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/SoldDt 
 
     GrssSlsPrcAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1(e)  Description:  Gross Sales Price  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/GrossSalesPriceAmt 
+    # Line number: Part IV Line 1(e)  Description:  Gross Sales Price  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/GrossSalesPriceAmt 
 
     DprctnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1(f)  Description:  Depreciation  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/DepreciationAmt 
+    # Line number: Part IV Line 1(f)  Description:  Depreciation  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/DepreciationAmt 
 
     CstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1(g)  Description:  Cost or Other Basis  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/CostOrOtherBasisAmt 
+    # Line number: Part IV Line 1(g)  Description:  Cost or Other Basis  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/CostOrOtherBasisAmt 
 
     GnOrLssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1(h)  Description:  Gain or Loss  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/GainOrLossAmt 
+    # Line number: Part IV Line 1(h)  Description:  Gain or Loss  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/GainOrLossAmt 
 
     FMVAsOf123169Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1(i)  Description:  FMV as of 12/31/69  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/FMVAsOf123169Amt 
+    # Line number: Part IV Line 1(i)  Description: FMV as of 12/31/69  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/FMVAsOf123169Amt 
 
     AdjstdBssAsOf123169Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1(j)  Description:  Adjusted Basis as of 12/31/69  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/AdjustedBasisAsOf123169Amt 
+    # Line number: Part IV Line 1(j)  Description: Adjusted Basis as of 12/31/69  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/AdjustedBasisAsOf123169Amt 
 
     ExcssFMVOvrAdjstdBssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1(k)  Description:  Excess of FMV Over Adjusted Basis  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/ExcessFMVOverAdjustedBssAmt 
+    # Line number: Part IV Line 1(k)  Description:  Excess of FMV Over Adjusted Basis  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/ExcessFMVOverAdjustedBssAmt 
 
     GnsMnsExcssOrLsssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1(l)  Description:  Gains Minus Excess or Losses  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/GainsMinusExcessOrLossesAmt 
+    # Line number: Part IV Line 1(l)  Description:  Gains Minus Excess or Losses  xpath: /IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp/GainsMinusExcessOrLossesAmt 
 
 #######
 #
-# IRS990PF - ForeignCountryCd
-# A repeating structure from PF Part VII-A Statements Regarding Activities 
+# IRS990PF - PFFrgnCntryCd
+# Description:  Name of foreign country
+# A repeating structure from pf_part_viia
 #
 #######
 
@@ -4582,12 +4874,13 @@ class PFFrgnCntryCd(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     FrgnCntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VII-A Line 16  Description:  Name of foreign country  xpath: /IRS990PF/StatementsRegardingActyGrp/ForeignCountryCd 
+    # Line number: Part VII-A Line 16  Description:  Name of foreign country  xpath: /IRS990PF/StatementsRegardingActyGrp/ForeignCountryCd 
 
 #######
 #
-# IRS990PF - OrgReportOrRegisterStateCd
-# A repeating structure from PF Part VII-A Statements Regarding Activities 
+# IRS990PF - PFOrgRprtOrRgstrSttCd
+# Description:  States Filed With
+# A repeating structure from pf_part_viia
 #
 #######
 
@@ -4596,12 +4889,13 @@ class PFOrgRprtOrRgstrSttCd(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     OrgRprtOrRgstrSttCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VII-A Line 8a  Description:  States Filed With  xpath: /IRS990PF/StatementsRegardingActyGrp/OrgReportOrRegisterStateCd 
+    # Line number: Part VII-A Line 8a  Description:  States Filed With  xpath: /IRS990PF/StatementsRegardingActyGrp/OrgReportOrRegisterStateCd 
 
 #######
 #
-# IRS990PF - CompensationHighestPaidEmplGrp
-# A repeating structure from PF Part VIII Compensation 
+# IRS990PF - PFCmpnstnHghstPdEmpl
+# Description:  Compensation of the five highest paid employees other than officers, directors, and trustees
+# A repeating structure from pf_part_viii
 #
 #######
 
@@ -4610,7 +4904,7 @@ class PFCmpnstnHghstPdEmpl(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     OffcrDrTrstKyEmplInf_CmpnstnHghstPdEmpl = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 2  Description:  Compensation of the five highest paid employees other than officers, directors, and trustees  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp 
+    # Line number: Part VIII Line 2  Description:  Compensation of the five highest paid employees other than officers, directors, and trustees  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp 
 
     CmpnstnHghstPdEmpl_PrsnNm = models.TextField(null=True, blank=True)
     # Line number:  Part VIII Line 2(a)  Description:  Highest paid employee's name  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/PersonNm 
@@ -4630,43 +4924,77 @@ class PFCmpnstnHghstPdEmpl(models.Model):
     CmpnstnHghstPdEmpl_ExpnsAccntAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VIII Line 2(e)  Description:  Expense Account  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ExpenseAccountAmt 
 
-    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VIII Line 2(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/AddressLine2Txt 
-
-    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/CityNm 
-
-    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part VIII Line 2(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/ZIPCd 
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 2(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/AddressLine1 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VIII Line 2(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/AddressLine1Txt 
 
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 2(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/AddressLine2 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 2(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/AddressLine2Txt 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 2(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/State 
+
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part VIII Line 2(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/StateAbbreviationCd 
 
-    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VIII Line 2(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/CountryCd 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part VIII Line 2(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/ZIPCd 
+
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part VIII Line 2(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 2(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/AddressLine1 
 
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VIII Line 2(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/AddressLine1Txt 
 
-    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 2(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/ProvinceOrStateNm 
-
-    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/CityNm 
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 2(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VIII Line 2(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/AddressLine2Txt 
 
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 2(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/CityNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 2(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/Country 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 2(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/CountryCd 
+
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part VIII Line 2(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/ForeignPostalCd 
 
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 2(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/PostalCode 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 2(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 2(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp/ForeignAddress/ProvinceOrStateNm 
+
 #######
 #
-# IRS990PF - CompensationOfHghstPdCntrctGrp
-# A repeating structure from PF Part VIII Compensation 
+# IRS990PF - PFCmpnstnOfHghstPdCntrct
+# Description:  Compensation of the five highest paid independent contractors for professional services
+# A repeating structure from pf_part_viii
 #
 #######
 
@@ -4675,46 +5003,88 @@ class PFCmpnstnOfHghstPdCntrct(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     OffcrDrTrstKyEmplInf_CmpnstnOfHghstPdCntrct = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 3  Description:  Compensation of the five highest paid independent contractors for professional services  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp 
+    # Line number: Part VIII Line 3  Description:  Compensation of the five highest paid independent contractors for professional services  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp 
 
-    CmpnstnOfHghstPdCntrct_BsnssNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Business  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/BusinessName 
+    CmpnstnOfHghstPdCntrct_BsnssNmLn1 = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Business Name ine 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/BusinessName/BusinessNameLine1 
+
+    CmpnstnOfHghstPdCntrct_BsnssNmLn2 = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Business Name line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/BusinessName/BusinessNameLine2 
+
+    CmpnstnOfHghstPdCntrct_BsnssNmLn1 = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Business Name ine 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/BusinessName/BusinessNameLine1Txt 
+
+    CmpnstnOfHghstPdCntrct_BsnssNmLn2 = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Business Name line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/BusinessName/BusinessNameLine2Txt 
 
     CmpnstnOfHghstPdCntrct_PrsnNm = models.TextField(null=True, blank=True)
     # Line number:  Part VIII Line 3(a)  Description:  Highest paid contractor's name - Person  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/PersonNm 
 
-    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VIII Line 3(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/StateAbbreviationCd 
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 3(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine1 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VIII Line 3(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine1Txt 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 3(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine2 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VIII Line 3(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/AddressLine2Txt 
 
-    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part VIII Line 3(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/ZIPCd 
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part VIII Line 3(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/City 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part VIII Line 3(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/CityNm 
 
-    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 3(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/CityNm 
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 3(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/State 
 
-    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 3(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/ProvinceOrStateNm 
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 3(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/StateAbbreviationCd 
 
-    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 3(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/ForeignPostalCd 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part VIII Line 3(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/ZIPCd 
+
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part VIII Line 3(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 3(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine1 
 
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VIII Line 3(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine1Txt 
 
-    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VIII Line 3(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/CountryCd 
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 3(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VIII Line 3(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/AddressLine2Txt 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/CityNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 3(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/Country 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 3(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/CountryCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/PostalCode 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 3(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ForeignAddress/ProvinceOrStateNm 
 
     CmpnstnOfHghstPdCntrct_SrvcTxt = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Part VIII Line 3(b)  Description:  Type of service  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp/ServiceTypeTxt 
@@ -4724,8 +5094,9 @@ class PFCmpnstnOfHghstPdCntrct(models.Model):
 
 #######
 #
-# IRS990PF - OfficerDirTrstKeyEmplGrp
-# A repeating structure from PF Part VIII Compensation 
+# IRS990PF - PFOffcrDrTrstKyEmpl
+# Description:  Officer, Director, Trustee, or Key Employee
+# A repeating structure from pf_part_viii
 #
 #######
 
@@ -4734,13 +5105,43 @@ class PFOffcrDrTrstKyEmpl(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     OffcrDrTrstKyEmplInf_OffcrDrTrstKyEmpl = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 1  Description:  Officer, Director, Trustee, or Key Employee  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp 
+    # Line number: Part VIII Line 1  Description:  Officer, Director, Trustee, or Key Employee  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp 
 
     OffcrDrTrstKyEmpl_PrsnNm = models.TextField(null=True, blank=True)
     # Line number:  Part VIII Line 1(a)  Description:  Person Name  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/PersonNm 
 
-    OffcrDrTrstKyEmpl_BsnssNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 1(a)  Description:  Business Name  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/BusinessName 
+    OffcrDrTrstKyEmpl_BsnssNmLn1 = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  Business Name line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/BusinessName/BusinessNameLine1 
+
+    OffcrDrTrstKyEmpl_BsnssNmLn2 = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  Business Name line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/BusinessName/BusinessNameLine2 
+
+    OffcrDrTrstKyEmpl_BsnssNmLn1 = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  Business Name line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/BusinessName/BusinessNameLine1Txt 
+
+    OffcrDrTrstKyEmpl_BsnssNmLn2 = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  Business Name line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/BusinessName/BusinessNameLine2Txt 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine2 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine2Txt 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 1(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part VIII Line 1(a)  Description:  State  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/StateAbbreviationCd 
@@ -4748,32 +5149,44 @@ class PFOffcrDrTrstKyEmpl(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part VIII Line 1(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/ZIPCd 
 
-    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine1Txt 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part VIII Line 1(a)  Description:  ZIP code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/ZIPCode 
 
-    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/CityNm 
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/AddressLine1 
 
-    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VIII Line 1(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/USAddress/AddressLine2Txt 
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/AddressLine1Txt 
 
-    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part VIII Line 1(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/CountryCd 
-
-    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 1(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/ProvinceOrStateNm 
-
-    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 1(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/ForeignPostalCd 
-
-    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/CityNm 
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VIII Line 1(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VIII Line 1(a)  Description:  Address line 2  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/AddressLine2Txt 
 
-    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part VIII Line 1(a)  Description:  Address line 1  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/AddressLine1Txt 
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  City  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/CityNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 1(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/Country 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VIII Line 1(a)  Description:  Country  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/CountryCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  Postal code  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/PostalCode 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VIII Line 1(a)  Description:  Province or state  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/ForeignAddress/ProvinceOrStateNm 
 
     OffcrDrTrstKyEmpl_TtlTxt = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Part VIII Line 1(b)  Description:  Title  xpath: /IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp/TitleTxt 
@@ -4792,8 +5205,9 @@ class PFOffcrDrTrstKyEmpl(models.Model):
 
 #######
 #
-# IRS990PF - ApplicationSubmissionInfoGrp
-# A repeating structure from PF Part XV Supplementary Information 
+# IRS990PF - PFApplctnSbmssnInf
+# Description: Application Submission Information (repeating group for Lines 2a - 2d)
+# A repeating structure from pf_part_xv
 #
 #######
 
@@ -4805,190 +5219,94 @@ class PFApplctnSbmssnInf(models.Model):
     # xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp 
 
     ApplctnSbmssnInf_RcpntPrsnNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 2a  Description:  Name of Person to Receive Applications  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientPersonNm 
+    # Line number: Part XV Line 2a  Description:  Name of Person to Receive Applications  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientPersonNm 
 
     ApplctnSbmssnInf_RcpntPhnNm = models.CharField(null=True, blank=True, max_length=10)
-    # Line number:  Part XV Line 2a  Description:  Phone Number of Person to Receive Applications  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientPhoneNum 
+    # Line number: Part XV Line 2a  Description:  Phone Number of Person to Receive Applications  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientPhoneNum 
 
     ApplctnSbmssnInf_RcpntEmlAddrssTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part XV Line 2a  Description:  Recipient Email Address  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientEmailAddressTxt 
+    # Line number: Part XV Line 2a  Description:  Recipient Email Address  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientEmailAddressTxt 
 
     ApplctnSbmssnInf_FrmAndInfAndMtrlsTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 2b  Description:  Form and Information and Materials To Include  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/FormAndInfoAndMaterialsTxt 
+    # Line number: Part XV Line 2b  Description:  Form and Information and Materials To Include  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/FormAndInfoAndMaterialsTxt 
 
     ApplctnSbmssnInf_SbmssnDdlnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part XV Line 2c  Description:  Subsmission Deadlines  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/SubmissionDeadlinesTxt 
+    # Line number: Part XV Line 2c  Description:  Subsmission Deadlines  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/SubmissionDeadlinesTxt 
 
     ApplctnSbmssnInf_RstrctnsOnAwrdsTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 2d  Description:  Restrictions on Awards  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RestrictionsOnAwardsTxt 
-
-    RcpntUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine2Txt 
-
-    RcpntUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/CityNm 
-
-    RcpntUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part XV Line 2a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/ZIPCd 
-
-    RcpntUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part XV Line 2a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/StateAbbreviationCd 
+    # Line number: Part XV Line 2d  Description:  Restrictions on Awards  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RestrictionsOnAwardsTxt 
 
     RcpntUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine1Txt 
-
-    RcpntFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 2a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/ProvinceOrStateNm 
-
-    RcpntFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 2a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/ForeignPostalCd 
-
-    RcpntFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine1Txt 
-
-    RcpntFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/CityNm 
-
-    RcpntFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part XV Line 2a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/CountryCd 
-
-    RcpntFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine2Txt 
-
-#######
-#
-# IRS990PF - GrantOrContriApprvForFutGrp
-# A repeating structure from PF Part XV Supplementary Information 
-#
-#######
-
-class PFGrntOrCntrApprvFrFt(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    GrntOrCntrApprvFrFt_RcpntPrsnNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3b  Description:  Recipient Person Name  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientPersonNm 
-
-    RcpntBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part XV Line 3b  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine1Txt 
-
-    RcpntBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part XV Line 3b  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine2Txt 
-
-    RcpntUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/CityNm 
-
-    RcpntUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine2Txt 
+    # Line number: Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine1 
 
     RcpntUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine1Txt 
-
-    RcpntUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part XV Line 3b  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/ZIPCd 
-
-    RcpntUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part XV Line 3b  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/StateAbbreviationCd 
-
-    RcpntFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 3b  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/ForeignPostalCd 
-
-    RcpntFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine2Txt 
-
-    RcpntFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part XV Line 3b  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/CountryCd 
-
-    RcpntFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/CityNm 
-
-    RcpntFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine1Txt 
-
-    RcpntFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 3b  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/ProvinceOrStateNm 
-
-    GrntOrCntrApprvFrFt_RcpntRltnshpTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part XV Line 3b  Description:  Recipient Relationship to Foundation Manager or Substantial Contributor  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientRelationshipTxt 
-
-    GrntOrCntrApprvFrFt_RcpntFndtnSttsTxt = models.CharField(null=True, blank=True, max_length=20)
-    # Line number:  Part XV Line 3b  Description:  Recipient's Foundation Status  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientFoundationStatusTxt 
-
-    GrntOrCntrApprvFrFt_GrntOrCntrbtnPrpsTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 3b  Description:  Purpose of Grant or Contribution  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/GrantOrContributionPurposeTxt 
-
-    GrntOrCntrApprvFrFt_Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XV Line 3b  Description:  Amount  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/Amt 
-
-#######
-#
-# IRS990PF - GrantOrContributionPdDurYrGrp
-# A repeating structure from PF Part XV Supplementary Information 
-#
-#######
-
-class PFGrntOrCntrbtnPdDrYr(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    GrntOrCntrbtnPdDrYr_RcpntPrsnNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3a  Description:  Recipient Person Name  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientPersonNm 
-
-    RcpntBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part XV Line 3a  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine2Txt 
-
-    RcpntBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part XV Line 3a  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine1Txt 
-
-    RcpntUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part XV Line 3a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/ZIPCd 
-
-    RcpntUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part XV Line 3a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/StateAbbreviationCd 
-
-    RcpntUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/CityNm 
+    # Line number: Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine1Txt 
 
     RcpntUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine2Txt 
+    # Line number: Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine2 
 
-    RcpntUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine1Txt 
+    RcpntUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/AddressLine2Txt 
+
+    RcpntUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/City 
+
+    RcpntUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/CityNm 
+
+    RcpntUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 2a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/State 
+
+    RcpntUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 2a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/StateAbbreviationCd 
+
+    RcpntUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part XV Line 2a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/ZIPCd 
+
+    RcpntUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part XV Line 2a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientUSAddress/ZIPCode 
 
     RcpntFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine1Txt 
+    # Line number: Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine1 
 
-    RcpntFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 3a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/ProvinceOrStateNm 
-
-    RcpntFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part XV Line 3a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/CountryCd 
-
-    RcpntFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/CityNm 
+    RcpntFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 2a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine1Txt 
 
     RcpntFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine2Txt 
+    # Line number: Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine2 
+
+    RcpntFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 2a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/AddressLine2Txt 
+
+    RcpntFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/City 
+
+    RcpntFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 2a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/CityNm 
+
+    RcpntFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 2a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/Country 
+
+    RcpntFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 2a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/CountryCd 
 
     RcpntFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 3a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/ForeignPostalCd 
+    # Line number: Part XV Line 2a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/ForeignPostalCd 
 
-    GrntOrCntrbtnPdDrYr_RcpntRltnshpTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part XV Line 3a  Description:  Recipient Relationship to Foundation Manager or Substantial Contributor  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientRelationshipTxt 
+    RcpntFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 2a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/PostalCode 
 
-    GrntOrCntrbtnPdDrYr_RcpntFndtnSttsTxt = models.CharField(null=True, blank=True, max_length=20)
-    # Line number:  Part XV Line 3a  Description:  Recipient's Foundation Status  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientFoundationStatusTxt 
+    RcpntFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 2a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/ProvinceOrState 
 
-    GrntOrCntrbtnPdDrYr_GrntOrCntrbtnPrpsTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part XV Line 3a  Description:  Purpose of Grant or Contribution  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/GrantOrContributionPurposeTxt 
-
-    GrntOrCntrbtnPdDrYr_Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XV Line 3a  Description:  Amount  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/Amt 
+    RcpntFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 2a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp/RecipientForeignAddress/ProvinceOrStateNm 
 
 #######
 #
-# IRS990PF - ContributingManagerNm
-# A repeating structure from PF Part XV Supplementary Information 
+# IRS990PF - PFCntrbtngMngrNm
+# Description:  Contributing Manager
+# A repeating structure from pf_part_xv
 #
 #######
 
@@ -4997,12 +5315,221 @@ class PFCntrbtngMngrNm(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     CntrbtngMngrNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 1a  Description:  Contributing Manager  xpath: /IRS990PF/SupplementaryInformationGrp/ContributingManagerNm 
+    # Line number: Part XV Line 1a  Description:  Contributing Manager  xpath: /IRS990PF/SupplementaryInformationGrp/ContributingManagerNm 
 
 #######
 #
-# IRS990PF - ShareholderManagerNm
-# A repeating structure from PF Part XV Supplementary Information 
+# IRS990PF - PFGrntOrCntrApprvFrFt
+# A repeating structure from pf_part_xv
+#
+#######
+
+class PFGrntOrCntrApprvFrFt(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    GrntOrCntrApprvFrFt_RcpntPrsnNm = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3b  Description:  Recipient Person Name  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientPersonNm 
+
+    RcpntBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part XV Line 3b  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine1 
+
+    RcpntBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part XV Line 3b  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine1Txt 
+
+    RcpntBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part XV Line 3b  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine2 
+
+    RcpntBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part XV Line 3b  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientBusinessName/BusinessNameLine2Txt 
+
+    RcpntUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine1 
+
+    RcpntUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine1Txt 
+
+    RcpntUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine2 
+
+    RcpntUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/AddressLine2Txt 
+
+    RcpntUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/City 
+
+    RcpntUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/CityNm 
+
+    RcpntUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 3b  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/State 
+
+    RcpntUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 3b  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/StateAbbreviationCd 
+
+    RcpntUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part XV Line 3b  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/ZIPCd 
+
+    RcpntUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part XV Line 3b  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientUSAddress/ZIPCode 
+
+    RcpntFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine1 
+
+    RcpntFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3b  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine1Txt 
+
+    RcpntFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine2 
+
+    RcpntFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3b  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/AddressLine2Txt 
+
+    RcpntFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/City 
+
+    RcpntFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3b  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/CityNm 
+
+    RcpntFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 3b  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/Country 
+
+    RcpntFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 3b  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/CountryCd 
+
+    RcpntFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3b  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/ForeignPostalCd 
+
+    RcpntFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3b  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/PostalCode 
+
+    RcpntFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3b  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/ProvinceOrState 
+
+    RcpntFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3b  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientForeignAddress/ProvinceOrStateNm 
+
+    GrntOrCntrApprvFrFt_RcpntRltnshpTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part XV Line 3b  Description:  Recipient Relationship to Foundation Manager or Substantial Contributor  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientRelationshipTxt 
+
+    GrntOrCntrApprvFrFt_RcpntFndtnSttsTxt = models.CharField(null=True, blank=True, max_length=20)
+    # Line number: Part XV Line 3b  Description:  Recipient's Foundation Status  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/RecipientFoundationStatusTxt 
+
+    GrntOrCntrApprvFrFt_GrntOrCntrbtnPrpsTxt = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3b  Description:  Purpose of Grant or Contribution  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/GrantOrContributionPurposeTxt 
+
+    GrntOrCntrApprvFrFt_Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number: Part XV Line 3b  Description:  Amount  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp/Amt 
+
+#######
+#
+# IRS990PF - PFGrntOrCntrbtnPdDrYr
+# A repeating structure from pf_part_xv
+#
+#######
+
+class PFGrntOrCntrbtnPdDrYr(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    GrntOrCntrbtnPdDrYr_RcpntPrsnNm = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3a  Description:  Recipient Person Name  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientPersonNm 
+
+    RcpntBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part XV Line 3a  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine1 
+
+    RcpntBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part XV Line 3a  Description:  Business name line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine1Txt 
+
+    RcpntBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part XV Line 3a  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine2 
+
+    RcpntBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part XV Line 3a  Description:  Business name line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientBusinessName/BusinessNameLine2Txt 
+
+    RcpntUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine1 
+
+    RcpntUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine1Txt 
+
+    RcpntUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine2 
+
+    RcpntUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/AddressLine2Txt 
+
+    RcpntUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/City 
+
+    RcpntUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/CityNm 
+
+    RcpntUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 3a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/State 
+
+    RcpntUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 3a  Description:  State  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/StateAbbreviationCd 
+
+    RcpntUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part XV Line 3a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/ZIPCd 
+
+    RcpntUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part XV Line 3a  Description:  ZIP code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientUSAddress/ZIPCode 
+
+    RcpntFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine1 
+
+    RcpntFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3a  Description:  Address line 1  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine1Txt 
+
+    RcpntFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine2 
+
+    RcpntFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part XV Line 3a  Description:  Address line 2  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/AddressLine2Txt 
+
+    RcpntFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/City 
+
+    RcpntFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3a  Description:  City  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/CityNm 
+
+    RcpntFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 3a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/Country 
+
+    RcpntFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part XV Line 3a  Description:  Country  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/CountryCd 
+
+    RcpntFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/ForeignPostalCd 
+
+    RcpntFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3a  Description:  Postal code  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/PostalCode 
+
+    RcpntFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/ProvinceOrState 
+
+    RcpntFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3a  Description:  Province or state  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientForeignAddress/ProvinceOrStateNm 
+
+    GrntOrCntrbtnPdDrYr_RcpntRltnshpTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part XV Line 3a  Description:  Recipient Relationship to Foundation Manager or Substantial Contributor  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientRelationshipTxt 
+
+    GrntOrCntrbtnPdDrYr_RcpntFndtnSttsTxt = models.CharField(null=True, blank=True, max_length=20)
+    # Line number: Part XV Line 3a  Description:  Recipient's Foundation Status  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/RecipientFoundationStatusTxt 
+
+    GrntOrCntrbtnPdDrYr_GrntOrCntrbtnPrpsTxt = models.TextField(null=True, blank=True)
+    # Line number: Part XV Line 3a  Description:  Purpose of Grant or Contribution  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/GrantOrContributionPurposeTxt 
+
+    GrntOrCntrbtnPdDrYr_Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number: Part XV Line 3a  Description:  Amount  xpath: /IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp/Amt 
+
+#######
+#
+# IRS990PF - PFShrhldrMngrNm
+# Description:  Shareholder Manager
+# A repeating structure from pf_part_xv
 #
 #######
 
@@ -5011,12 +5538,12 @@ class PFShrhldrMngrNm(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     ShrhldrMngrNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part XV Line 1b  Description:  Shareholder Manager  xpath: /IRS990PF/SupplementaryInformationGrp/ShareholderManagerNm 
+    # Line number: Part XV Line 1b  Description:  Shareholder Manager  xpath: /IRS990PF/SupplementaryInformationGrp/ShareholderManagerNm 
 
 #######
 #
-# IRS990PF - OtherRevenueDescribedGrp
-# A repeating structure from PF Part XVI-A Analysis of Income-Producing Activities 
+# IRS990PF - PFOthrRvnDscrbd
+# A repeating structure from pf_part_xvia
 #
 #######
 
@@ -5025,7 +5552,7 @@ class PFOthrRvnDscrbd(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     Dsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part XVI-A Line 11  Description:  Description  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/Desc 
+    # Line number: Part XVI-A Line 11  Description:  Description  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/Desc 
 
     BsnssCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp/BusinessCd 
@@ -5044,8 +5571,8 @@ class PFOthrRvnDscrbd(models.Model):
 
 #######
 #
-# IRS990PF - ProgramServiceRevPartVIIGrp
-# A repeating structure from PF Part XVI-A Analysis of Income-Producing Activities 
+# IRS990PF - PFPrgrmSrvcRvPrtVII
+# A repeating structure from pf_part_xvia
 #
 #######
 
@@ -5054,7 +5581,7 @@ class PFPrgrmSrvcRvPrtVII(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     Dsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part XVI-A Line 1  Description:  Description  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/Desc 
+    # Line number: Part XVI-A Line 1  Description:  Description  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/Desc 
 
     BsnssCd = models.TextField(null=True, blank=True)
     # Line number:  Part XVI-A - Column (A)  Description:  Business code  xpath: /IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp/BusinessCd 
@@ -5073,8 +5600,9 @@ class PFPrgrmSrvcRvPrtVII(models.Model):
 
 #######
 #
-# IRS990PF - RlnOfActyToAccomOfExmptPrpsGrp
-# A repeating structure from PF Part XVI-B Relationship of Activities to the Accomplishment of Exempt Purposes 
+# IRS990PF - PFRlnOfActyTAccmOfExmptPrps
+# Description:  Relationship of activities to the accomplishment of exempt purposes
+# A repeating structure from pf_part_xvib
 #
 #######
 
@@ -5093,8 +5621,8 @@ class PFRlnOfActyTAccmOfExmptPrps(models.Model):
 
 #######
 #
-# IRS990PF - RelationshipScheduleDetail
-# A repeating structure from PF Part XVII Transfers, Transactions Relationships With Noncharitable Exempt Organizations 
+# IRS990PF - PFRltnshpSkdDtl
+# A repeating structure from pf_part_xvii
 #
 #######
 
@@ -5103,7 +5631,13 @@ class PFRltnshpSkdDtl(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part XVII Line 2b Column (a)  Description:  Business name line 1  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationBusinessName/BusinessNameLine1 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part XVII Line 2b Column (a)  Description:  Business name line 1  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationBusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part XVII Line 2b Column (a)  Description:  Business name line 2  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationBusinessName/BusinessNameLine2 
 
     BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part XVII Line 2b Column (a)  Description:  Business name line 2  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail/OrganizationBusinessName/BusinessNameLine2Txt 
@@ -5116,8 +5650,8 @@ class PFRltnshpSkdDtl(models.Model):
 
 #######
 #
-# IRS990PF - TransferScheduleDetail
-# A repeating structure from PF Part XVII Transfers, Transactions Relationships With Noncharitable Exempt Organizations 
+# IRS990PF - PFTrnsfrSkdDtl
+# A repeating structure from pf_part_xvii
 #
 #######
 
@@ -5131,28 +5665,20 @@ class PFTrnsfrSkdDtl(models.Model):
     InvlvdAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part XVII Line 1d Column (b)  Description:  Amount involved  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/InvolvedAmt 
 
-    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part XVII Line 1d Column (c)  Description:  Business name line 2  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/NoncharitableExemptOrgName/BusinessNameLine2Txt 
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part XVII Line 1d Column (c)  Description:  Business name line 1  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/NoncharitableExemptOrgName/BusinessNameLine1 
 
     BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part XVII Line 1d Column (c)  Description:  Business name line 1  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/NoncharitableExemptOrgName/BusinessNameLine1Txt 
 
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part XVII Line 1d Column (c)  Description:  Business name line 2  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/NoncharitableExemptOrgName/BusinessNameLine2 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part XVII Line 1d Column (c)  Description:  Business name line 2  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/NoncharitableExemptOrgName/BusinessNameLine2Txt 
+
     TrnsfrsTrnsAndShrArrngmDsc = models.TextField(null=True, blank=True)
     # Line number:  Part XVII Line 1d Column (d)  Description:  Description of transfers, transactions, and sharing arrangements  xpath: /IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail/TransfersTransAndShrArrngmDesc 
-
-#######
-#
-# IRS990PF - SpecialConditionDesc
-# A repeating structure from PF Part 0 Prefatory material 
-#
-#######
-
-class PFSpclCndtnDsc(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    SpclCndtnDsc = models.TextField(null=True, blank=True)
-    # Description:  Special condition description  xpath: /IRS990PF/SpecialConditionDesc 
 
 #######
 #
@@ -5165,67 +5691,67 @@ class skeda_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     ChrchInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1  Description:  A church, convention of churches, or association of churches. Section 170(b)(1)(A)(i)  xpath: /IRS990ScheduleA/ChurchInd 
+    # Line number: Part I Line 1  Description: A church, convention of churches, or association of churches. Section 170(b)(1)(A)(i)  xpath: /IRS990ScheduleA/ChurchInd 
 
     SchlInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 2  Description:  A school. Section 170(b)(1)(A)(ii)  xpath: /IRS990ScheduleA/SchoolInd 
+    # Line number: Part I Line 2  Description: A school. Section 170(b)(1)(A)(ii)  xpath: /IRS990ScheduleA/SchoolInd 
 
     HsptlInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3  Description:  A hospital or a cooperative hospital service organization. Section 170(b)(1)(A)(iii)  xpath: /IRS990ScheduleA/HospitalInd 
+    # Line number: Part I Line 3  Description: A hospital or a cooperative hospital service organization. Section 170(b)(1)(A)(iii)  xpath: /IRS990ScheduleA/HospitalInd 
 
     CllgOrgnztnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 5  Description:  An organization operated for the benefit of a college or university owned or operated by a governmental unit. Section 170(b)(1)(A)(iv).  xpath: /IRS990ScheduleA/CollegeOrganizationInd 
+    # Line number: Part I Line 5  Description: An organization operated for the benefit of a college or university owned or operated by a governmental unit. Section 170(b)(1)(A)(iv).  xpath: /IRS990ScheduleA/CollegeOrganizationInd 
 
     GvrnmntlUntInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 6  Description:  A Federal, state, or local government or governmental unit. Section 170(b)(1)(A)(v)  xpath: /IRS990ScheduleA/GovernmentalUnitInd 
+    # Line number: Part I Line 6  Description: A Federal, state, or local government or governmental unit. Section 170(b)(1)(A)(v)  xpath: /IRS990ScheduleA/GovernmentalUnitInd 
 
     PblcOrgnztn170Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 7  Description:  An organization that normally receives a substantial part of its support from a governmental unit or from the general public. 			Section 170(b)(1)(A)(vi)  xpath: /IRS990ScheduleA/PublicOrganization170Ind 
+    # Line number: Part I Line 7  Description: An organization that normally receives a substantial part of its support from a governmental unit or from the general public. 			Section 170(b)(1)(A)(vi)  xpath: /IRS990ScheduleA/PublicOrganization170Ind 
 
     CmmntyTrstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 8  Description:  A community trust. Section 170(b)(1)(A)(vi)  xpath: /IRS990ScheduleA/CommunityTrustInd 
+    # Line number: Part I Line 8  Description: A community trust. Section 170(b)(1)(A)(vi)  xpath: /IRS990ScheduleA/CommunityTrustInd 
 
     PblclySpprtdOrg5092Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 10  Description:  Publicly supported organization 509(a)(2)  xpath: /IRS990ScheduleA/PubliclySupportedOrg509a2Ind 
+    # Line number: Part I Line 10  Description: Publicly supported organization 509(a)(2)  xpath: /IRS990ScheduleA/PubliclySupportedOrg509a2Ind 
 
     TstPblcSftyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 11  Description:  An organization organized and operated to test for public safety. Section 509(a)(4)  xpath: /IRS990ScheduleA/TestPublicSafetyInd 
+    # Line number: Part I Line 11  Description: An organization organized and operated to test for public safety. Section 509(a)(4)  xpath: /IRS990ScheduleA/TestPublicSafetyInd 
 
     MdclRsrchOrgnztnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 4  Description:  A medical research organization operated in conjunction with a hospital. Section 170(b)(1)(A)(iii)  xpath: /IRS990ScheduleA/MedicalResearchOrganizationInd 
+    # Line number: Part I Line 4  Description: A medical research organization operated in conjunction with a hospital. Section 170(b)(1)(A)(iii)  xpath: /IRS990ScheduleA/MedicalResearchOrganizationInd 
 
     AgrcltrlRsrchOrgInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 9  Description:  An agricultural research organization operated in conjunction with college or university. Section 170(b)(1)(A)(ix)  xpath: /IRS990ScheduleA/AgriculturalResearchOrgInd 
+    # Line number: Part I Line 9  Description: An agricultural research organization operated in conjunction with college or university. Section 170(b)(1)(A)(ix)  xpath: /IRS990ScheduleA/AgriculturalResearchOrgInd 
 
     SpprtngOrgnztn5093Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 12  Description:  Supporting organization 509(a)(3)  xpath: /IRS990ScheduleA/SupportingOrganization509a3Ind 
+    # Line number: Part I Line 12  Description: Supporting organization 509(a)(3)  xpath: /IRS990ScheduleA/SupportingOrganization509a3Ind 
 
     SpprtngOrg1Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 12a  Description:  Supporting organization 509(a)(3) - Type 1  xpath: /IRS990ScheduleA/SupportingOrgType1Ind 
+    # Line number: Part I Line 12a  Description: Supporting organization 509(a)(3) - Type 1  xpath: /IRS990ScheduleA/SupportingOrgType1Ind 
 
     SpprtngOrg2Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 12b  Description:  Supporting organization 509(a)(3) - Type 2  xpath: /IRS990ScheduleA/SupportingOrgType2Ind 
+    # Line number: Part I Line 12b  Description: Supporting organization 509(a)(3) - Type 2  xpath: /IRS990ScheduleA/SupportingOrgType2Ind 
 
     SpprtngOrg3FncIntInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 12c  Description:  Supporting organization 509(a)(3) - Type 3 functionally integrated  xpath: /IRS990ScheduleA/SupportingOrgType3FuncIntInd 
+    # Line number: Part I Line 12c  Description: Supporting organization 509(a)(3) - Type 3 functionally integrated  xpath: /IRS990ScheduleA/SupportingOrgType3FuncIntInd 
 
     SpprtngOrg3NnFncInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 12d  Description:  Supporting organization 509(a)(3) - Type 3 Non-functionally integrated  xpath: /IRS990ScheduleA/SupportingOrgType3NonFuncInd 
+    # Line number: Part I Line 12d  Description: Supporting organization 509(a)(3) - Type 3 Non-functionally integrated  xpath: /IRS990ScheduleA/SupportingOrgType3NonFuncInd 
 
     IRSWrttnDtrmntnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 12e  Description:  Does the organization have a written determination from the IRS that it is a Type I, Type II or Type III supporting organization?  xpath: /IRS990ScheduleA/IRSWrittenDeterminationInd 
+    # Line number: Part I Line 12e  Description:  Does the organization have a written determination from the IRS that it is a Type I, Type II or Type III supporting organization?  xpath: /IRS990ScheduleA/IRSWrittenDeterminationInd 
 
     SpprtdOrgnztnsCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12f  Description:  Number of supported organizations  xpath: /IRS990ScheduleA/SupportedOrganizationsCnt 
+    # Line number: Part I Line 12f  Description:  Number of supported organizations  xpath: /IRS990ScheduleA/SupportedOrganizationsCnt 
 
     SpprtdOrgnztnsTtlCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12g(i), Total  Description:  Total number of supported organizations  xpath: /IRS990ScheduleA/SupportedOrganizationsTotalCnt 
+    # Line number: Part I Line 12g(i), Total  Description:  Total number of supported organizations  xpath: /IRS990ScheduleA/SupportedOrganizationsTotalCnt 
 
     SpprtSmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12g(v), Total  Description:  Sum of amounts of support  xpath: /IRS990ScheduleA/SupportSumAmt 
+    # Line number: Part I Line 12g(v), Total  Description:  Sum of amounts of support  xpath: /IRS990ScheduleA/SupportSumAmt 
 
     OthrSpprtSmAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12g(vi) Total  Description:  Sum of amounts of other support  xpath: /IRS990ScheduleA/OtherSupportSumAmt 
+    # Line number: Part I Line 12g(vi) Total  Description:  Sum of amounts of other support  xpath: /IRS990ScheduleA/OtherSupportSumAmt 
 
 #######
 #
@@ -5310,10 +5836,10 @@ class skeda_part_ii(models.Model):
     # Line number:  Part II and III Column (f)  Description:  Total  xpath: /IRS990ScheduleA/TotalCalendarYear170Grp/TotalAmt 
 
     SkdA_SbstntlCntrbtrsTtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 5(f)  Description:  Amounts from substantial contributors total  xpath: /IRS990ScheduleA/SubstantialContributorsTotAmt 
+    # Line number: Part II Line 5(f)  Description:  Amounts from substantial contributors total  xpath: /IRS990ScheduleA/SubstantialContributorsTotAmt 
 
     SkdA_PblcSpprtTtl170Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 6(f)  Description:  Public Support Total  xpath: /IRS990ScheduleA/PublicSupportTotal170Amt 
+    # Line number: Part II Line 6(f)  Description:  Public Support Total  xpath: /IRS990ScheduleA/PublicSupportTotal170Amt 
 
     GrssInvstmntIncm170_CrrntTxYrMns4YrsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part II and III Column (a)  Description:  Current tax year minus four years  xpath: /IRS990ScheduleA/GrossInvestmentIncome170Grp/CurrentTaxYearMinus4YearsAmt 
@@ -5370,34 +5896,34 @@ class skeda_part_ii(models.Model):
     # Line number:  Part II and III Column (f)  Description:  Total  xpath: /IRS990ScheduleA/OtherIncome170Grp/TotalAmt 
 
     SkdA_TtlSpprtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 11(f)  Description:  Total support  xpath: /IRS990ScheduleA/TotalSupportAmt 
+    # Line number: Part II Line 11(f)  Description:  Total support  xpath: /IRS990ScheduleA/TotalSupportAmt 
 
     SkdA_GrssRcptsRltdActvtsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 12  Description:  Gross receipts from admissions, merchandise sold or services performed, or furnishing of facilities in any activity that is related to the organization's tax-exempt purpose  xpath: /IRS990ScheduleA/GrossReceiptsRltdActivitiesAmt 
+    # Line number: Part II Line 12  Description:  Gross receipts from admissions, merchandise sold or services performed, or furnishing of facilities in any activity that is related to the organization's tax-exempt purpose  xpath: /IRS990ScheduleA/GrossReceiptsRltdActivitiesAmt 
 
     SkdA_Frst5Yrs170Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 13  Description:  First five years  xpath: /IRS990ScheduleA/First5Years170Ind 
+    # Line number: Part II Line 13  Description:  First five years  xpath: /IRS990ScheduleA/First5Years170Ind 
 
     SkdA_PblcSpprtCY170Pct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part II Line 14  Description:  Public support percentage (line 6 column (f) divided by line 12 column (f)  xpath: /IRS990ScheduleA/PublicSupportCY170Pct 
+    # Line number: Part II Line 14  Description: Public support percentage (line 6 column (f) divided by line 12 column (f)  xpath: /IRS990ScheduleA/PublicSupportCY170Pct 
 
     SkdA_PblcSpprtPY170Pct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part II Line 15  Description:  Public support percentage from prior year's Schedule A, Part II, line 14  xpath: /IRS990ScheduleA/PublicSupportPY170Pct 
+    # Line number: Part II Line 15  Description: Public support percentage from prior year's Schedule A, Part II, line 14  xpath: /IRS990ScheduleA/PublicSupportPY170Pct 
 
     SkdA_ThrtyThrPctSprtTstsCY170Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 16a  Description:  Thirty three and one third test for the current year  xpath: /IRS990ScheduleA/ThirtyThrPctSuprtTestsCY170Ind 
+    # Line number: Part II Line 16a  Description:  Thirty three and one third test for the current year  xpath: /IRS990ScheduleA/ThirtyThrPctSuprtTestsCY170Ind 
 
     SkdA_ThrtyThrPctSprtTstsPY170Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 16b  Description:  Thirty three and one third test for the prior year  xpath: /IRS990ScheduleA/ThirtyThrPctSuprtTestsPY170Ind 
+    # Line number: Part II Line 16b  Description:  Thirty three and one third test for the prior year  xpath: /IRS990ScheduleA/ThirtyThrPctSuprtTestsPY170Ind 
 
     SkdA_TnPctFctsCrcmstncsTstCYInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 17a  Description:  Ten percent facts and circumstances test for the current year  xpath: /IRS990ScheduleA/TenPctFactsCrcmstncsTestCYInd 
+    # Line number: Part II Line 17a  Description:  Ten percent facts and circumstances test for the current year  xpath: /IRS990ScheduleA/TenPctFactsCrcmstncsTestCYInd 
 
     SkdA_TnPctFctsCrcmstncsTstPYInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 17b  Description:  Ten percent facts and circumstances test for the prior year  xpath: /IRS990ScheduleA/TenPctFactsCrcmstncsTestPYInd 
+    # Line number: Part II Line 17b  Description:  Ten percent facts and circumstances test for the prior year  xpath: /IRS990ScheduleA/TenPctFactsCrcmstncsTestPYInd 
 
     SkdA_PrvtFndtn170Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 18  Description:  If the organization did not check a box on line 13, 16a, 16b, 17a or 17b, check this box and see instructions  xpath: /IRS990ScheduleA/PrivateFoundation170Ind 
+    # Line number: Part II Line 18  Description: If the organization did not check a box on line 13, 16a, 16b, 17a or 17b, check this box and see instructions  xpath: /IRS990ScheduleA/PrivateFoundation170Ind 
 
 #######
 #
@@ -5572,7 +6098,7 @@ class skeda_part_iii(models.Model):
     # Line number:  Part II and III Column (f)  Description:  Total  xpath: /IRS990ScheduleA/SubstAndDsqlfyPrsnsTotGrp/TotalAmt 
 
     SkdA_PblcSpprtTtl509Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 8(f)  Description:  Public support total  xpath: /IRS990ScheduleA/PublicSupportTotal509Amt 
+    # Line number: Part III Line 8(f)  Description:  Public support total  xpath: /IRS990ScheduleA/PublicSupportTotal509Amt 
 
     GrssInvstmntIncm509_CrrntTxYrMns4YrsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part II and III Column (a)  Description:  Current tax year minus four years  xpath: /IRS990ScheduleA/GrossInvestmentIncome509Grp/CurrentTaxYearMinus4YearsAmt 
@@ -5683,28 +6209,28 @@ class skeda_part_iii(models.Model):
     # Line number:  Part II and III Column (f)  Description:  Total  xpath: /IRS990ScheduleA/TotalSupportCalendarYearGrp/TotalAmt 
 
     SkdA_Frst5Yrs509Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 14  Description:  First five years?  xpath: /IRS990ScheduleA/First5Years509Ind 
+    # Line number: Part III Line 14  Description:  First five years?  xpath: /IRS990ScheduleA/First5Years509Ind 
 
     SkdA_PblcSpprtCY509Pct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part III Line 15  Description:  Public support percentage (line 8 column(f) divided by line 13 column(f))  xpath: /IRS990ScheduleA/PublicSupportCY509Pct 
+    # Line number: Part III Line 15  Description: Public support percentage (line 8 column(f) divided by line 13 column(f))  xpath: /IRS990ScheduleA/PublicSupportCY509Pct 
 
     SkdA_PblcSpprtPY509Pct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part III Line 16  Description:  Public support percentage from prior year's Schedule A, Part III, line 14a  xpath: /IRS990ScheduleA/PublicSupportPY509Pct 
+    # Line number: Part III Line 16  Description: Public support percentage from prior year's Schedule A, Part III, line 14a  xpath: /IRS990ScheduleA/PublicSupportPY509Pct 
 
     SkdA_InvstmntIncmCYPct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part III Line 17  Description:  Investment income percentage (line 10c column (f) divided by line 13 column(f))  xpath: /IRS990ScheduleA/InvestmentIncomeCYPct 
+    # Line number: Part III Line 17  Description: Investment income percentage (line 10c column (f) divided by line 13 column(f))  xpath: /IRS990ScheduleA/InvestmentIncomeCYPct 
 
     SkdA_InvstmntIncmPYPct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part III Line 18  Description:  Investment income percentage from prior year's Schedule A, Part III, line 15a  xpath: /IRS990ScheduleA/InvestmentIncomePYPct 
+    # Line number: Part III Line 18  Description: Investment income percentage from prior year's Schedule A, Part III, line 15a  xpath: /IRS990ScheduleA/InvestmentIncomePYPct 
 
     SkdA_ThrtyThrPctSprtTstsCY509Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 19a  Description:  33.33 % Tests - Current Year. If the organization did not check the box on line17, and line 14a is more than 33.33% and line 15a is less than 33.33%, check this box and stop here  xpath: /IRS990ScheduleA/ThirtyThrPctSuprtTestsCY509Ind 
+    # Line number: Part III Line 19a  Description: 33.33 % Tests - Current Year. If the organization did not check the box on line17, and line 14a is more than 33.33% and line 15a is less than 33.33%, check this box and stop here  xpath: /IRS990ScheduleA/ThirtyThrPctSuprtTestsCY509Ind 
 
     SkdA_ThrtyThrPctSprtTstsPY509Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 19b  Description:  33.33 % Tests - Prior Year. If the organization did not check the boxes on line 17 and line 18, and line 14b is more than 33.33% and line 15a is less than 33.33%, check this box and stop here  xpath: /IRS990ScheduleA/ThirtyThrPctSuprtTestsPY509Ind 
+    # Line number: Part III Line 19b  Description: 33.33 % Tests - Prior Year. If the organization did not check the boxes on line 17 and line 18, and line 14b is more than 33.33% and line 15a is less than 33.33%, check this box and stop here  xpath: /IRS990ScheduleA/ThirtyThrPctSuprtTestsPY509Ind 
 
     SkdA_PrvtFndtn509Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 20  Description:  Private Foundation. If the organization did not check the box on either line 14, 19a or 19b, check this box and see instructions  xpath: /IRS990ScheduleA/PrivateFoundation509Ind 
+    # Line number: Part III Line 20  Description: Private Foundation. If the organization did not check the box on either line 14, 19a or 19b, check this box and see instructions  xpath: /IRS990ScheduleA/PrivateFoundation509Ind 
 
 #######
 #
@@ -5795,7 +6321,7 @@ class skeda_part_iv(models.Model):
     # Line number:  Part IV Section B Line 2  Description:  Operate for the benefit of any other supported organization?  xpath: /IRS990ScheduleA/Form990SchAType1SuprtOrgGrp/OperateBenefitNonSuprtOrgInd 
 
     MjrtyDrTrstSpprtdOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Section C Line 1  Description:  Also a majority of the directors or trustees of each of the organizations supported orgs?  xpath: /IRS990ScheduleA/MajorityDirTrstSupportedOrgInd 
+    # Line number: Part IV Section C Line 1  Description:  Also a majority of the directors or trustees of each of the organizations supported orgs?  xpath: /IRS990ScheduleA/MajorityDirTrstSupportedOrgInd 
 
     Frm990SchA3SprtOrgAll = models.TextField(null=True, blank=True)
     # Line number:  Part IV Section D Group  Description:  All type III supporting organizations  xpath: /IRS990ScheduleA/Form990SchAType3SprtOrgAllGrp 
@@ -5844,7 +6370,7 @@ class skeda_part_v(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     SkdA_TrstIntgrlPrtTstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Line 1  Description:  Organization satisfied Integral Part Test as qualifying trust  xpath: /IRS990ScheduleA/TrustIntegralPartTestInd 
+    # Line number: Part V Line 1  Description:  Organization satisfied Integral Part Test as qualifying trust  xpath: /IRS990ScheduleA/TrustIntegralPartTestInd 
 
     SkdA_AdjstdNtIncm = models.TextField(null=True, blank=True)
     # Line number:  Part V Section A Group  Description:  Adjusted net income group  xpath: /IRS990ScheduleA/AdjustedNetIncomeGrp 
@@ -6021,7 +6547,7 @@ class skeda_part_v(models.Model):
     # Line number:  Part V Section D Line 8  Description:  Distributions to attentive supported organizations to which the org is responsive  xpath: /IRS990ScheduleA/DistributionsGrp/CYDistriAttentiveSuprtOrgAmt 
 
     Dstrbtns_CYDstrbtblAsAdjstdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Section D Line 9  Description:  Distributable amount for current year (from Section C, line 6)  xpath: /IRS990ScheduleA/DistributionsGrp/CYDistributableAsAdjustedAmt 
+    # Line number:  Part V Section D Line 9  Description: Distributable amount for current year (from Section C, line 6)  xpath: /IRS990ScheduleA/DistributionsGrp/CYDistributableAsAdjustedAmt 
 
     Dstrbtns_CYDstrbtnYrRt = models.TextField(null=True, blank=True)
     # Line number:  Part V Section D Line 10  Description:  Distributions to attentive supported org divided by Distributable amount  xpath: /IRS990ScheduleA/DistributionsGrp/CYDistributionYrRt 
@@ -6034,12 +6560,6 @@ class skeda_part_v(models.Model):
 
     DstrbtnAllctns_UndrdstrbtnsAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Section E Line 2(ii)  Description:  Underdistributions for years prior to current year  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/UnderdistributionsAmt 
-
-    DstrbtnAllctns_ExcssDstrbtnCyvYr3Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Section E Line 3(c)  Description:  Excess distributions carryover - year 3  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessDistributionCyovYr3Amt 
-
-    DstrbtnAllctns_ExcssDstrbtnCyvYr2Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Section E Line 3(d)  Description:  Excess distributions carryover - year 2  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessDistributionCyovYr2Amt 
 
     DstrbtnAllctns_ExcssDstrbtnCyvYr1Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Section E Line 3(e)  Description:  Excess distributions carryover - year 1  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessDistributionCyovYr1Amt 
@@ -6077,17 +6597,23 @@ class skeda_part_v(models.Model):
     DstrbtnAllctns_ExcssDstrCyvTNxtYrAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Section E Line 7(i)  Description:  Excess distribution carryover to next year  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessDistriCyovToNextYrAmt 
 
-    DstrbtnAllctns_ExcssFrmYr4Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Section E Line 8b  Description:  Excess from year 4  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessFromYear4Amt 
-
-    DstrbtnAllctns_ExcssFrmYr3Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Section E Line 8c  Description:  Excess from year 3  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessFromYear3Amt 
-
     DstrbtnAllctns_ExcssFrmYr2Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Section E Line 8d  Description:  Excess from year 2  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessFromYear2Amt 
 
     DstrbtnAllctns_ExcssFrmYr1Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part V Section E Line 8e  Description:  Excess from year 1  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessFromYear1Amt 
+
+    DstrbtnAllctns_ExcssDstrbtnCyvYr2Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part V Section E Line 3(d)  Description:  Excess distributions carryover - year 2  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessDistributionCyovYr2Amt 
+
+    DstrbtnAllctns_ExcssFrmYr3Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part V Section E Line 8c  Description:  Excess from year 3  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessFromYear3Amt 
+
+    DstrbtnAllctns_ExcssDstrbtnCyvYr3Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part V Section E Line 3(c)  Description:  Excess distributions carryover - year 3  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessDistributionCyovYr3Amt 
+
+    DstrbtnAllctns_ExcssFrmYr4Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part V Section E Line 8b  Description:  Excess from year 4  xpath: /IRS990ScheduleA/DistributionAllocationsGrp/ExcessFromYear4Amt 
 
 #######
 #
@@ -6104,66 +6630,8 @@ class skeda_part_vi(models.Model):
 
 #######
 #
-# IRS990ScheduleA - HospitalNameAndAddressGrp
-# A repeating structure from ScheduleA Part I Reason for Non-Private Foundation Status 
-#
-#######
-
-class SkdAHsptlNmAndAddrss(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part I Line 4  Description:  Business name line 1  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/SupportedOrganizationName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part I Line 4  Description:  Business name line 2  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/SupportedOrganizationName/BusinessNameLine2Txt 
-
-    CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part I Line 4  Description:  US city or foreign city  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/CityNm 
-
-    SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part I Line 4  Description:  US address State  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/StateAbbreviationCd 
-
-    CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part I Line 4  Description:  Foreign address Country  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/CountryCd 
-
-#######
-#
-# IRS990ScheduleA - SupportedOrgInformationGrp
-# A repeating structure from ScheduleA Part I Reason for Non-Private Foundation Status 
-#
-#######
-
-class SkdASpprtdOrgInfrmtn(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part I Line 12g Column (i)  Description:  Business name line 1  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part I Line 12g Column (i)  Description:  Business name line 2  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine2Txt 
-
-    EIN = models.CharField(null=True, blank=True, max_length=9)
-    # Line number:  Part I Line 12g Column (ii)  Description:  EIN of supported organization  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/EIN 
-
-    OrgnztnCd = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 12g(iii)  Description:  Type of organization  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/OrganizationTypeCd 
-
-    GvrnngDcmntLstdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 12g Column (iv)  Description:  Is the supported organization listed in your governing documents?  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/GoverningDocumentListedInd 
-
-    SpprtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12g Column (v)  Description:  Amount of support  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportAmt 
-
-    OthrSpprtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 12g Column (vi)  Description:  Estimated value of diversion  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/OtherSupportAmt 
-
-#######
-#
-# IRS990ScheduleA - AgriculturalNameAndAddressGrp
-# A repeating structure from ScheduleA Part I Reason for Non-Private Foundation Status 
+# IRS990ScheduleA - SkdAAgrcltrlNmAndAddrss
+# A repeating structure from skeda_part_i
 #
 #######
 
@@ -6188,14 +6656,114 @@ class SkdAAgrcltrlNmAndAddrss(models.Model):
 
 #######
 #
-# IRS990ScheduleA - Form990ScheduleAPartVIGrp
-# A repeating structure from ScheduleA Part VI Supplemental Information 
+# IRS990ScheduleA - SkdAHsptlNmAndAddrss
+# A repeating structure from skeda_part_i
+#
+#######
+
+class SkdAHsptlNmAndAddrss(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Line 4  Description:  Business name line 1  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/SupportedOrganizationName/BusinessNameLine1 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Line 4  Description:  Business name line 2  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/SupportedOrganizationName/BusinessNameLine2 
+
+    CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part I Line 4  Description:  US city or foreign city  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/CityNm 
+
+    SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part I Line 4  Description:  US address State  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/StateAbbreviationCd 
+
+    CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part I Line 4  Description:  Foreign address Country  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/CountryCd 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Line 4  Description:  Business name line 1  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/SupportedOrganizationName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Line 4  Description:  Business name line 2  xpath: /IRS990ScheduleA/HospitalNameAndAddressGrp/SupportedOrganizationName/BusinessNameLine2Txt 
+
+#######
+#
+# IRS990ScheduleA - SkdASpprtdOrgInfrmtn
+# A repeating structure from skeda_part_i
+#
+#######
+
+class SkdASpprtdOrgInfrmtn(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Line 12g Column (i)  Description:  Business name line 1  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Line 12g Column (i)  Description:  Business name line 2  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine2Txt 
+
+    EIN = models.CharField(null=True, blank=True, max_length=9)
+    # Line number:  Part I Line 12g Column (ii)  Description:  EIN of supported organization  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/EIN 
+
+    OrgnztnCd = models.TextField(null=True, blank=True)
+    # Line number:  Part I Line 12g(iii)  Description:  Type of organization  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/OrganizationTypeDesc 
+
+    GvrnngDcmntLstdInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number:  Part I Line 12g Column (iv)  Description:  Is the supported organization listed in your governing documents?  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/GoverningDocumentListedInd 
+
+    OrgnztnCd = models.TextField(null=True, blank=True)
+    # Line number:  Part I Line 12g(iii)  Description:  Type of organization  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/OrganizationTypeCd 
+
+    SpprtAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part I Line 12g Column (v)  Description:  Amount of support  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportAmt 
+
+    OthrSpprtAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part I Line 12g Column (vi)  Description:  Estimated value of diversion  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/OtherSupportAmt 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Line 12g Column (i)  Description:  Business name line 1  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine1 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Line 12g Column (i)  Description:  Business name line 2  xpath: /IRS990ScheduleA/SupportedOrgInformationGrp/SupportedOrganizationName/BusinessNameLine2 
+
+#######
+#
+# IRS990ScheduleA - SkdAFrm990SkdAPrtVI
+# A repeating structure from skeda_part_vi
 #
 #######
 
 class SkdAFrm990SkdAPrtVI(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Schedule A Part VI  Description:  Form, part and line number reference  xpath: /IRS990ScheduleA/Form990ScheduleAPartIVGrp/FormAndLineReferenceDesc 
+
+    Frm990SkdAPrtVI = models.TextField(null=True, blank=True)
+    # Line number:  Schedule A, Part VI  Description:  Supplemental information for schedule A  xpath: /IRS990ScheduleA/Form990ScheduleAPartVIGrp 
+
+    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Schedule A Part VI  Description:  Form, part and line number reference  xpath: /IRS990ScheduleA/Form990ScheduleAPartVIGrp/FormAndLineReferenceDesc 
+
+    ExplntnTxt = models.TextField(null=True, blank=True)
+    # Line number:  Schedule A Part VI  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleA/Form990ScheduleAPartVIGrp/ExplanationTxt 
+
+#######
+#
+# IRS990ScheduleA - SkdAFrm990SkdAPrtVI
+# Description:  Supplemental information for schedule A
+# A repeating structure from skeda_part_vi
+#
+#######
+
+class SkdAFrm990SkdAPrtVI(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Schedule A Part VI  Description:  Form, part and line number reference  xpath: /IRS990ScheduleA/Form990ScheduleAPartIVGrp/FormAndLineReferenceDesc 
 
     Frm990SkdAPrtVI = models.TextField(null=True, blank=True)
     # Line number:  Schedule A, Part VI  Description:  Supplemental information for schedule A  xpath: /IRS990ScheduleA/Form990ScheduleAPartVIGrp 
@@ -6217,34 +6785,44 @@ class skedb_part_0(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     Orgnztn501cInd = models.TextField(null=True, blank=True)
-    # Description:  Indicates a 501(c) organization  xpath: /IRS990ScheduleB/Organization501cInd 
+    # Description: Indicates a 501(c) organization  xpath: /IRS990ScheduleB/Organization501cInd 
 
     Orgnztn49471NtPFInd = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  Indicates a 4947(a)(1) organization not treated as a private foundation  xpath: /IRS990ScheduleB/Organization4947a1NotPFInd 
+    # Description: Indicates a 4947(a)(1) organization not treated as a private foundation  xpath: /IRS990ScheduleB/Organization4947a1NotPFInd 
 
     Orgnztn527Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  Indicates a 527 organization  xpath: /IRS990ScheduleB/Organization527Ind 
+    # Description: Indicates a 527 organization  xpath: /IRS990ScheduleB/Organization527Ind 
 
     Orgnztn501c3ExmptPFInd = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  Organization 501(c)(3) exempt PF  xpath: /IRS990ScheduleB/Organization501c3ExemptPFInd 
+    # Description: Organization 501(c)(3) exempt PF  xpath: /IRS990ScheduleB/Organization501c3ExemptPFInd 
 
     Orgnztn49471TrtdPFInd = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  Organization 4947(a)(1) treated as PF  xpath: /IRS990ScheduleB/Organization4947a1TrtdPFInd 
+    # Description: Organization 4947(a)(1) treated as PF  xpath: /IRS990ScheduleB/Organization4947a1TrtdPFInd 
 
     Orgnztn501c3TxblPFInd = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  Indicates a 501(c)(3) taxable private foundation  xpath: /IRS990ScheduleB/Organization501c3TaxablePFInd 
+    # Description: Indicates a 501(c)(3) taxable private foundation  xpath: /IRS990ScheduleB/Organization501c3TaxablePFInd 
 
     GnrlRlInd = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  For organizations filing Form 990, or 990-EZ that received, during the year, $5000 or more (in money or property) from any one contributor  xpath: /IRS990ScheduleB/GeneralRuleInd 
+    # Description: For organizations filing Form 990, or 990-EZ that received, during the year, $5000 or more (in money or property) from any one contributor  xpath: /IRS990ScheduleB/GeneralRuleInd 
 
     SpclRlMtOn3rdSprtTstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  For a section 501(c)(3) organization filing Form 990, or Form 990-EZ, that met the 33 1/3 % support test of the regulations under sections 509(a)(1)/170(b)(1)(A)(vi) and received from any one contributor, during the year, a contribution of the greater of $5,000 or 2% of the amount on line 1 of these forms  xpath: /IRS990ScheduleB/SpclRuleMetOne3rdSuprtTestInd 
+    # Description: For a section 501(c)(3) organization filing Form 990, or Form 990-EZ, that met the 33 1/3 % support test of the regulations under sections 509(a)(1)/170(b)(1)(A)(vi) and received from any one contributor, during the year, a contribution of the greater of $5,000 or 2% of the amount on line 1 of these forms  xpath: /IRS990ScheduleB/SpclRuleMetOne3rdSuprtTestInd 
 
     TtCntrRcvdMr1000Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Description:  For a section 501(c)(7), (8), or (10) organization filing Form 990, or Form 990-EZ, that received from any one contributor, during the year, aggregate contributions or bequests of more than $1,000 for use exclusively for religious, charitable, scientific, literary, or educational purposes, or the prevention of cruelty to children or animals  xpath: /IRS990ScheduleB/TotContriRcvdMore1000Ind 
+    # Description: For a section 501(c)(7), (8), or (10) organization filing Form 990, or Form 990-EZ, that received from any one contributor, during the year, aggregate contributions or bequests of more than $1,000 for use exclusively for religious, charitable, scientific, literary, or educational purposes, or the prevention of cruelty to children or animals  xpath: /IRS990ScheduleB/TotContriRcvdMore1000Ind 
 
     TtCntrRcvdUpT1000Ind = models.TextField(null=True, blank=True)
-    # Description:  For a section 501(c)(7), (8), or (10) organization filing Form 990, or Form 990-EZ, that received from any one contributor, during the year, some contributions for use exclusively for religious, charitable, etc., purposes, but these contributions did not aggregate to more than $1,000  xpath: /IRS990ScheduleB/TotContriRcvdUpTo1000Ind 
+    # Description: For a section 501(c)(7), (8), or (10) organization filing Form 990, or Form 990-EZ, that received from any one contributor, during the year, some contributions for use exclusively for religious, charitable, etc., purposes, but these contributions did not aggregate to more than $1,000  xpath: /IRS990ScheduleB/TotContriRcvdUpTo1000Ind 
+
+#######
+#
+# IRS990ScheduleB - ScheduleB Part I - Contributors 
+#
+#######
+
+class skedb_part_i(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
 #######
 #
@@ -6257,12 +6835,12 @@ class skedb_part_ii(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     TtlUndr1000CntrbtnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III  Description:  Total of contributions of $1,000 or less  xpath: /IRS990ScheduleB/TotalUnder1000ContributionsAmt 
+    # Line number:  Part III  Description: Total of contributions of $1,000 or less  xpath: /IRS990ScheduleB/TotalUnder1000ContributionsAmt 
 
 #######
 #
-# IRS990ScheduleB - ContributorInformationGrp
-# A repeating structure from ScheduleB Part I - Contributors 
+# IRS990ScheduleB - SkdBCntrbtrInfrmtn
+# A repeating structure from skedb_part_i
 #
 #######
 
@@ -6286,7 +6864,13 @@ class SkdBCntrbtrInfrmtn(models.Model):
     # Line number:  Part I Column (d)  Description:  Type of contribution - Noncash  xpath: /IRS990ScheduleB/ContributorInformationGrp/NoncashContributionInd 
 
     CntrbtrBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (b)  Description:  Business name line 1  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorBusinessName/BusinessNameLine1 
+
+    CntrbtrBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part I Column (b)  Description:  Business name line 1  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorBusinessName/BusinessNameLine1Txt 
+
+    CntrbtrBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (b)  Description:  Business name line 2  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorBusinessName/BusinessNameLine2 
 
     CntrbtrBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part I Column (b)  Description:  Business name line 2  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorBusinessName/BusinessNameLine2Txt 
@@ -6298,13 +6882,25 @@ class SkdBCntrbtrInfrmtn(models.Model):
     # Line number:  Part I Column (b)  Description:  Pd. 527(j)(1)  xpath: /IRS990ScheduleB/ContributorInformationGrp/Paid527j1Ind 
 
     CntrbtrUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part I Column (b)  Description:  Address line 1  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/AddressLine1 
+
+    CntrbtrUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part I Column (b)  Description:  Address line 1  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/AddressLine1Txt 
+
+    CntrbtrUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part I Column (b)  Description:  Address line 2  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/AddressLine2 
 
     CntrbtrUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part I Column (b)  Description:  Address line 2  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/AddressLine2Txt 
 
     CntrbtrUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part I Column (b)  Description:  City  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/City 
+
+    CntrbtrUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part I Column (b)  Description:  City  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/CityNm 
+
+    CntrbtrUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part I Column (b)  Description:  State  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/State 
 
     CntrbtrUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part I Column (b)  Description:  State  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/StateAbbreviationCd 
@@ -6312,17 +6908,35 @@ class SkdBCntrbtrInfrmtn(models.Model):
     CntrbtrUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part I Column (b)  Description:  ZIP code  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/ZIPCd 
 
+    CntrbtrUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part I Column (b)  Description:  ZIP code  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorUSAddress/ZIPCode 
+
+    CntrbtrFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part I Column (b)  Description:  Address line 1  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/AddressLine1 
+
     CntrbtrFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part I Column (b)  Description:  Address line 1  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/AddressLine1Txt 
+
+    CntrbtrFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part I Column (b)  Description:  Address line 2  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/AddressLine2 
 
     CntrbtrFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part I Column (b)  Description:  Address line 2  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/AddressLine2Txt 
 
     CntrbtrFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part I Column (b)  Description:  City  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/City 
+
+    CntrbtrFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Part I Column (b)  Description:  City  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/CityNm 
 
     CntrbtrFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part I Column (b)  Description:  Province or state  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/ProvinceOrState 
+
+    CntrbtrFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Part I Column (b)  Description:  Province or state  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/ProvinceOrStateNm 
+
+    CntrbtrFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part I Column (b)  Description:  Country  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/Country 
 
     CntrbtrFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part I Column (b)  Description:  Country  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/CountryCd 
@@ -6330,33 +6944,13 @@ class SkdBCntrbtrInfrmtn(models.Model):
     CntrbtrFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part I Column (b)  Description:  Postal code  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/ForeignPostalCd 
 
-#######
-#
-# IRS990ScheduleB - NonCashPropertyContributionGrp
-# A repeating structure from ScheduleB Part II - Noncash Property 
-#
-#######
-
-class SkdBNnCshPrprtyCntrbtn(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    CntrbtrNm = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Column (a)  Description:  Contributor number from Part I  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/ContributorNum 
-
-    NncshPrprtyDsc = models.TextField(null=True, blank=True)
-    # Line number:  Part II Column (b)  Description:  Description of noncash property given  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/NoncashPropertyDesc 
-
-    FrMrktVlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Column (c)  Description:  FMV (or estimate)  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/FairMarketValueAmt 
-
-    RcvdDt = models.CharField(null=True, blank=True, max_length=31)
-    # Line number:  Part II Column (d)  Description:  Date received  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/ReceivedDt 
+    CntrbtrFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part I Column (b)  Description:  Postal code  xpath: /IRS990ScheduleB/ContributorInformationGrp/ContributorForeignAddress/PostalCode 
 
 #######
 #
-# IRS990ScheduleB - CharitableContributionsDetail
-# A repeating structure from ScheduleB Part II - Noncash Property 
+# IRS990ScheduleB - SkdBChrtblCntrbtnsDtl
+# A repeating structure from skedb_part_ii
 #
 #######
 
@@ -6380,7 +6974,13 @@ class SkdBChrtblCntrbtnsDtl(models.Model):
     # Line number:  Part III Column (e)  Description:  Relationship of transferor to transferee  xpath: /IRS990ScheduleB/CharitableContributionsDetail/RlnOfTransferorToTransfereeTxt 
 
     TrnsfrNmBsnss_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part III Column (e)  Description:  Business name line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameBusiness/BusinessNameLine1 
+
+    TrnsfrNmBsnss_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part III Column (e)  Description:  Business name line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameBusiness/BusinessNameLine1Txt 
+
+    TrnsfrNmBsnss_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part III Column (e)  Description:  Business name line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameBusiness/BusinessNameLine2 
 
     TrnsfrNmBsnss_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part III Column (e)  Description:  Business name line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameBusiness/BusinessNameLine2Txt 
@@ -6389,13 +6989,25 @@ class SkdBChrtblCntrbtnsDtl(models.Model):
     # Line number:  Part III Column (e)  Description:  Transferee name - Individual  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeNameIndividual 
 
     TrnsfrUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part III Column (e)  Description:  Address line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/AddressLine1 
+
+    TrnsfrUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part III Column (e)  Description:  Address line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/AddressLine1Txt 
+
+    TrnsfrUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part III Column (e)  Description:  Address line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/AddressLine2 
 
     TrnsfrUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part III Column (e)  Description:  Address line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/AddressLine2Txt 
 
     TrnsfrUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part III Column (e)  Description:  City  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/City 
+
+    TrnsfrUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part III Column (e)  Description:  City  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/CityNm 
+
+    TrnsfrUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part III Column (e)  Description:  State  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/State 
 
     TrnsfrUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part III Column (e)  Description:  State  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/StateAbbreviationCd 
@@ -6403,23 +7015,67 @@ class SkdBChrtblCntrbtnsDtl(models.Model):
     TrnsfrUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part III Column (e)  Description:  ZIP code  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/ZIPCd 
 
+    TrnsfrUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part III Column (e)  Description:  ZIP code  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeUSAddress/ZIPCode 
+
+    TrnsfrFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part III Column (e)  Description:  Address line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/AddressLine1 
+
     TrnsfrFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part III Column (e)  Description:  Address line 1  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/AddressLine1Txt 
+
+    TrnsfrFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part III Column (e)  Description:  Address line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/AddressLine2 
 
     TrnsfrFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part III Column (e)  Description:  Address line 2  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/AddressLine2Txt 
 
     TrnsfrFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part III Column (e)  Description:  City  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/City 
+
+    TrnsfrFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Part III Column (e)  Description:  City  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/CityNm 
 
     TrnsfrFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part III Column (e)  Description:  Province or state  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/ProvinceOrState 
+
+    TrnsfrFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Part III Column (e)  Description:  Province or state  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/ProvinceOrStateNm 
+
+    TrnsfrFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part III Column (e)  Description:  Country  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/Country 
 
     TrnsfrFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part III Column (e)  Description:  Country  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/CountryCd 
 
     TrnsfrFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part III Column (e)  Description:  Postal code  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/ForeignPostalCd 
+
+    TrnsfrFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part III Column (e)  Description:  Postal code  xpath: /IRS990ScheduleB/CharitableContributionsDetail/TransfereeForeignAddress/PostalCode 
+
+#######
+#
+# IRS990ScheduleB - SkdBNnCshPrprtyCntrbtn
+# A repeating structure from skedb_part_ii
+#
+#######
+
+class SkdBNnCshPrprtyCntrbtn(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    CntrbtrNm = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part II Column (a)  Description:  Contributor number from Part I  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/ContributorNum 
+
+    NncshPrprtyDsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Part II Column (b)  Description:  Description of noncash property given  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/NoncashPropertyDesc 
+
+    FrMrktVlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part II Column (c)  Description:  FMV (or estimate)  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/FairMarketValueAmt 
+
+    RcvdDt = models.CharField(null=True, blank=True, max_length=31)
+    # Line number:  Part II Column (d)  Description:  Date received  xpath: /IRS990ScheduleB/NonCashPropertyContributionGrp/ReceivedDt 
 
 #######
 #
@@ -6432,34 +7088,34 @@ class skedc_part_0(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     PltclExpndtrsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I-A Line 2  Description:  Political expenditures  xpath: /IRS990ScheduleC/PoliticalExpendituresAmt 
+    # Line number: Part I-A Line 2  Description:  Political expenditures  xpath: /IRS990ScheduleC/PoliticalExpendituresAmt 
 
     VlntrHrsCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I-A Line 3  Description:  Volunteer hours  xpath: /IRS990ScheduleC/VolunteerHoursCnt 
+    # Line number: Part I-A Line 3  Description:  Volunteer hours  xpath: /IRS990ScheduleC/VolunteerHoursCnt 
 
     Sctn4955OrgnztnTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I-B Line 1  Description:  Enter the amount of any excise tax incurred under section 4955  xpath: /IRS990ScheduleC/Section4955OrganizationTaxAmt 
+    # Line number: Part I-B Line 1  Description: Enter the amount of any excise tax incurred under section 4955  xpath: /IRS990ScheduleC/Section4955OrganizationTaxAmt 
 
     Sctn4955MngrsTxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I-B Line 2  Description:  Enter the amount of any excise tax incurred by organization managers under section 4955  xpath: /IRS990ScheduleC/Section4955ManagersTaxAmt 
+    # Line number: Part I-B Line 2  Description: Enter the amount of any excise tax incurred by organization managers under section 4955  xpath: /IRS990ScheduleC/Section4955ManagersTaxAmt 
 
     Frm4720FldSctn4955TxInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I-B Line 3  xpath: /IRS990ScheduleC/Form4720FiledSection4955TaxInd 
+    # Line number: Part I-B Line 3  xpath: /IRS990ScheduleC/Form4720FiledSection4955TaxInd 
 
     CrrctnMdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I-B Line 4a  Description:  If the filing organization incurred in a section 4955 tax, did it file Form 4720 for this year?  xpath: /IRS990ScheduleC/CorrectionMadeInd 
+    # Line number: Part I-B Line 4a  Description: If the filing organization incurred in a section 4955 tax, did it file Form 4720 for this year?  xpath: /IRS990ScheduleC/CorrectionMadeInd 
 
     Expndd527ActvtsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I-C Line 1  Description:  Enter the amount directly expended by the filing organization for section 527 exempt function activities  xpath: /IRS990ScheduleC/Expended527ActivitiesAmt 
+    # Line number: Part I-C Line 1  Description: Enter the amount directly expended by the filing organization for section 527 exempt function activities  xpath: /IRS990ScheduleC/Expended527ActivitiesAmt 
 
     IntrnlFndsCntrbtdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I-C Line 2  Description:  Enter the amount of the filing organization's own internal funds contributed to other organizations for section 527 exempt function activities  xpath: /IRS990ScheduleC/InternalFundsContributedAmt 
+    # Line number: Part I-C Line 2  Description: Enter the amount of the filing organization's own internal funds contributed to other organizations for section 527 exempt function activities  xpath: /IRS990ScheduleC/InternalFundsContributedAmt 
 
     TtlExmptFnctnExpndAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I-C Line 3  Description:  Total of direct and indirect exempt function expenditures. Add lines 1 and 2  xpath: /IRS990ScheduleC/TotalExemptFunctionExpendAmt 
+    # Line number: Part I-C Line 3  Description: Total of direct and indirect exempt function expenditures. Add lines 1 and 2  xpath: /IRS990ScheduleC/TotalExemptFunctionExpendAmt 
 
     Frm1120POLFldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I-C Line 4  Description:  Did the filing organization file Form 1120-POL for this year?  xpath: /IRS990ScheduleC/Form1120POLFiledInd 
+    # Line number: Part I-C Line 4  Description: Did the filing organization file Form 1120-POL for this year?  xpath: /IRS990ScheduleC/Form1120POLFiledInd 
 
 #######
 #
@@ -6532,7 +7188,7 @@ class skedc_part_iia(models.Model):
     # Line number:  Part II-A Column (b)  Description:  Affiliated group totals  xpath: /IRS990ScheduleC/TotLbbyExpendMnsLbbyngNonTxGrp/AffiliatedGroupTotalAmt 
 
     SkdC_Frm4720FldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-A Line 1j  Description:  If there is an amount other than zero on either line h or line i, did the organization file Form 4720 reporting section 4911 tax for this year?  xpath: /IRS990ScheduleC/Form4720FiledInd 
+    # Line number: Part II-A Line 1j  Description: If there is an amount other than zero on either line h or line i, did the organization file Form 4720 reporting section 4911 tax for this year?  xpath: /IRS990ScheduleC/Form4720FiledInd 
 
     AvgLbbyngNntxblAmnt_CrrntYrMns3Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part II-A Column (a)  Description:  Current year minus 3  xpath: /IRS990ScheduleC/AvgLobbyingNontaxableAmountGrp/CurrentYearMinus3Amt 
@@ -6550,7 +7206,7 @@ class skedc_part_iia(models.Model):
     # Line number:  Part II-A Column (e)  Description:  Total  xpath: /IRS990ScheduleC/AvgLobbyingNontaxableAmountGrp/TotalAmt 
 
     SkdC_LbbyngClngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-A Line 2b(e)  Description:  Lobbying ceiling amount (150% of line 2a(e))  xpath: /IRS990ScheduleC/LobbyingCeilingAmt 
+    # Line number: Part II-A Line 2b(e)  Description: Lobbying ceiling amount (150% of line 2a(e))  xpath: /IRS990ScheduleC/LobbyingCeilingAmt 
 
     AvgTtlLbbyngExpnd_CrrntYrMns3Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part II-A Column (a)  Description:  Current year minus 3  xpath: /IRS990ScheduleC/AvgTotalLobbyingExpendGrp/CurrentYearMinus3Amt 
@@ -6583,7 +7239,7 @@ class skedc_part_iia(models.Model):
     # Line number:  Part II-A Column (e)  Description:  Total  xpath: /IRS990ScheduleC/AvgGrassrootsNontaxableGrp/TotalAmt 
 
     SkdC_GrssrtsClngAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-A Line 2e(e)  Description:  Grassroots ceiling amount (150% of line 2d(e))  xpath: /IRS990ScheduleC/GrassrootsCeilingAmt 
+    # Line number: Part II-A Line 2e(e)  Description: Grassroots ceiling amount (150% of line 2d(e))  xpath: /IRS990ScheduleC/GrassrootsCeilingAmt 
 
     AvgGrssrtsLbbyngExpnd_CrrntYrMns3Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part II-A Column (a)  Description:  Current year minus 3  xpath: /IRS990ScheduleC/AvgGrassrootsLobbyingExpendGrp/CurrentYearMinus3Amt 
@@ -6611,67 +7267,67 @@ class skedc_part_iib(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     VlntrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 1a Column (a)  Description:  Volunteers?  xpath: /IRS990ScheduleC/VolunteersInd 
+    # Line number: Part II-B Line 1a Column (a)  Description:  Volunteers?  xpath: /IRS990ScheduleC/VolunteersInd 
 
     PdStffOrMngmntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 1b Column (a)  Description:  Paid staff or management?  xpath: /IRS990ScheduleC/PaidStaffOrManagementInd 
+    # Line number: Part II-B Line 1b Column (a)  Description:  Paid staff or management?  xpath: /IRS990ScheduleC/PaidStaffOrManagementInd 
 
     MdAdvrtsmntsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 1c Column(a)  Description:  Media advertisements?  xpath: /IRS990ScheduleC/MediaAdvertisementsInd 
+    # Line number: Part II-B Line 1c Column(a)  Description:  Media advertisements?  xpath: /IRS990ScheduleC/MediaAdvertisementsInd 
 
     MdAdvrtsmntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 1c Column (b)  Description:  Media advertisements amount (only for section 501(c)(3))  xpath: /IRS990ScheduleC/MediaAdvertisementsAmt 
+    # Line number: Part II-B Line 1c Column (b)  Description: Media advertisements amount (only for section 501(c)(3))  xpath: /IRS990ScheduleC/MediaAdvertisementsAmt 
 
     MlngsMmbrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 1d Column (a)  Description:  Mailings to members, legislators, or to the public?  xpath: /IRS990ScheduleC/MailingsMembersInd 
+    # Line number: Part II-B Line 1d Column (a)  Description:  Mailings to members, legislators, or to the public?  xpath: /IRS990ScheduleC/MailingsMembersInd 
 
     MlngsMmbrsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 1d Column (b)  Description:  Media advertisements amount (only for section 501(c)(3))  xpath: /IRS990ScheduleC/MailingsMembersAmt 
+    # Line number: Part II-B Line 1d Column (b)  Description: Media advertisements amount (only for section 501(c)(3))  xpath: /IRS990ScheduleC/MailingsMembersAmt 
 
     PblctnsOrBrdcstInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 1e Column(a)  Description:  Publications, or published or broadcast statements?  xpath: /IRS990ScheduleC/PublicationsOrBroadcastInd 
+    # Line number: Part II-B Line 1e Column(a)  Description:  Publications, or published or broadcast statements?  xpath: /IRS990ScheduleC/PublicationsOrBroadcastInd 
 
     PblctnsOrBrdcstAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 1e Column (b)  Description:  Publications, or published or broadcast statements (only for section 501(c)(3))  xpath: /IRS990ScheduleC/PublicationsOrBroadcastAmt 
+    # Line number: Part II-B Line 1e Column (b)  Description: Publications, or published or broadcast statements (only for section 501(c)(3))  xpath: /IRS990ScheduleC/PublicationsOrBroadcastAmt 
 
     GrntsOthrOrgnztnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 1f Column (a)  Description:  Grants to other organizations for lobbying purposes?  xpath: /IRS990ScheduleC/GrantsOtherOrganizationsInd 
+    # Line number: Part II-B Line 1f Column (a)  Description:  Grants to other organizations for lobbying purposes?  xpath: /IRS990ScheduleC/GrantsOtherOrganizationsInd 
 
     GrntsOthrOrgnztnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 1f Column (b)  Description:  Grants to other organizations for lobbying purposes (only for section 501(c)(3))  xpath: /IRS990ScheduleC/GrantsOtherOrganizationsAmt 
+    # Line number: Part II-B Line 1f Column (b)  Description: Grants to other organizations for lobbying purposes (only for section 501(c)(3))  xpath: /IRS990ScheduleC/GrantsOtherOrganizationsAmt 
 
     DrctCntctLgsltrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 1g Column (a)  Description:  Direct contact with legislators, their staffs, government officials, or a legislative body?  xpath: /IRS990ScheduleC/DirectContactLegislatorsInd 
+    # Line number: Part II-B Line 1g Column (a)  Description:  Direct contact with legislators, their staffs, government officials, or a legislative body?  xpath: /IRS990ScheduleC/DirectContactLegislatorsInd 
 
     DrctCntctLgsltrsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 1g Column (b)  Description:  Direct contact with legislators, their staffs, government officials, or a legislative body (only for section 501(c)(3))  xpath: /IRS990ScheduleC/DirectContactLegislatorsAmt 
+    # Line number: Part II-B Line 1g Column (b)  Description: Direct contact with legislators, their staffs, government officials, or a legislative body (only for section 501(c)(3))  xpath: /IRS990ScheduleC/DirectContactLegislatorsAmt 
 
     RllsDmnstrtnsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 1h Column (a)  Description:  Rallies, demonstrations, seminars, conventions, speeches, lectures, or any other means?  xpath: /IRS990ScheduleC/RalliesDemonstrationsInd 
+    # Line number: Part II-B Line 1h Column (a)  Description:  Rallies, demonstrations, seminars, conventions, speeches, lectures, or any other means?  xpath: /IRS990ScheduleC/RalliesDemonstrationsInd 
 
     RllsDmnstrtnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 1h Column (b)  Description:  Rallies, demonstrations, seminars, conventions, speeches, lectures, or any other means (only for section 501(c)(3))  xpath: /IRS990ScheduleC/RalliesDemonstrationsAmt 
+    # Line number: Part II-B Line 1h Column (b)  Description: Rallies, demonstrations, seminars, conventions, speeches, lectures, or any other means (only for section 501(c)(3))  xpath: /IRS990ScheduleC/RalliesDemonstrationsAmt 
 
     OthrActvtsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 1i Column (a)  Description:  Other activities?  xpath: /IRS990ScheduleC/OtherActivitiesInd 
+    # Line number: Part II-B Line 1i Column (a)  Description:  Other activities?  xpath: /IRS990ScheduleC/OtherActivitiesInd 
 
     OthrActvtsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 1i Column (b)  Description:  Other activities amount  xpath: /IRS990ScheduleC/OtherActivitiesAmt 
+    # Line number: Part II-B Line 1i Column (b)  Description:  Other activities amount  xpath: /IRS990ScheduleC/OtherActivitiesAmt 
 
     TtlLbbyngExpndtrsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 1j Column (b)  Description:  Total Line 1c through 1i (only for section 501(c)(3))  xpath: /IRS990ScheduleC/TotalLobbyingExpendituresAmt 
+    # Line number: Part II-B Line 1j Column (b)  Description: Total Line 1c through 1i (only for section 501(c)(3))  xpath: /IRS990ScheduleC/TotalLobbyingExpendituresAmt 
 
     NtDscrbdSctn501c3Ind = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 2a Column (a)  Description:  Did the activities in line 1 cause the organization to be not described in section 501(c)(3)?  xpath: /IRS990ScheduleC/NotDescribedSection501c3Ind 
+    # Line number: Part II-B Line 2a Column (a)  Description: Did the activities in line 1 cause the organization to be not described in section 501(c)(3)?  xpath: /IRS990ScheduleC/NotDescribedSection501c3Ind 
 
     Tx4912Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 2b Column (b)  Description:  If "Yes," enter the amount of any tax incurred under section 4912  xpath: /IRS990ScheduleC/Tax4912Amt 
+    # Line number: Part II-B Line 2b Column (b)  Description: If "Yes," enter the amount of any tax incurred under section 4912  xpath: /IRS990ScheduleC/Tax4912Amt 
 
     Mngrs4912TxAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II-B Line 2c Column (b)  Description:  If "Yes," enter the amount of any tax incurred by organization managers under section 4912  xpath: /IRS990ScheduleC/Managers4912TaxAmt 
+    # Line number: Part II-B Line 2c Column (b)  Description: If "Yes," enter the amount of any tax incurred by organization managers under section 4912  xpath: /IRS990ScheduleC/Managers4912TaxAmt 
 
     Frm4720Fld4912TxInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II-B Line 2d Column (a)  Description:  If the filing organization incurred a section 4912 tax, did it file Form 4720 for this year?  xpath: /IRS990ScheduleC/Form4720Filed4912TaxInd 
+    # Line number: Part II-B Line 2d Column (a)  Description: If the filing organization incurred a section 4912 tax, did it file Form 4720 for this year?  xpath: /IRS990ScheduleC/Form4720Filed4912TaxInd 
 
 #######
 #
@@ -6684,13 +7340,13 @@ class skedc_part_iiia(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     SbstntllyAllDsNnddInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III-A Line 1  Description:  Were substantially all (90% or more) dues received nondeductible by members?  xpath: /IRS990ScheduleC/SubstantiallyAllDuesNondedInd 
+    # Line number: Part III-A Line 1  Description: Were substantially all (90% or more) dues received nondeductible by members?  xpath: /IRS990ScheduleC/SubstantiallyAllDuesNondedInd 
 
     OnlyInHsLbbyngInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III-A Line 2  Description:  Did the organization make only in-house lobbying expenditures of $2,000 or less?  xpath: /IRS990ScheduleC/OnlyInHouseLobbyingInd 
+    # Line number: Part III-A Line 2  Description: Did the organization make only in-house lobbying expenditures of $2,000 or less?  xpath: /IRS990ScheduleC/OnlyInHouseLobbyingInd 
 
     AgrCrryvrPrrYrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III-A Line 3  Description:  Did the organization agree to carryover lobbying and political expenditures from the prior year?  xpath: /IRS990ScheduleC/AgreeCarryoverPriorYearInd 
+    # Line number: Part III-A Line 3  Description:  Did the organization agree to carryover lobbying and political expenditures from the prior year?  xpath: /IRS990ScheduleC/AgreeCarryoverPriorYearInd 
 
 #######
 #
@@ -6703,30 +7359,41 @@ class skedc_part_iiib(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     DsAssssmntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III-B Line 1  Description:  Dues, assessments and similar amounts from members  xpath: /IRS990ScheduleC/DuesAssessmentsAmt 
+    # Line number: Part III-B Line 1  Description:  Dues, assessments and similar amounts from members  xpath: /IRS990ScheduleC/DuesAssessmentsAmt 
 
     NnDdctblLbbyngPltclCYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III-B Line 2a  Description:  Current year  xpath: /IRS990ScheduleC/NonDeductibleLbbyngPltclCYAmt 
+    # Line number: Part III-B Line 2a  Description:  Current year  xpath: /IRS990ScheduleC/NonDeductibleLbbyngPltclCYAmt 
 
     NnDdLbbyngPltclCyvAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III-B Line 2b  Description:  Carryover from last year  xpath: /IRS990ScheduleC/NonDedLbbyngPltclCyovAmt 
+    # Line number: Part III-B Line 2b  Description:  Carryover from last year  xpath: /IRS990ScheduleC/NonDedLbbyngPltclCyovAmt 
 
     NnDdctblLbbyngPltclTtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III-B Line 2c  Description:  Total  xpath: /IRS990ScheduleC/NonDeductibleLbbyngPltclTotAmt 
+    # Line number: Part III-B Line 2c  Description:  Total  xpath: /IRS990ScheduleC/NonDeductibleLbbyngPltclTotAmt 
 
     AggrgtRprtdDsNtcAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III-B Line 3  Description:  Aggregate amount reported in section 6033(e)(1)(A) notices of nondeductible section 162(e) dues  xpath: /IRS990ScheduleC/AggregateReportedDuesNtcAmt 
+    # Line number: Part III-B Line 3  Description: Aggregate amount reported in section 6033(e)(1)(A) notices of nondeductible section 162(e) dues  xpath: /IRS990ScheduleC/AggregateReportedDuesNtcAmt 
 
     CrrdOvrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III-B Line 4  Description:  If notices were sent and the amount on line 2c exceeds the amount on line 3, what portion of that amount does the organization agree to carryover to the reasonable estimate of nondeductible lobbying and political expenditure next year?  xpath: /IRS990ScheduleC/CarriedOverAmt 
+    # Line number: Part III-B Line 4  Description: If notices were sent and the amount on line 2c exceeds the amount on line 3, what portion of that amount does the organization agree to carryover to the reasonable estimate of nondeductible lobbying and political expenditure next year?  xpath: /IRS990ScheduleC/CarriedOverAmt 
 
     TxblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III-B Line 5  Description:  Taxable amount of lobbying and political expenditures (line 2c total minus 3 and 4)  xpath: /IRS990ScheduleC/TaxableAmt 
+    # Line number: Part III-B Line 5  Description: Taxable amount of lobbying and political expenditures (line 2c total minus 3 and 4)  xpath: /IRS990ScheduleC/TaxableAmt 
 
 #######
 #
-# IRS990ScheduleC - Section527PoliticalOrgGrp
-# A repeating structure from ScheduleC Part 0 Prefatory material 
+# IRS990ScheduleC - ScheduleC Part IV : Explanations 
+#
+#######
+
+class skedc_part_iv(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleC - SkdCSctn527PltclOrg
+# Description: State the names, addresses and Employer Identification Number (EIN) of all section 527 political organizations to which payments were made
+# A repeating structure from skedc_part_0
 #
 #######
 
@@ -6735,60 +7402,100 @@ class SkdCSctn527PltclOrg(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     SkdC_Sctn527PltclOrg = models.TextField(null=True, blank=True)
-    # Description:  State the names, addresses and Employer Identification Number (EIN) of all section 527 political organizations to which payments were made  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp 
+    # Description: State the names, addresses and Employer Identification Number (EIN) of all section 527 political organizations to which payments were made  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp 
 
     OrgnztnBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part I-C Line 5(a)  Description:  Business name line 1  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/OrganizationBusinessName/BusinessNameLine1Txt 
+    # Line number: Part I-C Line 5(a)  Description:  Business name line 1  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/OrganizationBusinessName/BusinessNameLine1 
+
+    OrgnztnBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part I-C Line 5(a)  Description:  Business name line 1  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/OrganizationBusinessName/BusinessNameLine1Txt 
 
     OrgnztnBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part I-C Line 5(a)  Description:  Business name line 2  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/OrganizationBusinessName/BusinessNameLine2Txt 
+    # Line number: Part I-C Line 5(a)  Description:  Business name line 2  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/OrganizationBusinessName/BusinessNameLine2 
+
+    OrgnztnBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part I-C Line 5(a)  Description:  Business name line 2  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/OrganizationBusinessName/BusinessNameLine2Txt 
 
     Sctn527PltclOrg_EIN = models.CharField(null=True, blank=True, max_length=9)
-    # Line number:  Part I-C Line 5(c)  Description:  EIN  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/EIN 
+    # Line number: Part I-C Line 5(c)  Description:  EIN  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/EIN 
 
     Sctn527PltclOrg_PdIntrnlFndsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I-C Line 5(d)  Description:  Amount paid from internal funds  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/PaidInternalFundsAmt 
+    # Line number: Part I-C Line 5(d)  Description:  Amount paid from internal funds  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/PaidInternalFundsAmt 
 
     Sctn527PltclOrg_CntrbtnsRcvdDlvrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I-C Line 5(e)  Description:  Amount of contributions received and delivered  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ContributionsRcvdDlvrAmt 
+    # Line number: Part I-C Line 5(e)  Description:  Amount of contributions received and delivered  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ContributionsRcvdDlvrAmt 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part I-C Line 5(b)  Description:  Address line 1  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/AddressLine1Txt 
+    # Line number: Part I-C Line 5(b)  Description:  Address line 1  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part I-C Line 5(b)  Description:  Address line 1  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/AddressLine1Txt 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part I-C Line 5(b)  Description:  Address line 2  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/AddressLine2Txt 
+    # Line number: Part I-C Line 5(b)  Description:  Address line 2  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/AddressLine2 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part I-C Line 5(b)  Description:  Address line 2  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part I-C Line 5(b)  Description:  City  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/CityNm 
+    # Line number: Part I-C Line 5(b)  Description:  City  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part I-C Line 5(b)  Description:  City  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/CityNm 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part I-C Line 5(b)  Description:  State  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/StateAbbreviationCd 
+    # Line number: Part I-C Line 5(b)  Description:  State  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/State 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part I-C Line 5(b)  Description:  State  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/StateAbbreviationCd 
 
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part I-C Line 5(b)  Description:  ZIP code  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/ZIPCd 
+    # Line number: Part I-C Line 5(b)  Description:  ZIP code  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/ZIPCd 
+
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part I-C Line 5(b)  Description:  ZIP code  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/USAddress/ZIPCode 
 
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part I-C Line 5(b)  Description:  Address line 1  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/AddressLine1Txt 
+    # Line number: Part I-C Line 5(b)  Description:  Address line 1  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/AddressLine1 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part I-C Line 5(b)  Description:  Address line 1  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/AddressLine1Txt 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part I-C Line 5(b)  Description:  Address line 2  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/AddressLine2Txt 
+    # Line number: Part I-C Line 5(b)  Description:  Address line 2  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/AddressLine2 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part I-C Line 5(b)  Description:  Address line 2  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part I-C Line 5(b)  Description:  City  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/CityNm 
+    # Line number: Part I-C Line 5(b)  Description:  City  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part I-C Line 5(b)  Description:  City  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part I-C Line 5(b)  Description:  Province or state  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/ProvinceOrStateNm 
+    # Line number: Part I-C Line 5(b)  Description:  Province or state  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part I-C Line 5(b)  Description:  Province or state  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/ProvinceOrStateNm 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part I-C Line 5(b)  Description:  Country  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/CountryCd 
+    # Line number: Part I-C Line 5(b)  Description:  Country  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/Country 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part I-C Line 5(b)  Description:  Country  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part I-C Line 5(b)  Description:  Postal code  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/ForeignPostalCd 
+    # Line number: Part I-C Line 5(b)  Description:  Postal code  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part I-C Line 5(b)  Description:  Postal code  xpath: /IRS990ScheduleC/Section527PoliticalOrgGrp/ForeignAddress/PostalCode 
 
 #######
 #
-# IRS990ScheduleC - SupplementalInformationDetail
-# A repeating structure from ScheduleC Part IV : Explanations 
+# IRS990ScheduleC - SkdCSpplmntlInfrmtnDtl
+# Description:  Part IV contents
+# A repeating structure from skedc_part_iv
 #
 #######
 
@@ -6816,34 +7523,34 @@ class skedd_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     DnrAdvsdFndsHldCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 1 Column (a)  Description:  Enter the total number of donor advised funds maintained at the end of the tax year  xpath: /IRS990ScheduleD/DonorAdvisedFundsHeldCnt 
+    # Line number: Part I Line 1 Column (a)  Description:  Enter the total number of donor advised funds maintained at the end of the tax year  xpath: /IRS990ScheduleD/DonorAdvisedFundsHeldCnt 
 
     FndsAndOthrAccntsHldCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 1 Column (b)  Description:  Enter the total number of separate accounts for participating donors where donors have the right to provide advice on the use or distribution of funds owned at the end of the tax year  xpath: /IRS990ScheduleD/FundsAndOtherAccountsHeldCnt 
+    # Line number: Part I Line 1 Column (b)  Description:  Enter the total number of separate accounts for participating donors where donors have the right to provide advice on the use or distribution of funds owned at the end of the tax year  xpath: /IRS990ScheduleD/FundsAndOtherAccountsHeldCnt 
 
     DnrAdvsdFndsCntrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 2 Column (a)  Description:  Contributions, gifts, grants, and similar amounts received: donor advised funds  xpath: /IRS990ScheduleD/DonorAdvisedFundsContriAmt 
+    # Line number: Part I Line 2 Column (a)  Description:  Contributions, gifts, grants, and similar amounts received: donor advised funds  xpath: /IRS990ScheduleD/DonorAdvisedFundsContriAmt 
 
     FndsAndOthrAccntsCntrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 2 Column (b)  Description:  Contributions, gifts, grants, and similar amounts received: funds and other accounts  xpath: /IRS990ScheduleD/FundsAndOtherAccountsContriAmt 
+    # Line number: Part I Line 2 Column (b)  Description:  Contributions, gifts, grants, and similar amounts received: funds and other accounts  xpath: /IRS990ScheduleD/FundsAndOtherAccountsContriAmt 
 
     DnrAdvsdFndsGrntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3 Column (a)  Description:  Grants and allocations from donor advised funds  xpath: /IRS990ScheduleD/DonorAdvisedFundsGrantsAmt 
+    # Line number: Part I Line 3 Column (a)  Description:  Grants and allocations from donor advised funds  xpath: /IRS990ScheduleD/DonorAdvisedFundsGrantsAmt 
 
     FndsAndOthrAccntsGrntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3 Column (b)  Description:  Grants from funds and other accounts  xpath: /IRS990ScheduleD/FundsAndOtherAccountsGrantsAmt 
+    # Line number: Part I Line 3 Column (b)  Description:  Grants from funds and other accounts  xpath: /IRS990ScheduleD/FundsAndOtherAccountsGrantsAmt 
 
     DnrAdvsdFndsVlEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 4 Column (a)  Description:  Enter the aggregate value of assets held in all donor advised funds at the end of the tax year  xpath: /IRS990ScheduleD/DonorAdvisedFundsVlEOYAmt 
+    # Line number: Part I Line 4 Column (a)  Description:  Enter the aggregate value of assets held in all donor advised funds at the end of the tax year  xpath: /IRS990ScheduleD/DonorAdvisedFundsVlEOYAmt 
 
     FndsAndOthrAccntsVlEOYAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 4 Column (b)  Description:  Enter the aggregate value of assets held in all funds and other accounts at the end of the tax year  xpath: /IRS990ScheduleD/FundsAndOtherAccountsVlEOYAmt 
+    # Line number: Part I Line 4 Column (b)  Description:  Enter the aggregate value of assets held in all funds and other accounts at the end of the tax year  xpath: /IRS990ScheduleD/FundsAndOtherAccountsVlEOYAmt 
 
     DsclsdOrgLgCtrlInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 5  Description:  Did the organization inform all donors and donor advisors in writing that the assets held in DAFs are the organization's property, subject to the organization's exclusive legal control?  xpath: /IRS990ScheduleD/DisclosedOrgLegCtrlInd 
+    # Line number: Part I Line 5  Description:  Did the organization inform all donors and donor advisors in writing that the assets held in DAFs are the organization's property, subject to the organization's exclusive legal control?  xpath: /IRS990ScheduleD/DisclosedOrgLegCtrlInd 
 
     DsclsdFrChrtblPrpsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 6  Description:  Did the organization inform all grantees, donors, and donor advisors in writing that grant funds may be used only for charitable purposes and not for the benefit of the donor or donor advisor?  xpath: /IRS990ScheduleD/DisclosedForCharitablePrpsInd 
+    # Line number: Part I Line 6  Description:  Did the organization inform all grantees, donors, and donor advisors in writing that grant funds may be used only for charitable purposes and not for the benefit of the donor or donor advisor?  xpath: /IRS990ScheduleD/DisclosedForCharitablePrpsInd 
 
 #######
 #
@@ -6856,49 +7563,49 @@ class skedd_part_ii(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     PrsrvtnPblcUsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 1  Description:  Preservation for  public use  xpath: /IRS990ScheduleD/PreservationPublicUseInd 
+    # Line number: Part II Line 1  Description:  Preservation for  public use  xpath: /IRS990ScheduleD/PreservationPublicUseInd 
 
     PrtctnNtrlHbttInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 1  Description:  Protection of natural habitat  xpath: /IRS990ScheduleD/ProtectionNaturalHabitatInd 
+    # Line number: Part II Line 1  Description:  Protection of natural habitat  xpath: /IRS990ScheduleD/ProtectionNaturalHabitatInd 
 
     PrsrvtnOpnSpcInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 1  Description:  Preservation of open space  xpath: /IRS990ScheduleD/PreservationOpenSpaceInd 
+    # Line number: Part II Line 1  Description:  Preservation of open space  xpath: /IRS990ScheduleD/PreservationOpenSpaceInd 
 
     HstrcLndArInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 1  Description:  Historic land area  xpath: /IRS990ScheduleD/HistoricLandAreaInd 
+    # Line number: Part II Line 1  Description:  Historic land area  xpath: /IRS990ScheduleD/HistoricLandAreaInd 
 
     HstrcStrctrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part II Line 1  Description:  Historic structure  xpath: /IRS990ScheduleD/HistoricStructureInd 
+    # Line number: Part II Line 1  Description:  Historic structure  xpath: /IRS990ScheduleD/HistoricStructureInd 
 
     TtlEsmntsCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 2a  Description:  Total number of easements  xpath: /IRS990ScheduleD/TotalEasementsCnt 
+    # Line number: Part II Line 2a  Description:  Total number of easements  xpath: /IRS990ScheduleD/TotalEasementsCnt 
 
     TtlAcrgCnt = models.DecimalField(null=True, blank=True, max_digits=22, decimal_places=2)
-    # Line number:  Part II Line 2b  Description:  Total acreage subject to easements  xpath: /IRS990ScheduleD/TotalAcreageCnt 
+    # Line number: Part II Line 2b  Description:  Total acreage subject to easements  xpath: /IRS990ScheduleD/TotalAcreageCnt 
 
     HstrcStrctrEsmntsCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 2c  Description:  Number of easements on a certified historic structure included in (a)  xpath: /IRS990ScheduleD/HistoricStructureEasementsCnt 
+    # Line number: Part II Line 2c  Description:  Number of easements on a certified historic structure included in (a)  xpath: /IRS990ScheduleD/HistoricStructureEasementsCnt 
 
     HstrcStrctrEsmntsAftrCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 2d  Description:  Number of historic structure easements acquired after 8-17-2006  xpath: /IRS990ScheduleD/HistoricStrctrEasementsAftrCnt 
+    # Line number: Part II Line 2d  Description: Number of historic structure easements acquired after 8-17-2006  xpath: /IRS990ScheduleD/HistoricStrctrEasementsAftrCnt 
 
     MdfdEsmntsCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 3  Description:  Number of conservation easements modified, transferred, released, or terminated by the organization during the taxable year  xpath: /IRS990ScheduleD/ModifiedEasementsCnt 
+    # Line number: Part II Line 3  Description:  Number of conservation easements modified, transferred, released, or terminated by the organization during the taxable year  xpath: /IRS990ScheduleD/ModifiedEasementsCnt 
 
     SttsEsmntsHldCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 4  Description:  Number of states in which the organization held an easement  xpath: /IRS990ScheduleD/StatesEasementsHeldCnt 
+    # Line number: Part II Line 4  Description:  Number of states in which the organization held an easement  xpath: /IRS990ScheduleD/StatesEasementsHeldCnt 
 
     WrttnPlcyMntrngInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II Line 5  Description:  Does the organization have a written policy regarding the periodic monitoring, inspection, and enforcement of the easements it holds?  xpath: /IRS990ScheduleD/WrittenPolicyMonitoringInd 
+    # Line number: Part II Line 5  Description:  Does the organization have a written policy regarding the periodic monitoring, inspection, and enforcement of the easements it holds?  xpath: /IRS990ScheduleD/WrittenPolicyMonitoringInd 
 
     StffHrsSpntEnfrcmntCnt = models.DecimalField(null=True, blank=True, max_digits=22, decimal_places=2)
-    # Line number:  Part II Line 6  Description:  Staff hours devoted to monitoring or enforcing easements during the year  xpath: /IRS990ScheduleD/StaffHoursSpentEnforcementCnt 
+    # Line number: Part II Line 6  Description:  Staff hours devoted to monitoring or enforcing easements during the year  xpath: /IRS990ScheduleD/StaffHoursSpentEnforcementCnt 
 
     ExpnssIncrrdEnfrcmntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 7  Description:  Amount of expenses incurred in monitoring or enforcing easements during the taxable year  xpath: /IRS990ScheduleD/ExpensesIncurredEnforcementAmt 
+    # Line number: Part II Line 7  Description:  Amount of expenses incurred in monitoring or enforcing easements during the taxable year  xpath: /IRS990ScheduleD/ExpensesIncurredEnforcementAmt 
 
     Sctn170hRqrStsfdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II Line 8  Description:  Does each conservation easement reported on line 2(d) above satisfy the requirements of section 170(h)(4)(B)(i) and 170(h)(4)(B)(ii)?  xpath: /IRS990ScheduleD/Section170hRqrStsfdInd 
+    # Line number: Part II Line 8  Description: Does each conservation easement reported on line 2(d) above satisfy the requirements of section 170(h)(4)(B)(i) and 170(h)(4)(B)(ii)?  xpath: /IRS990ScheduleD/Section170hRqrStsfdInd 
 
 #######
 #
@@ -6923,28 +7630,28 @@ class skedd_part_iii(models.Model):
     # Line number:  Part III Line 1b(ii) OR Line 2b  Description:  Assets in Form 990, Part X  xpath: /IRS990ScheduleD/HeldWorksArtGrp/AssetsIncludedAmt 
 
     SkdD_CllctnUsdPbExhbtnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 3a  Description:  Collection used for public exhibition  xpath: /IRS990ScheduleD/CollectionUsedPubExhibitionInd 
+    # Line number: Part III Line 3a  Description:  Collection used for public exhibition  xpath: /IRS990ScheduleD/CollectionUsedPubExhibitionInd 
 
     SkdD_CllUsdSchlrlyRsrchInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 3b  Description:  Collection used for scholarly research  xpath: /IRS990ScheduleD/CollUsedScholarlyRsrchInd 
+    # Line number: Part III Line 3b  Description:  Collection used for scholarly research  xpath: /IRS990ScheduleD/CollUsedScholarlyRsrchInd 
 
     SkdD_CllctnUsdPrsrvtnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 3c  Description:  Collection used for preservation  xpath: /IRS990ScheduleD/CollectionUsedPreservationInd 
+    # Line number: Part III Line 3c  Description:  Collection used for preservation  xpath: /IRS990ScheduleD/CollectionUsedPreservationInd 
 
     SkdD_CllUsdLnOrExchPrgInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 3d  Description:  Collection used for loan or exchange programs  xpath: /IRS990ScheduleD/CollUsedLoanOrExchProgInd 
+    # Line number: Part III Line 3d  Description:  Collection used for loan or exchange programs  xpath: /IRS990ScheduleD/CollUsedLoanOrExchProgInd 
 
     SkdD_CllctnUsdOthrPrpss = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 3e  Description:  Collection used for other purposes and description  xpath: /IRS990ScheduleD/CollectionUsedOtherPurposesGrp 
+    # Line number: Part III Line 3e  Description:  Collection used for other purposes and description  xpath: /IRS990ScheduleD/CollectionUsedOtherPurposesGrp 
 
     CllctnUsdOthrPrpss_CllctnUsdOthrPrpssInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 3e  Description:  Collection used for other purposes and description  xpath: /IRS990ScheduleD/CollectionUsedOtherPurposesGrp/CollectionUsedOtherPurposesInd 
+    # Line number: Part III Line 3e  Description:  Collection used for other purposes and description  xpath: /IRS990ScheduleD/CollectionUsedOtherPurposesGrp/CollectionUsedOtherPurposesInd 
 
     CllctnUsdOthrPrpss_OthrPrpssDsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part III Line 3e  Description:  Collection used for other purposes and description  xpath: /IRS990ScheduleD/CollectionUsedOtherPurposesGrp/OtherPurposesDesc 
+    # Line number: Part III Line 3e  Description:  Collection used for other purposes and description  xpath: /IRS990ScheduleD/CollectionUsedOtherPurposesGrp/OtherPurposesDesc 
 
     SkdD_SlctdAsstsSlInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Line 5  Description:  During the year, did the organization solicit or receive donations of art, historical treasures or other similar assets to be sold to raise funds rather than to be maintained as part of the organization's collection?  xpath: /IRS990ScheduleD/SolicitedAssetsSaleInd 
+    # Line number: Part III Line 5  Description:  During the year, did the organization solicit or receive donations of art, historical treasures or other similar assets to be sold to raise funds rather than to be maintained as part of the organization's collection?  xpath: /IRS990ScheduleD/SolicitedAssetsSaleInd 
 
 #######
 #
@@ -6957,25 +7664,25 @@ class skedd_part_iv(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     AgntTrstEtcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 1a  Description:  Is the organization an agent, trustee, custodian or other intermediary for contributions or other assets not included on Form 990, Part X?  xpath: /IRS990ScheduleD/AgentTrusteeEtcInd 
+    # Line number: Part IV Line 1a  Description: Is the organization an agent, trustee, custodian or other intermediary for contributions or other assets not included on Form 990, Part X?  xpath: /IRS990ScheduleD/AgentTrusteeEtcInd 
 
     BgnnngBlncAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1c  Description:  Beginning balance  xpath: /IRS990ScheduleD/BeginningBalanceAmt 
+    # Line number: Part IV Line 1c  Description:  Beginning balance  xpath: /IRS990ScheduleD/BeginningBalanceAmt 
 
     AddtnsDrngYrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1d  Description:  Additions during the year  xpath: /IRS990ScheduleD/AdditionsDuringYearAmt 
+    # Line number: Part IV Line 1d  Description:  Additions during the year  xpath: /IRS990ScheduleD/AdditionsDuringYearAmt 
 
     DstrbtnsDrngYrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1e  Description:  Distributions during the year  xpath: /IRS990ScheduleD/DistributionsDuringYearAmt 
+    # Line number: Part IV Line 1e  Description:  Distributions during the year  xpath: /IRS990ScheduleD/DistributionsDuringYearAmt 
 
     EndngBlncAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part IV Line 1f  Description:  Ending balance  xpath: /IRS990ScheduleD/EndingBalanceAmt 
+    # Line number: Part IV Line 1f  Description:  Ending balance  xpath: /IRS990ScheduleD/EndingBalanceAmt 
 
     InclEscrwCstdlAcctLbInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 2a  Description:  Did the organization include an amount on Form 990, Part X, line 21?  xpath: /IRS990ScheduleD/InclEscrowCustodialAcctLiabInd 
+    # Line number: Part IV Line 2a  Description: Did the organization include an amount on Form 990, Part X, line 21?  xpath: /IRS990ScheduleD/InclEscrowCustodialAcctLiabInd 
 
     ExplntnPrvddInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part IV Line 2b  Description:  Part XIII contains an explanation for Part IV, Line 2b  xpath: /IRS990ScheduleD/ExplanationProvidedInd 
+    # Line number: Part IV Line 2b  Description: Part XIII contains an explanation for Part IV, Line 2b  xpath: /IRS990ScheduleD/ExplanationProvidedInd 
 
 #######
 #
@@ -7093,22 +7800,22 @@ class skedd_part_v(models.Model):
     # Line number:  Part V Line 1g  Description:  End of year balance  xpath: /IRS990ScheduleD/CYMinus4YrEndwmtFundGrp/EndYearBalanceAmt 
 
     SkdD_BrdDsgntdBlncEOYPct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part V Line 2a  Description:  Board designated EOY balance  xpath: /IRS990ScheduleD/BoardDesignatedBalanceEOYPct 
+    # Line number: Part V Line 2a  Description:  Board designated EOY balance  xpath: /IRS990ScheduleD/BoardDesignatedBalanceEOYPct 
 
     SkdD_PrmnntEndwmntBlncEOYPct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part V Line 2b  Description:  Permanent endowment EOY balance  xpath: /IRS990ScheduleD/PrmnntEndowmentBalanceEOYPct 
+    # Line number: Part V Line 2b  Description:  Permanent endowment EOY balance  xpath: /IRS990ScheduleD/PrmnntEndowmentBalanceEOYPct 
 
     SkdD_TrmEndwmntBlncEOYPct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part V Line 2c  Description:  Term endowment EOY balance  xpath: /IRS990ScheduleD/TermEndowmentBalanceEOYPct 
+    # Line number: Part V Line 2c  Description:  Term endowment EOY balance  xpath: /IRS990ScheduleD/TermEndowmentBalanceEOYPct 
 
     SkdD_EndwmntsHldUnrltdOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 3a(i)  Description:  Endowments held by unrelated organizations?  xpath: /IRS990ScheduleD/EndowmentsHeldUnrelatedOrgInd 
+    # Line number: Part V Line 3a(i)  Description:  Endowments held by unrelated organizations?  xpath: /IRS990ScheduleD/EndowmentsHeldUnrelatedOrgInd 
 
     SkdD_EndwmntsHldRltdOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 3a(ii)  Description:  Endowments held by related organizations?  xpath: /IRS990ScheduleD/EndowmentsHeldRelatedOrgInd 
+    # Line number: Part V Line 3a(ii)  Description:  Endowments held by related organizations?  xpath: /IRS990ScheduleD/EndowmentsHeldRelatedOrgInd 
 
     SkdD_RltdOrgLstSchRInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 3b  Description:  Are related orgs listed on Schedule R?  xpath: /IRS990ScheduleD/RelatedOrgListSchRInd 
+    # Line number: Part V Line 3b  Description:  Are related orgs listed on Schedule R?  xpath: /IRS990ScheduleD/RelatedOrgListSchRInd 
 
 #######
 #
@@ -7133,7 +7840,13 @@ class skedd_part_vi(models.Model):
     # Line number:  Part VI Column (c)  Description:  Depreciation  xpath: /IRS990ScheduleD/OtherLandBuildingsGrp/DepreciationAmt 
 
     SkdD_TtlBkVlLndBldngsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Line 1  Description:  Total of book value  xpath: /IRS990ScheduleD/TotalBookValueLandBuildingsAmt 
+    # Line number: Part VI Line 1  Description:  Total of book value  xpath: /IRS990ScheduleD/TotalBookValueLandBuildingsAmt 
+
+    Bldngs_InvstmntCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/BuildingsGrp/InvestmentCostOrOtherBasisAmt 
+
+    Eqpmnt_InvstmntCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/EquipmentGrp/InvestmentCostOrOtherBasisAmt 
 
     Lnd_InvstmntCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/LandGrp/InvestmentCostOrOtherBasisAmt 
@@ -7141,17 +7854,8 @@ class skedd_part_vi(models.Model):
     LshldImprvmnts_InvstmntCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/LeaseholdImprovementsGrp/InvestmentCostOrOtherBasisAmt 
 
-    Eqpmnt_InvstmntCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/EquipmentGrp/InvestmentCostOrOtherBasisAmt 
-
-    Bldngs_InvstmntCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/BuildingsGrp/InvestmentCostOrOtherBasisAmt 
-
     OthrLndBldngs_InvstmntCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (a)  Description:  Investment cost or other basis  xpath: /IRS990ScheduleD/OtherLandBuildingsGrp/InvestmentCostOrOtherBasisAmt 
-
-    Lnd_OthrCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/LandGrp/OtherCostOrOtherBasisAmt 
 
     Bldngs_OthrCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/BuildingsGrp/OtherCostOrOtherBasisAmt 
@@ -7159,14 +7863,14 @@ class skedd_part_vi(models.Model):
     Eqpmnt_OthrCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/EquipmentGrp/OtherCostOrOtherBasisAmt 
 
+    Lnd_OthrCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/LandGrp/OtherCostOrOtherBasisAmt 
+
     LshldImprvmnts_OthrCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/LeaseholdImprovementsGrp/OtherCostOrOtherBasisAmt 
 
     OthrLndBldngs_OthrCstOrOthrBssAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (b)  Description:  Other cost or other basis  xpath: /IRS990ScheduleD/OtherLandBuildingsGrp/OtherCostOrOtherBasisAmt 
-
-    LshldImprvmnts_BkVlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/LeaseholdImprovementsGrp/BookValueAmt 
 
     Bldngs_BkVlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/BuildingsGrp/BookValueAmt 
@@ -7176,6 +7880,9 @@ class skedd_part_vi(models.Model):
 
     Lnd_BkVlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/LandGrp/BookValueAmt 
+
+    LshldImprvmnts_BkVlAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/LeaseholdImprovementsGrp/BookValueAmt 
 
     OthrLndBldngs_BkVlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Part VI Column (d)  Description:  Book value  xpath: /IRS990ScheduleD/OtherLandBuildingsGrp/BookValueAmt 
@@ -7199,11 +7906,11 @@ class skedd_part_vii(models.Model):
     FnnclDrvtvs_BkVlAmt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Book value  xpath: /IRS990ScheduleD/FinancialDerivativesGrp/BookValueAmt 
 
-    FnnclDrvtvs_MthdVltnCd = models.TextField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Method of valuation  xpath: /IRS990ScheduleD/FinancialDerivativesGrp/MethodValuationCd 
-
     ClslyHldEqtyIntrsts_MthdVltnCd = models.TextField(null=True, blank=True)
     # Line number:  Column (c)  Description:  Method of valuation  xpath: /IRS990ScheduleD/CloselyHeldEquityInterestsGrp/MethodValuationCd 
+
+    FnnclDrvtvs_MthdVltnCd = models.TextField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Method of valuation  xpath: /IRS990ScheduleD/FinancialDerivativesGrp/MethodValuationCd 
 
 #######
 #
@@ -7248,7 +7955,7 @@ class skedd_part_x(models.Model):
     # Line number:  Part X Column (b)  Description:  Total of liability amounts  xpath: /IRS990ScheduleD/TotalLiabilityAmt 
 
     FtntTxtInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part X Line 2  Description:  Part XIII contains the text of the footnote for Part X, Line 2  xpath: /IRS990ScheduleD/FootnoteTextInd 
+    # Line number: Part X Line 2  Description: Part XIII contains the text of the footnote for Part X, Line 2  xpath: /IRS990ScheduleD/FootnoteTextInd 
 
 #######
 #
@@ -7261,37 +7968,37 @@ class skedd_part_xi(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     TtlRvEtcAdtdFnclStmtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 1  Description:  Total revenue, gains and other support per audited financial statments  xpath: /IRS990ScheduleD/TotalRevEtcAuditedFinclStmtAmt 
+    # Line number: Part XI Line 1  Description:  Total revenue, gains and other support per audited financial statments  xpath: /IRS990ScheduleD/TotalRevEtcAuditedFinclStmtAmt 
 
     NtUnrlzdGnsInvstAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 2a  Description:  Net unrealized gains on investments  xpath: /IRS990ScheduleD/NetUnrealizedGainsInvstAmt 
+    # Line number: Part XI Line 2a  Description:  Net unrealized gains on investments  xpath: /IRS990ScheduleD/NetUnrealizedGainsInvstAmt 
 
     DntdSrvcsAndUsFcltsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 2b  Description:  Donated services and use of facilities  xpath: /IRS990ScheduleD/DonatedServicesAndUseFcltsAmt 
+    # Line number: Part XI Line 2b  Description:  Donated services and use of facilities  xpath: /IRS990ScheduleD/DonatedServicesAndUseFcltsAmt 
 
     RcvrsPrrYrGrntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 2c  Description:  Recoveries of prior year grants  xpath: /IRS990ScheduleD/RecoveriesPriorYearGrantsAmt 
+    # Line number: Part XI Line 2c  Description:  Recoveries of prior year grants  xpath: /IRS990ScheduleD/RecoveriesPriorYearGrantsAmt 
 
     OthrRvnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 2d  Description:  Other revenues  xpath: /IRS990ScheduleD/OtherRevenueAmt 
+    # Line number: Part XI Line 2d  Description:  Other revenues  xpath: /IRS990ScheduleD/OtherRevenueAmt 
 
     RvnNtRprtdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 2e  Description:  Total amounts, add lines 2a through 2d  xpath: /IRS990ScheduleD/RevenueNotReportedAmt 
+    # Line number: Part XI Line 2e  Description: Total amounts, add lines 2a through 2d  xpath: /IRS990ScheduleD/RevenueNotReportedAmt 
 
     RvnSbttlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 3  Description:  Part XI line 1 minus Part XI line 2e  xpath: /IRS990ScheduleD/RevenueSubtotalAmt 
+    # Line number: Part XI Line 3  Description: Part XI line 1 minus Part XI line 2e  xpath: /IRS990ScheduleD/RevenueSubtotalAmt 
 
     InvstmntExpnssNtIncldAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 4a  Description:  Investment expenses not included on Form 990, Part VIII, line 7b  xpath: /IRS990ScheduleD/InvestmentExpensesNotIncldAmt 
+    # Line number: Part XI Line 4a  Description: Investment expenses not included on Form 990, Part VIII, line 7b  xpath: /IRS990ScheduleD/InvestmentExpensesNotIncldAmt 
 
     OthrRvnsNtInclddAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 4b  Description:  Other revenues not included  xpath: /IRS990ScheduleD/OtherRevenuesNotIncludedAmt 
+    # Line number: Part XI Line 4b  Description:  Other revenues not included  xpath: /IRS990ScheduleD/OtherRevenuesNotIncludedAmt 
 
     RvnNtRprtdFnclStmtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 4c  Description:  Total amounts, add lines 4a and 4b  xpath: /IRS990ScheduleD/RevenueNotReportedFinclStmtAmt 
+    # Line number: Part XI Line 4c  Description: Total amounts, add lines 4a and 4b  xpath: /IRS990ScheduleD/RevenueNotReportedFinclStmtAmt 
 
     TtlRvnPrFrm990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XI Line 5  Description:  Total revenue (Form 990, Part 1, Line 12). Add lines 3 and 4c  xpath: /IRS990ScheduleD/TotalRevenuePerForm990Amt 
+    # Line number: Part XI Line 5  Description: Total revenue (Form 990, Part 1, Line 12). Add lines 3 and 4c  xpath: /IRS990ScheduleD/TotalRevenuePerForm990Amt 
 
 #######
 #
@@ -7304,62 +8011,52 @@ class skedd_part_xii(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     TtExpnsEtcAdtdFnclStmtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 1  Description:  Total Expenses, and Losses per audited financial statments  xpath: /IRS990ScheduleD/TotExpnsEtcAuditedFinclStmtAmt 
+    # Line number: Part XII Line 1  Description:  Total Expenses, and Losses per audited financial statments  xpath: /IRS990ScheduleD/TotExpnsEtcAuditedFinclStmtAmt 
 
     DntdSrvcsUsFcltsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 2a  Description:  Donated Services and Use of Facilities  xpath: /IRS990ScheduleD/DonatedServicesUseFcltsAmt 
+    # Line number: Part XII Line 2a  Description:  Donated Services and Use of Facilities  xpath: /IRS990ScheduleD/DonatedServicesUseFcltsAmt 
 
     PrrYrAdjstmntsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 2b  Description:  Prior year adjustments  xpath: /IRS990ScheduleD/PriorYearAdjustmentsAmt 
+    # Line number: Part XII Line 2b  Description:  Prior year adjustments  xpath: /IRS990ScheduleD/PriorYearAdjustmentsAmt 
 
     LsssRprtdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 2c  Description:  Losses reported  xpath: /IRS990ScheduleD/LossesReportedAmt 
+    # Line number: Part XII Line 2c  Description:  Losses reported  xpath: /IRS990ScheduleD/LossesReportedAmt 
 
     OthrExpnssInclddAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 2d  Description:  Other expenses included  xpath: /IRS990ScheduleD/OtherExpensesIncludedAmt 
+    # Line number: Part XII Line 2d  Description:  Other expenses included  xpath: /IRS990ScheduleD/OtherExpensesIncludedAmt 
 
     ExpnssNtRprtdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 2e  Description:  Total amounts, add lines 2a through 2d  xpath: /IRS990ScheduleD/ExpensesNotReportedAmt 
+    # Line number: Part XII Line 2e  Description: Total amounts, add lines 2a through 2d  xpath: /IRS990ScheduleD/ExpensesNotReportedAmt 
 
     ExpnssSbttlAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 3  Description:  Part XII line 1 minus Part XII line 2e  xpath: /IRS990ScheduleD/ExpensesSubtotalAmt 
+    # Line number: Part XII Line 3  Description: Part XII line 1 minus Part XII line 2e  xpath: /IRS990ScheduleD/ExpensesSubtotalAmt 
 
     InvstmntExpnssNtIncld2Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 4a  Description:  Investment expenses not included on Form 990, Part VIII, line 7b  xpath: /IRS990ScheduleD/InvestmentExpensesNotIncld2Amt 
+    # Line number: Part XII Line 4a  Description: Investment expenses not included on Form 990, Part VIII, line 7b  xpath: /IRS990ScheduleD/InvestmentExpensesNotIncld2Amt 
 
     OthrExpnssNtInclddAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 4b  Description:  Other expenses  xpath: /IRS990ScheduleD/OtherExpensesNotIncludedAmt 
+    # Line number: Part XII Line 4b  Description:  Other expenses  xpath: /IRS990ScheduleD/OtherExpensesNotIncludedAmt 
 
     ExpnssNtRptFnclStmtAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 4c  Description:  Total amounts, add lines 4a through 4b  xpath: /IRS990ScheduleD/ExpensesNotRptFinclStmtAmt 
+    # Line number: Part XII Line 4c  Description: Total amounts, add lines 4a through 4b  xpath: /IRS990ScheduleD/ExpensesNotRptFinclStmtAmt 
 
     TtlExpnssPrFrm990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part XII Line 5  Description:  Total expenses (Form 990, Part I, Line 18). Add lines 3 and 4c  xpath: /IRS990ScheduleD/TotalExpensesPerForm990Amt 
+    # Line number: Part XII Line 5  Description: Total expenses (Form 990, Part I, Line 18). Add lines 3 and 4c  xpath: /IRS990ScheduleD/TotalExpensesPerForm990Amt 
 
 #######
 #
-# IRS990ScheduleD - SupplementalInformationDetail
-# A repeating structure from ScheduleD Part XIII Supplemental Information 
+# IRS990ScheduleD - ScheduleD Part XIII Supplemental Information 
 #
 #######
 
-class SkdDSpplmntlInfrmtnDtl(models.Model):
+class skedd_part_xiii(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    SpplmntlInfrmtnDtl = models.TextField(null=True, blank=True)
-    # Description:  Part XIII contents  xpath: /IRS990ScheduleD/SupplementalInformationDetail 
-
-    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part XIII  Description:  Form part and line number reference  xpath: /IRS990ScheduleD/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part XIII  Description:  Form part and line number reference explanation  xpath: /IRS990ScheduleD/SupplementalInformationDetail/ExplanationTxt 
-
 #######
 #
-# IRS990ScheduleD - OtherSecuritiesGrp
-# A repeating structure from ScheduleD Part VII Investments, Other Securities
+# IRS990ScheduleD - SkdDOthrScrts
+# A repeating structure from skedd_part_vii
 #
 #######
 
@@ -7378,8 +8075,8 @@ class SkdDOthrScrts(models.Model):
 
 #######
 #
-# IRS990ScheduleD - InvstProgramRelatedOrgGrp
-# A repeating structure from ScheduleD Part VIII Investments - Program Related 
+# IRS990ScheduleD - SkdDInvstPrgrmRltdOrg
+# A repeating structure from skedd_part_viii
 #
 #######
 
@@ -7398,8 +8095,8 @@ class SkdDInvstPrgrmRltdOrg(models.Model):
 
 #######
 #
-# IRS990ScheduleD - OtherAssetsOrgGrp
-# A repeating structure from ScheduleD Part IX Other Assets 
+# IRS990ScheduleD - SkdDOthrAsstsOrg
+# A repeating structure from skedd_part_ix
 #
 #######
 
@@ -7415,8 +8112,8 @@ class SkdDOthrAsstsOrg(models.Model):
 
 #######
 #
-# IRS990ScheduleD - OtherLiabilitiesOrgGrp
-# A repeating structure from ScheduleD Part X Other Liabilities 
+# IRS990ScheduleD - SkdDOthrLbltsOrg
+# A repeating structure from skedd_part_x
 #
 #######
 
@@ -7432,6 +8129,27 @@ class SkdDOthrLbltsOrg(models.Model):
 
 #######
 #
+# IRS990ScheduleD - SkdDSpplmntlInfrmtnDtl
+# Description:  Part XIII contents
+# A repeating structure from skedd_part_xiii
+#
+#######
+
+class SkdDSpplmntlInfrmtnDtl(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    SpplmntlInfrmtnDtl = models.TextField(null=True, blank=True)
+    # Description:  Part XIII contents  xpath: /IRS990ScheduleD/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Part XIII  Description:  Form part and line number reference  xpath: /IRS990ScheduleD/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = models.TextField(null=True, blank=True)
+    # Line number:  Part XIII  Description:  Form part and line number reference explanation  xpath: /IRS990ScheduleD/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleE - ScheduleE Part I 
 #
 #######
@@ -7441,63 +8159,74 @@ class skede_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     NndscrmntryPlcyStmtInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 1  Description:  Does the organization have a racially nondiscriminatory policy statement?  xpath: /IRS990ScheduleE/NondiscriminatoryPolicyStmtInd 
+    # Line number: Line 1  Description:  Does the organization have a racially nondiscriminatory policy statement?  xpath: /IRS990ScheduleE/NondiscriminatoryPolicyStmtInd 
 
     PlcyStmtInBrchrsEtcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 2  Description:  Does the organization have policy statement in brochures, etc?  xpath: /IRS990ScheduleE/PolicyStmtInBrochuresEtcInd 
+    # Line number: Line 2  Description:  Does the organization have policy statement in brochures, etc?  xpath: /IRS990ScheduleE/PolicyStmtInBrochuresEtcInd 
 
     PlcyPblczdVBrdcstMdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 3  Description:  Has the organization publicized the policy through broadcast media?  xpath: /IRS990ScheduleE/PlcyPblczdViaBroadcastMediaInd 
+    # Line number: Line 3  Description:  Has the organization publicized the policy through broadcast media?  xpath: /IRS990ScheduleE/PlcyPblczdViaBroadcastMediaInd 
 
     MntnRclCmpRcsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 4a  Description:  Does the organization maintain racial composition records?  xpath: /IRS990ScheduleE/MaintainRacialCompRecsInd 
+    # Line number: Line 4a  Description:  Does the organization maintain racial composition records?  xpath: /IRS990ScheduleE/MaintainRacialCompRecsInd 
 
     MntnSchlrshpsRcsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 4b  Description:  Does the organization maintain scholarships records?  xpath: /IRS990ScheduleE/MaintainScholarshipsRecsInd 
+    # Line number: Line 4b  Description:  Does the organization maintain scholarships records?  xpath: /IRS990ScheduleE/MaintainScholarshipsRecsInd 
 
     MntnCpyOfBrchrsEtcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 4c  Description:  Does the organization maintain copies of brochures, etc?  xpath: /IRS990ScheduleE/MaintainCpyOfBrochuresEtcInd 
+    # Line number: Line 4c  Description:  Does the organization maintain copies of brochures, etc?  xpath: /IRS990ScheduleE/MaintainCpyOfBrochuresEtcInd 
 
     MntnCpyOfAllSlInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 4d  Description:  Does the organization maintain copies of all solicitations?  xpath: /IRS990ScheduleE/MaintainCpyOfAllSolInd 
+    # Line number: Line 4d  Description:  Does the organization maintain copies of all solicitations?  xpath: /IRS990ScheduleE/MaintainCpyOfAllSolInd 
 
     DscrmntRcStdntsRghtsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 5a  Description:  Does the organization discriminate by race in any way students' rights or privileges?  xpath: /IRS990ScheduleE/DiscriminateRaceStdntsRghtsInd 
+    # Line number: Line 5a  Description:  Does the organization discriminate by race in any way students' rights or privileges?  xpath: /IRS990ScheduleE/DiscriminateRaceStdntsRghtsInd 
 
     DscrmntRcAdmssPlcyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 5b  Description:  Does the organization discriminate by race in any way admissions policies?  xpath: /IRS990ScheduleE/DiscriminateRaceAdmissPlcyInd 
+    # Line number: Line 5b  Description:  Does the organization discriminate by race in any way admissions policies?  xpath: /IRS990ScheduleE/DiscriminateRaceAdmissPlcyInd 
 
     DscrmntRcEmplmFcltyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 5c  Description:  Does the organization discriminate by race in any way employment of faculty or administrative staff?  xpath: /IRS990ScheduleE/DiscriminateRaceEmplmFcultyInd 
+    # Line number: Line 5c  Description:  Does the organization discriminate by race in any way employment of faculty or administrative staff?  xpath: /IRS990ScheduleE/DiscriminateRaceEmplmFcultyInd 
 
     DscrmntRcSchsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 5d  Description:  Does the organization discriminate by race in any way scholarships or other financial assistance?  xpath: /IRS990ScheduleE/DiscriminateRaceSchsInd 
+    # Line number: Line 5d  Description:  Does the organization discriminate by race in any way scholarships or other financial assistance?  xpath: /IRS990ScheduleE/DiscriminateRaceSchsInd 
 
     DscrmntRcEdcPlcyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 5e  Description:  Does the organization discriminate by race in any way educational policies?  xpath: /IRS990ScheduleE/DiscriminateRaceEducPlcyInd 
+    # Line number: Line 5e  Description:  Does the organization discriminate by race in any way educational policies?  xpath: /IRS990ScheduleE/DiscriminateRaceEducPlcyInd 
 
     DscrmntRcUsOfFcltsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 5f  Description:  Does the organization discriminate by race in any way use of facilities?  xpath: /IRS990ScheduleE/DiscriminateRaceUseOfFcltsInd 
+    # Line number: Line 5f  Description:  Does the organization discriminate by race in any way use of facilities?  xpath: /IRS990ScheduleE/DiscriminateRaceUseOfFcltsInd 
 
     DscrmntRcAthltPrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 5g  Description:  Does the organization discriminate by race in any way athletic programs?  xpath: /IRS990ScheduleE/DiscriminateRaceAthltProgInd 
+    # Line number: Line 5g  Description:  Does the organization discriminate by race in any way athletic programs?  xpath: /IRS990ScheduleE/DiscriminateRaceAthltProgInd 
 
     DscrmntRcOthrActyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 5h  Description:  Does the organization discriminate by race in any way other extracurricular activities?  xpath: /IRS990ScheduleE/DiscriminateRaceOtherActyInd 
+    # Line number: Line 5h  Description:  Does the organization discriminate by race in any way other extracurricular activities?  xpath: /IRS990ScheduleE/DiscriminateRaceOtherActyInd 
 
     GvrnmntFnnclAdRcvdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 6a  Description:  Does the organization receive any financial aid or assistance from a governmental agency?  xpath: /IRS990ScheduleE/GovernmentFinancialAidRcvdInd 
+    # Line number: Line 6a  Description:  Does the organization receive any financial aid or assistance from a governmental agency?  xpath: /IRS990ScheduleE/GovernmentFinancialAidRcvdInd 
 
     GvrnmntFnnclAdRvkdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 6b  Description:  Has the organization's right to such aid ever been revoked or suspended?  xpath: /IRS990ScheduleE/GovernmentFinancialAidRvkdInd 
+    # Line number: Line 6b  Description:  Has the organization's right to such aid ever been revoked or suspended?  xpath: /IRS990ScheduleE/GovernmentFinancialAidRvkdInd 
 
     CmplncWthRvPrc7550Ind = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Line 7  Description:  Compliance with Rev. Proc. 75-50, 1975-2 C.B. 587?  xpath: /IRS990ScheduleE/ComplianceWithRevProc7550Ind 
+    # Line number: Line 7  Description: Compliance with Rev. Proc. 75-50, 1975-2 C.B. 587?  xpath: /IRS990ScheduleE/ComplianceWithRevProc7550Ind 
 
 #######
 #
-# IRS990ScheduleE - SupplementalInformationDetail
-# A repeating structure from ScheduleE Part II Supplemental Information 
+# IRS990ScheduleE - ScheduleE Part II Supplemental Information 
+#
+#######
+
+class skede_part_ii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleE - SkdESpplmntlInfrmtnDtl
+# Description:  Part II contents
+# A repeating structure from skede_part_ii
 #
 #######
 
@@ -7525,34 +8254,34 @@ class skedf_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     GrntRcrdsMntndInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 1  Description:  For grantmakers: Does the organization maintain records to substantiate the amount of the grants or assistance, the grantees' eligibility for the grants or assistance, and the selection criteria used to award the grants or assistance?  xpath: /IRS990ScheduleF/GrantRecordsMaintainedInd 
+    # Line number: Part I Line 1  Description:  For grantmakers: Does the organization maintain records to substantiate the amount of the grants or assistance, the grantees' eligibility for the grants or assistance, and the selection criteria used to award the grants or assistance?  xpath: /IRS990ScheduleF/GrantRecordsMaintainedInd 
 
     SbttlOffcsCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3a Column (b)  Description:  Subtotal number of offices  xpath: /IRS990ScheduleF/SubtotalOfficesCnt 
+    # Line number: Part I Line 3a Column (b)  Description:  Subtotal number of offices  xpath: /IRS990ScheduleF/SubtotalOfficesCnt 
 
     SbttlEmplysCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3a Column (c)  Description:  Subtotal number of employees  xpath: /IRS990ScheduleF/SubtotalEmployeesCnt 
+    # Line number: Part I Line 3a Column (c)  Description:  Subtotal number of employees  xpath: /IRS990ScheduleF/SubtotalEmployeesCnt 
 
     CntnttnTtlOffcCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3b Column (b)  Description:  Total offices from continuation sheets to Part I  xpath: /IRS990ScheduleF/ContinutationTotalOfficeCnt 
+    # Line number: Part I Line 3b Column (b)  Description:  Total offices from continuation sheets to Part I  xpath: /IRS990ScheduleF/ContinutationTotalOfficeCnt 
 
     CntnttnTtlEmplyCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3b Column (c)  Description:  Total employees from continuation sheets to Part I  xpath: /IRS990ScheduleF/ContinutationTotalEmployeeCnt 
+    # Line number: Part I Line 3b Column (c)  Description:  Total employees from continuation sheets to Part I  xpath: /IRS990ScheduleF/ContinutationTotalEmployeeCnt 
 
     TtlOffcCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3c Column (b)  Description:  Total number of offices  xpath: /IRS990ScheduleF/TotalOfficeCnt 
+    # Line number: Part I Line 3c Column (b)  Description:  Total number of offices  xpath: /IRS990ScheduleF/TotalOfficeCnt 
 
     TtlEmplyCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3c Column (c)  Description:  Total number of employees  xpath: /IRS990ScheduleF/TotalEmployeeCnt 
+    # Line number: Part I Line 3c Column (c)  Description:  Total number of employees  xpath: /IRS990ScheduleF/TotalEmployeeCnt 
 
     SbttlSpntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3a Column (f)  Description:  Subtotal amount spent  xpath: /IRS990ScheduleF/SubtotalSpentAmt 
+    # Line number: Part I Line 3a Column (f)  Description:  Subtotal amount spent  xpath: /IRS990ScheduleF/SubtotalSpentAmt 
 
     CntntnSpntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3b Column (f)  Description:  Total amouunt from continuation sheets to Part I  xpath: /IRS990ScheduleF/ContinuationSpentAmt 
+    # Line number: Part I Line 3b Column (f)  Description:  Total amouunt from continuation sheets to Part I  xpath: /IRS990ScheduleF/ContinuationSpentAmt 
 
     TtlSpntAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3c Column (f)  Description:  Total amount spent  xpath: /IRS990ScheduleF/TotalSpentAmt 
+    # Line number: Part I Line 3c Column (f)  Description:  Total amount spent  xpath: /IRS990ScheduleF/TotalSpentAmt 
 
 #######
 #
@@ -7565,10 +8294,20 @@ class skedf_part_ii(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     Ttl501c3OrgCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II line 2  Description:  Total number of 501(c)(3) organizations  xpath: /IRS990ScheduleF/Total501c3OrgCnt 
+    # Line number: Part II line 2  Description: Total number of 501(c)(3) organizations  xpath: /IRS990ScheduleF/Total501c3OrgCnt 
 
     TtlOthrOrgCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II line 3  Description:  Total number of other organizations or entities  xpath: /IRS990ScheduleF/TotalOtherOrgCnt 
+    # Line number: Part II line 3  Description:  Total number of other organizations or entities  xpath: /IRS990ScheduleF/TotalOtherOrgCnt 
+
+#######
+#
+# IRS990ScheduleF - ScheduleF Part III Grants and Other Assistance to Individuals Outside the United States 
+#
+#######
+
+class skedf_part_iii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
 #######
 #
@@ -7581,27 +8320,37 @@ class skedf_part_iv(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     TrnsfrTFrgnCrpInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 1  Description:  Was the organization a U.S. transferor of property to a foreign corporation during the tax year?  xpath: /IRS990ScheduleF/TransferToForeignCorpInd 
+    # Line number: Part IV Line 1  Description:  Was the organization a U.S. transferor of property to a foreign corporation during the tax year?  xpath: /IRS990ScheduleF/TransferToForeignCorpInd 
 
     IntrstInFrgnTrstInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 2  Description:  Did the organization have an interest in a foreign trust during the tax year?  xpath: /IRS990ScheduleF/InterestInForeignTrustInd 
+    # Line number: Part IV Line 2  Description:  Did the organization have an interest in a foreign trust during the tax year?  xpath: /IRS990ScheduleF/InterestInForeignTrustInd 
 
     FrgnCrpOwnrshpInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 3  Description:  Did the organization have an ownership interest in a foreign corporation during the tax year?  xpath: /IRS990ScheduleF/ForeignCorpOwnershipInd 
+    # Line number: Part IV Line 3  Description:  Did the organization have an ownership interest in a foreign corporation during the tax year?  xpath: /IRS990ScheduleF/ForeignCorpOwnershipInd 
 
     PssvFrgnInvstmstCInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 4  Description:  Was the organization a direct or indirect shareholder of a passive foreign investment company or a qualified electing fund during the tax year?  xpath: /IRS990ScheduleF/PassiveForeignInvestmestCoInd 
+    # Line number: Part IV Line 4  Description:  Was the organization a direct or indirect shareholder of a passive foreign investment company or a qualified electing fund during the tax year?  xpath: /IRS990ScheduleF/PassiveForeignInvestmestCoInd 
 
     FrgnPrtnrshpInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 5  Description:  Did the organization have an ownership interest in a foreign partnership during the tax year?  xpath: /IRS990ScheduleF/ForeignPartnershipInd 
+    # Line number: Part IV Line 5  Description:  Did the organization have an ownership interest in a foreign partnership during the tax year?  xpath: /IRS990ScheduleF/ForeignPartnershipInd 
 
     BycttCntrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part IV Line 6  Description:  Did the organization have any operations in or related to any boycotting countries during the tax year?  xpath: /IRS990ScheduleF/BoycottCountriesInd 
+    # Line number: Part IV Line 6  Description:  Did the organization have any operations in or related to any boycotting countries during the tax year?  xpath: /IRS990ScheduleF/BoycottCountriesInd 
 
 #######
 #
-# IRS990ScheduleF - AccountActivitiesOutsideUSGrp
-# A repeating structure from ScheduleF Part I General Activities Outside the U.S. 
+# IRS990ScheduleF - ScheduleF Part V  Supplemental Information 
+#
+#######
+
+class skedf_part_v(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleF - SkdFAccntActvtsOtsdUS
+# A repeating structure from skedf_part_i
 #
 #######
 
@@ -7629,8 +8378,8 @@ class SkdFAccntActvtsOtsdUS(models.Model):
 
 #######
 #
-# IRS990ScheduleF - GrantsToOrgOutsideUSGrp
-# A repeating structure from ScheduleF Part II Grants and Other Assistance to Organizations or Entities Outside the United States 
+# IRS990ScheduleF - SkdFGrntsTOrgOtsdUS
+# A repeating structure from skedf_part_ii
 #
 #######
 
@@ -7661,8 +8410,8 @@ class SkdFGrntsTOrgOtsdUS(models.Model):
 
 #######
 #
-# IRS990ScheduleF - ForeignIndividualsGrantsGrp
-# A repeating structure from ScheduleF Part III Grants and Other Assistance to Individuals Outside the United States 
+# IRS990ScheduleF - SkdFFrgnIndvdlsGrnts
+# A repeating structure from skedf_part_iii
 #
 #######
 
@@ -7696,8 +8445,9 @@ class SkdFFrgnIndvdlsGrnts(models.Model):
 
 #######
 #
-# IRS990ScheduleF - SupplementalInformationDetail
-# A repeating structure from ScheduleF Part V  Supplemental Information 
+# IRS990ScheduleF - SkdFSpplmntlInfrmtnDtl
+# Description:  Part V contents
+# A repeating structure from skedf_part_v
 #
 #######
 
@@ -7725,40 +8475,40 @@ class skedg_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     MlSlcttnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1  Description:  Mail solicitations  xpath: /IRS990ScheduleG/MailSolicitationsInd 
+    # Line number: Part I Line 1  Description:  Mail solicitations  xpath: /IRS990ScheduleG/MailSolicitationsInd 
 
     EmlSlcttnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1  Description:  Email solicitations  xpath: /IRS990ScheduleG/EmailSolicitationsInd 
+    # Line number: Part I Line 1  Description:  Email solicitations  xpath: /IRS990ScheduleG/EmailSolicitationsInd 
 
     PhnSlcttnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1  Description:  Phone solicitations  xpath: /IRS990ScheduleG/PhoneSolicitationsInd 
+    # Line number: Part I Line 1  Description:  Phone solicitations  xpath: /IRS990ScheduleG/PhoneSolicitationsInd 
 
     InPrsnSlcttnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1  Description:  In-person solicitations  xpath: /IRS990ScheduleG/InPersonSolicitationsInd 
+    # Line number: Part I Line 1  Description:  In-person solicitations  xpath: /IRS990ScheduleG/InPersonSolicitationsInd 
 
     SlcttnOfNnGvtGrntsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1  Description:  Solicitation of non-govt grants  xpath: /IRS990ScheduleG/SolicitationOfNonGovtGrantsInd 
+    # Line number: Part I Line 1  Description:  Solicitation of non-govt grants  xpath: /IRS990ScheduleG/SolicitationOfNonGovtGrantsInd 
 
     SlcttnOfGvtGrntsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1  Description:  Solicitation of government grants  xpath: /IRS990ScheduleG/SolicitationOfGovtGrantsInd 
+    # Line number: Part I Line 1  Description:  Solicitation of government grants  xpath: /IRS990ScheduleG/SolicitationOfGovtGrantsInd 
 
     SpclFndrsngEvntsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1  Description:  Special fundraising events  xpath: /IRS990ScheduleG/SpecialFundraisingEventsInd 
+    # Line number: Part I Line 1  Description:  Special fundraising events  xpath: /IRS990ScheduleG/SpecialFundraisingEventsInd 
 
     AgrmtPrfFndrsngActyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 2a  Description:  Did the organization have a written or oral agreement with any individual (including officers, directors, trustees or key employees listed in Form 990, Part VII) or entity in connection with professional fundraising activities?  xpath: /IRS990ScheduleG/AgrmtProfFundraisingActyInd 
+    # Line number: Part I Line 2a  Description: Did the organization have a written or oral agreement with any individual (including officers, directors, trustees or key employees listed in Form 990, Part VII) or entity in connection with professional fundraising activities?  xpath: /IRS990ScheduleG/AgrmtProfFundraisingActyInd 
 
     TtlGrssRcptsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 2b(iv)  Description:  Total gross receipts  xpath: /IRS990ScheduleG/TotalGrossReceiptsAmt 
+    # Line number: Part I Line 2b(iv)  Description:  Total gross receipts  xpath: /IRS990ScheduleG/TotalGrossReceiptsAmt 
 
     TtlRtndByCntrctrsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 2b(v)  Description:  Total retained by contractors  xpath: /IRS990ScheduleG/TotalRetainedByContractorsAmt 
+    # Line number: Part I Line 2b(v)  Description:  Total retained by contractors  xpath: /IRS990ScheduleG/TotalRetainedByContractorsAmt 
 
     TtlNtTOrgnztnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 2b(vi)  Description:  Total net to organization  xpath: /IRS990ScheduleG/TotalNetToOrganizationAmt 
+    # Line number: Part I Line 2b(vi)  Description:  Total net to organization  xpath: /IRS990ScheduleG/TotalNetToOrganizationAmt 
 
     AllSttsCd = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 3  Description:  Literal for all states  xpath: /IRS990ScheduleG/AllStatesCd 
+    # Line number: Part I Line 3  Description:  Literal for all states  xpath: /IRS990ScheduleG/AllStatesCd 
 
 #######
 #
@@ -7772,6 +8522,9 @@ class skedg_part_ii(models.Model):
 
     Evnt1Nm = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Column (a)  Description:  Name of event no.1  xpath: /IRS990ScheduleG/FundraisingEventInformationGrp/Event1Nm 
+
+    Evnt1Nm = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (a)  Description:  Name of event no.1  xpath: /IRS990ScheduleG/FundraisingEventInformationGrp/NameOfEvent1Amt 
 
     GrssRcptsEvnt1Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Line 1 Column (a)  Description:  Gross receipts, event no.1  xpath: /IRS990ScheduleG/FundraisingEventInformationGrp/GrossReceiptsEvent1Amt 
@@ -7802,6 +8555,9 @@ class skedg_part_ii(models.Model):
 
     Evnt2Nm = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Column (b)  Description:  Name of event no.2  xpath: /IRS990ScheduleG/FundraisingEventInformationGrp/Event2Nm 
+
+    Evnt2Nm = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (b)  Description:  Name of event no.2  xpath: /IRS990ScheduleG/FundraisingEventInformationGrp/NameOfEvent2Amt 
 
     GrssRcptsEvnt2Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Line 1 Column (b)  Description:  Gross receipts, event no.2  xpath: /IRS990ScheduleG/FundraisingEventInformationGrp/GrossReceiptsEvent2Amt 
@@ -7988,170 +8744,250 @@ class skedg_part_iii(models.Model):
     # Line number:  Line 8  Description:  Net gaming income summary  xpath: /IRS990ScheduleG/GamingInformationGrp/NetGamingIncomeSummaryAmt 
 
     SkdG_LcnsdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Line 9a  Description:  Is organization licensed in each state?  xpath: /IRS990ScheduleG/LicensedInd 
+    # Line number: Part III Line 9a  Description:  Is organization licensed in each state?  xpath: /IRS990ScheduleG/LicensedInd 
 
     SkdG_ExplntnIfNTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 9b  Description:  Explanation if no license  xpath: /IRS990ScheduleG/ExplanationIfNoTxt 
+    # Line number: Part III Line 9b  Description:  Explanation if no license  xpath: /IRS990ScheduleG/ExplanationIfNoTxt 
 
     SkdG_LcnsSspnddEtcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Line 10a  Description:  Were any gaming licenses revoked, suspended, or terminated during the tax year?  xpath: /IRS990ScheduleG/LicenseSuspendedEtcInd 
+    # Line number: Part III Line 10a  Description:  Were any gaming licenses revoked, suspended, or terminated during the tax year?  xpath: /IRS990ScheduleG/LicenseSuspendedEtcInd 
 
     SkdG_ExplntnIfYsTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 10b  Description:  Explanation if license revoked, suspended, or termination  xpath: /IRS990ScheduleG/ExplanationIfYesTxt 
+    # Line number: Part III Line 10b  Description:  Explanation if license revoked, suspended, or termination  xpath: /IRS990ScheduleG/ExplanationIfYesTxt 
 
     SkdG_GmngWthNnmmbrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Line 11  Description:  Does organization operate gaming activities with nonmembers?  xpath: /IRS990ScheduleG/GamingWithNonmembersInd 
+    # Line number: Part III Line 11  Description:  Does organization operate gaming activities with nonmembers?  xpath: /IRS990ScheduleG/GamingWithNonmembersInd 
 
     SkdG_MmbrOfOthrEnttyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Line 12  Description:  Is organization formed to administer charitable gaming?  xpath: /IRS990ScheduleG/MemberOfOtherEntityInd 
+    # Line number: Part III Line 12  Description:  Is organization formed to administer charitable gaming?  xpath: /IRS990ScheduleG/MemberOfOtherEntityInd 
 
     SkdG_GmngOwnFcltyPct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part III Line 13a  Description:  Percentage of gaming in own facility  xpath: /IRS990ScheduleG/GamingOwnFacilityPct 
+    # Line number: Part III Line 13a  Description:  Percentage of gaming in own facility  xpath: /IRS990ScheduleG/GamingOwnFacilityPct 
 
     SkdG_GmngOthrFcltyPct = models.DecimalField(null=True, blank=True, max_digits=6, decimal_places=5)
-    # Line number:  Part III Line 13b  Description:  Percentage of gaming in other facility  xpath: /IRS990ScheduleG/GamingOtherFacilityPct 
+    # Line number: Part III Line 13b  Description:  Percentage of gaming in other facility  xpath: /IRS990ScheduleG/GamingOtherFacilityPct 
 
     SkdG_CntrctWth3rdPrtyFrGmRvInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Line 15a  Description:  Is there a third party contract for gaming revenue?  xpath: /IRS990ScheduleG/CntrctWith3rdPrtyForGameRevInd 
+    # Line number: Part III Line 15a  Description:  Is there a third party contract for gaming revenue?  xpath: /IRS990ScheduleG/CntrctWith3rdPrtyForGameRevInd 
 
     SkdG_GmngRvnRcvdByOrgAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 15b  Description:  Amount of gaming revenue received by organization  xpath: /IRS990ScheduleG/GamingRevenueReceivedByOrgAmt 
+    # Line number: Part III Line 15b  Description:  Amount of gaming revenue received by organization  xpath: /IRS990ScheduleG/GamingRevenueReceivedByOrgAmt 
 
     SkdG_GmngRvnRtnBy3PrtyAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 15b  Description:  Amount of gaming revenue retained by 3rd party  xpath: /IRS990ScheduleG/GamingRevenueRtnBy3PrtyAmt 
+    # Line number: Part III Line 15b  Description: Amount of gaming revenue retained by 3rd party  xpath: /IRS990ScheduleG/GamingRevenueRtnBy3PrtyAmt 
 
     SkdG_GmngMngrCmpnstnAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 16  Description:  Gaming manager compensation  xpath: /IRS990ScheduleG/GamingManagerCompensationAmt 
+    # Line number: Part III Line 16  Description:  Gaming manager compensation  xpath: /IRS990ScheduleG/GamingManagerCompensationAmt 
 
     SkdG_GmngMngrSrvcsPrvTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 16  Description:  Gamaing manager services provided  xpath: /IRS990ScheduleG/GamingManagerServicesProvTxt 
+    # Line number: Part III Line 16  Description:  Gamaing manager services provided  xpath: /IRS990ScheduleG/GamingManagerServicesProvTxt 
 
     SkdG_GmngMngrIsDrctrOfcrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 16  Description:  Gaming manager is a director or officer  xpath: /IRS990ScheduleG/GamingManagerIsDirectorOfcrInd 
+    # Line number: Part III Line 16  Description:  Gaming manager is a director or officer  xpath: /IRS990ScheduleG/GamingManagerIsDirectorOfcrInd 
 
     SkdG_GmngMngrIsEmplyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 16  Description:  Gaming manager is an employee  xpath: /IRS990ScheduleG/GamingManagerIsEmployeeInd 
+    # Line number: Part III Line 16  Description:  Gaming manager is an employee  xpath: /IRS990ScheduleG/GamingManagerIsEmployeeInd 
 
     SkdG_GmngMngrIsIndCntrctInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Line 16  Description:  Gaming manager is an independent contractor  xpath: /IRS990ScheduleG/GamingManagerIsIndCntrctInd 
+    # Line number: Part III Line 16  Description:  Gaming manager is an independent contractor  xpath: /IRS990ScheduleG/GamingManagerIsIndCntrctInd 
 
     SkdG_ChrtblDstrbtnRqrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Line 17a  Description:  Charitable distributions required?  xpath: /IRS990ScheduleG/CharitableDistributionRqrInd 
+    # Line number: Part III Line 17a  Description:  Charitable distributions required?  xpath: /IRS990ScheduleG/CharitableDistributionRqrInd 
 
     SkdG_DstrbtdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Line 17b  Description:  Amount distributed  xpath: /IRS990ScheduleG/DistributedAmt 
+    # Line number: Part III Line 17b  Description:  Amount distributed  xpath: /IRS990ScheduleG/DistributedAmt 
 
     SkdG_IndvdlWthBksNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 14  Description:  Person name of gaming records keeper  xpath: /IRS990ScheduleG/IndividualWithBooksNm 
+    # Line number: Part III Line 14  Description:  Person name of gaming records keeper  xpath: /IRS990ScheduleG/IndividualWithBooksNm 
 
     PrsnsWthBksNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part III Line 14  Description:  Business name line 1  xpath: /IRS990ScheduleG/PersonsWithBooksName/BusinessNameLine1Txt 
+    # Line number: Part III Line 14  Description:  Business name line 1  xpath: /IRS990ScheduleG/PersonsWithBooksName/BusinessNameLine1 
+
+    PrsnsWthBksNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part III Line 14  Description:  Business name line 1  xpath: /IRS990ScheduleG/PersonsWithBooksName/BusinessNameLine1Txt 
 
     PrsnsWthBksNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part III Line 14  Description:  Business name line 2  xpath: /IRS990ScheduleG/PersonsWithBooksName/BusinessNameLine2Txt 
+    # Line number: Part III Line 14  Description:  Business name line 2  xpath: /IRS990ScheduleG/PersonsWithBooksName/BusinessNameLine2 
+
+    PrsnsWthBksNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part III Line 14  Description:  Business name line 2  xpath: /IRS990ScheduleG/PersonsWithBooksName/BusinessNameLine2Txt 
 
     PrsnsWthBksUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 14  Description:  Address line 1  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/AddressLine1Txt 
+    # Line number: Part III Line 14  Description:  Address line 1  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/AddressLine1 
+
+    PrsnsWthBksUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part III Line 14  Description:  Address line 1  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/AddressLine1Txt 
 
     PrsnsWthBksUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 14  Description:  Address line 2  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/AddressLine2Txt 
+    # Line number: Part III Line 14  Description:  Address line 2  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/AddressLine2 
+
+    PrsnsWthBksUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part III Line 14  Description:  Address line 2  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/AddressLine2Txt 
 
     PrsnsWthBksUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part III Line 14  Description:  City  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/CityNm 
+    # Line number: Part III Line 14  Description:  City  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/City 
+
+    PrsnsWthBksUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part III Line 14  Description:  City  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/CityNm 
 
     PrsnsWthBksUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part III Line 14  Description:  State  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/StateAbbreviationCd 
+    # Line number: Part III Line 14  Description:  State  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/State 
+
+    PrsnsWthBksUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part III Line 14  Description:  State  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/StateAbbreviationCd 
 
     PrsnsWthBksUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part III Line 14  Description:  ZIP code  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/ZIPCd 
+    # Line number: Part III Line 14  Description:  ZIP code  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/ZIPCd 
+
+    PrsnsWthBksUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part III Line 14  Description:  ZIP code  xpath: /IRS990ScheduleG/PersonsWithBooksUSAddress/ZIPCode 
 
     PrsnsWthBksFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 14  Description:  Address line 1  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/AddressLine1Txt 
+    # Line number: Part III Line 14  Description:  Address line 1  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/AddressLine1 
+
+    PrsnsWthBksFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part III Line 14  Description:  Address line 1  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/AddressLine1Txt 
 
     PrsnsWthBksFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 14  Description:  Address line 2  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/AddressLine2Txt 
+    # Line number: Part III Line 14  Description:  Address line 2  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/AddressLine2 
+
+    PrsnsWthBksFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part III Line 14  Description:  Address line 2  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/AddressLine2Txt 
 
     PrsnsWthBksFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 14  Description:  City  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/CityNm 
+    # Line number: Part III Line 14  Description:  City  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/City 
+
+    PrsnsWthBksFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part III Line 14  Description:  City  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/CityNm 
 
     PrsnsWthBksFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 14  Description:  Province or state  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/ProvinceOrStateNm 
+    # Line number: Part III Line 14  Description:  Province or state  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/ProvinceOrState 
+
+    PrsnsWthBksFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part III Line 14  Description:  Province or state  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/ProvinceOrStateNm 
 
     PrsnsWthBksFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part III Line 14  Description:  Country  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/CountryCd 
+    # Line number: Part III Line 14  Description:  Country  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/Country 
+
+    PrsnsWthBksFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part III Line 14  Description:  Country  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/CountryCd 
 
     PrsnsWthBksFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 14  Description:  Postal code  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/ForeignPostalCd 
+    # Line number: Part III Line 14  Description:  Postal code  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/ForeignPostalCd 
+
+    PrsnsWthBksFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part III Line 14  Description:  Postal code  xpath: /IRS990ScheduleG/PersonsWithBooksForeignAddress/PostalCode 
 
     SkdG_ThrdPrtyPrsnNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 15c  Description:  Person name of third party  xpath: /IRS990ScheduleG/ThirdPartyPersonNm 
+    # Line number: Part III Line 15c  Description:  Person name of third party  xpath: /IRS990ScheduleG/ThirdPartyPersonNm 
 
     ThrdPrtyBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part III Line 15c  Description:  Business name line 1  xpath: /IRS990ScheduleG/ThirdPartyBusinessName/BusinessNameLine1Txt 
+    # Line number: Part III Line 15c  Description:  Business name line 1  xpath: /IRS990ScheduleG/ThirdPartyBusinessName/BusinessNameLine1 
+
+    ThrdPrtyBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part III Line 15c  Description:  Business name line 1  xpath: /IRS990ScheduleG/ThirdPartyBusinessName/BusinessNameLine1Txt 
 
     ThrdPrtyBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part III Line 15c  Description:  Business name line 2  xpath: /IRS990ScheduleG/ThirdPartyBusinessName/BusinessNameLine2Txt 
+    # Line number: Part III Line 15c  Description:  Business name line 2  xpath: /IRS990ScheduleG/ThirdPartyBusinessName/BusinessNameLine2 
+
+    ThrdPrtyBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part III Line 15c  Description:  Business name line 2  xpath: /IRS990ScheduleG/ThirdPartyBusinessName/BusinessNameLine2Txt 
 
     ThrdPrtyUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 15c  Description:  Address line 1  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/AddressLine1Txt 
+    # Line number: Part III Line 15c  Description:  Address line 1  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/AddressLine1 
+
+    ThrdPrtyUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part III Line 15c  Description:  Address line 1  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/AddressLine1Txt 
 
     ThrdPrtyUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 15c  Description:  Address line 2  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/AddressLine2Txt 
+    # Line number: Part III Line 15c  Description:  Address line 2  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/AddressLine2 
+
+    ThrdPrtyUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part III Line 15c  Description:  Address line 2  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/AddressLine2Txt 
 
     ThrdPrtyUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part III Line 15c  Description:  City  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/CityNm 
+    # Line number: Part III Line 15c  Description:  City  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/City 
+
+    ThrdPrtyUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number: Part III Line 15c  Description:  City  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/CityNm 
 
     ThrdPrtyUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part III Line 15c  Description:  State  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/StateAbbreviationCd 
+    # Line number: Part III Line 15c  Description:  State  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/State 
+
+    ThrdPrtyUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part III Line 15c  Description:  State  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/StateAbbreviationCd 
 
     ThrdPrtyUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part III Line 15c  Description:  ZIP code  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/ZIPCd 
+    # Line number: Part III Line 15c  Description:  ZIP code  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/ZIPCd 
+
+    ThrdPrtyUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number: Part III Line 15c  Description:  ZIP code  xpath: /IRS990ScheduleG/ThirdPartyUSAddress/ZIPCode 
 
     ThrdPrtyFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 15c  Description:  Address line 1  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/AddressLine1Txt 
+    # Line number: Part III Line 15c  Description:  Address line 1  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/AddressLine1 
+
+    ThrdPrtyFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part III Line 15c  Description:  Address line 1  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/AddressLine1Txt 
 
     ThrdPrtyFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 15c  Description:  Address line 2  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/AddressLine2Txt 
+    # Line number: Part III Line 15c  Description:  Address line 2  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/AddressLine2 
+
+    ThrdPrtyFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number: Part III Line 15c  Description:  Address line 2  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/AddressLine2Txt 
 
     ThrdPrtyFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 15c  Description:  City  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/CityNm 
+    # Line number: Part III Line 15c  Description:  City  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/City 
+
+    ThrdPrtyFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number: Part III Line 15c  Description:  City  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/CityNm 
 
     ThrdPrtyFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 15c  Description:  Province or state  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/ProvinceOrStateNm 
+    # Line number: Part III Line 15c  Description:  Province or state  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/ProvinceOrState 
+
+    ThrdPrtyFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number: Part III Line 15c  Description:  Province or state  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/ProvinceOrStateNm 
 
     ThrdPrtyFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part III Line 15c  Description:  Country  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/CountryCd 
+    # Line number: Part III Line 15c  Description:  Country  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/Country 
+
+    ThrdPrtyFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part III Line 15c  Description:  Country  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/CountryCd 
 
     ThrdPrtyFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Part III Line 15c  Description:  Postal code  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/ForeignPostalCd 
+    # Line number: Part III Line 15c  Description:  Postal code  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/ForeignPostalCd 
+
+    ThrdPrtyFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number: Part III Line 15c  Description:  Postal code  xpath: /IRS990ScheduleG/ThirdPartyForeignAddress/PostalCode 
 
     SkdG_GmngMngrPrsnNm = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part III Line 16  Description:  Gaming manager person name  xpath: /IRS990ScheduleG/GamingManagerPersonNm 
+    # Line number: Part III Line 16  Description:  Gaming manager person name  xpath: /IRS990ScheduleG/GamingManagerPersonNm 
 
     GmngMngrBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part III Line 16  Description:  Business name line 1  xpath: /IRS990ScheduleG/GamingManagerBusinessName/BusinessNameLine1Txt 
+    # Line number: Part III Line 16  Description:  Business name line 1  xpath: /IRS990ScheduleG/GamingManagerBusinessName/BusinessNameLine1 
+
+    GmngMngrBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part III Line 16  Description:  Business name line 1  xpath: /IRS990ScheduleG/GamingManagerBusinessName/BusinessNameLine1Txt 
 
     GmngMngrBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part III Line 16  Description:  Business name line 2  xpath: /IRS990ScheduleG/GamingManagerBusinessName/BusinessNameLine2Txt 
+    # Line number: Part III Line 16  Description:  Business name line 2  xpath: /IRS990ScheduleG/GamingManagerBusinessName/BusinessNameLine2 
+
+    GmngMngrBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number: Part III Line 16  Description:  Business name line 2  xpath: /IRS990ScheduleG/GamingManagerBusinessName/BusinessNameLine2Txt 
 
 #######
 #
-# IRS990ScheduleG - StatesWhereGamingConductedCd
-# A repeating structure from ScheduleG Part III Gaming Information 
+# IRS990ScheduleG - ScheduleG Part IV Supplemental Information 
 #
 #######
 
-class SkdGSttsWhrGmngCndctdCd(models.Model):
+class skedg_part_iv(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    SttsWhrGmngCndctdCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part III Line 9  Description:  Enter state where organization conducts gaming activities  xpath: /IRS990ScheduleG/StatesWhereGamingConductedCd 
-
 #######
 #
-# IRS990ScheduleG - FundraiserActivityInfoGrp
-# A repeating structure from ScheduleG Part I Fundraising Activities 
+# IRS990ScheduleG - SkdGFndrsrActvtyInf
+# A repeating structure from skedg_part_i
 #
 #######
 
@@ -8163,19 +8999,37 @@ class SkdGFndrsrActvtyInf(models.Model):
     # Line number:  Line 2b Column (i)  Description:  Name of individual  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/PersonNm 
 
     OrgnztnBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Line 2b Column (i)  Description:  Business name line 1  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/OrganizationBusinessName/BusinessNameLine1 
+
+    OrgnztnBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Line 2b Column (i)  Description:  Business name line 1  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/OrganizationBusinessName/BusinessNameLine1Txt 
+
+    OrgnztnBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Line 2b Column (i)  Description:  Business name line 2  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/OrganizationBusinessName/BusinessNameLine2 
 
     OrgnztnBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Line 2b Column (i)  Description:  Business name line 2  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/OrganizationBusinessName/BusinessNameLine2Txt 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Line 2b Column (i)  Description:  Address line 1  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Line 2b Column (i)  Description:  Address line 1  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Line 2b Column (i)  Description:  Address line 2  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Line 2b Column (i)  Description:  Address line 2  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Line 2b Column (i)  Description:  City  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Line 2b Column (i)  Description:  City  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Line 2b Column (i)  Description:  State  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Line 2b Column (i)  Description:  State  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/StateAbbreviationCd 
@@ -8183,23 +9037,44 @@ class SkdGFndrsrActvtyInf(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Line 2b Column (i)  Description:  ZIP code  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Line 2b Column (i)  Description:  ZIP code  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Line 2b Column (i)  Description:  Address line 1  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Line 2b Column (i)  Description:  Address line 1  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Line 2b Column (i)  Description:  Address line 2  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Line 2b Column (i)  Description:  Address line 2  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Line 2b Column (i)  Description:  City  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Line 2b Column (i)  Description:  City  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Line 2b Column (i)  Description:  Province or state  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Line 2b Column (i)  Description:  Province or state  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Line 2b Column (i)  Description:  Country  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Line 2b Column (i)  Description:  Country  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Line 2b Column (i)  Description:  Postal code  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Line 2b Column (i)  Description:  Postal code  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ForeignAddress/PostalCode 
 
     FndrsrActvtyInf_ActvtyTxt = models.TextField(null=True, blank=True)
     # Line number:  Line 2b Column (ii)  Description:  Activity  xpath: /IRS990ScheduleG/FundraiserActivityInfoGrp/ActivityTxt 
@@ -8218,8 +9093,9 @@ class SkdGFndrsrActvtyInf(models.Model):
 
 #######
 #
-# IRS990ScheduleG - LicensedStatesCd
-# A repeating structure from ScheduleG Part I Fundraising Activities 
+# IRS990ScheduleG - SkdGLcnsdSttsCd
+# Description:  List all states in which the organization is registered or licensed to solicit funds or has been notified it is exempt from registration or licensing
+# A repeating structure from skedg_part_i
 #
 #######
 
@@ -8228,12 +9104,28 @@ class SkdGLcnsdSttsCd(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     LcnsdSttsCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part I Line 3  Description:  List all states in which the organization is registered or licensed to solicit funds or has been notified it is exempt from registration or licensing  xpath: /IRS990ScheduleG/LicensedStatesCd 
+    # Line number: Part I Line 3  Description:  List all states in which the organization is registered or licensed to solicit funds or has been notified it is exempt from registration or licensing  xpath: /IRS990ScheduleG/LicensedStatesCd 
 
 #######
 #
-# IRS990ScheduleG - SupplementalInformationDetail
-# A repeating structure from ScheduleG Part IV Supplemental Information 
+# IRS990ScheduleG - SkdGSttsWhrGmngCndctdCd
+# Description:  Enter state where organization conducts gaming activities
+# A repeating structure from skedg_part_iii
+#
+#######
+
+class SkdGSttsWhrGmngCndctdCd(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    SttsWhrGmngCndctdCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number: Part III Line 9  Description:  Enter state where organization conducts gaming activities  xpath: /IRS990ScheduleG/StatesWhereGamingConductedCd 
+
+#######
+#
+# IRS990ScheduleG - SkdGSpplmntlInfrmtnDtl
+# Description:  Part IV contents
+# A repeating structure from skedg_part_iv
 #
 #######
 
@@ -8261,34 +9153,34 @@ class skedh_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     SkdH_FnnclAssstncPlcyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 1a  Description:  Financial assistance policy?  xpath: /IRS990ScheduleH/FinancialAssistancePolicyInd 
+    # Line number: Part I Line 1a  Description:  Financial assistance policy?  xpath: /IRS990ScheduleH/FinancialAssistancePolicyInd 
 
     SkdH_WrttnPlcyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 1b  Description:  Written policy?  xpath: /IRS990ScheduleH/WrittenPolicyInd 
+    # Line number: Part I Line 1b  Description:  Written policy?  xpath: /IRS990ScheduleH/WrittenPolicyInd 
 
     SkdH_FPGRfrncFrCrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 3a  Description:  FPG reference free care?  xpath: /IRS990ScheduleH/FPGReferenceFreeCareInd 
+    # Line number: Part I Line 3a  Description:  FPG reference free care?  xpath: /IRS990ScheduleH/FPGReferenceFreeCareInd 
 
     SkdH_FPGRfrncDscntdCrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 3b  Description:  FPG reference discounted care  xpath: /IRS990ScheduleH/FPGReferenceDiscountedCareInd 
+    # Line number: Part I Line 3b  Description:  FPG reference discounted care  xpath: /IRS990ScheduleH/FPGReferenceDiscountedCareInd 
 
     SkdH_FrCrMdcllyIndgntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 4  Description:  Free or discounted care to medically indigent?  xpath: /IRS990ScheduleH/FreeCareMedicallyIndigentInd 
+    # Line number: Part I Line 4  Description:  Free or discounted care to medically indigent?  xpath: /IRS990ScheduleH/FreeCareMedicallyIndigentInd 
 
     SkdH_FnnclAssstncBdgtInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 5a  Description:  Amounts budgeted for financial assistance?  xpath: /IRS990ScheduleH/FinancialAssistanceBudgetInd 
+    # Line number: Part I Line 5a  Description:  Amounts budgeted for financial assistance?  xpath: /IRS990ScheduleH/FinancialAssistanceBudgetInd 
 
     SkdH_ExpnssExcdBdgtInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 5b  Description:  Expenses exceeded budget?  xpath: /IRS990ScheduleH/ExpensesExceedBudgetInd 
+    # Line number: Part I Line 5b  Description:  Expenses exceeded budget?  xpath: /IRS990ScheduleH/ExpensesExceedBudgetInd 
 
     SkdH_UnblTPrvdCrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 5c  Description:  Unable to provide care?  xpath: /IRS990ScheduleH/UnableToProvideCareInd 
+    # Line number: Part I Line 5c  Description:  Unable to provide care?  xpath: /IRS990ScheduleH/UnableToProvideCareInd 
 
     SkdH_AnnlCmmntyBnftRprtInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 6a  Description:  Annual community benefit report?  xpath: /IRS990ScheduleH/AnnualCommunityBnftReportInd 
+    # Line number: Part I Line 6a  Description:  Annual community benefit report?  xpath: /IRS990ScheduleH/AnnualCommunityBnftReportInd 
 
     SkdH_RprtPblcllyAvlblInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 6b  Description:  Report publically available?  xpath: /IRS990ScheduleH/ReportPublicallyAvailableInd 
+    # Line number: Part I Line 6b  Description:  Report publically available?  xpath: /IRS990ScheduleH/ReportPublicallyAvailableInd 
 
     FnnclAssstncAtCstTyp_ActvtsOrPrgrmsCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (a)  Description:  Number of activities or programs  xpath: /IRS990ScheduleH/FinancialAssistanceAtCostTyp/ActivitiesOrProgramsCnt 
@@ -8489,55 +9381,55 @@ class skedh_part_i(models.Model):
     # Line number:  Column (f)  Description:  Percent of total expense  xpath: /IRS990ScheduleH/TotalCommunityBenefitsGrp/TotalExpensePct 
 
     SkdH_AllHsptlsPlcyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 2  Description:  Policy applied to all hospitals  xpath: /IRS990ScheduleH/AllHospitalsPolicyInd 
+    # Line number: Part I Line 2  Description:  Policy applied to all hospitals  xpath: /IRS990ScheduleH/AllHospitalsPolicyInd 
 
     SkdH_MstHsptlsPlcyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 2  Description:  Policy applied to most hospitals  xpath: /IRS990ScheduleH/MostHospitalsPolicyInd 
+    # Line number: Part I Line 2  Description:  Policy applied to most hospitals  xpath: /IRS990ScheduleH/MostHospitalsPolicyInd 
 
     SkdH_IndvHsptlTlrdPlcyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 2  Description:  Policy tailored to individual hospitals  xpath: /IRS990ScheduleH/IndivHospitalTailoredPolicyInd 
+    # Line number: Part I Line 2  Description:  Policy tailored to individual hospitals  xpath: /IRS990ScheduleH/IndivHospitalTailoredPolicyInd 
 
     SkdH_Prcnt100Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3a  Description:  100%  xpath: /IRS990ScheduleH/Percent100Ind 
+    # Line number: Part I Line 3a  Description: 100%  xpath: /IRS990ScheduleH/Percent100Ind 
 
     SkdH_Prcnt150Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3a  Description:  150%  xpath: /IRS990ScheduleH/Percent150Ind 
+    # Line number: Part I Line 3a  Description: 150%  xpath: /IRS990ScheduleH/Percent150Ind 
 
     SkdH_Prcnt200Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3a  Description:  200%  xpath: /IRS990ScheduleH/Percent200Ind 
+    # Line number: Part I Line 3a  Description: 200%  xpath: /IRS990ScheduleH/Percent200Ind 
 
     SkdH_FrCrOthPrcntg = models.TextField(null=True, blank=True)
     # xpath: /IRS990ScheduleH/FreeCareOthPercentageGrp 
 
     FrCrOthPrcntg_OthrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3a  Description:  Other  xpath: /IRS990ScheduleH/FreeCareOthPercentageGrp/OtherInd 
+    # Line number: Part I Line 3a  Description:  Other  xpath: /IRS990ScheduleH/FreeCareOthPercentageGrp/OtherInd 
 
     FrCrOthPrcntg_FrCrOthrPct = models.DecimalField(null=True, blank=True, max_digits=22, decimal_places=12)
-    # Line number:  Part I Line 3a  Description:  Free other percentage  xpath: /IRS990ScheduleH/FreeCareOthPercentageGrp/FreeCareOtherPct 
+    # Line number: Part I Line 3a  Description:  Free other percentage  xpath: /IRS990ScheduleH/FreeCareOthPercentageGrp/FreeCareOtherPct 
 
     SkdH_Prcnt200DInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3b  Description:  200%  xpath: /IRS990ScheduleH/Percent200DInd 
+    # Line number: Part I Line 3b  Description: 200%  xpath: /IRS990ScheduleH/Percent200DInd 
 
     SkdH_Prcnt250Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3b  Description:  250%  xpath: /IRS990ScheduleH/Percent250Ind 
+    # Line number: Part I Line 3b  Description: 250%  xpath: /IRS990ScheduleH/Percent250Ind 
 
     SkdH_Prcnt300Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3b  Description:  300%  xpath: /IRS990ScheduleH/Percent300Ind 
+    # Line number: Part I Line 3b  Description: 300%  xpath: /IRS990ScheduleH/Percent300Ind 
 
     SkdH_Prcnt350Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3b  Description:  350%  xpath: /IRS990ScheduleH/Percent350Ind 
+    # Line number: Part I Line 3b  Description: 350%  xpath: /IRS990ScheduleH/Percent350Ind 
 
     SkdH_Prcnt400Ind = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3b  Description:  400%  xpath: /IRS990ScheduleH/Percent400Ind 
+    # Line number: Part I Line 3b  Description: 400%  xpath: /IRS990ScheduleH/Percent400Ind 
 
     SkdH_DscntdCrOthPrcntg = models.TextField(null=True, blank=True)
     # xpath: /IRS990ScheduleH/DiscountedCareOthPercentageGrp 
 
     DscntdCrOthPrcntg_OthrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3b  Description:  Other  xpath: /IRS990ScheduleH/DiscountedCareOthPercentageGrp/OtherInd 
+    # Line number: Part I Line 3b  Description:  Other  xpath: /IRS990ScheduleH/DiscountedCareOthPercentageGrp/OtherInd 
 
     DscntdCrOthPrcntg_DscntdCrOthrPct = models.DecimalField(null=True, blank=True, max_digits=22, decimal_places=12)
-    # Line number:  Part I Line 3b  Description:  Discounted other percentage  xpath: /IRS990ScheduleH/DiscountedCareOthPercentageGrp/DiscountedCareOtherPct 
+    # Line number: Part I Line 3b  Description:  Discounted other percentage  xpath: /IRS990ScheduleH/DiscountedCareOthPercentageGrp/DiscountedCareOtherPct 
 
 #######
 #
@@ -8740,40 +9632,50 @@ class skedh_part_iii(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     BdDbtExpnsRprtdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Section A Line 1  Description:  Bad debt expense reported?  xpath: /IRS990ScheduleH/BadDebtExpenseReportedInd 
+    # Line number: Part III Section A Line 1  Description:  Bad debt expense reported?  xpath: /IRS990ScheduleH/BadDebtExpenseReportedInd 
 
     BdDbtExpnsAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Section A Line 2  Description:  Bad debt expense amount  xpath: /IRS990ScheduleH/BadDebtExpenseAmt 
+    # Line number: Part III Section A Line 2  Description:  Bad debt expense amount  xpath: /IRS990ScheduleH/BadDebtExpenseAmt 
 
     BdDbtExpnsAttrbtblAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Section A Line 3  Description:  Amount attributable to  xpath: /IRS990ScheduleH/BadDebtExpenseAttributableAmt 
+    # Line number: Part III Section A Line 3  Description:  Amount attributable to  xpath: /IRS990ScheduleH/BadDebtExpenseAttributableAmt 
 
     RmbrsdByMdcrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Section B Line 5  Description:  Amount reimbursed by Medicare  xpath: /IRS990ScheduleH/ReimbursedByMedicareAmt 
+    # Line number: Part III Section B Line 5  Description:  Amount reimbursed by Medicare  xpath: /IRS990ScheduleH/ReimbursedByMedicareAmt 
 
     CstOfCrRmbrsdByMdcrAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Section B Line 6  Description:  Cost of care reimbursed by Medicare  xpath: /IRS990ScheduleH/CostOfCareReimbursedByMedcrAmt 
+    # Line number: Part III Section B Line 6  Description:  Cost of care reimbursed by Medicare  xpath: /IRS990ScheduleH/CostOfCareReimbursedByMedcrAmt 
 
     MdcrSrplsOrShrtfllAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part III Section B Line 7  Description:  Line 5 less line 6  xpath: /IRS990ScheduleH/MedicareSurplusOrShortfallAmt 
+    # Line number: Part III Section B Line 7  Description: Line 5 less line 6  xpath: /IRS990ScheduleH/MedicareSurplusOrShortfallAmt 
 
     CstngMthdlgyUsd = models.TextField(null=True, blank=True)
     # Description:  Checkbox choice  xpath: /IRS990ScheduleH/CostingMethodologyUsedGrp 
 
     CstAccntngSystmInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Section B Line 8  Description:  Cost accounting system  xpath: /IRS990ScheduleH/CostingMethodologyUsedGrp/CostAccountingSystemInd 
+    # Line number: Part III Section B Line 8  Description:  Cost accounting system  xpath: /IRS990ScheduleH/CostingMethodologyUsedGrp/CostAccountingSystemInd 
 
     CstTChrgRtInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Section B Line 8  Description:  Cost to charge ratio  xpath: /IRS990ScheduleH/CostingMethodologyUsedGrp/CostToChargeRatioInd 
+    # Line number: Part III Section B Line 8  Description:  Cost to charge ratio  xpath: /IRS990ScheduleH/CostingMethodologyUsedGrp/CostToChargeRatioInd 
 
     OthrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part III Section B Line 8  Description:  Other  xpath: /IRS990ScheduleH/CostingMethodologyUsedGrp/OtherInd 
+    # Line number: Part III Section B Line 8  Description:  Other  xpath: /IRS990ScheduleH/CostingMethodologyUsedGrp/OtherInd 
 
     WrttnDbtCllctnPlcyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Section C Line 9a  Description:  Written debt collection policy?  xpath: /IRS990ScheduleH/WrittenDebtCollectionPolicyInd 
+    # Line number: Part III Section C Line 9a  Description:  Written debt collection policy?  xpath: /IRS990ScheduleH/WrittenDebtCollectionPolicyInd 
 
     FnnclAssstncPrvsnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part III Section C Line 9b  Description:  Provision for financial assistance?  xpath: /IRS990ScheduleH/FinancialAssistancePrvsnInd 
+    # Line number: Part III Section C Line 9b  Description:  Provision for financial assistance?  xpath: /IRS990ScheduleH/FinancialAssistancePrvsnInd 
+
+#######
+#
+# IRS990ScheduleH - ScheduleH Part IV - Management Companies and Joint Ventures 
+#
+#######
+
+class skedh_part_iv(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
 #######
 #
@@ -8787,6 +9689,26 @@ class skedh_part_va(models.Model):
 
     HsptlFcltsCnt = models.IntegerField(null=True, blank=True)
     # Line number:  Part V Section A  Description:  How many hospital facilities did the organization operate during the tax year?  xpath: /IRS990ScheduleH/HospitalFacilitiesCnt 
+
+#######
+#
+# IRS990ScheduleH - ScheduleH Part V-B - Facility Information 
+#
+#######
+
+class skedh_part_vb(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleH - ScheduleH Part V-C - Supplemental Information for Part V, Section B 
+#
+#######
+
+class skedh_part_vc(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
 #######
 #
@@ -8806,8 +9728,19 @@ class skedh_part_vd(models.Model):
 
 #######
 #
-# IRS990ScheduleH - ManagementCoAndJntVenturesGrp
-# A repeating structure from ScheduleH Part IV - Management Companies and Joint Ventures 
+# IRS990ScheduleH - ScheduleH Part VI Supplemental Information 
+#
+#######
+
+class skedh_part_vi(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleH - SkdHMngmntCAndJntVntrs
+# Description:  Part IV repeating group
+# A repeating structure from skedh_part_iv
 #
 #######
 
@@ -8819,7 +9752,13 @@ class SkdHMngmntCAndJntVntrs(models.Model):
     # Description:  Part IV repeating group  xpath: /IRS990ScheduleH/ManagementCoAndJntVenturesGrp 
 
     BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleH/ManagementCoAndJntVenturesGrp/EntityName/BusinessNameLine1 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleH/ManagementCoAndJntVenturesGrp/EntityName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleH/ManagementCoAndJntVenturesGrp/EntityName/BusinessNameLine2 
 
     BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleH/ManagementCoAndJntVenturesGrp/EntityName/BusinessNameLine2Txt 
@@ -8838,371 +9777,9 @@ class SkdHMngmntCAndJntVntrs(models.Model):
 
 #######
 #
-# IRS990ScheduleH - HospitalFcltyPoliciesPrctcGrp
-# A repeating structure from ScheduleH Part V-B - Facility Information 
-#
-#######
-
-class SkdHHsptlFcltyPlcsPrctc(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    HsptlFcltyPlcsPrctc = models.TextField(null=True, blank=True)
-    # Description:  Part V Section B repeating group  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp 
-
-    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part V Section B  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/HospitalFacilityName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part V Section B  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/HospitalFacilityName/BusinessNameLine2Txt 
-
-    FcltyNm = models.IntegerField(null=True, blank=True)
-    # Line number:  Part V Section B  Description:  Line number of hospital facility  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FacilityNum 
-
-    FrstLcnsdCYOrPYInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 1  Description:  First licensed, registered or recognized by a State in current year or preceding prior year?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FirstLicensedCYOrPYInd 
-
-    TxExmptHsptlCYOrPYInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 2  Description:  Acquired or placed into service as tax-exempt hospital in current year or  preceding prior year?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/TaxExemptHospitalCYOrPYInd 
-
-    CHNACndctdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 3  Description:  Conduct community needs health assessments?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAConductedInd 
-
-    CmmntyDfntnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3a  Description:  Definition of community served  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommunityDefinitionInd 
-
-    CmmntyDmgrphcsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3b  Description:  Demographics of community  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommunityDemographicsInd 
-
-    ExstngRsrcsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3c  Description:  Existing health care facilities and resources  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ExistingResourcesInd 
-
-    HwDtObtndInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3d  Description:  How data obtained  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/HowDataObtainedInd 
-
-    CmmntyHlthNdsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3e  Description:  Health needs of community  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommunityHealthNeedsInd 
-
-    OthrHlthIsssInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3f  Description:  Other health issues  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherHealthIssuesInd 
-
-    CmmntyHlthNdsIdPrcssInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3g  Description:  Identifying process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommunityHlthNeedsIdProcessInd 
-
-    CnsltngPrcssInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3h  Description:  Consulting process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ConsultingProcessInd 
-
-    PrrCHNAImpctInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3i  Description:  Impact of actions taken identified in prior CHNA  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PriorCHNAImpactInd 
-
-    OthrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 3j  Description:  CHNA describes other  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherInd 
-
-    CHNACndctdYr = models.TextField(null=True, blank=True)
-    # Line number:  Part V Section B Line 4  Description:  Year last conducted CHNA  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAConductedYr 
-
-    TkIntAccntOthrsInptInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 5  Description:  Take community input into account  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/TakeIntoAccountOthersInputInd 
-
-    CHNACndctdWthOthrFcltsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 6a  Description:  Other hospital facilities?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAConductedWithOtherFcltsInd 
-
-    CHNACndctdWthNnFcltsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 6b  Description:  Other than hospital facilities?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAConductedWithNonFcltsInd 
-
-    CHNARprtWdlyAvlblInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 7  Description:  CHNA widely available to public?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAReportWidelyAvailableInd 
-
-    RptAvlblOnOwnWbstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 7a  Description:  Available on own website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/RptAvailableOnOwnWebsiteInd 
-
-    OwnWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part V Section B Line 7a  Description:  Hospital facilities website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OwnWebsiteURLTxt 
-
-    OthrWbstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 7b  Description:  Other website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherWebsiteInd 
-
-    OthrWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part V Section B Line 7b  Description:  Other website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherWebsiteURLTxt 
-
-    PprCpyPblcInspctnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 7c  Description:  Made paper copy  available for public inspection  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PaperCopyPublicInspectionInd 
-
-    RptAvlblThrOthrMthdInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 7d  Description:  Available other method  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/RptAvailableThruOtherMethodInd 
-
-    ImplmnttnStrtgyAdptInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 8  Description:  Adopt implementation strategy?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ImplementationStrategyAdoptInd 
-
-    ImplmnttnStrtgyAdptYr = models.TextField(null=True, blank=True)
-    # Line number:  Part V Section B Line 9  Description:  Year last adopted implementation strategy  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ImplementationStrategyAdptYr 
-
-    StrtgyPstdWbstInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 10  Description:  Implementation strategy posted on website?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/StrategyPostedWebsiteInd 
-
-    StrtgyWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part V Section B Line 10a  Description:  Implementation strategy website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/StrategyWebsiteURLTxt 
-
-    StrtgyAttchdInd = models.TextField(null=True, blank=True)
-    # Line number:  Part V Section B Line 10b  Description:  Implementation strategy attached to return?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/StrategyAttachedInd 
-
-    OrgnztnIncrExcsTxInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 12a  Description:  Incur an excise tax under section 4959 for the hospital facility's failure to conduct a CHNA as required by section 501(r)(3)?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OrganizationIncurExciseTaxInd 
-
-    Frm4720FldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 12b  Description:  File Form 4720 to report the section 4959 excise tax?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/Form4720FiledInd 
-
-    ExcsRprtFrm4720FrAllAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part V Section B Line 12c  Description:  Total amount of section 4959 excise tax reported on Form 4720 for all of its hospital facilities?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ExciseReportForm4720ForAllAmt 
-
-    ElgCrtrExplndInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 13  Description:  Policy explains eligibility criteria for financial assistance?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EligCriteriaExplainedInd 
-
-    FPGFmlyIncmLmtFrDscntInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 13a  Description:  Explained free care percent and discounted care percent  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FPGFamilyIncmLmtFreeDscntInd 
-
-    FPGFmlyIncmLmtFrCrPct = models.DecimalField(null=True, blank=True, max_digits=22, decimal_places=12)
-    # Line number:  Part V Section B Line 13a  Description:  Percentage of FPG used to determine free care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FPGFamilyIncmLmtFreeCarePct 
-
-    FPGFmlyIncmLmtDscntCrPct = models.DecimalField(null=True, blank=True, max_digits=22, decimal_places=12)
-    # Line number:  Part V Section B Line 13a  Description:  Percentage of FPG used to determine discount care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FPGFamilyIncmLmtDscntCarePct 
-
-    IncmLvlCrtrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 13b  Description:  Income level criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/IncomeLevelCriteriaInd 
-
-    AsstLvlCrtrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 13c  Description:  Asset level criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/AssetLevelCriteriaInd 
-
-    MdclIndgncyCrtrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 13d  Description:  Medical indigency criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MedicalIndigencyCriteriaInd 
-
-    InsrncSttsCrtrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 13e  Description:  Insurance status criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/InsuranceStatusCriteriaInd 
-
-    UndrnsrncSttCrtrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 13f  Description:  Underinsurance status criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/UnderinsuranceStatCriteriaInd 
-
-    RsdncyCrtrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 13g  Description:  Residency criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ResidencyCriteriaInd 
-
-    OthrCrtrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 13h  Description:  Other criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherCriteriaInd 
-
-    ExplndBssInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 14  Description:  Policy explains basis for calculating amounts?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ExplainedBasisInd 
-
-    AppFnnclAsstExplnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 15  Description:  Policy explains method for applying for assistance?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/AppFinancialAsstExplnInd 
-
-    DscrbdInfInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 15a  Description:  Described information as part of application.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/DescribedInfoInd 
-
-    DscrbdSprtDcInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 15b  Description:  Described supporting documentation as part of application.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/DescribedSuprtDocInd 
-
-    PrvddHsptlCntctInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 15c  Description:  Provided  contact information of hospital staff.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProvidedHospitalContactInd 
-
-    PrvddNnprftCntctInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 15d  Description:  Provided contact information of nonprofit organization.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProvidedNonprofitContactInd 
-
-    OthrMthdInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 15e  Description:  Other method used to explain.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherMethodInd 
-
-    IncldsPblctyMsrsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 16  Description:  Policy includes publicity measures?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/IncludesPublicityMeasuresInd 
-
-    FAPAvlblOnWbstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16a  Description:  FAP widely available on a website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAvailableOnWebsiteInd 
-
-    FAPAvlblOnWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part V Section B Line 16a  Description:  FAP website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAvailableOnWebsiteURLTxt 
-
-    FAPAppAvlblOnWbstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16b  Description:  FAP application form widely available on a website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAppAvailableOnWebsiteInd 
-
-    FAPAppAvlblOnWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part V Section B Line 16b  Description:  FAP application form website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAppAvailableOnWebsiteURLTxt 
-
-    FAPSmmryOnWbstInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16c  Description:  FAP plain language summary on a website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPSummaryOnWebsiteInd 
-
-    FAPSmmryOnWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part V Section B Line 16c  Description:  FAP plain language summary website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPSummaryOnWebsiteURLTxt 
-
-    FAPAvlblOnRqstNChrgInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16d  Description:  FAP available upon request and without charge  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAvlblOnRequestNoChargeInd 
-
-    FAPAppAvlblOnRqstNChrgInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16e  Description:  FAP application form available upon request and without charge  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAppAvlblOnRequestNoChrgInd 
-
-    FAPSmAvlblOnRqstNChrgInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16f  Description:  FAP plain language summary available upon request and without charge  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPSumAvlblOnRequestNoChrgInd 
-
-    NtfdFAPCpyBllDsplyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16g  Description:  Notified of FAP by paper copy, on billing statement, and public displays  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NotifiedFAPCopyBillDisplayInd 
-
-    CmmnttyNtfdFAPInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16h  Description:  Notified community about availability of FAP  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommuntityNotifiedFAPInd 
-
-    FAPTrnsltdInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16i  Description:  FAP translated into primary language spoken  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPTranslatedInd 
-
-    OthrPblctyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 16j  Description:  Other publicity  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherPublicityInd 
-
-    FAPActnsOnNnpymntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 17  Description:  Policy explains actions taken upon non-payment?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPActionsOnNonpaymentInd 
-
-    PrmtRprtTCrdtAgncyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 18a  Description:  Report to credit agency permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitReportToCreditAgencyInd 
-
-    PrmtSllngDbtInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 18b  Description:  Selling debt permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitSellingDebtInd 
-
-    PrmtDfrDnyRqrPymntInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 18c  Description:  Deferring, denying or requiring payment before care due to previous nonpayment permitted.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitDeferDenyRqrPaymentInd 
-
-    PrmtLglJdclPrcssInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 18d  Description:  Actions that required a legal or judicial process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitLegalJudicialProcessInd 
-
-    PrmtOthrActnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 18e  Description:  Other actions permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitOtherActionsInd 
-
-    PrmtNActnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 18f  Description:  None of these actions or similar actions permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitNoActionsInd 
-
-    CllctnActvtsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 19  Description:  Authorize third-party to engage in collection activities?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CollectionActivitiesInd 
-
-    RprtngTCrdtAgncyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 19a  Description:  Credit agency engaged  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ReportingToCreditAgencyInd 
-
-    EnggdSllngDbtInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 19b  Description:  Selling debt engaged  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngagedSellingDebtInd 
-
-    EnggDfrDnyRqrPymntInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 19c  Description:  Engaged actions to defer, deny or requirment payment before providing care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngageDeferDenyRqrPaymentInd 
-
-    EnggdLglJdclPrcssInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 19d  Description:  Engaged actions that required a legal or judicial process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngagedLegalJudicialProcessInd 
-
-    OthrActnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 19e  Description:  Other actions engaged  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherActionsInd 
-
-    PrvddWrttnNtcInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 20a  Description:  Provided written notice and plain language summary of FAP  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProvidedWrittenNoticeInd 
-
-    MdEffrtOrllyNtfyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 20b  Description:  Reasonable effort to orally notify individual about FAP  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MadeEffortOrallyNotifyInd 
-
-    PrcssdFAPApplctnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 20c  Description:  Processed incomplete and complete FAP applications  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProcessedFAPApplicationInd 
-
-    MdPrsmptvElgDtrmInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 20d  Description:  Made presumptive eligibility determinations  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MadePresumptiveEligDetermInd 
-
-    OthrActnsTknInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 20e  Description:  Other action taken  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherActionsTakenInd 
-
-    NnMdInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 20f  Description:  None of these efforts were made  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NoneMadeInd 
-
-    NndsEmrgncyCrPlcyInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 21  Description:  Non-discriminatory emergency medical care policy?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NondisEmergencyCarePolicyInd 
-
-    NEmrgncyCrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 21a  Description:  No emergency care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NoEmergencyCareInd 
-
-    NEmrgncyCrPlcyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 21b  Description:  No emergency policy  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NoEmergencyCarePolicyInd 
-
-    EmrgncyCrLmtdInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 21c  Description:  Limits emergency care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EmergencyCareLimitedInd 
-
-    OthrRsnInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 21d  Description:  Other reason  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherReasonInd 
-
-    LkBckMdcrInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 22a  Description:  Look-back method based on claims allowed by medicare fee for service  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LookBackMedicareInd 
-
-    LkBckMdcrPrvtInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 22b  Description:  Look-back method based on claims allowed by medicare fee for service and all private health insurance  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LookBackMedicarePrivateInd 
-
-    LkBckMdcdMdcrPrvtInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 22c  Description:  Look-back method based on claims allowed by nedicaid, medicare fee for service and all private health insurance  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LookBackMedicaidMedcrPrvtInd 
-
-    PrspctvMdcrMdcdInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section B Line 22d  Description:  Prospective medicare or medicaid method  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProspectiveMedicareMedicaidInd 
-
-    AmntsGnrllyBlldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 23  Description:  Charged more than amount generally billed?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/AmountsGenerallyBilledInd 
-
-    GrssChrgsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Section B Line 24  Description:  Gross charges in billing?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/GrossChargesInd 
-
-#######
-#
-# IRS990ScheduleH - OthHlthCareFcltsGrp
-# A repeating structure from ScheduleH Part V-D - Other Health Care Facilities 
-#
-#######
-
-class SkdHOthHlthCrFclts(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    OthHlthCrFclts = models.TextField(null=True, blank=True)
-    # Description:  Part V Section D repeating group  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp 
-
-    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part V Section D  Description:  Business name line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine2Txt 
-
-    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part V Section D  Description:  Business name line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine1Txt 
-
-    AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part V Section D  Description:  Address line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine1Txt 
-
-    SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Part V Section D  Description:  State  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/StateAbbreviationCd 
-
-    AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Part V Section D  Description:  Address line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine2Txt 
-
-    CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Part V Section D  Description:  City  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/CityNm 
-
-    ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Part V Section D  Description:  ZIP code  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/ZIPCd 
-
-    FcltyTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part V Section D  Description:  Facility type  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/FacilityTxt 
-
-#######
-#
-# IRS990ScheduleH - SupplementalInformationDetail
-# A repeating structure from ScheduleH Part VI Supplemental Information 
-#
-#######
-
-class SkdHSpplmntlInfrmtnDtl(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-
-    SpplmntlInfrmtnDtl = models.TextField(null=True, blank=True)
-    # Description:  Part VI contents  xpath: /IRS990ScheduleH/SupplementalInformationDetail 
-
-    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part VI  Description:  Form, part and line number reference  xpath: /IRS990ScheduleH/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part VI  Description:  Form, part and line number explanation  xpath: /IRS990ScheduleH/SupplementalInformationDetail/ExplanationTxt 
-
-#######
-#
-# IRS990ScheduleH - HospitalFacilitiesGrp
-# A repeating structure from ScheduleH Part V-A - Facility Information 
+# IRS990ScheduleH - SkdHHsptlFclts
+# Description:  Part V Section A repeating group
+# A repeating structure from skedh_part_va
 #
 #######
 
@@ -9217,19 +9794,37 @@ class SkdHHsptlFclts(models.Model):
     # Line number:  Part V Section A  Description:  Hospital facility number  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/FacilityNum 
 
     BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section A  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/BusinessName/BusinessNameLine1 
+
+    BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part V Section A  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section A  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/BusinessName/BusinessNameLine2 
 
     BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part V Section A  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/BusinessName/BusinessNameLine2Txt 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part V Section A  Description:  Address line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part V Section A  Description:  Address line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part V Section A  Description:  Address line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part V Section A  Description:  Address line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part V Section A  Description:  City  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part V Section A  Description:  City  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part V Section A  Description:  State  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part V Section A  Description:  State  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/StateAbbreviationCd 
@@ -9237,11 +9832,17 @@ class SkdHHsptlFclts(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part V Section A  Description:  ZIP code  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part V Section A  Description:  ZIP code  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/USAddress/ZIPCode 
+
     HsptlFclts_WbstAddrssTxt = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Part V Section A  Description:  Primary website address of the hospital facility  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/WebsiteAddressTxt 
 
     HsptlFclts_SttLcnsNm = models.TextField(null=True, blank=True)
     # Line number:  Part V Section A  Description:  Hospital facilities state license number  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/StateLicenseNum 
+
+    HsptlFclts_LcnsdHsptlInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Part V Section A  Description:  Licensed hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/LicensedHospitalInd 
 
     SbrdntHsptlNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part V Section A  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalName/BusinessNameLine1Txt 
@@ -9249,14 +9850,11 @@ class SkdHHsptlFclts(models.Model):
     SbrdntHsptlNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part V Section A  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalName/BusinessNameLine2Txt 
 
-    HsptlFclts_SbrdntHsptlEIN = models.CharField(null=True, blank=True, max_length=9)
-    # Line number:  Part V Section A  Description:  EIN, subordinate hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalEIN 
-
-    HsptlFclts_LcnsdHsptlInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part V Section A  Description:  Licensed hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/LicensedHospitalInd 
-
     HsptlFclts_GnrlMdclAndSrgclInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Part V Section A  Description:  General medical and surgical  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/GeneralMedicalAndSurgicalInd 
+
+    HsptlFclts_SbrdntHsptlEIN = models.CharField(null=True, blank=True, max_length=9)
+    # Line number:  Part V Section A  Description:  EIN, subordinate hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/SubordinateHospitalEIN 
 
     HsptlFclts_ChldrnsHsptlInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Part V Section A  Description:  Children's hospital  xpath: /IRS990ScheduleH/HospitalFacilitiesGrp/ChildrensHospitalInd 
@@ -9284,8 +9882,345 @@ class SkdHHsptlFclts(models.Model):
 
 #######
 #
-# IRS990ScheduleH - SupplementalInformationGrp
-# A repeating structure from ScheduleH Part V-C - Supplemental Information for Part V, Section B 
+# IRS990ScheduleH - SkdHHsptlFcltyPlcsPrctc
+# Description:  Part V Section B repeating group
+# A repeating structure from skedh_part_vb
+#
+#######
+
+class SkdHHsptlFcltyPlcsPrctc(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    HsptlFcltyPlcsPrctc = models.TextField(null=True, blank=True)
+    # Description:  Part V Section B repeating group  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section B  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/HospitalFacilityName/BusinessNameLine1 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section B  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/HospitalFacilityName/BusinessNameLine2 
+
+    FcltyNm = models.IntegerField(null=True, blank=True)
+    # Line number:  Part V Section B  Description:  Line number of hospital facility  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FacilityNum 
+
+    CHNACndctdInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 3  Description:  Conduct community needs health assessments?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAConductedInd 
+
+    CmmntyDfntnInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3a  Description:  Definition of community served  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommunityDefinitionInd 
+
+    CmmntyDmgrphcsInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3b  Description:  Demographics of community  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommunityDemographicsInd 
+
+    ExstngRsrcsInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3c  Description:  Existing health care facilities and resources  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ExistingResourcesInd 
+
+    HwDtObtndInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3d  Description:  How data obtained  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/HowDataObtainedInd 
+
+    CmmntyHlthNdsInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3e  Description:  Health needs of community  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommunityHealthNeedsInd 
+
+    OthrHlthIsssInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3f  Description:  Other health issues  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherHealthIssuesInd 
+
+    CmmntyHlthNdsIdPrcssInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3g  Description:  Identifying process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommunityHlthNeedsIdProcessInd 
+
+    CnsltngPrcssInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3h  Description:  Consulting process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ConsultingProcessInd 
+
+    OthrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3j  Description:  CHNA describes other  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherInd 
+
+    CHNACndctdYr = models.TextField(null=True, blank=True)
+    # Line number: Part V Section B Line 4  Description:  Year last conducted CHNA  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAConductedYr 
+
+    TkIntAccntOthrsInptInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 5  Description:  Take community input into account  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/TakeIntoAccountOthersInputInd 
+
+    CHNACndctdWthOthrFcltsInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 6a  Description:  Other hospital facilities?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAConductedWithOtherFcltsInd 
+
+    CHNARprtWdlyAvlblInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 7  Description:  CHNA widely available to public?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAReportWidelyAvailableInd 
+
+    RptAvlblOnOwnWbstInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 7a  Description:  Available on own website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/RptAvailableOnOwnWebsiteInd 
+
+    OwnWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part V Section B Line 7a  Description:  Hospital facilities website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OwnWebsiteURLTxt 
+
+    OthrWbstInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 7b  Description:  Other website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherWebsiteInd 
+
+    OthrWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part V Section B Line 7b  Description:  Other website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherWebsiteURLTxt 
+
+    PprCpyPblcInspctnInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 7c  Description:  Made paper copy  available for public inspection  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/RptAvailableUponRequestInd 
+
+    RptAvlblThrOthrMthdInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 7d  Description:  Available other method  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/RptAvailableThruOtherMethodInd 
+
+    OrgnztnIncrExcsTxInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 12a  Description:  Incur an excise tax under section 4959 for the hospital facility's failure to conduct a CHNA as required by section 501(r)(3)?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OrganizationIncurExciseTaxInd 
+
+    Frm4720FldInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 12b  Description:  File Form 4720 to report the section 4959 excise tax?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/Form4720FiledInd 
+
+    ExcsRprtFrm4720FrAllAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number: Part V Section B Line 12c  Description:  Total amount of section 4959 excise tax reported on Form 4720 for all of its hospital facilities?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ExciseReportForm4720ForAllAmt 
+
+    ElgCrtrExplndInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 13  Description:  Policy explains eligibility criteria for financial assistance?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EligCriteriaExplainedInd 
+
+    FPGFmlyIncmLmtFrCrPct = models.DecimalField(null=True, blank=True, max_digits=22, decimal_places=12)
+    # Line number: Part V Section B Line 13a  Description:  Percentage of FPG used to determine free care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FPGFamilyIncmLmtFreeCarePct 
+
+    FPGFmlyIncmLmtDscntCrPct = models.DecimalField(null=True, blank=True, max_digits=22, decimal_places=12)
+    # Line number: Part V Section B Line 13a  Description:  Percentage of FPG used to determine discount care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FPGFamilyIncmLmtDscntCarePct 
+
+    ExplndBssInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 14  Description:  Policy explains basis for calculating amounts?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ExplainedBasisInd 
+
+    IncmLvlCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13b  Description:  Income level criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/IncomeLevelInd 
+
+    AsstLvlCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13c  Description:  Asset level criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/AssetLevelInd 
+
+    MdclIndgncyCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13d  Description:  Medical indigency criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MedicalIndigencyInd 
+
+    InsrncSttsCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13e  Description:  Insurance status criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/InsuranceStatusInd 
+
+    RsdncyCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13g  Description:  Residency criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ResidencyInd 
+
+    OthrCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13h  Description:  Other criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherFactorsInd 
+
+    AppFnnclAsstExplnInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 15  Description:  Policy explains method for applying for assistance?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/AppFinancialAsstExplnInd 
+
+    IncldsPblctyMsrsInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 16  Description:  Policy includes publicity measures?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/IncludesPublicityMeasuresInd 
+
+    FAPAvlblOnWbstInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16a  Description:  FAP widely available on a website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PostedOnWebsiteInd 
+
+    OthrPblctyInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16j  Description:  Other publicity  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherPublicityInd 
+
+    FAPActnsOnNnpymntInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 17  Description:  Policy explains actions taken upon non-payment?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPActionsOnNonpaymentInd 
+
+    PrmtRprtTCrdtAgncyInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 18a  Description:  Report to credit agency permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitReportToCreditAgencyInd 
+
+    PrmtOthrActnsInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 18e  Description:  Other actions permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitOtherActionsInd 
+
+    CllctnActvtsInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 19  Description:  Authorize third-party to engage in collection activities?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CollectionActivitiesInd 
+
+    RprtngTCrdtAgncyInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 19a  Description:  Credit agency engaged  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ReportingToCreditAgencyInd 
+
+    OthrActnsInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 19e  Description:  Other actions engaged  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherActionsInd 
+
+    OthrActnsTknInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 20e  Description:  Other action taken  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherActionsTakenInd 
+
+    NndsEmrgncyCrPlcyInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 21  Description:  Non-discriminatory emergency medical care policy?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NondisEmergencyCarePolicyInd 
+
+    NEmrgncyCrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 21a  Description:  No emergency care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NoEmergencyCareInd 
+
+    NEmrgncyCrPlcyInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 21b  Description:  No emergency policy  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NoEmergencyCarePolicyInd 
+
+    EmrgncyCrLmtdInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 21c  Description:  Limits emergency care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EmergencyCareLimitedInd 
+
+    OthrRsnInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 21d  Description:  Other reason  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherReasonInd 
+
+    AmntsGnrllyBlldInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 23  Description:  Charged more than amount generally billed?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/AmountsGenerallyBilledInd 
+
+    GrssChrgsInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 24  Description:  Gross charges in billing?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/GrossChargesInd 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section B  Description:  Business name line 1  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/HospitalFacilityName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section B  Description:  Business name line 2  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/HospitalFacilityName/BusinessNameLine2Txt 
+
+    FrstLcnsdCYOrPYInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 1  Description:  First licensed, registered or recognized by a State in current year or preceding prior year?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FirstLicensedCYOrPYInd 
+
+    TxExmptHsptlCYOrPYInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 2  Description:  Acquired or placed into service as tax-exempt hospital in current year or  preceding prior year?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/TaxExemptHospitalCYOrPYInd 
+
+    PrrCHNAImpctInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 3i  Description:  Impact of actions taken identified in prior CHNA  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PriorCHNAImpactInd 
+
+    CHNACndctdWthNnFcltsInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 6b  Description:  Other than hospital facilities?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CHNAConductedWithNonFcltsInd 
+
+    PprCpyPblcInspctnInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 7c  Description:  Made paper copy  available for public inspection  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PaperCopyPublicInspectionInd 
+
+    ImplmnttnStrtgyAdptInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 8  Description:  Adopt implementation strategy?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ImplementationStrategyAdoptInd 
+
+    ImplmnttnStrtgyAdptYr = models.TextField(null=True, blank=True)
+    # Line number: Part V Section B Line 9  Description:  Year last adopted implementation strategy  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ImplementationStrategyAdptYr 
+
+    StrtgyPstdWbstInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number: Part V Section B Line 10  Description:  Implementation strategy posted on website?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/StrategyPostedWebsiteInd 
+
+    StrtgyWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part V Section B Line 10a  Description:  Implementation strategy website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/StrategyWebsiteURLTxt 
+
+    StrtgyAttchdInd = models.TextField(null=True, blank=True)
+    # Line number: Part V Section B Line 10b  Description:  Implementation strategy attached to return?  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/StrategyAttachedInd 
+
+    FPGFmlyIncmLmtFrDscntInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13a  Description:  Explained free care percent and discounted care percent  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FPGFamilyIncmLmtFreeDscntInd 
+
+    IncmLvlCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13b  Description:  Income level criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/IncomeLevelCriteriaInd 
+
+    AsstLvlCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13c  Description:  Asset level criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/AssetLevelCriteriaInd 
+
+    MdclIndgncyCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13d  Description:  Medical indigency criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MedicalIndigencyCriteriaInd 
+
+    InsrncSttsCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13e  Description:  Insurance status criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/InsuranceStatusCriteriaInd 
+
+    UndrnsrncSttCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13f  Description:  Underinsurance status criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/UnderinsuranceStatCriteriaInd 
+
+    RsdncyCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13g  Description:  Residency criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ResidencyCriteriaInd 
+
+    OthrCrtrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 13h  Description:  Other criteria  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherCriteriaInd 
+
+    DscrbdInfInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 15a  Description:  Described information as part of application.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/DescribedInfoInd 
+
+    DscrbdSprtDcInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 15b  Description:  Described supporting documentation as part of application.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/DescribedSuprtDocInd 
+
+    PrvddHsptlCntctInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 15c  Description:  Provided  contact information of hospital staff.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProvidedHospitalContactInd 
+
+    PrvddNnprftCntctInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 15d  Description:  Provided contact information of nonprofit organization.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProvidedNonprofitContactInd 
+
+    OthrMthdInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 15e  Description:  Other method used to explain.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/OtherMethodInd 
+
+    FAPAvlblOnWbstInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16a  Description:  FAP widely available on a website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAvailableOnWebsiteInd 
+
+    FAPAvlblOnWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part V Section B Line 16a  Description:  FAP website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAvailableOnWebsiteURLTxt 
+
+    FAPAppAvlblOnWbstInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16b  Description:  FAP application form widely available on a website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAppAvailableOnWebsiteInd 
+
+    FAPAppAvlblOnWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part V Section B Line 16b  Description:  FAP application form website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAppAvailableOnWebsiteURLTxt 
+
+    FAPSmmryOnWbstInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16c  Description:  FAP plain language summary on a website  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPSummaryOnWebsiteInd 
+
+    FAPSmmryOnWbstURLTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number: Part V Section B Line 16c  Description:  FAP plain language summary website URL  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPSummaryOnWebsiteURLTxt 
+
+    FAPAvlblOnRqstNChrgInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16d  Description:  FAP available upon request and without charge  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAvlblOnRequestNoChargeInd 
+
+    FAPAppAvlblOnRqstNChrgInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16e  Description:  FAP application form available upon request and without charge  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPAppAvlblOnRequestNoChrgInd 
+
+    FAPSmAvlblOnRqstNChrgInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16f  Description:  FAP plain language summary available upon request and without charge  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPSumAvlblOnRequestNoChrgInd 
+
+    NtfdFAPCpyBllDsplyInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16g  Description:  Notified of FAP by paper copy, on billing statement, and public displays  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NotifiedFAPCopyBillDisplayInd 
+
+    CmmnttyNtfdFAPInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16h  Description:  Notified community about availability of FAP  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/CommuntityNotifiedFAPInd 
+
+    FAPTrnsltdInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 16i  Description:  FAP translated into primary language spoken  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/FAPTranslatedInd 
+
+    PrmtSllngDbtInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 18b  Description:  Selling debt permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitSellingDebtInd 
+
+    PrmtLglJdclPrcssInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 18d  Description:  Actions that required a legal or judicial process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitLegalJudicialProcessInd 
+
+    PrmtDfrDnyRqrPymntInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 18c  Description:  Deferring, denying or requiring payment before care due to previous nonpayment permitted.  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitDeferDenyRqrPaymentInd 
+
+    PrmtNActnsInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 18f  Description:  None of these actions or similar actions permitted  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/PermitNoActionsInd 
+
+    EnggdSllngDbtInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 19b  Description:  Selling debt engaged  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngagedSellingDebtInd 
+
+    EnggdLglJdclPrcssInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 19d  Description:  Engaged actions that required a legal or judicial process  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngagedLegalJudicialProcessInd 
+
+    EnggDfrDnyRqrPymntInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 19c  Description:  Engaged actions to defer, deny or requirment payment before providing care  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/EngageDeferDenyRqrPaymentInd 
+
+    PrvddWrttnNtcInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 20a  Description:  Provided written notice and plain language summary of FAP  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProvidedWrittenNoticeInd 
+
+    MdEffrtOrllyNtfyInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 20b  Description:  Reasonable effort to orally notify individual about FAP  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MadeEffortOrallyNotifyInd 
+
+    NnMdInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 20f  Description:  None of these efforts were made  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/NoneMadeInd 
+
+    PrcssdFAPApplctnInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 20c  Description:  Processed incomplete and complete FAP applications  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProcessedFAPApplicationInd 
+
+    MdPrsmptvElgDtrmInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 20d  Description:  Made presumptive eligibility determinations  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/MadePresumptiveEligDetermInd 
+
+    LkBckMdcrInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 22a  Description:  Look-back method based on claims allowed by medicare fee for service  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LookBackMedicareInd 
+
+    LkBckMdcrPrvtInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 22b  Description:  Look-back method based on claims allowed by medicare fee for service and all private health insurance  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LookBackMedicarePrivateInd 
+
+    LkBckMdcdMdcrPrvtInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 22c  Description:  Look-back method based on claims allowed by nedicaid, medicare fee for service and all private health insurance  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/LookBackMedicaidMedcrPrvtInd 
+
+    PrspctvMdcrMdcdInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number: Part V Section B Line 22d  Description:  Prospective medicare or medicaid method  xpath: /IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp/ProspectiveMedicareMedicaidInd 
+
+#######
+#
+# IRS990ScheduleH - SkdHSpplmntlInfrmtn
+# Description:  Part V Section C, Supplemental Information for Part V Section B
+# A repeating structure from skedh_part_vc
 #
 #######
 
@@ -9304,6 +10239,87 @@ class SkdHSpplmntlInfrmtn(models.Model):
 
 #######
 #
+# IRS990ScheduleH - SkdHOthHlthCrFclts
+# Description:  Part V section D, other health care facilities; ; Part V Section D repeating group
+# A repeating structure from skedh_part_vd
+#
+#######
+
+class SkdHOthHlthCrFclts(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    OthHlthCrFclts = models.TextField(null=True, blank=True)
+    # Description:  Part V Section D repeating group  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section D  Description:  Business name line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine1 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section D  Description:  Business name line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine2 
+
+    AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part V Section D  Description:  Address line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine1 
+
+    AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part V Section D  Description:  Address line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine2 
+
+    CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part V Section D  Description:  City  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/City 
+
+    SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part V Section D  Description:  State  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/State 
+
+    ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part V Section D  Description:  ZIP code  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/ZIPCode 
+
+    FcltyTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Part V Section D  Description:  Facility type  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/FacilityTxt 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section D  Description:  Business name line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Section D  Description:  Business name line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/BusinessName/BusinessNameLine2Txt 
+
+    AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part V Section D  Description:  Address line 1  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine1Txt 
+
+    AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part V Section D  Description:  Address line 2  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/AddressLine2Txt 
+
+    CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part V Section D  Description:  City  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/CityNm 
+
+    SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part V Section D  Description:  State  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/StateAbbreviationCd 
+
+    ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part V Section D  Description:  ZIP code  xpath: /IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp/USAddress/ZIPCd 
+
+#######
+#
+# IRS990ScheduleH - SkdHSpplmntlInfrmtnDtl
+# Description:  Part VI contents
+# A repeating structure from skedh_part_vi
+#
+#######
+
+class SkdHSpplmntlInfrmtnDtl(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    SpplmntlInfrmtnDtl = models.TextField(null=True, blank=True)
+    # Description:  Part VI contents  xpath: /IRS990ScheduleH/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Part VI  Description:  Form, part and line number reference  xpath: /IRS990ScheduleH/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = models.TextField(null=True, blank=True)
+    # Line number:  Part VI  Description:  Form, part and line number explanation  xpath: /IRS990ScheduleH/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleI - ScheduleI Part I General Information on Grants and Assistance 
 #
 #######
@@ -9313,7 +10329,7 @@ class skedi_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     GrntRcrdsMntndInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 1  Description:  Does the organization maintain records to substantiate the amount of the grants or assistance, the grantees' eligibility for the grants or assistance, and the selection criteria used to award the grants or assistance?  xpath: /IRS990ScheduleI/GrantRecordsMaintainedInd 
+    # Line number: Part I Line 1  Description:  Does the organization maintain records to substantiate the amount of the grants or assistance, the grantees' eligibility for the grants or assistance, and the selection criteria used to award the grants or assistance?  xpath: /IRS990ScheduleI/GrantRecordsMaintainedInd 
 
 #######
 #
@@ -9326,35 +10342,36 @@ class skedi_part_ii(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     Ttl501c3OrgCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 2  Description:  Enter total number of 501(c)(3) and government organizations  xpath: /IRS990ScheduleI/Total501c3OrgCnt 
+    # Line number: Part II Line 2  Description: Enter total number of 501(c)(3) and government organizations  xpath: /IRS990ScheduleI/Total501c3OrgCnt 
 
     TtlOthrOrgCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part II Line 3  Description:  Enter total number of other organizations  xpath: /IRS990ScheduleI/TotalOtherOrgCnt 
+    # Line number: Part II Line 3  Description:  Enter total number of other organizations  xpath: /IRS990ScheduleI/TotalOtherOrgCnt 
 
 #######
 #
-# IRS990ScheduleI - SupplementalInformationDetail
-# A repeating structure from ScheduleI Part IV Supplemental Information
+# IRS990ScheduleI - ScheduleI Part III Grants and Other Assistance to Individuals in the United States 
 #
 #######
 
-class SkdISpplmntlInfrmtnDtl(models.Model):
+class skedi_part_iii(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    SpplmntlInfrmtnDtl = models.TextField(null=True, blank=True)
-    # Description:  Part IV content  xpath: /IRS990ScheduleI/SupplementalInformationDetail 
+#######
+#
+# IRS990ScheduleI - ScheduleI Part IV Supplemental Information
+#
+#######
 
-    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part IV  Description:  Form, part and line number reference  xpath: /IRS990ScheduleI/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part IV  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleI/SupplementalInformationDetail/ExplanationTxt 
+class skedi_part_iv(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
 #######
 #
-# IRS990ScheduleI - RecipientTable
-# A repeating structure from ScheduleI Part II Grants and Other Assistance to Governments and Organizations in the United States 
+# IRS990ScheduleI - SkdIRcpntTbl
+# Description: Complete if the organization reported more than $5,000 on Form 990, Part IX, line 1 for any recipient that received more than $5,000
+# A repeating structure from skedi_part_ii
 #
 #######
 
@@ -9363,10 +10380,16 @@ class SkdIRcpntTbl(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     SkdI_RcpntTbl = models.TextField(null=True, blank=True)
-    # Line number:  Part II  Description:  Complete if the organization reported more than $5,000 on Form 990, Part IX, line 1 for any recipient that received more than $5,000  xpath: /IRS990ScheduleI/RecipientTable 
+    # Line number:  Part II  Description: Complete if the organization reported more than $5,000 on Form 990, Part IX, line 1 for any recipient that received more than $5,000  xpath: /IRS990ScheduleI/RecipientTable 
+
+    RcpntBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Line 1 Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleI/RecipientTable/RecipientBusinessName/BusinessNameLine1 
 
     RcpntBsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Line 1 Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleI/RecipientTable/RecipientBusinessName/BusinessNameLine1Txt 
+
+    RcpntBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Line 1 Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleI/RecipientTable/RecipientBusinessName/BusinessNameLine2 
 
     RcpntBsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Line 1 Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleI/RecipientTable/RecipientBusinessName/BusinessNameLine2Txt 
@@ -9393,13 +10416,25 @@ class SkdIRcpntTbl(models.Model):
     # Line number:  Part II Line  1 Column (h)  Description:  Purpose of grant  xpath: /IRS990ScheduleI/RecipientTable/PurposeOfGrantTxt 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part II Line  1 Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleI/RecipientTable/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part II Line  1 Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleI/RecipientTable/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part II Line  1 Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleI/RecipientTable/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part II Line  1 Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleI/RecipientTable/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part II Line  1 Column (a)  Description:  City  xpath: /IRS990ScheduleI/RecipientTable/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part II Line  1 Column (a)  Description:  City  xpath: /IRS990ScheduleI/RecipientTable/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part II Line  1 Column (a)  Description:  State  xpath: /IRS990ScheduleI/RecipientTable/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part II Line  1 Column (a)  Description:  State  xpath: /IRS990ScheduleI/RecipientTable/USAddress/StateAbbreviationCd 
@@ -9407,17 +10442,35 @@ class SkdIRcpntTbl(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part II Line  1 Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleI/RecipientTable/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part II Line  1 Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleI/RecipientTable/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part II Line  1 Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part II Line  1 Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part II Line  1 Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part II Line  1 Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part II Line  1 Column (a)  Description:  City  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Part II Line  1 Column (a)  Description:  City  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part II Line  1 Column (a)  Description:  Province or state  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Part II Line  1 Column (a)  Description:  Province or state  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part II Line  1 Column (a)  Description:  Country  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part II Line  1 Column (a)  Description:  Country  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/CountryCd 
@@ -9425,10 +10478,14 @@ class SkdIRcpntTbl(models.Model):
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part II Line  1 Column (a)  Description:  Postal code  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/ForeignPostalCd 
 
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part II Line  1 Column (a)  Description:  Postal code  xpath: /IRS990ScheduleI/RecipientTable/ForeignAddress/PostalCode 
+
 #######
 #
-# IRS990ScheduleI - GrantsOtherAsstToIndivInUSGrp
-# A repeating structure from ScheduleI Part III Grants and Other Assistance to Individuals in the United States 
+# IRS990ScheduleI - SkdIGrntsOthrAsstTIndvInUS
+# Description:  Part III content
+# A repeating structure from skedi_part_iii
 #
 #######
 
@@ -9459,6 +10516,27 @@ class SkdIGrntsOthrAsstTIndvInUS(models.Model):
 
 #######
 #
+# IRS990ScheduleI - SkdISpplmntlInfrmtnDtl
+# Description:  Part IV content
+# A repeating structure from skedi_part_iv
+#
+#######
+
+class SkdISpplmntlInfrmtnDtl(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    SpplmntlInfrmtnDtl = models.TextField(null=True, blank=True)
+    # Description:  Part IV content  xpath: /IRS990ScheduleI/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Part IV  Description:  Form, part and line number reference  xpath: /IRS990ScheduleI/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = models.TextField(null=True, blank=True)
+    # Line number:  Part IV  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleI/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleJ - ScheduleJ Part I Questions Regarding Compensation
 #
 #######
@@ -9468,87 +10546,108 @@ class skedj_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     FrstClssOrChrtrTrvlInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1a  Description:  First class or charter travel  xpath: /IRS990ScheduleJ/FirstClassOrCharterTravelInd 
+    # Line number: Part I Line 1a  Description:  First class or charter travel  xpath: /IRS990ScheduleJ/FirstClassOrCharterTravelInd 
 
     TrvlFrCmpnnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1a  Description:  Travel for companions  xpath: /IRS990ScheduleJ/TravelForCompanionsInd 
+    # Line number: Part I Line 1a  Description:  Travel for companions  xpath: /IRS990ScheduleJ/TravelForCompanionsInd 
 
     IdmnfctnGrssUpPmtsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1a  Description:  Idemnification and gross-up payments  xpath: /IRS990ScheduleJ/IdemnificationGrossUpPmtsInd 
+    # Line number: Part I Line 1a  Description:  Idemnification and gross-up payments  xpath: /IRS990ScheduleJ/IdemnificationGrossUpPmtsInd 
 
     DscrtnrySpndngAcctInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1a  Description:  Discretionary spending account  xpath: /IRS990ScheduleJ/DiscretionarySpendingAcctInd 
+    # Line number: Part I Line 1a  Description:  Discretionary spending account  xpath: /IRS990ScheduleJ/DiscretionarySpendingAcctInd 
 
     HsngAllwncOrRsdncInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1a  Description:  Housing allowance or residence  xpath: /IRS990ScheduleJ/HousingAllowanceOrResidenceInd 
+    # Line number: Part I Line 1a  Description:  Housing allowance or residence  xpath: /IRS990ScheduleJ/HousingAllowanceOrResidenceInd 
 
     PymntsFrUsOfRsdncInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1a  Description:  Payments for use of residence  xpath: /IRS990ScheduleJ/PaymentsForUseOfResidenceInd 
+    # Line number: Part I Line 1a  Description:  Payments for use of residence  xpath: /IRS990ScheduleJ/PaymentsForUseOfResidenceInd 
 
     ClbDsOrFsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1a  Description:  Club dues or fees  xpath: /IRS990ScheduleJ/ClubDuesOrFeesInd 
+    # Line number: Part I Line 1a  Description:  Club dues or fees  xpath: /IRS990ScheduleJ/ClubDuesOrFeesInd 
 
     PrsnlSrvcsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 1a  Description:  Personal services  xpath: /IRS990ScheduleJ/PersonalServicesInd 
+    # Line number: Part I Line 1a  Description:  Personal services  xpath: /IRS990ScheduleJ/PersonalServicesInd 
 
     WrttnPlcyRfTAndEExpnssInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 1b  Description:  Written policy reference T and E expenses?  xpath: /IRS990ScheduleJ/WrittenPolicyRefTAndEExpnssInd 
+    # Line number: Part I Line 1b  Description:  Written policy reference T and E expenses?  xpath: /IRS990ScheduleJ/WrittenPolicyRefTAndEExpnssInd 
 
     SbstnttnRqrdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 2  Description:  Substantiation required?  xpath: /IRS990ScheduleJ/SubstantiationRequiredInd 
+    # Line number: Part I Line 2  Description:  Substantiation required?  xpath: /IRS990ScheduleJ/SubstantiationRequiredInd 
 
     CmpnstnCmmttInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3  Description:  Compensation committee  xpath: /IRS990ScheduleJ/CompensationCommitteeInd 
+    # Line number: Part I Line 3  Description:  Compensation committee  xpath: /IRS990ScheduleJ/CompensationCommitteeInd 
 
     IndpndntCnsltntInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3  Description:  Independent consultant  xpath: /IRS990ScheduleJ/IndependentConsultantInd 
+    # Line number: Part I Line 3  Description:  Independent consultant  xpath: /IRS990ScheduleJ/IndependentConsultantInd 
 
     Frm990OfOthrOrgnztnsInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3  Description:  Form 990 of other organizations  xpath: /IRS990ScheduleJ/Form990OfOtherOrganizationsInd 
+    # Line number: Part I Line 3  Description: Form 990 of other organizations  xpath: /IRS990ScheduleJ/Form990OfOtherOrganizationsInd 
 
     WrttnEmplymntCntrctInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3  Description:  Written employment contract  xpath: /IRS990ScheduleJ/WrittenEmploymentContractInd 
+    # Line number: Part I Line 3  Description:  Written employment contract  xpath: /IRS990ScheduleJ/WrittenEmploymentContractInd 
 
     CmpnstnSrvyInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3  Description:  Compensation survey  xpath: /IRS990ScheduleJ/CompensationSurveyInd 
+    # Line number: Part I Line 3  Description:  Compensation survey  xpath: /IRS990ScheduleJ/CompensationSurveyInd 
 
     BrdOrCmmttApprvlInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Part I Line 3  Description:  Board or committee approval  xpath: /IRS990ScheduleJ/BoardOrCommitteeApprovalInd 
+    # Line number: Part I Line 3  Description:  Board or committee approval  xpath: /IRS990ScheduleJ/BoardOrCommitteeApprovalInd 
 
     SvrncPymntInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 4a  Description:  Severance payment?  xpath: /IRS990ScheduleJ/SeverancePaymentInd 
+    # Line number: Part I Line 4a  Description:  Severance payment?  xpath: /IRS990ScheduleJ/SeverancePaymentInd 
 
     SpplmntlNnqlRtrPlnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 4b  Description:  Supplemental nonqualified retirement plan?  xpath: /IRS990ScheduleJ/SupplementalNonqualRtrPlanInd 
+    # Line number: Part I Line 4b  Description:  Supplemental nonqualified retirement plan?  xpath: /IRS990ScheduleJ/SupplementalNonqualRtrPlanInd 
 
     EqtyBsdCmpArrngmInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 4c  Description:  Equity based compensation arrangement?  xpath: /IRS990ScheduleJ/EquityBasedCompArrngmInd 
+    # Line number: Part I Line 4c  Description:  Equity based compensation arrangement?  xpath: /IRS990ScheduleJ/EquityBasedCompArrngmInd 
 
     CmpBsdOnRvnOfFlngOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 5a  Description:  Compensation based on revenue of filing org?  xpath: /IRS990ScheduleJ/CompBasedOnRevenueOfFlngOrgInd 
+    # Line number: Part I Line 5a  Description:  Compensation based on revenue of filing org?  xpath: /IRS990ScheduleJ/CompBasedOnRevenueOfFlngOrgInd 
 
     CmpBsdOnRvRltdOrgsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 5b  Description:  Compensation based on revenue of related orgs?  xpath: /IRS990ScheduleJ/CompBsdOnRevRelatedOrgsInd 
+    # Line number: Part I Line 5b  Description:  Compensation based on revenue of related orgs?  xpath: /IRS990ScheduleJ/CompBsdOnRevRelatedOrgsInd 
 
     CmpBsdNtErnsFlngOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 6a  Description:  Compensation based on net earnings of filing org?  xpath: /IRS990ScheduleJ/CompBsdNetEarnsFlngOrgInd 
+    # Line number: Part I Line 6a  Description:  Compensation based on net earnings of filing org?  xpath: /IRS990ScheduleJ/CompBsdNetEarnsFlngOrgInd 
 
     CmpBsdNtErnsRltdOrgsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 6b  Description:  Compensation based on net earnings of related orgs?  xpath: /IRS990ScheduleJ/CompBsdNetEarnsRltdOrgsInd 
+    # Line number: Part I Line 6b  Description:  Compensation based on net earnings of related orgs?  xpath: /IRS990ScheduleJ/CompBsdNetEarnsRltdOrgsInd 
 
     AnyNnFxdPymntsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 7  Description:  Any non-fixed payments?  xpath: /IRS990ScheduleJ/AnyNonFixedPaymentsInd 
+    # Line number: Part I Line 7  Description:  Any non-fixed payments?  xpath: /IRS990ScheduleJ/AnyNonFixedPaymentsInd 
 
     IntlCntrctExcptnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 8  Description:  Initial contract exception?  xpath: /IRS990ScheduleJ/InitialContractExceptionInd 
+    # Line number: Part I Line 8  Description:  Initial contract exception?  xpath: /IRS990ScheduleJ/InitialContractExceptionInd 
 
     RbttblPrsmptnPrcInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 9  Description:  Rebuttable presumption procedure?  xpath: /IRS990ScheduleJ/RebuttablePresumptionProcInd 
+    # Line number: Part I Line 9  Description:  Rebuttable presumption procedure?  xpath: /IRS990ScheduleJ/RebuttablePresumptionProcInd 
 
 #######
 #
-# IRS990ScheduleJ - RltdOrgOfficerTrstKeyEmplGrp
-# A repeating structure from ScheduleJ Part II Officers, Directors, Trustees, Key Employees, and Highest Compensated Employees 
+# IRS990ScheduleJ - ScheduleJ Part II Officers, Directors, Trustees, Key Employees, and Highest Compensated Employees 
+#
+#######
+
+class skedj_part_ii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleJ - ScheduleJ Part III Supplemental Information
+#
+#######
+
+class skedj_part_iii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleJ - SkdJRltdOrgOffcrTrstKyEmpl
+# Description:  Part II contents
+# A repeating structure from skedj_part_ii
 #
 #######
 
@@ -9563,7 +10662,13 @@ class SkdJRltdOrgOffcrTrstKyEmpl(models.Model):
     # Line number:  Part II Column (A)  Description:  Name of officer - person  xpath: /IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm 
 
     BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Column (A)  Description:  Business name line 1  xpath: /IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BusinessName/BusinessNameLine1 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Column (A)  Description:  Business name line 1  xpath: /IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Column (A)  Description:  Business name line 2  xpath: /IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BusinessName/BusinessNameLine2 
 
     BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Column (A)  Description:  Business name line 2  xpath: /IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BusinessName/BusinessNameLine2Txt 
@@ -9615,8 +10720,9 @@ class SkdJRltdOrgOffcrTrstKyEmpl(models.Model):
 
 #######
 #
-# IRS990ScheduleJ - SupplementalInformationDetail
-# A repeating structure from ScheduleJ Part III Supplemental Information
+# IRS990ScheduleJ - SkdJSpplmntlInfrmtnDtl
+# Description:  Part III contents
+# A repeating structure from skedj_part_iii
 #
 #######
 
@@ -9635,8 +10741,118 @@ class SkdJSpplmntlInfrmtnDtl(models.Model):
 
 #######
 #
-# IRS990ScheduleK - TaxExemptBondsProceedsGrp
-# A repeating structure from ScheduleK Part II - Proceeds Table 
+# IRS990ScheduleK - ScheduleK Part I - Bond Issues Table 
+#
+#######
+
+class skedk_part_i(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+    documentId = models.TextField(blank=True, null=True, help_text="documentID attribute")
+#######
+#
+# IRS990ScheduleK - ScheduleK Part II - Proceeds Table 
+#
+#######
+
+class skedk_part_ii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+    documentId = models.TextField(blank=True, null=True, help_text="documentID attribute")
+#######
+#
+# IRS990ScheduleK - ScheduleK Part III - Private Use 
+#
+#######
+
+class skedk_part_iii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+    documentId = models.TextField(blank=True, null=True, help_text="documentID attribute")
+#######
+#
+# IRS990ScheduleK - ScheduleK Part IV - Arbitrage 
+#
+#######
+
+class skedk_part_iv(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+    documentId = models.TextField(blank=True, null=True, help_text="documentID attribute")
+#######
+#
+# IRS990ScheduleK - ScheduleK Part V - Violations Identified and Corrected 
+#
+#######
+
+class skedk_part_v(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+    documentId = models.TextField(blank=True, null=True, help_text="documentID attribute")
+#######
+#
+# IRS990ScheduleK - ScheduleK Part VI - Supplemental Information 
+#
+#######
+
+class skedk_part_vi(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+    documentId = models.TextField(blank=True, null=True, help_text="documentID attribute")
+#######
+#
+# IRS990ScheduleK - SkdKTxExmptBndsIsss
+# A repeating structure from skedk_part_i
+#
+#######
+
+class SkdKTxExmptBndsIsss(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+    documentId = models.TextField(blank=True, null=True, help_text="documentID attribute")
+    BndRfrncCd = models.TextField(null=True, blank=True)
+    # Line number:  Part I  Description:  Bond issue reference number (A-D)  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/BondReferenceCd 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/IssuerName/BusinessNameLine1 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/IssuerName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/IssuerName/BusinessNameLine2 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/IssuerName/BusinessNameLine2Txt 
+
+    BndIssrEIN = models.CharField(null=True, blank=True, max_length=9)
+    # Line number:  Part I Column (b)  Description:  Issuer EIN  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/BondIssuerEIN 
+
+    CUSIPNm = models.CharField(null=True, blank=True, max_length=9)
+    # Line number:  Part I Column (c)  Description:  CUSIP number  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/CUSIPNum 
+
+    BndIssdDt = models.CharField(null=True, blank=True, max_length=31)
+    # Line number:  Part I Column (d)  Description:  Date issued  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/BondIssuedDt 
+
+    IssPrcAmt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Part I Column (e)  Description:  Issue price  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/IssuePriceAmt 
+
+    PrpsDsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Part I Column (f)  Description:  Description of purpose  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/PurposeDesc 
+
+    DfsdInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number:  Part I Column (g)  Description:  Defeased?  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/DefeasedInd 
+
+    OnBhlfOfIssrInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number:  Part I Column (h)  Description:  On behalf of issuer?  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/OnBehalfOfIssuerInd 
+
+    PlFnncngInd = models.CharField(null=True, blank=True, max_length=5)
+    # Line number:  Part I Column (i)  Description:  Pool financing?  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/PoolFinancingInd 
+
+#######
+#
+# IRS990ScheduleK - SkdKTxExmptBndsPrcds
+# A repeating structure from skedk_part_ii
 #
 #######
 
@@ -9700,52 +10916,8 @@ class SkdKTxExmptBndsPrcds(models.Model):
 
 #######
 #
-# IRS990ScheduleK - TaxExemptBondsIssuesGrp
-# A repeating structure from ScheduleK Part I - Bond Issues Table 
-#
-#######
-
-class SkdKTxExmptBndsIsss(models.Model):
-    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
-    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
-    documentId = models.TextField(blank=True, null=True, help_text="documentID attribute")
-    BndRfrncCd = models.TextField(null=True, blank=True)
-    # Line number:  Part I  Description:  Bond issue reference number (A-D)  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/BondReferenceCd 
-
-    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part I Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/IssuerName/BusinessNameLine1Txt 
-
-    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part I Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/IssuerName/BusinessNameLine2Txt 
-
-    BndIssrEIN = models.CharField(null=True, blank=True, max_length=9)
-    # Line number:  Part I Column (b)  Description:  Issuer EIN  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/BondIssuerEIN 
-
-    CUSIPNm = models.CharField(null=True, blank=True, max_length=9)
-    # Line number:  Part I Column (c)  Description:  CUSIP number  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/CUSIPNum 
-
-    BndIssdDt = models.CharField(null=True, blank=True, max_length=31)
-    # Line number:  Part I Column (d)  Description:  Date issued  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/BondIssuedDt 
-
-    IssPrcAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Column (e)  Description:  Issue price  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/IssuePriceAmt 
-
-    PrpsDsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part I Column (f)  Description:  Description of purpose  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/PurposeDesc 
-
-    DfsdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Column (g)  Description:  Defeased?  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/DefeasedInd 
-
-    OnBhlfOfIssrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Column (h)  Description:  On behalf of issuer?  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/OnBehalfOfIssuerInd 
-
-    PlFnncngInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Column (i)  Description:  Pool financing?  xpath: /IRS990ScheduleK/TaxExemptBondsIssuesGrp/PoolFinancingInd 
-
-#######
-#
-# IRS990ScheduleK - TaxExemptBondsPrivateBusUseGrp
-# A repeating structure from ScheduleK Part III - Private Use 
+# IRS990ScheduleK - SkdKTxExmptBndsPrvtBsUs
+# A repeating structure from skedk_part_iii
 #
 #######
 
@@ -9800,8 +10972,8 @@ class SkdKTxExmptBndsPrvtBsUs(models.Model):
 
 #######
 #
-# IRS990ScheduleK - TaxExemptBondsArbitrageGrp
-# A repeating structure from ScheduleK Part IV - Arbitrage 
+# IRS990ScheduleK - SkdKTxExmptBndsArbtrg
+# A repeating structure from skedk_part_iv
 #
 #######
 
@@ -9831,7 +11003,13 @@ class SkdKTxExmptBndsArbtrg(models.Model):
     # Line number:  Part IV Line 4a  Description:  Hedge identified in books and records?  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/HedgeIdentifiedInBksAndRecInd 
 
     HdgPrvdrNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Line 4b  Description:  Business name line 1  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/HedgeProviderName/BusinessNameLine1 
+
+    HdgPrvdrNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Line 4b  Description:  Business name line 1  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/HedgeProviderName/BusinessNameLine1Txt 
+
+    HdgPrvdrNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Line 4b  Description:  Business name line 2  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/HedgeProviderName/BusinessNameLine2 
 
     HdgPrvdrNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Line 4b  Description:  Business name line 2  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/HedgeProviderName/BusinessNameLine2Txt 
@@ -9849,7 +11027,13 @@ class SkdKTxExmptBndsArbtrg(models.Model):
     # Line number:  Part IV Line 5a  Description:  Gross proceeds invested in GIC?  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/GrossProceedsInvestedInGICInd 
 
     GICPrvdrNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Line 5b  Description:  Business name line 1  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/GICProviderName/BusinessNameLine1 
+
+    GICPrvdrNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Line 5b  Description:  Business name line 1  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/GICProviderName/BusinessNameLine1Txt 
+
+    GICPrvdrNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Line 5b  Description:  Business name line 2  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/GICProviderName/BusinessNameLine2 
 
     GICPrvdrNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Line 5b  Description:  Business name line 2  xpath: /IRS990ScheduleK/TaxExemptBondsArbitrageGrp/GICProviderName/BusinessNameLine2Txt 
@@ -9868,8 +11052,8 @@ class SkdKTxExmptBndsArbtrg(models.Model):
 
 #######
 #
-# IRS990ScheduleK - ProceduresCorrectiveActionGrp
-# A repeating structure from ScheduleK Part V - Violations Identified and Corrected 
+# IRS990ScheduleK - SkdKPrcdrsCrrctvActn
+# A repeating structure from skedk_part_v
 #
 #######
 
@@ -9885,8 +11069,9 @@ class SkdKPrcdrsCrrctvActn(models.Model):
 
 #######
 #
-# IRS990ScheduleK - SupplementalInformationDetail
-# A repeating structure from ScheduleK Part VI - Supplemental Information 
+# IRS990ScheduleK - SkdKSpplmntlInfrmtnDtl
+# Description:  Part VI contents
+# A repeating structure from skedk_part_vi
 #
 #######
 
@@ -9914,10 +11099,10 @@ class skedl_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     TxImpsdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 2  Description:  Amount of tax imposed  xpath: /IRS990ScheduleL/TaxImposedAmt 
+    # Line number: Part I Line 2  Description:  Amount of tax imposed  xpath: /IRS990ScheduleL/TaxImposedAmt 
 
     TxRmbrsdAmt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 3  Description:  Amount of tax reimbursed  xpath: /IRS990ScheduleL/TaxReimbursedAmt 
+    # Line number: Part I Line 3  Description:  Amount of tax reimbursed  xpath: /IRS990ScheduleL/TaxReimbursedAmt 
 
 #######
 #
@@ -9934,28 +11119,38 @@ class skedl_part_ii(models.Model):
 
 #######
 #
-# IRS990ScheduleL - SupplementalInformationDetail
-# A repeating structure from ScheduleL Part V Supplemental Information 
+# IRS990ScheduleL - ScheduleL Part III Grants or Assistance Benefiting Interested Persons
 #
 #######
 
-class SkdLSpplmntlInfrmtnDtl(models.Model):
+class skedl_part_iii(models.Model):
     object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
-    SpplmntlInfrmtnDtl = models.TextField(null=True, blank=True)
-    # Description:  Part V contents  xpath: /IRS990ScheduleL/SupplementalInformationDetail 
+#######
+#
+# IRS990ScheduleL - ScheduleL Part IV Business Transactions Involving Interested Persons
+#
+#######
 
-    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Part V  Description:  Form, part and line number reference  xpath: /IRS990ScheduleL/SupplementalInformationDetail/FormAndLineReferenceDesc 
-
-    ExplntnTxt = models.TextField(null=True, blank=True)
-    # Line number:  Part V  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleL/SupplementalInformationDetail/ExplanationTxt 
+class skedl_part_iv(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
 #######
 #
-# IRS990ScheduleL - DisqualifiedPersonExBnftTrGrp
-# A repeating structure from ScheduleL Part I Excess Benefit Transactions 
+# IRS990ScheduleL - ScheduleL Part V Supplemental Information 
+#
+#######
+
+class skedl_part_v(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleL - SkdLDsqlfdPrsnExBnftTr
+# A repeating structure from skedl_part_i
 #
 #######
 
@@ -9967,7 +11162,13 @@ class SkdLDsqlfdPrsnExBnftTr(models.Model):
     # Line number:  Part I Column (1a)  Description:  Name - Person  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/PersonNm 
 
     BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (1a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/BusinessName/BusinessNameLine1 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part I Column (1a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (1a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/BusinessName/BusinessNameLine2 
 
     BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part I Column (1a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp/BusinessName/BusinessNameLine2Txt 
@@ -9983,8 +11184,8 @@ class SkdLDsqlfdPrsnExBnftTr(models.Model):
 
 #######
 #
-# IRS990ScheduleL - LoansBtwnOrgInterestedPrsnGrp
-# A repeating structure from ScheduleL Part II Loans to and/or From Interested Persons 
+# IRS990ScheduleL - SkdLLnsBtwnOrgIntrstdPrsn
+# A repeating structure from skedl_part_ii
 #
 #######
 
@@ -9996,7 +11197,13 @@ class SkdLLnsBtwnOrgIntrstdPrsn(models.Model):
     # Line number:  Part II Column (a)  Description:  Name - Person  xpath: /IRS990ScheduleL/LoansBtwnOrgInterestedPrsnGrp/PersonNm 
 
     BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/LoansBtwnOrgInterestedPrsnGrp/BusinessName/BusinessNameLine1 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/LoansBtwnOrgInterestedPrsnGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/LoansBtwnOrgInterestedPrsnGrp/BusinessName/BusinessNameLine2 
 
     BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/LoansBtwnOrgInterestedPrsnGrp/BusinessName/BusinessNameLine2Txt 
@@ -10030,8 +11237,9 @@ class SkdLLnsBtwnOrgIntrstdPrsn(models.Model):
 
 #######
 #
-# IRS990ScheduleL - GrntAsstBnftInterestedPrsnGrp
-# A repeating structure from ScheduleL Part III Grants or Assistance Benefiting Interested Persons
+# IRS990ScheduleL - SkdLGrntAsstBnftIntrstdPrsn
+# Description:  Part III content
+# A repeating structure from skedl_part_iii
 #
 #######
 
@@ -10046,7 +11254,13 @@ class SkdLGrntAsstBnftIntrstdPrsn(models.Model):
     # Line number:  Part III Column (a)  Description:  Name of interested person - Person  xpath: /IRS990ScheduleL/GrntAsstBnftInterestedPrsnGrp/PersonNm 
 
     BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part III Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/GrntAsstBnftInterestedPrsnGrp/BusinessName/BusinessNameLine1 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part III Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/GrntAsstBnftInterestedPrsnGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part III Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/GrntAsstBnftInterestedPrsnGrp/BusinessName/BusinessNameLine2 
 
     BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part III Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/GrntAsstBnftInterestedPrsnGrp/BusinessName/BusinessNameLine2Txt 
@@ -10065,8 +11279,9 @@ class SkdLGrntAsstBnftIntrstdPrsn(models.Model):
 
 #######
 #
-# IRS990ScheduleL - BusTrInvolveInterestedPrsnGrp
-# A repeating structure from ScheduleL Part IV Business Transactions Involving Interested Persons
+# IRS990ScheduleL - SkdLBsTrInvlvIntrstdPrsn
+# Description:  Part IV content
+# A repeating structure from skedl_part_iv
 #
 #######
 
@@ -10083,11 +11298,17 @@ class SkdLBsTrInvlvIntrstdPrsn(models.Model):
     PrsnNm = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part IV Column (a)  Description:  Name - Person  xpath: /IRS990ScheduleL/BusTrInvolveInterestedPrsnGrp/NameOfInterested/PersonNm 
 
-    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Part IV Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/BusTrInvolveInterestedPrsnGrp/NameOfInterested/BusinessName/BusinessNameLine2Txt 
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/BusTrInvolveInterestedPrsnGrp/NameOfInterested/BusinessName/BusinessNameLine1 
 
     BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleL/BusTrInvolveInterestedPrsnGrp/NameOfInterested/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/BusTrInvolveInterestedPrsnGrp/NameOfInterested/BusinessName/BusinessNameLine2 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleL/BusTrInvolveInterestedPrsnGrp/NameOfInterested/BusinessName/BusinessNameLine2Txt 
 
     RltnshpDscrptnTxt = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Part IV Column (b)  Description:  Relationship with organization  xpath: /IRS990ScheduleL/BusTrInvolveInterestedPrsnGrp/RelationshipDescriptionTxt 
@@ -10103,6 +11324,27 @@ class SkdLBsTrInvlvIntrstdPrsn(models.Model):
 
 #######
 #
+# IRS990ScheduleL - SkdLSpplmntlInfrmtnDtl
+# Description:  Part V contents
+# A repeating structure from skedl_part_v
+#
+#######
+
+class SkdLSpplmntlInfrmtnDtl(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+    SpplmntlInfrmtnDtl = models.TextField(null=True, blank=True)
+    # Description:  Part V contents  xpath: /IRS990ScheduleL/SupplementalInformationDetail 
+
+    FrmAndLnRfrncDsc = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Part V  Description:  Form, part and line number reference  xpath: /IRS990ScheduleL/SupplementalInformationDetail/FormAndLineReferenceDesc 
+
+    ExplntnTxt = models.TextField(null=True, blank=True)
+    # Line number:  Part V  Description:  Form, part and line number reference explanation  xpath: /IRS990ScheduleL/SupplementalInformationDetail/ExplanationTxt 
+
+#######
+#
 # IRS990ScheduleM - ScheduleM Part I Types of Property 
 #
 #######
@@ -10112,25 +11354,37 @@ class skedm_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     SkdM_Frm8283RcvdCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Part I Line 29  Description:  Number of 8283s received  xpath: /IRS990ScheduleM/Form8283ReceivedCnt 
+    # Line number: Part I Line 29  Description: Number of 8283s received  xpath: /IRS990ScheduleM/Form8283ReceivedCnt 
 
     SkdM_AnyPrprtyThtMstBHldInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 30a  Description:  Any property that must be held?  xpath: /IRS990ScheduleM/AnyPropertyThatMustBeHeldInd 
+    # Line number: Part I Line 30a  Description:  Any property that must be held?  xpath: /IRS990ScheduleM/AnyPropertyThatMustBeHeldInd 
 
     SkdM_RvwPrcssUnslNCGftsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 31  Description:  Review process reference unusual noncash gifts?  xpath: /IRS990ScheduleM/ReviewProcessUnusualNCGiftsInd 
+    # Line number: Part I Line 31  Description:  Review process reference unusual noncash gifts?  xpath: /IRS990ScheduleM/ReviewProcessUnusualNCGiftsInd 
 
     SkdM_ThrdPrtsUsdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 32a  Description:  Third parties used?  xpath: /IRS990ScheduleM/ThirdPartiesUsedInd 
+    # Line number: Part I Line 32a  Description:  Third parties used?  xpath: /IRS990ScheduleM/ThirdPartiesUsedInd 
+
+    ArchlgclArtfcts_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/NonCashCheckboxInd 
+
+    ArtFrctnlIntrst_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/NonCashCheckboxInd 
+
+    ArtHstrclTrsrs_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/NonCashCheckboxInd 
 
     BtsAndPlns_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/NonCashCheckboxInd 
 
-    IntllctlPrprty_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/NonCashCheckboxInd 
+    BksAndPblctns_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/NonCashCheckboxInd 
 
-    HstrclArtfcts_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/NonCashCheckboxInd 
+    CrsAndOthrVhcls_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/NonCashCheckboxInd 
+
+    ClthngAndHshldGds_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/NonCashCheckboxInd 
 
     Cllctbls_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/CollectiblesGrp/NonCashCheckboxInd 
@@ -10141,17 +11395,35 @@ class skedm_part_i(models.Model):
     FdInvntry_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/FoodInventoryGrp/NonCashCheckboxInd 
 
-    Txdrmy_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/TaxidermyGrp/NonCashCheckboxInd 
+    HstrclArtfcts_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/NonCashCheckboxInd 
+
+    IntllctlPrprty_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/NonCashCheckboxInd 
+
+    QlfdCntrbHstStrct_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/NonCashCheckboxInd 
+
+    QlfdCntrbOthr_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/NonCashCheckboxInd 
+
+    RlEsttCmmrcl_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/NonCashCheckboxInd 
+
+    RlEsttOthr_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateOtherGrp/NonCashCheckboxInd 
+
+    RlEsttRsdntl_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/NonCashCheckboxInd 
+
+    ScntfcSpcmns_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/NonCashCheckboxInd 
+
+    ScrPrtnrshpTrstIntrsts_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/NonCashCheckboxInd 
 
     ScrtsClslyHldStck_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/NonCashCheckboxInd 
-
-    ArchlgclArtfcts_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/NonCashCheckboxInd 
-
-    ArtHstrclTrsrs_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/NonCashCheckboxInd 
 
     ScrtsMsc_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/NonCashCheckboxInd 
@@ -10159,59 +11431,23 @@ class skedm_part_i(models.Model):
     ScrtsPblclyTrdd_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/NonCashCheckboxInd 
 
-    ArtFrctnlIntrst_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/NonCashCheckboxInd 
+    Txdrmy_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
+    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/TaxidermyGrp/NonCashCheckboxInd 
 
     WrksOfArt_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
     # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/WorksOfArtGrp/NonCashCheckboxInd 
 
-    ClthngAndHshldGds_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/NonCashCheckboxInd 
-
-    ScntfcSpcmns_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/NonCashCheckboxInd 
-
-    BksAndPblctns_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/NonCashCheckboxInd 
-
-    RlEsttOthr_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateOtherGrp/NonCashCheckboxInd 
-
-    ScrPrtnrshpTrstIntrsts_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/NonCashCheckboxInd 
-
-    RlEsttRsdntl_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/NonCashCheckboxInd 
-
-    CrsAndOthrVhcls_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/NonCashCheckboxInd 
-
-    QlfdCntrbHstStrct_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/NonCashCheckboxInd 
-
-    RlEsttCmmrcl_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/NonCashCheckboxInd 
-
-    QlfdCntrbOthr_NnCshChckbxInd = models.CharField(null=True, blank=True, max_length=1)
-    # Line number:  Column (a)  Description:  Checkbox for lines on Part I  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/NonCashCheckboxInd 
-
-    QlfdCntrbHstStrct_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/ContributionCnt 
-
-    WrksOfArt_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/WorksOfArtGrp/ContributionCnt 
-
-    ArtHstrclTrsrs_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/ContributionCnt 
-
-    ScrtsClslyHldStck_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/ContributionCnt 
+    ArchlgclArtfcts_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/ContributionCnt 
 
     ArtFrctnlIntrst_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/ContributionCnt 
 
-    ArchlgclArtfcts_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/ContributionCnt 
+    ArtHstrclTrsrs_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/ContributionCnt 
+
+    BtsAndPlns_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/ContributionCnt 
 
     BksAndPblctns_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/ContributionCnt 
@@ -10219,14 +11455,14 @@ class skedm_part_i(models.Model):
     CrsAndOthrVhcls_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/ContributionCnt 
 
-    BtsAndPlns_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/ContributionCnt 
-
     ClthngAndHshldGds_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/ContributionCnt 
 
     Cllctbls_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/CollectiblesGrp/ContributionCnt 
+
+    DrgsAndMdclSppls_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/ContributionCnt 
 
     FdInvntry_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/FoodInventoryGrp/ContributionCnt 
@@ -10234,92 +11470,65 @@ class skedm_part_i(models.Model):
     HstrclArtfcts_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/ContributionCnt 
 
+    IntllctlPrprty_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/ContributionCnt 
+
+    QlfdCntrbHstStrct_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/ContributionCnt 
+
     QlfdCntrbOthr_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/ContributionCnt 
 
     RlEsttCmmrcl_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/ContributionCnt 
 
-    ScrPrtnrshpTrstIntrsts_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/ContributionCnt 
+    RlEsttOthr_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateOtherGrp/ContributionCnt 
 
     RlEsttRsdntl_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/ContributionCnt 
 
-    RlEsttOthr_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/RealEstateOtherGrp/ContributionCnt 
-
     ScntfcSpcmns_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/ContributionCnt 
 
-    ScrtsPblclyTrdd_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/ContributionCnt 
+    ScrPrtnrshpTrstIntrsts_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/ContributionCnt 
+
+    ScrtsClslyHldStck_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/ContributionCnt 
 
     ScrtsMsc_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/ContributionCnt 
 
+    ScrtsPblclyTrdd_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/ContributionCnt 
+
     Txdrmy_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/TaxidermyGrp/ContributionCnt 
 
-    IntllctlPrprty_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/ContributionCnt 
-
-    DrgsAndMdclSppls_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/ContributionCnt 
-
-    HstrclArtfcts_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/NoncashContributionsRptF990Amt 
-
-    BtsAndPlns_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/NoncashContributionsRptF990Amt 
-
-    QlfdCntrbOthr_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/NoncashContributionsRptF990Amt 
-
-    CrsAndOthrVhcls_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/NoncashContributionsRptF990Amt 
-
-    RlEsttRsdntl_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/NoncashContributionsRptF990Amt 
-
-    RlEsttCmmrcl_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/NoncashContributionsRptF990Amt 
-
-    BksAndPblctns_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/NoncashContributionsRptF990Amt 
-
-    RlEsttOthr_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateOtherGrp/NoncashContributionsRptF990Amt 
-
-    ScntfcSpcmns_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/NoncashContributionsRptF990Amt 
-
-    ArtFrctnlIntrst_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/NoncashContributionsRptF990Amt 
-
-    ScrtsPblclyTrdd_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/NoncashContributionsRptF990Amt 
-
-    ScrtsClslyHldStck_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/NoncashContributionsRptF990Amt 
+    WrksOfArt_CntrbtnCnt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (b)  Description:  Number of contributions  xpath: /IRS990ScheduleM/WorksOfArtGrp/ContributionCnt 
 
     ArchlgclArtfcts_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/NoncashContributionsRptF990Amt 
 
+    ArtFrctnlIntrst_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/NoncashContributionsRptF990Amt 
+
     ArtHstrclTrsrs_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/NoncashContributionsRptF990Amt 
 
-    ScrtsMsc_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/NoncashContributionsRptF990Amt 
+    BtsAndPlns_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/NoncashContributionsRptF990Amt 
 
-    Txdrmy_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/TaxidermyGrp/NoncashContributionsRptF990Amt 
+    BksAndPblctns_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/NoncashContributionsRptF990Amt 
 
-    ScrPrtnrshpTrstIntrsts_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/NoncashContributionsRptF990Amt 
+    CrsAndOthrVhcls_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/NoncashContributionsRptF990Amt 
 
-    FdInvntry_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/FoodInventoryGrp/NoncashContributionsRptF990Amt 
+    ClthngAndHshldGds_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/NoncashContributionsRptF990Amt 
 
     Cllctbls_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/CollectiblesGrp/NoncashContributionsRptF990Amt 
@@ -10327,94 +11536,137 @@ class skedm_part_i(models.Model):
     DrgsAndMdclSppls_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/NoncashContributionsRptF990Amt 
 
-    ClthngAndHshldGds_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/NoncashContributionsRptF990Amt 
+    FdInvntry_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/FoodInventoryGrp/NoncashContributionsRptF990Amt 
+
+    HstrclArtfcts_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/NoncashContributionsRptF990Amt 
 
     IntllctlPrprty_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/NoncashContributionsRptF990Amt 
 
-    WrksOfArt_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
-    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/WorksOfArtGrp/NoncashContributionsRptF990Amt 
-
     QlfdCntrbHstStrct_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
     # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/NoncashContributionsRptF990Amt 
 
-    ScrtsPblclyTrdd_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/MethodOfDeterminingRevenuesTxt 
+    QlfdCntrbOthr_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/NoncashContributionsRptF990Amt 
 
-    QlfdCntrbOthr_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/MethodOfDeterminingRevenuesTxt 
+    RlEsttCmmrcl_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/NoncashContributionsRptF990Amt 
 
-    Cllctbls_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/CollectiblesGrp/MethodOfDeterminingRevenuesTxt 
+    RlEsttOthr_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateOtherGrp/NoncashContributionsRptF990Amt 
 
-    FdInvntry_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/FoodInventoryGrp/MethodOfDeterminingRevenuesTxt 
+    RlEsttRsdntl_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/NoncashContributionsRptF990Amt 
 
-    ClthngAndHshldGds_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/MethodOfDeterminingRevenuesTxt 
+    ScntfcSpcmns_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/NoncashContributionsRptF990Amt 
 
-    BtsAndPlns_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/MethodOfDeterminingRevenuesTxt 
+    ScrPrtnrshpTrstIntrsts_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/NoncashContributionsRptF990Amt 
+
+    ScrtsClslyHldStck_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/NoncashContributionsRptF990Amt 
+
+    ScrtsMsc_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/NoncashContributionsRptF990Amt 
+
+    ScrtsPblclyTrdd_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/NoncashContributionsRptF990Amt 
+
+    Txdrmy_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/TaxidermyGrp/NoncashContributionsRptF990Amt 
+
+    WrksOfArt_NncshCntrbtnsRptF990Amt = models.BigIntegerField(null=True, blank=True)
+    # Line number:  Column (c)  Description:  Revenues reported on F990, Pt VIII, line 1g  xpath: /IRS990ScheduleM/WorksOfArtGrp/NoncashContributionsRptF990Amt 
 
     ArchlgclArtfcts_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArchaeologicalArtifactsGrp/MethodOfDeterminingRevenuesTxt 
 
-    ScrPrtnrshpTrstIntrsts_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/MethodOfDeterminingRevenuesTxt 
-
-    QlfdCntrbHstStrct_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/MethodOfDeterminingRevenuesTxt 
-
-    RlEsttRsdntl_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/MethodOfDeterminingRevenuesTxt 
-
-    ScrtsMsc_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/MethodOfDeterminingRevenuesTxt 
-
-    RlEsttCmmrcl_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/MethodOfDeterminingRevenuesTxt 
-
-    DrgsAndMdclSppls_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/MethodOfDeterminingRevenuesTxt 
-
-    ScrtsClslyHldStck_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/MethodOfDeterminingRevenuesTxt 
-
-    RlEsttOthr_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateOtherGrp/MethodOfDeterminingRevenuesTxt 
-
-    CrsAndOthrVhcls_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/MethodOfDeterminingRevenuesTxt 
-
-    Txdrmy_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/TaxidermyGrp/MethodOfDeterminingRevenuesTxt 
-
-    IntllctlPrprty_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/MethodOfDeterminingRevenuesTxt 
-
-    ScntfcSpcmns_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/MethodOfDeterminingRevenuesTxt 
-
-    BksAndPblctns_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/MethodOfDeterminingRevenuesTxt 
-
-    WrksOfArt_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/WorksOfArtGrp/MethodOfDeterminingRevenuesTxt 
-
-    HstrclArtfcts_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/MethodOfDeterminingRevenuesTxt 
+    ArtFrctnlIntrst_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/MethodOfDeterminingRevenuesTxt 
 
     ArtHstrclTrsrs_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
     # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArtHistoricalTreasuresGrp/MethodOfDeterminingRevenuesTxt 
 
-    ArtFrctnlIntrst_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
-    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ArtFractionalInterestGrp/MethodOfDeterminingRevenuesTxt 
+    BtsAndPlns_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/BoatsAndPlanesGrp/MethodOfDeterminingRevenuesTxt 
+
+    BksAndPblctns_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/BooksAndPublicationsGrp/MethodOfDeterminingRevenuesTxt 
+
+    CrsAndOthrVhcls_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/CarsAndOtherVehiclesGrp/MethodOfDeterminingRevenuesTxt 
+
+    ClthngAndHshldGds_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ClothingAndHouseholdGoodsGrp/MethodOfDeterminingRevenuesTxt 
+
+    Cllctbls_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/CollectiblesGrp/MethodOfDeterminingRevenuesTxt 
+
+    DrgsAndMdclSppls_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/DrugsAndMedicalSuppliesGrp/MethodOfDeterminingRevenuesTxt 
+
+    FdInvntry_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/FoodInventoryGrp/MethodOfDeterminingRevenuesTxt 
+
+    HstrclArtfcts_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/HistoricalArtifactsGrp/MethodOfDeterminingRevenuesTxt 
+
+    IntllctlPrprty_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/IntellectualPropertyGrp/MethodOfDeterminingRevenuesTxt 
+
+    QlfdCntrbHstStrct_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/QualifiedContribHistStructGrp/MethodOfDeterminingRevenuesTxt 
+
+    QlfdCntrbOthr_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/QualifiedContribOtherGrp/MethodOfDeterminingRevenuesTxt 
+
+    RlEsttCmmrcl_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateCommercialGrp/MethodOfDeterminingRevenuesTxt 
+
+    RlEsttOthr_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateOtherGrp/MethodOfDeterminingRevenuesTxt 
+
+    RlEsttRsdntl_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/RealEstateResidentialGrp/MethodOfDeterminingRevenuesTxt 
+
+    ScntfcSpcmns_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/ScientificSpecimensGrp/MethodOfDeterminingRevenuesTxt 
+
+    ScrPrtnrshpTrstIntrsts_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecurPrtnrshpTrustIntrstsGrp/MethodOfDeterminingRevenuesTxt 
+
+    ScrtsClslyHldStck_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesCloselyHeldStockGrp/MethodOfDeterminingRevenuesTxt 
+
+    ScrtsMsc_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesMiscellaneousGrp/MethodOfDeterminingRevenuesTxt 
+
+    ScrtsPblclyTrdd_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/SecuritiesPubliclyTradedGrp/MethodOfDeterminingRevenuesTxt 
+
+    Txdrmy_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/TaxidermyGrp/MethodOfDeterminingRevenuesTxt 
+
+    WrksOfArt_MthdOfDtrmnngRvnsTxt = models.CharField(null=True, blank=True, max_length=100)
+    # Line number:  Column (d)  Description:  Method of determining revenues  xpath: /IRS990ScheduleM/WorksOfArtGrp/MethodOfDeterminingRevenuesTxt 
 
 #######
 #
-# IRS990ScheduleM - OtherNonCashContriTableGrp
-# A repeating structure from ScheduleM Part I Types of Property 
+# IRS990ScheduleM - ScheduleM Part II Repeating Explanation Table 
+#
+#######
+
+class skedm_part_ii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleM - SkdMOthrNnCshCntrTbl
+# A repeating structure from skedm_part_i
 #
 #######
 
@@ -10439,8 +11691,9 @@ class SkdMOthrNnCshCntrTbl(models.Model):
 
 #######
 #
-# IRS990ScheduleM - SupplementalInformationDetail
-# A repeating structure from ScheduleM Part II Repeating Explanation Table 
+# IRS990ScheduleM - SkdMSpplmntlInfrmtnDtl
+# Description:  Explanation repeating group
+# A repeating structure from skedm_part_ii
 #
 #######
 
@@ -10468,37 +11721,37 @@ class skedn_part_i(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     LqdtnOfAsstsTbl = models.TextField(null=True, blank=True)
-    # Line number:  Part I Line 1  Description:  Complete Part I if the organization ceased its operations and any remaining activities are for the purpose of dissolving, paying debts, or distributing any remaining assets  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp 
+    # Line number: Part I Line 1  Description:  Complete Part I if the organization ceased its operations and any remaining activities are for the purpose of dissolving, paying debts, or distributing any remaining assets  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp 
 
     DrctrOfSccssrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 2a  Description:  Become a director or trustee of a successor or transferee organization?  xpath: /IRS990ScheduleN/DirectorOfSuccessorInd 
+    # Line number: Part I Line 2a  Description:  Become a director or trustee of a successor or transferee organization?  xpath: /IRS990ScheduleN/DirectorOfSuccessorInd 
 
     EmplyOfSccssrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 2b  Description:  Become an employee of, or independent contractor for, a successor or transferee organization?  xpath: /IRS990ScheduleN/EmployeeOfSuccessorInd 
+    # Line number: Part I Line 2b  Description:  Become an employee of, or independent contractor for, a successor or transferee organization?  xpath: /IRS990ScheduleN/EmployeeOfSuccessorInd 
 
     OwnrOfSccssrInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 2c  Description:  Become a direct or indirect owner of a successor or transferee organization?  xpath: /IRS990ScheduleN/OwnerOfSuccessorInd 
+    # Line number: Part I Line 2c  Description:  Become a direct or indirect owner of a successor or transferee organization?  xpath: /IRS990ScheduleN/OwnerOfSuccessorInd 
 
     RcvCmpnstnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 2d  Description:  Receive, or become entitled to, compensation or other similar payments as a result of the organization's liquidation, termination, or dissolution?  xpath: /IRS990ScheduleN/ReceiveCompensationInd 
+    # Line number: Part I Line 2d  Description:  Receive, or become entitled to, compensation or other similar payments as a result of the organization's liquidation, termination, or dissolution?  xpath: /IRS990ScheduleN/ReceiveCompensationInd 
 
     AsstsDstrbtdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 3  Description:  Did the organization distribute its assets in accordance with its governing instruments?  xpath: /IRS990ScheduleN/AssetsDistributedInd 
+    # Line number: Part I Line 3  Description:  Did the organization distribute its assets in accordance with its governing instruments?  xpath: /IRS990ScheduleN/AssetsDistributedInd 
 
     RqrdTNtfyAGInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 4a  Description:  Is the organization required to notify the attorney general or other appropriate state official of its intent to dissolve?  xpath: /IRS990ScheduleN/RequiredToNotifyAGInd 
+    # Line number: Part I Line 4a  Description:  Is the organization required to notify the attorney general or other appropriate state official of its intent to dissolve?  xpath: /IRS990ScheduleN/RequiredToNotifyAGInd 
 
     AttrnyGnrlNtfdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 4b  Description:  If "Yes," did the organization provide such notice?  xpath: /IRS990ScheduleN/AttorneyGeneralNotifiedInd 
+    # Line number: Part I Line 4b  Description:  If "Yes," did the organization provide such notice?  xpath: /IRS990ScheduleN/AttorneyGeneralNotifiedInd 
 
     LbltsPdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 5  Description:  Did the organization discharge or pay all liabilities in accordance with state laws?  xpath: /IRS990ScheduleN/LiabilitiesPaidInd 
+    # Line number: Part I Line 5  Description:  Did the organization discharge or pay all liabilities in accordance with state laws?  xpath: /IRS990ScheduleN/LiabilitiesPaidInd 
 
     BndsOtstndngInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 6a  Description:  Did the organization have any tax-exempt bonds outstanding during the year?  xpath: /IRS990ScheduleN/BondsOutstandingInd 
+    # Line number: Part I Line 6a  Description:  Did the organization have any tax-exempt bonds outstanding during the year?  xpath: /IRS990ScheduleN/BondsOutstandingInd 
 
     BndLbltsDschrgdInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part I Line 6b  Description:  Did the organization discharge or defease tax-exempt bond liabilities in accordance with the Internal Revenue Code and state laws?  xpath: /IRS990ScheduleN/BondLiabilitiesDischargedInd 
+    # Line number: Part I Line 6b  Description:  Did the organization discharge or defease tax-exempt bond liabilities in accordance with the Internal Revenue Code and state laws?  xpath: /IRS990ScheduleN/BondLiabilitiesDischargedInd 
 
 #######
 #
@@ -10511,21 +11764,31 @@ class skedn_part_ii(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     DrctrOfSccssr2Ind = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II Line 2a  Description:  Become a director or trustee of a successor or transferee organization?  xpath: /IRS990ScheduleN/DirectorOfSuccessor2Ind 
+    # Line number: Part II Line 2a  Description:  Become a director or trustee of a successor or transferee organization?  xpath: /IRS990ScheduleN/DirectorOfSuccessor2Ind 
 
     EmplyOfSccssr2Ind = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II Line 2b  Description:  Become an employee of, or independent contractor for, a successor or transferee organization?  xpath: /IRS990ScheduleN/EmployeeOfSuccessor2Ind 
+    # Line number: Part II Line 2b  Description:  Become an employee of, or independent contractor for, a successor or transferee organization?  xpath: /IRS990ScheduleN/EmployeeOfSuccessor2Ind 
 
     OwnrOfSccssr2Ind = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II Line 2c  Description:  Become a direct or indirect owner of a successor or transferee organization?  xpath: /IRS990ScheduleN/OwnerOfSuccessor2Ind 
+    # Line number: Part II Line 2c  Description:  Become a direct or indirect owner of a successor or transferee organization?  xpath: /IRS990ScheduleN/OwnerOfSuccessor2Ind 
 
     RcvCmpnstn2Ind = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part II Line 2d  Description:  Receive, or become entitled to, compensation or other similar payments as a result of the organization's significant disposition of assets?  xpath: /IRS990ScheduleN/ReceiveCompensation2Ind 
+    # Line number: Part II Line 2d  Description:  Receive, or become entitled to, compensation or other similar payments as a result of the organization's significant disposition of assets?  xpath: /IRS990ScheduleN/ReceiveCompensation2Ind 
 
 #######
 #
-# IRS990ScheduleN - LiquidationOfAssetsDetail
-# A repeating structure from ScheduleN Part I Liquidation, Termination or Dissolution 
+# IRS990ScheduleN - ScheduleN Part III Explanations 
+#
+#######
+
+class skedn_part_iii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleN - SkdNLqdtnOfAsstsDtl
+# A repeating structure from skedn_part_i
 #
 #######
 
@@ -10554,49 +11817,88 @@ class SkdNLqdtnOfAsstsDtl(models.Model):
     LqdtnOfAsstsDtl_PrsnNm = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Column (f)  Description:  Name - Person  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/PersonNm 
 
-    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Line number:  Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/BusinessName/BusinessNameLine2Txt 
+    BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/BusinessName/BusinessNameLine1 
 
     BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/BusinessName/BusinessNameLine1Txt 
 
-    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
-    # Line number:  Column (f)  Description:  ZIP code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/ZIPCd 
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/BusinessName/BusinessNameLine2 
 
-    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
-    # Line number:  Column (f)  Description:  State  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/StateAbbreviationCd 
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/BusinessName/BusinessNameLine2Txt 
 
-    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
-    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/CityNm 
-
-    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/AddressLine2Txt 
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/AddressLine1 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/AddressLine1Txt 
 
-    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
-    # Line number:  Column (f)  Description:  Postal code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/ForeignPostalCd 
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/AddressLine2 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/AddressLine2Txt 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Column (f)  Description:  State  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/State 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Column (f)  Description:  State  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/StateAbbreviationCd 
+
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Column (f)  Description:  ZIP code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/ZIPCd 
+
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Column (f)  Description:  ZIP code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/AddressLine1 
 
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/AddressLine1Txt 
 
-    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
-    # Line number:  Column (f)  Description:  Province or state  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/ProvinceOrStateNm 
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/AddressLine2 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/AddressLine2Txt 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/City 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/CityNm 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Column (f)  Description:  Country  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/Country 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Column (f)  Description:  Country  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/CountryCd 
 
-    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/AddressLine2Txt 
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Column (f)  Description:  Postal code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Column (f)  Description:  Postal code  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/PostalCode 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Column (f)  Description:  Province or state  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Column (f)  Description:  Province or state  xpath: /IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail/ForeignAddress/ProvinceOrStateNm 
 
 #######
 #
-# IRS990ScheduleN - DispositionOfAssetsDetail
-# A repeating structure from ScheduleN Part II Sale, Exchange, Disposition or Other Transfer of more than 25% of the Organization's Assets 
+# IRS990ScheduleN - SkdNDspstnOfAsstsDtl
+# A repeating structure from skedn_part_ii
 #
 #######
 
@@ -10626,19 +11928,37 @@ class SkdNDspstnOfAsstsDtl(models.Model):
     # Line number:  Column (f)  Description:  Name - Person  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/PersonNm 
 
     BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/BusinessName/BusinessNameLine1 
+
+    BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/BusinessName/BusinessNameLine2 
 
     BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/BusinessName/BusinessNameLine2Txt 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Column (f)  Description:  State  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Column (f)  Description:  State  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/StateAbbreviationCd 
@@ -10646,17 +11966,35 @@ class SkdNDspstnOfAsstsDtl(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Column (f)  Description:  ZIP code  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Column (f)  Description:  ZIP code  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Column (f)  Description:  Address line 1  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Column (f)  Description:  Address line 2  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Column (f)  Description:  City  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Column (f)  Description:  Province or state  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Column (f)  Description:  Province or state  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Column (f)  Description:  Country  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Column (f)  Description:  Country  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/CountryCd 
@@ -10664,10 +12002,14 @@ class SkdNDspstnOfAsstsDtl(models.Model):
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Column (f)  Description:  Postal code  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/ForeignPostalCd 
 
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Column (f)  Description:  Postal code  xpath: /IRS990ScheduleN/DispositionOfAssetsDetail/ForeignAddress/PostalCode 
+
 #######
 #
-# IRS990ScheduleN - SupplementalInformationDetail
-# A repeating structure from ScheduleN Part III Explanations 
+# IRS990ScheduleN - SkdNSpplmntlInfrmtnDtl
+# Description:  Part III contents
+# A repeating structure from skedn_part_iii
 #
 #######
 
@@ -10686,8 +12028,18 @@ class SkdNSpplmntlInfrmtnDtl(models.Model):
 
 #######
 #
-# IRS990ScheduleO - SupplementalInformationDetail
-# A repeating structure from ScheduleO Part I 
+# IRS990ScheduleO - ScheduleO Part I 
+#
+#######
+
+class skedo_part_i(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleO - SkdOSpplmntlInfrmtnDtl
+# A repeating structure from skedo_part_i
 #
 #######
 
@@ -10703,6 +12055,46 @@ class SkdOSpplmntlInfrmtnDtl(models.Model):
 
 #######
 #
+# IRS990ScheduleR - ScheduleR Part I - Identification of Disregarded Entities 
+#
+#######
+
+class skedr_part_i(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleR - ScheduleR Part II - Identification of Related Tax-Exempt Organizations 
+#
+#######
+
+class skedr_part_ii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleR - ScheduleR Part III - Identification of Related Organizations Taxable as a Partnership 
+#
+#######
+
+class skedr_part_iii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleR - ScheduleR Part IV - Identification of Related Organizations Taxable as a Corporation or Trust 
+#
+#######
+
+class skedr_part_iv(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
 # IRS990ScheduleR - ScheduleR Part V - Transactions with Related Organizations and Noncharitable Exempt Organizations 
 #
 #######
@@ -10712,66 +12104,87 @@ class skedr_part_v(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     RcptOfIntAnntsRntsRyltsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1a  Description:  Receipt of interest, annuities, rents, royalties?  xpath: /IRS990ScheduleR/ReceiptOfIntAnntsRntsRyltsInd 
+    # Line number: Part V Line 1a  Description:  Receipt of interest, annuities, rents, royalties?  xpath: /IRS990ScheduleR/ReceiptOfIntAnntsRntsRyltsInd 
 
     GftGrntOrCpCntrTOthOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1b  Description:  Gift, grant, or capital contribution to other organization?  xpath: /IRS990ScheduleR/GiftGrntOrCapContriToOthOrgInd 
+    # Line number: Part V Line 1b  Description:  Gift, grant, or capital contribution to other organization?  xpath: /IRS990ScheduleR/GiftGrntOrCapContriToOthOrgInd 
 
     GftGrntCpCntrFrmOthOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1c  Description:  Gift, grant, or capital contribution from other organization?  xpath: /IRS990ScheduleR/GiftGrntCapContriFromOthOrgInd 
+    # Line number: Part V Line 1c  Description:  Gift, grant, or capital contribution from other organization?  xpath: /IRS990ScheduleR/GiftGrntCapContriFromOthOrgInd 
 
     LnsOrGrntsTOthrOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1d  Description:  Loans or loan guarantees to or for other organization?  xpath: /IRS990ScheduleR/LoansOrGuaranteesToOtherOrgInd 
+    # Line number: Part V Line 1d  Description:  Loans or loan guarantees to or for other organization?  xpath: /IRS990ScheduleR/LoansOrGuaranteesToOtherOrgInd 
 
     LnsOrGrntsFrmOthOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1e  Description:  Loans or loan guarantees by other organization?  xpath: /IRS990ScheduleR/LoansOrGuaranteesFromOthOrgInd 
+    # Line number: Part V Line 1e  Description:  Loans or loan guarantees by other organization?  xpath: /IRS990ScheduleR/LoansOrGuaranteesFromOthOrgInd 
 
     DvRltdOrgnztnInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1f  Description:  Dividends from related organization(s)? (Y-N)  xpath: /IRS990ScheduleR/DivRelatedOrganizationInd 
+    # Line number: Part V Line 1f  Description:  Dividends from related organization(s)? (Y-N)  xpath: /IRS990ScheduleR/DivRelatedOrganizationInd 
 
     AsstSlTOthrOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1g  Description:  Sale of assets to other organization?  xpath: /IRS990ScheduleR/AssetSaleToOtherOrgInd 
+    # Line number: Part V Line 1g  Description:  Sale of assets to other organization?  xpath: /IRS990ScheduleR/AssetSaleToOtherOrgInd 
 
     AsstPrchsFrmOthrOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1h  Description:  Purchase of assets from other organization?  xpath: /IRS990ScheduleR/AssetPurchaseFromOtherOrgInd 
+    # Line number: Part V Line 1h  Description:  Purchase of assets from other organization?  xpath: /IRS990ScheduleR/AssetPurchaseFromOtherOrgInd 
 
     AsstExchngInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1i  Description:  Exchange of assets?  xpath: /IRS990ScheduleR/AssetExchangeInd 
+    # Line number: Part V Line 1i  Description:  Exchange of assets?  xpath: /IRS990ScheduleR/AssetExchangeInd 
 
     RntlOfFcltsTOthOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1j  Description:  Lease of facilities, equipment, or other assets to other organizations?  xpath: /IRS990ScheduleR/RentalOfFacilitiesToOthOrgInd 
+    # Line number: Part V Line 1j  Description:  Lease of facilities, equipment, or other assets to other organizations?  xpath: /IRS990ScheduleR/RentalOfFacilitiesToOthOrgInd 
 
     RntlOfFcltsFrmOthOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1k  Description:  Lease of facilities, equipment, or other assets from other organizations?  xpath: /IRS990ScheduleR/RentalOfFcltsFromOthOrgInd 
+    # Line number: Part V Line 1k  Description:  Lease of facilities, equipment, or other assets from other organizations?  xpath: /IRS990ScheduleR/RentalOfFcltsFromOthOrgInd 
 
     PrfrmOfSrvcsFrOthOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1l  Description:  Performance of services or membership or fundraising solicitations for other organizations?  xpath: /IRS990ScheduleR/PerformOfServicesForOthOrgInd 
+    # Line number: Part V Line 1l  Description:  Performance of services or membership or fundraising solicitations for other organizations?  xpath: /IRS990ScheduleR/PerformOfServicesForOthOrgInd 
 
     PrfrmOfSrvcsByOthrOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1m  Description:  Performance of services or membership or fundraising solicitations by other organizations?  xpath: /IRS990ScheduleR/PerformOfServicesByOtherOrgInd 
+    # Line number: Part V Line 1m  Description:  Performance of services or membership or fundraising solicitations by other organizations?  xpath: /IRS990ScheduleR/PerformOfServicesByOtherOrgInd 
 
     ShrngOfFcltsInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1n  Description:  Sharing of facilities, equipment, mailing lists, other assets, or employees?  xpath: /IRS990ScheduleR/SharingOfFacilitiesInd 
+    # Line number: Part V Line 1n  Description:  Sharing of facilities, equipment, mailing lists, other assets, or employees?  xpath: /IRS990ScheduleR/SharingOfFacilitiesInd 
 
     PdEmplysShrngInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1o  Description:  Sharing of paid employees?  xpath: /IRS990ScheduleR/PaidEmployeesSharingInd 
+    # Line number: Part V Line 1o  Description:  Sharing of paid employees?  xpath: /IRS990ScheduleR/PaidEmployeesSharingInd 
 
     RmbrsmntPdTOthrOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1p  Description:  Reimbursement paid to other organization for expenses?  xpath: /IRS990ScheduleR/ReimbursementPaidToOtherOrgInd 
+    # Line number: Part V Line 1p  Description:  Reimbursement paid to other organization for expenses?  xpath: /IRS990ScheduleR/ReimbursementPaidToOtherOrgInd 
 
     RmbrsmntPdByOthrOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1q  Description:  Reimbursement paid by other organization for expenses?  xpath: /IRS990ScheduleR/ReimbursementPaidByOtherOrgInd 
+    # Line number: Part V Line 1q  Description:  Reimbursement paid by other organization for expenses?  xpath: /IRS990ScheduleR/ReimbursementPaidByOtherOrgInd 
 
     TrnsfrTOthrOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1r  Description:  Other transfer of cash or property to other organization?  xpath: /IRS990ScheduleR/TransferToOtherOrgInd 
+    # Line number: Part V Line 1r  Description:  Other transfer of cash or property to other organization?  xpath: /IRS990ScheduleR/TransferToOtherOrgInd 
 
     TrnsfrFrmOthrOrgInd = models.CharField(null=True, blank=True, max_length=5)
-    # Line number:  Part V Line 1s  Description:  Other transfer of cash or property from other organization?  xpath: /IRS990ScheduleR/TransferFromOtherOrgInd 
+    # Line number: Part V Line 1s  Description:  Other transfer of cash or property from other organization?  xpath: /IRS990ScheduleR/TransferFromOtherOrgInd 
 
 #######
 #
-# IRS990ScheduleR - IdDisregardedEntitiesGrp
-# A repeating structure from ScheduleR Part I - Identification of Disregarded Entities 
+# IRS990ScheduleR - ScheduleR Part VI 
+#
+#######
+
+class skedr_part_vi(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleR - ScheduleR Part VII Supplemental Information 
+#
+#######
+
+class skedr_part_vii(models.Model):
+    object_id = models.CharField(max_length=31, blank=True, null=True, help_text="unique xml return id")
+    ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
+
+#######
+#
+# IRS990ScheduleR - SkdRIdDsrgrddEntts
+# Description:  Part I content - Identification of disregarded entities
+# A repeating structure from skedr_part_i
 #
 #######
 
@@ -10783,7 +12196,13 @@ class SkdRIdDsrgrddEntts(models.Model):
     # Description:  Part I content - Identification of disregarded entities  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp 
 
     DsrgrddEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/DisregardedEntityName/BusinessNameLine1 
+
+    DsrgrddEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part I Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/DisregardedEntityName/BusinessNameLine1Txt 
+
+    DsrgrddEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/DisregardedEntityName/BusinessNameLine2 
 
     DsrgrddEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part I Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/DisregardedEntityName/BusinessNameLine2Txt 
@@ -10801,13 +12220,25 @@ class SkdRIdDsrgrddEntts(models.Model):
     # Line number:  Part I Column (e)  Description:  End-of-year assets ($)  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/EndOfYearAssetsAmt 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part I Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part I Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part I Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part I Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part I Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part I Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part I Column (a)  Description:  State  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part I Column (a)  Description:  State  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/StateAbbreviationCd 
@@ -10815,23 +12246,44 @@ class SkdRIdDsrgrddEntts(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part I Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part I Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part I Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part I Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part I Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part I Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part I Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Part I Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part I Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Part I Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part I Column (a)  Description:  Country  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part I Column (a)  Description:  Country  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part I Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part I Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/ForeignAddress/PostalCode 
 
     IdDsrgrddEntts_LglDmclSttCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part I Column (c)  Description:  Legal domicile - State  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/LegalDomicileStateCd 
@@ -10840,7 +12292,13 @@ class SkdRIdDsrgrddEntts(models.Model):
     # Line number:  Part I Column (c)  Description:  Legal domicile - Foreign Country  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/LegalDomicileForeignCountryCd 
 
     DrctCntrllngEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/DirectControllingEntityName/BusinessNameLine1 
+
+    DrctCntrllngEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part I Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/DirectControllingEntityName/BusinessNameLine1Txt 
+
+    DrctCntrllngEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part I Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/DirectControllingEntityName/BusinessNameLine2 
 
     DrctCntrllngEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part I Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdDisregardedEntitiesGrp/DirectControllingEntityName/BusinessNameLine2Txt 
@@ -10850,8 +12308,9 @@ class SkdRIdDsrgrddEntts(models.Model):
 
 #######
 #
-# IRS990ScheduleR - IdRelatedTaxExemptOrgGrp
-# A repeating structure from ScheduleR Part II - Identification of Related Tax-Exempt Organizations 
+# IRS990ScheduleR - SkdRIdRltdTxExmptOrg
+# Description:  Part II content - Identification of related tax-exempt organizations
+# A repeating structure from skedr_part_ii
 #
 #######
 
@@ -10863,7 +12322,13 @@ class SkdRIdRltdTxExmptOrg(models.Model):
     # Description:  Part II content - Identification of related tax-exempt organizations  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp 
 
     DsrgrddEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/DisregardedEntityName/BusinessNameLine1 
+
+    DsrgrddEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/DisregardedEntityName/BusinessNameLine1Txt 
+
+    DsrgrddEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/DisregardedEntityName/BusinessNameLine2 
 
     DsrgrddEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/DisregardedEntityName/BusinessNameLine2Txt 
@@ -10884,13 +12349,25 @@ class SkdRIdRltdTxExmptOrg(models.Model):
     # Line number:  Part II Column (g)  Description:  512(b)(13) controlled organization? (Y-N)  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ControlledOrganizationInd 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part II Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part II Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part II Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part II Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part II Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part II Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part II Column (a)  Description:  State  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part II Column (a)  Description:  State  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/StateAbbreviationCd 
@@ -10898,23 +12375,44 @@ class SkdRIdRltdTxExmptOrg(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part II Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part II Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part II Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part II Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part II Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part II Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part II Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Part II Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part II Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Part II Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part II Column (a)  Description:  Country  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part II Column (a)  Description:  Country  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part II Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part II Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/ForeignAddress/PostalCode 
 
     IdRltdTxExmptOrg_LglDmclSttCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part II Column (c)  Description:  Legal domicile - State  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/LegalDomicileStateCd 
@@ -10923,7 +12421,13 @@ class SkdRIdRltdTxExmptOrg(models.Model):
     # Line number:  Part II Column (c)  Description:  Legal domicile - Foreign Country  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/LegalDomicileForeignCountryCd 
 
     DrctCntrllngEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/DirectControllingEntityName/BusinessNameLine1 
+
+    DrctCntrllngEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Column (f)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/DirectControllingEntityName/BusinessNameLine1Txt 
+
+    DrctCntrllngEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part II Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/DirectControllingEntityName/BusinessNameLine2 
 
     DrctCntrllngEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part II Column (f)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedTaxExemptOrgGrp/DirectControllingEntityName/BusinessNameLine2Txt 
@@ -10933,8 +12437,9 @@ class SkdRIdRltdTxExmptOrg(models.Model):
 
 #######
 #
-# IRS990ScheduleR - IdRelatedOrgTxblPartnershipGrp
-# A repeating structure from ScheduleR Part III - Identification of Related Organizations Taxable as a Partnership 
+# IRS990ScheduleR - SkdRIdRltdOrgTxblPrtnrshp
+# Description:  Part III content - Identification of related organizations taxable as a partnership
+# A repeating structure from skedr_part_iii
 #
 #######
 
@@ -10946,7 +12451,13 @@ class SkdRIdRltdOrgTxblPrtnrshp(models.Model):
     # Description:  Part III content - Identification of related organizations taxable as a partnership  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp 
 
     RltdOrgnztnNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part III Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/RelatedOrganizationName/BusinessNameLine1 
+
+    RltdOrgnztnNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part III Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/RelatedOrganizationName/BusinessNameLine1Txt 
+
+    RltdOrgnztnNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part III Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/RelatedOrganizationName/BusinessNameLine2 
 
     RltdOrgnztnNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part III Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/RelatedOrganizationName/BusinessNameLine2Txt 
@@ -10979,13 +12490,25 @@ class SkdRIdRltdOrgTxblPrtnrshp(models.Model):
     # Line number:  Part III Column (k)  Description:  Percentage ownership  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/OwnershipPct 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part III Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part III Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part III Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part III Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part III Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part III Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part III Column (a)  Description:  State  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part III Column (a)  Description:  State  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/StateAbbreviationCd 
@@ -10993,23 +12516,44 @@ class SkdRIdRltdOrgTxblPrtnrshp(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part III Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part III Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part III Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part III Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part III Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part III Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part III Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Part III Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part III Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Part III Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part III Column (a)  Description:  Country  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part III Column (a)  Description:  Country  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part III Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part III Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/ForeignAddress/PostalCode 
 
     IdRltdOrgTxblPrtnrshp_LglDmclSttCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part III Column (c)  Description:  Legal domicile - State  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/LegalDomicileStateCd 
@@ -11018,7 +12562,13 @@ class SkdRIdRltdOrgTxblPrtnrshp(models.Model):
     # Line number:  Part III Column (c)  Description:  Legal domicile - Foreign Country  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/LegalDomicileForeignCountryCd 
 
     DrctCntrllngEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part III Column (d)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/DirectControllingEntityName/BusinessNameLine1 
+
+    DrctCntrllngEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part III Column (d)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/DirectControllingEntityName/BusinessNameLine1Txt 
+
+    DrctCntrllngEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part III Column (d)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/DirectControllingEntityName/BusinessNameLine2 
 
     DrctCntrllngEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part III Column (d)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp/DirectControllingEntityName/BusinessNameLine2Txt 
@@ -11028,8 +12578,9 @@ class SkdRIdRltdOrgTxblPrtnrshp(models.Model):
 
 #######
 #
-# IRS990ScheduleR - IdRelatedOrgTxblCorpTrGrp
-# A repeating structure from ScheduleR Part IV - Identification of Related Organizations Taxable as a Corporation or Trust 
+# IRS990ScheduleR - SkdRIdRltdOrgTxblCrpTr
+# Description:  Part IV content - Identification of related organizations taxable as a corporation or trust
+# A repeating structure from skedr_part_iv
 #
 #######
 
@@ -11041,7 +12592,13 @@ class SkdRIdRltdOrgTxblCrpTr(models.Model):
     # Description:  Part IV content - Identification of related organizations taxable as a corporation or trust  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp 
 
     RltdOrgnztnNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/RelatedOrganizationName/BusinessNameLine1 
+
+    RltdOrgnztnNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/RelatedOrganizationName/BusinessNameLine1Txt 
+
+    RltdOrgnztnNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/RelatedOrganizationName/BusinessNameLine2 
 
     RltdOrgnztnNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/RelatedOrganizationName/BusinessNameLine2Txt 
@@ -11068,13 +12625,25 @@ class SkdRIdRltdOrgTxblCrpTr(models.Model):
     # Line number:  Part IV Column (i)  Description:  512(b)(13) controlled organization? (Y-N)  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ControlledOrganizationInd 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part IV Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part IV Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part IV Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part IV Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part IV Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part IV Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part IV Column (a)  Description:  State  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part IV Column (a)  Description:  State  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/StateAbbreviationCd 
@@ -11082,23 +12651,44 @@ class SkdRIdRltdOrgTxblCrpTr(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part IV Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part IV Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part IV Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part IV Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part IV Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part IV Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part IV Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Part IV Column (a)  Description:  City  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part IV Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Part IV Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part IV Column (a)  Description:  Country  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part IV Column (a)  Description:  Country  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part IV Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part IV Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/ForeignAddress/PostalCode 
 
     IdRltdOrgTxblCrpTr_LglDmclSttCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part IV Column (c)  Description:  Legal domicile - State  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/LegalDomicileStateCd 
@@ -11107,7 +12697,13 @@ class SkdRIdRltdOrgTxblCrpTr(models.Model):
     # Line number:  Part IV Column (c)  Description:  Legal domicile - Foreign Country  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/LegalDomicileForeignCountryCd 
 
     DrctCntrllngEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Column (d)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/DirectControllingEntityName/BusinessNameLine1 
+
+    DrctCntrllngEnttyNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Column (d)  Description:  Business name line 1  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/DirectControllingEntityName/BusinessNameLine1Txt 
+
+    DrctCntrllngEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part IV Column (d)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/DirectControllingEntityName/BusinessNameLine2 
 
     DrctCntrllngEnttyNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part IV Column (d)  Description:  Business name line 2  xpath: /IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp/DirectControllingEntityName/BusinessNameLine2Txt 
@@ -11117,8 +12713,8 @@ class SkdRIdRltdOrgTxblCrpTr(models.Model):
 
 #######
 #
-# IRS990ScheduleR - TransactionsRelatedOrgGrp
-# A repeating structure from ScheduleR Part V - Transactions with Related Organizations and Noncharitable Exempt Organizations 
+# IRS990ScheduleR - SkdRTrnsctnsRltdOrg
+# A repeating structure from skedr_part_v
 #
 #######
 
@@ -11127,7 +12723,13 @@ class SkdRTrnsctnsRltdOrg(models.Model):
     ein = models.CharField(max_length=15, blank=True, null=True, help_text="filer EIN")
 
     BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Line 2 Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/OtherOrganizationName/BusinessNameLine1 
+
+    BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part V Line 2 Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/OtherOrganizationName/BusinessNameLine1Txt 
+
+    BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part V Line 2 Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/OtherOrganizationName/BusinessNameLine2 
 
     BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part V Line 2 Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/TransactionsRelatedOrgGrp/OtherOrganizationName/BusinessNameLine2Txt 
@@ -11143,8 +12745,9 @@ class SkdRTrnsctnsRltdOrg(models.Model):
 
 #######
 #
-# IRS990ScheduleR - UnrelatedOrgTxblPartnershipGrp
-# A repeating structure from ScheduleR Part VI 
+# IRS990ScheduleR - SkdRUnrltdOrgTxblPrtnrshp
+# Description:  Part VI content
+# A repeating structure from skedr_part_vi
 #
 #######
 
@@ -11156,7 +12759,13 @@ class SkdRUnrltdOrgTxblPrtnrshp(models.Model):
     # Description:  Part VI content  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp 
 
     BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part VI Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/BusinessName/BusinessNameLine1 
+
+    BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part VI Column (a)  Description:  Business name line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/BusinessName/BusinessNameLine1Txt 
+
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Line number:  Part VI Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/BusinessName/BusinessNameLine2 
 
     BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
     # Line number:  Part VI Column (a)  Description:  Business name line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/BusinessName/BusinessNameLine2Txt 
@@ -11192,13 +12801,25 @@ class SkdRUnrltdOrgTxblPrtnrshp(models.Model):
     # Line number:  Part VI Column (k)  Description:  Percentage ownership  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/OwnershipPct 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VI Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VI Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/AddressLine1Txt 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VI Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/AddressLine2 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VI Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/AddressLine2Txt 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Line number:  Part VI Column (a)  Description:  City  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/City 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Line number:  Part VI Column (a)  Description:  City  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VI Column (a)  Description:  State  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part VI Column (a)  Description:  State  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/StateAbbreviationCd 
@@ -11206,23 +12827,44 @@ class SkdRUnrltdOrgTxblPrtnrshp(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Line number:  Part VI Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Line number:  Part VI Column (a)  Description:  ZIP code  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/USAddress/ZIPCode 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VI Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine1 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VI Column (a)  Description:  Address line 1  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine1Txt 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Line number:  Part VI Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine2 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
     # Line number:  Part VI Column (a)  Description:  Address line 2  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/AddressLine2Txt 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Column (a)  Description:  City  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/City 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Line number:  Part VI Column (a)  Description:  City  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Line number:  Part VI Column (a)  Description:  Province or state  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Line number:  Part VI Column (a)  Description:  Country  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part VI Column (a)  Description:  Country  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Line number:  Part VI Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Line number:  Part VI Column (a)  Description:  Postal code  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/ForeignAddress/PostalCode 
 
     UnrltdOrgTxblPrtnrshp_LglDmclSttCd = models.CharField(null=True, blank=True, max_length=2)
     # Line number:  Part VI Column (c)  Description:  Legal domicile - State  xpath: /IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp/LegalDomicileStateCd 
@@ -11232,8 +12874,9 @@ class SkdRUnrltdOrgTxblPrtnrshp(models.Model):
 
 #######
 #
-# IRS990ScheduleR - SupplementalInformationDetail
-# A repeating structure from ScheduleR Part VII Supplemental Information 
+# IRS990ScheduleR - SkdRSpplmntlInfrmtnDtl
+# Description:  Part VII contents
+# A repeating structure from skedr_part_vii
 #
 #######
 
@@ -11279,19 +12922,37 @@ class returnheader990x_part_i(models.Model):
     # xpath: /ReturnHeader/PreparerFirmGrp/PreparerFirmEIN 
 
     PrprrFrmNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Description:  Business name line 1  xpath: /ReturnHeader/PreparerFirmGrp/PreparerFirmName/BusinessNameLine1Txt 
+    # Description: Business name line 1  xpath: /ReturnHeader/PreparerFirmGrp/PreparerFirmName/BusinessNameLine1 
+
+    PrprrFrmNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Description: Business name line 1  xpath: /ReturnHeader/PreparerFirmGrp/PreparerFirmName/BusinessNameLine1Txt 
 
     PrprrFrmNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Description:  Business name line 2  xpath: /ReturnHeader/PreparerFirmGrp/PreparerFirmName/BusinessNameLine2Txt 
+    # Description: Business name line 2  xpath: /ReturnHeader/PreparerFirmGrp/PreparerFirmName/BusinessNameLine2 
+
+    PrprrFrmNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Description: Business name line 2  xpath: /ReturnHeader/PreparerFirmGrp/PreparerFirmName/BusinessNameLine2Txt 
 
     PrprrUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Description:  Address line 1  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/AddressLine1Txt 
+    # Description: Address line 1  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/AddressLine1 
+
+    PrprrUSAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Description: Address line 1  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/AddressLine1Txt 
 
     PrprrUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Description:  Address line 2  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/AddressLine2Txt 
+    # Description: Address line 2  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/AddressLine2 
+
+    PrprrUSAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Description: Address line 2  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/AddressLine2Txt 
+
+    PrprrUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Description:  City  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/City 
 
     PrprrUSAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Description:  City  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/CityNm 
+
+    PrprrUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Description:  State  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/State 
 
     PrprrUSAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Description:  State  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/StateAbbreviationCd 
@@ -11299,23 +12960,44 @@ class returnheader990x_part_i(models.Model):
     PrprrUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Description:  ZIP code  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/ZIPCd 
 
+    PrprrUSAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Description:  ZIP code  xpath: /ReturnHeader/PreparerFirmGrp/PreparerUSAddress/ZIPCode 
+
     PrprrFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Description:  Address line 1  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/AddressLine1Txt 
+    # Description: Address line 1  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/AddressLine1 
+
+    PrprrFrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Description: Address line 1  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/AddressLine1Txt 
 
     PrprrFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Description:  Address line 2  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/AddressLine2Txt 
+    # Description: Address line 2  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/AddressLine2 
+
+    PrprrFrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Description: Address line 2  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/AddressLine2Txt 
+
+    PrprrFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Description:  City  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/City 
 
     PrprrFrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Description:  City  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/CityNm 
 
     PrprrFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Description:  Province or state  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/ProvinceOrState 
+
+    PrprrFrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Description:  Province or state  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/ProvinceOrStateNm 
+
+    PrprrFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Description:  Country  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/Country 
 
     PrprrFrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Description:  Country  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/CountryCd 
 
     PrprrFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Description:  Postal code  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/ForeignPostalCd 
+
+    PrprrFrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Description:  Postal code  xpath: /ReturnHeader/PreparerFirmGrp/PreparerForeignAddress/PostalCode 
 
     RtrnHdr_SftwrId = models.CharField(null=True, blank=True, max_length=8)
     # xpath: /ReturnHeader/SoftwareId 
@@ -11363,10 +13045,16 @@ class returnheader990x_part_i(models.Model):
     # xpath: /ReturnHeader/Filer/EIN 
 
     BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Description:  Business name line 1  xpath: /ReturnHeader/Filer/BusinessName/BusinessNameLine1Txt 
+    # Description: Business name line 1  xpath: /ReturnHeader/Filer/BusinessName/BusinessNameLine1 
+
+    BsnssNm_BsnssNmLn1Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Description: Business name line 1  xpath: /ReturnHeader/Filer/BusinessName/BusinessNameLine1Txt 
 
     BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
-    # Description:  Business name line 2  xpath: /ReturnHeader/Filer/BusinessName/BusinessNameLine2Txt 
+    # Description: Business name line 2  xpath: /ReturnHeader/Filer/BusinessName/BusinessNameLine2 
+
+    BsnssNm_BsnssNmLn2Txt = models.CharField(null=True, blank=True, max_length=75)
+    # Description: Business name line 2  xpath: /ReturnHeader/Filer/BusinessName/BusinessNameLine2Txt 
 
     Flr_InCrOfNm = models.CharField(null=True, blank=True, max_length=35)
     # xpath: /ReturnHeader/Filer/InCareOfNm 
@@ -11378,13 +13066,25 @@ class returnheader990x_part_i(models.Model):
     # xpath: /ReturnHeader/Filer/PhoneNum 
 
     USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Description:  Address line 1  xpath: /ReturnHeader/Filer/USAddress/AddressLine1Txt 
+    # Description: Address line 1  xpath: /ReturnHeader/Filer/USAddress/AddressLine1 
+
+    USAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Description: Address line 1  xpath: /ReturnHeader/Filer/USAddress/AddressLine1Txt 
 
     USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Description:  Address line 2  xpath: /ReturnHeader/Filer/USAddress/AddressLine2Txt 
+    # Description: Address line 2  xpath: /ReturnHeader/Filer/USAddress/AddressLine2 
+
+    USAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Description: Address line 2  xpath: /ReturnHeader/Filer/USAddress/AddressLine2Txt 
+
+    USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
+    # Description:  City  xpath: /ReturnHeader/Filer/USAddress/City 
 
     USAddrss_CtyNm = models.CharField(null=True, blank=True, max_length=22)
     # Description:  City  xpath: /ReturnHeader/Filer/USAddress/CityNm 
+
+    USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
+    # Description:  State  xpath: /ReturnHeader/Filer/USAddress/State 
 
     USAddrss_SttAbbrvtnCd = models.CharField(null=True, blank=True, max_length=2)
     # Description:  State  xpath: /ReturnHeader/Filer/USAddress/StateAbbreviationCd 
@@ -11392,23 +13092,44 @@ class returnheader990x_part_i(models.Model):
     USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
     # Description:  ZIP code  xpath: /ReturnHeader/Filer/USAddress/ZIPCd 
 
+    USAddrss_ZIPCd = models.CharField(null=True, blank=True, max_length=15)
+    # Description:  ZIP code  xpath: /ReturnHeader/Filer/USAddress/ZIPCode 
+
     FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Description:  Address line 1  xpath: /ReturnHeader/Filer/ForeignAddress/AddressLine1Txt 
+    # Description: Address line 1  xpath: /ReturnHeader/Filer/ForeignAddress/AddressLine1 
+
+    FrgnAddrss_AddrssLn1Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Description: Address line 1  xpath: /ReturnHeader/Filer/ForeignAddress/AddressLine1Txt 
 
     FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
-    # Description:  Address line 2  xpath: /ReturnHeader/Filer/ForeignAddress/AddressLine2Txt 
+    # Description: Address line 2  xpath: /ReturnHeader/Filer/ForeignAddress/AddressLine2 
+
+    FrgnAddrss_AddrssLn2Txt = models.CharField(null=True, blank=True, max_length=35)
+    # Description: Address line 2  xpath: /ReturnHeader/Filer/ForeignAddress/AddressLine2Txt 
+
+    FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
+    # Description:  City  xpath: /ReturnHeader/Filer/ForeignAddress/City 
 
     FrgnAddrss_CtyNm = models.TextField(null=True, blank=True)
     # Description:  City  xpath: /ReturnHeader/Filer/ForeignAddress/CityNm 
 
     FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
+    # Description:  Province or state  xpath: /ReturnHeader/Filer/ForeignAddress/ProvinceOrState 
+
+    FrgnAddrss_PrvncOrSttNm = models.TextField(null=True, blank=True)
     # Description:  Province or state  xpath: /ReturnHeader/Filer/ForeignAddress/ProvinceOrStateNm 
+
+    FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
+    # Description:  Country  xpath: /ReturnHeader/Filer/ForeignAddress/Country 
 
     FrgnAddrss_CntryCd = models.CharField(null=True, blank=True, max_length=2)
     # Description:  Country  xpath: /ReturnHeader/Filer/ForeignAddress/CountryCd 
 
     FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
     # Description:  Postal code  xpath: /ReturnHeader/Filer/ForeignAddress/ForeignPostalCd 
+
+    FrgnAddrss_FrgnPstlCd = models.TextField(null=True, blank=True)
+    # Description:  Postal code  xpath: /ReturnHeader/Filer/ForeignAddress/PostalCode 
 
     RtrnHdr_BsnssOffcr = models.TextField(null=True, blank=True)
     # xpath: /ReturnHeader/BusinessOfficerGrp 
@@ -11452,9 +13173,8 @@ class returnheader990x_part_i(models.Model):
     PrprrPrsn_SlfEmplydInd = models.CharField(null=True, blank=True, max_length=1)
     # xpath: /ReturnHeader/PreparerPersonGrp/SelfEmployedInd 
 
-    PrprrPrsn_SSN = models.CharField(null=True, blank=True, max_length=15) # Not 9
+    PrprrPrsn_SSN = models.CharField(null=True, blank=True, max_length=12)
     # xpath: /ReturnHeader/PreparerPersonGrp/SSN 
-    # OFTEN COMPLETED "XXX-XX-XXXX"; not sure why this is in the pub release
 
     PrprrPrsn_PTIN = models.CharField(null=True, blank=True, max_length=9)
     # xpath: /ReturnHeader/PreparerPersonGrp/PTIN 

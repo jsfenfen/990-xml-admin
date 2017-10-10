@@ -1,5 +1,5 @@
 delete from filing_processedfiling;
-update filing_xmlsubmission set json_set = False where json_set=True;
+update filing_xml_submission set json_set = False where json_set=True;
 
 delete from returndata_cntrctrcmpnstn;
 delete from returndata_ez_part_0;

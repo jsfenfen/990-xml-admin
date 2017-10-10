@@ -9,8 +9,9 @@ from filing.type_utils import unicodeType
 from schemas.model_accumulator import Accumulator
 
 
-BATCHSIZE = 200
-LOOP_MAX = 50
+BATCHSIZE = 10
+LOOP_MAX = 1
+## Probably best to mess with this on an installation-by-installation basis
 
 def processed_filing_from_result_filing(completed_filing, parent_submission):
     """ Turn the returned filing object into an unsaved ProcessedFiling  """
@@ -120,7 +121,7 @@ class Command(BaseCommand):
             #xml_batch = XMLSubmission.objects.filter(object_id__in=test2016ids).exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(sub_date__regex=r'^8.+2017.*').exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=test2016ids).exclude(json_set=True)[:BATCHSIZE]
-            #xml_batch = XMLSubmission.objects.filter(object_id__in=['201601349349304030',])
+            #xml_batch = XMLSubmission.objects.filter(object_id__in=['201523179349302022',]).exclude(json_set=True)
 
 
             count += 1

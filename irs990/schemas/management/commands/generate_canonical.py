@@ -43,7 +43,9 @@ class Command(BaseCommand):
         versioned_group.save()
 
     def create_new_groups(self):
-        all_groups = VersionedGroup.objects.filter(version__version_string=CANONICAL_VERSION)
+        all_groups = VersionedGroup.objects.filter(
+            version__version_string=CANONICAL_VERSION
+        )
         print("CNG len %s" % len(all_groups))
         for group in all_groups:
             print ("Group .. ")
@@ -63,19 +65,18 @@ class Command(BaseCommand):
         else:
             variable_dict['parent_group'] = None
 
-
-
         variable_dict.pop('xpath')
         variable_dict.pop('name')
         variable_dict.pop('canonical_variable')
-
 
         new_var = CanonicalVariable.objects.create(**variable_dict)
         versioned_variable.canonical_variable = new_var
         versioned_variable.save()  
 
     def create_new_variables(self):
-        all_variables = VersionedVariable.objects.filter(version__version_string=CANONICAL_VERSION)
+        all_variables = VersionedVariable.objects.filter(
+            version__version_string=CANONICAL_VERSION
+        )
         for variable in all_variables:
             self.create_variable(variable)
 
