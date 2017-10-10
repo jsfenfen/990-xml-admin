@@ -10,8 +10,10 @@ from schemas.model_accumulator import Accumulator
 
 
 BATCHSIZE = 300
-LOOP_MAX = 50000
 ## Probably best to mess with this on an installation-by-installation basis
+
+# Ceiling 
+LOOP_MAX = 50000
 
 def processed_filing_from_result_filing(completed_filing, parent_submission):
     """ Turn the returned filing object into an unsaved ProcessedFiling  """
@@ -115,7 +117,7 @@ class Command(BaseCommand):
 
         count = 0
         while True:
-            xml_batch = XMLSubmission.objects.filter(year=2016).exclude(json_set=True)[:BATCHSIZE]
+            xml_batch = XMLSubmission.objects.filter(year__in=[2014,2015,2016,2017]).exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=ids).exclude(json_set=True)[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=['201540859349100204',])[:BATCHSIZE]
             #xml_batch = XMLSubmission.objects.filter(object_id__in=test2016ids).exclude(json_set=True)[:BATCHSIZE]
