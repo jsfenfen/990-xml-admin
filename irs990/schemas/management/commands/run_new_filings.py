@@ -9,8 +9,8 @@ from filing.type_utils import unicodeType
 from schemas.model_accumulator import Accumulator
 
 
-BATCHSIZE = 10
-LOOP_MAX = 1
+BATCHSIZE = 300
+LOOP_MAX = 50000
 ## Probably best to mess with this on an installation-by-installation basis
 
 def processed_filing_from_result_filing(completed_filing, parent_submission):
