@@ -1,7 +1,7 @@
 # IRS 990 Admin
 
 This is a helper application to make sense of the 990 xml filings
-described [here](https://aws.amazon.com/public-datasets/irs-990/)--but it's *not* needed to simply read those filings [ See other library TK ]. This application generates the bindings that 990-xml-reader *uses* to standardize 990 returns by doing two things: counting xpath entries in actual 990 XML returns, and extracting documentation and other metadata from .XSD schema files.
+described [here](https://aws.amazon.com/public-datasets/irs-990/)--but it's *not* needed to simply read those filings--for reading filings see [IRSx](https://github.com/jsfenfen/990-xml-reader/) . This application generates the bindings that 990-xml-reader *uses* to stardardize 990 returns by doing two things: counting xpath entries in actual 990 XML returns, and extracting documentation and other metadata from .XSD schema files.
 
 # Installation
 
