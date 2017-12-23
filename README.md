@@ -337,10 +337,10 @@ This has happened because the parse parts script was looking at an outdated vers
 
 
 
-4. run generate_canonical
+4. run generate_canonical to generate the canonical names for the canonical version only.
 
-5. run assign_canonical to assign vars to it
+5. run assign_canonical to assign variables in each other version to it. This requires some special casing.
 
-6. Run propagate_from_canonical to reassign the schedule parts back to the vars
+6. Run propagate_from_canonical to reassign the schedule parts that were given to the variables in the canonical version to their related variables in each other version. This is necessary because we determine the 'part' of a tax form that a variable occurs in by hand editing the schema files [schema_parts_fixed](in (https://github.com/jsfenfen/irs990_admin/tree/master/irs990/schemas/schema_parts_fixed). Unfortunately the form parts are listed in the .xsd comments--which are excluded by xmltodict and many xml parsers--but worse they are sometimes missing (hence the hand editing).
 
 
