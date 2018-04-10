@@ -1,0 +1,413 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: CorporateIncomeTax/Common/IRS8697/IRS8697.xsd (2012v2.2) Right File: CorporateIncomeTax/Common/IRS8697/IRS8697.xsd (2013v1.0)</title>
+</head>
+<center>
+<b>OLD: CorporateIncomeTax/Common/IRS8697/IRS8697.xsd (2012v2.2)</b>
+<br>
+<b>NEW: CorporateIncomeTax/Common/IRS8697/IRS8697.xsd (2013v1.0)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 2</b>
+<br>
+<br>&lt;xsd:schema targetNamespace=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 2</b>
+<br>
+<br>&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns=&quot;http://www.irs.gov/efile&quot; targetNamespace=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 6</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2012&lt;/TaxYear&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 6</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2013&lt;/TaxYear&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 61</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonName&quot; type=&quot;NameLine1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 61</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonNm&quot; type=&quot;NameLine1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 98</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINReason&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 98</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINReasonCd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 115</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TypeOfTaxpayerCorporation&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 115</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CorporationInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 125</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TypeOfTaxpayerSCorporation&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 125</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SCorporationInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 135</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TypeOfTaxpayerIndividual&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 135</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IndividualInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 145</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TypeOfTaxpayerPartnership&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 145</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PartnershipInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 155</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TypeOfTaxpayerEstateOrTrust&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 155</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EstateOrTrustInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 167</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfPassThroughEntity&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 167</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PassThroughEntityName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 180</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EINOfPassThroughEntity&quot; type=&quot;EINType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 180</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PassThroughEntityEIN&quot; type=&quot;EINType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 190</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINEntityReason&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 190</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINEntityReasonCd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 208</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EntityNameControl&quot; type=&quot;BusinessNameControlType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 208</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EntityNameControlTxt&quot; type=&quot;BusinessNameControlType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 220</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularMethodFilingYear&quot; type=&quot;RegularMethodFilingYrGrpType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 220</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularMethodFilingYrGrp&quot; type=&quot;RegularMethodFilingYrGrpType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 230</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularMethodRedetermYr&quot; type=&quot;RegularMethodRedetermYrGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 230</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularMethodRedetermYrGrp&quot; type=&quot;RegularMethodRedetermYrGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 240</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotLookBackRegularMethod&quot; type=&quot;TotLookBackRegularMethodGrpType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 240</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotLookBackRegularMethodGrp&quot; type=&quot;TotLookBackRegularMethodGrpType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 252</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SimplifiedMethodComputation&quot; type=&quot;SimplifiedMethodType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; &gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 252</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SimplifiedMethodComputation&quot; type=&quot;SimplifiedMethodType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 279</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;YearEndedDate&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 279</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;YearEndedDt&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 289</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TaxableIncomeOrLoss&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 289</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TaxableIncomeOrLossAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 299</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjustmentToIncome&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 299</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncomeAdjustmentAmt&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 317</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjustedTaxableIncomeForLkbck&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 317</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjTaxableIncomeLookBackAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 344</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;YearEndedDate&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 344</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;YearEndedDt&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 354</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TaxableIncomeOrLoss&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 354</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TaxableIncomeOrLossAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 364</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjustmentToIncome&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 364</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncomeAdjustmentAmt&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 382</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjustedTaxableIncomeForLkbck&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 382</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjTaxableIncomeLookBackAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 402</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncomeTaxLiabilityOnReturn&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 402</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FederalIncomeTaxLiabilityAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 412</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncreaseOrDecreaseInTaxForPY&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 412</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncreaseOrDecreaseInTxForPYAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 422</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestDueOnIncrease&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 422</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestDueOnIncreaseAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 432</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestToBeRefundedOnDecrease&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 432</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestToBeRefundedOnDecrAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 460</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalInterestDueOnIncrease&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 460</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalInterestDueOnIncreaseAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 470</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalInterestToBeRefunded&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 470</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalInterestToBeRefundedAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 480</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetAmountOfInterestYouOwe&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 480</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetAmtOfInterestOwedAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 498</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;YearEndedDate&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 498</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;YearEndedDt&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 508</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjustmentToRegularTxblIncome&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 508</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularTaxableIncomeAdjAmt&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 526</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PriorYearRegTaxIncrOrDecr&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 526</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PriorYearRegTaxIncrOrDecrAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 536</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjustmentToAltMinTxblIncome&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 536</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltMinTaxableIncomeAdjAmt&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 554</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PriorYearAltMinTaxIncrOrDecr&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 554</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PriorYearAMTIncrOrDecrAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 574</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OverpaymentCeiling&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 574</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OverpaymentCeilingAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 584</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncreaseOrDecreaseInTaxForPY&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 584</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncreaseOrDecreaseInTxForPYAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 594</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestDueOnIncrease&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 594</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestDueOnIncreaseAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 604</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestToBeRefundedOnDecrease&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 604</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestToBeRefundedOnDecrAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 622</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalInterestDueOnIncrease&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 622</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalInterestDueOnIncreaseAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 632</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalInterestToBeRefunded&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 632</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalInterestToBeRefundedAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 642</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetAmountOfInterestYouOwe&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 642</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetAmtOfInterestOwedAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: CorporateIncomeTax/Common/IRS5713ScheduleA/IRS5713ScheduleA.xsd (2012v2.2) Right File: CorporateIncomeTax/Common/IRS5713ScheduleA/IRS5713ScheduleA.xsd (2013v1.0)</title>
+</head>
+<center>
+<b>OLD: CorporateIncomeTax/Common/IRS5713ScheduleA/IRS5713ScheduleA.xsd (2012v2.2)</b>
+<br>
+<b>NEW: CorporateIncomeTax/Common/IRS5713ScheduleA/IRS5713ScheduleA.xsd (2013v1.0)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 2,4</b>
+<br>
+<br>&lt;xsd:schema targetNamespace=&quot;http://www.irs.gov/efile&quot; xmlns=&quot;http://www.irs.gov/efile&quot;<br>xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;<br>elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 2</b>
+<br>
+<br>&lt;xsd:schema xmlns=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; targetNamespace=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 9</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2012&lt;/TaxYear&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 7</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2013&lt;/TaxYear&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 15</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../../Common/efileTypes.xsd&quot; /&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 13</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../../Common/efileTypes.xsd&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 65</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Name&quot; type=&quot;NameLine1Type&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 63</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameLine1Txt&quot; type=&quot;NameLine1Type&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 97</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINReason&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 95</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINReasonCd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 117</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IsraelBoycotted&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 115</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IsraelBoycottedInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 126</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherCountryBoycotted&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 124</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherInd&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 135</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;nameOfOtherCountry&quot; type=&quot;CountryType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 133</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;countryCd&quot; type=&quot;CountryType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 159</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalBoycottPurchases&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 157</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalBoycottPurchasesAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 169</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalBoycottSales&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 167</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalBoycottSalesAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 179</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalBoycottPayroll&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 177</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalBoycottPayrollAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 189</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumeratorOfBoycottFactor&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 187</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumeratorBoycottFactorAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 199</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalPurchasesFromOtherThanUS&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 197</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalPurchasesOtherThanUSAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 209</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalSalesToFromOtherThanUS&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 207</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalSalesOtherThanUSAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 219</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalPayrollPaidInOtherThanUS&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 217</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalPayrollPaidOtherThanUSAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 229</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotDenominatorOfBoycottFactor&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 227</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalDenominatorBoycottFctrAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 239</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InternationalBoycottFactor&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 237</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InternationalBoycottFactorRt&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 258</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfCountry&quot; type=&quot;CountryType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 256</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CountryCd&quot; type=&quot;CountryType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 268</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BoycottPurchases&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 266</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BoycottPurchasesAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 278</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BoycottSales&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 276</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BoycottSalesAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 288</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BoycottPayroll&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 286</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BoycottPayrollAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

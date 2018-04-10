@@ -1,0 +1,1736 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: TEGE/Common/IRS990ScheduleH/IRS990ScheduleH.xsd (2012v2.2) Right File: TEGE/Common/IRS990ScheduleH/IRS990ScheduleH.xsd (2013v1.0)</title>
+</head>
+<center>
+<b>OLD: TEGE/Common/IRS990ScheduleH/IRS990ScheduleH.xsd (2012v2.2)</b>
+<br>
+<b>NEW: TEGE/Common/IRS990ScheduleH/IRS990ScheduleH.xsd (2013v1.0)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 2</b>
+<br>
+<br>&lt;xsd:schema targetNamespace=&quot;http://www.irs.gov/efile&quot; xmlns=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 2</b>
+<br>
+<br>&lt;xsd:schema xmlns=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; targetNamespace=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 6</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2012&lt;/TaxYear&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 6</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2013&lt;/TaxYear&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 50</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CharityCarePolicy&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 50</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CharityCarePolicyInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 60</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WrittenPolicy&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 60</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WrittenPolicyInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 70</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:choice minOccurs =&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 70</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:choice minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 73</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PolicyAppliedToAllHospitals&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 73</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AllHospitalsPolicyInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 83</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PolicyAppliedToMostHospitals&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 83</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MostHospitalsPolicyInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 93</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PolicyTailoredToIndHospitals&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 93</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IndivHospitalTailoredPolicyInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 105</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGReferenceFreeCare&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 105</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGReferenceFreeCareInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 117</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Pcent100&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 117</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Percent100Ind&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 127</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Pcent150&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 127</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Percent150Ind&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 137</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Pcent200&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 137</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Percent200Ind&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 147</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherPercentage&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 147</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FreeCareOthPercentageGrp&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 151</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Other&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 151</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 160</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FreeOtherPercentage&quot; type=&quot;LargeRatioType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 160</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FreeCareOtherPct&quot; type=&quot;LargeRatioType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 175</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGReferenceDiscountedCare&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 175</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGReferenceDiscountedCareInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 188</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Pcent200D&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 188</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Percent200DInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 198</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Pcent250&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 198</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Percent250Ind&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 208</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Pcent300&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 208</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Percent300Ind&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 218</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Pcent350&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 218</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Percent350Ind&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 228</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Pcent400&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 228</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Percent400Ind&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 238</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DiscountedOther&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 238</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DiscountedCareOthPercentageGrp&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 242</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Other&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 242</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 251</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DiscountedOtherPercentage&quot; type=&quot;LargeRatioType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 251</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DiscountedCareOtherPct&quot; type=&quot;LargeRatioType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 266</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FreeDiscCareMedicallyIndigent&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 266</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FreeCareMedicallyIndigentInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 276</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AmountsBudgetedForCharityCare&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 276</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CharityCareBudgetedInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 286</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExpensesExceededBudget&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 286</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExpensesExceedBudgetInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 296</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UnableToProvideCare&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 296</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UnableToProvideCareInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 306</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AnnualCommunityBenefitReport&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 306</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AnnualCommunityBnftReportInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 316</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReportPublicallyAvailable&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 316</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReportPublicallyAvailableInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 326</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CharityCareAtCost&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 326</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CharityCareAtCostGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 336</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UnreimbursedMedicaid&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 336</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UnreimbursedMedicaidGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 346</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UnreimbursedCosts&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 346</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UnreimbursedCostsGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 356</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalCharityCare&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 356</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalCharityCareGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 366</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunityHealthServices&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 366</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunityHealthServicesGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 376</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HealthProfessionsEducation&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 376</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HealthProfessionsEducationGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 386</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SubsidizedHealthServices&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 386</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SubsidizedHealthServicesGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 396</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Research&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 396</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ResearchGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 406</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CashAndInKindContributions&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 406</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CashAndInKindContributionsGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 416</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalOtherBenefits&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 416</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalOtherBenefitsGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 426</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalCommunityBenefits&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 426</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalCommunityBenefitsGrp&quot; type=&quot;Form990SchHPartIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 437</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PhysicalImprovementsAndHousing&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 437</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PhysicalImprvAndHousingGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 447</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EconomicDevelopment&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 447</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EconomicDevelopmentGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 457</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunitySupport&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 457</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunitySupportGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 467</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EnvironmentalImprovements&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 467</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EnvironmentalImprovementsGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 477</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LeadershipDevelopment&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 477</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LeadershipDevelopmentGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 487</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CoalitionBuilding&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 487</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CoalitionBuildingGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 497</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HealthImprovementAdvocacy&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 497</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HealthImprovementAdvocacyGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 507</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WorkforceDevelopment&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 507</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WorkforceDevelopmentGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 517</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Other&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 517</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherCommuntityBuildingActyGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 527</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Total&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 527</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalCommuntityBuildingActyGrp&quot; type=&quot;Form990SchHPartIIGroup1Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 538</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BadDebtExpenseReported&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 538</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BadDebtExpenseReportedInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 548</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BadDebtExpenseAmount&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 548</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BadDebtExpenseAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 558</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AmountAttributableTo&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 558</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BadDebtExpenseAttributableAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 568</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AmountReimbursedByMedicare&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 568</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReimbursedByMedicareAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 578</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostOfCareReimbursedByMedicare&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 578</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostOfCareReimbursedByMedcrAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 588</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MedicareSurplusOrShortfall&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 588</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MedicareSurplusOrShortfallAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 598</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostingMethodologyUsed&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 598</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostingMethodologyUsedGrp&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 609</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostAccountingSystem&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 609</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostAccountingSystemInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 619</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostToChargeRatio&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 619</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostToChargeRatioInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 629</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Other&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 629</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherInd&quot; type=&quot;CheckboxType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 644</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WrittenDebtCollectionPolicy&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 644</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WrittenDebtCollectionPolicyInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 654</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ProvisionForCharityCare&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 654</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ProvisionForCharityCareInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 665</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleHPartIV&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 665</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ManagementCoAndJntVenturesGrp&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 674</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfEntity&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 674</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EntityName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 684</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DescriptionEntPrimaryActivity&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 684</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivitiesTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 694</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OrganizationProfitOrOwnership&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 694</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OrgProfitOrOwnershipPct&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 704</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OfficersEtcProfitOrOwnership&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 704</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OfcrEtcProfitOrOwnershipPct&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 714</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PhysicansProfitOrOwnership&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 714</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PhysiciansProfitOrOwnershipPct&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 730</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumberOfHospitalFacilities&quot; type=&quot;Count2Type&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 730</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HospitalFacilitiesCnt&quot; type=&quot;Count2Type&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 741</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleHPartVSectionA&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 741</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HospitalFacilitiesGrp&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 751</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FacilityNumber&quot; type=&quot;Count2Type&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 751</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FacilityNum&quot; type=&quot;Count2Type&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 761</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Name&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 761</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusinessName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 771</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Address&quot; type=&quot;USAddressType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 771</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USAddress&quot; type=&quot;USAddressType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 781</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WebsiteAddress&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 781</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WebsiteAddressTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 791</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LicensedHospital&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 791</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LicensedHospitalInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 801</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GeneralMedicalAndSurgical&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 801</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GeneralMedicalAndSurgicalInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 811</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ChildrensHospital&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 811</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ChildrensHospitalInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 821</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TeachingHospital&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 821</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TeachingHospitalInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 831</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CriticalAccessHospital&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 831</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CriticalAccessHospitalInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 841</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ResearchFacility&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 841</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ResearchFacilityInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 851</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Er24Hours&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 851</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EmergencyRoom24HrsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 861</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ErOther&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 861</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EmergencyRoomOtherInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 871</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Other&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 871</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherDesc&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 881</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FacilityReportingGroup&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 881</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FacilityReportingGroupCd&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 890</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:maxLength value=&quot;3&quot; /&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 890</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:maxLength value=&quot;3&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 901</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleHPartVSectionB&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 901</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HospitalFcltyPoliciesPrctcGrp&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 921</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HospitalFacilityNumber&quot; type=&quot;Count2Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 921</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FacilityNum&quot; type=&quot;Count2Type&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 931</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CHNAConducted&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 931</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CHNAConductedInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 941</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunityDefinition&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 941</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunityDefinitionInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 951</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunityDemographics&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 951</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunityDemographicsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 961</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExistingResources&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 961</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExistingResourcesInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 971</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HowDataObtained&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 971</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HowDataObtainedInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 981</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunityHealthNeeds&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 981</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunityHealthNeedsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 991</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherHealthIssues&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 991</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherHealthIssuesInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1001</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IdentifyingProcess&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1001</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CommunityHlthNeedsIdProcessInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1011</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ConsultingProcess&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1011</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ConsultingProcessInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1021</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InformationGaps&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1021</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InformationGapsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1031</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Other&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1031</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1041</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NeedsAssessmentConducted&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1041</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CHNAConductedYr&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1056</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TakeIntoAccount&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1056</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TakeIntoAccountOthersInputInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1066</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherFacilities&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1066</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CHNAConductedWithOtherFcltsInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1076</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CHNAWidelyAvailable&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1076</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CHNAReportWidelyAvailableInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1086</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OwnWebsite&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1086</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RptAvailableOnOwnWebsiteInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1096</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OnRequest&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1096</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RptAvailableUponRequestInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1106</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherMethod&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1106</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RptAvailableThruOtherMethodInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1116</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdoptImplementStrategy&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1116</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdoptImplementationStrategyInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1126</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExecuteImplementStrategy&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1126</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExecImplementationStrategyInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1136</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DevelopCommunityPlan&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1136</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DevelopCommunityWidePlanInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1146</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ParticipateCommunityPlan&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1146</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExecCommunityWidePlanInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1156</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncludeOperationalPlans&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1156</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncludeOperationalPlanInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1166</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdoptBudget&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1166</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdoptBudgetInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1176</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrioritizeHealthNeeds&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1176</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrioritizeHealthNeedsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1186</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrioritizeServices&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1186</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrioritizeServicesInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1196</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherNeedsAddressed&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1196</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherNeedsAddressedInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1206</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AllNeedsAddressed&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1206</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AllNeedsAddressedInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1216</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OrganizationIncurExciseTax&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1216</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OrganizationIncurExciseTaxInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1226</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FileForm4720ReportExciseTax&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1226</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form4720FiledInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1246</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EligibilityCriteriaExplained&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1246</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EligCriteriaExplainedInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1256</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UsesFPGFree&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1256</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGUsedDeterEligFreeCareInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1266</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGFreePercent&quot; type=&quot;LargeRatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1266</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGFamilyIncmLmtFreeCarePct&quot; type=&quot;LargeRatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1276</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UsesFPGDiscounted&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1276</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGUsedDetermEligDscntCareInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1286</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGDiscountPercent&quot; type=&quot;LargeRatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1286</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FPGFamilyIncmLmtDscntCarePct&quot; type=&quot;LargeRatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1296</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExplainsBasis&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1296</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExplainedBasisInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1306</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncomeLevel&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1306</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncomeLevelInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1316</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AssetLevel&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1316</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AssetLevelInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1326</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MedicalIndigency&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1326</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MedicalIndigencyInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1336</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InsuranceStatus&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1336</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InsuranceStatusInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1346</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UninsuredDiscount&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1346</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UninsuredDiscountInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1356</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MedicaidMedicare&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1356</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MedicaidMedicareInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1366</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;StateRegulation&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1366</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;StateRegulationInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1376</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherFactors&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1376</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherFactorsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1386</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExplainsApplicationMethod&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1386</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AppFinancialAsstExplnInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1396</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncludesPublicityMeasures&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1396</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IncludesPublicityMeasuresInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1406</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PostedOnWebsite&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1406</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PostedOnWebsiteInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1416</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AttachedToInvoices&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1416</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AttachedToInvoiceInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1426</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PostedInEmergencyRoom&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1426</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PostedInEmergencyRoomInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1436</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PostedInAdmissionOffice&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1436</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PostedInAdmissionOfficeInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1446</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ProvidedOnAdmission&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1446</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ProvidedOnAdmissionInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1456</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AvailableOnRequest&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1456</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AvailableOnRequestInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1466</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherPublicity&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1466</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherPublicityInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1476</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ActionsOnNonpayment&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1476</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FAPActionsOnNonpaymentInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1486</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitReportToCreditAgency&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1486</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitReportToCreditAgencyInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1496</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitLawsuit&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1496</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitLawsuitInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1506</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitLienOnResidence&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1506</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitLienOnResidenceInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1516</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitBodyAttachment&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1516</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitBodyAttachmentsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1526</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitOtherActions&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1526</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PermitOtherActionsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1536</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CollectionActivities&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1536</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CollectionActivitiesInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1546</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReportToCreditAgency&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1546</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReportingToCreditAgencyInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1556</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Lawsuit&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1556</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LawsuitInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1566</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LienOnResidence&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1566</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LiensOnResidencesInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1576</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BodyAttachment&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1576</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BodyAttachmentsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1586</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherActions&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1586</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherActionsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1596</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NotifyUponAdmission&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1596</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FAPNotifiedUponAdmissionInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1606</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NotifyBeforeDischarge&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1606</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FAPNotifiedBeforeDischargeInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1616</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NotifiedAllPatients&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1616</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FAPNotifiedAllPatientsInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1626</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DocumentedDetermination&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1626</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DocumentedEligDeterminationInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1636</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherActionsTaken&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1636</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherActionsTakenInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1646</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NondiscrimEmergencyCarePolicy&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1646</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NondisEmergencyCarePolicyInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1656</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NoEmergencyCare&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1656</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NoEmergencyCareInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1666</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NoEmergencyPolicy&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1666</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NoEmergencyCarePolicyInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1676</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EmergencyCareLimited&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1676</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EmergencyCareLimitedInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1686</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherReason&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1686</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherReasonInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1696</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LowestNegotiatedRates&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1696</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LowestNegotiatedRatesInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1706</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AverageNegotiatedRates&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1706</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AverageNegotiatedRatesInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1716</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MedicareRate&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1716</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MedicareRatesInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1726</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UsedOtherMethod&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1726</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherMethodUsedInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1737</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AmountsGenerallyBilled&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1737</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AmountsGenerallyBilledInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1747</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GrossCharges&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1747</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GrossChargesInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;1&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1762</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleHPartVSectionC&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1762</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OthHlthCareFcltsNotHospitalGrp&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1772</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumberOfOtherFacilities&quot; type=&quot;Count2Type&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1772</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FacilityNum&quot; type=&quot;Count2Type&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1782</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherFacilities&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1782</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OthHlthCareFcltsGrp&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1792</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Name&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1792</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusinessName&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1802</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Address&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1802</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1812</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FacilityType&quot; type=&quot;LineExplanationType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1812</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FacilityTxt&quot; type=&quot;LineExplanationType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1830</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleHPartVI&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1830</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SupplementalInformationDetail&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1838</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Identifier&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1838</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IdentifierTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1848</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReturnReference&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1848</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FormAndLineReferenceDesc&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1858</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Explanation&quot; type=&quot;ExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1858</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExplanationTxt&quot; type=&quot;ExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1883</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumberOfActivitiesOrPrograms&quot; type=&quot;IntegerNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1883</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ActivitiesOrProgramsCnt&quot; type=&quot;IntegerNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1893</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonsServed&quot; type=&quot;IntegerNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1893</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonsServedCnt&quot; type=&quot;IntegerNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1903</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalCommunityBenefitExpense&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1903</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalCommunityBenefitExpnsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1913</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectOffsettingRevenue&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1913</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectOffsettingRevenueAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1923</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetCommunityBenefitExpense&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1923</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetCommunityBenefitExpnsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1933</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PercentOfTotalExpense&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1933</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalExpensePct&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1950</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumberOfActivitiesOrPrograms&quot; type=&quot;IntegerNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1950</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ActivitiesOrProgramsCnt&quot; type=&quot;IntegerNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1960</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonsServed&quot; type=&quot;IntegerNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1960</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonsServedCnt&quot; type=&quot;IntegerNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1970</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalCommunityBuildingExpense&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1970</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalCommunityBenefitExpnsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1980</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectOffsettingRevenue&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1980</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectOffsettingRevenueAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1990</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetCommunityBuildingExpense&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1990</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetCommunityBenefitExpnsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 2000</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PercentOfTotalExpense&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 2000</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalExpensePct&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

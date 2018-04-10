@@ -1,0 +1,240 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: CorporateIncomeTax/Common/IRS8865/ItemizedOrdinaryIncomeLossStatement.xsd (2012v2.2) Right File: CorporateIncomeTax/Common/IRS8865/ItemizedOrdinaryIncomeLossStatement.xsd (2013v1.0)</title>
+</head>
+<center>
+<b>OLD: CorporateIncomeTax/Common/IRS8865/ItemizedOrdinaryIncomeLossStatement.xsd (2012v2.2)</b>
+<br>
+<b>NEW: CorporateIncomeTax/Common/IRS8865/ItemizedOrdinaryIncomeLossStatement.xsd (2013v1.0)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 2,5</b>
+<br>
+<br>&lt;xsd:schema targetNamespace=&quot;http://www.irs.gov/efile&quot; xmlns=&quot;http://www.irs.gov/efile&quot;
+<br>xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;
+<br>elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 2</b>
+<br>
+<br>&lt;xsd:schema xmlns=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; targetNamespace=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 9</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2012&lt;/TaxYear&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 6</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2013&lt;/TaxYear&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 15</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../../Common/efileTypes.xsd&quot; /&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 12</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../../Common/efileTypes.xsd&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 17</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 13</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 22</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 17</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 50</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 44</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 52</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OrdinaryIncomeLoss&quot;  type=&quot;OrdinaryIncomeLossType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 46</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OrdinaryIncomeLossGrp&quot; type=&quot;OrdinaryIncomeLossGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 59</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 52</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 64</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;OrdinaryIncomeLossType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 57</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;OrdinaryIncomeLossGrpType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 66</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 58</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 68</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Name&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 60</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusinessName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 75</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 66</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 86</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 76</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 96</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 85</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 99</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 87</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 108</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 95</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 110</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINReason&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 97</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINReasonCd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 123</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 109</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 125</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 110</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 127</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Amount&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 112</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Amt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 134</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 118</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 137</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 120</b>
+<br>
+<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

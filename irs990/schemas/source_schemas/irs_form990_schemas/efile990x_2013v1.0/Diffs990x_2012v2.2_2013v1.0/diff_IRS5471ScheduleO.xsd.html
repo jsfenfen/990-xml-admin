@@ -1,0 +1,728 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: CorporateIncomeTax/Common/IRS5471ScheduleO/IRS5471ScheduleO.xsd (2012v2.2) Right File: CorporateIncomeTax/Common/IRS5471ScheduleO/IRS5471ScheduleO.xsd (2013v1.0)</title>
+</head>
+<center>
+<b>OLD: CorporateIncomeTax/Common/IRS5471ScheduleO/IRS5471ScheduleO.xsd (2012v2.2)</b>
+<br>
+<b>NEW: CorporateIncomeTax/Common/IRS5471ScheduleO/IRS5471ScheduleO.xsd (2013v1.0)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 2,4</b>
+<br>
+<br>&lt;xsd:schema targetNamespace=&quot;http://www.irs.gov/efile&quot; xmlns=&quot;http://www.irs.gov/efile&quot;<br>xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;<br>elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 2</b>
+<br>
+<br>&lt;xsd:schema xmlns=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; targetNamespace=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 9</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2012&lt;/TaxYear&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 7</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2013&lt;/TaxYear&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 15</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../../Common/efileTypes.xsd&quot; /&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 13</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../../Common/efileTypes.xsd&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 40,41</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentId&quot; type=&quot;IdListType&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentName&quot; type=&quot;StringType&quot; fixed=&quot;ShareholdersBecameUSPersonStatement ReturnFiledForPriorThreeYearsStatement BinaryAttachment OrganizationChartStatement&quot; /&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 38,39</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentId&quot; type=&quot;IdListType&quot;/&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentName&quot; type=&quot;StringType&quot; fixed=&quot;ShareholdersBecameUSPersonStatement ReturnFiledForPriorThreeYearsStatement BinaryAttachment OrganizationChartStatement&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 58</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfPersonFilingForm5471&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 56</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonNm&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 67</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfBusinessFilingForm5471&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 65</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusinessName&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 99</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINSSNReason&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 97</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingSSNEINReasonCd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 116</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfForeignCorporation&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 114</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignCorporationName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 137</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingForeignCorpEINReason&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 135</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingEINReasonCd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 163</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USOfficersDirectorsPartI&quot; type=&quot;USOfficersDirectorsPartIType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 161</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShrInfoUSOfficerDirInfoGrp&quot; type=&quot;ShrInfoUSOfficerDirInfoGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 168</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USShareholdersPartIISectA&quot; type=&quot;USShareholdersPartIISectAType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 166</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GeneralShareholderInfoGrp&quot; type=&quot;GeneralShareholderInfoGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 171</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USShareholdersPartIISectB&quot; type=&quot;USShareholdersPartIISectBType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 169</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USPrsnOfcrDirectorFrgnCorpGrp&quot; type=&quot;USPrsnOfcrDirectorFrgnCorpGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 174</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USShareholdersPartIISectC&quot; type=&quot;USShareholdersPartIISectCType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 172</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderStockAcquisInfoGrp&quot; type=&quot;ShareholderStockAcquisInfoGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 177</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USShareholdersPartIISectD&quot; type=&quot;USShareholdersPartIISectDType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 175</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderStockDisposInfoGrp&quot; type=&quot;ShareholderStockDisposInfoGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 180</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USShareholdersPartIISectE&quot; type=&quot;USShareholdersPartIISectEType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 178</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OrgReorganizationFrgnCorpGrp&quot; type=&quot;OrgReorganizationFrgnCorpGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 185</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateOfReorganization&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 183</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReorganizationDt&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 199</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;USOfficersDirectorsPartIType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 197</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;ShrInfoUSOfficerDirInfoGrpType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 206</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonNameOfShareholder&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 204</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderPersonNm&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 216</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusinessNameOfShareholder&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 214</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderBusinessName&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 231</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressOfShareholderUS&quot; type=&quot;USAddressType&quot; &gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 229</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderUSAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 241</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressOfShareholderForeign&quot; type=&quot;ForeignAddressType&quot; &gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 239</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 275</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingSSNEINReason&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 273</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingSSNEINReasonCd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 293</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateOriginal10PcntAcquisition&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 291</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Original10PercentAcquisitionDt&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 303</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateAddnl10PcntAcquisition&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 301</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Addnl10PercentAcquisitionDt&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 316</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;USShareholdersPartIISectAType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 314</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;GeneralShareholderInfoGrpType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 323</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonNameOfShareholder&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 321</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderPersonNm&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 333</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusinessNameOfShareholder&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 331</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderBusinessName&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 348</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressOfShareholderUS&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 346</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderUSAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 358</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressOfShareholderForeign&quot; type=&quot;ForeignAddressType&quot; &gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 356</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 392</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingSSNEINReason&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 390</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingSSNEINReasonCd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 410</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TypeOfReturn&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 408</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReturnTypeCd&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 425</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateReturnFiled&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 423</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReturnFiledDt&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 435</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IRSServiceCenterWhereFiled&quot; type=&quot;IRSServiceCenterType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 433</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ServiceCenterWhereRetFiledCd&quot; type=&quot;IRSServiceCenterType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 445</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LastFiledReturnUnderSect6046&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 443</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LastFiledReturnUnderSect6046Dt&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 459</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;USShareholdersPartIISectBType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 457</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;USPrsnOfcrDirectorFrgnCorpGrpType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 463</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfUSOfficerOrDirector&quot; type=&quot;PersonNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 461</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OfficerOrDirectorPersonNm&quot; type=&quot;PersonNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 473</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfUSOfficerOrDirector2&quot; type=&quot;PersonNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 471</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OfficerOrDirector2PersonNm&quot; type=&quot;PersonNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 496</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddress&quot; type=&quot;ForeignAddressType&quot; &gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 494</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 508</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SocialSecurityNumber&quot; type=&quot;SSNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 506</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SSN&quot; type=&quot;SSNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 518</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USOfficer&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 516</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OfficerInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 528</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USDirector&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 526</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectorInd&quot; type=&quot;CheckboxType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 541</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;USShareholdersPartIISectCType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 539</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;ShareholderStockAcquisInfoGrpType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 548</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrsnNameOfShFilingThisSchedule&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 546</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderPersonNm&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 558</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusNameOfShFilingThisSchedule&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 556</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareholderBusinessName&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 570</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ClassOfStockAcquired&quot; type=&quot;StockDescription5471SchOType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 568</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;StockClassDesc&quot; type=&quot;StockDescription5471SchOType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 580</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateOfAcquisition&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 578</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AcquisitionDt&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 590</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MethodOfAcquisition&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 588</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AcquisitionMethodDesc&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 600</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumberOfSharesAcquiredDirectly&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 598</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesAcquiredDirectlyCnt&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 610</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumberOfSharesAcqIndirectly&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 608</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesAcquiredIndirectlyCnt&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 620</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumOfSharesAcqConstructively&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 618</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesAcqConstructivelyCnt&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 630</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AmountPaidOrValueGiven&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 628</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PaidOrValueGivenAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 643</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrsnFromWhomSharesAcquired&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 641</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesAcquiredPersonNm&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 653</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusFromWhomSharesAcquired&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 651</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesAcquiredBusinessName&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 668</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USAddressFromWhomSharesWereAcq&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 666</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesAcquiredUSAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 678</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FrgnAddressFrWhomSharesWereAcq&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 676</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesAcquiredForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 693</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;USShareholdersPartIISectDType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 691</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;ShareholderStockDisposInfoGrpType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 700</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonNameOfShDisposingOfStock&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 698</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShrDisposingStockPersonNm&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 710</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusNameOfShDisposingOfStock&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 708</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShrDisposingStockBusinessName&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 722</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ClassOfStockDisposed&quot; type=&quot;StockDescription5471SchOType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 720</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;StockClassDesc&quot; type=&quot;StockDescription5471SchOType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 732</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateOfDisposition&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 730</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DispositionDt&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 742</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MethodOfDisposition&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 740</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DispositionMethodDesc&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 752</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumberOfSharesDisposedDirectly&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 750</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesDisposedDirectlyCnt&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 762</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumberOfSharesDisposIndirectly&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 760</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesDisposedIndirectlyCnt&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 772</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NumSharesDisposConstructively&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 770</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesDisposConstructivelyCnt&quot; type=&quot;NumberOfSharesType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 782</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AmountReceived&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 780</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReceivedAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 795</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrsnToWhomShrWereDisposed&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 793</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesDispositionPersonNm&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 805</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusToWhomShrWereDisposed&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 803</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharesDispositionBusinessName&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 830</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddress&quot; type=&quot;ForeignAddressType&quot; &gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 828</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 845</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;USShareholdersPartIISectEType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 843</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;OrgReorganizationFrgnCorpGrpType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 853</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonNameOfTransferor&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 851</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransferorPersonNm&quot; type=&quot;PersonNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 863</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusinessNameOfTransferor&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 861</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransferorBusinessName&quot; type=&quot;BusinessNameType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 878</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USAddressOfTransferor&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 876</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransferorUSAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 888</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddressOfTransferor&quot; type=&quot;ForeignAddressType&quot; &gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 886</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransferorForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 922</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingSSNEINReason&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 920</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MissingSSNEINReasonCd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 940</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateOfTransfer&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 938</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransferDt&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 950</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DescOfAssetsTrnsfrToFrgnCorp&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 948</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AssetDesc&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 965</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FairMarketValue&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 963</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FairMarketValueAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 975</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjustedBasis&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 973</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjustedBasisAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 985</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DescOfAssetsTrnsfrByNotesSec&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 983</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AssetsTransferredNotesSecDesc&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

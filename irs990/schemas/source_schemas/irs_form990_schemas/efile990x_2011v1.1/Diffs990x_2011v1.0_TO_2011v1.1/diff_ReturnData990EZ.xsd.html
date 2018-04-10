@@ -1,0 +1,110 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: TEGE/TEGE990EZ/ReturnData990EZ.xsd (2011v1.0) Right File: TEGE/TEGE990EZ/ReturnData990EZ.xsd (2011v1.1)</title>
+</head>
+<center>
+<b>OLD: TEGE/TEGE990EZ/ReturnData990EZ.xsd (2011v1.0)</b>
+<br>
+<b>NEW: TEGE/TEGE990EZ/ReturnData990EZ.xsd (2011v1.1)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 168</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../CorporateIncomeTax/Common/IRS970/OtherGoodsInventoryAndLIFOMethodExplnStatement.xsd&quot; /&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 168</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../CorporateIncomeTax/Common/IRS970/OtherDollarValueMethodUsedExplnStatement.xsd&quot; /&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 169</b>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 170</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../CorporateIncomeTax/Common/IRS970/OtherGoodsInventoryAndLIFOMethodExplnStatement.xsd&quot; /&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 358,360</b>
+<br>
+<br>&nbsp;&nbsp;&lt;!-- Includes for 8820 (supporting info, schedules, computations, and such) --&gt;
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../CorporateIncomeTax/Common/IRS8820/OrphanDrugStatement.xsd&quot; /&gt;	
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 358</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 463,465</b>
+<br>
+<br>&nbsp;&nbsp;&lt;!-- Includes for 8882 (supporting info, schedules, computations, and such) --&gt;
+<br>&nbsp;&nbsp;&lt;xsd:include schemaLocation=&quot;../../CorporateIncomeTax/Common/IRS8882/CreditFromPassThroughEntitiesStatement.xsd&quot;/&gt;
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 460</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1250</b>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1246,1252</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element ref=&quot;OtherDollarValueMthdUsedExpln&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;Explanation For Other Dollar Value Method Used To Figure The Current Year Cost Of Goods Sold&lt;/xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;	
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Form 970 statement --&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 2313,2319</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Form 8820 statement --&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element ref=&quot;OrphanDrugStatement&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;Orphan Drug Statement&lt;/xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;				
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 2314</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 3061,3067</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Form 8882 statement --&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element ref=&quot;CreditFromPassThruEntitiesStmt&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;Credit From Pass-Through Entities Statement&lt;/xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 3055</b>
+<br>
+<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

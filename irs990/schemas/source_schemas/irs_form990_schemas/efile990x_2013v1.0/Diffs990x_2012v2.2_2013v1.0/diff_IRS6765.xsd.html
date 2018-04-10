@@ -1,0 +1,611 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: CorporateIncomeTax/Common/IRS6765/IRS6765.xsd (2012v2.2) Right File: CorporateIncomeTax/Common/IRS6765/IRS6765.xsd (2013v1.0)</title>
+</head>
+<center>
+<b>OLD: CorporateIncomeTax/Common/IRS6765/IRS6765.xsd (2012v2.2)</b>
+<br>
+<b>NEW: CorporateIncomeTax/Common/IRS6765/IRS6765.xsd (2013v1.0)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 2</b>
+<br>
+<br>&lt;xsd:schema targetNamespace=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 2,3</b>
+<br>
+<br>&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns=&quot;http://www.irs.gov/efile&quot; targetNamespace=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 6</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2012&lt;/TaxYear&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 8</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 7</b>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 10</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2013&lt;/TaxYear&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 37</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentId&quot; type=&quot;IdListType&quot; &gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 70,73</b>
+<br>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentId&quot; type=&quot;IdListType&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 43</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentName&quot; type=&quot;StringType&quot; fixed=&quot;GeneralDependencySmall&quot; /&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 81</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 44</b>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 83,87</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentName&quot; type=&quot;StringType&quot; fixed=&quot;GeneralDependencySmall&quot;/&gt;<br>
+<br>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 61</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EnergyConsortiaAmount&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 119,121</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularEnergyConsortiaAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 71</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BasicResearchPayment&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 139,141</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularBasicResearchPaymentAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 81</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BasePeriodAmount&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 159,161</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularBasePeriodAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 91</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ResearchPymtMinusBasePeriodAmt&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 179,181</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularPaymentMinusBaseAmt&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 101</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WagesForQualifiedServices&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 199,201</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularQlfyServicesWagesAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 111</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostOfSupplies&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 219,221</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularSupplyCostAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 121</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RentalOrLeaseCostsOfComputers&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 239,241</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularComputerCostAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 131</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PctOfContractResearchExpenses&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 259,261</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularContractResearchPctAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 141</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalQualifedResearchExpenses&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 279,281</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularTotQlfyResearchExpnsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 151</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FixedBasePercentage&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 299,301</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FixedBasedPct&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 161</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AverageAnnualGrossReceipts&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 319,321</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularAverageGrossReceiptsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 171</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FixedBasePctTimesGrossReceipts&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 339,341</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FixedBasePctTimesGrossRcptsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 181</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjTotQualifedResearchExpenses&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 359,361</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjTotQualifedRsrchExpnssAmt&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 191</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HalfAdjTotQlfyResearchExpenses&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 379,381</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;HalfAdjTotQlfyRsrchExpnssAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 201</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SmallestQlfyResearchExpenses&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 399,401</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SmallerQlfyResearchExpnssAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 211</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RsrchExpensesPlusRsrchPayments&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 419,421</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RsrchExpensesPlusRsrchPymtsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 223</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CurrentYearCredit&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 443,445</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularCreditAmt&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 234</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentName&quot; type=&quot;StringType&quot; fixed=&quot;CapExpensesDedAmountsSchedule MembersOfControlledGroupStmt&quot; /&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 465,467</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentName&quot; type=&quot;StringType&quot; fixed=&quot;CapExpensesDedAmountsSchedule MembersOfControlledGroupStmt&quot;/&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 241</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReducedSection280CCrElection&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 479,481</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RegularRedSect280CCrElectInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 253</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AmtPaidOrIncurredToEnergyCnsrt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 503,505</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltEnergyConsortiaAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 263</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BasicResearchPymtToQlfyOrg&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 523,525</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltBasicResearchPaymentAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 273</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;QualifiedOrgBasePeriodAmount&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 543,545</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltBasePeriodAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 283</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjBasicResearchPymtToQlfyOrg&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 563,565</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltPaymentMinusBaseAmt&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 293</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SumOfAmtPdAndAdjBscRsrchPymt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 583,585</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalSumEnergyAndNetBaseAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 303</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TwentyPctOfLine22&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 603,605</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalSumTimesTwentyPctAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 313</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;WagesForQualifiedServicesSectB&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 623,625</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltQlfyServicesWagesAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 323</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CostOfSuppliesSectB&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 643,645</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltSupplyCostAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 333</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RntlOrLsCostsOfComputers&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 663,665</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltComputerCostAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 343</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ApplcblPctOfCntrctRsrchExpnss&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 683,685</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltContractResearchPctAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 353</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalQualifiedResearchExpenses&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 703,705</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltTotQlfyResearchExpnsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 363</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotQlfyRsrchExpnssForPrior3TYs&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 723,725</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotQlfyResearchExpns3PYAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 373</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PartialResearchExpenses&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 743,745</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotQlfyResearchExpns3PYPctAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 383</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DiffOfTotalAndPartialRsrchExp&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 763,765</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetQlfyResearchExpns3PYPctAmt&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 393</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MultiplyDiffRsrchExpByPct&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 783,785</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetQlfyResearchExpnsPctAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 403</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SumOfLn23AndLn32&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 803,805</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalAltPctAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 413</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SectionBReducedCr&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 823,825</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltCreditAmt&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 424</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentName&quot; type=&quot;StringType&quot; fixed=&quot;CapExpensesDedAmountsSchedule MembersOfControlledGroupStmt&quot; /&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 845,847</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentName&quot; type=&quot;StringType&quot; fixed=&quot;CapExpensesDedAmountsSchedule MembersOfControlledGroupStmt&quot;/&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 431</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SectBReducedSect280CCrElection&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 859,861</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AltRedSect280CCrElectInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 443</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CrForEmployerDiffWagePymt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 883,885</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EmployerDiffWagePymtCrAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 453</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AdjCurrentYearCredit&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 903,905</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetEmployerDiffWagePymtCrAmt&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 463</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ResearchActivitiesIncreaseCr&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 923,925</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ResearchActivitiesIncrCrAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 473</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CurrentYearCreditPlusIncrease&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 943,945</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CYResearchCreditAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 485</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BeneficiariesAllocation&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 967,969</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EstateOrTrustAllocatedBenefAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 495</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EstatesAndTrustsNetTotal&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 987,989</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NetEstateOrTrustAllocBenefAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,1976 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: TEGE/Common/IRS990ScheduleR/IRS990ScheduleR.xsd (2012v2.2) Right File: TEGE/Common/IRS990ScheduleR/IRS990ScheduleR.xsd (2013v1.0)</title>
+</head>
+<center>
+<b>OLD: TEGE/Common/IRS990ScheduleR/IRS990ScheduleR.xsd (2012v2.2)</b>
+<br>
+<b>NEW: TEGE/Common/IRS990ScheduleR/IRS990ScheduleR.xsd (2013v1.0)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 2</b>
+<br>
+<br>&lt;xsd:schema targetNamespace=&quot;http://www.irs.gov/efile&quot; xmlns=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 2,3</b>
+<br>
+<br>&lt;xsd:schema xmlns=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; targetNamespace=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>&nbsp;&nbsp;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 6</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2012&lt;/TaxYear&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 7</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2013&lt;/TaxYear&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 41</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 43</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 47</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 48</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 49</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleRPartI&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 50</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IdDisregardedEntitiesGrp&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 57</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 57</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 59</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfDisregardedEntity&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 59</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DisregardedEntityName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 67</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 66</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 70</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressUS&quot; type=&quot;USAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 69</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 78</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressForeign&quot; type=&quot;ForeignAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 77</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 87</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 85</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 97</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 94</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 99</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivities&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 96</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivitiesTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 107</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 103</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 110</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileState&quot; type=&quot;StateType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 106</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileStateCd&quot; type=&quot;StateType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 118,119</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountry&quot; type=&quot;CountryType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 114</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountryCd&quot; type=&quot;CountryType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 128</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 122</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 130</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalIncome&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 124</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalIncomeAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 138</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 131</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 140</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EOYAssets&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 133</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EndOfYearAssetsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 148</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 140</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 159,160</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectControllingEntityNA&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 151</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectControllingNACd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 174</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 164</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 178</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 167</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 180</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleRPartII&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 169</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IdRelatedTaxExemptOrgGrp&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 188</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 176</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 190</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfDisregardedEntity&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 178</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DisregardedEntityName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 198</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 185</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 201</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressUS&quot; type=&quot;USAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 188</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 209</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressForeign&quot; type=&quot;ForeignAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 196</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 218</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 204</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 228</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 213</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 230</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivities&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 215</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivitiesTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 238</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 222</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 241</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileState&quot; type=&quot;StateType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 225</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileStateCd&quot; type=&quot;StateType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 249,250</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountry&quot; type=&quot;CountryType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 233</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountryCd&quot; type=&quot;CountryType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 259</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 241</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 261</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExemptCodeSection&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 243</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExemptCodeSectionTxt&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 269</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 250</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 271</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PublicCharityStatus&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 252</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PublicCharityStatusTxt&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 279</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 259</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 290,291</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectControllingEntityNA&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 270</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectControllingNACd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 305</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 283</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 307</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ControlledOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 285</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ControlledOrganizationInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 315</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 292</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 319</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 295</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 321</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleRPartIII&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 297</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IdRelatedOrgTxblPartnershipGrp&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 329</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 304</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 331</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfRelatedOrg&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 306</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RelatedOrganizationName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 339</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 313</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 342</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressUS&quot; type=&quot;USAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 316</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 350</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressForeign&quot; type=&quot;ForeignAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 324</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 359</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 332</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 369</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 341</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 371</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivity&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 343</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivitiesTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 379</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 350</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 382</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileState&quot; type=&quot;StateType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 353</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileStateCd&quot; type=&quot;StateType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 390,391</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountry&quot; type=&quot;CountryType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 361</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountryCd&quot; type=&quot;CountryType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 400</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 369</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 411,412</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectControllingEntityNA&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 380</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectControllingNACd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 426</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 393</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 428</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PredominantIncomeType&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 395</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PredominantIncomeTypeTxt&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 436</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 402</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 438</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfTotalIncome&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 404</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfTotalIncomeAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 446</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 411</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 448</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfEOYAssets&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 413</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfEOYAssetsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 456</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 420</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 458</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DisproportionateAllocations&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 422</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DisproportionateAllocationsInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 466</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 429</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 468</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CodeVAmount&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 431</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UBICodeVAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 476</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 438</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 478</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GeneralOrManagingPartner&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 440</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GeneralOrManagingPartnerInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 486</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 447</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 488</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PercentageOwnership&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 449</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OwnershipPct&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 496</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 456</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 500</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 459</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 502</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleRPartIV&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 461</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IdRelatedOrgTxblCorpTrGrp&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 510</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 468</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 512</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfRelatedOrg&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 470</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RelatedOrganizationName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 520</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 477</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 523</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressUS&quot; type=&quot;USAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 480</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 531</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressForeign&quot; type=&quot;ForeignAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 488</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 540</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 496</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 550</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 505</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 552</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivity&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 507</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivitiesTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 560</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 514</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 563</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileState&quot; type=&quot;StateType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 517</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileStateCd&quot; type=&quot;StateType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 571,572</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountry&quot; type=&quot;CountryType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 525</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountryCd&quot; type=&quot;CountryType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 581</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 533</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 592,593</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectControllingEntityNA&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 544</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DirectControllingNACd&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 607</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 557</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 609</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TypeOfEntity&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 559</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;EntityTypeTxt&quot; type=&quot;ShortDescriptionType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 617</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 566</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 619</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfTotalIncome&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 568</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfTotalIncomeAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 627</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 575</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 629</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfEOYAssets&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 577</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfEOYAssetsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 637</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 584</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 639</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PercentageOwnership&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 586</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OwnershipPct&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 647</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 593</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 649</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ControlledOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 595</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ControlledOrganizationInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 657</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 602</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 661</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 605</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 663</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 606</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 665</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 607</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 667</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReceiptOfIntAnnRentsRoyalties&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 609</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReceiptOfIntAnntsRntsRyltsInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 675</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 616</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 677</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GiftGrantOrCapContrToOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 618</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GiftGrntOrCapContriToOthOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 685</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 625</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 687</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GiftGrantOrCapContrFrOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 627</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GiftGrntCapContriFromOthOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 695</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 634</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 697</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LoansOrGuaranteesToOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 636</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LoansOrGuaranteesToOtherOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 705</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 643</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 707</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LoansOrGuaranteesFromOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 645</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LoansOrGuaranteesFromOthOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 715</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 652</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 717</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DividendsRelatedOrganization&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 654</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DivRelatedOrganizationInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 725</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 661</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 727</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SaleOfAssetsToOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 663</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AssetSaleToOtherOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 735</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 670</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 737</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PurchaseOfAssetsFromOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 672</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AssetPurchaseFromOtherOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 745</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 679</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 747</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExchangeOfAssets&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 681</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AssetExchangeInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 755</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 688</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 757</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RentalOfFacilitiesToOtherOrgs&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 690</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RentalOfFacilitiesToOthOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 765</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 697</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 767</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RentalOfFacilitiesFrOtherOrgs&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 699</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RentalOfFcltsFromOthOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 775</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 706</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 777</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PerformOfServicesForOtherOrgs&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 708</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PerformOfServicesForOthOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 785</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 715</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 787</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PerformOfServicesByOtherOrgs&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 717</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PerformOfServicesByOtherOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 795</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 724</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 797</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharingOfFacilities&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 726</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharingOfFacilitiesInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 805</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 733</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 807</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SharingOfPaidEmployees&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 735</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PaidEmployeesSharingInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 815</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 742</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 817</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReimbursementPaidToOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 744</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReimbursementPaidToOtherOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 825</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 751</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 827</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReimbursementPaidByOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 753</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReimbursementPaidByOtherOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 835</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 760</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 837</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherTransferToOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 762</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransferToOtherOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 845</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 769</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 847</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherTransferFromOtherOrg&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 771</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransferFromOtherOrgInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 855</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 778</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 857</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransactionsRelatedOrgsTable&quot; type=&quot;Form990SchRPartVGroup1Type&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 780</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransactionsRelatedOrgGrp&quot; type=&quot;TransactionsRelatedOrgGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 865</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 787</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 867</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleRPartVI&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 789</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UnrelatedOrgTxblPartnershipGrp&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 875</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 796</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 877</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfBusiness&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 798</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusinessName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 885</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 805</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 888</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressUS&quot; type=&quot;USAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 808</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;USAddress&quot; type=&quot;USAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 896</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AddressForeign&quot; type=&quot;ForeignAddressType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 816</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ForeignAddress&quot; type=&quot;ForeignAddressType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 905</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 824</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 915</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 833</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 917</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivity&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 835</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrimaryActivitiesTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 925</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 842</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 928</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileState&quot; type=&quot;StateType&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 845</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileStateCd&quot; type=&quot;StateType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 936,937</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountry&quot; type=&quot;CountryType&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 853</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LegalDomicileForeignCountryCd&quot; type=&quot;CountryType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 946</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 861</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 956</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 870</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 958</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AllPartnersC3S&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 872</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AllPartnersC3SInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 966</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 879</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 968</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfTotalIncome&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 881</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfTotalIncomeAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 976</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 888</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 978</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfEOYAssets&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 890</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ShareOfEOYAssetsAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 986</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 897</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 988</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DisproportionateAllocations&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 899</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DisproportionateAllocationsInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 996</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 906</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 998</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CodeVAmount&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 908</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;UBICodeVAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1006</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 915</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1008</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GeneralOrManagingPartner&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 917</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;GeneralOrManagingPartnerInd&quot; type=&quot;BooleanType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1016</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 924</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1018</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PercentageOwnership&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 926</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OwnershipPct&quot; type=&quot;RatioType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1026</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 933</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1030</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 936</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1032</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Form990ScheduleRPartVII&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 938</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SupplementalInformationDetail&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1038</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 943</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1040</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Identifier&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 945</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;IdentifierTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1048</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 952</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1050</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ReturnReference&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 954</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;FormAndLineReferenceDesc&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1058</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 961</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1060</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Explanation&quot; type=&quot;ExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 963</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ExplanationTxt&quot; type=&quot;ExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1068</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 970</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1072</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 973</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1075</b>
+<br>
+<br>&nbsp;&nbsp;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 975</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1079</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 978</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1081</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;Form990SchRPartVGroup1Type&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 980</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;TransactionsRelatedOrgGrpType&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1083</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 981</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1085</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfOtherOrganization&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 983</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherOrganizationName&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1093</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 990</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1095</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransactionType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 992</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TransactionTypeTxt&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1108</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1004</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1110</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;AmountInvolved&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1006</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InvolvedAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1118</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1013</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1120</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MethodOfAmtDetermination&quot; type=&quot;ShortExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1015</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MethodOfAmountDeterminationTxt&quot; type=&quot;ShortExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 1128</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 1022</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 1131</b>
+<br>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 1024</b>
+<br>
+<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

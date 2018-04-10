@@ -1,0 +1,303 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: PartnershipIncome/Common/IRS8912/IRS8912.xsd (2010v3.5) Right File: PartnershipIncome/Common/IRS8912/IRS8912.xsd (2011v1.0)</title>
+</head>
+<center>
+<b>OLD: PartnershipIncome/Common/IRS8912/IRS8912.xsd (2010v3.5)</b>
+<br>
+<b>NEW: PartnershipIncome/Common/IRS8912/IRS8912.xsd (2011v1.0)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 49,53</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BondInformation&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;99&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:complexType&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:sequence&gt;		                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Bond Issuer&apos;s Name --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfBondIssuer&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 49,50</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Bond Credit --&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BondCredit&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 56,57</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Bond Issuer&apos;s Name&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I Line 1a&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 53,54</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Bond Credit&lt;/Description&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I Line 1&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 61,62</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Bond Issuer&apos;s City --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;City&quot; type=&quot;CityType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 58,59</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Bond Credit Not Reported on Form 1097BTC Amount --&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BondCrNotRptOnForm1097BTCAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 65,66</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Bond Issuer&apos;s City&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 1a&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 62,63</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Bond Credit Not Reported on Form 1097BTC Amount&lt;/Description&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I Line 2&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 70,114</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Bond Issuer&apos;s State --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;State&quot; type=&quot;StateType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Bond Issuer&apos;s State&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 1a&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Bond Issuer&apos;s EIN --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BondIssuerEIN&quot; type=&quot;EINType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Bond Issuer&apos;s EIN&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 1b&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Date Bond Issued --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateBondIssued&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Date acquired&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 2a&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Date Bond Matures --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BondMaturityDt&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Date Bond Matures&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 2b&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Date Bond Disposed Of--&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateBondDisposedOf&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Date Bond Disposed Of&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 3 &lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 66</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 116,125</b>
+<br>
+<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&lt;!-- =============================================================================== --&gt;<br>&nbsp;&nbsp;&lt;!-- ====== Type for Repeating Tables in Part I ====== --&gt;<br>&nbsp;&nbsp;&lt;!-- =============================================================================== --&gt;<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BondCreditType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;50&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:complexType&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:sequence&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- CUSIP Number --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CUSIPNumber&quot; type=&quot;CUSIPNumberType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 68,69</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Carry forward of bond credits from prior year --&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CreditCarryForwardFromPYAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 128,129</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;CUSIP Number&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 4a &lt;/LineNumber&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 72,73</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Carry forward of bond credits from prior year&lt;/Description&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 3&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 133,189</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Principal Payment Dates --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PrinPaymentDates&quot; type=&quot;DateType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Principal Payment Dates&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 4a&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Outstanding Bond Principal --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OutstndingBondPrinAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Outstanding Bond Principal Amount&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 4b&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Credit Rate --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CreditRate&quot; type=&quot;RatioType&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Credit Rate&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 4c&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Outstanding Bond Principal x Credit Rate Amount --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OutstndgBondPrinCrdtRteAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Outstanding Bond Principal x Credit Rate Amount&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 4d&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Percent --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Percent&quot; type=&quot;RatioType&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Percent&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 4e&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Credit Amount --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CreditAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Credit Amount&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 4f&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:sequence&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:complexType&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 76</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 191,251</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Sum of Credit in Table --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CreditSumAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Sum of Credit in Table&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 5&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Percentage of Credit for Certain Bonds or Sum of Credits Amount --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CrComputationOrCrSumAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Percentage of Credit for Certain Bonds or Sum of Credits Amount&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 6&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:sequence&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:complexType&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Total Credits from Other Bonds --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherBondCreditTotalAmt&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Total Credits from Other Bonds&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 7&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:complexType&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:simpleContent&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:extension base=&quot;USAmountType&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentId&quot; type=&quot;IdListType&quot;/&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:attribute name=&quot;referenceDocumentName&quot; type=&quot;StringType&quot; fixed=&quot;AdditionalBondCurrentYearCreditStatement&quot;/&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:extension&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:simpleContent&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:complexType&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Bond Credits From S Corporations, Partnerships, Estates, or Trusts --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BondCredit&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Bond Credits From S Corporations, Partnerships, Estates, or Trusts&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 8&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Carryforward of bond credits from prior year --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;CreditCarryforwardFromPYAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Carryforward of bond credits from prior year&lt;/Description&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 9&lt;/LineNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 77</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 257</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 10&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 83</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 4&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 267</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 11&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 93</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 5&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 277</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 12&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 103</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part I line 6&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 289</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 13&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 115</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 7&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 299</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 14&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 125</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 8&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 309</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 15&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 135</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 9&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 319</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 16a&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 145</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 10a&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 329</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 16b&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 155</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 10b&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 339</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 16c&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 165</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 10c&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 349</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 16d&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 175</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 10d&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 359</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 16e&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 185</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 10e&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 369</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 17&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 195</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 11&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 379</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 18&lt;/LineNumber&gt;<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 205</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part II line 12&lt;/LineNumber&gt;
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 381</b>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 208,256</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;
+<br>
+<br>
+<br>&lt;!-- ===== Part III ===== --&gt;
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BondInformation&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;99&quot;&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:complexType&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:sequence&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Name of Bond Issuer --&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NameOfBondIssuer&quot; type=&quot;BusinessNameType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Name of Bond Issuer&lt;/Description&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part III line 13a&lt;/LineNumber&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Bond Issuer EIN --&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BondIssuerEIN&quot; type=&quot;EINType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Bond Issuer EIN&lt;/Description&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part III line 13b&lt;/LineNumber&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Total Form 1097BTC Amount --&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalForm1097BTCAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Total Form 1097BTC Amount&lt;/Description&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part III line 13c&lt;/LineNumber&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:sequence&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:complexType&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:element&gt;
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Total All From 1097BTC Amount --&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;TotalAllForm1097BTCAmt&quot; type=&quot;USAmountType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:annotation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Description&gt;Total All From 1097BTC Amount&lt;/Description&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LineNumber&gt;Part III line 14&lt;/LineNumber&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:documentation&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsd:annotation&gt;
+<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

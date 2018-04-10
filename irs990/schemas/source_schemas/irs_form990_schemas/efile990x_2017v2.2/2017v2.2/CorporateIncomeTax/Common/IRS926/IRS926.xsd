@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.irs.gov/efile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.irs.gov/efile" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<Description>IRS e-file Schema - Form 926</Description>
+			<TaxYear>2017</TaxYear>
+			<MaturityLevel>DD5 Final</MaturityLevel>
+			<ReleaseDate>October 26, 2017</ReleaseDate>
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="../../../Common/efileTypes.xsd"/>
+	<!-- =============================================================== -->
+	<!-- =======================  IRS Form 926 ========================= -->
+	<!-- =============================================================== -->
+	<xsd:element name="IRS926">
+		<xsd:annotation>
+			<xsd:documentation>IRS Form 926</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="IRS926Type">
+					<xsd:attributeGroup ref="DocumentAttributes">
+						<xsd:annotation>
+							<xsd:documentation>Common return document attributes</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attributeGroup>
+					<xsd:attribute name="documentName" type="xsd:string" fixed="IRS926">
+						<xsd:annotation>
+							<xsd:documentation>IRS internal use only. To avoid error in the return, do not include the attribute name or value.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="referenceDocumentId" type="IdListType">
+						<xsd:annotation>
+							<xsd:documentation>List of document ID's of forms, schedules, supporting info. etc. attached to this form</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="referenceDocumentName" type="StringType" fixed="BinaryAttachment GeneralDependencySmall"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="IRS926Type">
+		<xsd:annotation>
+			<xsd:documentation>Content model for IRS Form 926</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<!-- Part I - U.S. Transferor Information -->
+			<!-- Business Name of Transferor or Person Name of Transferor -->
+			<xsd:choice minOccurs="0">
+				<!-- Name of Transferor -->
+				<xsd:element name="TransferorBusinessName" type="BusinessNameType">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>Name of transferor</Description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!-- Name of Transferor -->
+				<xsd:element name="TransferorPersonNm" type="PersonNameType">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>Name of transferor</Description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<!-- Identitification Number of Transfer or Missing EIN Reason -->
+			<xsd:choice minOccurs="0">
+				<!-- Identitification Number of Transferor -->
+				<xsd:element name="TransferorEIN" type="EINType">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>Identitification number of transferor</Description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!-- Transferor Missing EIN Reason -->
+				<xsd:element name="TransferorMissingEINReasonCd">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>Transferor Missing EIN reason</Description>
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="StringType">
+							<xsd:enumeration value="APPLD FOR"/>
+							<xsd:enumeration value="FOREIGNUS"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<!-- Identitification Number of Transferor -->
+				<xsd:element name="TransferorSSN" type="SSNType">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>Identitification number of transferor</Description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<!-- Was Transferor Controlled by 5 or Fewer Domestic Corp.? -->
+			<xsd:element name="ControlledBy5OrFewerDomCorpInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Indicates the transferor was controlled by 5 or fewer domestic corp.</Description>
+						<LineNumber>1a</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Did Transferor Remain in Existence After the Transfer? -->
+			<xsd:element name="ExistedAfterTransferInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Indicates transferor remained in existence after the transfer</Description>
+						<LineNumber>1b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Controlling Shareholder -->
+			<xsd:element name="ControllingShareholder" type="ControllingShareholderType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Controlling shareholder</Description>
+						<LineNumber>1b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- If the Transferor was a Member of an Affiliated Group filing a Consolidated Return, Was It the Parent Corporation? -->
+			<xsd:element name="ParentCorporationInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Indicates it was a parent corporation of an affiliated group filing a consolidated return</Description>
+						<LineNumber>1c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Name of Parent Corporation -->
+			<xsd:element name="ParentCorporationName" type="BusinessNameType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Name of parent corporation</Description>
+						<LineNumber>1c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- EIN of Parent Corporation or Missing EIN Reason -->
+			<xsd:choice minOccurs="0">
+				<!-- EIN of Parent Corporation -->
+				<xsd:element name="ParentCorporationEIN" type="EINType">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>EIN of parent corporation</Description>
+							<LineNumber>1c</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!-- Missing EIN Reason -->
+				<xsd:element name="MissingEINReasonCd">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>Missing EIN reason</Description>
+							<LineNumber>1c</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="StringType">
+							<xsd:enumeration value="APPLD FOR"/>
+							<xsd:enumeration value="FOREIGNUS"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:choice>
+			<!-- Basic Adjustments Under Section 367(a)(5) Made  -->
+			<xsd:element name="BasicAdjusmentsSect367a5Ind" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Basic adjustments under section 367(a)(5) made</Description>
+						<LineNumber>1d</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="BooleanType">
+							<xsd:attribute name="referenceDocumentId" type="IdListType"/>
+							<xsd:attribute name="referenceDocumentName" type="StringType" fixed="BasicAdjustmentUnderSection367a5Statement"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- Name of Partnership -->
+			<xsd:element name="PartnershipName" type="BusinessNameType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Name of partnership</Description>
+						<LineNumber>2a</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- EIN of Partnership or EIN Missing Reason -->
+			<xsd:choice minOccurs="0">
+				<!-- EIN of Partnership -->
+				<xsd:element name="PartnershipEIN" type="EINType">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>EIN of Partnership</Description>
+							<LineNumber>2a</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!-- EIN of Partnership Missing Reason -->
+				<xsd:element name="PartnershipMissingEINReasonCd">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>EIN of Partnership missing reason</Description>
+							<LineNumber>2a</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="StringType">
+							<xsd:enumeration value="APPLD FOR"/>
+							<xsd:enumeration value="FOREIGNUS"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:choice>
+			<!-- Partner Pick Up Pro Rata Share of Gain on Transfer -->
+			<xsd:element name="PrtnrPickProRataShrGnTrnsfrInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Partner pick up pro rata share of gain on transfer</Description>
+						<LineNumber>2b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Partner Disposing Entire Interest in Partnership -->
+			<xsd:element name="PrtnrDispsngEntireIntPrtshpInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Partner disposing entire interest in partnership</Description>
+						<LineNumber>2c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Partner Disposing Interest in a Limited Partnership  -->
+			<xsd:element name="PrtnrDisposingIntLtdPrtshpInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Partner disposing interest in a limited partnership</Description>
+						<LineNumber>2d</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Part II - Transferee Foreign Corporation Information -->
+			<!-- Name of Transferee -->
+			<xsd:element name="TransfereeName" type="BusinessNameType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Name of transferee</Description>
+						<LineNumber>3</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Identitification Number of Transferee or EIN Missing Reason -->
+			<xsd:choice minOccurs="0">
+				<!-- Identitification Number of Transferee -->
+				<xsd:element name="TransfereeEIN" type="EINType">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>Identitification number of transferee</Description>
+							<LineNumber>4a</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!-- EIN Missing Reason -->
+				<xsd:element name="EINMissingReasonCd">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>EIN missing reason</Description>
+							<LineNumber>4a</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="StringType">
+							<xsd:enumeration value="APPLD FOR"/>
+							<xsd:enumeration value="FOREIGNUS"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:choice>
+			<!-- Foreign Entity Identification Group -->
+			<xsd:element name="ForeignEntityIdentificationGrp" type="ForeignEntityIdentificationGrpType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Foreign Entity Identification Group</Description>
+						<LineNumber>4b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>	
+			<!-- Address of Transferee - US Address or Foreign Address -->
+			<xsd:choice minOccurs="0">
+				<!-- US Address of Transferee -->
+				<xsd:element name="TransfereeUSAddress" type="USAddressType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>US address of transferee</Description>
+							<LineNumber>5</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!-- Foreign Address of Transferee -->
+				<xsd:element name="TransfereeForeignAddress" type="ForeignAddressType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>Foreign address of transferee</Description>
+							<LineNumber>5</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<!-- Country of Incorporation or Organization of Transferee -->
+			<xsd:element name="TransfereeCountryOfIncorpCd" type="CountryType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Country of incorporation or organization</Description>
+						<LineNumber>6</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Foreign Law Characterization of Transferee -->
+			<xsd:element name="ForeignLawCharacterizationTxt" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Foreign Law Characterization of transferee</Description>
+						<LineNumber>7</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="TextType">
+						<xsd:maxLength value="35"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<!-- Is the Transferee Foreign Corp of a Controlled Foreign Corp? -->
+			<xsd:element name="TransfereeForeignCorpInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Indicates the transferee is foreign corp of a controlled foreign corp</Description>
+						<LineNumber>8</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Part III - Information Regarding Transfer of Property -->
+			<!-- Section A - Cash, Stock and Securities -->
+			<!-- Cash -->
+			<xsd:element name="CashPropertyGrp" type="CashInformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Cash</Description>
+						<LineNumber>a, c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Stocks and Securities -->
+			<xsd:element name="StocksAndSecuritiesPropertyGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Stocks and securities</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Was Cash the Only Property Transferred -->
+			<xsd:element name="CashOnlyPropertyTransferredInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Was cash the only property transferred</Description>
+						<LineNumber>9</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Did the Transferor Transfer Stock or Securities Subject to Section 367(a) With Respect to Which a Gain Recognition Agreement was Filed -->
+			<xsd:element name="StockOrSecuritiesTransferInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Did the transferor transfer stock or securities subject to section 367(a) with respect to which a gain recognition agreement was filed</Description>
+						<LineNumber>10</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Section B - Property qualifying for Active Trade or Business exception under Regs. sec. 1.367(a)-2(a)(2)(i) and (ii) -->
+			<!-- Tangible Property -->
+			<xsd:element name="TangiblePropertyGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Tangible property</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Transfers of Oil and Gas Working Interest -->
+			<xsd:element name="TrnsfrOilGasWorkingIntPropGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Transfers of oil and gas working interest</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Financial Asset (as Described in Regs. Sec. 1.367(a)- 2(b)(3)) -->
+			<xsd:element name="FinancialAssetPropertyGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Financial asset (as described in Regs. sec. 1.367(a)- 2(b)(3))</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Certain Tangible Property to be Leased -->
+			<xsd:element name="TangiblePropertyToBeLeasedGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Certain tangible property to be leased</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Active Trade or Business Exception Property Totals -->
+			<xsd:element name="ActiveTrdOrBusExcPropTotalGrp" type="TrdOrBusExcPropTotalGrpType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Active trade or business exception property Totals</Description>
+						<LineNumber>c - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Section C - Property not qualifying for Active Trade or Business exception (other than intangible property subject to section 367(d)) -->
+			<!-- Transfer of Property Inventory -->
+			<xsd:element name="TransferInventoryPropertyGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Transfer of property inventory</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Installment Obligations -->
+			<xsd:element name="InstallmentObligationsPropGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Installment obligations</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Nonfunctional Currency -->
+			<xsd:element name="NonfunctionalCurrencyPropGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Nonfunctional currency</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Certain Leased Tangible Property -->
+			<xsd:element name="LeasedTangiblePropertyGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Certain leased tangible property</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Certain Property to be Retransferred -->
+			<xsd:element name="RetransferredPropertyGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Certain property to be retransferred</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Property Described in Regs. Sec. 1.6038B-1(c)(4)(iv) -->
+			<xsd:element name="PropertyNotTransferredGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Property described in Regs. sec. 1.6038B-1(c)(4)(iv)</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Property Described in Regs. Sec. 1.6038B-1(c)(4)(vii) -->
+			<xsd:element name="IneligiblePropertyGrp" type="InformationRegardingTransferPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Property described in Regs. sec. 1.6038B-1(c)(4)(vii)</Description>
+						<LineNumber>a - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Ineligible for the Active Trade or Business Exception Total -->
+			<xsd:element name="InlgblTrdOrBusExcPropTotalGrp" type="TrdOrBusExcPropTotalGrpType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Ineligible for the active trade or business exception total</Description>
+						<LineNumber>c - e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>	
+			<!-- Did Transferor Transfer Assets Under Section 367(a)(3) -->
+			<xsd:element name="TransferAssetsUndSect367a3Ind" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Did transferor transfer assets under section 367(a)(3)</Description>
+						<LineNumber>11</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Transfer of Property Subject to Section 367(a)(1) Gain Recognition -->
+			<xsd:element name="TransferPropGainRecognitionInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Transfer of property subject to section 367(a)(1) gain recognition</Description>
+						<LineNumber>12(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Was Transfer Required to Recognize Income for Depreciation Recapture -->
+			<xsd:element name="RqrRcgnzIncmDeprecRcptrInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Was Transfer required to recognize income for depreciation recapture</Description>
+						<LineNumber>12(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Was Transfer Required to Recognize Income for Branch Loss Recapture -->
+			<xsd:element name="RqrRcgnzIncmBrLossRcptrInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Was Transfer required to recognize income for branch loss recapture</Description>
+						<LineNumber>12(c)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- If the Answer to 12c is "Yes," Enter the Amount of Foreign Branch Loss Recapture -->
+			<xsd:element name="ForeignBranchLossRecaptureAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>If the answer to 12c is "Yes," enter the amount of foreign branch loss recapture</Description>
+						<LineNumber>12(d)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Any Other Income Recognition Provision Contained in the Above-Referenced Regulations -->
+			<xsd:element name="RequiredRcgnzIncmAboveRegsInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Any other income recognition provision contained in the above-referenced regulations</Description>
+						<LineNumber>12(e)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Section D - Intangible property under Regs. sec. 1.367(a)-1(d)(5) -->
+			<!-- Intangible Property Detail -->
+			<xsd:element name="IntangiblePropertyDetailGrp" type="IntangiblePropertyDetailGrpType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Intangible Property Detail</Description>
+						<LineNumber>a - f</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Intangible Property Transfer Detail -->
+			<xsd:element name="IntangliblePropertyTransferGrp" type="IntangiblePropertyDetailGrpType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Intangible property transfer detail</Description>
+						<LineNumber>a - f</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Intangible Property Total -->
+			<xsd:element name="IntangiblePropertyTotalGrp" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Intangible property transfer detail</Description>
+						<LineNumber>d - f</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<!-- Arm's length Price on Date of Transfer -->
+						<xsd:element name="TransferDtArmLengthPriceAmt" type="USAmountType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Arm's length price on date of transfer</Description>
+									<LineNumber>d</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<!-- Cost or Other Basis -->
+						<xsd:element name="CostOrOtherBasisAmt" type="USAmountType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Cost or other basis</Description>
+									<LineNumber>e</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<!-- Income Inclusion for Year of Transfer (See Instructions) -->
+						<xsd:element name="IncomeInclusionAmt" type="USAmountType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<Description>Income inclusion for year of transfer (see instructions)</Description>
+									<LineNumber>f</LineNumber>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- Did the Transferor Transfer Property Described in Section 936(h)(3)(B) -->
+			<xsd:element name="IntangiblePropertyTrnsfrInd" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Did the transferor transfer property described in section 936(h)(3)(B)</Description>
+						<LineNumber>13a</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="BooleanType">
+							<xsd:attribute name="referenceDocumentId" type="IdListType"/>
+							<xsd:attribute name="referenceDocumentName" type="StringType" fixed="IntangiblePropertyTransferredFromTransactionStatement"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- If the Answer to Line 13a is "Yes," Enter the Amount Included in Income Under Section 367(d), if any, for the Transfer of Such Property on the Income Tax Return for the Year of the Transfer -->
+			<xsd:element name="IntangiblePropertyTrnsfrAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>If the answer to line 13a is "Yes," enter the amount included in income under section 367(d), if any, for the transfer of such property on the income tax return for the year of the transfer</Description>
+						<LineNumber>13b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Did the Transferor Apply Section 367(d) to a Transfer of any Property Pursuant to Regulations Section 1.367(a)-1(b)(5) -->
+			<xsd:element name="ApplySection367dInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Did the transferor apply section 367(d) to a transfer of any property pursuant to Regulations section 1.367(a)-1(b)(5)</Description>
+						<LineNumber>14a</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Total Amount Included in Income Under Section 367(d), for the Transfer of all Such Property on the Income Tax Return for the Year of the Transfer -->
+			<xsd:element name="Section367dIncomeAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Total amount included in income under section 367(d), for the transfer of all such property on the income tax return for the year of the transfer</Description>
+						<LineNumber>14b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Did the Transferor Transfer any Property for Which it Could Have Applied Section 367(d) Pursuant to Regulations Section 1.367(a)-1(b)(5) but did not -->
+			<xsd:element name="GainRcgnzUnderSect367a1Ind" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Did the transferor transfer any property for which it could have applied section 367(d) pursuant to Regulations section 1.367(a)-1(b)(5) but did not</Description>
+						<LineNumber>14c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Total Amount of Gain Recognized, Under Section 367(a)(1) on the Transfer of all Such Property on the Income Tax Return for the Year of the Transfer -->
+			<xsd:element name="GainRcgnzUnderSect367a1Amt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Total amount of gain recognized, under section 367(a)(1) on the transfer of all such property on the income tax return for the year of the transfer</Description>
+						<LineNumber>14d</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Did the Transferor Transfer any Intangible Property That, at the Time of the Transfer, had a Useful Life Reasonably Anticipated to Exceed Twenty Years -->
+			<xsd:element name="UsefulLifeTransferInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Did the transferor transfer any intangible property that, at the time of the transfer, had a useful life reasonably anticipated to exceed twenty years</Description>
+						<LineNumber>15a</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- At the Time of the Transfer, did any of the Transferred Intangible Property Have an Indefinite Useful Life -->
+			<xsd:element name="IndfntUsefulLifeTransferInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>At the time of the transfer, did any of the transferred intangible property have an indefinite useful life</Description>
+						<LineNumber>15b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Did the Transferor Choose to Apply the 20-Year Inclusion Period Provided Under Regulations Section 1.367(d)-1(c)(3)(ii) for any Intangible Property -->
+			<xsd:element name="Apply20YearInclusionPeriodInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Did the transferor choose to apply the 20-year inclusion period provided under Regulations section 1.367(d)-1(c)(3)(ii) for any intangible property</Description>
+						<LineNumber>15c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- If the Answer to Line 15c is "Yes," Enter the Total Estimated Anticipated Income or Cost Reduction Attributable to the Intangible Property's, or Properties', as Applicable, use(s) Beyond the 20-Year Period Described in Regulations Section 1.367(d)-1(c)(3)(ii) -->
+			<xsd:element name="LimitationAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>If the answer to line 15c is "Yes," enter the total estimated anticipated income or cost reduction attributable to the intangible property's, or properties', as applicable, use(s) beyond the 20-year period described in Regulations section 1.367(d)-1(c)(3)(ii)</Description>
+						<LineNumber>15d</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Was any Intangible Property Transferred Considered or Anticipated to be, at the Time of the Transfer or at any Time Thereafter, a Platform Contribution as Defined in Regulations Section 1.482-7(c)(1) -->
+			<xsd:element name="IntngblPropTrnsfrContriInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Was any intangible property transferred considered or anticipated to be, at the time of the transfer or at any time thereafter, a platform contribution as defined in Regulations section 1.482-7(c)(1)</Description>
+						<LineNumber>16</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Supplemental Part III Information Required To Be Reported (see instructions) -->
+			<!-- Supplemental Information -->
+			<xsd:element name="SupplementalInformationTxt" type="ShortExplanationType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Supplemental information</Description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Part IV - Additional Information Regarding Transfer of Property -->
+			<!-- Transferor's Interest Before Transfer -->
+			<xsd:element name="TransferorsBeforeTransferIntRt" type="RatioType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Transferor's interest before transfer</Description>
+						<LineNumber>17(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Transferor's Interest After Transfer -->
+			<xsd:element name="TransferorsAfterTransferIntRt" type="RatioType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Transferor's interest after transfer</Description>
+						<LineNumber>17(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Type of Nonrecognition Transaction -->
+			<xsd:element name="NonrecognitionTransactionTxt" type="ShortDescriptionType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Type of nonrecognition transaction</Description>
+						<LineNumber>18</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Transfer Subject to Gain Under Section 904(f)(3) -->
+			<xsd:element name="TransferGainUnderSect904f3Ind" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Transfer subject to gain under section 904(f)(3)</Description>
+						<LineNumber>19(a)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="BooleanType">
+							<xsd:attribute name="referenceDocumentId" type="IdListType"/>
+							<xsd:attribute name="referenceDocumentName" type="StringType" fixed="GainRecognizedUnderSection904f3OnTransferStatement"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- Transfer Subject to Gain Under Section 904(f)(5)(F) -->
+			<xsd:element name="TransferGainUnderSect904f5FInd" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Transfer subject to gain under section 904(f)(5)(F)</Description>
+						<LineNumber>19(b)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="BooleanType">
+							<xsd:attribute name="referenceDocumentId" type="IdListType"/>
+							<xsd:attribute name="referenceDocumentName" type="StringType" fixed="GainRecognizedUnderSection904f5FOnTransferStatement"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- Transfer Subject to Recapture Under Section 1503(d) -->
+			<xsd:element name="TransferRcptrUndSect1503dInd" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Transfer subject to recapture under section 1503(d)</Description>
+						<LineNumber>19(c)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="BooleanType">
+							<xsd:attribute name="referenceDocumentId" type="IdListType"/>
+							<xsd:attribute name="referenceDocumentName" type="StringType" fixed="RecaptureUnderSection1503dOnTransferStatement"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- Transfer Subject to Exchange Gain Under Section 987 -->
+			<xsd:element name="TrnsfrExchGainUndSect987Ind" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Transfer subject to exchange gain under section 987</Description>
+						<LineNumber>19(d)</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="BooleanType">
+							<xsd:attribute name="referenceDocumentId" type="IdListType"/>
+							<xsd:attribute name="referenceDocumentName" type="StringType" fixed="ExchangeGainRecognizedUnderSection987TransferStatement"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- Did Transfer Result from Change Classification? -->
+			<xsd:element name="ResultedInChangeClsfInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Indicates transfer resulted from change classification</Description>
+						<LineNumber>20</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Did a Domestic Corporation Make a Distribution of Property Covered by Section 367(e)(2) (See Instructions)?. If "Yes," Complete Lines 21b and 21c. -->
+			<xsd:element name="CoverPropertyDistributionInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Did a domestic corporation make a distribution of property covered by section 367(e)(2) (see instructions)?. If "Yes," complete lines 21b and 21c.</Description>
+						<LineNumber>21a</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- 21b  Enter the Total Amount of Gain or Loss Recognized Pursuant to Regulations Section 1.367(e)-2(b) -->
+			<xsd:element name="RecognizeTotalGainLossAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>21b  Enter the total amount of gain or loss recognized pursuant to Regulations section 1.367(e)-2(b)</Description>
+						<LineNumber>21b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Did the Domestic Corporation not Recognize Gain or Loss on the Distribution of Property Because the Property was used in the Conduct of U.S. Trade or Business Under Regulations Section 1.367(e)-2(b)(2)? -->
+			<xsd:element name="PropDistriGainLossNotRcgnzInd" type="BooleanType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Did the domestic corporation not recognize gain or loss on the distribution of property because the property was used in the conduct of U.S. trade or business under Regulations section 1.367(e)-2(b)(2)?</Description>
+						<LineNumber>21c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Type for repeating group in Part I - Controlling Shareholder -->
+	<xsd:complexType name="ControllingShareholderType">
+		<xsd:sequence>
+			<!-- Controlling Shareholder's Name -->
+			<xsd:element name="ControllingShareholderName" type="BusinessNameType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Controlling shareholder name</Description>
+						<LineNumber>1b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Controlling Shareholder's Identification Number or EIN Missing Reason -->
+			<xsd:choice minOccurs="0">
+				<xsd:element name="ControllingShareholderEIN" type="EINType">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>EIN of Controlling shareholder</Description>
+							<LineNumber>1b</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ControllingShareholderSSN" type="SSNType">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>SSN of Controlling shareholder</Description>
+							<LineNumber>1b</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!-- EIN Missing Reason -->
+				<xsd:element name="EINMissingReasonCd">
+					<xsd:annotation>
+						<xsd:documentation>
+							<Description>EIN missing reason</Description>
+							<LineNumber>1b</LineNumber>
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="StringType">
+							<xsd:enumeration value="APPLD FOR"/>
+							<xsd:enumeration value="FOREIGNUS"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Type for repeating group in Part III - Information Regarding Transfer of Property -->
+	<xsd:complexType name="InformationRegardingTransferPropertyType">
+		<xsd:sequence>
+			<!-- Date of Transfer -->
+			<xsd:element name="TransferDt" type="DateType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Date of transfer</Description>
+						<LineNumber>a</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Description of Property -->
+			<xsd:element name="PropertyDesc" type="LineExplanationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Description of property</Description>
+						<LineNumber>b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Fair Market Value -->
+			<xsd:element name="FairMarketValueAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Fair market value</Description>
+						<LineNumber>c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Cost or Other Basis -->
+			<xsd:element name="CostOrOtherBasisAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Cost or other basis</Description>
+						<LineNumber>d</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Gain Recognized on Transfer -->
+			<xsd:element name="GainRecognizedOnTransferAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Gain recognized on transfer</Description>
+						<LineNumber>e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Type for Cash repeating group in Part III - Information Regarding Transfer of Property -->
+	<xsd:complexType name="CashInformationRegardingTransferPropertyType">
+		<xsd:sequence>
+			<!-- Date of Transfer -->
+			<xsd:element name="TransferDt" type="DateType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Date of transfer</Description>
+						<LineNumber>a</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Fair Market Value -->
+			<xsd:element name="FairMarketValueAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Fair market value</Description>
+						<LineNumber>c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Type for repeating group in Part III - Information Regarding Transfer of Property -->
+	<xsd:complexType name="TrdOrBusExcPropTotalGrpType">
+		<xsd:sequence>
+			<!-- Fair Market Value -->
+			<xsd:element name="FairMarketValueAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Fair market value</Description>
+						<LineNumber>c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Cost or Other Basis -->
+			<xsd:element name="CostOrOtherBasisAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Cost or other basis</Description>
+						<LineNumber>d</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Gain Recognized on Transfer -->
+			<xsd:element name="GainRecognizedOnTransferAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Gain recognized on transfer</Description>
+						<LineNumber>e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Type for repeating group in Part III - Intangible Property Detail -->
+	<xsd:complexType name="IntangiblePropertyDetailGrpType">
+		<xsd:sequence>
+			<!-- Date of Transfer -->
+			<xsd:element name="TransferDt" type="DateType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Date of transfer</Description>
+						<LineNumber>a</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Description of Property -->
+			<xsd:element name="PropertyDesc" type="LineExplanationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Description of property</Description>
+						<LineNumber>b</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Useful Life -->
+			<xsd:element name="UsefulLifeDesc" type="ShortDescriptionType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Useful life</Description>
+						<LineNumber>c</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Arm's Length Price on Date of Transfer -->
+			<xsd:element name="TransferDtArmLengthPriceAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Arm's length price on date of transfer</Description>
+						<LineNumber>d</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Cost or Other Basis -->
+			<xsd:element name="CostOrOtherBasisAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Cost or other basis</Description>
+						<LineNumber>e</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- Income Inclusion for Year of Transfer (See Instructions) -->
+			<xsd:element name="IncomeInclusionAmt" type="USAmountType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<Description>Income inclusion for year of transfer (see instructions)</Description>
+						<LineNumber>f</LineNumber>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

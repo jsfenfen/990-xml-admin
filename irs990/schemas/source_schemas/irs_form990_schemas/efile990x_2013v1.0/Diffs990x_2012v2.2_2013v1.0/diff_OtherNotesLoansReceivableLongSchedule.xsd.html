@@ -1,0 +1,246 @@
+<html>
+<body>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Diff - Left File: TEGE/Common/Dependencies/OtherNotesLoansReceivableLongSchedule.xsd (2012v2.2) Right File: TEGE/Common/Dependencies/OtherNotesLoansReceivableLongSchedule.xsd (2013v1.0)</title>
+</head>
+<center>
+<b>OLD: TEGE/Common/Dependencies/OtherNotesLoansReceivableLongSchedule.xsd (2012v2.2)</b>
+<br>
+<b>NEW: TEGE/Common/Dependencies/OtherNotesLoansReceivableLongSchedule.xsd (2013v1.0)</b>
+<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 2</b>
+<br>
+<br>&lt;xsd:schema targetNamespace=&quot;http://www.irs.gov/efile&quot; xmlns=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;
+
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 2</b>
+<br>
+<br>&lt;xsd:schema xmlns=&quot;http://www.irs.gov/efile&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; targetNamespace=&quot;http://www.irs.gov/efile&quot; elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot; version=&quot;1.0&quot;&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 7</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2012&lt;/TaxYear&gt;
+
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 10</b>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 8</b>
+<br>
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 12</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TaxYear&gt;2013&lt;/TaxYear&gt;<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 46</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherNotesLoansRcvblLong&quot; type=&quot;OtherNotesLoansRcvblLongType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
+
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 89,91</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OtherNotesLoansRcvblLongGrp&quot; type=&quot;OtherNotesLoansRcvblLongGrpType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 50</b>
+<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;OtherNotesLoansRcvblLongType&quot;&gt;
+
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 96,99</b>
+<br>
+<br>&nbsp;&nbsp;<br>
+<br>&nbsp;&nbsp;&lt;xsd:complexType name=&quot;OtherNotesLoansRcvblLongGrpType&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 58</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BorrowersName&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 113,115</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BorrowerNameGrp&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 67,68</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Individual&quot; type=&quot;PersonNameType&quot;/&gt;
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;Business&quot; type=&quot;BusinessNameType&quot;/&gt;					 		
+
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 131,135</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PersonNm&quot; type=&quot;PersonNameType&quot;/&gt;<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BusinessName&quot; type=&quot;BusinessNameType&quot;/&gt;					 		<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 75</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RelationshipToInsider&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 147,149</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InsiderRelationshipTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 84</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;OriginalAmountOfLoan&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 165,167</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LoanOriginalAmt&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 93</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BalanceDue&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 183,185</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;BalanceDueAmt&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 102</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DateOfNote&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 201,203</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;NoteDt&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 111</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;MaturityDate&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 219,221</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LoanMaturityDt&quot; type=&quot;YearMonthType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 120</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RepaymentTerms&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 237,239</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;RepaymentTermsTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 129</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestRate&quot; type=&quot;LargeRatioType&quot;&gt;
+
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 255,257</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;InterestRt&quot; type=&quot;LargeRatioType&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 137</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SecurityProvidedByBorrower&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 270,273</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;SecurityProvidedBorrowerTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 146</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;PurposeOfLoan&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 289,291</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LoanPurposeTxt&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"><b>OLD line(s): 155</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;DescOfLenderConsideration&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#FFFFFF" width="50%"><b>NEW line(s): 307,309</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;LenderConsiderationDesc&quot; type=&quot;LineExplanationType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+<tr>
+<td bgcolor="#DFEDEE" width="50%"><b>OLD line(s): 164</b>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ConsiderationFmv&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;
+
+<br>
+</td><td bgcolor="#DFEDEE" width="50%"><b>NEW line(s): 325,327</b>
+<br>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsd:element name=&quot;ConsiderationFMVAmt&quot; type=&quot;USAmountNNType&quot; minOccurs=&quot;0&quot;&gt;<br>
+<br>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>
