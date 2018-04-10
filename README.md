@@ -50,6 +50,11 @@ Read the yearly csv file line by line and add new lines to the xml_submission mo
 	
 #### run\_new\_filings
 
+This command will automatically add new filings. In it's current implementation it retrieves the filings if they are not present--it might be a good strategy to use s3's sync command upstream if this is a significant update.
+
+	$ python manage.py run\_new\_filings
+
+It works by processing all the XML_Submissions where json_set is false. There are really two steps as it now runs: converting the file into a standardized json and then entering that into "flattened" relational tables. When each filing is entered, it's given a ProcessedFiling object. 
 
 
 
