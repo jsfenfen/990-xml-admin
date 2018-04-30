@@ -5,10 +5,14 @@ from django.core.management.base import BaseCommand
 from filing.models import xml_submission
 from django.conf  import settings
 
-BATCH_SIZE = 10000
+BATCH_SIZE = 1000
 
 class Command(BaseCommand):
-    help = 'Read the yearly csv file line by line and add new lines if they don\'t exist. Lines are added in bulk at the end.'
+    help = """
+            Read the yearly csv file line by line and add new lines if they don\'t exist. Lines are added in bulk at the end.
+            Runs faster if there's an index on object_id !
+            create index filing_xml_submission_oid on filing_xml_submission(object_id);
+            """
 
     def add_arguments(self, parser):
             # Positional arguments

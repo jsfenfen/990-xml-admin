@@ -4,7 +4,7 @@ from django.core.management.base import BaseCommand
 from schemas.models import VersionedGroup, VersionedVariable,            \
     CanonicalVariable, CanonicalGroup, ProductionVersion, ScheduleName
 
-from schemas.epoch_utils import apply_var_translation, test_for_missing, MODERN_EPOCH, GROUP_TRANSFORMATIONS
+from schemas.epoch_utils import apply_var_translation, test_for_missing, MODERN_EPOCH, GROUP_TRANSFORMATIONS, EPOCH_2017
 
 class Command(BaseCommand):
     help = """ 
@@ -13,7 +13,8 @@ class Command(BaseCommand):
 
     def init_version_errors(self):
         #self.all_versions = ProductionVersion.objects.filter(version_string__in=EPOCH_2014_FORWARDS).order_by('version_string').values('version_string')
-        self.all_versions = ProductionVersion.objects.filter(version_string__in=MODERN_EPOCH).order_by('version_string').values('version_string')
+        #self.all_versions = ProductionVersion.objects.filter(version_string__in=MODERN_EPOCH).order_by('version_string').values('version_string')
+        self.all_versions = ProductionVersion.objects.filter(version_string__in=EPOCH_2017).order_by('version_string').values('version_string')
 
         self.version_group_errors = {}
         self.version_var_errors = {}
@@ -101,9 +102,9 @@ class Command(BaseCommand):
 
                       
     def assign_variables(self):
-        all_skeds = ScheduleName.objects.all()
-        #all_skeds = ScheduleName.objects.filter(schedule_name__in=['IRS990EZ', 'IRS990', 'IRS990PF'])
-        #all_skeds = ScheduleName.objects.filter(schedule_name='IRS990ScheduleR')
+        #all_skeds = ScheduleName.objects.all()
+        #all_skeds = ScheduleName.objects.filter(schedule_name__in=['IRS990PF'])
+        all_skeds = ScheduleName.objects.filter(schedule_name='IRS990ScheduleF')
         for sked in all_skeds:
             print ("Assigning canonical to %s" % sked)
             self.assign_variables_by_sked(sked)
@@ -119,10 +120,10 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self.init_version_errors()
-        print ("Assigning groups... ")
-        self.assign_groups()
-        self.show_group_key_errors()
+        #print ("Assigning groups... ")
+        #self.assign_groups()
+        #self.show_group_key_errors()
 
         print ("Assigning variables...")
-        #self.assign_variables()
-        #self.show_var_key_errors()
+        self.assign_variables()
+        self.show_var_key_errors()

@@ -14,6 +14,9 @@ EPOCH_2013 = ['2013v3.0', '2013v3.1', '2013v4.0']
 EPOCH_2014 = ['2014v5.0', '2014v6.0']
 EPOCH_2014_FORWARDS = ['2014v5.0', '2014v6.0', '2015v2.0', '2015v2.1', '2015v3.0', '2016v3.0']
 
+EPOCH_2017 = ['2017v2.0', '2017v2.1', '2017v2.2', '2017v2.3']  
+
+
 GROUP_TRANSFORMATIONS =  {
     ### Needed for the "modern" era
     '/IRS990ScheduleA/Form990ScheduleAPartVIGrp': {
@@ -173,6 +176,19 @@ def apply_var_translation(var, version):
             result = result.replace('OrganizationTypeCd', 'OrganizationTypeDesc')
         if var == '/IRS990ScheduleA/Form990ScheduleAPartVIGrp/ExplanationTxt':
             result = '/IRS990ScheduleA/Form990ScheduleAPartIVGrp/ExplanationTxt'
+
+
+    if version in EPOCH_2017:
+        if var.endswith('AppliedToEsTaxAmt'):
+            result = result.replace('AppliedToEsTaxAmt', 'AppliedToESTaxAmt')  # Capitalization introduced in 2017
+
+
+        if var.endswith('ContinutationTotalEmployeeCnt'):
+            result = result.replace('ContinutationTotalEmployeeCnt', 'ContinuationTotalEmployeeCnt')  # Capitalization introduced in 2017
+        
+
+        if var.endswith('ContinutationTotalOfficeCnt'):
+            result = result.replace('ContinutationTotalOfficeCnt', 'ContinuationTotalOfficeCnt')  # Capitalization introduced in 2017
 
 
     print("apply_var_translation: '%s' => '%s'" % (var, result))

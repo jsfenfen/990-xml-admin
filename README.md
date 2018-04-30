@@ -123,6 +123,8 @@ etc.
 
 #### 3. Add the schedules we care about, from fixture
 
+This step isn't required for an update. 
+
 The fixture is in schemas/fixtures/schedules.json 
 
 To add it use django's fixture thingy, i.e. type:
@@ -138,6 +140,8 @@ undo with
 
 
 #### 4. attach\_schedule\_instances
+
+This should be run during an update.
 
 This step just attaches actual XSDFile instances in the db to the schedule instances.
 
@@ -164,10 +168,14 @@ Hard undo:
 
 #### 6. parse_parts
 
+not needed for an update.
+
 Attach variables in canonical version to schedule_parts (and generate schedule parts) if needed.
 
 
 #### 7. generate_canonical
+
+not needed for an update
 
 Drop and regenerate canonical groups and variables based on whatever is set in settings.py (or local_settings.py ) for CANONICAL_VERSION. This should be a current version into which prior versions are transformed; the values in this transformation were used with 2015v2.1.
 
