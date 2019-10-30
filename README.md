@@ -1,19 +1,23 @@
 # IRS 990 Admin
 
 This is a helper application to make sense of the 990 xml filings
-described [here](https://aws.amazon.com/public-datasets/irs-990/)--but it's *not* needed to simply read those filings--for reading filings see [IRSx](https://github.com/jsfenfen/990-xml-reader/) . This application generates the bindings that 990-xml-reader *uses* to stardardize 990 returns by doing two things: counting xpath entries in actual 990 XML returns, and extracting documentation and other metadata from .XSD schema files.
+described [here](https://aws.amazon.com/public-datasets/irs-990/)--but it's *not* needed to simply read those filings--for reading filings see [IRSx](https://github.com/jsfenfen/990-xml-reader/) . This application generates the bindings that 990-xml-reader *uses* to standardize 990 returns by doing two things: counting xpath entries in actual 990 XML returns, and extracting documentation and other metadata from .XSD schema files.
+
+This was written in python2 and hasn't been tested in python3.
 
 # Installation
 
 Clone this repository. It's recommended that you generate a [virtual env](https://virtualenv.pypa.io/en/stable/) for this code to live in. Install the dependencies with `$ pip install -r requirements.txt`.
 
 The settings.py file automatically includes a local\_settings.py file, which contains sensitive information and is not included in this repository. Start by copying the local\_settings-example.py file to local_settings.py and set the needed values there. You will likely need to set the database configuration variables and template locations. You will need to make django's initial [migration](https://docs.djangoproject.com/en/1.11/topics/migrations/#workflow) and apply it, i.e., from the django application's main directory, run
-
-
-	$ python manage.py makemigrations
-And once the migrations are made, run:
-
-	$ python manage.py migrate
+	
+	# run existing migrations
+	$ python manage.py migrate 
+	# generate and run migrations for schemas and filings
+	$ python manage.py makemigrations schemas
+	$ python manage.py migrate schemas
+	$ python manage.py makemigrations filings
+	$ python manage.py migrate filings
 
 
 # Getting the xml files
@@ -81,10 +85,16 @@ Shows number of entries (in all tables) credit [StackOverflow](https://stackover
 
 #### 1. enter\_schema\_files
 
-This enters the schemas files as XSDFile objects.
+This enters the schemas files as XSDFile objects for all known production versions.
 
+If there are no production versions, you can create them from fixture with: 
 
-	$ python manage.py enter_schema_files
+	$ python manage.py loaddata schemas/fixtures/ProductionVersion.json
+
+though verify that all the production versions you need are present. Then run:
+
+  
+	 $ python manage.py enter_schema_files
 
 Enter the schema files by walking the SCHEMA\_DIR. 
 Optionally pass a version\_string as an arg to run only on that version, e.g. 
@@ -97,6 +107,10 @@ Check db entry with: `select version_string, count(*) from schemas_xsdfile group
 Hard SQL undo: 
 	delete from schemas\_xsdfile [ where version_string='2013v4.0'];
 
+
+
+    
+   
 
 #### 2. read\_schema\_files
 
@@ -172,6 +186,10 @@ not needed for an update.
 
 Attach variables in canonical version to schedule_parts (and generate schedule parts) if needed.
 
+If you are doing this for the first time you may need to attach the parts in the return header manually with something like:
+
+original_xpath like '/ReturnHeader%'
+
 
 #### 7. generate_canonical
 
@@ -189,20 +207,37 @@ This assigns groups (schemas.models VersionedGroup to CanonicalGroup and Version
 Additional details that are sourced through the canonical vars (specifically, the group and form/part hierarchy)
 are assigned in a later management command (propagate\_from\_canonical)."
 
+
+##### NEW VARIABLES
+
+If there are new variables in new versions that don't exist in the canonical version, we need to add them. 
+
+
+
+
 #### propagate\_from\_canonical
+
+Propagate the schedule parts from the canonical variables to their "children" that were matched in the last step.
 
 ####  generate_documentation
 
 Writes documentation
 
-#### generate_models
 
-Generates the django models for returndata, by default in schemas/generated_models/. In development: -sqlalchemy option, which will export a sqlalchemy models file. 
  
 #### generate_csvs
 
 Generates schedule_parts.csv, groups.csv and variables.csv, which are used to feed xml-reader.
 
+#### generate_models <- deprecated
+
+Generates the django models for returndata. This approach is no longer used, instead, produce these from the 990-xml-database app.
+
+#### compare_csvs
+
+Compare the new csv with existing csvs; only add new lines if they don't exist in the old csv file. 
+
+use the -write option to generate new files, _
 
 
 ## Adding new schemas
