@@ -53,7 +53,7 @@ class ProcessedFiling(models.Model):
     processed_json = JSONField(null=True)
     has_keyerrors = models.NullBooleanField() 
     keyerrors = JSONField(null=True)
-    submission = models.ForeignKey(xml_submission, null=True)
+    submission = models.ForeignKey(xml_submission, null=True, on_delete=models.PROTECT)
     is_saved = models.NullBooleanField()   # has it been saved to related db?
 
     # A psycopg2 / django / postgres config returns string not json
@@ -75,7 +75,7 @@ class observed_group(models.Model):
     raw_xpath = models.CharField(max_length=511, blank=True, null=True)
     num_observed = models.IntegerField(blank=True, null=True, help_text="Index file year") 
     last_update = models.DateTimeField(auto_now=True, null=True)
-    master_xpath = models.ForeignKey(master_observed_group, null=True)
+    master_xpath = models.ForeignKey(master_observed_group, null=True, on_delete=models.PROTECT)
 
 
     def __unicode__(self):
@@ -93,8 +93,8 @@ class observed_xpath(models.Model):
     num_observed = models.IntegerField(blank=True, null=True, help_text="Index file year") 
     last_update = models.DateTimeField(auto_now=True, null=True)
     observed_type = models.CharField(max_length=511, blank=True, null=True, help_text="character representation of data type, as observed")
-    master_xpath = models.ForeignKey(master_observed_xpath, null=True)
-    containing_group = models.ForeignKey(observed_group, null=True)
+    master_xpath = models.ForeignKey(master_observed_xpath, null=True, on_delete=models.PROTECT)
+    containing_group = models.ForeignKey(observed_group, null=True, on_delete=models.PROTECT)
 
     def __unicode__(self):
         return("%s %s" % (self.version_string, self.raw_xpath) )
